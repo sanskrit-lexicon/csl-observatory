@@ -1,0 +1,133 @@
+{
+  "_comment": "Mapping from canonical GitHub login → identity. 'aliases' captures alternate identities (Cologne SSH dialog hosts, mistyped emails, hostname-based commits) that should be merged into the canonical record. 'is_bot' = true excludes the entry from human contributor reports.",
+
+  "gasyoun": {
+    "real_name": "Mārcis Gasūns",
+    "orcid": "PLACEHOLDER-GASUNS",
+    "role": "lead",
+    "affiliation": "Cologne Digital Sanskrit Dictionaries",
+    "notes": "Project organisation, documentation, Russian etymologies, accents."
+  },
+
+  "funderburkjim": {
+    "real_name": "Jim Funderburk",
+    "orcid": "PLACEHOLDER-FUNDERBURK",
+    "role": "maintainer",
+    "affiliation": "Cologne Digital Sanskrit Dictionaries",
+    "notes": "Primary repository maintainer; tooling and correction workflows across all dictionaries.",
+    "aliases": [
+      "jfunderb@dialog6.rrz.uni-koeln.de",
+      "jfunderb@dialog7.rrz.uni-koeln.de",
+      "jfunderb@dialog8.rrz.uni-koeln.de",
+      "funderburk1@Jim-Funderburks-iMac.local",
+      "root@Jims-Mac-mini.local",
+      "Jim Funderburk"
+    ]
+  },
+
+  "drdhaval2785": {
+    "real_name": "Dhaval Patel",
+    "orcid": "PLACEHOLDER-PATEL",
+    "role": "core",
+    "affiliation": "Cologne Digital Sanskrit Dictionaries",
+    "notes": "Automation of link-splitting, index checking, AB/Cologne comparison tooling, k1k2 clash analysis.",
+    "aliases": [
+      "drdhaval2785#gmail.com",
+      "Dhaval Patel"
+    ]
+  },
+
+  "Andhrabharati": {
+    "real_name": "Nagabhushana Rao",
+    "orcid": "PLACEHOLDER-RAO",
+    "role": "core",
+    "affiliation": "Andhrabharati",
+    "notes": "AB version of multiple dictionaries; Greek words file; extensive issue contributions.",
+    "aliases": ["Nagabhushana Rao"]
+  },
+
+  "aumsanskrit": {
+    "real_name": "Scott Rhodes",
+    "orcid": "PLACEHOLDER-RHODES",
+    "role": "contributor",
+    "notes": "Issue analysis and corrections (MWS issue #190 and others)."
+  },
+
+  "maltenth": {
+    "real_name": "Thomas Malten",
+    "role": "core",
+    "affiliation": "University of Cologne",
+    "notes": "Original digitisation of the Cologne Digital Sanskrit Dictionaries (1994–2010); bibliography work.",
+    "aliases": ["Thomas Malten"]
+  },
+
+  "AnnaRybakovaT": {
+    "real_name": "Anna Rybakova",
+    "role": "occasional",
+    "notes": "Onboarding contributor 2020–2023 — Python pipeline development."
+  },
+
+  "Darius": {
+    "real_name": "Darius",
+    "role": "occasional",
+    "notes": "Lithuanian word list comparison."
+  },
+
+  "wujastyk": {
+    "real_name": "Dominik Wujastyk",
+    "role": "occasional",
+    "affiliation": "University of Alberta",
+    "notes": "Sanskrit scholar; ad hoc consultation."
+  },
+
+  "DmitriSKT": {
+    "role": "occasional",
+    "notes": "Identity to be confirmed."
+  },
+
+  "Haqob": {
+    "role": "occasional",
+    "notes": "Identity to be confirmed."
+  },
+
+  "YevgenJohn": {
+    "role": "occasional",
+    "notes": "Identity to be confirmed."
+  },
+
+  "sanskritisampada": {
+    "role": "occasional",
+    "notes": "Identity to be confirmed."
+  },
+
+  "github-actions[bot]": {
+    "real_name": "GitHub Actions (bot)",
+    "is_bot": true,
+    "role": "bot"
+  },
+
+  "actions-user": {
+    "real_name": "GitHub Actions (bot)",
+    "is_bot": true,
+    "role": "bot"
+  },
+
+  "cfr-auto-updater@example.com": {
+    "real_name": "Automated updater (bot)",
+    "is_bot": true,
+    "role": "bot"
+  },
+
+  "you@example.com": {
+    "real_name": "(misconfigured git client)",
+    "is_bot": false,
+    "role": "occasional",
+    "notes": "Default git config not customised; commits cannot be reliably attributed."
+  },
+
+  "root@localhost.localdomain": {
+    "is_bot": false,
+    "role": "occasional",
+    "notes": "Hostname-based identity; attribution unclear."
+  }
+}

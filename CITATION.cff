@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+title: "csl-observatory: cross-repository analytics for the Cologne Digital Sanskrit Dictionaries"
+message: "If you use this dataset or its derived figures, please cite the article in preparation and this repository."
+type: software
+authors:
+  - family-names: Gasūns
+    given-names: Mārcis
+    orcid: "https://orcid.org/PLACEHOLDER-GASUNS"
+    affiliation: "Cologne Digital Sanskrit Dictionaries"
+  - family-names: Funderburk
+    given-names: Jim
+    orcid: "https://orcid.org/PLACEHOLDER-FUNDERBURK"
+    affiliation: "Cologne Digital Sanskrit Dictionaries"
+  - family-names: Patel
+    given-names: Dhaval
+    orcid: "https://orcid.org/PLACEHOLDER-PATEL"
+    affiliation: "Cologne Digital Sanskrit Dictionaries"
+  - family-names: Rao
+    given-names: Nagabhushana
+    alias: Andhrabharati
+    orcid: "https://orcid.org/PLACEHOLDER-RAO"
+repository-code: "https://github.com/sanskrit-lexicon/csl-observatory"
+url: "https://github.com/sanskrit-lexicon/csl-observatory"
+license: GPL-3.0
+keywords:
+  - Sanskrit lexicography
+  - digital humanities
+  - Cologne Digital Sanskrit Dictionaries
+  - TEI Lex-0
+  - linked data
+preferred-citation:
+  type: article
+  title: "The Cologne Digital Sanskrit Dictionaries: a 30-year ecosystem"
+  authors:
+    - family-names: Gasūns
+      given-names: Mārcis
+    - family-names: Funderburk
+      given-names: Jim
+    - family-names: Patel
+      given-names: Dhaval
+    - family-names: Rao
+      given-names: Nagabhushana
+  journal: "Indo-Iranian Journal"
+  year: 2026
+  status: in-preparation
