@@ -20,12 +20,21 @@ ORG = 'sanskrit-lexicon'
 DATA = Path(__file__).resolve().parent.parent / 'data'
 
 
-def gh(*args):
-    r = subprocess.run(['gh', 'api', *args], capture_output=True, encoding='utf-8')
-    if r.returncode != 0:
-        print(f'  ! gh api error: {r.stderr[:200].strip()}', file=sys.stderr)
-        return None
-    return r.stdout
+def gh(*args, retries=3, backoff=2.0):
+    """Run a gh api call with retry-on-5xx backoff."""
+    for attempt in range(retries):
+        r = subprocess.run(['gh', 'api', *args], capture_output=True, encoding='utf-8')
+        if r.returncode == 0:
+            return r.stdout
+        # GitHub HTTP 5xx errors and timeouts → retry
+        retriable = any(s in (r.stderr or '') for s in ['HTTP 502', 'HTTP 503', 'HTTP 504', 'timeout', 'EOF'])
+        if not retriable or attempt == retries - 1:
+            print(f'  ! gh api error: {(r.stderr or "")[:200].strip()}', file=sys.stderr)
+            return None
+        wait = backoff ** (attempt + 1)
+        print(f'  … retrying in {wait:.1f}s (attempt {attempt+2}/{retries})', file=sys.stderr)
+        time.sleep(wait)
+    return None
 
 
 def parse_jsonl(out):

@@ -190,27 +190,68 @@ def render_timeline(timeline, contributors):
     return '\n'.join(L) + '\n'
 
 
-def render_coverage(repos_metrics):
+def render_coverage(repos_metrics, headwords):
     L = []
     L.append('# Coverage and provenance')
     L.append('')
-    L.append('This report tracks **dictionary entry counts**, **scan coverage**, '
-             '**markup ratios**, and **license declarations** per repository. '
-             'Headword counts are derived from source files in `csl-orig` where '
-             'available; missing values indicate the file pattern was not yet '
-             'detected by `pull_data.py` and need a coverage-pass.')
+    L.append('This report tracks **dictionary entry counts** (counted as `<L>` '
+             'markers in source files), **license declarations**, and **markup '
+             'integrity** (whether `<L>` and `<LEND>` markers balance) across '
+             'the CDSL ecosystem. Headword counts are derived from source files '
+             'in `csl-orig/v02/<dict>/<dict>.txt` by `scripts/count_headwords.py`.')
     L.append('')
-    L.append('## License posture\n')
+    summary = headwords.pop('_summary', {}) if headwords else {}
+    if summary:
+        L.append('## Summary\n')
+        L.append(f'- **Dictionaries counted**: {summary.get("dict_count", "—")}')
+        L.append(f'- **Total entries (`<L>` markers)**: {summary.get("total_entries", 0):,}')
+        unbal = summary.get('unbalanced_dicts', [])
+        if unbal:
+            L.append(f'- **Markup integrity**: ⚠ unbalanced in {", ".join(unbal)}')
+        else:
+            L.append(f'- **Markup integrity**: ✓ all `<L>`/`<LEND>` markers balance')
+        L.append('')
+
+    if headwords:
+        L.append('## Entry counts per dictionary\n')
+        L.append('| Dict | `<L>` count | Bytes | Source file |')
+        L.append('|---|---:|---:|---|')
+        # Sort by entry count descending
+        rows = sorted(headwords.items(), key=lambda kv: -kv[1].get('L_count', 0))
+        for slug, h in rows:
+            ok = '' if h.get('balanced') else ' ⚠'
+            L.append(f'| **{h.get("dict_id", slug.upper())}**{ok} | '
+                     f'{h.get("L_count", 0):,} | '
+                     f'{h.get("bytes", 0):,} | '
+                     f'`{h.get("source_file", "?")}` |')
+        L.append('')
+
+        # Top-10 treemap
+        top = rows[:10]
+        L.append('### Top-10 dictionaries by entry count\n')
+        L.append('```mermaid')
+        L.append('pie title Top-10 dictionaries by entry count')
+        for slug, h in top:
+            L.append(f'    "{h.get("dict_id", slug.upper())}" : {h.get("L_count", 0)}')
+        L.append('```')
+        L.append('')
+
+    L.append('## License posture (per repo)\n')
     L.append('| Repo | License | Issues triaged |')
     L.append('|---|---|:---:|')
+    no_license = 0
     for rm in sorted(repos_metrics, key=lambda r: r['name']):
         if rm.get('archived'): continue
         lic = rm.get('license') or '*(none)*'
+        if lic == '*(none)*': no_license += 1
         triaged = '✓' if rm.get('triaged') else ''
         L.append(f'| {rm["name"]} | {lic} | {triaged} |')
     L.append('')
-    L.append('## Headword counts\n')
-    L.append('*Coverage data not yet implemented; see issue tracker.*\n')
+    total = sum(1 for rm in repos_metrics if not rm.get('archived'))
+    L.append(f'**License coverage**: {total - no_license} of {total} repos '
+             f'declare a license; **{no_license} are unlicensed** '
+             f'(FAIR R1.1 violation, addressed by runbook Phase 11).')
+    L.append('')
     return '\n'.join(L) + '\n'
 
 
@@ -221,6 +262,9 @@ def main():
     repos_metrics = load('repo_metrics.json')
     timeline = load('timeline.json')
     cross = load('cross_repo.json')
+    headwords = {}
+    if (DATA / 'headwords.json').exists():
+        headwords = load('headwords.json')
 
     (REPORTS / 'dashboard.md').write_text(
         render_dashboard(summary, repos_metrics, timeline, cross, contributors), encoding='utf-8')
@@ -229,7 +273,7 @@ def main():
     (REPORTS / 'timeline.md').write_text(
         render_timeline(timeline, contributors), encoding='utf-8')
     (REPORTS / 'coverage.md').write_text(
-        render_coverage(repos_metrics), encoding='utf-8')
+        render_coverage(repos_metrics, headwords), encoding='utf-8')
 
     print('reports/ written:')
     for p in sorted(REPORTS.glob('*.md')):
