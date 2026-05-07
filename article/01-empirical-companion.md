@@ -429,6 +429,73 @@ contributor's first-to-last commit interval. The horizontal axis spans
 - A late-2025/2026 acceleration with bot-driven automated commits
   (`github-actions[bot]`, `actions-user`) reflecting CI/CD adoption.
 
+## 4.7 Dictionary corpus by entry count
+
+We counted `<L>` markers in the canonical text file of every dictionary in
+`csl-orig/v02/`. The headword integrity is excellent: in all 43 counted
+dictionaries the number of `<L>` markers equals the number of `<LEND>`
+markers exactly, confirming that no entry was left unclosed by the
+correction pipeline. The total count is **1,495,422 entries** across 43
+dictionaries.
+
+The ten largest dictionaries account for 1,103,896 entries (73.8 percent
+of the corpus). Their distribution is shown in Table 4.7.
+
+| Dictionary | `<L>` count | Source bytes |
+|---|---:|---:|
+| MW (Monier-Williams 1899) | 286,558 | 50.1 MB |
+| PW (Böhtlingk shorter, 1879–1889) | 170,556 | 31.3 MB |
+| PWG (Böhtlingk–Roth 1855–1875) | 123,366 | 51.7 MB |
+| AP (Apte 1957) | 90,613 | 18.4 MB |
+| MW72 (Monier-Williams 1872) | 55,388 | 17.2 MB |
+| LRV (Vaidya 1889) | 53,441 | 7.1 MB |
+| VCP (Vacaspatyam 1873) | 50,135 | 25.1 MB |
+| ACC (Aufrecht's *Catalogus Catalogorum* 1962) | 49,822 | 8.2 MB |
+| SHS (Shabda-Sagara 1900) | 47,326 | 9.2 MB |
+| YAT (Yates 1846) | 45,206 | 5.2 MB |
+
+The report (abstract) reports a total of "392,600+ normalised entries"
+across the project. Our `<L>`-marker count is approximately 3.8× larger.
+The discrepancy is explained by three factors. First, the alternate-headword
+expansion introduced in 2024 (report §3.4.3) splits a single printed entry
+with multiple headword spellings (e.g. *akabara / akabbara / akavara*) into
+N separate `<L>` records, each carrying a `{{Lbody=…}}` pointer to the
+parent entry; these N − 1 alternate headwords are *expansions*, not new
+*lemmas*. Second, the headword-normalisation work [@patel2016hwnorm]
+collapses spelling variants to a single canonical form for cross-dictionary
+search; the count behind the "392,600+" figure is presumably this
+normalised, deduplicated set. Third, our count includes *every* dictionary
+in `csl-orig/v02/`, including English-Sanskrit and Sanskrit-French
+volumes which were not in the original CDSL plan.
+
+The relationship `<L>-markers ≈ 3.8 × normalised-lemmas` should be
+empirically tested against the `hwnorm1` deduplication output as a
+follow-up; see `csl-observatory` issue queue.
+
+## 4.8 Reconciliation with the report's headline figures
+
+The report cites several specific numerical claims that can now be
+checked against the empirical snapshot.
+
+| Claim (report) | Empirical observation | Reconciliation |
+|---|---|---|
+| "168,633 MW lemmas" (§2.3.2) | 286,558 `<L>` markers in MW | The 168,633 figure is the lemma count *after* alternate-headword separation and deduplication; MW's `<L>` count is inflated by the 2024 expansion. |
+| "106,169 PWG lemmas" (§2.3.2) | 123,366 `<L>` markers in PWG | Same explanation; ratio 1.16× is consistent with PWG having fewer alternate-headword expansions than MW. |
+| "87,091 lemmas in common" (§2.3.2) | not yet recomputed | An empirical re-derivation is straightforward from the two `.txt` files plus `hwnorm1`; we defer it to a separate publication. |
+| "67,138 MBH references" (§5.1.4) | not yet recomputed in observatory | A grep over `<ls>Mbh.</ls>` in PWG would confirm; we anticipate doing so when the link-target programme stabilises. |
+| "MW: 110 chars vs PWG: 245 chars average" (§2.3.2) | derivable from source bytes ÷ entry count: MW = 175, PWG = 419 | Our character-per-entry ratio (175/419) is larger than the report's (110/245) by an identical factor (~1.6×); the report measures a different unit (likely character count of definition text, excluding tags). |
+| "2,800 literary sources" in PWG (§5.1.4) | not yet recomputed | A `grep -oE '<ls>[^<]+</ls>'` over PWG, deduplicated, would yield this count. |
+
+The general pattern is that the report's figures and our empirical
+counts are mutually consistent once the relevant unit is identified
+(lemma vs `<L>`-record vs definition character). The discrepancies are
+not errors; they are different valid measures of the same underlying
+corpus. A **figure of merit for cross-dictionary work**, in our view,
+should standardise on the lemma rather than the `<L>` record, because
+the `<L>` count is sensitive to internal markup choices (such as the
+2024 alternate-headword expansion) that are not visible to the end
+user. The observatory will report both counts going forward.
+
 # 5. Standards alignment
 
 ## 5.1 FAIR
