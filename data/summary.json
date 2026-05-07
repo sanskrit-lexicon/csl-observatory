@@ -9,5 +9,20 @@
   "fork_count": 2,
   "total_issues": 5172,
   "total_pull_requests": 37,
-  "total_commits": 3706
+  "total_commits": 3979,
+  "retry_recovered": {
+    "VCP": 108,
+    "hwnorm1": 0,
+    "cologne-stardict": 0,
+    "MWinflect": 0,
+    "csl-orig": 0,
+    "csl-json": 0,
+    "csl-devanagari": 0,
+    "csl-lnum": 0,
+    "csl-ldev": 0,
+    "LRV": 0,
+    "mw-dev": 38,
+    "AP": 127
+  },
+  "retried_at": "2026-05-07T19:28:34.293954Z"
 }

@@ -10,7 +10,7 @@
 | Repositories with issues enabled | 78 |
 | Total issues (incl. closed) | 5,172 |
 | Total pull requests | 37 |
-| Total commits in default branches | 3,706 |
+| Total commits in default branches | 3,979 |
 | Distinct contributors (commit authors + issue authors) | 49 |
 | Triaged repositories (taxonomy applied) | 8 |
 
@@ -59,32 +59,32 @@ pie title Issue type distribution
 
 | Year | Commits | Issues opened | Issues closed |
 |---|---:|---:|---:|
-| 2014 | 65 | 190 | 65 |
+| 2014 | 75 | 190 | 65 |
 | 2015 | 123 | 270 | 170 |
-| 2016 | 151 | 175 | 140 |
+| 2016 | 160 | 175 | 140 |
 | 2017 | 85 | 268 | 130 |
 | 2018 | 63 | 98 | 30 |
 | 2019 | 234 | 246 | 144 |
-| 2020 | 244 | 470 | 485 |
-| 2021 | 554 | 637 | 484 |
-| 2022 | 318 | 451 | 382 |
-| 2023 | 319 | 534 | 542 |
-| 2024 | 306 | 372 | 381 |
-| 2025 | 605 | 1169 | 213 |
-| 2026 | 639 | 255 | 1122 |
+| 2020 | 255 | 470 | 485 |
+| 2021 | 610 | 637 | 484 |
+| 2022 | 337 | 451 | 382 |
+| 2023 | 357 | 534 | 542 |
+| 2024 | 309 | 372 | 381 |
+| 2025 | 612 | 1169 | 213 |
+| 2026 | 759 | 255 | 1122 |
 
 ## Top contributors (by commits)
 
 | Real name | GitHub | Role | Commits | Repos | Span | Lines + / − |
 |---|---|---|---:|---:|---|---:|
-| Jim Funderburk | [@funderburkjim](https://github.com/funderburkjim) | maintainer | 2,314 | 50 | 2014-01 → 2026-05 | +39,727,998 / −3,227,648 |
-| Dhaval Patel | [@drdhaval2785](https://github.com/drdhaval2785) | core | 1,088 | 26 | 2015-11 → 2026-05 | +7,566,342 / −1,832,646 |
-| Mārcis Gasūns | [@gasyoun](https://github.com/gasyoun) | lead | 119 | 19 | 2014-01 → 2026-05 | +174,444 / −1,365 |
+| Jim Funderburk | [@funderburkjim](https://github.com/funderburkjim) | maintainer | 2,415 | 53 | 2014-01 → 2026-05 | +52,717,130 / −4,102,865 |
+| Dhaval Patel | [@drdhaval2785](https://github.com/drdhaval2785) | core | 1,232 | 29 | 2015-11 → 2026-05 | +23,278,470 / −3,561,196 |
+| Mārcis Gasūns | [@gasyoun](https://github.com/gasyoun) | lead | 129 | 21 | 2014-01 → 2026-05 | +476,591 / −1,367 |
 | Anna Rybakova | [@AnnaRybakovaT](https://github.com/AnnaRybakovaT) | occasional | 70 | 10 | 2020-12 → 2023-06 | +71,367 / −6,300 |
 | GitHub Actions (bot) | [@github-actions[bot]](https://github.com/github-actions[bot]) | bot | 37 | 1 | 2026-04 → 2026-05 | +31,554 / −26,445 |
+| Nagabhushana Rao | [@Andhrabharati](https://github.com/Andhrabharati) | core | 30 | 3 | 2021-03 → 2023-04 | +1,397,636 / −247,876 |
 | (misconfigured git client) | [@you@example.com](https://github.com/you@example.com) | occasional | 30 | 5 | 2021-01 → 2021-09 | +11,395 / −8,887 |
 | GitHub Actions (bot) | [@actions-user](https://github.com/actions-user) | bot | 21 | 2 | 2026-04 → 2026-05 | +9,985 / −285 |
-| Nagabhushana Rao | [@Andhrabharati](https://github.com/Andhrabharati) | core | 12 | 2 | 2021-03 → 2022-12 | +294,213 / −25,014 |
 | DmitriSKT | [@DmitriSKT](https://github.com/DmitriSKT) | occasional | 3 | 1 | 2017-05 → 2017-11 | +33 / −2 |
 | root@localhost.localdomain | [@root@localhost.localdomain](https://github.com/root@localhost.localdomain) | occasional | 3 | 2 | 2019-10 → 2019-10 | +3 / −3 |
 | Automated updater (bot) | [@cfr-auto-updater@example.com](https://github.com/cfr-auto-updater@example.com) | bot | 3 | 1 | 2025-04 → 2025-04 | +1,457 / −0 |
@@ -110,7 +110,9 @@ pie title Issue type distribution
 | [COLOGNE](https://github.com/sanskrit-lexicon/COLOGNE) | 203 | 454 | 208 | 246 |  | 2014-01-14 | 2026-05-05 |
 | [MWS](https://github.com/sanskrit-lexicon/MWS) | 200 | 189 | 32 | 157 | ✓ | 2021-02-27 | 2026-05-07 |
 | [csl-app](https://github.com/sanskrit-lexicon/csl-app) | 173 | 37 | 1 | 36 |  | 2026-03-18 | 2026-05-06 |
+| [AP](https://github.com/sanskrit-lexicon/AP) | 127 | 26 | 11 | 15 | ✓ | 2025-07-06 | 2026-05-07 |
 | [alternateheadwords](https://github.com/sanskrit-lexicon/alternateheadwords) | 111 | 25 | 19 | 6 |  | 2016-10-01 | 2021-09-23 |
+| [VCP](https://github.com/sanskrit-lexicon/VCP) | 108 | 28 | 19 | 9 |  | 2014-01-22 | 2024-01-04 |
 | [CORRECTIONS](https://github.com/sanskrit-lexicon/CORRECTIONS) | 100 | 441 | 89 | 352 |  | 2019-07-05 | 2026-01-27 |
 | [PUI](https://github.com/sanskrit-lexicon/PUI) | 72 | 4 | 2 | 2 |  | 2026-04-05 | 2026-04-05 |
 | [MD](https://github.com/sanskrit-lexicon/MD) | 68 | 13 | 5 | 8 | ✓ | 2020-04-17 | 2026-05-07 |
@@ -119,6 +121,7 @@ pie title Issue type distribution
 | [GRA](https://github.com/sanskrit-lexicon/GRA) | 50 | 36 | 9 | 27 | ✓ | 2015-01-04 | 2026-05-07 |
 | [AP90](https://github.com/sanskrit-lexicon/AP90) | 43 | 27 | 15 | 12 | ✓ | 2020-03-14 | 2026-05-07 |
 | [sanskrit-lexicon.github.io](https://github.com/sanskrit-lexicon/sanskrit-lexicon.github.io) | 38 | 0 | 0 | 0 |  | 2015-11-24 | 2021-02-03 |
+| [mw-dev](https://github.com/sanskrit-lexicon/mw-dev) | 38 | 23 | 17 | 6 |  | 2023-01-19 | 2023-04-03 |
 | [csl-newsletter](https://github.com/sanskrit-lexicon/csl-newsletter) | 37 | 2 | 2 | 0 |  | 2021-09-13 | 2023-12-09 |
 | [WIL](https://github.com/sanskrit-lexicon/WIL) | 35 | 14 | 12 | 2 |  | 2014-12-28 | 2020-06-21 |
 | [csl-doc](https://github.com/sanskrit-lexicon/csl-doc) | 34 | 6 | 2 | 4 |  | 2018-10-23 | 2025-09-01 |
@@ -163,7 +166,6 @@ pie title Issue type distribution
 | [cologne-hugo](https://github.com/sanskrit-lexicon/cologne-hugo) | 1 | 0 | 0 | 0 |  | 2021-01-20 | 2021-01-20 |
 | [KNA](https://github.com/sanskrit-lexicon/KNA) | 1 | 1 | 1 | 0 |  | 2026-02-21 | 2026-02-21 |
 | [KOW](https://github.com/sanskrit-lexicon/KOW) | 1 | 1 | 1 | 0 |  | 2026-02-21 | 2026-02-21 |
-| [VCP](https://github.com/sanskrit-lexicon/VCP) | 0 | 28 | 19 | 9 |  | - | - |
 | [MCI](https://github.com/sanskrit-lexicon/MCI) | 0 | 1 | 1 | 0 |  | - | - |
 | [hwnorm1](https://github.com/sanskrit-lexicon/hwnorm1) | 0 | 19 | 16 | 3 |  | - | - |
 | [cologne-stardict](https://github.com/sanskrit-lexicon/cologne-stardict) | 0 | 47 | 3 | 44 |  | - | - |
@@ -177,8 +179,6 @@ pie title Issue type distribution
 | [csl-ldev](https://github.com/sanskrit-lexicon/csl-ldev) | 0 | 9 | 8 | 1 |  | - | - |
 | [LRV](https://github.com/sanskrit-lexicon/LRV) | 0 | 28 | 4 | 24 |  | - | - |
 | [santamlegacy](https://github.com/sanskrit-lexicon/santamlegacy) | 0 | 0 | 0 | 0 |  | - | - |
-| [mw-dev](https://github.com/sanskrit-lexicon/mw-dev) | 0 | 23 | 17 | 6 |  | - | - |
-| [AP](https://github.com/sanskrit-lexicon/AP) | 0 | 26 | 11 | 15 | ✓ | - | - |
 | [csl-observatory](https://github.com/sanskrit-lexicon/csl-observatory) | 0 | 0 | 0 | 0 |  | - | - |
 
 ---

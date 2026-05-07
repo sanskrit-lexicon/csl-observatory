@@ -10,11 +10,11 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **ORCID**: *(awaiting)*
 - **Affiliation**: Cologne Digital Sanskrit Dictionaries
 - **Active span**: 2014-01-14 → 2026-05-07 (13 years)
-- **Commits**: 119 across 19 repos
+- **Commits**: 129 across 21 repos
 - **Issues created**: 296
-- **Lines changed**: +174,444 / −1,365
+- **Lines changed**: +476,591 / −1,367
 - **Role notes**: Project organisation, documentation, Russian etymologies, accents.
-- **Top repositories** (by commits): `PWG` (33), `csl-pywork` (31), `MWS` (13), `COLOGNE` (11), `csl-corrections` (5), `SCH` (4), `DCS` (4), `GRA` (4)
+- **Top repositories** (by commits): `PWG` (33), `csl-pywork` (31), `MWS` (13), `COLOGNE` (11), `VCP` (7), `csl-corrections` (5), `SCH` (4), `DCS` (4)
 
 ## Maintainer (1)
 
@@ -24,9 +24,9 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **ORCID**: *(awaiting)*
 - **Affiliation**: Cologne Digital Sanskrit Dictionaries
 - **Active span**: 2014-01-15 → 2026-05-06 (13 years)
-- **Commits**: 2,314 across 50 repos
+- **Commits**: 2,415 across 53 repos
 - **Issues created**: 2566
-- **Lines changed**: +39,727,998 / −3,227,648
+- **Lines changed**: +52,717,130 / −4,102,865
 - **Role notes**: Primary repository maintainer; tooling and correction workflows across all dictionaries.
 - **Top repositories** (by commits): `csl-apidev` (451), `csl-pywork` (320), `PWG` (284), `PWK` (201), `csl-corrections` (170), `MWS` (150), `COLOGNE` (71), `csl-inflect` (61)
 
@@ -38,23 +38,23 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **ORCID**: *(awaiting)*
 - **Affiliation**: Cologne Digital Sanskrit Dictionaries
 - **Active span**: 2015-11-24 → 2026-05-06 (12 years)
-- **Commits**: 1,088 across 26 repos
+- **Commits**: 1,232 across 29 repos
 - **Issues created**: 2019
-- **Lines changed**: +7,566,342 / −1,832,646
+- **Lines changed**: +23,278,470 / −3,561,196
 - **Role notes**: Automation of link-splitting, index checking, AB/Cologne comparison tooling, k1k2 clash analysis.
-- **Top repositories** (by commits): `csl-corrections` (185), `csl-app` (172), `COLOGNE` (118), `csl-pywork` (102), `alternateheadwords` (93), `PUI` (72), `PWG` (53), `csl-apidev` (48)
+- **Top repositories** (by commits): `csl-corrections` (185), `csl-app` (172), `COLOGNE` (118), `csl-pywork` (102), `alternateheadwords` (93), `AP` (75), `PUI` (72), `VCP` (66)
 
 ### Nagabhushana Rao
 
 - **GitHub**: [@Andhrabharati](https://github.com/Andhrabharati)
 - **ORCID**: *(awaiting)*
 - **Affiliation**: Andhrabharati
-- **Active span**: 2021-03-01 → 2022-12-26 (2 years)
-- **Commits**: 12 across 2 repos
+- **Active span**: 2021-03-01 → 2023-04-03 (3 years)
+- **Commits**: 30 across 3 repos
 - **Issues created**: 89
-- **Lines changed**: +294,213 / −25,014
+- **Lines changed**: +1,397,636 / −247,876
 - **Role notes**: AB version of multiple dictionaries; Greek words file; extensive issue contributions.
-- **Top repositories** (by commits): `MWS` (6), `AP90` (6)
+- **Top repositories** (by commits): `mw-dev` (18), `MWS` (6), `AP90` (6)
 
 ### Thomas Malten
 
