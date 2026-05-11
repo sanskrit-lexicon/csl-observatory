@@ -9,12 +9,12 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **GitHub**: [@gasyoun](https://github.com/gasyoun)
 - **ORCID**: *(awaiting)*
 - **Affiliation**: Cologne Digital Sanskrit Dictionaries
-- **Active span**: 2014-01-14 → 2026-05-07 (13 years)
-- **Commits**: 129 across 21 repos
-- **Issues created**: 296
-- **Lines changed**: +476,591 / −1,367
+- **Active span**: 2014-01-14 → 2026-05-08 (13 years)
+- **Commits**: 149 across 21 repos
+- **Issues created**: 298
+- **Lines changed**: +470,614 / −34,785
 - **Role notes**: Project organisation, documentation, Russian etymologies, accents.
-- **Top repositories** (by commits): `PWG` (33), `csl-pywork` (31), `MWS` (13), `COLOGNE` (11), `VCP` (7), `csl-corrections` (5), `SCH` (4), `DCS` (4)
+- **Top repositories** (by commits): `PWG` (35), `csl-pywork` (32), `MWS` (15), `COLOGNE` (12), `csl-observatory` (8), `GRA` (6), `csl-corrections` (6), `AP` (5)
 
 ## Maintainer (1)
 
@@ -23,12 +23,12 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **GitHub**: [@funderburkjim](https://github.com/funderburkjim)
 - **ORCID**: *(awaiting)*
 - **Affiliation**: Cologne Digital Sanskrit Dictionaries
-- **Active span**: 2014-01-15 → 2026-05-06 (13 years)
-- **Commits**: 2,415 across 53 repos
-- **Issues created**: 2566
-- **Lines changed**: +52,717,130 / −4,102,865
+- **Active span**: 2014-01-15 → 2026-05-09 (13 years)
+- **Commits**: 2,708 across 52 repos
+- **Issues created**: 2569
+- **Lines changed**: +45,586,095 / −4,173,278
 - **Role notes**: Primary repository maintainer; tooling and correction workflows across all dictionaries.
-- **Top repositories** (by commits): `csl-apidev` (451), `csl-pywork` (320), `PWG` (284), `PWK` (201), `csl-corrections` (170), `MWS` (150), `COLOGNE` (71), `csl-inflect` (61)
+- **Top repositories** (by commits): `csl-apidev` (452), `csl-corrections` (431), `csl-pywork` (321), `PWG` (284), `PWK` (201), `MWS` (148), `MWinflect` (82), `COLOGNE` (71)
 
 ## Core (3)
 
@@ -37,12 +37,12 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **GitHub**: [@drdhaval2785](https://github.com/drdhaval2785)
 - **ORCID**: *(awaiting)*
 - **Affiliation**: Cologne Digital Sanskrit Dictionaries
-- **Active span**: 2015-11-24 → 2026-05-06 (12 years)
-- **Commits**: 1,232 across 29 repos
-- **Issues created**: 2019
-- **Lines changed**: +23,278,470 / −3,561,196
+- **Active span**: 2015-11-24 → 2026-05-11 (12 years)
+- **Commits**: 1,173 across 27 repos
+- **Issues created**: 2018
+- **Lines changed**: +18,180,008 / −1,941,256
 - **Role notes**: Automation of link-splitting, index checking, AB/Cologne comparison tooling, k1k2 clash analysis.
-- **Top repositories** (by commits): `csl-corrections` (185), `csl-app` (172), `COLOGNE` (118), `csl-pywork` (102), `alternateheadwords` (93), `AP` (75), `PUI` (72), `VCP` (66)
+- **Top repositories** (by commits): `csl-corrections` (258), `csl-app` (172), `COLOGNE` (118), `csl-pywork` (108), `alternateheadwords` (93), `AP` (75), `PWG` (53), `csl-apidev` (48)
 
 ### Nagabhushana Rao
 
@@ -67,7 +67,16 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **Role notes**: Original digitisation of the Cologne Digital Sanskrit Dictionaries (1994–2010); bibliography work.
 - **Top repositories** (by commits): `PWK` (1)
 
-## Contributor (33)
+## Contributor (34)
+
+### dpatel3@dialog7.rrz.uni-koeln.de
+
+- **GitHub**: [@dpatel3@dialog7.rrz.uni-koeln.de](https://github.com/dpatel3@dialog7.rrz.uni-koeln.de)
+- **Active span**: 2023-12-15 → 2024-01-12 (2 years)
+- **Commits**: 2 across 1 repos
+- **Issues created**: 0
+- **Lines changed**: +121 / −0
+- **Top repositories** (by commits): `csl-corrections` (2)
 
 ### usha.sanka@gmial.com
 

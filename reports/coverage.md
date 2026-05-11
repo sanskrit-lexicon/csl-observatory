@@ -105,7 +105,6 @@ pie title Top-10 dictionaries by entry count
 | MW72 | *(none)* |  |
 | MWS | NOASSERTION | ✓ |
 | MWinflect | *(none)* |  |
-| PUI | *(none)* |  |
 | PWG | *(none)* | ✓ |
 | PWK | *(none)* | ✓ |
 | SCH | *(none)* |  |
@@ -133,7 +132,7 @@ pie title Top-10 dictionaries by entry count
 | csl-lnum | *(none)* |  |
 | csl-lslink | *(none)* |  |
 | csl-newsletter | *(none)* |  |
-| csl-observatory | *(none)* |  |
+| csl-observatory | GPL-3.0 |  |
 | csl-orig | *(none)* |  |
 | csl-pywork | *(none)* |  |
 | csl-santam | NOASSERTION |  |
@@ -155,5 +154,5 @@ pie title Top-10 dictionaries by entry count
 | temp_corrections_mw | *(none)* |  |
 | test_cologne_push | *(none)* |  |
 
-**License coverage**: 16 of 78 repos declare a license; **62 are unlicensed** (FAIR R1.1 violation, addressed by runbook Phase 11).
+**License coverage**: 17 of 77 repos declare a license; **60 are unlicensed** (FAIR R1.1 violation, addressed by runbook Phase 11).
 
