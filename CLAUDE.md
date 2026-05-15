@@ -2,73 +2,45 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Purpose
+## Project Overview
 
-`csl-observatory` is a cross-repository analytics dashboard for the Cologne Digital Sanskrit Dictionaries (CDSL) — a 50+ repo ecosystem on GitHub. It produces canonical JSON snapshots, Markdown dashboards, contributor profiles, and figures for a scholarly article.
+**csl-observatory** is a Sanskrit Lexicon **build-meta** repository — part of the Cologne Digital Sanskrit Lexicon (CDSL) infrastructure.
 
-## Pipeline
+## Repo Category
 
-Three Python scripts form the full refresh cycle, run in order:
+`build-meta` — see the [tooling runbook](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/runbook/cologne-tooling-runbook.md) for category-specific conventions.
 
-```sh
-python scripts/pull_data.py          # fetch from GitHub API + git log → data/*.json
-python scripts/compute_metrics.py    # derive metrics → data/contributors.json, repo_metrics.json, etc.
-python scripts/render_reports.py     # render Markdown → reports/dashboard.md, contributors.md, etc.
-```
+## GitHub Issue Conventions
 
-Run a single utility independently:
+This repository uses the **Cologne tooling-repo taxonomy**. All issues must have:
+- **Exactly one type label** (9 options)
+- **Exactly one severity label** (4 levels)
+- **One milestone** (5 options)
 
-```sh
-python scripts/count_headwords.py    # count <L> entries in csl-orig → data/headwords.json
-python scripts/propagate_templates.py [--dry-run] [REPO ...]  # push community files to dictionary repos
-```
+### Type Labels
+- `bug` — Code defect (wrong output, broken contract)
+- `feature` — Net-new capability
+- `enhancement` — Improvement to existing capability
+- `performance` — Speed, memory, throughput optimization
+- `tech-debt` — Refactoring, cleanup, dependency updates
+- `security` — CVE, auth issue, credential exposure
+- `documentation` — Prose docs, API docs, comments
+- `infrastructure` — CI/CD, deploy, data pipelines, build tooling
+- `question` — Research, proposals, open discussions
 
-The full pipeline also runs weekly via GitHub Actions (`.github/workflows/refresh.yml`, Mondays 06:00 UTC).
+### Severity Labels
+- `trivial` — Cosmetic, < 1 hour
+- `minor` — Single function/component
+- `major` — Multiple files, design decision
+- `critical` — Blocks users, data loss/security CVE
 
-## Dependencies
+### Milestones
+- **API Stability** — performance, security, regressions
+- **User Experience** — bugs, features, enhancements
+- **Data Quality** — data-pipeline issues, integrity
+- **Developer Experience** — tech-debt, infrastructure, docs
+- **Community** — questions, proposals, discussions
 
-No third-party Python packages — standard library only (json, pathlib, subprocess, argparse, datetime). Requires:
-- Python 3.11+
-- `gh` CLI (authenticated, with read access to the `sanskrit-lexicon` org)
-- `pandoc` (only if generating PDF from article source)
+## Cross-Repo Coordination
 
-All scripts need `sys.stdout.reconfigure(encoding='utf-8')` (already present) — critical on Windows.
-
-## Data Architecture
-
-```
-data/
-  repos.json          ← raw repo metadata (stars, forks, topics, language)
-  issues.json         ← all issues with labels, milestone, state
-  commits.json        ← commit log with author + date (via git log over clones)
-  summary.json        ← aggregate headline stats
-  contributors.json   ← merged contributor profiles (alias-resolved)
-  repo_metrics.json   ← per-repo issue counts, commit activity, coverage
-  timeline.json       ← monthly activity time series
-  cross_repo.json     ← cross-cutting aggregates
-  headwords.json      ← entry counts per dictionary
-  snapshots/          ← immutable YYYY-MM-DD copies of all JSON files
-```
-
-`scripts/contributors_map.json` is the hand-maintained login → real name / ORCID / alias mapping. Edit this when GitHub logins need merging into a single canonical identity.
-
-## Article
-
-`article/` contains two companion documents targeting Indo-Iranian Journal (Brill):
-- `00-report-narrative.md` — first-person 30-year scholarly history
-- `01-empirical-companion.md` — formal third-person quantitative survey with runbook and standards alignment
-- `refs.bib` — shared BibTeX bibliography
-
-## Runbook
-
-`runbook/cologne-issue-runbook.md` documents the 16-phase procedure for applying the issue taxonomy to a dictionary repo. It is also installed as a Claude Code custom command:
-
-```
-/cologne-issue-runbook <REPONAME>
-```
-
-See the org-level CLAUDE.md (parent directory) for the full taxonomy reference.
-
-## Session State
-
-Check `.ai_state.md` and `STATUS.md` at the start of any session to orient on current work. Update `.ai_state.md` at micro-milestones per the org-level session state protocol.
+The org-level project [Tooling Roadmap](https://github.com/orgs/sanskrit-lexicon/projects/9) tracks tool work across all repositories.
