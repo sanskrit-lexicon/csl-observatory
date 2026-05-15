@@ -214,12 +214,54 @@ Total active build effort: ~6 weeks, spread across 18 months. WSC 2028 deadline 
 
 ---
 
-## 10. Open questions for next round
+## 10. Decisions log (resolved 2026-05-15)
 
-1. Where will the **`people.yaml`** seed data come from? (existing CONTRIBUTORS files? mailing list? you'll author by hand?)
-2. Do you have **Cologne website analytics** access we should plan to ingest later?
-3. Should the dashboard expose a **public JSON / CSV API** for other DH projects to consume our metrics?
-4. For the **benchmark study**: do you have working contacts at TLG / Perseus / CDLI to validate our comparison numbers, or should we use only public data?
+1. **`people.yaml`**: auto-extract from `CITATION.cff` files in all 63 repos. A maintainer-runnable script consolidates and flags entries needing real-name / ORCID enrichment.
+2. **Cologne analytics**: full access available (Matomo/GA/server logs). Adds **Phase 12 — Cologne analytics ingest** to the implementation plan; planned but not on the critical path for Paper 1.
+3. **Public API**: full public data API. Every chart's underlying data downloadable as CSV + JSON, with stable URLs and version pins. Each endpoint is a citable artifact.
+4. **Benchmark contacts**: working contacts at Perseus + Sanskrit Heritage; public-data-only for the rest with clear methodological caveats per peer.
+
+---
+
+## 11. Public data API spec (per Decision §10.3)
+
+Every chart on the dashboard exposes its source data at a stable, dated URL:
+
+```
+https://sanskrit-lexicon.github.io/csl-observatory/data/<topic>/<view>.csv
+https://sanskrit-lexicon.github.io/csl-observatory/data/<topic>/<view>.json
+https://sanskrit-lexicon.github.io/csl-observatory/data/<topic>/<view>.parquet
+```
+
+Versioned snapshots: `…/data/snapshots/2026-05-01/<topic>/<view>.csv` (immutable archive).
+
+Index manifest: `…/data/index.json` enumerates every endpoint with schema, last-updated date, and citation suggestion.
+
+DOI: every annual release is archived to Zenodo via the existing GitHub-Zenodo integration; users cite the DOI of the annual snapshot they used.
+
+---
+
+## 12. Implementation plan — REVISED
+
+| Phase | Deliverable | Est. effort | Status |
+|---|---|---|---|
+| 0 — Design doc | This document | done | ✓ |
+| 1 — Data fetcher | `observatory/fetch.py` + first historical backfill (2014-now) | 1 week | ⏭ next |
+| 2 — Data pipeline | DuckDB transformer + Parquet schema | 3 days | |
+| 3 — `people.yaml` builder | Script that consolidates 63 CITATION.cff files + flags missing real names | 2 days | |
+| 4 — Observable scaffold | `observatory/site/` with one page per focus area | 1 week | |
+| 5 — Activity charts (Paper 1 figures) | KPIs from §4.1 rendered | 1 week | |
+| 6 — Community charts (Paper 3 figures) | KPIs from §4.3 + people.yaml-driven attribution | 1 week | |
+| 7 — Coverage + tech-stack charts (Papers 2 + 4) | KPIs from §4.2, §4.4 | 1 week | |
+| 8 — Benchmark study | Perseus + Sanskrit Heritage validated; rest public-data | 2 weeks | |
+| 9 — Citation tracking | Semantic Scholar + Scholar quarterly job | 3 days | |
+| 10 — GH Actions cron | Monthly refresh + manual `workflow_dispatch` | 1 day | |
+| 11 — Public data API | Manifest + stable URLs + Zenodo DOI minting | 3 days | |
+| 12 — Cologne analytics ingest | Matomo/GA/log parser; deferred but planned | 1 week | |
+| 13 — Mirror setup | DNS for subdomain; Cologne handover | depends on 3rd parties | |
+| 14 — Paper 1 draft | Using §4.1 charts + §5 benchmark | continuous | |
+
+Total active build effort: ~7 weeks, spread across 18 months.
 
 ---
 
