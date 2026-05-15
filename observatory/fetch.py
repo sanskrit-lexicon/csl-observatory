@@ -61,6 +61,10 @@ SNAPSHOT_DATE = datetime.now(timezone.utc).strftime("%Y-%m")
 SNAPSHOT_DIR = REPO_ROOT / "snapshots" / SNAPSHOT_DATE
 LOG_FILE = REPO_ROOT / "snapshots" / f"fetch_{SNAPSHOT_DATE}.log"
 
+# Ensure dirs exist (gitignored on CI, so first run creates them)
+SNAPSHOT_DIR.mkdir(parents=True, exist_ok=True)
+LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
+
 def log(msg):
     line = f"[{datetime.now(timezone.utc).strftime('%H:%M:%S')}] {msg}"
     print(line, flush=True)
