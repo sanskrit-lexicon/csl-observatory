@@ -9,3 +9,13 @@ article/article.html
 article/figures/*.png.tmp
 .DS_Store
 Thumbs.db
+
+# Observatory snapshots — large, regenerable from API
+observatory/snapshots/
+observatory/data/*.parquet
+observatory/data/*.duckdb
+
+# Observable Framework build artifacts
+observatory/site/dist/
+observatory/site/.observablehq/cache/
+observatory/site/node_modules/
