@@ -52,7 +52,7 @@ year_month,repo,issues_opened,issues_closed,prs_opened,prs_closed,commits,unique
 2014-12,CORRECTIONS,19,16,0,0,11,2
 2014-12,MW72,0,1,0,0,0,0
 2014-12,WIL,0,0,0,0,5,1
-2015-01,ArabicInSanskrit,4,2,0,0,0,0
+2015-01,ArabicInSanskrit,4,2,0,0,3,1
 2015-01,COLOGNE,2,0,0,0,0,0
 2015-01,CORRECTIONS,15,5,0,0,10,2
 2015-01,GRA,0,0,0,0,1,1
@@ -1238,7 +1238,7 @@ year_month,repo,issues_opened,issues_closed,prs_opened,prs_closed,commits,unique
 2026-03,MWS,1,0,0,0,0,0
 2026-03,cologne-stardict,5,7,0,0,39,2
 2026-03,csl-apidev,1,0,0,0,5,1
-2026-03,csl-app,21,17,0,0,36,1
+2026-03,csl-app,21,17,0,0,114,1
 2026-03,csl-corrections,1,0,0,0,1,1
 2026-03,csl-lslink,1,0,0,0,8,1
 2026-03,csl-orig,7,8,0,0,20,2
@@ -1251,7 +1251,6 @@ year_month,repo,issues_opened,issues_closed,prs_opened,prs_closed,commits,unique
 2026-04,COLOGNE,2,1,0,0,0,0
 2026-04,LRV,1,0,0,0,0,0
 2026-04,MWS,1,1,0,0,0,0
-2026-04,PUI,4,2,0,0,72,1
 2026-04,cologne-stardict,2,0,0,0,114,1
 2026-04,csl-apidev,1,1,0,0,18,3
 2026-04,csl-app,9,11,0,0,49,1
@@ -1268,6 +1267,7 @@ year_month,repo,issues_opened,issues_closed,prs_opened,prs_closed,commits,unique
 2026-05,AP,4,3,0,0,16,3
 2026-05,AP90,1,0,0,0,8,1
 2026-05,ApteES,4,5,0,0,14,2
+2026-05,ArabicInSanskrit,0,0,0,0,1,1
 2026-05,BEN,0,0,0,0,7,1
 2026-05,BHS,0,0,0,0,7,1
 2026-05,BOP,0,0,0,0,1,1
@@ -1291,7 +1291,6 @@ year_month,repo,issues_opened,issues_closed,prs_opened,prs_closed,commits,unique
 2026-05,MW72,0,0,0,0,1,1
 2026-05,MWS,0,0,0,0,20,1
 2026-05,MWinflect,0,0,0,0,6,1
-2026-05,PUI,0,0,0,0,1,1
 2026-05,PWG,1,0,0,0,34,1
 2026-05,PWK,0,0,0,0,8,1
 2026-05,SCH,0,0,0,0,8,1
@@ -1319,7 +1318,7 @@ year_month,repo,issues_opened,issues_closed,prs_opened,prs_closed,commits,unique
 2026-05,csl-lnum,0,0,0,0,6,1
 2026-05,csl-lslink,0,0,0,0,8,2
 2026-05,csl-newsletter,0,0,0,0,6,1
-2026-05,csl-observatory,2,0,0,0,20,2
+2026-05,csl-observatory,2,0,0,0,64,2
 2026-05,csl-orig,0,2,3,1,102,4
 2026-05,csl-pywork,4,12,0,0,55,3
 2026-05,csl-sqlite,0,0,0,0,1,1

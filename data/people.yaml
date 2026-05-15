@@ -60,7 +60,7 @@ people:
     orcid: null
     affiliation: null
     repos_authored: []
-    repos_contributed: ["PWG", "PWK", "MWS", "AP", "VCP", "CORRECTIONS", "BHS", "VEI", "ACC", "BEN", "BOR", "BOP", "LRV", "AMAR", "PUI", "COLOGNE", "hwnorm1", "alternateheadwords", "cologne-stardict", "csl-doc", "csl-apidev", "csl-homepage", "csl-websanlexicon", "csl-pywork", "csl-orig", "csl-corrections", "hwnorm2", "csl-devanagari", "csl-newsletter", "csl-lnum", "csl-ldev", "literarysource", "mw-dev", "csl-app", "csl-lslink"]
+    repos_contributed: ["PWG", "PWK", "MWS", "AP", "VCP", "CORRECTIONS", "BHS", "VEI", "ACC", "BEN", "BOR", "BOP", "LRV", "AMAR", "COLOGNE", "hwnorm1", "alternateheadwords", "cologne-stardict", "csl-doc", "csl-apidev", "csl-homepage", "csl-websanlexicon", "csl-pywork", "csl-orig", "csl-corrections", "hwnorm2", "csl-devanagari", "csl-newsletter", "csl-lnum", "csl-ldev", "literarysource", "mw-dev", "csl-app", "csl-lslink"]
     enrichment_status: needs_name_and_orcid
   - login: funderburkjim
     name: null
@@ -74,7 +74,7 @@ people:
     orcid: null
     affiliation: null
     repos_authored: []
-    repos_contributed: ["PWG", "PWK", "MWS", "MD", "AP", "AP90", "GRA", "FRI", "SCH", "DCS", "VCP", "ApteES", "SKD", "MCI", "CORRECTIONS", "WIL", "BHS", "VEI", "ACC", "KRM", "BUR", "CAE", "CCS", "STC", "BEN", "BOR", "INM", "BOP", "LRV", "AMAR", "SHS", "KNA", "KOW", "PUI", "csl-observatory", "COLOGNE", "GreekInSanskrit", "hwnorm1", "alternateheadwords", "cologne-stardict", "rvlinks", "MWinflect", "csl-doc", "csl-apidev", "csl-homepage", "csl-websanlexicon", "csl-pywork", "csl-orig", "csl-westergaard", "csl-kale", "csl-inflect", "csl-corrections", "hwnorm2", "avlinks", "csl-devanagari", "csl-newsletter", "csl-lnum", "csl-ldev", "literarysource", "mw-dev", "csl-app", "csl-lslink"]
+    repos_contributed: ["PWG", "PWK", "MWS", "MD", "AP", "AP90", "GRA", "FRI", "SCH", "DCS", "VCP", "ApteES", "SKD", "MCI", "CORRECTIONS", "WIL", "BHS", "VEI", "ACC", "KRM", "BUR", "CAE", "CCS", "STC", "BEN", "BOR", "INM", "BOP", "LRV", "AMAR", "SHS", "KNA", "KOW", "csl-observatory", "COLOGNE", "GreekInSanskrit", "hwnorm1", "alternateheadwords", "cologne-stardict", "rvlinks", "MWinflect", "csl-doc", "csl-apidev", "csl-homepage", "csl-websanlexicon", "csl-pywork", "csl-orig", "csl-westergaard", "csl-kale", "csl-inflect", "csl-corrections", "hwnorm2", "avlinks", "csl-devanagari", "csl-newsletter", "csl-lnum", "csl-ldev", "literarysource", "mw-dev", "csl-app", "csl-lslink"]
     enrichment_status: needs_name_and_orcid
   - login: Haqob
     name: null
