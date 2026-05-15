@@ -68,8 +68,8 @@ jobs:
 
       - name: Copy data into site
         run: |
-          mkdir -p observatory/site/data
-          cp data/*.csv observatory/site/data/
+          mkdir -p observatory/site/src/data
+          cp data/*.csv observatory/site/src/data/
 
       - name: Build site
         run: |
