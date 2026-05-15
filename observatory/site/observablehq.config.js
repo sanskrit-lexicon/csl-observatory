@@ -19,6 +19,6 @@ export default {
   footer: `Generated from <a href="https://github.com/sanskrit-lexicon">sanskrit-lexicon</a> data.
     Source: <a href="https://github.com/sanskrit-lexicon/csl-observatory">csl-observatory</a>.
     See <a href="/data">data downloads</a> · DOI: pending Zenodo mint`,
-  root: ".",
+  root: "src",
   output: "dist"
 };
