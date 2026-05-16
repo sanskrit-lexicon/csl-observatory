@@ -346,12 +346,129 @@ Sections:
 
 ---
 
-## 9. Open questions for next round
+---
 
-1. **Specialized dicts inventory**: do you have a curated list of specialized CDSL dicts (besides BHS, BOR, INM) or should I scrape https://www.sanskrit-lexicon.uni-koeln.de ?
-2. **csldoc**: is there a single canonical doc at https://www.sanskrit-lexicon.uni-koeln.de/scans/csldev/csldoc/build/index.html that already documents lineage (so we can use it as ground truth)?
-3. **PD**: what dictionary does this abbreviation stand for? (Pāli? Personal Dictionary? Prākrit?)
-4. **GST and SHS**: what are the full titles? (GST = Goldstücker, presumably; SHS = ?)
-5. **Translation in L7**: do you prefer the LLM-assisted route (faster, fuzzier) or the strict bilingual-dictionary route (slower, deterministic)?
-6. **Phylogenetic algorithm**: UPGMA (simple, fast) vs Neighbor-Joining (better when divergence rates vary) vs Bayesian (most rigorous, slowest)? I'll default to all three with comparison if you want.
-7. **For the user**: are you a co-author on Papers L and H by virtue of running the project, or is the authorship list intentionally broader?
+## 9. Canonical dictionary inventory (per Patel 2016 + extensions)
+
+Source: Patel, D. (2016). *Normalizing headwords of Cologne digital dictionaries*.
+Saved at: [csl-corrections/Normalizing_headwords_of_Cologne_digital.pdf](https://github.com/sanskrit-lexicon/csl-corrections/blob/master/Normalizing_headwords_of_Cologne_digital.pdf)
+
+Full CSV at [`data/dictionary_inventory.csv`](../data/dictionary_inventory.csv).
+
+**Key insights from this inventory**:
+
+- **PWG (1855) is the oldest German Sanskrit-Wörterbuch in the family** — and the oldest non-indigenous source after WIL (1832).
+- **SKD (1822) is the oldest indigenous Sanskrit-Sanskrit dict** — predates everything in the German tradition.
+- **PD (1976) = An Encyclopedic Dictionary of Sanskrit on Historical Principles** (Deccan College, Pune) — major modern Sanskrit lexicographical work; not in our GitHub set yet.
+- **CCS and CAE are sister dicts by the same author** (Cappeller, 1887 German + 1891 English) — testing this pair is a perfect baseline for "near-identical-content, different-language" comparison.
+- **STC and BUR are French**; **GRA, CCS, PW, PWG, SCH are German**; **MWE, AE, BOR are English-Sanskrit (reverse)** — the language structure of the CDSL family is now explicit.
+- **Specialised dicts** include: GRA (Rigveda), INM (MBh-names), MCI (MBh-cultural), VEI (Vedic), KRM (verbs), PUI (Purāṇa), SNP (plants), PE (Purāṇa encyclopaedia), IEG (epigraphy), PGN (Gupta inscriptions), BHS (Buddhist Hybrid).
+- **Identification gaps in our GitHub set**: FRI, KNA, KOW, LRV (codes in repo, full titles unclear) — to be confirmed in Phase L1 from each repo's README/CITATION.cff.
+- **Cologne scan-only dicts** (NOT in GitHub): AE, IEG, MWE, PD, PE, PGN, SNP, YAT — 8 dicts. Decision needed: ingest from Cologne web scrape, or omit?
+
+### Publication-year direction-of-flow constraints
+
+A dict published in year Y can only inherit from dicts published in years ≤ Y. This is the **temporal constraint** in the Bayesian model:
+
+```
+For pair (A, B) with publication years yA, yB:
+  if yA < yB:  edge A → B is plausible; B → A is impossible
+  if yA = yB:  bidirectional or common-ancestor
+  if yA > yB:  edge B → A is plausible; A → B is impossible
+```
+
+This single constraint eliminates ~half the candidate edges in the 35×35 search.
+
+### Lineage hypotheses ranked by temporal plausibility
+
+| Candidate edge | Temporal | Documented | Forensic evidence to gather |
+|---|---|---|---|
+| WIL 1832 → SHS 1900 | ✓ 68y gap | likely (user) | shared lemma-set, English glosses |
+| WIL 1832 → GST 1856 | ✓ 24y gap | likely (user) | first 'a-' letters only |
+| SKD 1822 → PWG 1855 | ✓ 33y gap | partial (user) | Skt-Skt as PWG substrate |
+| VCP 1873 ↔ PWG 1855 | reverse: PWG → VCP? | partial | PWG-knowledge in VCP commentary |
+| PWG 1855 → MW72 1872 | ✓ 17y gap | known | direct copy + truncation |
+| PWG 1855 → PWK 1879 | ✓ 24y gap | known | same authors, abridgement |
+| PWG 1855 → CCS 1887 | ✓ 32y gap | likely (user) | Cappeller German tradition |
+| PWG 1855 → CAE 1891 | ✓ 36y gap | likely (user) | Cappeller English version |
+| PWK 1879 → CCS 1887 | ✓ 8y gap | likely (user) | abridged-from-abridged |
+| PWG/PWK → MW 1899 | ✓ 20-44y gap | known (MW preface) | major copy with English re-gloss |
+| MW72 1872 → MW 1899 | ✓ 27y gap | known | author's own expansion |
+| AP90 1890 → AP 1957 | ✓ 67y gap | known | revised edition |
+| PWG/PWK → SCH 1928 | ✓ 49-73y gap | likely (user) | "Nachträge" = supplements |
+| PWG/PWK → STC 1932 | ✓ 53-77y gap | unknown | German-French transmission? |
+
+The columns to be filled in by Phases L2-L8.
+
+---
+
+## 10. Patel's headword-normalisation conventions (the standard)
+
+Adopted as the **default normalisation** for all parsing in Phase L1. Encoded as a Python module `observatory/lexico/normalize.py`.
+
+### The 7 conventions and their per-dictionary fingerprints
+
+| Convention | Variants | Standard chosen | Discriminating signal? |
+|---|---|---|---|
+| 1. Anusvāra before consonants | 6 options | "convert nasal+consonant to anusvāra; trailing anusvāra → m" | YES — option-1.5 vs 1.6 split is forensic |
+| 2. Duplication after `r` | 2 options | "no duplication" | YES — only SKD, WIL duplicate |
+| 3. Words ending with `-at` (śatṛ) | 3 options | "ending with at" | YES — clean two-cluster split |
+| 4. Inflected vs uninflected | 2 options | "uninflected" | YES — only AP, AP90, SKD use inflected |
+| 5. Anusvāra of verbs | 3 options | "remove anubandha, keep as anusvāra (option 5.3)" | partial |
+| 6. ṛkārānta words | 3 options | "ṛ at end" | YES — clean three-cluster |
+| 7. vas/yas suffixes | 4 options | "vas/yas at end" | YES — four clusters |
+
+### The "convention fingerprint" as inheritance signal (NEW Phase L0)
+
+**Insight**: Each dict's choice across all 7 conventions is itself a fingerprint. Dicts following the same fingerprint pattern likely share lineage. Patel's per-dict membership lists give us this fingerprint **for free**.
+
+Example fingerprints (extracted from Patel 2016):
+
+| Dict | C1 | C2 | C3 | C4 | C5 | C6 | C7 |
+|---|---|---|---|---|---|---|---|
+| PWG | 1.5 | 2.2 | 3.2 | 4.2 | 5.2 | 6.1 | 7.4 |
+| PWK | 1.5 | 2.2 | 3.2 | 4.2 | 5.2 | 6.1 | 7.4 |
+| SCH | 1.5 | 2.2 | 3.2 | 4.2 | 5.2 | 6.1 | 7.4 |
+| MW | 1.5 | 2.2 | 3.1 | 4.2 | 5.2 | 6.2 | 7.1 |
+| MW72 | 1.6 | 2.2 | 3.1 | 4.2 | 5.2 | 6.2 | 7.1 |
+| AP | 1.2 | 2.2 | 3.1 | 4.1 | 5.2 | 6.2 | 7.1 |
+| AP90 | 1.1+1.5 | 2.2 | 3.1 | 4.1 | 5.3 | 6.2 | 7.1 |
+| SKD | 1.6 | 2.1 | 3.3 | 4.1 | 5.1 | 6.3 | 7.3 |
+| VCP | 1.6 | 2.2 | 3.1 | 4.2 | 5.1 | 6.2 | 7.1 |
+| WIL | 1.5 | 2.1 | 3.1 | 4.2 | 5.2 | 6.2 | 7.1 |
+| CAE | 1.5 | 2.2 | 3.2 | 4.2 | 5.2 | 6.2 | 7.4 |
+| CCS | 1.5 | 2.2 | 3.2 | 4.2 | 5.2 | 6.2 | 7.4 |
+
+**Already from this small fingerprint table:**
+- **PWG = PWK = SCH** are *identical* across all 7 conventions → strongest possible lineage signal, matching the known PWG → PWK → SCH chain.
+- **CAE and CCS** are nearly identical (differ only in C6) → confirms shared Cappeller authorship.
+- **MW differs from PWG only in C3, C6, C7** → consistent with "borrowed but anglicised".
+- **MW72 differs from MW only in C1** → consistent with same author, evolved style.
+- **SKD is an outlier** (most idiosyncratic across conventions) → consistent with indigenous origin separate from German tradition.
+- **AP90 → AP** shows divergence (AP90 has 1.1+1.5 while AP has 1.2; AP90 has 5.3 while AP has 5.2) → revised editor introduced normalisation changes.
+
+### Phase L0 (NEW, fastest possible win)
+
+**Phase L0 — Convention-fingerprint matrix** (1-2 days, can run TODAY):
+
+1. Extract Patel's per-convention dict-membership lists into structured CSV
+2. Build the 35×7 fingerprint matrix
+3. Compute Hamming distance for every dict pair
+4. Cluster: hierarchical clustering with average linkage → first cladogram
+5. Compare to known lineage → measure recovery accuracy
+6. Output: `data/convention_fingerprint.csv` + first phylogenetic tree as `convention_cladogram.svg`
+7. New dashboard page section: `/lexicography/conventions.md`
+8. **Paper M Section**: §4.1.5 — convention-fingerprint as cheap signal
+
+---
+
+## 11. Open questions for next round
+
+1. **Scan-only dicts** (AE, IEG, MWE, PD, PE, PGN, SNP, YAT — 8 dicts not on GitHub): ingest from Cologne web scrape (~1 day each), or omit and publish a "future work" note?
+2. **Add PD to the corpus?**: it's a major modern dict; would massively strengthen Paper L; but requires Cologne-side coordination.
+3. **Phase L0 first?**: convention-fingerprint matrix is buildable in 1-2 days from Patel's paper alone (no XML parsing needed yet). Confirm to start.
+4. **Update GitHub repo for missing CITATION.cff data**: should I auto-populate publication-year + author per repo from Patel's inventory CSV → push back as CITATION.cff updates (so contributor-name + year are now machine-readable everywhere)?
+5. **Identify FRI / KNA / KOW / LRV** — these 4 dicts in the GitHub set don't appear in Patel 2016. Are they newer additions? Specialised? Sub-dictionaries of others?
+6. **Translation in L7**: LLM-assisted (faster, fuzzier) or strict bilingual-dictionary route (slower, deterministic)?
+7. **Phylogenetic algorithm**: UPGMA + Neighbor-Joining + Bayesian (per author decision: all three).
+8. **Authorship of Papers M, L, H**: confirmed M. Gasūns + named CDSL maintainers + Claude with disclosure.
