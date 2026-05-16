@@ -274,16 +274,37 @@ This section is **open for additions** — each new question may become a focuse
 - [x] Does MW directly cite Bopp? (No — only 4 mentions of "Bopp" in MW72, 0 in MW; need indirect cognate-set comparison)
 - [x] Does each dict's lemma-overlap reveal inheritance? (Yes — WIL→SHS, WIL→YAT, PWG→PW, MW72→MW, ARMH→MW, etc.)
 
-### 5.2 New / to be added by author
+### 5.2 New / added by author (captured 2026-05-16, prompting round 1)
 
-This section is **awaiting input from M. Gasūns** — please list research questions you want to add. Some templates:
+Four structure-and-lineage questions surfaced via `AskUserQuestion` and answered by M. Gasūns. Each becomes a study/phase/section as noted.
+
+**Q1. Dictionary-pair derivation hypotheses to test** (beyond the four already confirmed: WIL→YAT, WIL→SHS, ARMH→MW, ABCH→MW)
+- **PW → MW** — the canonical claim everyone repeats but no one has empirically measured.
+- **PWG → MW72** — 1855 PWG seeding the 1872 first Monier-Williams (rather than only PW → MW). Re-centers the lineage on PWG.
+- **PWG → SHS** — PWG as European-Sanskrit backbone reaches Sanskrit-English dicts directly.
+- **CCS → KCH** — Cappeller (1887 German) → Kochergina (1978 Russian); cross-language, cross-century edge.
+
+*Cumulative implication*: PWG is the central node of the European-Sanskrit family, not PW alone. Phase L0 must include PWG-rooted edges as a first-class hypothesis class.
+
+**Q2. Case-study lemma set**
+- **Hapax legomena and rare technical terms** — chosen as the forensic instrument: a hapax shared between two dicts is the strongest possible copying signal. Implies a new **Phase L0.7 (hapax-overlap study)** feeding Q1's lineage tests.
+
+**Q3. Editorial / methodological decisions to examine**
+- **Treatment of grammatical info (gender, paradigm, root class)** — the most-variable microstructure feature across CDSL; ties into the 24 verb-entry + 10 nominal dimensions. Feeds a dedicated "grammatical-metadata inventory" paper (see PUBLICATIONS §6.2, Article 18).
+
+**Q4. Lexicographer biographical / intellectual influence to study**
+- **Böhtlingk & Roth (PW/PWG) — the Petersburg school** — coherent with Q1's PWG-as-backbone answers and the Russian-tradition thread in PUBLICATIONS §6.2 Q8. Framed as a Petersburg-institutional study (not isolated biographies of two German philologists who happened to live in Russia).
+
+### 5.3 Further questions — open for input
+
+Templates for any additional research questions:
 
 - *"What is the [phenomenon] in [dict A] vs [dict B] and how does it correlate with [other dimension]?"*
 - *"Is the [historical claim] visible in [data signal]?"*
 - *"How does [structural dimension] change between [dict A 19th c.] and [dict B 20th c.]?"*
 
 Each question becomes one of:
-- A new Phase (L0.5, L0.6, etc.) in the lexicography roadmap
+- A new Phase (L0.5, L0.6, L0.7, etc.) in the lexicography roadmap
 - A new dashboard chart
 - A paragraph in an existing article
 - A whole new article if the scope warrants
