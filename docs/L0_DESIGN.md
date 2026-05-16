@@ -60,7 +60,12 @@ Per author decision: include all three suggested dimensions plus *as many additi
 26. **Pāṇinian sūtra reference** — `Pāṇ. 3.1.4` cited or not
 27. **Source-language identification within entries** — bilingual gloss markers
 
-**Total: 27 fingerprint dimensions** (Patel's 7 + 20 additions).
+### 2.9 Etymology / derivation richness (3 new dimensions, added 2026-05-16)
+28. **Etymology presence rate** — % of entries containing an etymology marker (e.g. WIL's `E.` prefix, AP's `der` block, MW's `√` root pointer). Binary if rate >5%
+29. **Etymology mean-length** — average chars in etymology block per entry containing one
+30. **Distinct etym-marker patterns** — count of unique opening tokens (e.g. `E.`, `der.`, `from`, `cf.`, `√`, `Skr.`) → captures editorial style consistency
+
+**Total: 30 fingerprint dimensions** (Patel's 7 + 23 additions).
 
 Each dimension is encoded as a categorical variable with 2-6 possible options. Many options are extracted directly from each dict's published documentation; others require a brief sample-survey of 10-50 entries per dict.
 
@@ -268,6 +273,134 @@ Sections:
 
 This makes the L0 inter-rater agreement defensible and the annotation provenance traceable.
 
-## 13. Open question (the one M.G. wants to clarify before L0 begins)
+## 13. Multi-volume publication-year handling (added 2026-05-16)
+
+Many CDSL dictionaries are **multi-volume publications spanning years or decades**, not single-year publications. This affects the temporal-plausibility check in the inheritance score.
+
+### Examples of multi-volume dicts
+
+| Dict | Range | Vols | Notes |
+|---|---|---|---|
+| PWG | 1855-1875 | 7 | vol1 1855 (a-), vol2 1858, vol3 1861, vol4 1865, vol5 1868, vol6 1871, vol7 1875 |
+| PW | 1879-1889 | 7 | abridged Petersburger; same fascicle structure |
+| VCP | 1873-1884 | many | indigenous Skt-Skt; multi-fascicle |
+| SKD | 1822-1886 | many | original 1822, Cologne uses later 1886 edition |
+| AP | 1957-1959 | 3 | revised Apte 3-volume Pune edition |
+| PD | 1976-ongoing | 37+ planned | only first ~6 vols (a- through aMS-) published |
+| MCI | 1976-1993 | 15+ planned | partial-by-letter publication |
+
+### MW72 ⊂ PWG case study (the prefatory evidence)
+
+> "MW72 (1872) preface notes use of early PWG volumes (1855-1865 fascicles)"
+
+Means: MW72's terminus a quo for PWG-derivation is volume 4 (1865). Vols 5-7 of PWG (1868-1875) **could not** have been used by MW72 because they post-date it. So a "PWG → MW72" inheritance edge applies **only** to the lemmas in vols 1-4 (typically letters a- through approx. p-).
+
+### Updated temporal-plausibility logic
+
+For source A, inheritor B:
+
+```python
+# Old (single-year):
+plausible = (year_A <= year_B)
+
+# New (range-aware):
+A_start, A_end = year_range(A)
+B_start, B_end = year_range(B)
+
+# Strong: every volume of A predates B's start
+strong_plausible = (A_end <= B_start)
+
+# Partial: A started before B finished, so SOME vols of A predate B
+partial_plausible = (A_start < B_end)
+
+# Lemma weighting: if partial, restrict inheritance scoring to lemmas
+# that fall in A's published-by-year(B_start) letter range
+```
+
+The new inventory CSV `data/dictionary_inventory.csv` includes columns:
+- `start_year` — earliest volume publication year
+- `end_year` — latest volume publication year (or "ongoing")
+- `n_volumes` — number of volumes
+- `letter_coverage` — `full`, `partial-a-only`, `partial-by-letter`, etc.
+
+### Per-letter (fascicle) granularity (Phase P, deferred)
+
+Even finer: per-letter coverage per dict (e.g. PWG vol1 covers `a-`, vol4 covers `n-p`). Requires:
+- Fascicle metadata extraction from each dict's preface (Phase P — Preface Analysis, deferred)
+- Per-lemma "first published by" date attribution
+
+For L0, we use range-only. Per-letter detail comes in Phase P.
+
+## 14. KCH (Kochergina 1978) added (2026-05-16)
+
+The standard modern Sanskrit-Russian dictionary (Vera A. Kochergina, ~30k entries) is added to the inventory as `in_github=planned`, `in_sanhw1=no`, source TBD. KCH joins the Sanskrit-Russian family (with KOW, KNA) — three Sanskrit-Russian dictionaries spanning 124 years (KOW 1854 → KNA 1893 → KCH 1978).
+
+**Comparison angle for Paper L**: this is the most coherent national lexicographic tradition in the corpus (entirely Russian-target, no other languages in this family).
+
+## 15. Etymology / derivation measurement plan (added 2026-05-16)
+
+Per author decision: **all three signals** (binary + frequency + length distribution).
+
+### Operationalisation per dict
+
+For each dict's source XML:
+
+```python
+def measure_etymology(dict_xml):
+    entries = parse_entries(dict_xml)
+    n = len(entries)
+    etym_count = 0
+    etym_lengths = []
+    marker_patterns = set()
+    
+    for entry in entries:
+        text = entry.body
+        # Search for etymology markers (per-dict pattern)
+        for pattern in ETYM_PATTERNS[dict_code]:
+            match = pattern.match(text)
+            if match:
+                etym_count += 1
+                etym_block = extract_etym_block(text, match)
+                etym_lengths.append(len(etym_block))
+                marker_patterns.add(match.group(0)[:10])  # opening token
+                break
+    
+    return {
+        'etym_presence_pct': etym_count / n,
+        'etym_mean_chars': mean(etym_lengths) if etym_lengths else 0,
+        'etym_marker_patterns': len(marker_patterns)
+    }
+```
+
+### Per-dict known etym-marker patterns
+
+| Dict | Marker | Notes |
+|---|---|---|
+| WIL | `E.` prefix | Wilson's standard etymology marker |
+| AP | `der.` block at end | derivation block |
+| MW | `√` for verbal roots; `cf.` for cognates | most extensive |
+| PWG | full etymological prose | not just markers |
+| MD | `Skr.` for Sanskrit cognates | sparse |
+| BHS | `Pkt.` for Prakrit, `Pa.` for Pali cognates | comparative |
+| BOP | full Latin etymology prose | extensive (Latin tradition) |
+
+This becomes fingerprint dimensions 28-30 (added in §2.9 above).
+
+## 16. Phase P — Preface Analysis (NEW, deferred)
+
+A dedicated phase for parsing the **preface text** of each digital dict to extract:
+
+- **Documented derivation** (e.g. MW72 preface says "used PWG vols 1-4")
+- **Per-volume publication years**
+- **Per-letter coverage**
+- **Acknowledged sources** (other dicts cited in the preface)
+- **Editorial methodology** (e.g. "we corrected typos in PWG by reference to manuscript X")
+
+**Effort**: ~2 days per dict × 35 dicts = 6-8 weeks (could be parallelised)
+**Output**: `data/dict_prefaces.csv` with structured per-dict ground-truth lineage
+**Use**: Phase P data validates the L0/L8 cladograms; supplies Paper H §2's narrative
+**Status**: deferred until L0 + L1.5 + L2 results are reviewed
+
+## 17. Open question
 
 Awaiting clarification.
