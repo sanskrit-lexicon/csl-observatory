@@ -14,15 +14,15 @@ CAE,1891,Cappeller Sanskrit-English Dictionary,Skt-Eng,Carl Cappeller,yes,Same a
 CCS,1887,Cappeller Sanskrit Wörterbuch,Skt-Ger,Carl Cappeller,yes,Same author as CAE; German
 CORRECTIONS,n/a,User corrections meta-repo,meta,community,yes,Not a dictionary
 DCS,n/a,Digital Corpus of Sanskrit (link),Skt-corpus,Hellwig (sister project),yes,
-FRI,n/a,Fri/Frey?,Skt-Lat?,?,yes,Need to identify
+FRI,2015,Fríš (Frish) Sanskrit Reader / Sanskrtská čítanka Vol. 2,Skt-Cze-Rus,Oldřich Fríš (ed. ABV Moscow),yes,Czech-Russian Sanskrit reader/chrestomathy not a lexicon
 GRA,1873,Grassman Wörterbuch zum Rig Veda,Skt-Ger,Hermann Grassmann,yes,Specialized: Rigveda only
 GST,1856,Goldstücker Sanskrit-English Dictionary,Skt-Eng,Theodor Goldstücker,yes,Incomplete: only letter 'a-' published
 IEG,1966,Indian Epigraphical Glossary,Skt-meta,Sircar,no,Cologne scan-only
 INM,1904,Index to the Names in the Mahabharata,Skt-Eng,Sörensen,yes,Specialized index
-KNA,n/a,?,?,?,yes,Need to identify (Knauer?)
-KOW,n/a,?,?,?,yes,Need to identify
+KNA,1893,Knauer Sanskrit-Russian Vocabulary,Skt-Rus,Friedrich Knauer,yes,German-Russian Sanskritist; estimated year
+KOW,1854,Kossowich Sanskrit-Russian Dictionary,Skt-Rus,Каэтан Коссович (1815-1883),yes,Russian Sanskritist; estimated year
 KRM,1965,Kṛdantarūpamālā,Skt-Skt,Bhattoji Dīkṣita (anc.),yes,Verbs only
-LRV,n/a,?,Skt-Ger?,?,yes,Need to identify (Liebich? Or Lalita-vistara?)
+LRV,1889,L.R. Vaidya Standard Sanskrit-English Dictionary,Skt-Eng,L.R. Vaidya,yes,Indian Skt-Eng dict 1889; HathiTrust 008693928
 MCI,1993,Mahabharata Cultural Index,Skt-Eng,Pusalker,yes,Specialized index
 MD,1893,Macdonell Sanskrit-English Dictionary,Skt-Eng,A.A. Macdonell,yes,
 MW,1899,Monier-Williams Sanskrit-English Dictionary,Skt-Eng,Monier Monier-Williams,yes,Code MWS in github
