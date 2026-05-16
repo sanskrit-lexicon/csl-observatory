@@ -325,7 +325,114 @@ Dictionary = end product of methodology applied
 
 ---
 
-## 6. Open questions for next round
+## 6. Macrostructure typology (added 2026-05-16 per author request)
+
+While **microstructure** is what's INSIDE an entry, **macrostructure** is how the dictionary as a whole is ORGANISED.
+
+### 6.1 Macrostructure dimensions to measure
+
+| # | Dimension | Examples / values |
+|---|---|---|
+| 1 | Alphabetisation order | Sanskrit varṇamālā / IAST / German alphabetical (PWG) / English (WIL, MW) |
+| 2 | Entry granularity | one lemma = one entry (MW) vs lemma + variants combined (PWG `gam (vgl. gā)`) |
+| 3 | Homonym treatment | separate `<L>` entries (MW: 3× gam) vs hom-numbered same entry (PWG: 1. gam, 2. gam) |
+| 4 | Compound treatment | each compound a headword (MW) vs nested under primary lemma (PWG `gata` subentries) |
+| 5 | Section division | preface + body + indices + appendices structure |
+| 6 | Volume division | by letter (PWG vol1=a-, vol4=n-p) vs by alphabet section vs by topic |
+| 7 | Cross-referencing system | "see X" prose / `q.v.` / `<L>` reference numbers / hyperlinks |
+| 8 | Index types | etymological / semantic / frequency / source-text / Pāṇinian-sūtra |
+| 9 | Appendix presence | abbreviations / list of authors / citation conventions / errata |
+| 10 | Numbering scheme | entry numbers / line numbers / page numbers (and granularity) |
+| 11 | Headword normalisation convention | Patel-1 through Patel-7 (already measured) |
+| 12 | Inclusion criteria | scope: classical only / Vedic only / Buddhist (BHS) / Mahābhārata (MCI, INM) |
+| 13 | Exclusion criteria | what kinds of words explicitly omitted (vulgar, dialectal, post-classical) |
+| 14 | Source-language acknowledgement | preface acknowledges which prior dicts used (foundational ground-truth) |
+| 15 | Editorial-voice strategy | translator (e.g. Wilson translates Indian sources) vs original lexicographer (Apte composes) |
+| 16 | Citation-format strategy | full reference (PWG) / abbreviated (MW) / minimal (newer dicts) |
+| 17 | Typography / display | Devanagari + Roman / Roman-only / SLP1-tagged / IAST |
+| 18 | Front-matter richness | preface length + introduction + grammar primer + abbreviations list |
+| 19 | Versioning / edition history | first ed / revised / new ed / posthumous (per dict CITATION.cff) |
+| 20 | Per-entry uniformity | every entry follows same template (modern) vs ad-hoc (older) |
+
+### 6.2 Macrostructure × microstructure interaction
+
+A dict at **macro-level "1 entry per compound"** (e.g. MW) will have **many more total entries** but **shorter individual microstructure** per entry. A dict at **macro-level "compounds nested under primary"** (PWG) will have **fewer total entries** but **deeper microstructure** per primary entry.
+
+This explains the lemma-count differences:
+- MW: 194k lemmas (many compounds as separate entries)
+- PWG: 106k lemmas (compounds often nested)
+- AP: 88k lemmas (mixed)
+
+**KPI**: lemma-to-microstructure-depth ratio per dict.
+
+### 6.3 Macrostructure-specific charts (added to §3 catalog)
+
+46. **Front-matter length distribution** (preface chars per dict)
+47. **Index-types-present matrix** (which dicts have which index appendices)
+48. **Per-section type detection** (preface / body / appendices breakdown per dict)
+49. **Volume × letter coverage matrix** (when each letter was first published per dict)
+50. **Editorial-voice classification** (translator-style vs original-author-style)
+
+---
+
+## 7. DH + Digital Lexicography trends tracking (added 2026-05-16)
+
+Per author request: help track trends in **(a) Digital Humanities** and **(b) Digital Lexicography**. Classical lexicography manuals will be provided as .txt by author for separate analysis.
+
+### 7.1 What I can produce
+
+**(a) Quarterly DH + Lexicography trend digest** — a markdown report each quarter (~2-3 pages) covering:
+
+1. **New venues / papers** in DSH, JCA, IJDL, JoCCH, JADH (Japan), DLfM, DH/DH-Russia conferences
+2. **Tool / platform releases** — TEI Lex-0 versions, OntoLex-Lemon updates, ELEXIS milestones, DARIAH developments
+3. **Standards / methodology shifts** — FAIR principles, CARE principles, linked-open-data conventions
+4. **LLM / NLP applications to lexicography** — recent papers using GPT/Claude/Llama for definition generation, headword alignment, sense disambiguation
+5. **Open-data movements** — Wikidata-lexemes, OmegaWiki, Wiktionary statistics
+6. **Sanskrit-specific DH** — WSC programs, ICOSAL, Sanskrit Computational Linguistics workshops, GRETIL/DCS/Heritage updates
+7. **Russian-language DH** — DH-Russia conference, Russian-led Sanskrit projects
+
+**(b) Bibliography curation** — a structured `data/dh_lexicography_bibliography.csv` updated monthly with new relevant papers, automatically scraped from:
+- arXiv.cs.DL (Digital Libraries)
+- arXiv.cs.CL (Computation and Language)
+- DOAJ + DSH RSS feeds
+- Google Scholar alerts (manual setup, you receive)
+- Semantic Scholar API queries
+
+**(c) Briefing document** — annual "state of digital lexicography" report (~10 pages, December each year) synthesising the trends + their implications for CDSL / your dissertation work.
+
+**(d) Conference watch list** — quarterly calendar of upcoming relevant conferences with CFP dates.
+
+### 7.2 What I CAN'T directly do (requires you)
+
+- **Read classical lexicography manuals** (Hartmann & James 2001; Wiegand 1989-2017; Atkins & Rundell 2008; Apresjan; Karaulov; Geeraerts) — you'll provide as .txt
+- **Travel-conferenced reports** — I can't attend conferences
+- **Networking** with active researchers — your domain
+- **Editorial / political reads** of journal-policy shifts — needs human judgement
+
+### 7.3 Trend categories to track (the taxonomy)
+
+| Category | Examples |
+|---|---|
+| **Standards** | TEI Lex-0, OntoLex-Lemon, LMF (ISO 24613) |
+| **Infrastructure** | ELEXIS, CLARIN, DARIAH, OpenAIRE |
+| **Methods** | computational stemmatics, phylogenetic methods in textual scholarship, LLM applications |
+| **Open data** | Wikidata lexemes, BabelNet, ConceptNet, OmegaWiki |
+| **Crowdsourcing** | Wiktionary growth metrics, citizen-lexicographer platforms |
+| **AI / NLP** | sense embedding, headword disambiguation, automated dictionary creation |
+| **Reproducibility** | snapshot strategies, version control for dictionaries, citation systems |
+| **Sanskrit-specific** | GRETIL, DCS, Heritage Hub, Sanskrit Heritage Reader, OpenSanskrit |
+| **Russian DH** | Compreno, Russian NLP corpora, Russian lexicography (RAS) |
+
+### 7.4 Action items
+
+1. **Now**: set up tracking infrastructure (Google Scholar alerts, arXiv RSS, conference calendar)
+2. **Quarterly**: produce digest (deliverable Q1, Q2, Q3, Q4 each year)
+3. **Annually**: produce briefing document (December)
+4. **When you provide manuals**: ingest the .txt manuals, build a `data/lexicography_principles.csv` mapping classical principles to digital implementations
+
+---
+
+## 8. Open questions for next round
 
 1. **Russian co-authors**: who would you invite as named co-author on the Russian-language articles (4, 6, 11, 14, 15)?
 2. **Funding strategy**: is the work entirely unfunded, or is there RFFI / RNF / RSCI funding to pursue? Affects acknowledgements.
