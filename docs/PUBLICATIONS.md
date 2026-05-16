@@ -1,11 +1,11 @@
-# Publications: 15-article track, book, manual, and Sanskrit-Russian dictionary
+# Publications: 19-article track, book, manual, and Sanskrit-Russian dictionary
 
 **Version**: 1.0 · **Date**: 2026-05-16
 **Companion to**: [`MICROSTRUCTURE-MACROSTRUCTURE.md`](MICROSTRUCTURE-MACROSTRUCTURE.md), [`LEXICOGRAPHY_ROADMAP.md`](LEXICOGRAPHY_ROADMAP.md), [`OBSERVATORY_DESIGN.md`](OBSERVATORY_DESIGN.md)
 
 This doc captures the **publication strategy and end-products** of the project:
 
-1. **15 articles in 10 years** (the article schedule for higher-doctorate qualification)
+1. **19 articles in 10 years** (the article schedule for higher-doctorate qualification — 15 original + 4 added 2026-05-16, see §6.2)
 2. **Scientific monograph** (the Book)
 3. **Practical manual** for Sanskrit lexicographers
 4. **Sanskrit-Russian dictionary** (corpus-based, successor to Kochergina 1978)
@@ -15,7 +15,7 @@ This doc captures the **publication strategy and end-products** of the project:
 
 ## 1. The 10-year publication plan
 
-**Goal**: 15 peer-reviewed articles + scientific monograph + practical manual + Sanskrit-Russian dictionary by 2035.
+**Goal**: 19 peer-reviewed articles + scientific monograph + practical manual + Sanskrit-Russian dictionary by 2035. (15 articles scheduled below; Articles 16-19 added 2026-05-16, see §6.2 — schedule integration pending.)
 
 **Author**: M. Gasūns, working toward higher-doctorate qualification.
 
@@ -305,15 +305,35 @@ This section is **open for additions** — please list research questions you wa
 - Article 14: What is the Sanskrit-Russian dictionary tradition and how should a new corpus-based dictionary build on it?
 - Article 15: What are the principles and prototype for a new corpus-based Sanskrit-Russian dictionary?
 
-### 6.2 Additional research questions — TO BE ADDED
+### 6.2 Additional research questions (captured 2026-05-16, prompting round 2)
 
-This section is **awaiting input from M. Gasūns** — please list further research questions to add.
+Four publication-strategy and methodology questions surfaced via `AskUserQuestion` and answered by M. Gasūns. Each becomes a new article, comparison study, or named research thread as noted.
 
-Templates:
+**Q5. Additional paper topics beyond the 15 already scheduled** — *all four selected*
+- **Article 16: PWG as the European-Sanskrit backbone** — documents PWG → MW72, PWG → SHS, PWG → CCS, and the wider European tradition. Builds directly on the Round-1 lineage answers in [MICROSTRUCTURE-MACROSTRUCTURE §5.2](MICROSTRUCTURE-MACROSTRUCTURE.md#52-new--added-by-author-captured-2026-05-16-prompting-round-1).
+- **Article 17: Hapax-legomena-as-copying-evidence — a forensic method** — methodology paper establishing rare-word overlap as the primary forensic instrument for derivation claims. Foundational for Articles 2, 3, 11, 16, 19.
+- **Article 18: Grammatical-info coding variation across CDSL** — inventory of how gender, paradigm, and root-class are recorded per dict; ties to the 24 verb-entry + 10 nominal dimensions. Feeds the grammatical-metadata subsystem of the new Skt-Rus dictionary (Article 15).
+- **Article 19: The Cappeller-to-Kochergina edge (CCS → KCH)** — standalone treatment of this cross-language, cross-century inheritance. Surprising enough to merit its own paper rather than a subsection of Article 11.
 
-- *"Article 16: How does X feature in Y dict family compare to Z feature in W dict family?"*
-- *"Article 17: Is hypothesis H about CDSL supported by signal S?"*
-- *"Article 18: What is the relationship between [structural dimension] and [historical fact]?"*
+**Q6. Comparison studies with non-CDSL Sanskrit projects to formalise** — *all selected, with refinements from M.G.*
+- **Sanskrit Heritage (G. Huet)** — bundle with Hyderabad (Amba Kulkarni) as one combined thread; the two share coding lineage.
+- **DCS (Digital Corpus of Sanskrit, O. Hellwig)** — used *instead of* pure GRETIL ("DCS is an advanced GRETIL"). Corpus-attestation reality check for CDSL headwords.
+- **Hyderabad (Amba Kulkarni)** — bundled with Sanskrit Heritage above.
+- **Pandanus (Prague)** — included as one more non-CDSL Sanskrit comparison target. M.G. notes: not yet familiar with this project. **TODO**: produce a one-page brief on Pandanus's scope/status before scoping the comparison study.
+
+**Q7. Methodological questions to test explicitly in dedicated article sections**
+- **Distance-metric choice (Jaccard vs. Bray-Curtis vs. Hamming)** — requires an explicit comparison section in Article 3 (computational stemmatics). Particularly important given dict-size asymmetry (WIL ~35k vs. MW ~165k entries) — Jaccard penalises large/small overlaps differently than Bray-Curtis. Bootstrap stability across distance choices should be reported.
+
+**Q8. Russian-tradition / IVRAN research thread**
+- **The Petersburg school as a Russian, not just German, institutional tradition** — re-frame Böhtlingk, Roth, Kossovich, and Minayeff as a Russian-institutional lineage, not "German Sanskritists who happened to live in Russia". Coherent with MICROSTRUCTURE §5.2 Q4 (Petersburg lexicographer thread) and Q1 (PWG-as-backbone). Becomes a **named research thread** (Petersburg Thread), not merely a section of Article 6. Threads into Articles 6, 11, 14, 16, 19.
+
+### 6.3 Further questions — open for input
+
+Templates for any additional research questions:
+
+- *"Article N: How does X feature in Y dict family compare to Z feature in W dict family?"*
+- *"Article N: Is hypothesis H about CDSL supported by signal S?"*
+- *"Article N: What is the relationship between [structural dimension] and [historical fact]?"*
 
 Each additional question becomes one of:
 - A new article in the schedule (potentially shifting the timeline)
