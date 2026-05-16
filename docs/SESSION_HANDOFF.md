@@ -13,7 +13,7 @@ This doc gives a new chat session everything needed to continue without losing m
 **csl-observatory** — a measurement-and-analysis layer for the Cologne Digital Sanskrit Lexicon (CDSL). Open-source, unfunded, run by M. Gasūns (project lead, working toward higher-doctorate qualification).
 
 End-products planned by 2035:
-- **15 peer-reviewed articles** (per [`PUBLICATIONS.md`](PUBLICATIONS.md))
+- **19 peer-reviewed articles** (per [`PUBLICATIONS.md`](PUBLICATIONS.md) — 15 originally scheduled + 4 added 2026-05-16)
 - **Scientific monograph** (the Book, 2033)
 - **Practical manual** for Sanskrit lexicographers (2034)
 - **New corpus-based Sanskrit-Russian dictionary** (~50k headwords, 2035)
@@ -112,9 +112,15 @@ Reference data (read as needed):
 
 ## 4. What's PENDING (the actual next work)
 
+### Done in session 2026-05-16
+- [x] **Asked 4-8 prompting questions** to extract M. Gasūns's research questions (8 prompts in 2 rounds via `AskUserQuestion`)
+- [x] **Captured answers** in [MICROSTRUCTURE-MACROSTRUCTURE.md §5.2](MICROSTRUCTURE-MACROSTRUCTURE.md) (Round 1, structure/lineage) and [PUBLICATIONS.md §6.2](PUBLICATIONS.md) (Round 2, publication strategy / methodology)
+
 ### Immediate (~next session)
-- [ ] **Ask 4-8 prompting questions** to extract M. Gasūns's research questions (see §5 below)
-- [ ] **Add the questions** to MICROSTRUCTURE-MACROSTRUCTURE.md §5 (structure questions) and PUBLICATIONS.md §6 (publication-strategy questions)
+- [ ] **Pandanus brief**: one-page summary of the Prague Pandanus project (scope, status, dataset) — M.G. asked to include it in the non-CDSL comparison thread but is not yet familiar with the project
+- [ ] **Phase L0.7 design**: hapax-legomena overlap study — chosen as the forensic instrument for derivation claims (Round 1 Q2). Add as a new phase in [`LEXICOGRAPHY_ROADMAP.md`](LEXICOGRAPHY_ROADMAP.md).
+- [ ] **Integrate Articles 16-19 into the §1 schedule**: PWG-backbone, hapax-methodology, grammatical-coding variation, CCS→KCH (currently in §6.2 only — needs cadence/timing slots in §1's main table)
+- [ ] **Name the "Petersburg Thread"** explicitly in PUBLICATIONS.md §1 — it spans Articles 6, 11, 14, 16, 19 per Round 2 Q8
 
 ### Near-term (~next few sessions)
 - [ ] **Phase L0 execution**: extract Patel's 7 conventions + 20 added dimensions × 41 dicts → cladogram
@@ -137,11 +143,17 @@ Reference data (read as needed):
 
 ---
 
-## 5. The 4-8 prompting questions to ask in next session
+## 5. The 4-8 prompting questions — asked and answered 2026-05-16
+
+**Status**: ✅ Completed. Both rounds (4+4) asked via `AskUserQuestion` and answered by M. Gasūns. Captured at:
+- [MICROSTRUCTURE-MACROSTRUCTURE.md §5.2](MICROSTRUCTURE-MACROSTRUCTURE.md#52-new--added-by-author-captured-2026-05-16-prompting-round-1) — Round 1 (lineage + structure)
+- [PUBLICATIONS.md §6.2](PUBLICATIONS.md#62-additional-research-questions-captured-2026-05-16-prompting-round-2) — Round 2 (publication strategy + methodology)
+
+The 8 prompts are preserved below for reference / re-use.
 
 User explicitly requested these to extract their research questions. Per-doc placement:
-- Structure-related questions → add to `MICROSTRUCTURE-MACROSTRUCTURE.md §5`
-- Publication-strategy questions → add to `PUBLICATIONS.md §6`
+- Structure-related questions → `MICROSTRUCTURE-MACROSTRUCTURE.md §5`
+- Publication-strategy questions → `PUBLICATIONS.md §6`
 
 The 8 prompts (use AskUserQuestion 4 at a time):
 
