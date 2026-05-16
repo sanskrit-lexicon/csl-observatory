@@ -384,6 +384,15 @@ After all three complete:
 - **L1-L9** (full corpus mining) is the next major branch
 - **Paper M** drafting begins after L0 + M1 + M3 produce data
 
+## 13b. Locked execution details (2026-05-16 round 4)
+
+| Question | Decision |
+|---|---|
+| L1.5 Russian-text handling | **All three signals combined** in Bayesian posterior: (a) lemma + citation set overlap (language-neutral); (b) machine-translate WIL English→Russian, cosine vs KOW; (c) machine-translate KOW Russian→English, cosine vs WIL |
+| Annotation provenance | **File-level metadata header** in each CSV: annotators (name + ORCID), date created, dimensions covered. No per-cell tracking |
+| First-cladogram sharing | **Commit + GH Actions redeploy + dashboard link**. Full pipeline, public viewing at `/lexicography/conventions/` |
+| Execution start | **HOLD** — more design pending |
+
 ## 14. Schema strategy detail (per decision §10)
 
 ### Three target schemas, native first
