@@ -401,6 +401,98 @@ A dedicated phase for parsing the **preface text** of each digital dict to extra
 **Use**: Phase P data validates the L0/L8 cladograms; supplies Paper H §2's narrative
 **Status**: deferred until L0 + L1.5 + L2 results are reviewed
 
-## 17. Open question
+## 17. WIL Nirukta deep-dive (Phase L0.5, added 2026-05-16)
+
+WIL's `.E.` is **Indian Nirukta** (semantic etymology via Pāṇinian morphology), not Western linguistic etymology. Per author decision, all three sub-analyses are planned:
+
+### L0.5.A — Token extraction
+For each of WIL's 39,701 `.E.` blocks:
+- Extract every SLP1 token between `{#…#}` markers (these are dhātu/morpheme references)
+- Build a frequency table: which dhātus appear most often as derivation sources?
+- Build a frequency table: which suffixes/affixes are most common (`vun`, `ghaY`, `ac`, `kvip`, etc.)?
+- Build a frequency table: which upasargas (preverbs) appear?
+
+Output: `data/wil_nirukta_dhatus.csv`, `data/wil_nirukta_suffixes.csv`, `data/wil_nirukta_upasargas.csv`
+
+### L0.5.B — Pāṇinian framework classification
+Each `.E.` block is one of:
+- **kṛt-derivation** (verb root + primary suffix → noun: e.g. `kṛ + ghaY → kāra`)
+- **taddhita-derivation** (noun + secondary suffix → derived noun: e.g. `puruṣa + a → pauruṣa`)
+- **uṇādi-derivation** (irregular kṛt-like suffixes from the Uṇādi-sūtras)
+- **samāsa-decomposition** (compound analysis)
+- **upasarga-prefixation** (preverb + verb)
+- **other** (women's-name particles, denominative verbs, etc.)
+
+Method: regex-based classifier on suffix forms; manual labeling of 200 sample `.E.` blocks; build classifier; report precision/recall.
+
+Output: `data/wil_nirukta_classification.csv`
+
+### L0.5.C — Comparison with classical Nirukta sources
+- Yāska's Nirukta (the foundational work, ~6th c. BCE) — his own dhātu-derivation method
+- Pāṇini's Aṣṭādhyāyī sūtras — formal grammatical rules
+- Are WIL's derivations ANY of: (a) verbatim from Yāska, (b) from Pāṇinian rules, (c) Wilson's own scholarly inference?
+
+Method: cross-reference WIL's most-cited dhātu derivations against (a) digital Yāska's Nirukta, (b) Pāṇinian sūtra-corpus.
+
+Effort: ~2 weeks (substantial Sanskrit-philology research). Output: paper-quality table.
+
+**This becomes a possible separate paper N — *The Nirukta tradition embedded in 19th-century Indological lexicography: a corpus analysis of Wilson's etymological notation*.**
+
+## 18. Bopp-dependence test for MW (Phase M3-Bopp, added 2026-05-16)
+
+MW (1899) has 0 direct "Bopp" citations — but per author intuition, MW's etymology approach derives from Bopp's *Glossarium Sanscritum* (1847).
+
+Test method: **shared cognate-set analysis**.
+
+For lemmas appearing in both MW and BOP:
+- Extract MW's cognate notes (`cf. Lat. X`, `Gk. Y`, `Goth. Z`, `Slav. W`)
+- Extract BOP's full Latin gloss + cognate prose
+- For each shared lemma, compute:
+  - Set of cognate languages mentioned (BOP vs MW)
+  - Set of cognate forms cited (BOP vs MW)
+  - String similarity of cognate phrases
+- Aggregate: % of shared lemmas where MW's cognate set ⊆ BOP's
+
+If ≥70%: strong evidence MW used BOP. If 30-70%: partial influence. If <30%: independent traditions.
+
+Output: `data/mw_bopp_cognate_overlap.csv` + paper paragraph in Paper L §6.
+
+## 19. AP-Hindi missing data (action item)
+
+V.S. Apte's **Practical Sanskrit-Hindi dictionary** is the only Apte work with derivation data, and it is **NOT in Cologne**.
+
+**Action item**: contact Prof. Amba Kulkarni (IIT Hyderabad) — known Sanskrit computational linguist — to request the digital data.
+
+Status: deferred until contact made and data received. When/if obtained, Apte derivation analysis joins L0.5 framework.
+
+## 20. Subentry analysis (Phase L0.6, added 2026-05-16)
+
+Per author decision: all three sub-analyses planned.
+
+### L0.6.A — Subentry density per dict
+Count occurrences per entry of:
+- `Caus.` (causative verbal subentry)
+- `Pass.` (passive)
+- `Desid.` (desiderative)
+- `Inten.` / `Frequent.` (intensive / frequentative)
+- `Den.` (denominative)
+- `Periphr.` (periphrastic conjugation)
+- `WITH` / `with` patterns (preverb-prefixed verbs as subentries)
+
+KPI: mean subentries per entry per dict; distribution.
+
+### L0.6.B — Subentry depth tracking
+Does `Caus.` itself have a `Pass.` of the causative? Does the causative have its own `Desid.`? Build a tree of nested subentries per verb.
+
+KPI: max depth per dict; mean depth.
+
+### L0.6.C — Verb × derivation matrix
+For every verb in the dict, mark presence/absence of each derivative type. Output: per-dict matrix (n_verbs × ~7 derivation columns).
+
+Use: identify which dicts have most COMPLETE verbal-paradigm coverage. AP and MW expected to have richest coverage. WIL likely sparser.
+
+Output: `data/subentry_density.csv`, `data/subentry_depth.csv`, `data/verb_derivation_matrix_<dict>.csv` per dict.
+
+## 21. Open question
 
 Awaiting clarification.
