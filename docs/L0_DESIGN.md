@@ -244,10 +244,30 @@ Sections:
 
 ---
 
-## 11. Open questions (next round before implementation)
+## 11. Decisions locked (2026-05-16 round 2)
 
-1. **Manual annotation pace**: 27 dims × 35 dicts = 945 cells. ~50% from Patel + auto = 470 manual cells. At ~30 sec each = ~4 hours. You willing to co-annotate 1-2 hours, I do the rest? Or all by me?
-2. **Sample size for auto-extraction**: when we sample-survey a dict for a convention (e.g. "what sense-numbering style does WIL use?"), how many entries to inspect? 10? 50? 100?
-3. **Annotation tool**: simple CSV editing in spreadsheet, or build a tiny web tool? CSV is faster, web tool is more rigorous.
-4. **Russian and Czech dicts**: KNA, KOW, FRI — annotated together or separately? They likely follow Russian-tradition conventions distinct from German.
-5. **AMAR (no year)** and **PUI / KRM / VEI (specialised)**: include in main cladogram or treat as outliers in supplementary plots?
+| Question | Decision |
+|---|---|
+| Manual annotation split | **Co-annotation**: M.G. annotates ~1-2 hours; Claude annotates ~2-3 hours. Inter-rater Cohen's κ reported in paper |
+| Auto-extraction sample size | **Adaptive**: sample until per-convention assignment converges at 95% confidence (typical: 10-50 entries) |
+| Russian/Czech (KNA, KOW, FRI) | **Include in main tree** with explicit "limited prior literature" caveat; add Russian-tradition convention options where they appear |
+| Specialised (AMAR, KRM, VEI, PUI, INM, MCI, BHS) | **Supplementary tree only**, with focused per-dict commentary; main tree = general bilingual dicts |
+| Annotation tool | CSV editing in shared spreadsheet (fastest; reproducible diff via git) |
+| Ready to start L0? | **HOLD** — one more clarification pending from M.G. |
+
+## 12. Annotation workflow (locked)
+
+1. Claude generates `data/fingerprint_annotation_template.csv` — 35 rows (dicts) × 27 cols (dimensions) + 27 confidence cols
+2. Claude pre-fills:
+   - Patel's 7 conventions from the PDF (free)
+   - Auto-extracted dimensions where parseable from XML (e.g. `<k2>` count)
+3. Hands off to M.G. for the high-judgement dimensions (~30-50 cells, 1-2 hours): citation depth conventions, etymological style, anything where M.G.'s domain expertise outperforms Claude's pattern matching
+4. M.G. returns the file via PR or direct push; Claude completes the remaining cells
+5. Both annotators independently review a 10% overlap sample → Cohen's κ
+6. Final fingerprint matrix versioned in `data/convention_fingerprint.csv` with columns: `dim_value, source (patel|auto|annotator|consensus), confidence`
+
+This makes the L0 inter-rater agreement defensible and the annotation provenance traceable.
+
+## 13. Open question (the one M.G. wants to clarify before L0 begins)
+
+Awaiting clarification.
