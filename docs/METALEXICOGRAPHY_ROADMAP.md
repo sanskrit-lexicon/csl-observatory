@@ -318,11 +318,98 @@ Length: 15-20 pages, fits IJDL well.
 
 ---
 
-## 10. Open questions for next round
+## 10. Decisions locked (2026-05-16 round 3)
 
-1. **Schema reference**: should we adopt **TEI Lex-0** as the canonical target schema for CDSL (L10)? Or develop a custom CDSL schema first, then map?
-2. **L8 reference dict**: is MW genuinely at L8, or partially? What's the % of MW entries with full Dictionary→Book linkage as of today?
-3. **Russian dicts (KNA, KOW)**: do they currently have any markup beyond plain text, or are they at L1?
-4. **Feature inventory completeness**: are there any major CDSL features I missed in §4.1? Look at https://www.sanskrit-lexicon.uni-koeln.de/ frontpage if needed.
-5. **WIL→KOW priority**: is this hypothesis strong enough that L1.5 should run BEFORE L0 (as a pilot of cross-language methodology)?
-6. **Paper E**: separate paper, or merged into Paper L?
+| Question | Decision |
+|---|---|
+| L10 target schema | **All three in parallel**: native CDSL schema + TEI Lex-0 export + OntoLex-Lemon export. Native first, exports follow. Maximum interoperability |
+| L0 vs L1.5 ordering | **Parallel**: L0 (convention fingerprint, no XML needed) and L1.5 (KOW⇄WIL focused study, needs XML) run on independent code paths simultaneously |
+| Paper E status | **Merged into Paper M** as the data-quality treatment. Paper M expands to: KPI catalog + measurement framework + data-quality typology. One stronger methodological paper instead of two competing ones |
+| CDSL-added features inventory | **Augment via Cologne-site scrape**: GitHub repos miss runtime/UI-only features. New phase **M0a** (web scrape of sanskrit-lexicon.uni-koeln.de pages) feeds the §4 inventory |
+
+## 11. New Phase M0a — Cologne web feature scrape (~1 day)
+
+Discover runtime / UI / display-layer features not visible from GitHub source alone.
+
+### What to fetch
+- Top-level `https://www.sanskrit-lexicon.uni-koeln.de/`
+- Per-dict display URLs (e.g. `/scans/MWScan/2014/web/`, `/monier/indexcaller.php`)
+- API endpoints (`/scans/csl-apidev/...`)
+- Display-tool URLs (transcoder, search, simple-search)
+- Documentation pages (csldoc, where reachable)
+
+### What to extract
+- List of distinct dictionary display interfaces (each = one CDSL-added "display-layer feature")
+- Search-tool variants (simple-search, advanced, fuzzy, glob, etc.)
+- Mobile/desktop integration mentions
+- Acknowledged contributor list (for `people.yaml` enrichment)
+- Any documentation of dictionary derivation (lineage ground truth)
+
+### Output
+- `data/cologne_features.csv` — feature presence per dict from the live site
+- `data/cologne_acknowledgments.csv` — credited people from the site
+- Updates to §4.1 features inventory
+
+## 12. Updated Paper M outline (now incorporating Paper E content)
+
+**Paper M (revised)**: *A measurement framework for digital lexicography: KPI catalog, data-quality typology, and the CDSL case*
+
+The framework has now **two contributions** rolled into one paper:
+1. The KPI catalog (4 dimensions × 30+ metrics, original Paper M scope)
+2. The data-richness typology (L0-L10, originally Paper E scope) with worked example
+
+Total length: ~25 pages (longer than original M, but more substantive). Sections:
+- §1 Introduction (rolled hooks: measurement gap + data-richness story)
+- §2 Related work (added: TEI Lex-0, OntoLex-Lemon, CHAOSS, GHOST)
+- §3 Method part A — KPI catalog (the original Paper M)
+- §4 Method part B — Data richness typology L0-L10 (the original Paper E)
+- §5 Worked example: CDSL — KPIs + richness levels
+- §6 The MW exception (the §3 hypothesis from this doc)
+- §7 Discussion: how data quality conditions all measurement
+- §8 Recommendations + future work
+- §9 Conclusion
+
+## 13. Updated phase plan (parallel L0 + L1.5 + M0a)
+
+Three phases run in parallel from session 1:
+
+| Phase | Code path | Effort | Output |
+|---|---|---|---|
+| **L0** | `lexico/conventions.py` | ~5d | 27-tree cladogram + validation |
+| **L1.5** | `lexico/wil_kow.py` | ~3d | KOW⇄WIL evidence matrix + posterior |
+| **M0a** | `lexico/cologne_scrape.py` | ~1d | Cologne site features inventory |
+
+After all three complete:
+- **M1-M5** (richness KPIs, MW study, evolution roadmap) draw on L0 and M0a outputs
+- **L1-L9** (full corpus mining) is the next major branch
+- **Paper M** drafting begins after L0 + M1 + M3 produce data
+
+## 14. Schema strategy detail (per decision §10)
+
+### Three target schemas, native first
+
+#### Native CDSL schema (`csl-schema/v1.xsd`)
+- Captures everything: Patel-normalised headwords, citation tags, sense structure, scan-page links, cross-dict refs, all CDSL-specific features
+- Authoritative; XML source files convert to this
+- Validation harness in CI
+
+#### TEI Lex-0 export (`csl-schema/tei-lex-0/`)
+- Per-dict generator from native to TEI Lex-0
+- Subset of native (TEI doesn't model everything)
+- Citable in TEI consortium publications
+- Discoverable via OAI-PMH
+
+#### OntoLex-Lemon export (`csl-schema/ontolex/`)
+- RDF triples per entry
+- SPARQL-queryable via Apache Jena or similar
+- Joinable with other LOD lexical resources (WordNet, BabelNet, DBpedia)
+- Each lemma becomes an `ontolex:LexicalEntry` with `ontolex:sense` and `lexinfo:partOfSpeech`
+
+### Phase plan for schema work (post-L0/L1.5)
+
+| Phase | Output |
+|---|---|
+| **M6a** — Native schema design | XSD + documentation + per-dict mapping notes |
+| **M6b** — TEI Lex-0 mapping | Generator + validation against TEI schema |
+| **M6c** — OntoLex-Lemon mapping | RDF triple generator + SPARQL endpoint setup |
+| **M6d** — LOD endpoint | Public SPARQL service at `lod.sanskrit-lexicon.org` (or csl-observatory subpath) |
