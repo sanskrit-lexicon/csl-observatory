@@ -1,7 +1,7 @@
 # Microstructure & Macrostructure typology of CDSL dictionaries
 
 **Version**: 1.0 · **Date**: 2026-05-16
-**Companion to**: [`LEXICOGRAPHY_ROADMAP.md`](LEXICOGRAPHY_ROADMAP.md), [`L0_DESIGN.md`](L0_DESIGN.md), [`METALEXICOGRAPHY_ROADMAP.md`](METALEXICOGRAPHY_ROADMAP.md), [`BOOK.md`](BOOK.md)
+**Companion to**: [`LEXICOGRAPHY_ROADMAP.md`](LEXICOGRAPHY_ROADMAP.md), [`L0_DESIGN.md`](L0_DESIGN.md), [`METALEXICOGRAPHY_ROADMAP.md`](METALEXICOGRAPHY_ROADMAP.md), [`PUBLICATIONS.md`](PUBLICATIONS.md)
 
 Two complementary layers of dictionary structure:
 
