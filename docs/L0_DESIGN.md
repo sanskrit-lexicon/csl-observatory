@@ -1,0 +1,253 @@
+# Phase L0 Design — Convention-fingerprint cladogram
+
+**Version**: 1.0 · **Date**: 2026-05-16 · **Status**: design-locked, ready to implement
+**Companion to**: [`LEXICOGRAPHY_ROADMAP.md`](LEXICOGRAPHY_ROADMAP.md)
+
+L0 is the **cheapest, fastest, most validatable** phase in the lexicography stream. It produces the first phylogenetic tree of CDSL dictionaries using only Patel-2016-style "convention fingerprints" — no XML parsing of any source dictionary. Estimated effort: 2-3 days end-to-end.
+
+---
+
+## 1. Goal
+
+Produce a **defensible, multi-encoding, multi-metric, validated** convention-fingerprint cladogram of all 35 GitHub CDSL dictionaries (and the 8 scan-only dicts where Patel 2016 supplies fingerprints). The cladogram is published to the dashboard, the data is downloadable, and the analysis is the empirical core of **Paper M §4.1.5** and **Paper H §5**.
+
+---
+
+## 2. Fingerprint dimensions (extended from Patel's 7)
+
+Per author decision: include all three suggested dimensions plus *as many additional as feasible*.
+
+### 2.1 Patel's 7 (canonical from PDF)
+1. Anusvāra before consonants (6 options)
+2. Duplication after `r` (2 options)
+3. Words ending with `-at` from śatṛ/vatup (5 options across 3+2 sub-conventions)
+4. Inflected vs uninflected headword form
+5. Anusvāra of verbs
+6. ṛkārānta words (3 options)
+7. vas/yas suffixes (4 options)
+
+### 2.2 Sandhi & compound handling (3 new dimensions)
+8. **Sandhi handling at compound boundary** — preserved (e.g. `dharmakarman`) vs split (e.g. `dharma-karman`) vs both forms listed
+9. **Compound-headword separation** — hyphen vs space vs merged-into-one-word
+10. **Variant-headword inclusion (`<k2>`)** — none / few (<5%) / many (>5% of entries)
+
+### 2.3 Polysemy & sense numbering (3 new dimensions)
+11. **Sense numbering style** — Arabic `1./2./3.` vs Roman `I./II./III.` vs alpha `a)/b)/c)` vs Sanskrit `prathama/dvitīya` vs unnumbered
+12. **Sense-internal separator** — semicolon `;` vs comma `,` vs period `.` vs colon `:`
+13. **Sub-sense indentation** — present (hierarchical) or flat
+
+### 2.4 Citation conventions (3 new dimensions — captures the truncation insight)
+14. **Citation depth** — full (`Rv. 1.22.16`) / partial (`Rv. 1.22`) / minimal (`RV.`) / mixed
+15. **Citation format style** — abbreviated text-name (`RV.`) vs full (`Rigveda`) vs Sanskrit (`ṛgveda`)
+16. **Mahābhārata edition reference** — Pune/Bombay vs critical edition (`MBh. 1.2.3` vs `MBh. crit. 1.2.3`)
+
+### 2.5 Grammar / gender markers (2 new dimensions)
+17. **Grammar marker style** — abbreviated (`m.`/`f.`/`n.`) vs full (`masc.`/`fem.`/`neut.`) vs Sanskrit (`puṃ.`/`strī.`/`napuṃ.`)
+18. **Verb-class marker style** — Roman (`P.IX`) vs Arabic (`9.P`) vs Sanskrit (`paraspariṣi 9`)
+
+### 2.6 Etymology & cross-reference (3 new dimensions)
+19. **Etymology presence** — none / partial / full IE-cognate
+20. **Cross-reference syntax** — explicit pointer (`see X`) vs `<k1>X</k1>` vs italic vs absent
+21. **Loanword marker** — Persian/Arabic/Greek loanword tagged or not
+
+### 2.7 Vedic & accent (2 new dimensions)
+22. **Vedic accent preservation** — present (`āgnís`) or absent (`āgnis`)
+23. **Vedic-only marker** — does the dict flag Vedic-only forms
+
+### 2.8 Loose ends (4 new dimensions)
+24. **Frequency / rarity marker** — present (e.g. `(rare)`) or absent
+25. **Indeclinable marker style** — `ind.` vs `inv.` vs `nipāta` vs unmarked
+26. **Pāṇinian sūtra reference** — `Pāṇ. 3.1.4` cited or not
+27. **Source-language identification within entries** — bilingual gloss markers
+
+**Total: 27 fingerprint dimensions** (Patel's 7 + 20 additions).
+
+Each dimension is encoded as a categorical variable with 2-6 possible options. Many options are extracted directly from each dict's published documentation; others require a brief sample-survey of 10-50 entries per dict.
+
+---
+
+## 3. Three encoding schemes (computed in parallel)
+
+For each (dict, dimension) pair where the dict follows multiple options:
+
+### Encoding A: Set-membership (binary vector)
+```
+PWG[convention_1] = [0, 0, 0, 0, 1, 0]    # only option 1.5
+AP90[convention_1] = [1, 0, 0, 0, 1, 0]   # options 1.1 + 1.5
+```
+- Matrix shape: 35 × (sum of options across all dimensions ≈ 100)
+- Distance: Hamming on bits OR Jaccard on option sets
+
+### Encoding B: Primary + secondary (rank-ordered)
+```
+PWG[convention_1] = [5, _]                # primary 1.5, no secondary
+AP90[convention_1] = [5, 1]               # primary 1.5, secondary 1.1
+```
+- Matrix shape: 35 × (27 dims × 2 ranks = 54)
+- Distance: rank-aware (e.g. Spearman per dim, then averaged)
+
+### Encoding C: Inconsistency-flagged (single primary, with consistency score)
+```
+PWG[convention_1] = (5, 1.0)              # option 5, fully consistent
+AP90[convention_1] = (5, 0.6)             # mostly 5, but inconsistent
+```
+- Matrix shape: 35 × 27 + 35 × 27 inconsistency scores
+- Distance: weighted by inconsistency penalty
+
+---
+
+## 4. Three distance metrics (computed in parallel for each encoding)
+
+### Metric 1: Weighted Hamming
+```
+d(A, B) = sum over dims i of: weight_i * (A[i] != B[i])
+weight_i = -log(probability of i across all dicts)  # rare options weighted higher
+```
+
+### Metric 2: Plain Hamming
+```
+d(A, B) = sum over dims i of: (A[i] != B[i])
+```
+
+### Metric 3: Jaccard (for set-membership encoding)
+```
+d(A, B) = 1 - |A ∩ B| / |A ∪ B|
+```
+
+For encodings B and C, Jaccard adapts via dim-wise computation.
+
+---
+
+## 5. Cladogram production (3 algorithms × 3 encodings × 3 metrics = 27 trees)
+
+For each (encoding, metric) combination:
+- **UPGMA** (Unweighted Pair Group Method with Arithmetic Mean) — assumes molecular-clock-like
+- **Neighbor-Joining** — handles uneven divergence rates
+- **Bayesian** (MrBayes-style or simple beam-search posterior) — full posterior over trees
+
+Output: 27 candidate trees. Cluster comparison via **Robinson-Foulds distance** between trees → identify which choices matter most.
+
+The **canonical published tree** is the Bayesian consensus across the 9 (3 encodings × 3 metrics) configurations.
+
+---
+
+## 6. Validation
+
+### 6.1 Known-edge recovery score
+For each known/likely edge (PWG→PWK, MW72→MW, AP90→AP, PWG→MW, etc. — 14 edges in roadmap §9):
+- Check whether the edge appears in the predicted tree (parent-of relation)
+- Recovery rate = recovered_edges / total_known_edges
+
+Target: ≥10/14 = 71% on the canonical tree.
+
+### 6.2 Leave-one-out cross-validation
+- For each known edge (A → B):
+  1. Remove edge from training set
+  2. Build tree without that knowledge
+  3. Check whether B's nearest neighbour in the tree is A (or A's predicted descendant)
+- Score: per-edge accuracy.
+
+### 6.3 Bootstrap confidence intervals
+- 1000 bootstrap resamples of the fingerprint matrix
+- For each resample, build the tree
+- Compute frequency of each edge across bootstrap trees
+- Report 95% CI for each predicted edge
+
+### 6.4 Acceptance criteria
+- Known-edge recovery ≥ 70%
+- LOO accuracy ≥ 60%
+- All "strongest" edges (PWG→PWK, MW72→MW, AP90→AP) appear with ≥80% bootstrap support
+
+If criteria not met → re-examine encoding/metric choices, document failure modes in paper as honest limitation.
+
+---
+
+## 7. Outputs
+
+### 7.1 Data products (downloadable from `/data/`)
+| File | Description |
+|---|---|
+| `convention_fingerprint.csv` | 35 × 27 matrix, primary option per dim per dict |
+| `convention_fingerprint_setmember.csv` | 35 × 100 binary matrix (encoding A) |
+| `convention_inconsistency.csv` | 35 × 27 consistency scores (encoding C) |
+| `pairwise_distances/<encoding>_<metric>.csv` | 35 × 35 distance matrix per config |
+| `trees/<encoding>_<metric>_<algo>.newick` | 27 trees in Newick format |
+| `tree_comparison_robinson_foulds.csv` | 27 × 27 RF distances between configs |
+| `bootstrap_support.csv` | edge-level bootstrap support |
+| `validation_report.json` | recovery scores + LOO + CIs |
+
+### 7.2 Dashboard page
+**New page**: `/lexicography/conventions.md`
+
+Sections:
+1. The convention-fingerprint method (textual explanation, 2-3 paragraphs)
+2. Per-dict fingerprint table (interactive, sortable, 35 × 27)
+3. Pairwise distance heatmap (35 × 35, switchable by encoding+metric via dropdown)
+4. **Lead chart**: the canonical Bayesian-consensus cladogram
+5. Tree comparison: small-multiples grid of all 27 trees, each labelled
+6. Validation panel: recovery score + LOO accuracy + bootstrap CIs
+7. Discussion: which conventions discriminate most + which dicts are outliers
+
+### 7.3 Paper sections
+- **Paper M §4.1.5**: convention fingerprint as cheap inheritance signal
+- **Paper M §4.4.1**: validation methodology (known-edge recovery, LOO, bootstrap)
+- **Paper M §5.2**: results from the 9-configuration sensitivity analysis
+- **Paper H §5.1**: PWG → PWK → SCH chain confirmed at >95% bootstrap support
+- **Paper H §5.2**: MW lineage from PWG/PWK at quantified strength
+- **Paper H §5.3**: SKD as outlier — quantified evidence of indigenous origin
+
+---
+
+## 8. Implementation steps (ordered, ~3 days total)
+
+| Step | Task | Effort |
+|---|---|---|
+| 1 | Extract Patel's 7 conventions into structured CSV from the PDF | 0.5 day |
+| 2 | Manual annotation of 20 additional dimensions for top 15 dicts (PWG, PWK, MWS, MD, AP, AP90, GRA, FRI, SCH, BHS, VEI, BUR, BEN, CCS, CAE) | 1 day |
+| 3 | Auto-detect remaining annotations from each dict's source XML where parseable | 0.5 day |
+| 4 | Build encoding scripts (A, B, C) | 0.25 day |
+| 5 | Build distance scripts (3 metrics) | 0.25 day |
+| 6 | Build clustering scripts (UPGMA, NJ, Bayesian) | 0.5 day |
+| 7 | Validation: known-edge recovery, LOO, bootstrap | 0.5 day |
+| 8 | Render trees + comparison heatmaps as Observable charts | 0.5 day |
+| 9 | Write `/lexicography/conventions.md` page | 0.25 day |
+| 10 | Draft Paper M §4.1.5 + §5.2 + Paper H §5 paragraphs | 0.5 day |
+
+**Total: ~4.75 days** (was estimated 1-2; expanded due to 27-dim scope + 9-config rigour).
+
+---
+
+## 9. Risks & mitigations
+
+| Risk | Mitigation |
+|---|---|
+| Patel's per-dict annotations don't cover all 36 dicts for all 7 conventions | Mark as "unknown" in cell; allow Hamming to skip unknowns; report missing-data ratio |
+| Adding 20 new dimensions requires manual annotation; risk of bias | Multi-annotator (you + me + a 3rd if available); inter-rater agreement κ |
+| Bayesian tree posterior is computationally expensive for 35 dicts | Use heuristic search with 1000 iterations; full MCMC only for paper-final tree |
+| Bootstrap with multi-encoding × multi-metric is exponential | Cap at 100 bootstraps for non-canonical configs; full 1000 only for canonical |
+| Some dicts (e.g. KRM with verbs only) may not fit the 27-dim schema | Mark as "scope-limited"; exclude from primary tree but annotate in supplementary tree |
+| Russian dicts (KNA, KOW) and Czech (FRI) have no Patel coverage | Phase L0 + manual annotation by you/me; proxy from sample entries |
+
+---
+
+## 10. Decision log (locked in 2026-05-16)
+
+| Question | Decision |
+|---|---|
+| Fingerprint dimensions beyond Patel's 7 | **27 total** (added 20: sandhi, polysemy, citation, grammar, etymology, Vedic, etc.) |
+| Multi-option encoding | **All three in parallel** (set-membership + primary/secondary + inconsistency-flagged) |
+| Distance metric | **All three in parallel** (weighted Hamming + plain Hamming + Jaccard) |
+| Clustering algorithm | **All three** (UPGMA + NJ + Bayesian) |
+| Validation | **All three** (known-edge recovery + LOO + bootstrap CIs) |
+| Tree count | **27 candidate trees** (3 encodings × 3 metrics × 3 algos) |
+| Canonical tree | **Bayesian consensus across 9 configs** (excluding the 3 algorithm sweep dimension since Bayesian is the most rigorous) |
+
+---
+
+## 11. Open questions (next round before implementation)
+
+1. **Manual annotation pace**: 27 dims × 35 dicts = 945 cells. ~50% from Patel + auto = 470 manual cells. At ~30 sec each = ~4 hours. You willing to co-annotate 1-2 hours, I do the rest? Or all by me?
+2. **Sample size for auto-extraction**: when we sample-survey a dict for a convention (e.g. "what sense-numbering style does WIL use?"), how many entries to inspect? 10? 50? 100?
+3. **Annotation tool**: simple CSV editing in spreadsheet, or build a tiny web tool? CSV is faster, web tool is more rigorous.
+4. **Russian and Czech dicts**: KNA, KOW, FRI — annotated together or separately? They likely follow Russian-tradition conventions distinct from German.
+5. **AMAR (no year)** and **PUI / KRM / VEI (specialised)**: include in main cladogram or treat as outliers in supplementary plots?
