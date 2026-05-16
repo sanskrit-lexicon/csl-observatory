@@ -1,4 +1,5 @@
 repo,sha,date,author_login,author_name,author_email,subject
+ACC,acaab9eac41c,2026-05-16T04:08:59Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1962, Aufrecht)"
 ACC,c940eaf4ff5c,2026-05-15T09:32:14Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 ACC,e0985291149f,2026-05-15T09:32:12Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
 ACC,77546c393fd3,2026-05-15T09:32:09Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 13 Data Dictionary
@@ -7,12 +8,14 @@ ACC,6a349af264c5,2026-05-15T09:24:51Z,gasyoun,Mārcis Gasūns,gasyoun@users.nore
 ACC,324e7e0627bd,2026-05-15T09:24:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: update README.md with issue taxonomy
 ACC,6524cbfb74b1,2026-05-15T07:38:40Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 ACC,0287cf231518,2017-05-28T18:26:15Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+AMAR,c91f38c11af6,2026-05-16T04:09:33Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (n/a, Amarasiṃha (anc.))"
 AMAR,2993d26f6798,2026-05-15T07:19:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 AMAR,d2235bbd197c,2024-01-30T05:22:00Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,gender info listed
 AMAR,b32522acb934,2024-01-30T05:16:43Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,readme update
 AMAR,5a0b37adacc5,2024-01-30T04:11:43Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,amar1 converted to amar.txt
 AMAR,9c1ac6fc71cb,2024-01-30T04:10:41Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,initial commit
 AMAR,7d064f3640c9,2024-01-30T03:54:09Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+AP,1bf2b9d871b6,2026-05-16T04:08:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1957, V.S. Apte (rev. P.K. Gode et al.))"
 AP,1bb942c5cecc,2026-05-14T22:51:35Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: trim redundant issue taxonomy from CLAUDE.md (covered by org-level)
 AP,503948e2a022,2026-05-14T06:54:11Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,removed accidental commit of tmp
 AP,9cd5a5641996,2026-05-14T06:51:24Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,First go for #17
@@ -145,6 +148,7 @@ AP,e367c106da00,2025-07-06T20:54:23Z,funderburkjim,funderburkjim,funderburkjim@g
 AP,3eb244c4d4a6,2025-07-06T20:14:16Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,initialize issues and issues/issue1. #1
 AP,090dd4101e28,2025-07-06T20:07:47Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initialize .gitignore
 AP,ca4b6efeb3ee,2025-07-06T20:04:17Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+AP90,9c67fdb7a0e7,2026-05-16T04:08:14Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1890, V.S. Apte)"
 AP90,6ae1f7ae6162,2026-05-15T12:04:21Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 AP90,1c01d468c925,2026-05-15T12:04:18Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
 AP90,f60a08d90a02,2026-05-15T12:04:16Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 13 Data Dictionary
@@ -195,6 +199,7 @@ AP90,2c30e42dfc90,2020-03-16T01:06:23Z,funderburkjim,funderburkjim,funderburkjim
 AP90,654a0781729a,2020-03-16T01:05:35Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,additional verbs found by comparison to 1957ap
 AP90,b96fa717ea4c,2020-03-14T19:06:57Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,initial commit. verbs01
 AP90,1f2709b23b87,2020-03-14T19:00:33Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+ApteES,b558b61ee49f,2026-05-16T04:08:33Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1884, V.S. Apte)"
 ApteES,2512fe9e7162,2026-05-15T09:31:06Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 ApteES,be7d4add1374,2026-05-15T09:31:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
 ApteES,b422cbafa2a5,2026-05-15T09:31:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 13 Data Dictionary
@@ -227,6 +232,7 @@ ArabicInSanskrit,cea540cb49e9,2026-05-15T07:38:41Z,gasyoun,Mārcis Gasūns,gasyo
 ArabicInSanskrit,c5fa9d890639,2015-01-18T20:52:01Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Update README.md
 ArabicInSanskrit,c70b152f25c1,2015-01-18T20:44:50Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Update README.md
 ArabicInSanskrit,307099937e86,2015-01-18T20:43:43Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+BEN,5243d37226e8,2026-05-16T04:09:18Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1866, Theodor Benfey)"
 BEN,58936a50f403,2026-05-15T09:33:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 BEN,cef0eb1ef44e,2026-05-15T09:33:09Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
 BEN,4ab5ccbdaf51,2026-05-15T09:33:06Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 13 Data Dictionary
@@ -262,6 +268,7 @@ BEN,ba4ba612ad05,2021-09-04T17:28:09Z,funderburkjim,funderburkjim,funderburkjim@
 BEN,f6149480654b,2021-08-16T03:12:28Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,eng_error_lang work on identifying possible english word errors
 BEN,32ec22cc2fe5,2020-04-30T21:33:21Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,verbs01. Initial commit
 BEN,021299f459d6,2020-04-30T21:22:17Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+BHS,8e18671851b7,2026-05-16T04:08:52Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1953, Franklin Edgerton)"
 BHS,c60d83ce37f5,2026-05-15T09:31:54Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 BHS,8b06bf4be7dd,2026-05-15T09:31:52Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
 BHS,895c531a3e10,2026-05-15T09:31:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 13 Data Dictionary
@@ -294,6 +301,7 @@ BHS,7693d4f8e52d,2021-08-19T20:14:43Z,funderburkjim,funderburkjim,funderburkjim@
 BHS,a3962b63bbe6,2016-01-02T04:16:54Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,Correction issue 216
 BHS,aaf232301c6e,2016-01-02T03:47:54Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,Initial unaltered commit
 BHS,21df15923ae0,2016-01-02T03:42:33Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+BOP,b65742ed82d6,2026-05-16T04:09:27Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1847, Franz Bopp)"
 BOP,9efaf6cf8e02,2026-05-15T07:20:00Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 BOP,28f19db3f422,2024-05-09T18:57:35Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,#6 Finishing touches
 BOP,c13c96b09ae3,2024-05-07T18:09:14Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,cdsl revision of bop.txt compatible with BOP-Main-L2 file. #6
@@ -319,6 +327,7 @@ BOP,184959b657ca,2022-05-23T21:21:30Z,funderburkjim,funderburkjim,funderburkjim@
 BOP,e107de0f2a97,2022-05-23T17:31:49Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,punctuation after greek text. #1
 BOP,4465d3a1ac6c,2022-05-04T21:58:33Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Greek text addition. #1
 BOP,8ffbd8512411,2022-05-02T16:46:21Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+BOR,469658e00b01,2026-05-16T04:09:21Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1877, A. Borooah)"
 BOR,d36fb923c72c,2026-05-15T07:38:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 BOR,99b353d58c71,2021-09-14T12:12:31Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,added equal mark
 BOR,3a93fcb67db5,2021-09-14T12:11:34Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,added division mark
@@ -332,6 +341,7 @@ BOR,d877742df320,2021-09-14T11:19:51Z,drdhaval2785,Dhaval Patel,drdhaval2785@gma
 BOR,45224e31f8c8,2021-09-14T04:54:03Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,removed space
 BOR,7d25470b9310,2021-09-14T04:52:48Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,initial try
 BOR,75af7dab0858,2021-09-14T04:47:08Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,first commit
+BUR,68dbafe27e00,2026-05-16T04:09:05Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1866, Émile Burnouf)"
 BUR,e15674408ff3,2026-05-15T09:32:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 BUR,ad3ff3d43eaf,2026-05-15T09:32:31Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
 BUR,0faafcd04253,2026-05-15T09:32:29Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 13 Data Dictionary
@@ -361,6 +371,7 @@ BUR,75bfafe8a566,2022-05-10T02:10:08Z,funderburkjim,funderburkjim,funderburkjim@
 BUR,df0e76aa7ce8,2020-04-18T00:48:48Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,revise readme.md
 BUR,4919ee117534,2020-04-09T18:37:43Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,verbs01 initial commit
 BUR,38f0d7872a8f,2020-04-09T17:26:55Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+CAE,5c6260733df1,2026-05-16T04:09:08Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1891, Carl Cappeller)"
 CAE,df0e35ba6921,2026-05-15T09:32:43Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 CAE,af3a4af16801,2026-05-15T09:32:41Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
 CAE,ceff76bb0e47,2026-05-15T09:32:38Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 13 Data Dictionary
@@ -388,6 +399,7 @@ CAE,273ba8fe1e93,2020-07-07T01:40:31Z,funderburkjim,funderburkjim,funderburkjim@
 CAE,e7d0e8c15205,2020-04-18T00:50:59Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,revise readme.md
 CAE,9f4e5fa79584,2020-04-12T03:00:08Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,CAE verbs01 initial commit
 CAE,5a7dc89ebe4c,2020-04-12T02:54:51Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+CCS,4b4531f9efd9,2026-05-16T04:09:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1887, Carl Cappeller)"
 CCS,7d8ef666da88,2026-05-15T09:32:52Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 CCS,ad55d413c62f,2026-05-15T09:32:50Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
 CCS,b039f90a7c98,2026-05-15T09:32:48Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 13 Data Dictionary
@@ -609,6 +621,7 @@ COLOGNE,73a7502fe900,2014-12-11T23:28:17Z,funderburkjim,funderburkjim,funderburk
 COLOGNE,b28f2dd555b4,2014-12-11T23:21:14Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,intro to aws S3 command line interface
 COLOGNE,0c194addcaea,2014-10-01T10:43:45Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Bibliography for 37 books added
 COLOGNE,d263eac05a9f,2014-01-14T14:14:31Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Initial commit
+CORRECTIONS,e91bd4bea16a,2026-05-16T04:08:46Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (n/a, community)"
 CORRECTIONS,381638632d6e,2026-05-15T09:31:35Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 CORRECTIONS,e6e746284253,2026-05-15T09:31:32Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
 CORRECTIONS,abda8229c60e,2026-05-15T09:31:30Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 13 Data Dictionary
@@ -1299,6 +1312,7 @@ CORRECTIONS,fc6425eef0c8,2014-10-02T22:32:10Z,funderburkjim,funderburkjim,funder
 CORRECTIONS,c25d7de00947,2014-09-30T01:23:48Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initial commit
 CORRECTIONS,e1ccb24221a0,2014-09-30T01:19:25Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Update README.md
 CORRECTIONS,fed7c9d9b720,2014-09-30T01:17:52Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+DCS,8a38dc7aeada,2026-05-16T04:08:26Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (n/a, Hellwig (sister project))"
 DCS,90d3c62b08a3,2026-05-15T09:30:47Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 DCS,b763e2657a74,2026-05-15T09:30:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
 DCS,49c89fb58447,2026-05-15T09:30:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 13 Data Dictionary
@@ -1310,6 +1324,7 @@ DCS,2962b125c7d8,2014-10-19T08:51:04Z,gasyoun,Marcis Gasuns,gasyoun@users.norepl
 DCS,3d15595736f0,2014-10-06T15:25:37Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Renamed abbreviations
 DCS,e676a72be5ae,2014-10-06T15:12:27Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Lexical Data
 DCS,01637b5b703e,2014-01-17T07:47:11Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Initial commit
+FRI,4a357b8bcfc8,2026-05-16T04:08:20Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (2015, Oldřich Fríš (ed. ABV Moscow))"
 FRI,db163ae48cee,2026-05-14T22:51:36Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: trim redundant issue taxonomy from CLAUDE.md (covered by org-level)
 FRI,1b77b901aa1d,2026-05-08T08:53:59Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add session state journal
 FRI,d15a02d4fbe6,2026-05-07T19:28:58Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs: add community files (CONTRIBUTING, CoC, SECURITY, ISSUE_TEMPLATE, PR template) from csl-observatory templates"
@@ -1320,6 +1335,7 @@ FRI,596f26b84c3b,2025-02-02T03:24:29Z,funderburkjim,funderburkjim,funderburkjim@
 FRI,c0d6bf299037,2024-01-26T20:49:53Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,"Initial version of fri.txt, named as fri_00.txt. #1"
 FRI,b82479ccb71e,2024-01-26T20:40:17Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Add .gitignore
 FRI,56219ea8adbb,2024-01-26T12:33:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Initial commit
+GRA,422b3b497a57,2026-05-16T04:08:17Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1873, Hermann Grassmann)"
 GRA,7b5bcee1fb90,2026-05-15T12:04:03Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 GRA,dead32e45e62,2026-05-15T12:04:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
 GRA,deba771ebf6e,2026-05-15T12:03:58Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 13 Data Dictionary
@@ -1385,6 +1401,7 @@ GreekInSanskrit,982b78a5418e,2026-05-15T13:57:11Z,gasyoun,Mārcis Gasūns,gasyou
 GreekInSanskrit,3ec1f87e992b,2026-05-15T07:38:47Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 GreekInSanskrit,05dfd404909d,2015-09-09T17:05:09Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,"Place of accents, word structure, word endings, praefixoid list"
 GreekInSanskrit,b1955c3ac34a,2015-04-15T01:46:39Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+INM,a9f0da1e733f,2026-05-16T04:09:24Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1904, Sörensen)"
 INM,9a0f89a67fa4,2026-05-15T07:20:23Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 INM,c5e91237ee9a,2022-06-02T02:09:52Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,compare_greek1.  #9
 INM,40e7c221a6e6,2022-06-02T01:34:31Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,#9  csl vs. ab greek frequency differences
@@ -1393,10 +1410,13 @@ INM,1bcf101577ae,2021-12-15T02:49:36Z,funderburkjim,funderburkjim,funderburkjim@
 INM,783d282d803c,2021-12-11T03:13:49Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,greek folder contains details of insertion of Greek text into
 INM,187bd4c66e72,2021-12-04T03:20:40Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Add Andhrabharati's version of the concordance. #1
 INM,7ac4e606c9af,2021-12-03T23:44:57Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+KNA,3bf341fd06aa,2026-05-16T04:09:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1893, Friedrich Knauer)"
 KNA,765fd43d12c8,2026-05-15T07:20:05Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 KNA,dfb870ad0351,2026-02-21T14:10:52Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Initial commit
+KOW,9ac6017ede40,2026-05-16T04:09:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1854, Каэтан Коссович (1815-1883))"
 KOW,3f223a8d4fe1,2026-05-15T07:20:06Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 KOW,bf0d64a8e670,2026-02-21T14:29:22Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Initial commit
+KRM,efc731137939,2026-05-16T04:09:02Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1965, Bhattoji Dīkṣita (anc.))"
 KRM,42ca49b752b8,2026-05-15T09:32:24Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 KRM,ac4824c0c9e7,2026-05-15T09:32:21Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
 KRM,1c5d54ecc76a,2026-05-15T09:32:19Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 13 Data Dictionary
@@ -1408,6 +1428,7 @@ KRM,0d47b59df01d,2020-04-18T00:53:53Z,funderburkjim,funderburkjim,funderburkjim@
 KRM,d6b8f367bc1c,2020-03-31T19:01:41Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,note on unfinished work re Westergaard Dhatupatha
 KRM,c9d844038768,2020-03-31T18:55:19Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initial commit
 KRM,24ca2b5cf65c,2020-03-31T18:37:43Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+LRV,92b386fd619d,2026-05-16T04:09:30Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1889, L.R. Vaidya)"
 LRV,62f5bfce303b,2026-05-15T07:20:12Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 LRV,5b0363aa915d,2026-02-16T04:51:42Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,insert lbody where missing
 LRV,c888dcd0810d,2024-10-11T20:22:16Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,#25
@@ -1531,6 +1552,7 @@ LRV,1d284e8b032c,2022-09-20T12:04:33Z,drdhaval2785,drdhaval2785,drdhaval2785@gma
 LRV,f54fa998c691,2022-09-20T11:24:04Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,copied to lrv_0.txt for further processing
 LRV,6f4be44ef21a,2022-09-20T11:04:05Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,Added files received from @Andhrabharati
 LRV,7ae43a71821f,2022-09-20T10:53:08Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+MCI,4fbd953b860f,2026-05-16T04:08:43Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1993, Pusalker)"
 MCI,1354c78b5531,2026-05-15T09:31:25Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 MCI,c976c354bcf1,2026-05-15T09:31:23Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
 MCI,058d28c76170,2026-05-15T09:31:20Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 13 Data Dictionary
@@ -1538,6 +1560,7 @@ MCI,ef25cdab4d2c,2026-05-15T09:31:18Z,gasyoun,Mārcis Gasūns,gasyoun@users.nore
 MCI,3dbe54909e85,2026-05-15T09:24:27Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: update CLAUDE.md
 MCI,c761419ac636,2026-05-15T09:24:24Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: update README.md with issue taxonomy
 MCI,1ae1f310e349,2026-05-15T07:38:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
+MD,953eb887433e,2026-05-16T04:08:08Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1893, A.A. Macdonell)"
 MD,212846f767ff,2026-05-15T12:04:38Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 MD,26d4810693b5,2026-05-15T12:04:36Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
 MD,5f6784727a97,2026-05-15T12:04:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 13 Data Dictionary
@@ -1619,6 +1642,7 @@ MW72,5cf4de93d91c,2016-11-19T03:15:45Z,funderburkjim,funderburkjim,funderburkjim
 MW72,6152839e897d,2016-11-18T20:02:16Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,revise for corrections to mw72
 MW72,407551355822,2016-11-16T00:18:12Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,20161107 initial commit
 MW72,1f9d6101296f,2014-08-24T21:07:18Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+MWS,ac965c3afd24,2026-05-16T04:08:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1899, Monier Monier-Williams)"
 MWS,e5f98f43931c,2026-05-15T12:03:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 MWS,0e10abb40dae,2026-05-15T12:03:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
 MWS,f7936c06b9f3,2026-05-15T12:03:37Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 13 Data Dictionary
@@ -2041,6 +2065,7 @@ MWinflect,b598f126ec37,2018-10-16T21:37:32Z,funderburkjim,funderburkjim,funderbu
 MWinflect,035bd6fa64f5,2018-10-16T21:34:35Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,initial lexnorm-all2.txt
 MWinflect,8c5f17cf6e1f,2018-10-16T20:29:54Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,initial repository description
 MWinflect,62cec0aa6bb1,2018-10-16T20:28:08Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+PWG,b74f78622209,2026-05-16T04:07:58Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1855, Böhtlingk + Roth)"
 PWG,ff460678c436,2026-05-15T12:03:31Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 PWG,3394e61fdd77,2026-05-15T12:03:28Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
 PWG,ece9826ac6fe,2026-05-15T12:03:26Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 13 Data Dictionary
@@ -2418,6 +2443,7 @@ PWG,087a677e9362,2014-11-06T21:09:00Z,funderburkjim,funderburkjim,funderburkjim@
 PWG,5221d87ec45e,2014-10-05T10:49:24Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Stat added
 PWG,200cd2073f4f,2014-10-04T21:29:49Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Update to Jim's PWG Accents
 PWG,a6b29a2159b7,2014-09-25T09:57:25Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,3/52 Russian etymologies fixed
+PWK,5bdd8a3b723a,2026-05-16T04:08:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1879, Otto Böhtlingk)"
 PWK,eb283d1ea641,2026-05-15T12:03:53Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 PWK,9f05e3e97883,2026-05-15T12:03:50Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
 PWK,8b29b654b054,2026-05-15T12:03:48Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 13 Data Dictionary
@@ -2682,6 +2708,7 @@ PWK,c945e3fa4bd1,2015-11-16T21:33:36Z,funderburkjim,funderburkjim,funderburkjim@
 PWK,f220be5dc89f,2015-11-16T21:22:10Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Moved from https://github.com/sanskrit-lexicon/CORRECTIONS/
 PWK,aa8c1730fe61,2015-11-16T21:16:37Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Moved to https://github.com/sanskrit-lexicon/CORRECTIONS/
 PWK,573cc6ee6787,2014-11-08T02:51:31Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,construction of pw_orig_utf8_slp1.txt
+SCH,a66ab9c6e895,2026-05-16T04:08:23Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1928, Richard Schmidt)"
 SCH,d839d7459238,2026-05-15T09:30:37Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 SCH,3586e7bd3812,2026-05-15T09:30:35Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
 SCH,7cd051fafa7d,2026-05-15T09:30:32Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 13 Data Dictionary
@@ -2711,9 +2738,11 @@ SCH,e9aee0778daa,2014-01-22T00:47:37Z,funderburkjim,funderburkjim,funderburkjim@
 SCH,82d48efdf10a,2014-01-16T02:45:49Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,first schmidt change file
 SCH,d27e0ea65d14,2014-01-16T00:04:41Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,"original schmidt, and initial changes"
 SCH,f78bc1015d35,2014-01-15T18:51:50Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initial commit
+SHS,db5eaca3dc75,2026-05-16T04:09:36Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1900, Biswanath Mukerji)"
 SHS,197503cc1479,2026-05-15T07:20:17Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 SHS,accd301e25b0,2025-12-22T02:01:13Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,"init .gitignore, README.md"
 SHS,ade8c77eabcb,2025-12-22T01:57:08Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+SKD,7e8d4eb9407e,2026-05-16T04:08:36Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1822, Rādhākānta Deva)"
 SKD,166577482df7,2026-05-15T09:31:15Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 SKD,0d2312e94627,2026-05-15T09:31:13Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
 SKD,c2f724124e1c,2026-05-15T09:31:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 13 Data Dictionary
@@ -2771,6 +2800,7 @@ SKD,988f09de31ea,2014-07-19T20:19:45Z,funderburkjim,funderburkjim,funderburkjim@
 SKD,0778863106e8,2014-07-19T19:46:06Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Sort errors in SKD headwords
 SKD,e6a0cb0c60db,2014-07-19T19:02:02Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Update README.md
 SKD,94844f2ce6d9,2014-07-19T18:58:18Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+STC,7edd545a0b09,2026-05-16T04:09:14Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1932, Stchoupak)"
 STC,48eddf2165bf,2026-05-15T09:33:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 STC,798d386b386d,2026-05-15T09:32:59Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
 STC,0a03a82d9fe1,2026-05-15T09:32:57Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 13 Data Dictionary
@@ -2780,6 +2810,7 @@ STC,06751fc084cd,2026-05-15T09:25:16Z,gasyoun,Mārcis Gasūns,gasyoun@users.nore
 STC,b53b989d51e3,2026-05-15T07:38:51Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 STC,f5cfee0f359d,2020-04-19T20:59:15Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,verbs01 initial commit
 STC,ad8172120944,2020-04-19T20:55:40Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+VCP,c686103a3cc0,2026-05-16T04:08:30Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1873, Tarkavachaspati)"
 VCP,6e650c20e68b,2026-05-15T09:30:56Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 VCP,02176d43860c,2026-05-15T09:30:54Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
 VCP,5458e93324c4,2026-05-15T09:30:52Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 13 Data Dictionary
@@ -2895,6 +2926,7 @@ VCP,45136a2f84fc,2014-01-22T04:27:49Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,"Tirup
 VCP,b6afa94a2682,2014-01-22T04:24:59Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,List of 46938 words in WX encoding
 VCP,93ee78cbfff4,2014-01-22T04:20:49Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Tirupati edition in WX encoding
 VCP,7370a541c676,2014-01-22T04:12:21Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Initial commit
+VEI,e1a1771c0ef6,2026-05-16T04:08:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1912, Macdonell + Keith)"
 VEI,b03c015df2f5,2026-05-15T09:32:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 VEI,c5ed4ece477a,2026-05-15T09:32:02Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
 VEI,fecdcbf95ca5,2026-05-15T09:31:59Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 13 Data Dictionary
@@ -2908,6 +2940,7 @@ VEI,ad6ecb776bb7,2016-01-02T10:33:26Z,drdhaval2785,drdhaval2785,drdhaval2785@gma
 VEI,1bdf92e1bf80,2016-01-02T10:29:29Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,vei.xml without alterations
 VEI,4fc8228932e0,2016-01-02T10:26:11Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,initial commit
 VEI,f354d4e0cb58,2016-01-02T10:19:41Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+WIL,8538cc78f135,2026-05-16T04:08:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1832, H.H. Wilson)"
 WIL,7eed6dcd4a1c,2026-05-15T09:31:44Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 WIL,b6e2dd83b7db,2026-05-15T09:31:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
 WIL,ddaab7e091b3,2026-05-15T09:31:40Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 13 Data Dictionary
@@ -4475,6 +4508,9 @@ csl-app,3f5f02ce0114,2026-03-18T19:13:28Z,drdhaval2785,Dr. Dhaval Patel,drdhaval
 csl-app,41a87dfe9b1a,2026-03-18T17:59:44Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,v0.1.0
 csl-app,601df1e6d0c8,2026-03-18T17:25:31Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,app working
 csl-app,3827040885b1,2026-03-18T16:14:06Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,initial commit
+csl-corrections,b18fad28a0b5,2026-05-16T03:54:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge branch 'master' of https://github.com/sanskrit-lexicon/csl-corrections
+csl-corrections,80184a294e13,2026-05-16T03:53:58Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Claude counting
+csl-corrections,91f1e9e09d19,2026-05-16T02:12:29Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-05-15
 csl-corrections,1582dbf617e5,2026-05-15T18:45:47Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,PW princhange AS to IAST adjustment for literary sources
 csl-corrections,655fb4a22256,2026-05-15T17:42:05Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,PW printchange adjustments per #87
 csl-corrections,c8ff8dd8f745,2026-05-15T17:23:52Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,PW printchange adjustments per #87
@@ -5840,6 +5876,33 @@ csl-newsletter,bced52b7f19f,2021-09-14T04:37:04Z,drdhaval2785,Dhaval Patel,drdha
 csl-newsletter,53c6fa85e014,2021-09-13T14:34:31Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,csl-orig commits taken into consideration
 csl-newsletter,b04b08d7e699,2021-09-13T13:28:15Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,addition
 csl-newsletter,5ab58ee2cd64,2021-09-13T12:33:30Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,september started
+csl-observatory,a68ca27ec9fc,2026-05-16T05:45:46Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs: rich CONTRIBUTING.md - 6 open roles, authorship policy, archival commitments"
+csl-observatory,fa8b072e3cd0,2026-05-16T05:45:44Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,feat(site): lexicography page - first findings from sanhw1 cladogram
+csl-observatory,29abaec035da,2026-05-16T05:45:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,feat(site): add Lexicography page to navigation
+csl-observatory,2aa3263cecc6,2026-05-16T05:45:40Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,data: contributor x repo commits heatmap (top 15)
+csl-observatory,f3a1f46be146,2026-05-16T05:45:38Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"data: contributor specialisation per-login metrics (entropy, family share)"
+csl-observatory,209338f73d64,2026-05-16T05:45:35Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"feat(observatory): contributor specialisation analysis (entropy, family focus)"
+csl-observatory,416e4a437c1e,2026-05-16T05:34:43Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"data(lex): 33 inheritance edges (>=85% containment, source->inheritor)"
+csl-observatory,a1beef781aff,2026-05-16T05:34:41Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,data(lex): UPGMA cladogram in Newick format
+csl-observatory,bd172509e1f7,2026-05-16T05:34:38Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,data(lex): 41x41 Jaccard distance matrix
+csl-observatory,79a9efad7a75,2026-05-16T05:34:36Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,feat(lex): L2 lemma-cladogram script from sanhw1
+csl-observatory,967b28cf6f32,2026-05-16T05:21:09Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"data(lex): canonical 43-dict inventory from Cologne site (7 families, sanhw1 lemma counts, deprecation flags, ABCH/ARMH/ACPH/ACSJ/LAN/PWKVN identified)"
+csl-observatory,f1f296813ae9,2026-05-16T04:52:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,data(lex): pairwise Jaccard + containment from sanhw1 - 41 dicts x 820 pairs
+csl-observatory,4690d92146b9,2026-05-16T04:40:15Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(meta): lock L1.5 Bayesian + file-level provenance + share strategy
+csl-observatory,8ece40132b3c,2026-05-16T04:37:23Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(meta): lock 4 decisions - 3 schemas, parallel L0+L1.5+M0a, Paper E merged into M, Cologne scrape"
+csl-observatory,0ce390dacdae,2026-05-16T04:30:12Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,data(lex): fix terminology Sanskrit-Russian (not Russian-Sanskrit); KOW=likely Russian translation of WIL
+csl-observatory,bf3301fe8563,2026-05-16T04:30:10Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(meta): metalexicography roadmap - data richness typology, MW-attention study, KOW=Russian-WIL hypothesis, Paper E"
+csl-observatory,36a11f82ee2f,2026-05-16T04:20:53Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(L0): lock annotation workflow + co-annotation kappa + outlier strategy
+csl-observatory,2314f576b4cb,2026-05-16T04:16:44Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(lex): Phase L0 design - 27 fingerprint dims, 27 trees, full validation suite"
+csl-observatory,437df3841583,2026-05-16T04:10:19Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,feat(observatory): script to enrich CITATION.cff across all dict repos from inventory
+csl-observatory,fa9ab12a582f,2026-05-16T04:10:16Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,data(lex): identify FRI/KNA/KOW/LRV — adds Russian-Sanskrit + Czech-Russian tradition
+csl-observatory,626ee48012a6,2026-05-16T04:02:36Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(refs): archive Patel 2016 normalisation paper for L0 reference
+csl-observatory,7aed2bc86cae,2026-05-16T04:02:33Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,data(lex): canonical dictionary inventory from Patel 2016 + GitHub status
+csl-observatory,5e43bb2d459b,2026-05-16T04:02:30Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(lex): integrate Patel 2016 inventory + 7 normalisation conventions + Phase L0
+csl-observatory,c70fa7d5ab5e,2026-05-16T03:39:41Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(observatory): lexicography research roadmap (Papers M, L, H stream)"
+csl-observatory,e47071d3c984,2026-05-16T02:59:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(observatory): Paper 1 outline (methodology-first, paragraph-mapped to KPIs)"
+csl-observatory,80e45dfa3ed6,2026-05-16T02:59:46Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(observatory): expansion roadmap (8 phases, 32 new KPIs)"
+csl-observatory,3c75de443c64,2026-05-15T20:05:03Z,actions-user,csl-observatory-bot,actions@github.com,data: monthly refresh (2026-05-15)
 csl-observatory,be6f1c328c28,2026-05-15T19:58:58Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore: move site pages under src/
 csl-observatory,f9147025eee9,2026-05-15T19:58:54Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore: move site pages under src/
 csl-observatory,f3c11cad6d2e,2026-05-15T19:58:52Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore: move site pages under src/

@@ -1,42 +1,42 @@
 repo,description,primary_language,size_kb,created_at,updated_at,pushed_at,default_branch,stars,forks,open_issues,archived,license,all_languages
-ACC,ACC specific issues,,4,2017-05-28T18:26:15Z,2026-05-15T09:32:16Z,2026-05-15T09:32:14Z,master,0,0,10,false,,
-AMAR,Convert Amarakosha to CDSD format,Python,415,2024-01-30T03:54:09Z,2026-05-15T07:28:17Z,2026-05-15T07:28:13Z,main,0,0,1,false,GPL-2.0,"Python,Shell"
-AP,"Collaborative tools for parsing, validating, and improving the Apte Sanskrit-English Dictionary (1957)",Python,70408,2025-07-06T20:04:16Z,2026-05-14T22:53:47Z,2026-05-14T22:53:44Z,main,0,0,12,false,,"Python,PHP,Shell"
-AP90,Research work on Apte Sanskrit-English Dictionary of 1890,Python,23264,2020-03-14T19:00:32Z,2026-05-15T12:04:22Z,2026-05-15T12:04:21Z,master,0,0,17,false,GPL-3.0,"Python,Shell"
-ApteES,Apte English-Sanskrit Dictionary,Python,12585,2014-07-15T18:59:03Z,2026-05-15T09:31:09Z,2026-05-15T09:31:06Z,master,5,2,2,false,,"Python,Shell"
+ACC,ACC specific issues,,5,2017-05-28T18:26:15Z,2026-05-16T04:09:03Z,2026-05-16T04:08:59Z,master,0,0,10,false,,
+AMAR,Convert Amarakosha to CDSD format,Python,417,2024-01-30T03:54:09Z,2026-05-16T04:09:37Z,2026-05-16T04:09:33Z,main,0,0,1,false,GPL-2.0,"Python,Shell"
+AP,"Collaborative tools for parsing, validating, and improving the Apte Sanskrit-English Dictionary (1957)",Python,70411,2025-07-06T20:04:16Z,2026-05-16T04:08:15Z,2026-05-16T04:08:11Z,main,0,0,12,false,,"Python,PHP,Shell"
+AP90,Research work on Apte Sanskrit-English Dictionary of 1890,Python,23265,2020-03-14T19:00:32Z,2026-05-16T04:08:18Z,2026-05-16T04:08:14Z,master,0,0,17,false,GPL-3.0,"Python,Shell"
+ApteES,Apte English-Sanskrit Dictionary,Python,12586,2014-07-15T18:59:03Z,2026-05-16T04:08:36Z,2026-05-16T04:08:33Z,master,5,2,2,false,,"Python,Shell"
 ArabicInSanskrit,Arabic words occuring in Sanskrit Dictionaries,,1,2015-01-18T20:43:43Z,2026-05-15T07:39:41Z,2026-05-15T07:39:37Z,master,0,2,0,false,,
-BEN,Research related to Benfey Sanskrit-English dictionary,Python,9720,2020-04-30T21:22:16Z,2026-05-15T09:33:13Z,2026-05-15T09:33:11Z,master,0,0,3,false,,"Python,Shell"
-BHS,BHS dictionary codes,Python,1913,2016-01-02T03:42:33Z,2026-05-15T09:31:56Z,2026-05-15T09:31:54Z,master,0,0,3,false,,"Python,Shell"
-BOP,Work on Bopp Glossarium Sanscritum,Python,10354,2022-05-02T16:46:21Z,2026-05-15T07:28:27Z,2026-05-15T07:28:23Z,main,0,0,1,false,,"Python,Shell"
-BOR,Development of BOR dictionary,Python,3168,2021-09-14T04:46:13Z,2026-05-15T07:39:43Z,2026-05-15T07:39:39Z,main,0,0,3,false,,"Python,Shell"
-BUR,Research related to Burnouf dictionary,Python,4475,2020-04-09T17:26:54Z,2026-05-15T09:32:35Z,2026-05-15T09:32:34Z,master,0,0,1,false,,"Python,Rich Text Format,Shell"
-CAE,Cappeller Sanskrit-English Dictionary research work,Python,5695,2020-04-12T02:54:50Z,2026-05-15T09:32:44Z,2026-05-15T09:32:43Z,master,0,0,2,false,,"Python,Shell"
-CCS,Cappeller Sanskrit Wörterbuch Research,Python,382,2020-04-15T01:40:11Z,2026-05-15T09:32:54Z,2026-05-15T09:32:52Z,master,0,0,2,false,,"Python,Shell"
+BEN,Research related to Benfey Sanskrit-English dictionary,Python,9722,2020-04-30T21:22:16Z,2026-05-16T04:09:22Z,2026-05-16T04:09:18Z,master,0,0,3,false,,"Python,Shell"
+BHS,BHS dictionary codes,Python,1914,2016-01-02T03:42:33Z,2026-05-16T04:08:56Z,2026-05-16T04:08:53Z,master,0,0,3,false,,"Python,Shell"
+BOP,Work on Bopp Glossarium Sanscritum,Python,10355,2022-05-02T16:46:21Z,2026-05-16T04:09:31Z,2026-05-16T04:09:27Z,main,0,0,1,false,,"Python,Shell"
+BOR,Development of BOR dictionary,Python,3168,2021-09-14T04:46:13Z,2026-05-16T04:09:24Z,2026-05-16T04:09:21Z,main,0,0,3,false,,"Python,Shell"
+BUR,Research related to Burnouf dictionary,Python,4476,2020-04-09T17:26:54Z,2026-05-16T04:09:09Z,2026-05-16T04:09:05Z,master,0,0,1,false,,"Python,Rich Text Format,Shell"
+CAE,Cappeller Sanskrit-English Dictionary research work,Python,5696,2020-04-12T02:54:50Z,2026-05-16T04:09:12Z,2026-05-16T04:09:08Z,master,0,0,2,false,,"Python,Shell"
+CCS,Cappeller Sanskrit Wörterbuch Research,Python,383,2020-04-15T01:40:11Z,2026-05-16T04:09:15Z,2026-05-16T04:09:11Z,master,0,0,2,false,,"Python,Shell"
 COLOGNE,Development of http://www.sanskrit-lexicon.uni-koeln.de/,HTML,8106,2014-01-14T14:14:31Z,2026-05-15T15:03:54Z,2026-05-15T15:03:50Z,master,18,4,208,false,,"HTML,Python,Shell,XSLT,JavaScript"
-CORRECTIONS,Correction history for Cologne Sanskrit Lexicon,HTML,184685,2014-09-30T01:17:51Z,2026-05-15T09:31:36Z,2026-05-15T09:31:35Z,master,9,5,90,false,,"HTML,Python,CSS,PHP,Shell,Hack"
-DCS,Development of http://kjc-fs-cluster.kjc.uni-heidelberg.de/dcs/,,431,2014-01-17T07:47:11Z,2026-05-15T09:30:48Z,2026-05-15T09:30:47Z,master,0,0,4,false,,
-FRI,"Фриш, Олдржих (1903-1955). Санскритская хрестоматия [Текст] : Sanskrit reader = Sanskrtská čítanka / Олдржих Фриш,. - Москва : АБВ. T. 2. - 2015.",Python,4098,2024-01-26T12:33:11Z,2026-05-14T22:52:08Z,2026-05-14T22:52:04Z,main,0,0,3,false,,Python
-GRA,Grassman Wörterbuch zum Rig Veda,Python,17059,2014-09-29T16:24:14Z,2026-05-15T12:04:05Z,2026-05-15T12:04:04Z,master,2,0,9,false,,"Python,PHP,JavaScript,HTML,CSS,Hack,Shell"
+CORRECTIONS,Correction history for Cologne Sanskrit Lexicon,HTML,184686,2014-09-30T01:17:51Z,2026-05-16T04:08:50Z,2026-05-16T04:08:46Z,master,9,5,90,false,,"HTML,Python,CSS,PHP,Shell,Hack"
+DCS,Development of http://kjc-fs-cluster.kjc.uni-heidelberg.de/dcs/,,432,2014-01-17T07:47:11Z,2026-05-16T04:08:30Z,2026-05-16T04:08:27Z,master,0,0,4,false,,
+FRI,"Фриш, Олдржих (1903-1955). Санскритская хрестоматия [Текст] : Sanskrit reader = Sanskrtská čítanka / Олдржих Фриш,. - Москва : АБВ. T. 2. - 2015.",Python,4099,2024-01-26T12:33:11Z,2026-05-16T04:08:24Z,2026-05-16T04:08:21Z,main,0,0,3,false,,Python
+GRA,Grassman Wörterbuch zum Rig Veda,Python,17061,2014-09-29T16:24:14Z,2026-05-16T04:08:21Z,2026-05-16T04:08:18Z,master,2,0,9,false,,"Python,PHP,JavaScript,HTML,CSS,Hack,Shell"
 GreekInSanskrit,Provide missing Greek text for the Cologne digitizations of Sanskrit dictionaries.,,257,2015-04-15T01:46:39Z,2026-05-15T13:57:26Z,2026-05-15T13:57:22Z,master,0,1,2,false,,
-INM,Index to names in the Mahabharata ,Python,2940,2021-12-03T23:44:57Z,2026-05-15T07:28:53Z,2026-05-15T07:28:49Z,main,0,0,2,false,,Python
-KNA,Knauer Sanskrit-Russian Vocabulary,,1,2026-02-21T14:10:52Z,2026-05-15T07:28:32Z,2026-05-15T07:28:29Z,main,0,0,1,false,,
-KOW,Kossowich Sanskrit-Russian Dictionary,,1,2026-02-21T14:29:22Z,2026-05-15T07:28:36Z,2026-05-15T07:28:32Z,main,0,0,1,false,,
-KRM,Research on Cologne digitization of Kṛdantarūpamālā,Python,590,2020-03-31T18:37:42Z,2026-05-15T09:32:26Z,2026-05-15T09:32:24Z,master,1,0,3,false,GPL-3.0,"Python,Shell"
-LRV,Convert the data of L R Vaidya Sanskrit-English dictionary to CDSL format,Python,65254,2022-09-20T10:53:08Z,2026-05-15T07:28:38Z,2026-05-15T07:28:34Z,main,0,0,5,false,,"Python,Shell"
-MCI,"Mahabharata Cultural Index, Volumes One and Two",,4,2014-09-26T07:42:37Z,2026-05-15T09:31:27Z,2026-05-15T09:31:25Z,master,0,0,1,false,,
-MD,Research re Macdonell Sanskrit-English Dictionary,Python,7001,2020-04-17T21:09:31Z,2026-05-15T12:04:40Z,2026-05-15T12:04:39Z,master,0,0,5,false,,"Python,Shell"
+INM,Index to names in the Mahabharata ,Python,2941,2021-12-03T23:44:57Z,2026-05-16T04:09:27Z,2026-05-16T04:09:24Z,main,0,0,2,false,,Python
+KNA,Knauer Sanskrit-Russian Vocabulary,,2,2026-02-21T14:10:52Z,2026-05-16T04:09:43Z,2026-05-16T04:09:39Z,main,0,0,1,false,,
+KOW,Kossowich Sanskrit-Russian Dictionary,,2,2026-02-21T14:29:22Z,2026-05-16T04:09:46Z,2026-05-16T04:09:42Z,main,0,0,1,false,,
+KRM,Research on Cologne digitization of Kṛdantarūpamālā,Python,591,2020-03-31T18:37:42Z,2026-05-16T04:09:06Z,2026-05-16T04:09:02Z,master,1,0,3,false,GPL-3.0,"Python,Shell"
+LRV,Convert the data of L R Vaidya Sanskrit-English dictionary to CDSL format,Python,65255,2022-09-20T10:53:08Z,2026-05-16T04:09:34Z,2026-05-16T04:09:30Z,main,0,0,5,false,,"Python,Shell"
+MCI,"Mahabharata Cultural Index, Volumes One and Two",,4,2014-09-26T07:42:37Z,2026-05-16T04:08:47Z,2026-05-16T04:08:43Z,master,0,0,1,false,,
+MD,Research re Macdonell Sanskrit-English Dictionary,Python,7002,2020-04-17T21:09:31Z,2026-05-16T04:08:11Z,2026-05-16T04:08:08Z,master,0,0,5,false,,"Python,Shell"
 MW72,Discussion for the 1872 edition of Monier-Williams Sanskrit-English Dictionary,Python,21460,2014-08-24T21:07:17Z,2026-05-15T07:54:43Z,2026-05-15T07:54:39Z,master,0,0,0,false,,"Python,Shell"
-MWS,"Monier Monier-Williams, Sir; A Sanskrit-English dictionary. Oxford, 1899",HTML,215436,2014-01-16T19:34:16Z,2026-05-15T12:03:44Z,2026-05-15T12:03:42Z,master,9,5,32,false,NOASSERTION,"HTML,Python,Shell,JavaScript,PHP,Java"
+MWS,"Monier Monier-Williams, Sir; A Sanskrit-English dictionary. Oxford, 1899",HTML,215438,2014-01-16T19:34:16Z,2026-05-16T04:08:08Z,2026-05-16T04:08:04Z,master,9,5,32,false,NOASSERTION,"HTML,Python,Shell,JavaScript,PHP,Java"
 MWinflect,Generate declensions and conjugations based upon words in MW1899 dictionary.,Python,27279,2018-10-16T20:28:07Z,2026-05-15T14:04:44Z,2026-05-15T14:04:39Z,master,1,0,48,false,,"Python,PHP,HTML,Shell,JavaScript,CSS"
-PWG,"Boehtlingk und Roth  Sanskrit Wörterbuch, 7 Bände Petersburg 1855-1875",Python,81532,2014-01-14T14:01:39Z,2026-05-15T12:03:35Z,2026-05-15T12:03:31Z,master,0,0,64,false,,"Python,JavaScript,Shell,HTML"
-PWK,"Sanskrit-Wörterbuch in kürzerer Fassung, 7 Bände Petersburg 1879-1889",HTML,79705,2014-01-14T14:12:31Z,2026-05-15T12:03:57Z,2026-05-15T12:03:53Z,master,3,1,40,false,,"HTML,Python,JavaScript,Shell,PHP"
-SCH,Issues related to Schmidt Sanskrit Dictionary,Python,4266,2014-01-15T18:51:49Z,2026-05-15T09:30:39Z,2026-05-15T09:30:37Z,master,0,0,3,false,,"Python,HTML,Shell"
-SHS,Work on cdsl dictionary Shabda-Sagara Sanskrit-English Dictionary,,2,2025-12-22T01:57:08Z,2026-05-15T07:28:46Z,2026-05-15T07:28:42Z,main,0,0,1,false,,
-SKD,Discussion of corrections and other issues pertaining to Sabdakalpadruma dictionary at Sanskrit-Lexicon,HTML,11481,2014-07-19T18:58:18Z,2026-05-15T09:31:18Z,2026-05-15T09:31:16Z,master,0,0,12,false,,"HTML,Python,Shell"
-STC,Research re Stchoupak Dictionnaire Sanscrit-Français,Python,505,2020-04-19T20:55:39Z,2026-05-15T09:33:03Z,2026-05-15T09:33:02Z,master,0,0,2,false,,"Python,Shell"
-VCP,Vachaspatyam,HTML,179495,2014-01-22T04:12:20Z,2026-05-15T09:30:58Z,2026-05-15T09:30:57Z,master,2,0,19,false,,"HTML,Python,Shell"
-VEI,VEI dictionary codes,Python,1169,2016-01-02T10:19:41Z,2026-05-15T09:32:06Z,2026-05-15T09:32:04Z,master,0,0,1,false,,"Python,Shell"
-WIL,Wilson Sanskrit-English Dictionary. Based on Cologne digitization. Work pertaining to corrections,HTML,11354,2014-12-28T21:05:00Z,2026-05-15T09:31:49Z,2026-05-15T09:31:45Z,master,2,2,12,false,,"HTML,Python,PHP,Shell,Perl,Batchfile"
+PWG,"Boehtlingk und Roth  Sanskrit Wörterbuch, 7 Bände Petersburg 1855-1875",Python,81534,2014-01-14T14:01:39Z,2026-05-16T04:08:01Z,2026-05-16T04:07:58Z,master,0,0,64,false,,"Python,JavaScript,Shell,HTML"
+PWK,"Sanskrit-Wörterbuch in kürzerer Fassung, 7 Bände Petersburg 1879-1889",HTML,79707,2014-01-14T14:12:31Z,2026-05-16T04:08:06Z,2026-05-16T04:08:01Z,master,3,1,40,false,,"HTML,Python,JavaScript,Shell,PHP"
+SCH,Issues related to Schmidt Sanskrit Dictionary,Python,4267,2014-01-15T18:51:49Z,2026-05-16T04:08:27Z,2026-05-16T04:08:24Z,master,0,0,3,false,,"Python,HTML,Shell"
+SHS,Work on cdsl dictionary Shabda-Sagara Sanskrit-English Dictionary,,2,2025-12-22T01:57:08Z,2026-05-16T04:09:40Z,2026-05-16T04:09:36Z,main,0,0,1,false,,
+SKD,Discussion of corrections and other issues pertaining to Sabdakalpadruma dictionary at Sanskrit-Lexicon,HTML,11482,2014-07-19T18:58:18Z,2026-05-16T04:08:40Z,2026-05-16T04:08:36Z,master,0,0,12,false,,"HTML,Python,Shell"
+STC,Research re Stchoupak Dictionnaire Sanscrit-Français,Python,506,2020-04-19T20:55:39Z,2026-05-16T04:09:18Z,2026-05-16T04:09:15Z,master,0,0,2,false,,"Python,Shell"
+VCP,Vachaspatyam,HTML,179497,2014-01-22T04:12:20Z,2026-05-16T04:08:33Z,2026-05-16T04:08:30Z,master,2,0,19,false,,"HTML,Python,Shell"
+VEI,VEI dictionary codes,Python,1170,2016-01-02T10:19:41Z,2026-05-16T04:08:59Z,2026-05-16T04:08:56Z,master,0,0,1,false,,"Python,Shell"
+WIL,Wilson Sanskrit-English Dictionary. Based on Cologne digitization. Work pertaining to corrections,HTML,11356,2014-12-28T21:05:00Z,2026-05-16T04:08:53Z,2026-05-16T04:08:49Z,master,2,2,12,false,,"HTML,Python,PHP,Shell,Perl,Batchfile"
 Wil-YAT,Comparison of Wilson and Yates Headwords,Python,4553,2015-03-10T19:11:34Z,2026-05-15T07:40:13Z,2026-05-15T07:40:09Z,master,0,0,0,false,NOASSERTION,"Python,Batchfile"
 alternateheadwords,Prepare list of alternate headwords for all Cologne dictionaries,Python,23813,2016-10-03T04:13:55Z,2026-05-15T13:59:25Z,2026-05-15T13:59:21Z,master,1,0,19,false,,"Python,Shell"
 avlinks,repository for hosting links to verses of Atharva Veda,HTML,4813,2021-04-08T19:42:19Z,2026-05-15T14:22:02Z,2026-05-15T14:21:58Z,master,1,0,1,false,,"HTML,Python,CSS,Shell"
@@ -44,7 +44,7 @@ cologne-hugo,Host static sites generated by hugo. Currently treated as experimen
 cologne-stardict,Scripts to convert Cologne XMLs into babylon format for merging into Stardict format.,Python,2331986,2017-04-16T07:56:59Z,2026-05-15T17:48:50Z,2026-05-15T17:48:42Z,master,9,3,3,false,MIT,"Python,Shell"
 csl-apidev,,PHP,226705,2019-03-16T20:29:46Z,2026-05-15T14:06:56Z,2026-05-15T14:06:51Z,master,0,0,22,false,,"PHP,CSS,JavaScript,Python,HTML,Shell"
 csl-app,An Android / iOS / macOS / Linux / Windows app for Sanskrit-Lexicon,Dart,14476,2026-03-18T17:23:15Z,2026-05-15T14:29:57Z,2026-05-15T14:32:50Z,main,0,0,2,false,GPL-3.0,"Dart,JavaScript,Python,C++,CMake,Ruby,HTML,Swift,C,Kotlin,Objective-C"
-csl-corrections,Replacement for sanskrit-lexicon/CORRECTIONS. User corrections to sanskrit-lexicon/csl-orig,Python,11771,2019-12-16T20:34:55Z,2026-05-15T18:45:56Z,2026-05-15T18:45:50Z,master,0,0,16,false,GPL-3.0,"Python,CSS,PHP,HTML,Hack,Shell"
+csl-corrections,Replacement for sanskrit-lexicon/CORRECTIONS. User corrections to sanskrit-lexicon/csl-orig,Python,11887,2019-12-16T20:34:55Z,2026-05-16T03:54:12Z,2026-05-16T03:54:08Z,master,0,0,17,false,GPL-3.0,"Python,CSS,PHP,HTML,Hack,Shell"
 csl-devanagari,Convert SLP1 data from csl-orig into Devanagari for easy proofreading.,Python,441300,2021-09-02T18:18:17Z,2026-05-15T14:24:01Z,2026-05-15T14:23:56Z,main,0,1,17,false,,"Python,Shell"
 csl-doc,Development version of cologne sanskrit lexicon 'documentation' ,HTML,186060,2018-10-24T21:56:19Z,2026-05-15T14:05:13Z,2026-05-15T14:05:09Z,master,1,0,2,false,,"HTML,JavaScript,CSS,Python,Batchfile,Makefile"
 csl-homepage,Code that generates the homepage of http://www.sanskrit-lexicon.uni-koeln.de/,Python,812,2019-03-21T01:18:14Z,2026-05-15T14:07:47Z,2026-05-15T14:07:43Z,master,0,0,5,false,,"Python,PHP,HTML,CSS,Shell"
@@ -55,7 +55,7 @@ csl-ldev,lnum wise entry for data in csl-devanagari for Devanagari correction su
 csl-lnum,Dictionary data in separate file for each lnum.,,382220,2021-10-02T09:28:21Z,2026-05-15T14:24:49Z,2026-05-15T14:24:47Z,main,0,1,1,false,,
 csl-lslink,Mapping from cdsl dictionary ls links to href of link targets,Python,38845,2026-03-31T01:43:06Z,2026-05-15T14:30:07Z,2026-05-15T14:30:06Z,main,0,0,1,false,,"Python,PHP,Shell"
 csl-newsletter,Monthly newsletter for works ongoing at Cologne Digital Sanskrit Lexicon,,93,2021-09-15T03:55:48Z,2026-05-15T14:24:20Z,2026-05-15T14:24:16Z,main,2,0,2,false,,
-csl-observatory,"Cross-repo analytics, dashboards, and data aggregator for the Cologne Digital Sanskrit Dictionaries ecosystem",Python,740,2026-05-07T15:38:17Z,2026-05-15T19:59:01Z,2026-05-15T19:58:58Z,main,0,0,2,false,GPL-3.0,"Python,TeX,JavaScript"
+csl-observatory,"Cross-repo analytics, dashboards, and data aggregator for the Cologne Digital Sanskrit Dictionaries ecosystem",Python,1376,2026-05-07T15:38:17Z,2026-05-16T05:45:48Z,2026-05-16T05:45:47Z,main,0,0,2,false,GPL-3.0,"Python,TeX,JavaScript"
 csl-orig,Data for all dictionaries of Cologne. Now all corrections are made in this git-based workflow.,Python,810867,2019-07-23T06:30:32Z,2026-05-15T17:43:15Z,2026-05-15T17:43:09Z,master,19,12,70,false,,"Python,Shell"
 csl-pywork,A template for creating pywork repository for each dictionary.,Python,1327,2019-07-20T04:07:17Z,2026-05-15T17:22:51Z,2026-05-15T17:22:47Z,master,3,1,5,false,,"Python,Shell,PHP"
 csl-sqlite,Storage space for sqlites of Cologne Digital Sanskrit Dictionaries,,216451,2026-04-08T11:48:40Z,2026-05-15T06:28:57Z,2026-05-15T06:28:54Z,main,0,0,0,false,GPL-3.0,

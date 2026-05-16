@@ -13,12 +13,19 @@
 #     enrichment_status: complete | needs_name | needs_orcid | needs_affiliation | needs_name_and_orcid
 
 people:
+  - login: null
+    name: null
+    orcid: null
+    affiliation: null
+    repos_authored: ["PWG", "PWK", "MWS", "MD", "AP", "AP90", "GRA", "FRI", "SCH", "DCS", "VCP", "ApteES", "SKD", "MCI", "CORRECTIONS", "WIL", "BHS", "VEI", "ACC", "KRM", "BUR", "CAE", "CCS", "STC", "BEN", "BOR", "INM", "BOP", "LRV", "AMAR", "SHS", "KNA", "KOW"]
+    repos_contributed: []
+    enrichment_status: needs_name_and_orcid
   - login: actions-user
     name: null
     orcid: null
     affiliation: null
     repos_authored: []
-    repos_contributed: ["hwnorm1", "csl-apidev", "hwnorm2"]
+    repos_contributed: ["csl-observatory", "hwnorm1", "csl-apidev", "hwnorm2"]
     enrichment_status: needs_name_and_orcid
   - login: adminlip
     name: null

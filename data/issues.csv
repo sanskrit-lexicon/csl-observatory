@@ -34,7 +34,7 @@ AP,13,€ in data - Useful info about class number,open,2026-04-01T00:59:38Z,,dr
 AP,14,Activate link targets - tooltips,open,2026-04-01T18:23:44Z,,funderburkjim,link-target|medium,Dictionary to Book,16,issue
 AP,15,Apte compound headwords - scope for diff resolution,open,2026-04-03T12:53:48Z,,drdhaval2785,markup|medium,Structured Data,2,issue
 AP,16,Upgrade some more hidden headwords.,closed,2026-04-08T00:10:37Z,2026-04-20T11:16:17Z,drdhaval2785,markup|minor,Structured Data,2,issue
-AP,17,One more pattern missing for headword identification,open,2026-04-08T00:44:22Z,,drdhaval2785,markup|minor,Structured Data,3,issue
+AP,17,One more pattern missing for headword identification,open,2026-04-08T00:44:22Z,,drdhaval2785,markup|minor,Structured Data,4,issue
 AP,18,Third pattern,open,2026-04-08T00:58:46Z,,drdhaval2785,help wanted|markup|minor,Structured Data,6,issue
 AP,19,Activate link targets -- identify targets,open,2026-04-18T18:28:25Z,,funderburkjim,link-target|medium,Dictionary to Book,14,issue
 AP,20,27 cases where automatic resolution failed,closed,2026-04-19T10:08:35Z,2026-04-20T12:23:32Z,drdhaval2785,markup|minor,Structured Data,1,issue
@@ -1951,7 +1951,7 @@ csl-corrections,6,github issues posted from cfr.tsv,closed,2019-12-19T17:30:48Z,
 csl-corrections,7,Commit confusion,closed,2019-12-20T19:29:15Z,2019-12-21T02:32:15Z,funderburkjim,question|minor,Structured Data,2,issue
 csl-corrections,8,MW regeneration fails,closed,2019-12-21T02:30:39Z,2021-09-07T06:06:45Z,drdhaval2785,bug|minor,Digitization Quality,9,issue
 csl-corrections,9,cronjob for github update,closed,2019-12-22T05:43:34Z,2021-09-07T06:06:29Z,drdhaval2785,bug|minor,Digitization Quality,1,issue
-csl-corrections,10,WIL separating genders,open,2019-12-24T02:50:48Z,,drdhaval2785,enhancement|markup|minor,Structured Data,17,issue
+csl-corrections,10,WIL separating genders,open,2019-12-24T02:50:48Z,,drdhaval2785,enhancement|markup|minor,Structured Data,18,issue
 csl-corrections,11,python coding : spaces or tabs,closed,2020-01-03T22:56:27Z,2023-12-15T15:07:23Z,funderburkjim,doc|question|minor,Structured Data,1,issue
 csl-corrections,12,Python3 printing unicode,closed,2020-01-03T23:02:43Z,2023-12-15T15:07:58Z,funderburkjim,doc|encoding|minor,Digitization Quality,0,issue
 csl-corrections,13,English-Sanskrit Dictionaries Punctuation Mismarkup,closed,2020-03-02T08:58:28Z,2026-05-02T14:52:47Z,gasyoun,enhancement|markup|medium,Structured Data,7,issue
@@ -2163,6 +2163,7 @@ csl-corrections,218,Daily Corrections - 2026-05-12,closed,2026-05-13T02:29:42Z,2
 csl-corrections,219,AP: Homonym number requests,open,2026-05-13T05:30:06Z,,drdhaval2785,enhancement|content-enhancement|medium,Major Enhancements,0,issue
 csl-corrections,220,Daily Corrections - 2026-05-13,closed,2026-05-14T02:31:14Z,2026-05-14T05:12:19Z,github-actions[bot],daily-corrections|text-correction|medium|documentation|trivial,Digitization Quality,0,issue
 csl-corrections,221,Daily Corrections - 2026-05-14,open,2026-05-15T02:30:16Z,,github-actions[bot],bug|daily-corrections|text-correction|minor|medium,Digitization Quality,0,issue
+csl-corrections,222,Daily Corrections - 2026-05-15,open,2026-05-16T02:12:30Z,,github-actions[bot],daily-corrections,,0,issue
 csl-devanagari,1,MW72 questions,closed,2021-09-02T18:53:28Z,2021-09-03T04:57:55Z,drdhaval2785,enhancement|minor,,27,issue
 csl-devanagari,2,LAN issues,open,2021-09-02T19:14:06Z,,drdhaval2785,question|trivial,,5,issue
 csl-devanagari,3,CAE issues,open,2021-09-02T19:16:32Z,,drdhaval2785,enhancement|minor,,5,issue
@@ -5155,7 +5156,7 @@ csl-pywork,41,Regeneration logs to have colours,closed,2026-04-30T05:10:10Z,2026
 csl-pywork,42,"Remove unnecessary ab, bib, tooltip files from distinctfiles",closed,2026-05-03T18:22:57Z,2026-05-03T18:32:32Z,drdhaval2785,enhancement|minor,,2,issue
 csl-pywork,43,ruff linter for python code,open,2026-05-03T18:51:11Z,,drdhaval2785,bug|minor,,2,issue
 csl-pywork,44,ab tooltips problem at Cologne,closed,2026-05-09T01:10:20Z,2026-05-09T12:06:35Z,funderburkjim,enhancement|minor,,1,issue
-csl-pywork,45,Weird behavior with readme.md,open,2026-05-15T17:34:00Z,,funderburkjim,,,1,issue
+csl-pywork,45,Weird behavior with readme.md,open,2026-05-15T17:34:00Z,,funderburkjim,,,2,issue
 csl-websanlexicon,1,check_inventory,open,2019-07-29T18:23:00Z,,funderburkjim,documentation,,6,issue
 csl-websanlexicon,2,fonts directory,closed,2019-07-29T23:56:00Z,2020-12-12T16:11:08Z,funderburkjim,enhancement|minor,,12,issue
 csl-websanlexicon,3,Delete unneeded  files in sqlite subdirectory of dictionary web directories,closed,2019-07-30T23:08:12Z,2019-08-01T00:48:33Z,funderburkjim,documentation|trivial,,8,issue
