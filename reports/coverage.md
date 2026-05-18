@@ -89,12 +89,12 @@ pie title Top-10 dictionaries by entry count
 | BUR | *(none)* |  |
 | CAE | *(none)* |  |
 | CCS | *(none)* |  |
-| COLOGNE | *(none)* |  |
+| COLOGNE | *(none)* | ✓ |
 | CORRECTIONS | *(none)* |  |
 | DCS | *(none)* |  |
 | FRI | *(none)* | ✓ |
 | GRA | *(none)* | ✓ |
-| GreekInSanskrit | *(none)* |  |
+| GreekInSanskrit | *(none)* | ✓ |
 | INM | *(none)* |  |
 | KNA | *(none)* |  |
 | KOW | *(none)* |  |
@@ -104,7 +104,7 @@ pie title Top-10 dictionaries by entry count
 | MD | *(none)* | ✓ |
 | MW72 | *(none)* |  |
 | MWS | NOASSERTION | ✓ |
-| MWinflect | *(none)* |  |
+| MWinflect | *(none)* | ✓ |
 | PWG | *(none)* | ✓ |
 | PWK | *(none)* | ✓ |
 | SCH | *(none)* |  |
@@ -115,36 +115,36 @@ pie title Top-10 dictionaries by entry count
 | VEI | *(none)* |  |
 | WIL | *(none)* |  |
 | Wil-YAT | NOASSERTION |  |
-| alternateheadwords | *(none)* |  |
+| alternateheadwords | *(none)* | ✓ |
 | avlinks | *(none)* |  |
 | cologne-hugo | GPL-3.0 |  |
-| cologne-stardict | MIT |  |
-| csl-apidev | *(none)* |  |
-| csl-app | GPL-3.0 |  |
-| csl-corrections | GPL-3.0 |  |
-| csl-devanagari | *(none)* |  |
-| csl-doc | *(none)* |  |
+| cologne-stardict | MIT | ✓ |
+| csl-apidev | *(none)* | ✓ |
+| csl-app | GPL-3.0 | ✓ |
+| csl-corrections | GPL-3.0 | ✓ |
+| csl-devanagari | *(none)* | ✓ |
+| csl-doc | *(none)* | ✓ |
 | csl-homepage | *(none)* |  |
-| csl-inflect | LGPL-3.0 |  |
+| csl-inflect | LGPL-3.0 | ✓ |
 | csl-json | *(none)* |  |
 | csl-kale | GPL-3.0 |  |
-| csl-ldev | *(none)* |  |
-| csl-lnum | *(none)* |  |
+| csl-ldev | *(none)* | ✓ |
+| csl-lnum | *(none)* | ✓ |
 | csl-lslink | *(none)* |  |
 | csl-newsletter | *(none)* |  |
-| csl-observatory | GPL-3.0 |  |
-| csl-orig | *(none)* |  |
-| csl-pywork | *(none)* |  |
+| csl-observatory | GPL-3.0 | ✓ |
+| csl-orig | *(none)* | ✓ |
+| csl-pywork | *(none)* | ✓ |
 | csl-santam | NOASSERTION |  |
 | csl-sqlite | GPL-3.0 |  |
 | csl-websanlexicon | *(none)* |  |
-| csl-westergaard | GPL-3.0 |  |
+| csl-westergaard | GPL-3.0 | ✓ |
 | csl-whitroot | GPL-3.0 |  |
-| hwnorm1 | *(none)* |  |
-| hwnorm2 | *(none)* |  |
-| literarysource | *(none)* |  |
-| mw-dev | *(none)* |  |
-| rvlinks | GPL-3.0 |  |
+| hwnorm1 | *(none)* | ✓ |
+| hwnorm2 | *(none)* | ✓ |
+| literarysource | *(none)* | ✓ |
+| mw-dev | *(none)* | ✓ |
+| rvlinks | GPL-3.0 | ✓ |
 | sanskrit-fonts | *(none)* |  |
 | sanskrit-lexicon.github.io | *(none)* |  |
 | santamlegacy | *(none)* |  |

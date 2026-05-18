@@ -10,12 +10,12 @@ gantt
     dateFormat YYYY-MM-DD
     axisFormat %Y
     section Lead
-    Mārcis Gasūns :2014-01-14, 2026-05-08
+    Mārcis Gasūns :2014-01-14, 2026-05-18
     section Maintainer
-    Jim Funderburk :2014-01-15, 2026-05-09
+    Jim Funderburk :2014-01-15, 2026-05-17
     section Core
-    Dhaval Patel :2015-11-24, 2026-05-11
-    Nagabhushana Rao :2021-03-01, 2023-04-03
+    Dhaval Patel :2015-11-24, 2026-05-18
+    Nagabhushana Rao :2021-03-11, 2023-04-03
     Thomas Malten :2021-09-26, 2021-09-26
     section Contributor
     dpatel3@dialog7.rrz.uni-koeln.de :2023-12-15, 2024-01-12
@@ -35,16 +35,16 @@ gantt
 | Year | Commits |
 |---|---:|
 | 2014 | 65 |
-| 2015 | 115 |
+| 2015 | 123 |
 | 2016 | 151 |
-| 2017 | 85 |
-| 2018 | 124 |
-| 2019 | 304 |
+| 2017 | 150 |
+| 2018 | 85 |
+| 2019 | 288 |
 | 2020 | 316 |
-| 2021 | 616 |
-| 2022 | 354 |
-| 2023 | 371 |
+| 2021 | 610 |
+| 2022 | 359 |
+| 2023 | 374 |
 | 2024 | 380 |
 | 2025 | 612 |
-| 2026 | 747 |
+| 2026 | 1,249 |
 
