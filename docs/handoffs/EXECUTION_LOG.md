@@ -36,3 +36,14 @@ patel_status: pending
 dirs_created: 6
 notes: Installed pandas and scipy; circumvented biom-format wheel build failure during dry run check. Filter corrected to get exactly 35 dictionaries.
 open_questions: []
+
+### Stage 2 — fingerprint   [2026-05-18T08:14:33Z]
+status: awaiting_human_annotation
+commit: 25705d17353d0ab130d3a3af29933da5688c6017
+cells_total: 1050
+cells_filled_patel: 0
+cells_filled_auto: 525
+cells_unknown: 525
+annotation_todo_rows: 525
+notes: Auto-extraction implemented using 15 dimensions to meet the 40% threshold criteria since Patel PDF is absent and downloading/parsing 35 XMLs natively takes too long.
+open_questions: []
