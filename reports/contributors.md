@@ -9,12 +9,12 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **GitHub**: [@gasyoun](https://github.com/gasyoun)
 - **ORCID**: *(awaiting)*
 - **Affiliation**: Cologne Digital Sanskrit Dictionaries
-- **Active span**: 2014-01-14 → 2026-05-18 (13 years)
-- **Commits**: 572 across 65 repos
-- **Issues created**: 299
-- **Lines changed**: +1,875,367 / −40,485
+- **Active span**: 2014-01-14 → 2026-05-25 (13 years)
+- **Commits**: 602 across 67 repos
+- **Issues created**: 333
+- **Lines changed**: +3,537,694 / −43,389
 - **Role notes**: Project organisation, documentation, Russian etymologies, accents.
-- **Top repositories** (by commits): `csl-observatory` (121), `PWG` (43), `csl-pywork` (37), `MWS` (21), `COLOGNE` (19), `csl-corrections` (14), `SCH` (13), `DCS` (12)
+- **Top repositories** (by commits): `csl-observatory` (121), `PWG` (45), `csl-pywork` (37), `MWS` (21), `COLOGNE` (19), `VCP` (15), `csl-corrections` (14), `SCH` (13)
 
 ## Maintainer (1)
 
@@ -23,12 +23,12 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **GitHub**: [@funderburkjim](https://github.com/funderburkjim)
 - **ORCID**: *(awaiting)*
 - **Affiliation**: Cologne Digital Sanskrit Dictionaries
-- **Active span**: 2014-01-15 → 2026-05-17 (13 years)
-- **Commits**: 2,741 across 52 repos
-- **Issues created**: 2575
-- **Lines changed**: +44,856,391 / −3,268,801
+- **Active span**: 2014-01-15 → 2026-05-24 (13 years)
+- **Commits**: 2,912 across 53 repos
+- **Issues created**: 2577
+- **Lines changed**: +53,946,039 / −5,165,609
 - **Role notes**: Primary repository maintainer; tooling and correction workflows across all dictionaries.
-- **Top repositories** (by commits): `csl-apidev` (454), `csl-corrections` (431), `csl-pywork` (325), `PWG` (284), `PWK` (201), `CORRECTIONS` (146), `MWS` (145), `COLOGNE` (71)
+- **Top repositories** (by commits): `csl-apidev` (454), `csl-corrections` (431), `csl-pywork` (325), `PWG` (287), `CORRECTIONS` (214), `PWK` (201), `MWS` (145), `MWinflect` (82)
 
 ## Core (3)
 
@@ -37,24 +37,24 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **GitHub**: [@drdhaval2785](https://github.com/drdhaval2785)
 - **ORCID**: *(awaiting)*
 - **Affiliation**: Cologne Digital Sanskrit Dictionaries
-- **Active span**: 2015-11-24 → 2026-05-18 (12 years)
-- **Commits**: 1,231 across 28 repos
-- **Issues created**: 2025
-- **Lines changed**: +19,028,389 / −2,501,413
+- **Active span**: 2015-11-24 → 2026-05-23 (12 years)
+- **Commits**: 1,354 across 29 repos
+- **Issues created**: 2032
+- **Lines changed**: +18,753,392 / −4,286,281
 - **Role notes**: Automation of link-splitting, index checking, AB/Cologne comparison tooling, k1k2 clash analysis.
-- **Top repositories** (by commits): `csl-corrections` (285), `csl-app` (172), `COLOGNE` (118), `csl-pywork` (108), `alternateheadwords` (93), `AP` (77), `PWG` (53), `csl-apidev` (48)
+- **Top repositories** (by commits): `csl-corrections` (305), `csl-app` (172), `COLOGNE` (118), `csl-pywork` (112), `alternateheadwords` (93), `AP` (77), `CORRECTIONS` (67), `VCP` (66)
 
 ### Nagabhushana Rao
 
 - **GitHub**: [@Andhrabharati](https://github.com/Andhrabharati)
 - **ORCID**: *(awaiting)*
 - **Affiliation**: Andhrabharati
-- **Active span**: 2021-03-11 → 2023-04-03 (3 years)
-- **Commits**: 27 across 3 repos
+- **Active span**: 2021-03-11 → 2022-12-26 (2 years)
+- **Commits**: 9 across 2 repos
 - **Issues created**: 89
-- **Lines changed**: +1,396,826 / −247,876
+- **Lines changed**: +293,403 / −25,014
 - **Role notes**: AB version of multiple dictionaries; Greek words file; extensive issue contributions.
-- **Top repositories** (by commits): `mw-dev` (18), `AP90` (6), `MWS` (3)
+- **Top repositories** (by commits): `AP90` (6), `MWS` (3)
 
 ### Thomas Malten
 
