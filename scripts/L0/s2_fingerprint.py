@@ -88,7 +88,11 @@ RX = {
     "etym_fr": re.compile(r"\bfr\.\s"),
     "etym_bracket": re.compile(r"\[\{#(.*?)#\}", re.S),
     "xref": re.compile(r"\bq\.v\.|<ab>\s*cf\.|\bcf\.\s|\b[Ss]ee\s\{#|\bs\.\s\{#"),
-    "lang_tag": re.compile(r"<lang\b|<gk>|<ar>|\{%[^%]+%\}|\b(?:Gk|Lat|Goth|Germ|Eng|Pers|Arab|Zd|Lith|Slav|Gr)\."),
+    # genuine source-language / cognate tagging only.
+    # NB: {%...%} is the universal *italic-gloss* convention (English/French/German/
+    # Latin target glosses) -- NOT a language tag -- so it must be excluded, else
+    # every bilingual glossary spuriously scores "loanword tagged".
+    "lang_tag": re.compile(r"<lang\b|<gk>|<ar>|<zd>|\b(?:Gk|Lat|Goth|Germ|Pers|Arab|Lith|Slav|Zend)\."),
     "ind_ind": re.compile(r"(?:<lex>\s*)?\bindecl?\."),
     "ind_inv": re.compile(r"\binv\."),
     "ind_nipata": re.compile(r"nipAta|\bnip\."),

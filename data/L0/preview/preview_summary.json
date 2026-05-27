@@ -26,10 +26,10 @@
     "KNA",
     "KOW"
   ],
-  "global_mean_gower": 0.4332,
+  "global_mean_gower": 0.4394,
   "nearest_neighbours": {
     "WIL": [
-      "MW72",
+      "SHS",
       0.1667
     ],
     "YAT": [
@@ -37,15 +37,15 @@
       0.0588
     ],
     "GST": [
-      "KRM",
-      0.2353
+      "INM",
+      0.1765
     ],
     "BEN": [
       "BUR",
       0.1667
     ],
     "MW72": [
-      "WIL",
+      "BUR",
       0.1667
     ],
     "LRV": [
@@ -54,31 +54,31 @@
     ],
     "AP90": [
       "AP",
-      0.2105
+      0.3158
     ],
     "CAE": [
-      "SHS",
-      0.2222
+      "CCS",
+      0.1111
     ],
     "MD": [
-      "BUR",
-      0.1667
+      "SHS",
+      0.1111
     ],
     "MW": [
       "GRA",
       0.2941
     ],
     "SHS": [
-      "CAE",
-      0.2222
+      "MD",
+      0.1111
     ],
     "AP": [
-      "AP90",
-      0.2105
+      "MW72",
+      0.2778
     ],
     "BOR": [
-      "YAT",
-      0.3333
+      "ACC",
+      0.2941
     ],
     "AE": [
       "ACC",
@@ -93,8 +93,8 @@
       0.0588
     ],
     "PWG": [
-      "PW",
-      0.2222
+      "GST",
+      0.2105
     ],
     "GRA": [
       "MW",
@@ -105,8 +105,8 @@
       0.1176
     ],
     "CCS": [
-      "BEN",
-      0.2222
+      "CAE",
+      0.1111
     ],
     "SCH": [
       "PW",
@@ -137,8 +137,8 @@
       0.1765
     ],
     "BHS": [
-      "AP90",
-      0.2941
+      "BEN",
+      0.3529
     ],
     "FRI": [
       "BOP",
@@ -164,7 +164,7 @@
         "YAT",
         "SHS"
       ],
-      "mean_within": 0.3704,
+      "mean_within": 0.2963,
       "tighter_than_global": true
     },
     "Apte siblings (AP90→AP)": {
@@ -172,7 +172,7 @@
         "AP90",
         "AP"
       ],
-      "mean_within": 0.2105,
+      "mean_within": 0.3158,
       "tighter_than_global": true
     },
     "Cappeller (CAE/CCS)": {
@@ -180,7 +180,7 @@
         "CAE",
         "CCS"
       ],
-      "mean_within": 0.2222,
+      "mean_within": 0.1111,
       "tighter_than_global": true
     },
     "Monier-Williams self (MW72→MW)": {
@@ -200,7 +200,7 @@
         "GRA",
         "BOP"
       ],
-      "mean_within": 0.3531,
+      "mean_within": 0.4146,
       "tighter_than_global": true
     },
     "Indigenous Skt-Skt (VCP/SKD)": {
