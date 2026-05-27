@@ -1,7 +1,7 @@
 [
   {
     "dim_id": 1,
-    "name": "Anusv\u0101ra before consonants",
+    "name": "Anusvāra before consonants",
     "options": [
       "opt1",
       "opt2",
@@ -40,7 +40,7 @@
   },
   {
     "dim_id": 5,
-    "name": "Anusv\u0101ra of verbs",
+    "name": "Anusvāra of verbs",
     "options": [
       "present",
       "absent"
@@ -48,7 +48,7 @@
   },
   {
     "dim_id": 6,
-    "name": "\u1e5bk\u0101r\u0101nta words",
+    "name": "ṛkārānta words",
     "options": [
       "opt1",
       "opt2",
@@ -142,7 +142,7 @@
   },
   {
     "dim_id": 16,
-    "name": "Mah\u0101bh\u0101rata edition reference",
+    "name": "Mahābhārata edition reference",
     "options": [
       "pune",
       "critical"
@@ -229,7 +229,7 @@
   },
   {
     "dim_id": 26,
-    "name": "P\u0101\u1e47inian s\u016btra reference",
+    "name": "Pāṇinian sūtra reference",
     "options": [
       "cited",
       "uncited"
