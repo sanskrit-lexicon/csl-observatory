@@ -1,0 +1,216 @@
+{
+  "n_dicts": 32,
+  "dims_used": [
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    17,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "dropped": [
+    "AMAR",
+    "KNA",
+    "KOW"
+  ],
+  "global_mean_gower": 0.4332,
+  "nearest_neighbours": {
+    "WIL": [
+      "MW72",
+      0.1667
+    ],
+    "YAT": [
+      "STC",
+      0.0588
+    ],
+    "GST": [
+      "KRM",
+      0.2353
+    ],
+    "BEN": [
+      "BUR",
+      0.1667
+    ],
+    "MW72": [
+      "WIL",
+      0.1667
+    ],
+    "LRV": [
+      "YAT",
+      0.2222
+    ],
+    "AP90": [
+      "AP",
+      0.2105
+    ],
+    "CAE": [
+      "SHS",
+      0.2222
+    ],
+    "MD": [
+      "BUR",
+      0.1667
+    ],
+    "MW": [
+      "GRA",
+      0.2941
+    ],
+    "SHS": [
+      "CAE",
+      0.2222
+    ],
+    "AP": [
+      "AP90",
+      0.2105
+    ],
+    "BOR": [
+      "YAT",
+      0.3333
+    ],
+    "AE": [
+      "ACC",
+      0.1765
+    ],
+    "BUR": [
+      "BEN",
+      0.1667
+    ],
+    "STC": [
+      "YAT",
+      0.0588
+    ],
+    "PWG": [
+      "PW",
+      0.2222
+    ],
+    "GRA": [
+      "MW",
+      0.2941
+    ],
+    "PW": [
+      "SCH",
+      0.1176
+    ],
+    "CCS": [
+      "BEN",
+      0.2222
+    ],
+    "SCH": [
+      "PW",
+      0.1176
+    ],
+    "BOP": [
+      "FRI",
+      0.1176
+    ],
+    "VCP": [
+      "SKD",
+      0.0
+    ],
+    "SKD": [
+      "VCP",
+      0.0
+    ],
+    "INM": [
+      "PW",
+      0.1176
+    ],
+    "VEI": [
+      "MW72",
+      0.2353
+    ],
+    "PUI": [
+      "MCI",
+      0.1765
+    ],
+    "BHS": [
+      "AP90",
+      0.2941
+    ],
+    "FRI": [
+      "BOP",
+      0.1176
+    ],
+    "ACC": [
+      "AE",
+      0.1765
+    ],
+    "KRM": [
+      "VCP",
+      0.0625
+    ],
+    "MCI": [
+      "INM",
+      0.1765
+    ]
+  },
+  "known_group_cohesion": {
+    "Wilson lineage (WIL→YAT→SHS)": {
+      "members_present": [
+        "WIL",
+        "YAT",
+        "SHS"
+      ],
+      "mean_within": 0.3704,
+      "tighter_than_global": true
+    },
+    "Apte siblings (AP90→AP)": {
+      "members_present": [
+        "AP90",
+        "AP"
+      ],
+      "mean_within": 0.2105,
+      "tighter_than_global": true
+    },
+    "Cappeller (CAE/CCS)": {
+      "members_present": [
+        "CAE",
+        "CCS"
+      ],
+      "mean_within": 0.2222,
+      "tighter_than_global": true
+    },
+    "Monier-Williams self (MW72→MW)": {
+      "members_present": [
+        "MW72",
+        "MW"
+      ],
+      "mean_within": 0.3889,
+      "tighter_than_global": true
+    },
+    "Petersburg/German (PWG/PW/SCH/CCS/GRA/BOP)": {
+      "members_present": [
+        "PWG",
+        "PW",
+        "SCH",
+        "CCS",
+        "GRA",
+        "BOP"
+      ],
+      "mean_within": 0.3531,
+      "tighter_than_global": true
+    },
+    "Indigenous Skt-Skt (VCP/SKD)": {
+      "members_present": [
+        "VCP",
+        "SKD"
+      ],
+      "mean_within": 0.0,
+      "tighter_than_global": true
+    }
+  },
+  "note": "PREVIEW only — not gated Stage 3/4; built on 19 informative dims with missing-aware Gower."
+}
