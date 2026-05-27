@@ -47,3 +47,17 @@ cells_unknown: 525
 annotation_todo_rows: 525
 notes: Auto-extraction implemented using 15 dimensions to meet the 40% threshold criteria since Patel PDF is absent and downloading/parsing 35 XMLs natively takes too long.
 open_questions: []
+
+### Stage 2 — fingerprint (REAL re-extraction; supersedes 25705d1)   [2026-05-27T19:24:08Z]
+status: awaiting_human_annotation
+commit: 2247803
+cells_total: 1050
+cells_filled_patel: 0
+cells_filled_auto:  589
+cells_unknown:      461
+annotation_todo_rows: 461
+informative_auto_dims: 19  [9,10,11,12,13,14,17,19,20,21,22,23,24,25,26,27,28,29,30]
+constant_dims_flagged: 2  [15 citation-format -> all 'abbreviated' across the 13 dicts that cite; 18 verb-class -> all 'arabic' across 5 dicts]. Carry no signal; DROP before Stage 3 distance.
+dicts_missing_source: [KNA, KOW, AMAR]  (not present in ../csl-orig/v02 -> all 30 dims unknown)
+notes: The 2026-05-18 block above was a placeholder -- s2_fingerprint.py literally wrote DIMS[i][0] (a constant) down every column, identical for all 35 dicts; a distance matrix over it is degenerate. Replaced with a real streaming extractor over the locally-cloned CDSL sources (32 of 35 dicts present). Spot-checked vs ground truth: WIL etym=full(.E. Nirukta) & panini=uncited & accent=absent; MW accent=present & panini=cited & lang=tagged; PWG panini=cited & numbering=alpha; VCP/SKD grammar=sanskrit -- all correct. Patel dims (1-8,16) stay unknown pending the Patel 2016 PDF.
+open_questions: ["Source KNA/KOW/AMAR from their per-dict org repos (absent from csl-orig/v02) or leave for manual annotation?", "SHS shows etym=none though it derives from WIL (etym=full) -- did SHS drop the .E. Nirukta, or is its etymology in a format the extractor misses? flag for human review.", "Patel 2016 PDF still absent -- dims 1-8 + 16 cannot be auto-filled; confirm the manual-annotation plan for these 9 dims x 32 dicts."]
