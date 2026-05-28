@@ -1,8 +1,8 @@
 {
   "total_cells": 1050,
-  "cells_auto": 589,
-  "cells_unknown": 461,
-  "fill_fraction": 0.561,
+  "cells_auto": 590,
+  "cells_unknown": 460,
+  "fill_fraction": 0.562,
   "dicts_total": 35,
   "dicts_missing_source": [
     "KNA",
@@ -230,7 +230,7 @@
     },
     "29": {
       "name": "Etymology mean-length",
-      "dicts_filled": 7,
+      "dicts_filled": 8,
       "distinct_values": [
         "high",
         "low",

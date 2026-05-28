@@ -74,7 +74,9 @@ RX = {
     "ls": re.compile(r"<ls\b[^>]*>(.*?)</ls>", re.S),
     "s_tok": re.compile(r"<s1?>(.*?)</s1?>", re.S),
     "hash_tok": re.compile(r"\{#(.*?)#\}", re.S),
-    "num_arabic": re.compile(r"\.²\s*\d|\{@\s*-*\s*\d|<hom>\s*\d|(?:^|\n)\s*\d{1,2}\.\s"),
+    # final alternative catches mid-line sense markers like YAT/SHS "} 1. NO, ... 2. A ..."
+    # -- "} 1. " or " 1. " followed by an uppercase letter or {# Sanskrit form.
+    "num_arabic": re.compile(r"\.²\s*\d|\{@\s*-*\s*\d|<hom>\s*\d|(?:^|\n)\s*\d{1,2}\.\s|[\s\}]\d{1,2}\.\s+[A-Z{]"),
     "num_roman": re.compile(r"<hom>\s*[IVXLivxl]{1,4}\b|(?:^|\n|\s)[IVXL]{1,4}\.\s"),
     "num_alpha": re.compile(r"\(\s*\{?%?\s*[a-z]\s*%?\}?\s*\)|(?:^|\s)[a-z]\)\s"),
     "gram_abbrev": re.compile(r"(?:<lex>\s*)?\b(?:mfn|m|f|n)\."),
@@ -82,7 +84,11 @@ RX = {
     "gram_skt": re.compile(r"\b[a-zA-Zāīūṛṅñṭḍṇśṣ]+0\b"),
     "cl_arabic": re.compile(r"\b\d+(?:st|nd|rd|th)?\s*cl\b|\bcl\.\s*\d"),
     "cl_roman": re.compile(r"\bcl\.\s*[ivxIVX]+\b"),
-    "etym_E": re.compile(r"\.E\."),
+    # WIL writes ".E. {#..#}" (period-E-period); SHS writes " E. {#..#}" (space-E-period).
+    # The unified pattern: E. preceded by sentence end or whitespace, then followed by a
+    # Sanskrit headword in {#..#}. Requiring the {# anchor avoids false hits on initials
+    # or stray "E." abbreviations.
+    "etym_E": re.compile(r"(?:^|[\s.¦])E\.\s+\{#"),
     "etym_tag": re.compile(r"<etym>(.*?)</etym>", re.S),
     "etym_lang": re.compile(r"<lang\b|<gk>|<ar>|<zd>"),
     "etym_fr": re.compile(r"\bfr\.\s"),
@@ -193,10 +199,11 @@ def extract(path):
 
         # --- etymology (dims 19,28,29,30) ---
         had_etym = False
-        if RX["etym_E"].search(b):
+        m_e = RX["etym_E"].search(b)
+        if m_e:
             had_etym = True
-            etym_markers.add(".E.")
-            seg = b.split(".E.", 1)[1]
+            etym_markers.add("E.")  # unified WIL `.E.` + SHS-style ` E. ` Nirukta marker
+            seg = b[m_e.end():]
             etym_lens.append(len(re.sub(r"<[^>]+>", "", seg).strip()[:200]))
         for content in RX["etym_tag"].findall(b):
             had_etym = True

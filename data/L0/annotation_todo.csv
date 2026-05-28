@@ -117,7 +117,6 @@ SHS,7,vas/yas suffixes,opt1|opt2|opt3|opt4
 SHS,8,Sandhi handling at compound boundary,preserved|split|both
 SHS,15,Citation format style,abbreviated|full|sanskrit
 SHS,16,Mahābhārata edition reference,pune|critical
-SHS,29,Etymology mean-length,low|med|high
 AP,1,Anusvāra before consonants,opt1|opt2|opt3|opt4|opt5|opt6
 AP,2,Duplication after r,opt1|opt2
 AP,3,Words ending with -at,opt1|opt2|opt3|opt4|opt5
@@ -242,7 +241,6 @@ BOP,7,vas/yas suffixes,opt1|opt2|opt3|opt4
 BOP,8,Sandhi handling at compound boundary,preserved|split|both
 BOP,15,Citation format style,abbreviated|full|sanskrit
 BOP,16,Mahābhārata edition reference,pune|critical
-BOP,29,Etymology mean-length,low|med|high
 VCP,1,Anusvāra before consonants,opt1|opt2|opt3|opt4|opt5|opt6
 VCP,2,Duplication after r,opt1|opt2
 VCP,3,Words ending with -at,opt1|opt2|opt3|opt4|opt5
@@ -294,6 +292,7 @@ VEI,15,Citation format style,abbreviated|full|sanskrit
 VEI,16,Mahābhārata edition reference,pune|critical
 VEI,18,Verb-class marker style,roman|arabic|sanskrit
 VEI,22,Vedic accent preservation,present|absent
+VEI,29,Etymology mean-length,low|med|high
 PUI,1,Anusvāra before consonants,opt1|opt2|opt3|opt4|opt5|opt6
 PUI,2,Duplication after r,opt1|opt2
 PUI,3,Words ending with -at,opt1|opt2|opt3|opt4|opt5

@@ -26,19 +26,19 @@
     "KNA",
     "KOW"
   ],
-  "global_mean_gower": 0.4394,
+  "global_mean_gower": 0.4433,
   "nearest_neighbours": {
     "WIL": [
       "SHS",
-      0.1667
+      0.0526
     ],
     "YAT": [
       "STC",
-      0.0588
+      0.0
     ],
     "GST": [
-      "INM",
-      0.1765
+      "WIL",
+      0.2105
     ],
     "BEN": [
       "BUR",
@@ -49,8 +49,8 @@
       0.1667
     ],
     "LRV": [
-      "YAT",
-      0.2222
+      "ACC",
+      0.1765
     ],
     "AP90": [
       "AP",
@@ -62,27 +62,27 @@
     ],
     "MD": [
       "SHS",
-      0.1111
+      0.1667
     ],
     "MW": [
       "GRA",
       0.2941
     ],
     "SHS": [
-      "MD",
-      0.1111
+      "WIL",
+      0.0526
     ],
     "AP": [
       "MW72",
       0.2778
     ],
     "BOR": [
-      "ACC",
-      0.2941
+      "YAT",
+      0.3333
     ],
     "AE": [
       "ACC",
-      0.1765
+      0.1176
     ],
     "BUR": [
       "BEN",
@@ -90,11 +90,11 @@
     ],
     "STC": [
       "YAT",
-      0.0588
+      0.0
     ],
     "PWG": [
-      "GST",
-      0.2105
+      "PW",
+      0.2222
     ],
     "GRA": [
       "MW",
@@ -113,8 +113,8 @@
       0.1176
     ],
     "BOP": [
-      "FRI",
-      0.1176
+      "MW72",
+      0.1667
     ],
     "VCP": [
       "SKD",
@@ -130,7 +130,7 @@
     ],
     "VEI": [
       "MW72",
-      0.2353
+      0.2941
     ],
     "PUI": [
       "MCI",
@@ -142,11 +142,11 @@
     ],
     "FRI": [
       "BOP",
-      0.1176
+      0.1765
     ],
     "ACC": [
       "AE",
-      0.1765
+      0.1176
     ],
     "KRM": [
       "VCP",
@@ -164,7 +164,7 @@
         "YAT",
         "SHS"
       ],
-      "mean_within": 0.2963,
+      "mean_within": 0.2768,
       "tighter_than_global": true
     },
     "Apte siblings (AP90→AP)": {
@@ -200,7 +200,7 @@
         "GRA",
         "BOP"
       ],
-      "mean_within": 0.4146,
+      "mean_within": 0.4203,
       "tighter_than_global": true
     },
     "Indigenous Skt-Skt (VCP/SKD)": {
