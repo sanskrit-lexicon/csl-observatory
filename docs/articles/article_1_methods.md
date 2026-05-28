@@ -24,7 +24,7 @@ We organise lexicographic-project measurements into four orthogonal dimensions, 
 
 **Ecosystem** — measures *what depends on or cites the lexicographic record*: web-display traffic (where available), external citations in academic literature, Wikipedia and Wiktionary backlinks, downstream tool consumption (mobile apps, JSON exports, SQLite snapshots). Ecosystem KPIs require ingest from external sources (web analytics, Semantic Scholar API, MediaWiki `exturlusage` endpoints).
 
-Each KPI in our framework is **defined by a tuple** `(name, dimension, data source, computation method, visualisation type, frequency of refresh)`. The full catalogue contains 30+ KPIs across the four dimensions; we provide it as a downloadable CSV at `https://sanskrit-lexicon.github.io/csl-observatory/data/kpi_catalog.csv`. Section 4 (below) applies this framework to CDSL and reports headline findings.
+Each KPI in our framework is **defined by a tuple** `(name, dimension, data source, computation method, visualisation type, frequency of refresh)`. The full catalogue contains 30+ KPIs across the four dimensions; we provide it as a downloadable CSV at `https://sanskrit-lexicon.github.io/csl-observatory/data/kpi_catalog.csv`. Section 5 (below) applies this framework to CDSL and reports headline findings.
 
 ### 3.2 Data sources
 
@@ -106,9 +106,44 @@ These limitations are mitigated by our open-data approach: any researcher who wi
 
 ---
 
+## 5. Results: applying the framework to CDSL
+
+We apply the four-dimension KPI framework of §3 to CDSL in four subsections (one per dimension) plus a headline equivalent-volunteer-hour estimate (§5.5). Each subsection's tables and figures are populated incrementally as the underlying data phases complete; the present draft reports only those results whose inputs are in hand. The Activity (§5.1), Community (§5.3), and Ecosystem (§5.4) subsections, and seven of the eight Coverage KPIs (§5.2), draw on Phase A–G data not yet collected and are tracked in the project roadmap (`docs/OBSERVATORY_ROADMAP.md`). One Coverage result — the joint inheritance test introduced in §3.5 — is fully populated and is reported below as §5.2.1.
+
+### 5.2 Coverage
+
+Of the eight Coverage KPIs planned for this subsection — headword count per dictionary, definition density, citation density, intra-dictionary cross-reference networks, print-page digitisation coverage, markup richness, encoding-roundtrip success, and issue-typology evolution — seven await the Phase B microstructure extraction. The single result available now is the joint convention/descent inheritance test introduced in §3.5, reported here as §5.2.1.
+
+#### 5.2.1 Dictionary pairs that pass the joint inheritance test
+
+We define a pair (A, B) to **pass the joint test** if (i) at least one direction of lemma containment between A and B reaches 0.85 in `data/sanhw1_inheritance_edges.csv`, and (ii) the convention Gower distance between A and B falls in the lowest quartile of pairwise convention distances over the 32 L0-subset dictionaries (in our data, conv distance ≤ 0.333; median = 0.444; n = 496 pairs). Twenty-two of the thirty-three published inheritance edges have both endpoints in the L0 subset; of these, **eight pass the joint test** (Table 5.2.1).
+
+The eight joint-passing pairs cluster into the three best-attested lineages of nineteenth-century Sanskrit lexicography. The Wilson tradition contributes WIL → SHS (95.3% containment, convention Gower 0.17) and the related YAT → SHS (89.4% / 0.28) — Shabda-Sagara (1900) inheriting both content and house style from H. H. Wilson's quarto (1832) and W. Yates's octavo digest of it (1846). The Petersburg tradition contributes PWG → PW (93.8% / 0.22) — Böhtlingk and Roth's seven-volume *grosses* Wörterbuch being abridged into Böhtlingk's *kürzere* edition (1879–1889) — together with CCS → PW (94.5% / 0.33) and CAE → PW (88.7% / 0.33) for Cappeller drawing on it. The Cappeller pair CCS → CAE (94.0% / 0.11) — the same author's German (1887) and English (1891) editions of the same work — yields the strongest joint signal in the corpus. The Macdonell → PW (88.7% / 0.22) and Grassmann → MW (87.8% / 0.29) edges close out the eight.
+
+**Table 5.2.1.** Inheritance pairs passing the joint convention/descent test (n = 8 of 22 candidates), sorted by convention Gower distance.
+
+| Pair (A – B) | Best direction | Containment | Conv. Gower | Source year → Inheritor year |
+|---|---|---:|---:|---|
+| CAE – CCS | CCS → CAE | 0.940 | 0.111 | 1887 → 1891 |
+| SHS – WIL | WIL → SHS | 0.953 | 0.167 | 1832 → 1900 |
+| PW – PWG  | PWG → PW  | 0.938 | 0.222 | 1855 → 1879 |
+| MD – PW   | MD → PW   | 0.887 | 0.222 | 1893 → 1879 |
+| SHS – YAT | YAT → SHS | 0.894 | 0.278 | 1846 → 1900 |
+| GRA – MW  | GRA → MW  | 0.878 | 0.294 | 1873 → 1899 |
+| CCS – PW  | CCS → PW  | 0.945 | 0.333 | 1887 → 1879 |
+| CAE – PW  | CAE → PW  | 0.887 | 0.333 | 1891 → 1879 |
+
+The fourteen remaining inheritance edges in the L0 intersection fail the joint test — all because their convention distance, despite demonstrable content inheritance, exceeds the lowest-quartile threshold. The foundational example is **Wilson → Yates (1832 → 1846): 92.6% containment but a convention Gower of 0.44, near the corpus median**. Yates condensed Wilson's quarto into a school octavo and adopted different sense-numbering, citation, and gloss-styling conventions in the process; the lineage is unambiguous but the editorial register diverged at the first generation. Ten of the remaining thirteen failures share a single inheritor: Monier-Williams 1899 (MW72 → MW, BOP → MW, BEN → MW, MD → MW, CAE → MW, PW → MW, PWG → MW, CCS → MW, VEI → MW, STC → MW, all with containment ≥ 0.85 and convention Gower between 0.39 and 0.61). Monier-Williams's published synthesis absorbed material from every available predecessor but standardised it to a distinctive house style — Vedic accent preservation, Pāṇinian-sūtra citation, cognate-language tagging, three-level grammar marking — that none of the source dictionaries used. The result is a systematic high-containment / high-convention-distance asymmetry centred on MW. The remaining three failures are intra-Petersburg asymmetries (GRA → PW, BEN → PWG, BEN → PW), of the same flavour at smaller scale.
+
+Conversely, eight unordered pairs are convention-close (Gower ≤ 0.12, in the bottom one percent of pairwise distances) yet absent from the inheritance edges entirely. They cluster around the indigenous Sanskrit–Sanskrit kośas (VCP–SKD at convention Gower 0.00, VCP–KRM and SKD–KRM both at 0.06), the minimal-markup bilingual glossaries discussed in §3.5 (YAT–STC at 0.06: an 1846 Calcutta digest of Wilson in English and a 1932 Paris digest of the Petersburg dictionaries in French, with no content overlap), and a Petersburg-adjacent cluster (PW–SCH 0.12, PW–INM 0.12). These are precisely the convergent-minimalism cases the joint test is designed to exclude from inheritance claims despite their proximity in convention space.
+
+Eight of twenty-two candidate inheritance pairs — 36% — therefore carry both signals; the remaining fourteen (64%) carry only content inheritance, and a convention-fingerprint inheritance claim made about them would, on these numbers, fail the test. The full ranked table (all 22 pairs with both signals) is released as `data/L0/preview/joint_inheritance_table.csv` and the computation as `scripts/L0/joint_inheritance_table.py`.
+
+---
+
 ## NEXT STEPS (TO DO BEFORE THIS PAPER IS COMPLETE)
 
-- [x] **Phase L0 preview** (convention fingerprint over 19 informative dims × 32 dicts, missing-aware Gower, UPGMA + NJ; tanglegram vs sanhw1 lemma signal over the 30 common dicts): drafted as §3.5 — Mantel r=0.22 (p=0.009), 2/28 clades shared, the two being same-author direct revisions. **Full Phase L0** (Patel annotation of the 9 transcription dims, KNA/KOW/AMAR sourcing, the gated Stage 3/4 with bootstrap CIs) still pending.
+- [x] **Phase L0 preview** (convention fingerprint over 19 informative dims × 32 dicts, missing-aware Gower, UPGMA + NJ; tanglegram vs sanhw1 lemma signal over the 30 common dicts; joint inheritance test over the 22 candidate inheritance pairs in the L0 subset): drafted as §3.5 (method) and §5.2.1 (8 joint-pass pairs + the 14 convention-divergent failures + 8 convergent-minimalism counterpoints). **Full Phase L0** (Patel annotation of the 9 transcription dims, KNA/KOW/AMAR sourcing, the gated Stage 3/4 with bootstrap CIs) still pending.
 - [ ] **Phase M1 (data-richness typology)**: produces the L0-L10 placement of each dict — required for §4.3 Results
 - [ ] **Phase A (volunteer-hour computation with finer commit classification)**: produces the headline numbers for §4.4 Results
 - [ ] **References section**: pull Beller, Mockus, Patel, Huet, CHAOSS, plus 30-40 DH-lexicography references
