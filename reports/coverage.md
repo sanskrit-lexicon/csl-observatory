@@ -76,75 +76,76 @@ pie title Top-10 dictionaries by entry count
 
 | Repo | License | Issues triaged |
 |---|---|:---:|
-| ACC | *(none)* |  |
+| ACC | *(none)* | ✓ |
 | AMAR | GPL-2.0 |  |
 | AP | *(none)* | ✓ |
 | AP90 | GPL-3.0 | ✓ |
-| ApteES | *(none)* |  |
+| ApteES | *(none)* | ✓ |
 | ArabicInSanskrit | *(none)* |  |
-| BEN | *(none)* |  |
-| BHS | *(none)* |  |
-| BOP | *(none)* |  |
-| BOR | *(none)* |  |
-| BUR | *(none)* |  |
-| CAE | *(none)* |  |
-| CCS | *(none)* |  |
-| COLOGNE | *(none)* |  |
+| BEN | *(none)* | ✓ |
+| BHS | *(none)* | ✓ |
+| BOP | *(none)* | ✓ |
+| BOR | *(none)* | ✓ |
+| BUR | *(none)* | ✓ |
+| CAE | *(none)* | ✓ |
+| CCS | *(none)* | ✓ |
+| COLOGNE | *(none)* | ✓ |
 | CORRECTIONS | *(none)* |  |
 | DCS | *(none)* |  |
 | FRI | *(none)* | ✓ |
 | GRA | *(none)* | ✓ |
-| GreekInSanskrit | *(none)* |  |
-| INM | *(none)* |  |
+| GreekInSanskrit | *(none)* | ✓ |
+| INM | *(none)* | ✓ |
 | KNA | *(none)* |  |
 | KOW | *(none)* |  |
-| KRM | GPL-3.0 |  |
-| LRV | *(none)* |  |
-| MCI | *(none)* |  |
+| KRM | GPL-3.0 | ✓ |
+| LRV | *(none)* | ✓ |
+| MCI | *(none)* | ✓ |
 | MD | *(none)* | ✓ |
-| MW72 | *(none)* |  |
+| MW72 | *(none)* | ✓ |
 | MWS | NOASSERTION | ✓ |
-| MWinflect | *(none)* |  |
+| MWinflect | *(none)* | ✓ |
 | PWG | *(none)* | ✓ |
 | PWK | *(none)* | ✓ |
-| SCH | *(none)* |  |
-| SHS | *(none)* |  |
-| SKD | *(none)* |  |
-| STC | *(none)* |  |
-| VCP | *(none)* |  |
-| VEI | *(none)* |  |
-| WIL | *(none)* |  |
-| Wil-YAT | NOASSERTION |  |
-| alternateheadwords | *(none)* |  |
+| SCH | *(none)* | ✓ |
+| SHS | *(none)* | ✓ |
+| SKD | *(none)* | ✓ |
+| STC | *(none)* | ✓ |
+| VCP | *(none)* | ✓ |
+| VEI | *(none)* | ✓ |
+| WIL | *(none)* | ✓ |
+| Wil-YAT | NOASSERTION | ✓ |
+| alternateheadwords | *(none)* | ✓ |
 | avlinks | *(none)* |  |
 | cologne-hugo | GPL-3.0 |  |
-| cologne-stardict | MIT |  |
-| csl-apidev | *(none)* |  |
-| csl-app | GPL-3.0 |  |
-| csl-corrections | GPL-3.0 |  |
-| csl-devanagari | *(none)* |  |
-| csl-doc | *(none)* |  |
+| cologne-stardict | MIT | ✓ |
+| csl-apidev | *(none)* | ✓ |
+| csl-app | GPL-3.0 | ✓ |
+| csl-atlas | NOASSERTION |  |
+| csl-corrections | GPL-3.0 | ✓ |
+| csl-devanagari | *(none)* | ✓ |
+| csl-doc | *(none)* | ✓ |
 | csl-homepage | *(none)* |  |
-| csl-inflect | LGPL-3.0 |  |
+| csl-inflect | LGPL-3.0 | ✓ |
 | csl-json | *(none)* |  |
 | csl-kale | GPL-3.0 |  |
-| csl-ldev | *(none)* |  |
-| csl-lnum | *(none)* |  |
+| csl-ldev | *(none)* | ✓ |
+| csl-lnum | *(none)* | ✓ |
 | csl-lslink | *(none)* |  |
 | csl-newsletter | *(none)* |  |
-| csl-observatory | GPL-3.0 |  |
-| csl-orig | *(none)* |  |
-| csl-pywork | *(none)* |  |
+| csl-observatory | GPL-3.0 | ✓ |
+| csl-orig | *(none)* | ✓ |
+| csl-pywork | *(none)* | ✓ |
 | csl-santam | NOASSERTION |  |
 | csl-sqlite | GPL-3.0 |  |
 | csl-websanlexicon | *(none)* |  |
-| csl-westergaard | GPL-3.0 |  |
+| csl-westergaard | GPL-3.0 | ✓ |
 | csl-whitroot | GPL-3.0 |  |
-| hwnorm1 | *(none)* |  |
-| hwnorm2 | *(none)* |  |
-| literarysource | *(none)* |  |
-| mw-dev | *(none)* |  |
-| rvlinks | GPL-3.0 |  |
+| hwnorm1 | *(none)* | ✓ |
+| hwnorm2 | *(none)* | ✓ |
+| literarysource | *(none)* | ✓ |
+| mw-dev | *(none)* | ✓ |
+| rvlinks | GPL-3.0 | ✓ |
 | sanskrit-fonts | *(none)* |  |
 | sanskrit-lexicon.github.io | *(none)* |  |
 | santamlegacy | *(none)* |  |
@@ -154,5 +155,5 @@ pie title Top-10 dictionaries by entry count
 | temp_corrections_mw | *(none)* |  |
 | test_cologne_push | *(none)* |  |
 
-**License coverage**: 17 of 77 repos declare a license; **60 are unlicensed** (FAIR R1.1 violation, addressed by runbook Phase 11).
+**License coverage**: 18 of 78 repos declare a license; **60 are unlicensed** (FAIR R1.1 violation, addressed by runbook Phase 11).
 

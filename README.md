@@ -1,73 +1,79 @@
 # csl-observatory
 
-Cross-repository analytics, dashboards, and data aggregator for the **Cologne Digital Sanskrit Dictionaries (CDSL)** ecosystem at [sanskrit-lexicon](https://github.com/sanskrit-lexicon).
+> **Live observatory for 12 years of Cologne Digital Sanskrit Lexicon (CDSL).**
+> Tracking 77 repos, 5,280 issues+PRs, 9,176 commits, and 17+ contributors since 2014.
 
-This repository ingests metadata from every CDSL repo (issues, milestones, projects, commits, contributors, and source-file statistics), produces canonical JSON snapshots, and renders both Markdown dashboards and figures used in published reports.
+## What this is
 
-## Purpose
+A meta-repository that **measures the entire sanskrit-lexicon GitHub organisation** and turns 12 years of distributed work into measurable, citable, reproducible knowledge. Built as the empirical backbone for a sequence of papers at WSC 2028.
 
-CDSL has been under continuous collaborative development since 1997, spanning ~50 repositories and four generations of contributors. The work is highly distributed: corrections to the Petersburger Wörterbuch may propagate to Apte, Macdonell, and Monier-Williams; changes flow through `csl-orig`, build tooling in `csl-app`, and end users access them via the Cologne web portal. **Without a unified observatory, the scale and structure of the project are illegible to outside researchers and to the contributors themselves.**
+## Quick links
 
-This repository fills that gap. It produces:
+- **[Observatory dashboard](https://sanskrit-lexicon.github.io/csl-observatory/)** — live charts (deploys after first GH Actions build)
+- **[Design document](docs/OBSERVATORY_DESIGN.md)** — architecture, KPIs, paper roadmap
+- **[Data downloads](data/)** — every chart's source as CSV / JSON / Parquet
+- **[Runbooks](runbook/)** — the issue-taxonomy procedures applied to all 63 active repos
 
-1. **Canonical data snapshots** of the whole ecosystem (`data/snapshots/<date>/`).
-2. **A live dashboard** of cross-repo metrics (`reports/dashboard.md`).
-3. **Per-contributor profile pages** showing role evolution over time (`reports/contributors.md`).
-4. **Figures and tables** that drive the article *The Cologne Digital Sanskrit Dictionaries: a 30-year ecosystem* (Indo-Iranian Journal, in preparation).
+## What's in this repo
 
-## Architecture
+| Path | Purpose |
+|---|---|
+| `observatory/fetch.py` | Fetches all GitHub data for 77 repos (issues, commits, PRs, metadata) |
+| `observatory/transform.py` | Turns raw snapshots into time-series CSVs |
+| `observatory/build_people.py` | Consolidates contributor identities from CITATION.cff + GitHub |
+| `observatory/site/` | Observable Framework dashboard source |
+| `data/` | Transformed time-series CSVs (snapshot 2026-05) |
+| `docs/OBSERVATORY_DESIGN.md` | 2-page design doc with KPI catalog and paper roadmap |
+| `runbook/cologne-issue-runbook.md` | 16-phase **dictionary**-repo taxonomy (35 repos) |
+| `runbook/cologne-tooling-runbook.md` | 17-phase **tooling**-repo taxonomy (28 repos) |
+| `.github/workflows/refresh-observatory.yml` | Monthly auto-refresh (template; needs `workflow` token scope to push) |
 
-```
-csl-observatory/
-├── scripts/
-│   ├── pull_data.py          # main aggregator — calls GitHub API + git log
-│   ├── compute_metrics.py    # derives contributor / repo / cross-repo stats
-│   ├── render_reports.py     # renders dashboard.md, contributors.md, etc.
-│   └── contributors_map.json # login → real name + ORCID + role (manual)
-├── data/
-│   ├── repos.json            # all org repos, with metadata
-│   ├── issues.json           # all issues across all repos, normalised
-│   ├── commits.json          # commit history (sha, author, date, +/-)
-│   ├── contributors.json     # per-person derived metrics
-│   ├── headwords.json        # entry counts per dictionary
-│   └── snapshots/<YYYY-MM-DD>/  # time-stamped immutable copies
-├── reports/
-│   ├── dashboard.md          # cross-repo headline metrics
-│   ├── contributors.md       # one section per contributor
-│   ├── timeline.md           # activity Gantt + milestone timeline
-│   └── coverage.md           # entry counts, scan coverage, markup ratios
-├── article/
-│   ├── article.md            # Pandoc Markdown source
-│   ├── refs.bib              # BibTeX references
-│   └── figures/              # PNG/SVG generated from data
-└── .github/workflows/
-    └── refresh.yml           # weekly cron — refreshes data + commits if changed
-```
+## Headline numbers (snapshot 2026-05)
 
-## Refresh cycle
+| Metric | Value |
+|---|---|
+| Repos tracked | 77 |
+| Issues + PRs (lifetime) | 5,280 |
+| Commits since 2014 | 9,176 |
+| Distinct contributors | 17 |
+| Most active repo | `csl-orig` (7,458 events) |
+| Peak commit year | 2021 (1,749 commits) |
+| Peak issue year | 2025 (1,178 opened) |
+| Dominant work type | `text-correction` (4,000+ across 12 years) |
 
-```sh
-python scripts/pull_data.py        # rebuilds data/*.json
-python scripts/compute_metrics.py  # derives contributors.json, summary tables
-python scripts/render_reports.py   # rewrites reports/*.md
-git add data reports article/figures
-git commit -m "data: snapshot $(date +%Y-%m-%d)"
-```
+## Refresh cadence
 
-The same chain runs weekly via `.github/workflows/refresh.yml`.
+- **Manual**: `cd observatory && python fetch.py && python transform.py && python build_people.py`
+- **Auto**: monthly via GitHub Actions (`.github/workflows/refresh-observatory.yml`)
 
-## Data licensing
+## Paper roadmap (WSC 2028 → 2031)
 
-This repository is licensed **GPL-3.0** (tooling code).
-The aggregated data in `data/` is derived from public CDSL repositories and is released under **CC BY-SA 4.0**, matching the source data.
-The article in `article/` is licensed **CC BY 4.0**.
+1. **Quantifying digital lexicography** — the measurement framework (WSC 2028 long paper)
+2. **Community-driven correction at scale** — empirical case study
+3. **From rescue to reference** — historical narrative 2014→2028
+4. **The CDSL ecosystem** — architectural cross-repo dependency analysis
+
+See [`docs/OBSERVATORY_DESIGN.md`](docs/OBSERVATORY_DESIGN.md) for details.
 
 ## Citation
 
-See [`CITATION.cff`](CITATION.cff). Once the article is published, cite as:
+If you use these data in published work:
 
-> Gasūns, M., Funderburk, J., Patel, D., Rao, N. (forthcoming). The Cologne Digital Sanskrit Dictionaries: a 30-year ecosystem. *Indo-Iranian Journal*.
+> Gasūns, M. et al. (2026). *CSL Observatory: 12 years of Cologne Digital Sanskrit Lexicon* [Data set]. Zenodo. DOI: pending mint.
 
-## Methodological note
+Plus the snapshot date for reproducibility.
 
-All figures and counts are reproducible from the data snapshots in `data/snapshots/`. A reader who clones this repository and runs `python scripts/render_reports.py --snapshot <date>` will reproduce every figure in the dashboard and the article. This satisfies FAIR principles F1–F4 (findable), A1 (accessible), I1 (interoperable JSON), and R1.1 (license).
+## Issue typology in this repo
+
+This repo uses the **tooling-repo taxonomy** (see [runbook/cologne-tooling-runbook.md](runbook/cologne-tooling-runbook.md)).
+
+```mermaid
+pie title Issues by Type
+    "enhancement" : 2
+```
+
+Org-level project: **[Tooling Roadmap](https://github.com/orgs/sanskrit-lexicon/projects/9)**.
+
+---
+
+*Generated by the Cologne Tooling Runbook · last refreshed 2026-05-15*

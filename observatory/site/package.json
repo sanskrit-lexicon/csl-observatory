@@ -1,0 +1,18 @@
+{
+  "name": "csl-observatory-site",
+  "version": "1.0.0",
+  "description": "Live dashboard for 12 years of Cologne Digital Sanskrit Lexicon",
+  "scripts": {
+    "dev": "observable preview",
+    "build": "observable build",
+    "deploy": "observable deploy",
+    "clean": "observable clean"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@observablehq/framework": "^1.13.0"
+  }
+}
