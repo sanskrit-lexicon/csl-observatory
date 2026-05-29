@@ -141,6 +141,9 @@ Largest backlogs: `csl-orig` 68, `MWinflect` 48, `csl-websanlexicon` 25,
 `csl-apidev` 22, `csl-corrections` 21, `alternateheadwords` 19,
 `hwnorm1` / `csl-devanagari` / `mw-dev` 17 each, `csl-inflect` 12.
 
+Re-run later the same day produced an identical reconciliation —
+treat the script's `audit` output as the canonical health check.
+
 ## Citation
 
 If you cite this runbook directly, please use the entry in
