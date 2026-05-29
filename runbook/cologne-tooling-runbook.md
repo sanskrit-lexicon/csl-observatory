@@ -404,18 +404,19 @@ Generate `CLAUDE.md` with sections tailored to the repo category:
 
 Required sections (order matters):
 1. Title + one-sentence purpose
-2. Status badge row (build, license, language, last commit)
-3. Contents (top-level dir table)
-4. **Tech stack table**: runtime, framework, db, build tool, deploy target
-5. Quick start (3-5 commands to get running locally)
-6. **Issue Status table** (live counts, fetched at commit time):
+2. **Documentation callout (preserve-if-present)** — if the repo has an authoritative human guide (e.g. `docs/*.md` referenced from `CLAUDE.md`, or an existing `## Documentation` block in the current README), carry that link forward verbatim into the regenerated README. **Never drop it.** Before overwriting, grep the existing README for a `## Documentation` heading and any `docs/` links and re-emit them in the new file.
+3. Status badge row (build, license, language, last commit)
+4. Contents (top-level dir table)
+5. **Tech stack table**: runtime, framework, db, build tool, deploy target
+6. Quick start (3-5 commands to get running locally)
+7. **Issue Status table** (live counts, fetched at commit time):
    ```
    | Milestone | Open | Closed | Total |
    ```
-7. **Issue Typology** with two Mermaid pie charts: one by type, one by severity
-8. **Issue Domains** (if domain labels used): table of domain → count
-9. Labels reference (link to runbook)
-10. Contributors
+8. **Issue Typology** with two Mermaid pie charts: one by type, one by severity
+9. **Issue Domains** (if domain labels used): table of domain → count
+10. Labels reference (link to runbook)
+11. Contributors
 
 **Validate every Mermaid block** before commit:
 ```sh

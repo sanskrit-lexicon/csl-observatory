@@ -253,12 +253,13 @@ Create or update `CLAUDE.md` in the repo root. Include:
 
 Create or update `README.md`. Required sections in order:
 1. Title + one-paragraph description
-2. Contents table (top-level directories)
-3. Timeline table (period → work, derived from git log and issue dates)
-4. Projects & Milestones table with live counts + two Mermaid pie charts (closed by ms, open by ms)
-5. Issue Typology — Solved and Open subsections, each a table of issues, plus a Mermaid pie chart by type
-6. Labels section (type + severity tables)
-7. Contributors
+2. **Documentation callout (preserve-if-present)** — if the repo has an authoritative human guide (e.g. `docs/*.md` referenced from `CLAUDE.md`, or an existing `## Documentation` block in the current README), carry that link forward verbatim. **Never drop it.** Before overwriting, grep the existing README for a `## Documentation` heading and any `docs/` links and re-emit them in the regenerated file.
+3. Contents table (top-level directories)
+4. Timeline table (period → work, derived from git log and issue dates)
+5. Projects & Milestones table with live counts + two Mermaid pie charts (closed by ms, open by ms)
+6. Issue Typology — Solved and Open subsections, each a table of issues, plus a Mermaid pie chart by type
+7. Labels section (type + severity tables)
+8. Contributors
 
 **All counts must be fetched live from the API** immediately before commit.
 
