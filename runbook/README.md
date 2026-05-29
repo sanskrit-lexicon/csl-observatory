@@ -101,9 +101,9 @@ LRV, MCI, PUI, SHS, SKD, STC, VCP, VEI, WIL) are queued for triage.
 
 ### Tooling runbook
 
-All 33 tooling repositories have completed Phases 0–10. The unified
+All 34 tooling repositories have completed Phases 0–10. The unified
 taxonomy is enforced (24-label set + 5 milestones each) and every open
-issue (~312 across the org) is tracked in the org-level
+issue is tracked in the org-level
 [Tooling Roadmap](https://github.com/orgs/sanskrit-lexicon/projects/9).
 
 Processed in two waves:
@@ -123,6 +123,21 @@ The runbook is now codified as
 [`scripts/tooling_runbook.py`](../scripts/tooling_runbook.py) — eight
 subcommands (`setup`, `classify`, `verify`, `project`, `refresh`,
 `milestones`, `sha`, `audit`) that implement Phases 2–9 mechanically.
+
+#### Audit (2026-05-29)
+
+`python scripts/tooling_runbook.py audit <repos>` reconciles project
+items against per-repo open-issue counts. Latest result:
+
+| | |
+|---|---:|
+| Items in Tooling Roadmap | **312** |
+| Sum of per-repo open-issue counts (34 repos) | **312** |
+| Mismatches | **0** |
+
+Largest backlogs: `csl-orig` 68, `MWinflect` 48, `csl-websanlexicon` 25,
+`csl-apidev` 22, `csl-corrections` 21, `alternateheadwords` 19,
+`hwnorm1` / `csl-devanagari` / `mw-dev` 17 each, `csl-inflect` 12.
 
 ## Citation
 
