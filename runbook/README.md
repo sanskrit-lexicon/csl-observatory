@@ -41,6 +41,8 @@ The four `.md` files in this folder are also installed at
 | [`cologne-runbook-all.md`](cologne-runbook-all.md) | Wrapper for batch-processing dictionary repos |
 | [`cologne-tooling-runbook.md`](cologne-tooling-runbook.md) | Seventeen-phase **tooling**-repo runbook (single repo) |
 | [`cologne-tooling-all.md`](cologne-tooling-all.md) | Wrapper for batch-processing tooling repos |
+| [`../docs/RUNBOOK_NOTES.md`](../docs/RUNBOOK_NOTES.md) | Operating notes — gotchas, conventions, csl-orig mapping table |
+| [`../scripts/tooling_runbook.py`](../scripts/tooling_runbook.py) | CLI executor for the tooling runbook (8 subcommands) |
 
 ## Taxonomy comparison
 
