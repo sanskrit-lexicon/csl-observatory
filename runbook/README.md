@@ -81,9 +81,11 @@ Phase 7 is a **hard gate**: all five integrity checks (missing type
 label, missing severity, missing milestone, multi-type, milestone-type
 mismatch) must reach zero before the runbook proceeds to documentation.
 
-## Status (2026-05-07)
+## Status (2026-05-29)
 
-Eight of the active dictionary repositories have completed Phases 0–10:
+### Dictionary runbook
+
+Eight active dictionary repositories have completed Phases 0–10:
 **AP, AP90, FRI, GRA, MD, MWS, PWG, PWK**.
 
 Phase 16 (community files) was completed for these eight repos via
@@ -93,9 +95,34 @@ Phases 11–15 (citation, source bibliography, data dictionary, encoding,
 pipeline DAG) are specified in this runbook but have not yet been
 executed; they are scheduled for 2026 Q3.
 
-The remaining 14 dictionary repositories with significant issue volume
+The remaining dictionary repositories with significant issue volume
 (ACC, AMAR, ApteES, BEN, BHS, BOP, BOR, BUR, CAE, CCS, INM, KOW, KRM,
 LRV, MCI, PUI, SHS, SKD, STC, VCP, VEI, WIL) are queued for triage.
+
+### Tooling runbook
+
+All 33 tooling repositories have completed Phases 0–10. The unified
+taxonomy is enforced (24-label set + 5 milestones each) and every open
+issue (~312 across the org) is tracked in the org-level
+[Tooling Roadmap](https://github.com/orgs/sanskrit-lexicon/projects/9).
+
+Processed in two waves:
+
+- **2026-05-07 (initial)**: `csl-apidev`, `csl-websanlexicon`,
+  `csl-corrections`, `cologne-stardict`.
+- **2026-05-28/29 (full sweep)**: `csl-observatory`, `MWinflect`,
+  `alternateheadwords`, `hwnorm1`, `csl-devanagari`, `mw-dev`,
+  `csl-inflect`, `csl-ldev`, `csl-pywork`, `csl-homepage`, `hwnorm2`,
+  `csl-app`, `literarysource`, `csl-doc`, `csl-newsletter`,
+  `csl-westergaard`, `csl-kale`, `csl-lnum`, `csl-lslink`, `csl-sqlite`,
+  `avlinks`, `rvlinks`, `csl-whitroot`, `csl-json`, `csl-atlas`,
+  `csl-santam`, `sanskrit-fonts`, `cologne-hugo`,
+  `sanskrit-lexicon.github.io`, `csl-orig`.
+
+The runbook is now codified as
+[`scripts/tooling_runbook.py`](../scripts/tooling_runbook.py) — eight
+subcommands (`setup`, `classify`, `verify`, `project`, `refresh`,
+`milestones`, `sha`, `audit`) that implement Phases 2–9 mechanically.
 
 ## Citation
 
