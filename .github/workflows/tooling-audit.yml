@@ -1,0 +1,75 @@
+name: Tooling Roadmap audit
+
+on:
+  schedule:
+    # Weekly Monday 03:00 UTC
+    - cron: '0 3 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      # Required: PAT with `read:project` + `repo` scopes. The default
+      # GITHUB_TOKEN cannot read org-level projectV2 items, so this PAT
+      # must be stored as the repo secret TOOLING_AUDIT_TOKEN.
+      # See docs/RUNBOOK_NOTES.md for context.
+      GH_TOKEN: ${{ secrets.TOOLING_AUDIT_TOKEN }}
+      REPOS: >-
+        csl-observatory,MWinflect,alternateheadwords,hwnorm1,csl-devanagari,
+        mw-dev,csl-inflect,csl-ldev,csl-pywork,csl-homepage,hwnorm2,csl-app,
+        literarysource,csl-doc,csl-newsletter,csl-westergaard,csl-kale,
+        csl-lnum,csl-lslink,csl-sqlite,avlinks,rvlinks,csl-whitroot,csl-json,
+        csl-atlas,csl-santam,sanskrit-fonts,cologne-hugo,
+        sanskrit-lexicon.github.io,csl-orig,csl-apidev,csl-websanlexicon,
+        csl-corrections,cologne-stardict
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Verify token is set
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::error::TOOLING_AUDIT_TOKEN secret not set. Add a PAT with read:project + repo scopes."
+            exit 1
+          fi
+
+      - name: Run audit
+        id: audit
+        run: |
+          # Strip whitespace/newlines from REPOS env var
+          REPOS_CLEAN=$(echo "$REPOS" | tr -d ' \n')
+          python scripts/tooling_runbook.py audit "$REPOS_CLEAN" | tee audit.txt
+
+      - name: Post summary
+        if: always()
+        run: |
+          {
+            echo "# Tooling Roadmap audit"
+            echo
+            echo '```'
+            cat audit.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Fail on mismatch
+        run: |
+          mismatch_line=$(grep -E '^mismatches:' audit.txt || true)
+          if [ -z "$mismatch_line" ]; then
+            echo "::error::audit output did not contain a 'mismatches:' line"
+            exit 1
+          fi
+          count=$(echo "$mismatch_line" | awk '{print $2}')
+          if [ "$count" != "0" ]; then
+            echo "::error::Tooling Roadmap audit found $count mismatch(es). See workflow summary."
+            exit 1
+          fi
+          echo "audit clean: 0 mismatches"

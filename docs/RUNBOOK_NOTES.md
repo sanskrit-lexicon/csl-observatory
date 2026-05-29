@@ -119,6 +119,19 @@ issue-type/severity breakdown.
 
 ---
 
+## Weekly audit workflow
+
+[`.github/workflows/tooling-audit.yml`](../.github/workflows/tooling-audit.yml)
+runs the `audit` subcommand every Monday 03:00 UTC and fails the job on
+any nonzero mismatch count. The workflow needs a repo secret
+**`TOOLING_AUDIT_TOKEN`** — a PAT with `read:project` and `repo`
+scopes. The default `GITHUB_TOKEN` does not have `read:project` for
+org-level projectV2 items, so leaving the secret unset is detected
+early and fails with a clear message.
+
+If you add a newly processed tooling repo, append its name to the
+`REPOS` env var in the workflow so it's included in the weekly check.
+
 ## Status snapshot (2026-05-29)
 
 - **34 tooling repos** processed end-to-end (Phases 0–10).
