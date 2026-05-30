@@ -43,6 +43,14 @@ ALIAS = {
     'AnnaRybakovaT': 'AnnaRybakovaT', 'Andhrabharati': 'Andhrabharati',
 }
 
+# Canonical identity map (data/contributors_map.json) extends/overrides the inline defaults.
+_cmap = os.path.join(ROOT, 'data', 'contributors_map.json')
+if os.path.exists(_cmap):
+    try:
+        ALIAS.update(json.load(open(_cmap, encoding='utf-8')).get('aliases', {}))
+    except Exception as _e:
+        print(f'warning: could not load {_cmap}: {_e}', file=sys.stderr)
+
 def gh(p):
     return subprocess.run(['gh', 'api', p], capture_output=True, encoding='utf-8')
 

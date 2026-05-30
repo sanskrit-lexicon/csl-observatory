@@ -1,0 +1,17 @@
+{
+  "_comment": "Canonical contributor-identity map. Maps git author names / logins seen across the org to a canonical GitHub login, so the same person is not split across identities in analytics. Consumed by scripts/contributor_stats.py (and intended for observatory/build_people.py). Extend as new variants appear. Roadmap item Q4.",
+  "aliases": {
+    "funderburkjim": "funderburkjim",
+    "Jim Funderburk": "funderburkjim",
+    "James Funderburk": "funderburkjim",
+    "Dhaval Patel": "drdhaval2785",
+    "Dhavalkumar Patel": "drdhaval2785",
+    "Dr. Dhaval Patel": "drdhaval2785",
+    "drdhaval2785": "drdhaval2785",
+    "Mārcis Gasūns": "gasyoun",
+    "Marcis Gasuns": "gasyoun",
+    "gasyoun": "gasyoun",
+    "AnnaRybakovaT": "AnnaRybakovaT",
+    "Andhrabharati": "Andhrabharati"
+  }
+}
