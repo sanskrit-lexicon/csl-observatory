@@ -15,6 +15,8 @@ A meta-repository that **measures the entire sanskrit-lexicon GitHub organisatio
 - **[Runbooks](runbook/)** — the issue-taxonomy procedures applied to all 63 active repos
 - **[Contributor & work statistics](docs/CONTRIBUTOR_STATS.md)** — per-contributor & per-repo commits, churn, tenure, and issues (2014–2026)
 - **[Improvement & optimization roadmap](docs/ROADMAP.md)** — prioritized engineering/quality roadmap for the whole ecosystem
+- **[Research & practitioner layer](docs/RESEARCH_LAYER_ROADMAP.md)** — hypotheses, micro/macro visualization prototypes, and tools for students, dictionary makers, and researchers
+- **[Decisions needed](docs/DECISIONS_NEEDED.md)** — open items blocked on a maintainer (decisions, credentials, confirmations)
 
 ## What's in this repo
 
