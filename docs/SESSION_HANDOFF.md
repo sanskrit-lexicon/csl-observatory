@@ -1,5 +1,28 @@
 # Session handoff — read this first in a new chat
 
+## ⏩ 2026-05-30 — current state (START HERE; the 2026-05-16 research handoff follows below)
+
+**First action in a new chat:** read [`DECISIONS_NEEDED.md`](DECISIONS_NEEDED.md) and resurface the open items to the maintainer. Two parallel streams are active:
+
+**A · Engineering / data-quality** — journal: [`csl-corrections/.ai_state.md`](https://github.com/sanskrit-lexicon/csl-corrections/blob/master/.ai_state.md).
+- Done: markup fixes for 10 csl-orig dicts; issue taxonomy on 6 dict repos (BOR/BUR/INM/KRM/BOP/MW72); full README+CLAUDE+citation/community docs for those 6; org-wide [`CONTRIBUTOR_STATS.md`](CONTRIBUTOR_STATS.md); ecosystem [`ROADMAP.md`](ROADMAP.md) + 7 tracked issues; **quick wins Q1–Q6 shipped** — hw.py BOM `utf-8-sig` fix (csl-pywork#50), `.gitattributes`×7, csl-orig encoding+`<L>/<LEND>` CI guard, contributor-identity map, Mermaid validator, AI-contribution policy, `clone_org.py`.
+- Remaining (human/scope): Q7 taxonomy rollout to ~22 more repos (`/cologne-runbook-all`), M1 refresh-script modernization, M4 refresh automation (needs token), M7 KRM license decision, #51 XML-parse tail.
+
+**B · Research / practitioner layer** — additive to the existing genealogy + typology program.
+- Existing: [`LEXICOGRAPHY_ROADMAP.md`](LEXICOGRAPHY_ROADMAP.md) (L0–L10), [`MICROSTRUCTURE-MACROSTRUCTURE.md`](MICROSTRUCTURE-MACROSTRUCTURE.md) (typology + 50-viz catalog).
+- New: [`RESEARCH_LAYER_ROADMAP.md`](RESEARCH_LAYER_ROADMAP.md) — 7 hypotheses, practitioner tools (students/makers/researchers), and 2 working prototypes: `scripts/lexico/micro_entry.py` (`python … Darma` → one lemma × dicts) and `scripts/lexico/macro_profile.py` (43-dict structural profile). Outputs in `data/lexico/`.
+- **Next research build: R2 — a per-dict sense splitter** (gates hypotheses H1–H3 and the maker worklist); needs decisions A6/A7.
+- ⚠️ **Lesson (2026-05-30):** *validate heuristic detectors against real entries before trusting numbers.* A `<ls>`-only citation detector wrongly called SKD/VCP "citation-free"; they cite densely via `“…”` + `…0` authorities (`jE0`,`BA0`,`amara0`) + `iti` — fixed (VCP 95%, SKD 51% cited). Test on **mid-alphabet** lemmas (`dharma`=`Darma`); resolve Patel headword-convention variants (doubled-`r` → `Darmma`, inflected visarga → `DarmmaH`) and concatenate homonyms.
+
+**Conventions for a new agent (also saved as memories):**
+- **Document first** — update `.ai_state.md` + touched docs and commit (`ai-wip:`) as each deliverable lands; don't ask, don't defer.
+- **Commit trailers** — dictionary/data repos: NO Claude trailer; infra repos (csl-observatory, csl-pywork, csl-corrections): `Co-Authored-By` is the convention.
+- **Comment-noise** — maintainers dislike bot comment/commit volume on dict repos; keep minimal, edit-in-place.
+- **csl-orig** — corrections go copy→edit→XML-validate→audit; never write a BOM (`utf-8`, not `utf-8-sig`).
+- **Artefact refresh** is server-side (Cologne cron) — push csl-orig and let it propagate.
+
+---
+
 **Date**: 2026-05-16
 **Previous session ended due to**: API stream idle timeout (likely context-density)
 **For**: any new Claude Code session picking up the csl-observatory work
