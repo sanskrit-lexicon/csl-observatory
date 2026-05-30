@@ -13,6 +13,7 @@ A meta-repository that **measures the entire sanskrit-lexicon GitHub organisatio
 - **[Design document](docs/OBSERVATORY_DESIGN.md)** — architecture, KPIs, paper roadmap
 - **[Data downloads](data/)** — every chart's source as CSV / JSON / Parquet
 - **[Runbooks](runbook/)** — the issue-taxonomy procedures applied to all 63 active repos
+- **[Contributor & work statistics](docs/CONTRIBUTOR_STATS.md)** — per-contributor & per-repo commits, churn, tenure, and issues (2014–2026)
 
 ## What's in this repo
 

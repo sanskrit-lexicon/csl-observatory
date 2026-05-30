@@ -1,6 +1,6 @@
 # Sanskrit Lexicon — Contributor & Work Statistics
 
-_Generated 2026-05-30 across the **77 non-fork repositories** of the [`sanskrit-lexicon`](https://github.com/sanskrit-lexicon) org. Forks (`csl-homepage`, `csl-websanlexicon`) excluded. Commit & issue data from the GitHub API; line-churn from local git for the six fully-cloned dictionary repos (see Methodology)._
+_Generated 2026-05-30 across the **77 non-fork repositories** of the [`sanskrit-lexicon`](https://github.com/sanskrit-lexicon) org. Commit & issue data from the GitHub API; line-churn from local git for 70 repositories (binary/generated-data repos excluded — see Methodology)._
 
 ## Overview
 
@@ -8,7 +8,7 @@ _Generated 2026-05-30 across the **77 non-fork repositories** of the [`sanskrit-
 |---|---:|
 | Repositories analyzed | 77 |
 | Distinct commit authors | 23 |
-| Total commits | 9,424 |
+| Total commits | 9,426 |
 | Issues opened | 5,235 |
 | Pull requests opened | 103 |
 | Activity span | 2014-01 – 2026-05 |
@@ -29,12 +29,12 @@ _Generated 2026-05-30 across the **77 non-fork repositories** of the [`sanskrit-
 | 2023 | 580 | 534 | 4 |
 | 2024 | 620 | 372 | 9 |
 | 2025 | 872 | 1,169 | 2 |
-| 2026 | 2,523 | 355 | 67 |
+| 2026 | 2,525 | 355 | 67 |
 
 ```mermaid
 pie showData
   title Commits by year
-  "2026" : 2523
+  "2026" : 2525
   "2021" : 1706
   "2025" : 872
   "2022" : 707
@@ -65,7 +65,7 @@ pie showData
 | 2023 | 66 | 75 | 49 | 35 | 13 | 90 | 31 | 35 | 32 | 24 | 46 | 84 | 580 |
 | 2024 | 133 | 40 | 31 | 33 | 22 | 90 | 32 | 47 | 49 | 69 | 32 | 42 | 620 |
 | 2025 | 13 | 93 | 205 | 56 | 68 | 44 | 101 | 76 | 49 | 60 | 51 | 56 | 872 |
-| 2026 | 45 | 174 | 198 | 660 | 1446 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 2523 |
+| 2026 | 45 | 174 | 198 | 660 | 1448 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 2525 |
 
 ## Contributor leaderboard (all-time, by commits)
 
@@ -73,7 +73,7 @@ pie showData
 |---|---:|---:|---|---|---:|
 | funderburkjim | 4,596 | 57 | 2014-01 | 2026-05 | 142 |
 | drdhaval2785 | 3,467 | 39 | 2015-11 | 2026-05 | 58 |
-| gasyoun | 1,029 | 77 | 2014-01 | 2026-05 | 28 |
+| gasyoun | 1,031 | 77 | 2014-01 | 2026-05 | 28 |
 | AnnaRybakovaT | 82 | 11 | 2020-12 | 2023-06 | 15 |
 | github-actions[bot] | 65 | 3 | 2026-03 | 2026-05 | 3 |
 | Andhrabharati | 63 | 3 | 2021-01 | 2023-04 | 9 |
@@ -100,7 +100,7 @@ pie showData
   title Commits by contributor
   "funderburkjim" : 4596
   "drdhaval2785" : 3467
-  "gasyoun" : 1029
+  "gasyoun" : 1031
   "AnnaRybakovaT" : 82
   "github-actions[bot]" : 65
   "Andhrabharati" : 63
@@ -117,7 +117,7 @@ pie showData
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | funderburkjim | 96 | 246 | 203 | 151 | 152 | 235 | 602 | 787 | 397 | 450 | 512 | 592 | 173 |
 | drdhaval2785 | 0 | 163 | 179 | 120 | 0 | 172 | 15 | 820 | 266 | 93 | 88 | 271 | 1280 |
-| gasyoun | 29 | 10 | 15 | 2 | 0 | 3 | 4 | 1 | 3 | 0 | 1 | 0 | 961 |
+| gasyoun | 29 | 10 | 15 | 2 | 0 | 3 | 4 | 1 | 3 | 0 | 1 | 0 | 963 |
 | AnnaRybakovaT | 0 | 0 | 0 | 0 | 0 | 0 | 7 | 19 | 40 | 16 | 0 | 0 | 0 |
 | github-actions[bot] | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 65 |
 | Andhrabharati | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 44 | 1 | 18 | 0 | 0 | 0 |
@@ -188,7 +188,7 @@ pie showData
 | Repository | Commits | Authors | First | Last | Issues | PRs |
 |---|---:|---:|---|---|---:|---:|
 | csl-orig | 1,977 | 10 | 2019-07 | 2026-05 | 2801 | 28 |
-| csl-corrections | 831 | 5 | 2019-12 | 2026-05 | 231 | 1 |
+| csl-corrections | 832 | 5 | 2019-12 | 2026-05 | 231 | 1 |
 | cologne-stardict | 719 | 4 | 2017-04 | 2026-05 | 48 | 0 |
 | CORRECTIONS | 691 | 4 | 2014-09 | 2026-05 | 441 | 0 |
 | csl-apidev | 520 | 5 | 2018-04 | 2026-05 | 45 | 0 |
@@ -199,7 +199,7 @@ pie showData
 | COLOGNE | 222 | 5 | 2014-01 | 2026-05 | 456 | 2 |
 | hwnorm1 | 187 | 4 | 2015-11 | 2026-05 | 20 | 0 |
 | csl-app | 179 | 2 | 2026-03 | 2026-05 | 39 | 1 |
-| csl-observatory | 153 | 3 | 2026-05 | 2026-05 | 2 | 6 |
+| csl-observatory | 154 | 3 | 2026-05 | 2026-05 | 2 | 6 |
 | AP | 141 | 3 | 2025-07 | 2026-05 | 29 | 2 |
 | VCP | 127 | 3 | 2014-01 | 2026-05 | 30 | 2 |
 | LRV | 126 | 3 | 2022-09 | 2026-05 | 30 | 0 |
@@ -269,7 +269,7 @@ pie showData
 pie showData
   title Commits by repository
   "csl-orig" : 1977
-  "csl-corrections" : 831
+  "csl-corrections" : 832
   "cologne-stardict" : 719
   "CORRECTIONS" : 691
   "csl-apidev" : 520
@@ -280,39 +280,121 @@ pie showData
   "COLOGNE" : 222
   "hwnorm1" : 187
   "csl-app" : 179
-  "others (65 more)" : 2521
+  "others (65 more)" : 2522
 ```
 
-## Line churn — six fully-cloned dictionary repositories
+## Line churn — 70 repositories
 
-From local `git log --numstat` for BUR, BOP, INM, KRM, MW72, BOR. **These line counts are dominated by bulk/auto-generated commits** (full-file digitization drops, regeneration, transcoding) — read them as *data volume*, not human effort.
+From local `git log --numstat` across 70 repos (the 7 large binary/generated-data repos — `cologne-stardict`, `csl-devanagari`, `csl-json`, `csl-kale`, `csl-ldev`, `csl-lnum`, `csl-sqlite` — are excluded; git reports no line counts for binary files). **These line counts are dominated by bulk/auto-generated commits** (full-file digitization, regeneration, transcoding) — read them as *data volume*, not human effort.
 
-### By contributor (sum over the 6 repos)
+### By contributor
 
 | Contributor | Commits | Lines + | Lines − | File-changes |
 |---|---:|---:|---:|---:|
-| funderburkjim | 48 | 3,587,765 | 913 | 472 |
-| drdhaval2785 | 21 | 432,870 | 146,745 | 46 |
-| gasyoun | 29 | 2,155 | 122 | 61 |
-| AnnaRybakovaT | 5 | 472 | 2 | 7 |
+| funderburkjim | 4,538 | 69,447,295 | 13,545,056 | 35,727 |
+| drdhaval2785 | 2,353 | 47,747,829 | 7,939,500 | 11,496 |
+| Andhrabharati | 58 | 5,931,962 | 1,768,467 | 389 |
+| gasyoun | 957 | 3,935,798 | 69,849 | 2,594 |
+| github-actions[bot] | 63 | 523,424 | 75,520 | 351 |
+| AnnaRybakovaT | 74 | 71,741 | 6,700 | 148 |
+| HWNORM1 BOT | 40 | 31,308 | 13,209 | 77 |
+| csl-observatory-bot | 2 | 11,546 | 11,429 | 18 |
+| Your Name | 29 | 11,378 | 8,883 | 58 |
+| Jakob Halfmann | 2 | 2,019 | 1,593 | 56 |
+| System Administrator | 1 | 1,961 | 0 | 5 |
+| cfr-auto-updater | 3 | 1,457 | 0 | 3 |
+| thomasincambodia | 1 | 860 | 0 | 4 |
+| aumsanskrit | 12 | 50 | 48 | 15 |
+| YevgenJohn | 4 | 24 | 25 | 4 |
+| DmitriSKT | 3 | 33 | 2 | 3 |
+| shenyileirob | 6 | 11 | 11 | 6 |
+| Dhaval and Jim | 1 | 10 | 11 | 3 |
+| Krishna Chaitanya | 1 | 2 | 2 | 1 |
+| root | 1 | 2 | 1 | 2 |
+| Shalu411 | 1 | 1 | 1 | 1 |
+| adminlip | 1 | 1 | 1 | 1 |
+| sanskritisampada | 1 | 1 | 0 | 1 |
 
 ### By repository
 
 | Repository | Lines + | Lines − | File-changes |
 |---|---:|---:|---:|
-| BUR | 246,736 | 205 | 189 |
+| ACC | 99 | 20 | 9 |
+| AMAR | 31,300 | 78 | 28 |
+| AP | 7,927,237 | 593,409 | 600 |
+| AP90 | 2,076,634 | 39,763 | 402 |
+| ApteES | 1,384,190 | 2,410 | 262 |
+| ArabicInSanskrit | 22 | 0 | 4 |
+| BEN | 712,283 | 40,939 | 187 |
+| BHS | 221,955 | 4,218 | 207 |
 | BOP | 653,081 | 83,518 | 137 |
-| INM | 143,803 | 553 | 69 |
-| KRM | 63,009 | 52 | 54 |
-| MW72 | 2,671,652 | 203 | 106 |
 | BOR | 244,981 | 63,251 | 31 |
+| BUR | 246,736 | 205 | 189 |
+| CAE | 216,338 | 21,624 | 76 |
+| CCS | 38,253 | 36 | 41 |
+| COLOGNE | 1,421,789 | 5,799 | 837 |
+| CORRECTIONS | 14,193,654 | 3,348,608 | 8,133 |
+| DCS | 79,750 | 41 | 31 |
+| FRI | 167,885 | 119 | 53 |
+| GRA | 323,879 | 24,618 | 553 |
+| GreekInSanskrit | 136 | 10 | 11 |
+| INM | 143,803 | 553 | 69 |
+| KNA | 274 | 9 | 5 |
+| KOW | 269 | 5 | 5 |
+| KRM | 63,009 | 52 | 54 |
+| LRV | 2,019,600 | 443,081 | 567 |
+| MCI | 99 | 19 | 8 |
+| MD | 663,421 | 3,345 | 328 |
+| MW72 | 2,671,652 | 203 | 106 |
+| MWS | 10,359,729 | 1,789,514 | 2,844 |
+| MWinflect | 1,179,183 | 909,676 | 1,049 |
+| PUI | 137,256 | 3,342 | 86 |
+| PWG | 11,939,899 | 1,106,889 | 3,532 |
+| PWK | 6,749,637 | 1,075,060 | 2,006 |
+| SCH | 414,692 | 266,269 | 103 |
+| SHS | 133,255 | 37 | 25 |
+| SKD | 597,848 | 95,139 | 256 |
+| STC | 47,486 | 35 | 48 |
+| VCP | 13,701,469 | 2,512,689 | 2,927 |
+| VEI | 8,356 | 4,248 | 17 |
+| WIL | 1,447,155 | 26,798 | 507 |
+| Wil-YAT | 459,661 | 3 | 37 |
+| alternateheadwords | 1,799,937 | 384,030 | 466 |
+| avlinks | 78,683 | 216 | 762 |
+| cologne-hugo | 720 | 0 | 4 |
+| csl-apidev | 805,482 | 401,847 | 2,556 |
+| csl-app | 50,651 | 16,807 | 810 |
+| csl-atlas | 320,053 | 5,043 | 800 |
+| csl-corrections | 1,384,152 | 238,088 | 3,060 |
+| csl-doc | 202,815 | 63,438 | 5,894 |
+| csl-inflect | 524,567 | 17,659 | 617 |
+| csl-lslink | 444 | 47 | 28 |
+| csl-newsletter | 2,879 | 526 | 115 |
+| csl-observatory | 826,431 | 96,409 | 367 |
+| csl-orig | 16,810,218 | 7,953,619 | 2,775 |
+| csl-pywork | 76,051 | 26,590 | 1,832 |
+| csl-santam | 327,173 | 208 | 44 |
+| csl-westergaard | 271,774 | 41 | 482 |
+| csl-whitroot | 266,685 | 10 | 681 |
+| hwnorm1 | 7,967,077 | 1,421,558 | 981 |
+| hwnorm2 | 1,430,047 | 4,535 | 403 |
+| literarysource | 11,355 | 158 | 39 |
+| mw-dev | 7,469,125 | 227,738 | 415 |
+| rvlinks | 271,609 | 1,698 | 1,116 |
+| sanskrit-fonts | 63 | 3 | 6 |
+| sanskrit-lexicon.github.io | 287,467 | 38,424 | 180 |
+| santamlegacy | 9 | 0 | 1 |
+| temp_corrections_acc | 736,447 | 1,984 | 52 |
+| temp_corrections_ae | 659,228 | 1,448 | 37 |
+| temp_corrections_ap90 | 1,571,484 | 67,130 | 55 |
+| temp_corrections_mw | 888,113 | 5,422 | 9 |
+| test_cologne_push | 19 | 0 | 6 |
 
 ## Methodology & caveats
 
-- **Commits, tenure, time-series**: GitHub REST `GET /repos/{o}/{r}/commits` (paginated, default branch), for all 77 non-fork repos. Author identity uses the linked GitHub login; commits with no linked account are mapped to a known contributor by name where possible, else shown as `name:… (no GH acct)`.
-- **Issues & PRs**: issues API (state=all), counted by *opener* and creation date; PRs identified by the `pull_request` field. Review/close/comment activity is not counted.
-- **Line churn**: from local `git log --numstat`, available here only for the six fully-cloned dictionary repos. **Org-wide line churn is omitted** — GitHub's `/stats/contributors` and `/stats/code_frequency` endpoints returned HTTP 202 (computing) for the whole org at generation time and never resolved. Full org-wide churn would require cloning all 77 repos.
-- `⚠️` on a repo = its commit history hit the 6,000-commit page cap (counts are a floor).
-- Forks `csl-homepage` and `csl-websanlexicon` are excluded (their history includes upstream contributors).
+- **Commits/tenure/time-series**: GitHub REST commits API (paginated, default branch) for all non-fork repos. Identity uses the linked GitHub login; unlinked commits are mapped to a known contributor by name where possible, else shown as `name:… (no GH acct)`.
+- **Issues & PRs**: issues API (state=all), by *opener* and creation date; PRs identified by the `pull_request` field. Review/close/comment activity not counted.
+- **Line churn**: local `git log --numstat`. With `--full-churn` (used here), repos without a full local clone are temporarily cloned to compute churn org-wide; the 7 large binary/generated-data repos are excluded (git reports no line counts for binary files). GitHub `/stats/*` churn endpoints were unavailable (HTTP 202 across the burst), so git is the source.
+- Forks are excluded (their history includes upstream contributors).
 
-*Method: GitHub commits & issues API + local `git log --numstat`. Reproduce with [`scripts/contributor_stats.py`](../scripts/contributor_stats.py).*
+*Generated by `scripts/contributor_stats.py`.*

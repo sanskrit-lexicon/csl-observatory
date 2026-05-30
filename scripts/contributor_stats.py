@@ -15,7 +15,7 @@ extended period across a 77-repo burst, so they are not relied on here.
 
 Usage:  python scripts/contributor_stats.py      (requires an authenticated `gh`)
 """
-import subprocess, json, os, sys, re
+import subprocess, json, os, sys, re, shutil
 from collections import defaultdict
 from datetime import datetime, timezone
 sys.stdout.reconfigure(encoding='utf-8'); sys.stderr.reconfigure(encoding='utf-8')
@@ -26,10 +26,19 @@ ROOT = os.path.dirname(HERE)            # csl-observatory/
 SIB = os.path.dirname(ROOT)             # parent holding sibling clones
 OUT = os.path.join(ROOT, 'docs', 'CONTRIBUTOR_STATS.md')
 
+# With --full-churn, repos without a full local clone are cloned to a temp dir
+# (then deleted) so churn is org-wide. These large binary/generated-data repos
+# are always skipped — git numstat reports no line counts for binary files and
+# the generated-data repos are pure bulk.
+FULL_CHURN = '--full-churn' in sys.argv
+TMPDIR = os.path.join(SIB, '_churn_tmp')
+BLOB_SKIP = {'cologne-stardict', 'csl-sqlite', 'csl-json', 'csl-kale',
+             'csl-lnum', 'csl-ldev', 'csl-devanagari'}
+
 # Consolidate git author names that have no linked GitHub account.
 ALIAS = {
     'funderburkjim': 'funderburkjim', 'Jim Funderburk': 'funderburkjim', 'James Funderburk': 'funderburkjim',
-    'Dhaval Patel': 'drdhaval2785', 'Dhavalkumar Patel': 'drdhaval2785', 'drdhaval2785': 'drdhaval2785',
+    'Dhaval Patel': 'drdhaval2785', 'Dhavalkumar Patel': 'drdhaval2785', 'Dr. Dhaval Patel': 'drdhaval2785', 'drdhaval2785': 'drdhaval2785',
     'Mārcis Gasūns': 'gasyoun', 'Marcis Gasuns': 'gasyoun', 'gasyoun': 'gasyoun',
     'AnnaRybakovaT': 'AnnaRybakovaT', 'Andhrabharati': 'Andhrabharati',
 }
@@ -132,12 +141,22 @@ def main():
             else: ic += 1; issue_auth[u]['iss'] += 1; org_year[y]['iss'] += 1
         tot_iss += ic; tot_pr += pc
         repo_sum[name] = {'c': rc, 'authors': len(ra), 'first': rf, 'last': rl, 'iss': ic, 'pr': pc}
-        sib = os.path.join(SIB, name)
-        if os.path.isdir(os.path.join(sib, '.git')):
-            shallow = subprocess.run(['git', '-C', sib, 'rev-parse', '--is-shallow-repository'],
-                                     capture_output=True, encoding='utf-8').stdout.strip()
-            if shallow == 'false':            # full clones only — shallow shells give misleading churn
+        if name not in BLOB_SKIP:
+            sib = os.path.join(SIB, name)
+            full_local = (os.path.isdir(os.path.join(sib, '.git')) and
+                          subprocess.run(['git', '-C', sib, 'rev-parse', '--is-shallow-repository'],
+                                         capture_output=True, encoding='utf-8').stdout.strip() == 'false')
+            if full_local:                    # reuse an existing full clone
                 churn[name] = git_churn(sib)
+            elif FULL_CHURN:                  # clone to temp, churn, delete
+                os.makedirs(TMPDIR, exist_ok=True)
+                tmp = os.path.join(TMPDIR, name)
+                shutil.rmtree(tmp, ignore_errors=True)
+                cl = subprocess.run(['git', 'clone', '--quiet', f'https://github.com/{ORG}/{name}', tmp],
+                                    capture_output=True, encoding='utf-8')
+                if cl.returncode == 0:
+                    churn[name] = git_churn(tmp)
+                shutil.rmtree(tmp, ignore_errors=True)
         print(f'[{i}/{len(repos)}] {name}: {rc} commits, {ic} issues, {pc} PRs', flush=True)
 
     tot_c = sum(a['c'] for a in auth.values())
@@ -145,7 +164,7 @@ def main():
     gen = datetime.now(tz=timezone.utc).strftime('%Y-%m-%d')
     L = []; A = L.append
     A('# Sanskrit Lexicon — Contributor & Work Statistics'); A('')
-    A(f'_Generated {gen} across the **{len(repos)} non-fork repositories** of the [`sanskrit-lexicon`](https://github.com/sanskrit-lexicon) org. Commit & issue data from the GitHub API; line-churn from local git for {len(churn)} locally-cloned repos (see Methodology)._'); A('')
+    A(f'_Generated {gen} across the **{len(repos)} non-fork repositories** of the [`sanskrit-lexicon`](https://github.com/sanskrit-lexicon) org. Commit & issue data from the GitHub API; line-churn from local git for {len(churn)} repositories (binary/generated-data repos excluded — see Methodology)._'); A('')
     A('## Overview'); A('')
     A('| Metric | Value |'); A('|---|---:|')
     A(f'| Repositories analyzed | {len(repos)} |'); A(f'| Distinct commit authors | {len(auth)} |')
@@ -178,8 +197,8 @@ def main():
         A(f'| {repo} | {s["c"]:,} | {s["authors"]} | {s["first"][:7] if s["first"] else "—"} | {s["last"][:7] if s["last"] else "—"} | {s["iss"]} | {s["pr"]} |')
     A(''); A(pie('Commits by repository', [(k, v['c']) for k, v in repo_sum.items()], 12)); A('')
     if churn:
-        A(f'## Line churn — {len(churn)} locally-cloned repositories'); A('')
-        A('From local `git log --numstat`. **These line counts are dominated by bulk/auto-generated commits** (full-file digitization, regeneration, transcoding) — read them as *data volume*, not human effort.'); A('')
+        A(f'## Line churn — {len(churn)} repositories'); A('')
+        A(f'From local `git log --numstat` across {len(churn)} repos (the {len(BLOB_SKIP)} large binary/generated-data repos — ' + ', '.join(f'`{b}`' for b in sorted(BLOB_SKIP)) + ' — are excluded; git reports no line counts for binary files). **These line counts are dominated by bulk/auto-generated commits** (full-file digitization, regeneration, transcoding) — read them as *data volume*, not human effort.'); A('')
         ca = defaultdict(lambda: {'add': 0, 'del': 0, 'files': 0, 'commits': 0})
         for _r, ad in churn.items():
             for w, v in ad.items():
@@ -194,7 +213,7 @@ def main():
     A('## Methodology & caveats'); A('')
     A('- **Commits/tenure/time-series**: GitHub REST commits API (paginated, default branch) for all non-fork repos. Identity uses the linked GitHub login; unlinked commits are mapped to a known contributor by name where possible, else shown as `name:… (no GH acct)`.')
     A('- **Issues & PRs**: issues API (state=all), by *opener* and creation date; PRs identified by the `pull_request` field. Review/close/comment activity not counted.')
-    A('- **Line churn**: local `git log --numstat`, for repos present as sibling clones only. Org-wide churn via GitHub `/stats/*` is unavailable (those endpoints stay HTTP 202 across a large burst).')
+    A(f'- **Line churn**: local `git log --numstat`. With `--full-churn` (used here), repos without a full local clone are temporarily cloned to compute churn org-wide; the {len(BLOB_SKIP)} large binary/generated-data repos are excluded (git reports no line counts for binary files). GitHub `/stats/*` churn endpoints were unavailable (HTTP 202 across the burst), so git is the source.')
     A('- Forks are excluded (their history includes upstream contributors).')
     A(''); A('*Generated by `scripts/contributor_stats.py`.*')
     with open(OUT, 'w', encoding='utf-8', newline='\n') as f:
