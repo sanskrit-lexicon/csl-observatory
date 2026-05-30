@@ -36,7 +36,7 @@ DICTS = [
 FEATURES = [
     ('homonym',      re.compile(r'<hom>')),
     ('verb class',   re.compile(r'\bcl\.')),
-    ('citation',     re.compile(r'<ls>')),
+    ('citation',     re.compile(r'<ls>|“')),   # Western <ls> OR indigenous “…” quotation
     ('causative',    re.compile(r'\bCaus\.')),
     ('desiderative', re.compile(r'\bDesid\.')),
     ('intens./freq.',re.compile(r'\bInten|\bFreq')),
@@ -49,24 +49,35 @@ FEATURES = [
 ]
 
 
+def variants(lemma):
+    """SLP1 headword variants across Patel normalization conventions, so the same
+    word is found whatever a dict does: doubling the consonant after `r`
+    (SKD/WIL: dharma -> Darmma) and inflected visarga/anusvāra endings (SKD/AP)."""
+    v = {lemma}
+    v.add(re.sub(r'r([kgGNcjJYwWqQtTdDpPbBmnyrlvzSsh])', r'r\1\1', lemma))
+    for base in list(v):
+        v.add(base + 'H')   # nom. sg. visarga (inflected)
+        v.add(base + 'M')   # anusvāra ending
+    return v
+
+
 def extract_entry(path, lemma):
-    """Return the first <L> entry whose <k1> equals lemma, as raw text (or None)."""
-    key = f'<k1>{lemma}<'
+    """Return ALL <L> entries whose <k1> exactly equals a convention-variant of
+    lemma — captures homonyms (MW splits dharma across hom 1/2/3) and the
+    doubled-r / inflected forms (SKD DarmmaH, VCP Darmma). Concatenated, or None."""
+    keys = {f'<k1>{v}<' for v in variants(lemma)}
     with open(path, 'r', encoding='utf-8-sig', errors='replace') as f:
         lines = [l.rstrip('\n') for l in f]
-    start = None
-    for i, line in enumerate(lines):
-        if line.startswith('<L>') and key in line:
-            start = i
-            break
-    if start is None:
-        return None
-    body = [lines[start]]
-    for line in lines[start + 1:]:
-        if line.startswith('<L>'):
-            break
-        body.append(line)
-    return '\n'.join(body)
+    blocks, i, n = [], 0, len(lines)
+    while i < n:
+        if lines[i].startswith('<L>') and any(k in lines[i] for k in keys):
+            body = [lines[i]]; j = i + 1
+            while j < n and not lines[j].startswith('<L>'):
+                body.append(lines[j]); j += 1
+            blocks.append('\n'.join(body)); i = j
+        else:
+            i += 1
+    return '\n\n'.join(blocks) if blocks else None
 
 
 def main():
@@ -82,7 +93,7 @@ def main():
         feats = {name: bool(rx.search(entry)) for name, rx in FEATURES}
         rows.append({
             'dict': code, 'label': label, 'chars': len(entry),
-            'citations': len(re.findall(r'<ls>', entry)),
+            'citations': len(re.findall(r'<ls>|“', entry)),
             'features': feats, 'entry': entry,
         })
     if not rows:

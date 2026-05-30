@@ -32,12 +32,12 @@ A feature matrix (dicts × 12 microstructure features) plus side-by-side entry t
 
 ### 1.2 MACRO — structural profile of every dictionary
 `scripts/lexico/macro_profile.py` → [`data/lexico/dict_profiles.csv`](../data/lexico/dict_profiles.csv) + `.html`.
-Samples the first N entries of all 43 canonical sources; heatmap of dicts × {entry size, citation density, %cited, %etymology, %cross-ref, %homonym, %grammar}.
+Samples N entries **stratified across the whole alphabet** of all 43 canonical sources; heatmap of dicts × {entry size, citation density, %cited, %etymology, %cross-ref, %homonym, %grammar}.
 
-**Real findings (first 3,000 entries each):**
-- A **citation-dense cluster** — PWG 95% cited, SCH 87%, BHS 90%, PWKVN 82% — vs a **citation-free indigenous cluster** — SKD, VCP, CCS = 0% (Sanskrit-commentary style, no `<ls>`).
-- **WIL** 99.9% grammar-marked; **MW** 48% cited / 68% grammar; specialized indexes (**SNP, IEG, MCI, INM**) are cross-ref-heavy and citation-free.
-- This 2-axis split (**citation register × grammar-marking**) tracks the language-tradition families from `LEXICOGRAPHY_ROADMAP.md` — a cheap structural corroboration of the genealogy.
+**Real findings (stratified sample, 3,000 entries each):**
+- A **Western-tagged cited cluster** (`<ls>`) — PWG 94%, SCH 90%, BEN 79%, AP90 32% — **and** an equally citation-dense **indigenous cluster**: **VCP 95% cited, SKD 51%**, via quotations (`“…”`) attributed to abbreviated authorities (`jE0`=Jaimini, `BA0`=Bhāṣya, `amara0`=Amara) closed with `iti`, carrying **no `<ls>` tag**. *(Correction: an earlier `<ls>`-only detector mis-reported SKD/VCP as "citation-free 0%" — they are among the most citation-dense; see Caveats.)*
+- **WIL** 99.6% grammar-marked; **BHS** 92% cited + 48% cross-ref; specialized indexes (**SNP, IEG, MCI, INM**) are cross-ref-heavy.
+- The structural axes (**citation style × grammar-marking**) separate the Western-tagged, indigenous-quotation, and index traditions — a cheap structural corroboration of the genealogy in `LEXICOGRAPHY_ROADMAP.md`.
 
 ---
 
@@ -104,8 +104,8 @@ The **sense splitter (R2)** is the critical dependency — it gates H1–H3, the
 
 ## 6. Caveats & method notes
 
-- **Heuristic detectors.** Feature/citation detection is regex-based; `<ls>` is one of several citation conventions (MW72/BOP cite via brackets/inline), so cross-dict citation *counts* are indicative, not exact. A per-dict citation-format normaliser (ties into L6) would sharpen this.
-- **Sampling bias (H7).** The macro prototype samples the **first N entries**, which skews to short early-alphabet entries — `mean_chars` here is a floor, not the dict's true mean. Move to random or stratified sampling; decision logged in [`DECISIONS_NEEDED.md`](DECISIONS_NEEDED.md) A7.
+- **Heuristic detectors (and a fixed bug).** Citation detection now counts **both** the Western `<ls>` tag **and** the indigenous quotation style (`“…”` + `…0` authority abbreviations + `iti`) — an earlier `<ls>`-only version wrongly reported the citation-dense indigenous dicts (SKD, VCP) as 0% cited. Residual under-counting remains for Western dicts that cite via inline/bracketed forms or `.E.` Nirukta (MW72, BOP, WIL); a per-dict citation-format normaliser (ties into L6) would close it.
+- **Sampling (fixed).** The macro prototype now samples **stratified across the whole alphabet** (every k-th entry), not the first N — first-N skewed to short early-alphabet entries and missed big mid-alphabet entries like `dharma` (`Darma`). The micro prototype also resolves Patel headword-convention variants (doubled-`r` → `Darmma`, inflected visarga → `DarmmaH`) and concatenates homonyms, so the same word is found whatever a dict does.
 - **Sense parsing is hard.** H1–H3 and the alignment/divergence views all need a robust per-dict sense splitter (R2) — the main investment.
 
 ---
