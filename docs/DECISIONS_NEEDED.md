@@ -11,7 +11,7 @@ Consolidated list of items that are **blocked on a human** (a decision, a creden
 | # | Decision | Options / recommendation | Source |
 |---|---|---|---|
 | A1 | **KRM license** | Its `LICENSE` is GPL-3.0 but `CITATION.cff` says CC-BY-SA-4.0. Align which way? *Rec: CC-BY-SA-4.0 (it's dictionary data).* | Roadmap M7 / KRM/CLAUDE.md |
-| A2 | **Taxonomy rollout scope** | ✅ **FULLY DONE 2026-05-31.** (a) **Dict taxonomy** — 24 dictionary repos (786 issues) verified all-clean (1 type + 1 severity + 1 milestone + matching project 1–4/MWS 5–8). (b) **Tooling taxonomy** — the 4 non-dictionary repos **csl-apidev, cologne-stardict, GreekInSanskrit, ArabicInSanskrit** (153 issues) verified all-clean under the tooling label set (17 types + 4 severities + 5 milestones; open issues → org project #9 Tooling Roadmap; closed issues labelled but not boarded, per the deployed convention). Greek/Arabic "provide foreign-text" task issues → `enhancement`, matching GreekInSanskrit's existing convention. COLOGNE/CORRECTIONS/temp_corrections_* remain skipped (legacy/meta). **A2 is closed — can be removed from this list.** | Roadmap Q7 / audit 2026-05-30 |
+| A2 | **Taxonomy rollout scope** | ✅ **FULLY DONE 2026-05-31.** (a) **Dict taxonomy** — 24 dictionary repos (786 issues) verified all-clean (1 type + 1 severity + 1 milestone + matching project 1–4/MWS 5–8). (b) **Tooling taxonomy** — the 4 non-dictionary repos **csl-apidev, cologne-stardict, GreekInSanskrit, ArabicInSanskrit** (153 issues) verified all-clean under the tooling label set (17 types + 4 severities + 5 milestones; open issues → org project #9 Tooling Roadmap; closed issues labelled but not boarded, per the deployed convention). Greek/Arabic "provide foreign-text" task issues → `enhancement`, matching GreekInSanskrit's existing convention. COLOGNE/CORRECTIONS/temp_corrections_* remain skipped (legacy/meta) — 2026-05-31 the tooling-all runbook was aligned to list them under *Skip these (meta repos)* (they had drifted into its processing-order list). **A2 is closed — can be removed from this list.** | Roadmap Q7 / audit 2026-05-30 |
 | A3 | **LICENSE full text vs pointer** | The 6 documented dict repos got pointer-style CC-BY-SA-4.0 LICENSEs. Want the full legalcode (for GitHub auto-detection)? | Handoff full-runbook gaps |
 | A4 | **Scan-only dicts** (AE, IEG, MWE, PD, PE, PGN, SNP, YAT — 8, not on GitHub) | Ingest via Cologne web-scrape (~1 day each) or omit with a "future work" note? | LEXICOGRAPHY_ROADMAP §11.1 |
 | A5 | **Add PD** (Deccan College encyclopedic dict, 1976) | Major modern dict; would strengthen Paper L; needs Cologne coordination. Include? | LEXICOGRAPHY_ROADMAP §11.2 |
@@ -30,7 +30,7 @@ Consolidated list of items that are **blocked on a human** (a decision, a creden
 
 | # | Need | For |
 |---|---|---|
-| C1 | **GitHub token** (workflow + read:project scope) as a repo secret | Automate observatory refresh (M4 / csl-observatory#12); Tooling Roadmap audit |
+| C1 | **GitHub token** (workflow + read:project scope) as repo secret `TOOLING_AUDIT_TOKEN` | Automate observatory refresh (M4 / csl-observatory#12); Tooling Roadmap audit; **dictionary drift-watch audit** (`dict-audit.yml`, see [DRIFT_WATCH.md](DRIFT_WATCH.md)) |
 | C2 | **Cologne server / analytics access** (Matomo/GA/logs; ability to run `redo_xampp_selective.sh`) | Public-artefact refresh; OBSERVATORY_DESIGN Phase 12 |
 | C3 | **DNS** for `observatory.sanskrit-lexicon.org` + Cologne `uni-koeln.de/observatory` handover | Observatory mirrors |
 
@@ -41,6 +41,7 @@ Consolidated list of items that are **blocked on a human** (a decision, a creden
 | D1 | A Cologne admin will run / let the cron run `redo_xampp_selective.sh` so the 2026-05 csl-orig fixes propagate to Stardict/JSON/homepage. |
 | D2 | OK to do the **M1** refresh-script modernization as a *backward-compatible* refactor (parameterise path with a default), even though python2→3 of `make_babylon.py`/`json_from_babylon.py` still needs the server to test. |
 | D3 | OK to wire the full `make_xml` XML-parse check into CI (heavier), or is the source-level BOM/UTF-8/`<L>`-balance guard enough? (csl-pywork#51) |
+| D4 | **Taxonomy drift watch** ([DRIFT_WATCH.md](DRIFT_WATCH.md)): OK to (a) enable the weekly `dict-audit.yml` backstop now (reuses `TOOLING_AUDIT_TOKEN`), and (b) pilot the event-driven `needs-triage` guard on `GRA` before fanning out to all repos? |
 
 ---
 
