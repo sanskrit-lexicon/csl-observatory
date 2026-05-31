@@ -28,9 +28,10 @@ PROJ     = {"Dictionary to Book":1,"Digitization Quality":2,"Structured Data":3,
 PROJ_MWS = {"Dictionary to Book":5,"Digitization Quality":6,"Structured Data":7,"Major Enhancements":8}
 
 # non-dictionary / archive repos belong to cologne-tooling-runbook.md, never this one
-SKIP = {"COLOGNE","alternateheadwords","avlinks","rvlinks","literarysource","hwnorm1",
-        "hwnorm2","mw-dev","sanskrit-fonts","sanskrit-lexicon.github.io","santamlegacy",
-        "test_cologne_push","Wil-YAT","ArabicInSanskrit","GreekInSanskrit"}
+SKIP = {"COLOGNE","CORRECTIONS","alternateheadwords","avlinks","rvlinks","literarysource",
+        "hwnorm1","hwnorm2","mw-dev","MWinflect","cologne-stardict","sanskrit-fonts",
+        "sanskrit-lexicon.github.io","santamlegacy","test_cologne_push","Wil-YAT","MW72",
+        "ArabicInSanskrit","GreekInSanskrit"}
 def skip(r): return r in SKIP or r.startswith("csl-") or r.startswith("temp_corrections_")
 
 def gh(a):

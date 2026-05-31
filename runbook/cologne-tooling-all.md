@@ -68,7 +68,9 @@ for repo in sorted(n for n in names if n):
 Queue every repo printed `UNPROCESSED` (after routing dictionary/archive repos via the skip lists below). Trust the verdict over any "already-processed" assumption — `csl-observatory` in particular must be re-checked (it carries mistaken dictionary labels; see below).
 
 ### Skip these (dictionary repos — use `cologne-issue-runbook.md` instead)
-`PWG`, `PWK`, `MWS`, `MD`, `AP`, `AP90`, `GRA`, `FRI`, `SCH`, `DCS`, `VCP`, `ApteES`, `SKD`, `MCI`, `CORRECTIONS`, `WIL`, `BHS`, `VEI`, `ACC`, `KRM`, `BUR`, `CAE`, `CCS`, `STC`, `BEN`, `BOR`, `INM`, `BOP`, `LRV`, `AMAR`, `SHS`, `KNA`, `KOW`, `PUI`
+`PWG`, `PWK`, `MWS`, `MD`, `AP`, `AP90`, `GRA`, `FRI`, `SCH`, `DCS`, `VCP`, `ApteES`, `SKD`, `MCI`, `WIL`, `BHS`, `VEI`, `ACC`, `KRM`, `BUR`, `CAE`, `CCS`, `STC`, `BEN`, `BOR`, `INM`, `BOP`, `LRV`, `AMAR`, `SHS`, `KNA`, `KOW`, `PUI`
+
+(`CORRECTIONS` is **not** a dictionary — it is the cross-dictionary correction-history meta repo; it is triaged here, under Build/meta below.)
 
 ### Skip these (archives, no triage needed)
 `santamlegacy`, `temp_corrections_*`, `test_cologne_push`, `Wil-YAT`, `MW72` (legacy 1872 dict, low activity)
@@ -87,7 +89,7 @@ Process in this order (most foundational first):
 5. **Scanned books**: `csl-kale`, `csl-westergaard`, `csl-whitroot`
 6. **Web backend**: `csl-apidev`, `mw-dev`
 7. **Web frontend**: `csl-app`, `csl-websanlexicon`, `csl-homepage`, `csl-doc`, `sanskrit-lexicon.github.io`
-8. **Build/meta**: `cologne-hugo`, `sanskrit-fonts`, `csl-newsletter`, `COLOGNE`
+8. **Build/meta**: `cologne-hugo`, `sanskrit-fonts`, `csl-newsletter`, `COLOGNE`, `CORRECTIONS` (correction-history meta repo)
 9. **Cross-script add-ons**: `ArabicInSanskrit`, `GreekInSanskrit`
 
 Plus the special meta repo: `csl-observatory` (re-process with tooling labels).
