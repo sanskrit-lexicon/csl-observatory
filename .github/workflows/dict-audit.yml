@@ -1,0 +1,77 @@
+name: Dictionary taxonomy audit
+
+# Backstop drift watch for the dictionary repos — the analog of
+# tooling-audit.yml (which covers the tooling repos). Catches any repo that
+# regresses out of taxonomy completeness after the 2026-05 rollout.
+# The per-issue immediacy layer is the event-driven guard template at
+# runbook/templates/taxonomy-drift.yml. See docs/DRIFT_WATCH.md.
+
+on:
+  schedule:
+    # Weekly Monday 03:30 UTC (30 min after tooling-audit.yml to spread API load)
+    - cron: '30 3 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      # PAT with `read:project` + `repo`. The default GITHUB_TOKEN cannot read
+      # org-level projectV2 membership, which the per-issue check needs.
+      # Reuses the same secret as tooling-audit.yml (credential C1).
+      GH_TOKEN: ${{ secrets.TOOLING_AUDIT_TOKEN }}
+      # 34 dictionary repos (all verified clean 2026-05-31). Meta repos
+      # COLOGNE / CORRECTIONS / temp_corrections_* are intentionally excluded
+      # (DECISIONS_NEEDED.md A2).
+      REPOS: >-
+        ACC,AMAR,AP,AP90,ApteES,BEN,BHS,BOP,BOR,BUR,CAE,CCS,DCS,FRI,GRA,INM,
+        KNA,KOW,KRM,LRV,MCI,MD,MWS,PUI,PWG,PWK,SCH,SHS,SKD,STC,VCP,VEI,WIL,
+        Wil-YAT
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Verify token is set
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::error::TOOLING_AUDIT_TOKEN secret not set. Add a PAT with read:project + repo scopes."
+            exit 1
+          fi
+
+      - name: Run dictionary audit
+        run: |
+          REPOS_CLEAN=$(echo "$REPOS" | tr -d ' \n')
+          python scripts/dict_runbook.py audit "$REPOS_CLEAN" | tee audit.txt
+
+      - name: Post summary
+        if: always()
+        run: |
+          {
+            echo "# Dictionary taxonomy audit"
+            echo
+            echo '```'
+            cat audit.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Fail on drift
+        run: |
+          line=$(grep -E '^mismatches:' audit.txt || true)
+          if [ -z "$line" ]; then
+            echo "::error::audit output did not contain a 'mismatches:' line"
+            exit 1
+          fi
+          count=$(echo "$line" | awk '{print $2}')
+          if [ "$count" != "0" ]; then
+            echo "::error::Dictionary audit found $count repo(s) with taxonomy drift. See workflow summary."
+            exit 1
+          fi
+          echo "audit clean: 0 repos with drift"
