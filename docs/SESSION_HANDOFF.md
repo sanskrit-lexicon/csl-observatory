@@ -6,7 +6,7 @@
 
 **A · Engineering / data-quality** — journal: [`csl-corrections/.ai_state.md`](https://github.com/sanskrit-lexicon/csl-corrections/blob/master/.ai_state.md).
 - Done: markup fixes for 10 csl-orig dicts; issue taxonomy on 6 dict repos (BOR/BUR/INM/KRM/BOP/MW72); full README+CLAUDE+citation/community docs for those 6; org-wide [`CONTRIBUTOR_STATS.md`](CONTRIBUTOR_STATS.md); ecosystem [`ROADMAP.md`](ROADMAP.md) + 7 tracked issues; **quick wins Q1–Q6 shipped** — hw.py BOM `utf-8-sig` fix (csl-pywork#50), `.gitattributes`×7, csl-orig encoding+`<L>/<LEND>` CI guard, contributor-identity map, Mermaid validator, AI-contribution policy, `clone_org.py`.
-- Remaining (human/scope): **Q7 dict taxonomy DONE 2026-05-31** — 24 dictionary repos verified all-clean (type+severity+milestone+project); only the *tooling*-repo taxonomy for csl-apidev/cologne-stardict/GreekInSanskrit/ArabicInSanskrit is left (`/cologne-tooling-runbook`, different label set). Other remaining: M1 refresh-script modernization, M4 refresh automation (needs token), M7 KRM license decision, #51 XML-parse tail.
+- Remaining (human/scope): **Q7 taxonomy FULLY DONE 2026-05-31** — 24 dictionary repos (786 issues) + 4 tooling repos csl-apidev/cologne-stardict/GreekInSanskrit/ArabicInSanskrit (153 issues) all verified all-clean (type+severity+milestone+project). A2 closed. Other remaining: M1 refresh-script modernization, M4 refresh automation (needs token), M7 KRM license decision, #51 XML-parse tail.
 
 **B · Research / practitioner layer** — additive to the existing genealogy + typology program.
 - Existing: [`LEXICOGRAPHY_ROADMAP.md`](LEXICOGRAPHY_ROADMAP.md) (L0–L10), [`MICROSTRUCTURE-MACROSTRUCTURE.md`](MICROSTRUCTURE-MACROSTRUCTURE.md) (typology + 50-viz catalog).
