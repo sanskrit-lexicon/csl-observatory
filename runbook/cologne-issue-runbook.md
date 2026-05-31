@@ -17,6 +17,52 @@ The org is always `sanskrit-lexicon`. Execute all ten phases **without asking fo
 
 ---
 
+## Fetching issues correctly (read first)
+
+Every phase that reads issues — Audit (1), node-ID lookup (6), Verification (7) — must use the **one** correct fetch below. Skipping any of these three pitfalls produces false "done" readings:
+
+1. **Judge per issue, not per repo.** "Processed" means *every* issue has exactly 1 type + 1 severity + 1 milestone + a matching project — not that those labels merely *exist* in the repo. A label-definition check (`labels | contains(["minor"])`) is always wrong.
+2. **Paginate.** REST `…/issues?per_page=100` returns only the first page, so PWG (175 issues), PWK and MWS hide their low-numbered issues — some carrying *pre-existing multiple* type labels that must be caught. Loop GraphQL `repository.issues(first:100, after:$cur)` on `pageInfo.hasNextPage`.
+3. **Exclude PRs.** REST `/issues` includes pull requests (dependabot bumps, docs/Pages-fix PRs). GraphQL's `issues` connection excludes them by construction — so prefer it everywhere.
+
+Canonical fetch — reuse in every phase below (mirrors the org-wide verifier `_verify_clean.py`):
+
+```python
+import subprocess, json
+ORG = "sanskrit-lexicon"
+
+def gh(a):
+    for _ in range(3):
+        r = subprocess.run(["gh","api"]+a, capture_output=True, encoding="utf-8")
+        if r.returncode == 0: return r
+    return r
+
+def fetch_issues(repo):
+    """Every issue (open+closed), all pages, PRs excluded."""
+    Q = '''query($o:String!,$n:String!,$c:String){repository(owner:$o,name:$n){
+      issues(first:100,after:$c,states:[OPEN,CLOSED]){pageInfo{hasNextPage endCursor}
+      nodes{number id title comments{totalCount} createdAt
+            labels(first:30){nodes{name}} milestone{title number}
+            projectItems(first:10){nodes{project{number}}}}}}}'''
+    out, cur = [], None
+    while True:
+        a = ["graphql","-f","query="+Q,"-f","o="+ORG,"-f","n="+repo]
+        if cur: a += ["-f","c="+cur]
+        d = json.loads(gh(a).stdout)["data"]["repository"]["issues"]
+        for x in d["nodes"]:
+            out.append({"number":x["number"],"node_id":x["id"],"title":x["title"],
+                        "comments":x["comments"]["totalCount"],"created":x["createdAt"],
+                        "labels":[l["name"] for l in x["labels"]["nodes"]],
+                        "milestone":(x["milestone"] or {}).get("title"),
+                        "ms_number":(x["milestone"] or {}).get("number"),
+                        "projects":[p["project"]["number"] for p in x["projectItems"]["nodes"]]})
+        if d["pageInfo"]["hasNextPage"]: cur = d["pageInfo"]["endCursor"]
+        else: break
+    return out
+```
+
+---
+
 ## Phase 0 — Setup
 
 ```
@@ -33,11 +79,7 @@ gh api repos/$ORG/$REPO --jq '{name,description,has_issues}'
 
 ## Phase 1 — Audit
 
-Fetch all issues (open + closed, all pages):
-```sh
-gh api "repos/$ORG/$REPO/issues?state=all&per_page=100" \
-  --jq '[.[] | {n:.number,state:.state,labels:[.labels[].name],milestone:.milestone.title}]'
-```
+Fetch all issues with `fetch_issues(REPO)` from *Fetching issues correctly* (above) — it paginates and excludes PRs; each dict carries `number, title, comments, created, labels, milestone, ms_number, projects` for classification and the noise checks below. **Do not** use `gh api "…/issues?state=all&per_page=100"`: it stops at the first 100 issues (so PWG/PWK/MWS lose their low-numbered, often multi-labelled issues) and pulls in pull requests.
 
 Also fetch existing labels and milestones:
 ```sh
@@ -194,11 +236,7 @@ gh api graphql -f query='mutation($proj:ID!,$item:ID!){addProjectV2ItemById(inpu
   -f proj=<project_node_id> -f item=<issue_node_id>
 ```
 
-Fetch issue node IDs **after labeling is confirmed complete**:
-```sh
-gh api "repos/$ORG/$REPO/issues?state=all&per_page=100" \
-  --jq '[.[] | {number:.number, nodeId:.node_id, milestone:.milestone.number}]'
-```
+Fetch issue node IDs **after labeling is confirmed complete** by reusing `fetch_issues(REPO)` (paginated, PR-free) — each returned dict already carries `node_id`, `ms_number`, and `projects`. Do **not** re-fetch with REST `?per_page=100`: it drops issues past 100 and would try to add pull requests to projects.
 
 If a node ID fails to resolve (`Could not resolve to a node`), re-fetch a fresh node ID for that issue — older-format IDs sometimes expire.
 
@@ -207,33 +245,35 @@ If a node ID fails to resolve (`Could not resolve to a node`), re-fetch a fresh 
 ## Phase 7 — Verification
 
 ```python
-import subprocess, json, sys
+import sys
 sys.stdout.reconfigure(encoding='utf-8')
+# `gh` and `fetch_issues` come from "Fetching issues correctly" (above).
 
-type_labels = {'link-target','link-splitting','markup','text-correction',
-               'content-enhancement','encoding','scan-quality','bug','question'}
-sev_labels  = {'minor','medium','hard'}
-ms_type_map = {'link-target':1,'link-splitting':1,'scan-quality':2,'encoding':2,
-               'bug':2,'text-correction':2,'markup':3,'question':3,'content-enhancement':4}
-# Adjust ms_type_map values to match the actual milestone numbers for this repo
+TYPE = {'link-target','link-splitting','markup','text-correction',
+        'content-enhancement','encoding','scan-quality','bug','question'}
+SEV  = {'minor','medium','hard'}
+# milestone TITLE -> project number (MWS uses 5-8; every other dict uses 1-4)
+PROJ = {'Dictionary to Book':1,'Digitization Quality':2,'Structured Data':3,'Major Enhancements':4}
 
-issues = # fetch from API
-
-missing_type=[]; missing_sev=[]; missing_ms=[]; multi_type=[]; wrong_ms=[]
+issues = fetch_issues(REPO)                        # paginated, PRs excluded
+no_type=[]; multi_type=[]; no_sev=[]; no_ms=[]; wrong_proj=[]
 for i in issues:
-    n=i['number']; lbls=set(i['labels']); ms=i['milestone']
-    types = lbls & type_labels
-    sevs  = lbls & sev_labels
-    if len(types)==0: missing_type.append(n)
-    elif len(types)>1: multi_type.append((n,types))
-    if len(sevs)==0: missing_sev.append(n)
-    if ms is None: missing_ms.append(n)
-    elif len(types)==1:
-        t=list(types)[0]
-        if ms_type_map.get(t) != ms: wrong_ms.append((n,t,ms))
+    n=i['number']; lbls=set(i['labels'])
+    t=lbls & TYPE; s=lbls & SEV
+    if not t: no_type.append(n)
+    elif len(t)>1: multi_type.append((n,sorted(t)))    # stale default not removed
+    if not s: no_sev.append(n)
+    if i['milestone'] is None: no_ms.append(n)
+    else:
+        tgt=PROJ.get(i['milestone'])
+        if tgt and tgt not in i['projects']: wrong_proj.append(n)
+
+bad = {k:v for k,v in {'no_type':no_type,'multi_type':multi_type,'no_sev':no_sev,
+       'no_ms':no_ms,'wrong_proj':wrong_proj}.items() if v}
+print(f"{len(issues)} issues — " + ("all complete ✓" if not bad else f"GAPS {bad}"))
 ```
 
-**All five lists must be empty.** Fix any gaps (stale labels, wrong milestones) before proceeding. A non-zero `multi_type` always means a pre-existing default label was not removed.
+**Every list must be empty** before the repo counts as processed — this paginated, PR-free, per-issue check is the authoritative "done?" gate, the same one Step 1 of `cologne-runbook-all.md` runs org-wide. A non-empty `multi_type` always means a pre-existing default (`bug`/`question`) was not removed in Phase 3.
 
 ---
 

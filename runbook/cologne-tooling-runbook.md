@@ -29,6 +29,52 @@ This runbook gives them their own taxonomy: **software-engineering categories** 
 
 ---
 
+## Fetching issues correctly (read first)
+
+Every phase that reads issues — Audit (1), node-ID lookup (6), Verification (7) — must use the **one** correct fetch below. Skipping any of these three pitfalls produces false "done" readings:
+
+1. **Judge per issue, not per repo.** "Processed" means *every* issue has exactly 1 type + 1 severity + 1 milestone (`discussion`-tagged issues are milestone-exempt) — not that those labels merely *exist* in the repo. A label-definition check (`labels | contains(["tech-debt"])`) is always wrong.
+2. **Paginate.** REST `…/issues?per_page=100` returns only the first page, so large tool repos (`COLOGNE`, `csl-orig`: 200+ issues) hide everything past issue 100 — including issues that already carry *multiple* type labels. Loop GraphQL `repository.issues(first:100, after:$cur)` on `pageInfo.hasNextPage`.
+3. **Exclude PRs.** REST `/issues` includes pull requests (dependabot bumps, docs/Pages-fix PRs). GraphQL's `issues` connection excludes them by construction — so prefer it everywhere.
+
+Canonical fetch — reuse in every phase below (mirrors the org-wide verifier `_verify_clean.py`):
+
+```python
+import subprocess, json
+ORG = "sanskrit-lexicon"
+
+def gh(a):
+    for _ in range(3):
+        r = subprocess.run(["gh","api"]+a, capture_output=True, encoding="utf-8")
+        if r.returncode == 0: return r
+    return r
+
+def fetch_issues(repo):
+    """Every issue (open+closed), all pages, PRs excluded."""
+    Q = '''query($o:String!,$n:String!,$c:String){repository(owner:$o,name:$n){
+      issues(first:100,after:$c,states:[OPEN,CLOSED]){pageInfo{hasNextPage endCursor}
+      nodes{number id title comments{totalCount} createdAt
+            labels(first:30){nodes{name}} milestone{title number}
+            projectItems(first:10){nodes{project{number}}}}}}}'''
+    out, cur = [], None
+    while True:
+        a = ["graphql","-f","query="+Q,"-f","o="+ORG,"-f","n="+repo]
+        if cur: a += ["-f","c="+cur]
+        d = json.loads(gh(a).stdout)["data"]["repository"]["issues"]
+        for x in d["nodes"]:
+            out.append({"number":x["number"],"node_id":x["id"],"title":x["title"],
+                        "comments":x["comments"]["totalCount"],"created":x["createdAt"],
+                        "labels":[l["name"] for l in x["labels"]["nodes"]],
+                        "milestone":(x["milestone"] or {}).get("title"),
+                        "ms_number":(x["milestone"] or {}).get("number"),
+                        "projects":[p["project"]["number"] for p in x["projectItems"]["nodes"]]})
+        if d["pageInfo"]["hasNextPage"]: cur = d["pageInfo"]["endCursor"]
+        else: break
+    return out
+```
+
+---
+
 ## Phase 0 — Setup
 
 ```
@@ -62,10 +108,10 @@ Record the detected category. If ambiguous, [ASK] the user once.
 ## Phase 1 — Audit
 
 Fetch all issues, labels, milestones:
-```sh
-gh api "repos/$ORG/$REPO/issues?state=all&per_page=100" \
-  --jq '[.[] | {n:.number, state:.state, title:.title, labels:[.labels[].name], milestone:.milestone.title, comments:.comments, age_days:((now - (.created_at | fromdateiso8601))/86400 | floor)}]'
+Fetch all issues with `fetch_issues(REPO)` from *Fetching issues correctly* (above) — paginated and PR-free; each dict carries `number, title, comments, created, labels, milestone, ms_number, projects` for the classification below (derive `age_days` from `created`). **Do not** use `gh api "…/issues?state=all&per_page=100"`: it stops at the first 100 issues and includes pull requests.
 
+Labels and milestones are small (single page) — fetch them with REST:
+```sh
 gh api repos/$ORG/$REPO/labels --jq '[.[].name]'
 gh api repos/$ORG/$REPO/milestones --jq '[.[] | {n:.number, title}]'
 ```
@@ -354,34 +400,32 @@ Assign via GraphQL `addProjectV2ItemById` (same pattern as dictionary runbook Ph
 ## Phase 7 — Verification
 
 ```python
-import subprocess, json, sys
+import sys
 sys.stdout.reconfigure(encoding='utf-8')
+# `gh` and `fetch_issues` come from "Fetching issues correctly" (above).
 
-type_labels = {'bug','regression','tech-debt','dependency','security',
-               'feature','enhancement','performance',
-               'documentation','docs-api',
-               'infrastructure','data-pipeline','cross-repo','build-tooling',
-               'question','proposal','discussion'}
-sev_labels  = {'trivial','minor','major','critical'}
+TYPE = {'bug','regression','tech-debt','dependency','security','feature','enhancement',
+        'performance','documentation','docs-api','infrastructure','data-pipeline',
+        'cross-repo','build-tooling','question','proposal','discussion'}
+SEV  = {'trivial','minor','major','critical'}
 
-issues = # fetch from API
-
-missing_type=[]; missing_sev=[]; missing_ms=[]; multi_type=[]; multi_sev=[]
+issues = fetch_issues(REPO)                        # paginated, PRs excluded
+no_type=[]; multi_type=[]; no_sev=[]; multi_sev=[]; no_ms=[]
 for i in issues:
-    n=i['number']; lbls=set(i['labels']); ms=i['milestone']
-    types = lbls & type_labels
-    sevs  = lbls & sev_labels
-    if len(types)==0: missing_type.append(n)
-    elif len(types)>1: multi_type.append((n,types))
-    if len(sevs)==0: missing_sev.append(n)
-    elif len(sevs)>1: multi_sev.append((n,sevs))
-    if ms is None and 'discussion' not in lbls: missing_ms.append(n)
-    # `discussion` issues are exempt from milestone (they're open-ended)
+    n=i['number']; lbls=set(i['labels'])
+    t=lbls & TYPE; s=lbls & SEV
+    if not t: no_type.append(n)
+    elif len(t)>1: multi_type.append((n,sorted(t)))    # stale default not removed
+    if not s: no_sev.append(n)
+    elif len(s)>1: multi_sev.append((n,sorted(s)))
+    if i['milestone'] is None and 'discussion' not in lbls: no_ms.append(n)  # discussion exempt
+
+bad = {k:v for k,v in {'no_type':no_type,'multi_type':multi_type,'no_sev':no_sev,
+       'multi_sev':multi_sev,'no_ms':no_ms}.items() if v}
+print(f"{len(issues)} issues — " + ("all complete ✓" if not bad else f"GAPS {bad}"))
 ```
 
-**Hard gate**: `missing_type`, `missing_sev`, `multi_type`, `multi_sev` must all reach **0** before proceeding. `missing_ms` is allowed for `discussion`-tagged issues only.
-
-A non-zero `multi_type` means a stale GitHub default (`bug`, `enhancement`, `question`, `documentation`) was not removed in Phase 3.
+**Hard gate**: every list must be empty before proceeding (`no_ms` lists only non-`discussion` issues, which are milestone-exempt). This paginated, PR-free, per-issue check is the authoritative "done?" gate. A non-empty `multi_type` means a stale GitHub default (`bug`, `enhancement`, `question`, `documentation`) was not removed in Phase 3.
 
 ---
 
