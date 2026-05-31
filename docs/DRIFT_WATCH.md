@@ -65,11 +65,16 @@ Per-run: the workflow's red/green check + `GITHUB_STEP_SUMMARY` table (same as
 (`.ai_state.md` in this repo is dedicated to the L0 cladogram research and is
 **not** used for drift.)
 
-## Out of scope — meta repos
+## Out of scope — meta repos & auto-logs
 
 `COLOGNE`, `CORRECTIONS`, and `temp_corrections_*` are cross-dictionary
 issue-tracker / coordination repos, **not watched** — skipped as legacy/meta per
 DECISIONS_NEEDED.md A2.
+
+Issues labelled **`daily-corrections`** (machine-generated daily logs, e.g. in
+csl-corrections) are exempt from the checks too — not triageable work. The
+`audit` also counts only *open* issues on the board, so closing issues over time
+no longer produces false mismatches.
 
 ## Rollout
 
