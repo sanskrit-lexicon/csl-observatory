@@ -367,7 +367,7 @@ def audit(repos):
                 nodes {{
                   content {{
                     __typename
-                    ... on Issue        {{ number state repository {{ name }} }}
+                    ... on Issue        {{ number state labels(first:20){{nodes{{name}}}} repository {{ name }} }}
                     ... on PullRequest  {{ number state repository {{ name }} }}
                   }}
                 }}
@@ -386,10 +386,13 @@ def audit(repos):
     by_repo = Counter()
     for it in items:
         c = it.get("content") or {}
-        # count only OPEN issues on the board — closed issues / PRs would otherwise
-        # inflate the count and cause false mismatches as issues close over time
+        # count only OPEN, non-exempt issues on the board — closed issues / PRs and
+        # exempt auto-logs would otherwise skew the board count vs the triage set
         if (c.get("__typename") == "Issue" and c.get("state") == "OPEN"
                 and c.get("repository")):
+            lbls = {l["name"] for l in c.get("labels", {}).get("nodes", [])}
+            if lbls & EXEMPT_LABELS:
+                continue
             by_repo[c["repository"]["name"]] += 1
 
     print(f"total OPEN issues on project #{PROJECT_NUMBER}: {sum(by_repo.values())}")
