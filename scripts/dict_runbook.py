@@ -41,6 +41,10 @@ PROJ = {"Dictionary to Book": 1, "Digitization Quality": 2,
 PROJ_MWS = {"Dictionary to Book": 5, "Digitization Quality": 6,
             "Structured Data": 7, "Major Enhancements": 8}
 
+# Auto-generated log issues (e.g. "Daily Corrections - <date>") are not
+# triageable work — exclude them from the checks (parity with tooling_runbook.py).
+EXEMPT_LABELS = {"daily-corrections"}
+
 
 def gh(args):
     for _ in range(3):
@@ -118,7 +122,8 @@ def gaps(issue, repo, check_project=True):
 
 def verify(repo):
     issues = fetch_issues(repo)
-    bad = {i["number"]: gaps(i, repo) for i in issues}
+    bad = {i["number"]: gaps(i, repo) for i in issues
+           if not (set(i["labels"]) & EXEMPT_LABELS)}
     bad = {n: g for n, g in bad.items() if g}
     if bad:
         print(f"{repo}: {len(issues)} issues, {len(bad)} incomplete")
@@ -136,7 +141,8 @@ def audit(repos):
     mismatches = 0
     for repo in repos:
         issues = fetch_issues(repo)
-        n_bad = sum(1 for i in issues if gaps(i, repo))
+        n_bad = sum(1 for i in issues
+                    if not (set(i["labels"]) & EXEMPT_LABELS) and gaps(i, repo))
         status = "empty" if not issues else ("OK" if n_bad == 0 else "GAPS")
         if n_bad:
             mismatches += 1
@@ -153,7 +159,11 @@ def issue(repo, number, check_project=True):
     x = json.loads(r.stdout)["data"]["repository"]["issue"]
     if x is None:
         raise SystemExit(f"ERROR: {repo}#{number} not found (or is a PR)")
-    g = gaps(_node(x), repo, check_project=check_project)
+    it = _node(x)
+    if set(it["labels"]) & EXEMPT_LABELS:
+        print(f"{repo}#{number}: exempt (auto-log) — not triaged")
+        return True
+    g = gaps(it, repo, check_project=check_project)
     if g:
         print(f"{repo}#{number}: " + ", ".join(g) + "  DRIFT")
         return False
