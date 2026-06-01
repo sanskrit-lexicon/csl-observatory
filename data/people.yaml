@@ -67,7 +67,7 @@ people:
     orcid: null
     affiliation: null
     repos_authored: []
-    repos_contributed: ["PWG", "PWK", "MWS", "AP", "VCP", "CORRECTIONS", "BHS", "VEI", "ACC", "BEN", "BOR", "BOP", "LRV", "AMAR", "COLOGNE", "hwnorm1", "alternateheadwords", "cologne-stardict", "csl-doc", "csl-apidev", "csl-homepage", "csl-websanlexicon", "csl-pywork", "csl-orig", "csl-corrections", "hwnorm2", "csl-devanagari", "csl-newsletter", "csl-lnum", "csl-ldev", "literarysource", "mw-dev", "csl-app", "csl-lslink"]
+    repos_contributed: ["PWG", "PWK", "MWS", "AP", "VCP", "CORRECTIONS", "WIL", "BHS", "VEI", "ACC", "BEN", "BOR", "BOP", "LRV", "AMAR", "SHS", "COLOGNE", "hwnorm1", "alternateheadwords", "cologne-stardict", "csl-doc", "csl-apidev", "csl-homepage", "csl-websanlexicon", "csl-pywork", "csl-orig", "csl-corrections", "hwnorm2", "csl-devanagari", "csl-newsletter", "csl-lnum", "csl-ldev", "literarysource", "mw-dev", "csl-app", "csl-lslink"]
     enrichment_status: needs_name_and_orcid
   - login: funderburkjim
     name: null
