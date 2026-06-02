@@ -1,10 +1,28 @@
 {
  "lemma": "bodhisattva",
  "sense_counts": {
-  "mw": 1,
-  "pwg": 1,
+  "mw": 3,
+  "pwg": 2,
   "ap": 2,
-  "bhs": 1
+  "bhs": 1,
+  "wil": 1,
+  "cae": 1,
+  "vcp": 1,
+  "skd": 1
  },
- "top_aligned": []
+ "top_aligned": [
+  {
+   "a": "pwg#1",
+   "b": "skd#1",
+   "jaccard": 0.108,
+   "shared": [
+    "s:dayAlurboDisattvAMSaH",
+    "s:jImUtavAhanAt",
+    "s:kalpadrumaM",
+    "s:kftI"
+   ],
+   "a_text": "(bo˚ + sa˚) adj. dessen Wesen Erkenntniss ist; m. der i",
+   "b_text": "klI, (boDi boDavat sattvam .) budDa- viSezaH . iti hema"
+  }
+ ]
 }

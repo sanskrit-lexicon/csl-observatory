@@ -41,7 +41,24 @@ The **Apte family** (AP/AP90) enumerates finely (~22); the **Petersburg/MW famil
 - The **lumped clause-count** is a rough "implicit-sense" proxy, not a true sense count.
 - Apte **compound** sub-senses may slightly inflate counts (Apte has no clean compound-section marker).
 
+## Update — full clusters (2026-05-31, v2)
+
+`sense_split.py` now covers **all four parser families** with **homonym aggregation** (all `<L>` blocks of a lemma, not just the first):
+
+- **Western** (mw, mw72, pwg, ap, ap90, ben, sch, bhs, **wil, cae**) — explicit markers / lumped.
+- **Indigenous** (**vcp, skd**) — raw-SLP1 scholastic prose; senses ≈ `iti.`-closed units; fingerprint = `…0` authority sigla (`jE0`=Jaimini) + `"…"`-quoted forms.
+- **Reverse** (**ae** / ApteES) — English-keyed, reverse-indexed by its `<s>` Sanskrit equivalents, so a Sanskrit lemma finds the English senses that gloss it (e.g. *dharma* → ae "Duty" = `DarmaH, kartavyaM`).
+- **Index** (acc/vei/mci/inm/…) — references, not senses; out of scope.
+
+**Cross-cluster alignment now works** (strong-anchor filter: citation / siglum / content word ≥4 chars):
+- `bodhisattva`: **`pwg#1 ~ skd#1`** — PWG (German, Western) ↔ SKD (Sanskrit, indigenous) via shared story-Sanskrit (`jImUtavAhanAt`, `kalpadrumaM`, `kftI`).
+- `dharma`: `mw#bundle ~ ben/sch` via shared `<ls>` citations (MBh., Dharmaś.).
+
+**Full-corpus scale proven** (runs in seconds): CAE **40,069** entries → 40,069 senses (1.00/entry — lumps); **BEN 17,310 → 36,177 senses (2.09/entry — enumerates)** — the family contrast holds across the whole dictionary, not just the anchor lemmas.
+
+**Remaining (honest):** the AE reverse index over-matches very common roots (gam → 144 English senses — fine for distinctive words, noisy for `go`-class verbs); SKD headword coverage is partial (works for `Darmma`/`rAma`); indigenous sense-splitting is coarse (`iti`-units); verbs remain coarser than nominals.
+
 ## Next
 
-- Full corpus + homonym aggregation; verb-marker grammar; indigenous (VCP/SKD `iti`-quotation) + reverse (ApteES `Ⓐ/Ⓑ`) cluster grammars.
-- The cross-language alignment feeds the **sense-alignment view** and the **divergence map** (maker worklist); the granularity-vs-family result is the empirical seed for **H1** (Paper L).
+- Tighten the AE reverse index (rank by equivalent-position); verb-marker grammar; finer indigenous splitting.
+- The cross-language + cross-cluster alignment feeds the **sense-alignment view** (R1 dashboard page) and the **divergence map** (maker worklist); the granularity-by-family result is the empirical seed for **H1** (Paper L), measured family-controlled next.

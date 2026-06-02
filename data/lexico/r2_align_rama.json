@@ -1,15 +1,85 @@
 {
  "lemma": "rama",
  "sense_counts": {
-  "mw": 1,
+  "mw": 17,
   "mw72": 1,
-  "pwg": 4,
-  "ap": 4,
+  "pwg": 6,
+  "ap": 10,
   "ap90": 12,
   "ben": 7,
-  "bhs": 1
+  "bhs": 1,
+  "wil": 12,
+  "vcp": 1,
+  "skd": 10,
+  "ae": 4
  },
  "top_aligned": [
+  {
+   "a": "ap#1",
+   "b": "ap90#1",
+   "jaccard": 0.621,
+   "shared": [
+    "ls:Gīt.",
+    "s:DftaraGupatirUpa",
+    "s:dikpatikamanIyaM",
+    "s:dikzu",
+    "s:hare",
+    "s:hi"
+   ],
+   "a_text": "N. of three celebrated personages; ∙³(a) Paraśurāma, so",
+   "b_text": "N. of three celebrated personages; (a) Paraśurāma, son "
+  },
+  {
+   "a": "ap90#1",
+   "b": "vcp#1",
+   "jaccard": 0.108,
+   "shared": [
+    "s:maScApISvaravAcakaH",
+    "s:rASabdo",
+    "s:tena",
+    "s:viSvavacano"
+   ],
+   "a_text": "N. of three celebrated personages; (a) Paraśurāma, son ",
+   "b_text": "pu0 rama--karttari GaY Ra vA . 1 paraSurAme 2 daSaraTa-"
+  },
+  {
+   "a": "ap#1",
+   "b": "vcp#1",
+   "jaccard": 0.091,
+   "shared": [
+    "s:maScApISvaravAcakaH",
+    "s:rASabdo",
+    "s:tena",
+    "s:viSvavacano"
+   ],
+   "a_text": "N. of three celebrated personages; ∙³(a) Paraśurāma, so",
+   "b_text": "pu0 rama--karttari GaY Ra vA . 1 paraSurAme 2 daSaraTa-"
+  },
+  {
+   "a": "mw#bundle",
+   "b": "pwg#a)",
+   "jaccard": 0.056,
+   "shared": [
+    "s:kuzWa"
+   ],
+   "a_text": "= kuzWa, L.",
+   "b_text": "Dunkel: a\\gnI ruSa^dBi\\rvarRE^ra\\Bi rA\\mama^sTAt ṚV. 10"
+  },
+  {
+   "a": "vcp#1",
+   "b": "skd#1",
+   "jaccard": 0.05,
+   "shared": [
+    "s:BArgavo",
+    "s:gopastrayo",
+    "s:maScApISvaravAcakaH",
+    "s:rAGavo",
+    "s:rASabdo",
+    "s:rAmAH"
+   ],
+   "a_text": "pu0 rama--karttari GaY Ra vA . 1 paraSurAme 2 daSaraTa-",
+   "b_text": "rama krIqAyAm + “jvalitikasanteByo RaH .” 3 . 1 . 140 ."
+  },
   {
    "a": "mw#bundle",
    "b": "pwg#1)",
@@ -17,8 +87,90 @@
    "shared": [
     "ls:AV."
    ],
-   "a_text": "mf(A/)n. (prob. ‘causing rest’, and in most meanings fr. √ r",
-   "b_text": "adj. (f. A) dunkelfarbig, schwarz NIR. 12,13. AK. 3,4,23,143"
+   "a_text": "mf(A/)n. (prob. ‘causing rest’, and in most meanings fr",
+   "b_text": "adj. (f. A) dunkelfarbig, schwarz NIR. 12,13. AK. 3,4,2"
+  },
+  {
+   "a": "ap90#1",
+   "b": "skd#1",
+   "jaccard": 0.024,
+   "shared": [
+    "s:maScApISvaravAcakaH",
+    "s:rASabdo",
+    "s:tena",
+    "s:viSvavacano"
+   ],
+   "a_text": "N. of three celebrated personages; (a) Paraśurāma, son ",
+   "b_text": "rama krIqAyAm + “jvalitikasanteByo RaH .” 3 . 1 . 140 ."
+  },
+  {
+   "a": "ap#1",
+   "b": "skd#1",
+   "jaccard": 0.023,
+   "shared": [
+    "s:maScApISvaravAcakaH",
+    "s:rASabdo",
+    "s:tena",
+    "s:viSvavacano"
+   ],
+   "a_text": "N. of three celebrated personages; ∙³(a) Paraśurāma, so",
+   "b_text": "rama krIqAyAm + “jvalitikasanteByo RaH .” 3 . 1 . 140 ."
+  },
+  {
+   "a": "mw#bundle",
+   "b": "pwg#a)",
+   "jaccard": 0.02,
+   "shared": [
+    "ls:VP."
+   ],
+   "a_text": "pl. N. of a people, VP.",
+   "b_text": "eine Hirschart AK. 2,5,11. TRIK. 3,3,302. H. an. MED. —"
+  },
+  {
+   "a": "mw#bundle",
+   "b": "pwg#a)",
+   "jaccard": 0.019,
+   "shared": [
+    "ls:VP."
+   ],
+   "a_text": "N. of various mythical personages (in Veda two Rāmas ar",
+   "b_text": "eine Hirschart AK. 2,5,11. TRIK. 3,3,302. H. an. MED. —"
+  },
+  {
+   "a": "mw#bundle",
+   "b": "pwg#a)",
+   "jaccard": 0.019,
+   "shared": [
+    "s:rAmasya"
+   ],
+   "a_text": "N. of the number ‘three’ (on account of the 3 Rāmas), H",
+   "b_text": "adj. (f. a) erfreuend, entzückend, lieblich, reizend AK"
+  },
+  {
+   "a": "pwg#a)",
+   "b": "skd#1",
+   "jaccard": 0.01,
+   "shared": [
+    "s:rAmo",
+    "s:ramante"
+   ],
+   "a_text": "eine Hirschart AK. 2,5,11. TRIK. 3,3,302. H. an. MED. —",
+   "b_text": "rama krIqAyAm + “jvalitikasanteByo RaH .” 3 . 1 . 140 ."
+  },
+  {
+   "a": "pwg#a)",
+   "b": "skd#8",
+   "jaccard": 0.008,
+   "shared": [
+    "s:brahmABiDIyate",
+    "s:cidAtmani",
+    "s:paraM",
+    "s:rAmapadenAsO",
+    "s:ramante",
+    "s:viSrutam"
+   ],
+   "a_text": "eine Hirschart AK. 2,5,11. TRIK. 3,3,302. H. an. MED. —",
+   "b_text": "“vahnisTaM SayanaM vizRorardDacandraviBUzitam . ekAkzar"
   }
  ]
 }

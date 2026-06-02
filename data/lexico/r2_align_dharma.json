@@ -1,16 +1,51 @@
 {
  "lemma": "dharma",
  "sense_counts": {
-  "mw": 1,
-  "mw72": 1,
-  "pwg": 3,
+  "mw": 33,
+  "mw72": 3,
+  "pwg": 5,
   "ap": 23,
   "ap90": 22,
   "ben": 11,
   "sch": 1,
-  "bhs": 4
+  "bhs": 10,
+  "wil": 20,
+  "cae": 1,
+  "vcp": 9,
+  "skd": 4,
+  "ae": 24
  },
  "top_aligned": [
+  {
+   "a": "mw#bundle",
+   "b": "ben#7",
+   "jaccard": 1.0,
+   "shared": [
+    "ls:MBh."
+   ],
+   "a_text": "a partic. ceremony, MBh. xiv, 2623",
+   "b_text": "Character, quality, MBh. 12, 7850."
+  },
+  {
+   "a": "mw#bundle",
+   "b": "ben#9",
+   "jaccard": 1.0,
+   "shared": [
+    "ls:MBh."
+   ],
+   "a_text": "a partic. ceremony, MBh. xiv, 2623",
+   "b_text": "A sacrifice, MBh. 14, 2623."
+  },
+  {
+   "a": "mw#bundle",
+   "b": "sch#bundle",
+   "jaccard": 1.0,
+   "shared": [
+    "ls:Dharmaś."
+   ],
+   "a_text": "a bow, Dharmaś.",
+   "b_text": "11. Bogen, Dharmaś. 17,66. [S I,53,2; 203,3; 211,7; II,"
+  },
   {
    "a": "ap#4",
    "b": "ap90#4",
@@ -21,8 +56,8 @@
     "s:ezaH",
     "s:zazWAMSavftterapi"
    ],
-   "a_text": "Duty, prescribed course of conduct; zazWAMSavftterapi Darma ",
-   "b_text": "Duty, prescribed course of conduct; zazWAMSavftterapi Darma "
+   "a_text": "Duty, prescribed course of conduct; zazWAMSavftterapi D",
+   "b_text": "Duty, prescribed course of conduct; zazWAMSavftterapi D"
   },
   {
    "a": "ap#3",
@@ -34,12 +69,10 @@
     "s:eka",
     "s:eva",
     "s:niDane'pyanuyAti",
-    "s:suhfdDarmo",
-    "s:trivarga",
-    "s:yaH"
+    "s:suhfdDarmo"
    ],
-   "a_text": "Religious or moral merit, virtue, righteousness, good works ",
-   "b_text": "Religious or moral merit, virtue, righteousness, good works "
+   "a_text": "Religious or moral merit, virtue, righteousness, good w",
+   "b_text": "Religious or moral merit, virtue, righteousness, good w"
   },
   {
    "a": "ap#9",
@@ -52,8 +85,8 @@
     "s:dIpakaM",
     "s:varRyAvarRyAnAM"
    ],
-   "a_text": "An essential quality, peculiarity, characteristic property, ",
-   "b_text": "An essential quality, peculiarity, characteristic property, "
+   "a_text": "An essential quality, peculiarity, characteristic prope",
+   "b_text": "An essential quality, peculiarity, characteristic prope"
   },
   {
    "a": "ap#8",
@@ -64,8 +97,8 @@
     "s:jIva",
     "s:prARi"
    ],
-   "a_text": "Nature. disposition, character; utpatsyate'sti mama ko'pi sa",
-   "b_text": "Nature, disposition, character; Māl. 1. 6; prARi˚, jIva˚."
+   "a_text": "Nature. disposition, character; utpatsyate'sti mama ko'",
+   "b_text": "Nature, disposition, character; Māl. 1. 6; prARi˚, jIva"
   },
   {
    "a": "ap#23",
@@ -74,7 +107,7 @@
    "shared": [
     "ls:Rām."
    ],
-   "a_text": "Mastery, great skill; divyAstraguRasaMpannaH paraM DarmaM ga",
+   "a_text": "Mastery, great skill; divyAstraguRasaMpannaH paraM Darm",
    "b_text": "Personified justice, Rām. 1, 1, 19."
   },
   {
@@ -84,8 +117,138 @@
    "shared": [
     "ls:Rām."
    ],
-   "a_text": "Mastery, great skill; divyAstraguRasaMpannaH paraM DarmaM ga",
+   "a_text": "Mastery, great skill; divyAstraguRasaMpannaH paraM Darm",
    "b_text": "Resem- blance, Rām. 2, 123, 14 Gorr. (dharmāt, Like)."
+  },
+  {
+   "a": "mw#bundle",
+   "b": "ben#7",
+   "jaccard": 0.143,
+   "shared": [
+    "ls:MBh."
+   ],
+   "a_text": "Law or Justice personified (as Indra, ŚBr. &c.; as Yama",
+   "b_text": "Character, quality, MBh. 12, 7850."
+  },
+  {
+   "a": "mw#bundle",
+   "b": "ben#9",
+   "jaccard": 0.143,
+   "shared": [
+    "ls:MBh."
+   ],
+   "a_text": "Law or Justice personified (as Indra, ŚBr. &c.; as Yama",
+   "b_text": "A sacrifice, MBh. 14, 2623."
+  },
+  {
+   "a": "vcp#7",
+   "b": "ae#merit#3",
+   "jaccard": 0.088,
+   "shared": [
+    "s:puRyaM",
+    "s:sukftaM",
+    "s:vfzaH"
+   ],
+   "a_text": "ataeva “codanAgamyognihotrAdi- rDarmo nAtallakzaRacEtya",
+   "b_text": "EN 'merit' = DarmaH, Sreyas, arh, arh-yogya, puRyA-tmA,"
+  },
+  {
+   "a": "ap90#3",
+   "b": "skd#2",
+   "jaccard": 0.062,
+   "shared": [
+    "s:eka",
+    "s:niDane'pyanuyAti"
+   ],
+   "a_text": "Religious or moral merit, virtue, righteousness, good w",
+   "b_text": "” uRAM 1 . 139 . iti man .) SuBAdfzwam . (yaTA, hitodeS"
+  },
+  {
+   "a": "ap#3",
+   "b": "skd#2",
+   "jaccard": 0.053,
+   "shared": [
+    "s:eka",
+    "s:niDane'pyanuyAti"
+   ],
+   "a_text": "Religious or moral merit, virtue, righteousness, good w",
+   "b_text": "” uRAM 1 . 139 . iti man .) SuBAdfzwam . (yaTA, hitodeS"
+  },
+  {
+   "a": "vcp#9",
+   "b": "skd#1",
+   "jaccard": 0.048,
+   "shared": [
+    "s:SAntiH",
+    "s:SUdrezu",
+    "s:SradDA",
+    "s:SrezWaM",
+    "s:SvetamAlyAnulepanaH",
+    "s:brAhmaRAnAM"
+   ],
+   "a_text": "ayavA vIpsAyAmekaSabdaH tata- ScEkEkaM varRatvamuddiSya",
+   "b_text": "puM, (Df + man .) DanuH . yamaH . somapaH . iti medinI "
+  },
+  {
+   "a": "cae#bundle",
+   "b": "vcp#6",
+   "jaccard": 0.038,
+   "shared": [
+    "s:DarmeRa"
+   ],
+   "a_text": "m. statute, established order, custom, practice; law, r",
+   "b_text": "codanEva lakzaRaM pramARaM yasya tAdfSo yo'rTaH sa Darm"
+  },
+  {
+   "a": "vcp#7",
+   "b": "ae#good#4",
+   "jaccard": 0.035,
+   "shared": [
+    "s:puRyaM",
+    "s:sukftaM"
+   ],
+   "a_text": "ataeva “codanAgamyognihotrAdi- rDarmo nAtallakzaRacEtya",
+   "b_text": "EN 'good' = Avah, Bavatu, DarmaH, SuBASuBaM, aBijAta, a"
+  },
+  {
+   "a": "pwg#b)",
+   "b": "skd#2",
+   "jaccard": 0.027,
+   "shared": [
+    "s:DAraRA",
+    "s:DyAnaM",
+    "s:eka",
+    "s:gacCati",
+    "s:kftvA",
+    "s:prARAyAmastaTA"
+   ],
+   "a_text": "Gesetz, Brauch, Vorschrift, Regel; = puRya AK. 1,1,4,2.",
+   "b_text": "” uRAM 1 . 139 . iti man .) SuBAdfzwam . (yaTA, hitodeS"
+  },
+  {
+   "a": "ap#9",
+   "b": "vcp#3",
+   "jaccard": 0.024,
+   "shared": [
+    "s:vadanti"
+   ],
+   "a_text": "An essential quality, peculiarity, characteristic prope",
+   "b_text": "DarmaH [Page3850-b+ 38] prasidDo vA syAt, aprasidDo vA?"
+  },
+  {
+   "a": "pwg#b)",
+   "b": "skd#1",
+   "jaccard": 0.022,
+   "shared": [
+    "s:BavitA",
+    "s:cEva",
+    "s:dAnaM",
+    "s:daRqaM",
+    "s:ete",
+    "s:kftvA"
+   ],
+   "a_text": "Gesetz, Brauch, Vorschrift, Regel; = puRya AK. 1,1,4,2.",
+   "b_text": "puM, (Df + man .) DanuH . yamaH . somapaH . iti medinI "
   },
   {
    "a": "pwg#b)",
@@ -98,8 +261,8 @@
     "s:suhfdDarmo",
     "s:yaH"
    ],
-   "a_text": "Gesetz, Brauch, Vorschrift, Regel; = puRya AK. 1,1,4,2. 3,4,",
-   "b_text": "Religious or moral merit, virtue, righteousness, good works "
+   "a_text": "Gesetz, Brauch, Vorschrift, Regel; = puRya AK. 1,1,4,2.",
+   "b_text": "Religious or moral merit, virtue, righteousness, good w"
   },
   {
    "a": "pwg#b)",
@@ -112,8 +275,43 @@
     "s:suhfdDarmo",
     "s:yaH"
    ],
-   "a_text": "Gesetz, Brauch, Vorschrift, Regel; = puRya AK. 1,1,4,2. 3,4,",
-   "b_text": "Religious or moral merit, virtue, righteousness, good works "
+   "a_text": "Gesetz, Brauch, Vorschrift, Regel; = puRya AK. 1,1,4,2.",
+   "b_text": "Religious or moral merit, virtue, righteousness, good w"
+  },
+  {
+   "a": "vcp#3",
+   "b": "ae#oblige#3",
+   "jaccard": 0.017,
+   "shared": [
+    "s:codanA"
+   ],
+   "a_text": "DarmaH [Page3850-b+ 38] prasidDo vA syAt, aprasidDo vA?",
+   "b_text": "EN 'oblige' = BAraH, BavatA, DarmaH, anfRa, anugfhItosm"
+  },
+  {
+   "a": "vcp#8",
+   "b": "skd#2",
+   "jaccard": 0.017,
+   "shared": [
+    "s:ucyate"
+   ],
+   "a_text": "yadyapi puRyanAmA- dfzwaviSeza eva DarmastadarTastaTApi",
+   "b_text": ". paradArABimarzitvaM parArTe'pi ca lolupA . svADyAyast"
+  },
+  {
+   "a": "pwg#b)",
+   "b": "vcp#9",
+   "jaccard": 0.013,
+   "shared": [
+    "s:Darmasya",
+    "s:Darmo",
+    "s:DyAnaM",
+    "s:ahiMsA",
+    "s:cEva",
+    "s:dAnaM"
+   ],
+   "a_text": "Gesetz, Brauch, Vorschrift, Regel; = puRya AK. 1,1,4,2.",
+   "b_text": "ayavA vIpsAyAmekaSabdaH tata- ScEkEkaM varRatvamuddiSya"
   },
   {
    "a": "pwg#b)",
@@ -123,8 +321,8 @@
     "s:ezaH",
     "s:zazWAMSavftterapi"
    ],
-   "a_text": "Gesetz, Brauch, Vorschrift, Regel; = puRya AK. 1,1,4,2. 3,4,",
-   "b_text": "Duty, prescribed course of conduct; zazWAMSavftterapi Darma "
+   "a_text": "Gesetz, Brauch, Vorschrift, Regel; = puRya AK. 1,1,4,2.",
+   "b_text": "Duty, prescribed course of conduct; zazWAMSavftterapi D"
   },
   {
    "a": "pwg#b)",
@@ -134,8 +332,41 @@
     "s:ezaH",
     "s:zazWAMSavftterapi"
    ],
-   "a_text": "Gesetz, Brauch, Vorschrift, Regel; = puRya AK. 1,1,4,2. 3,4,",
-   "b_text": "Duty, prescribed course of conduct; zazWAMSavftterapi Darma "
+   "a_text": "Gesetz, Brauch, Vorschrift, Regel; = puRya AK. 1,1,4,2.",
+   "b_text": "Duty, prescribed course of conduct; zazWAMSavftterapi D"
+  },
+  {
+   "a": "pwg#b)",
+   "b": "cae#bundle",
+   "jaccard": 0.008,
+   "shared": [
+    "s:DarmeRa",
+    "s:tva"
+   ],
+   "a_text": "Gesetz, Brauch, Vorschrift, Regel; = puRya AK. 1,1,4,2.",
+   "b_text": "m. statute, established order, custom, practice; law, r"
+  },
+  {
+   "a": "pwg#b)",
+   "b": "vcp#6",
+   "jaccard": 0.008,
+   "shared": [
+    "s:DarmeRa",
+    "s:Darmo"
+   ],
+   "a_text": "Gesetz, Brauch, Vorschrift, Regel; = puRya AK. 1,1,4,2.",
+   "b_text": "codanEva lakzaRaM pramARaM yasya tAdfSo yo'rTaH sa Darm"
+  },
+  {
+   "a": "pwg#b)",
+   "b": "ae#nature#6",
+   "jaccard": 0.008,
+   "shared": [
+    "s:prakftyA",
+    "s:svaBAva"
+   ],
+   "a_text": "Gesetz, Brauch, Vorschrift, Regel; = puRya AK. 1,1,4,2.",
+   "b_text": "EN 'nature' = DarmaH, SIla, deha-SarIra-DarmaH, evaMviD"
   }
  ]
 }

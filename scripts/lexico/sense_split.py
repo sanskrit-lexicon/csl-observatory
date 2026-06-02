@@ -1,44 +1,45 @@
 #!/usr/bin/env python3
-"""R2 — heuristic per-dict sense splitter (Western-tagged cluster; first slice).
+"""R2 — heuristic per-dict sense splitter (full clusters).
 
-Splits each dictionary entry into individual senses using that dictionary's OWN
-sense markers (deterministic, no LLM — see RESEARCH_LAYER_ROADMAP §5.1), then
-gives each sense a *Sanskrit fingerprint* (SLP1 tokens in {#..#}/<s>..</s> plus
-<ls> citation sigla) and aligns senses across dictionaries by fingerprint
-overlap (A6 = "anchor on Sanskrit", no gloss translation).
+Splits dictionary entries into senses using each dict's OWN markers
+(deterministic, no LLM; RESEARCH_LAYER_ROADMAP §5.1), gives each sense a
+*Sanskrit fingerprint*, and aligns senses across dicts by fingerprint overlap
+(A6 = anchor on Sanskrit, no gloss translation).
 
-Per-dict sense-marker grammars (read off real entries):
-  ap    ∙²N (and €N for verb sub-senses)
-  ap90  {@N@} / {@--N@}
-  ben   {@N.@}            (compound section {@ -- Comp.@} is cut off)
-  bhs   ({@N@})
-  pwg   <div n="N"> N) / a)         (German {%..%} glosses)
-  wil   .²N
-  mw,mw72,sch  — unmarked: the gloss is a run-on ';'-list bundle (they LUMP);
-                we record the ';'-clause count as a low-confidence proxy.
+Four parser families (the §1.2 structural clusters):
+  western  — explicit sense markers; fingerprint = {#..#}/<s> SLP1 + <ls> sigla
+             ap ∙²N | ap90/ben/bhs {@N@} | pwg <div> N)/a) | wil .²N | mw,mw72,sch,cae lumped
+  indigenous — vcp, skd: raw-SLP1 scholastic prose; senses ≈ `iti.`-closed units;
+             fingerprint = `…0` authority sigla + "…"-quoted forms + content tokens
+  reverse  — ae (ApteES): English-keyed; reverse-indexed by its <s> Sanskrit
+             equivalents, so a Sanskrit lemma finds the English senses that gloss it
+  index    — acc/vei/mci/inm/snp/ieg: references, not word-senses — OUT OF SCOPE
 
-Outputs (data/lexico/):
-  senses_<dict>.jsonl       one record per sense, all lemmas
-  r2_align_<lemma>.json     cross-dict sense alignment + H1 sense-count table
-  r2_summary.json           sense-count x year per (lemma, dict)  -> H1
+Homonyms: ALL <L> blocks whose <k1> equals a lemma variant are aggregated
+(MW splits a lemma across many blocks).
 
-Usage:  python scripts/lexico/sense_split.py
+Modes:
+  python sense_split.py             anchor lemmas across all clusters + alignment
+  python sense_split.py --corpus    + full-corpus scale pass on SCALE_DICTS
 Reads sibling csl-orig; stdlib only.
 """
-import os, sys, re, json, itertools
+import os, sys, re, json, itertools, glob
 sys.stdout.reconfigure(encoding='utf-8')
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-ROOT = os.path.dirname(os.path.dirname(HERE))                 # csl-observatory/
+ROOT = os.path.dirname(os.path.dirname(HERE))
 CSLORIG = os.path.join(os.path.dirname(ROOT), 'csl-orig', 'v02')
 OUTDIR = os.path.join(ROOT, 'data', 'lexico')
 
-# anchor lemmas (SLP1): dharma=Darma, rama=rAma, bodhisattva=boDisattva
 LEMMAS = [('gam', 'gam'), ('dharma', 'Darma'), ('rama', 'rAma'),
           ('iti', 'iti'), ('bodhisattva', 'boDisattva')]
-DICTS = ['mw', 'mw72', 'pwg', 'ap', 'ap90', 'ben', 'sch', 'bhs']
-YEARS = {'wil': 1832, 'pwg': 1855, 'mw72': 1872, 'ben': 1866, 'ap90': 1890,
-         'mw': 1899, 'sch': 1928, 'bhs': 1953, 'ap': 1957}
+WESTERN = ['mw', 'mw72', 'pwg', 'ap', 'ap90', 'ben', 'sch', 'bhs', 'wil', 'cae']
+INDIGENOUS = ['vcp', 'skd']
+REVERSE = ['ae']
+DICTS = WESTERN + INDIGENOUS
+SCALE_DICTS = ['cae', 'ben', 'mci', 'vei']            # smaller dicts for the scale demo
+YEARS = {'skd': 1822, 'wil': 1832, 'pwg': 1855, 'ben': 1866, 'vcp': 1873, 'mw72': 1872,
+         'ae': 1884, 'ap90': 1890, 'cae': 1891, 'mw': 1899, 'sch': 1928, 'bhs': 1953, 'ap': 1957}
 
 MARKERS = {
     'ap':   re.compile(r'[∙.·]\s*²\s*(\d+)|€\s*(\d+)'),
@@ -48,14 +49,17 @@ MARKERS = {
     'pwg':  re.compile(r'<div n="\d+">\s*((?:\d+|[a-z])\))'),
     'wil':  re.compile(r'\.\s*²\s*(\d+)'),
 }
-LUMP_DICTS = {'mw', 'mw72', 'sch'}                 # no per-sense marker -> lumped
-# compound section start (cut main senses here): BEN {@ -- Comp@}, Apte <ab>Comp.</ab> / "Comp."
+LUMP_DICTS = {'mw', 'mw72', 'sch', 'cae'}
+CUT_DICTS = {'ap', 'ap90', 'ben'}
 COMP_CUT = re.compile(r'\{@\s*-+\s*Comp|<ab>\s*Comp\b|\bComp\.')
-CUT_DICTS = {'ap', 'ap90', 'ben'}                  # dicts whose entries run into a compound list
 
 SLP1 = re.compile(r'\{#([^#]*)#\}|<s>([^<]*)</s>')
 LS = re.compile(r'<ls[^>]*>([^<]*)</ls>')
 SIG = re.compile(r'^\s*([A-Za-zĀĪŪṚṜḶṢŚṆṬḌÑṄṂāīūṛṝḷṣśṇṭḍñṅṃ]+\.)')
+SIGLA0 = re.compile(r'\b([a-zA-Zfvr]{1,8}0)\b')              # indigenous authority sigla: jE0, BA0
+QUOTED = re.compile(r'“([^”]*)”')
+STOP = {'iti', 'ca', 'vA', 'tu', 'hi', 'sa', 'tat', 'tasya', 'tatra', 'asya', 'eva',
+        'na', 'naH', 'me', 'syAt', 'yaTA', 'taTA', 'atra', 'api', 'yA', 'yaH', 'saH'}
 
 
 def variants(lemma):
@@ -66,26 +70,34 @@ def variants(lemma):
     return v
 
 
-def extract_blocks(path, lemma):
-    keys = {f'<k1>{v}<' for v in variants(lemma)}
-    with open(path, 'r', encoding='utf-8-sig', errors='replace') as f:
-        lines = [l.rstrip('\n') for l in f]
-    out, i, n = [], 0, len(lines)
+def read_lines(code):
+    src = os.path.join(CSLORIG, code, code + '.txt')
+    if not os.path.exists(src):
+        return None
+    with open(src, 'r', encoding='utf-8-sig', errors='replace') as f:
+        return [l.rstrip('\n') for l in f]
+
+
+def all_blocks(lines):
+    """Yield (lnum, block_text) for every <L>..</L> entry."""
+    i, n = 0, len(lines)
     while i < n:
-        if lines[i].startswith('<L>') and any(k in lines[i] for k in keys):
-            lnum = re.match(r'<L>(\S+?)<', lines[i])
+        if lines[i].startswith('<L>'):
+            m = re.match(r'<L>(\S+?)<', lines[i])
             body = [lines[i]]; j = i + 1
             while j < n and not lines[j].startswith('<L>'):
                 body.append(lines[j]); j += 1
-            out.append((lnum.group(1) if lnum else '?', '\n'.join(body))); i = j
+            yield (m.group(1) if m else '?', '\n'.join(body)); i = j
         else:
             i += 1
-    return out
 
 
-def fingerprint(text, exclude=frozenset()):
-    """SLP1 tokens (from {#..#}/<s>) + <ls> citation sigla. The headword's own
-    variants are excluded — they appear in every sense and don't discriminate."""
+def lemma_blocks(lines, lemma):
+    keys = {f'<k1>{v}<' for v in variants(lemma)}
+    return [(ln, b) for ln, b in all_blocks(lines) if any(k in b.split('\n', 1)[0] for k in keys)]
+
+
+def fingerprint_western(text, exclude):
     toks = set()
     for m in SLP1.finditer(text):
         s = m.group(1) or m.group(2) or ''
@@ -100,19 +112,32 @@ def fingerprint(text, exclude=frozenset()):
     return toks
 
 
+def fingerprint_indigenous(text, exclude):
+    """Indigenous text is raw SLP1; anchor on `…0` sigla + quoted forms + rare content words."""
+    toks = set()
+    for sig in SIGLA0.findall(text):
+        toks.add('sig:' + sig)
+    for q in QUOTED.findall(text):
+        for w in re.split(r'[\s,;.()]+', q):
+            w = w.strip("-˚'’")
+            if len(w) >= 3 and w not in exclude and w not in STOP:
+                toks.add('s:' + w)
+    return toks
+
+
 def clean(text, limit=140):
     t = re.sub(r'<[^>]+>', '', text)
     t = t.replace('{#', '').replace('#}', '').replace('{%', '').replace('%}', '')
     t = re.sub(r'\{@[^}]*@\}', '', t)
+    t = re.sub(r'[Ⓐ-Ⓩ]', '', t)
     t = re.sub(r'\s+', ' ', t).strip(' ,;¦')
     return t[:limit]
 
 
-def split_senses(code, block):
-    """Return [(sense_label, raw_text)] for one <L> block."""
+def split_western(code, block):
     pos = block.find('¦')
     gloss = block[pos + 1:] if pos >= 0 else block
-    if code in CUT_DICTS:                    # drop the compound section (keep head-senses)
+    if code in CUT_DICTS:
         cm = COMP_CUT.search(gloss)
         if cm:
             gloss = gloss[:cm.start()]
@@ -120,110 +145,178 @@ def split_senses(code, block):
     if mk:
         hits = list(mk.finditer(gloss))
         if hits:
-            senses = []
+            out = []
             for idx, h in enumerate(hits):
                 num = next((g for g in h.groups() if g), str(idx + 1))
                 end = hits[idx + 1].start() if idx + 1 < len(hits) else len(gloss)
-                senses.append((num, gloss[h.end():end]))
-            return senses, 'marked'
+                out.append((num, gloss[h.end():end]))
+            return out, 'marked'
     if code in LUMP_DICTS:
-        # MW-family lumps senses into one run-on gloss with no per-sense markers.
-        # That IS the finding — keep it as a single bundle; record clause granularity
-        # separately (see gloss_clauses in main) rather than faking a sense count.
         return [('bundle', gloss)], 'lumped'
     return [('1', gloss)], 'single'
 
 
+def split_indigenous(block):
+    pos = block.find('¦')
+    gloss = block[pos + 1:] if pos >= 0 else block
+    units = [u for u in re.split(r'iti\s*\.', gloss) if len(u.strip()) > 20]
+    if len(units) >= 2:
+        return [(str(i + 1), u) for i, u in enumerate(units)], 'iti-units'
+    return [('1', gloss)], 'single'
+
+
+def build_reverse_index(code):
+    """ae: map each Sanskrit-equivalent token -> list of (english_hw, sense_no, all_equivs)."""
+    lines = read_lines(code)
+    if lines is None:
+        return {}
+    idx = {}
+    SENSE = re.compile(r'\{@\s*-*\s*(\d+|[A-Za-z]+)\.?\s*@\}')
+    for ln, block in all_blocks(lines):
+        hwm = re.search(r'<k1>([^<]*)<', block.split('\n', 1)[0])
+        hw = hwm.group(1) if hwm else '?'
+        pos = block.find('¦')
+        gloss = block[pos + 1:] if pos >= 0 else block
+        hits = list(SENSE.finditer(gloss)) or [None]
+        for k, h in enumerate(hits):
+            seg = gloss if h is None else gloss[h.end():(hits[k + 1].start() if k + 1 < len(hits) else len(gloss))]
+            equivs = set()
+            for m in re.finditer(r'<s>([^<]*)</s>', seg):
+                for w in re.split(r'[\s,;]+', m.group(1)):
+                    w = w.strip("-˚'’")
+                    if len(w) >= 2:
+                        equivs.add(w)
+            for w in equivs:
+                idx.setdefault(w, []).append({'hw': hw, 'sense': (h.group(1) if h else '1'),
+                                              'equivs': sorted(equivs), 'ln': ln})
+    return idx
+
+
 def main():
     os.makedirs(OUTDIR, exist_ok=True)
-    summary = []                            # (lemma, dict, year, n_senses, method)
-    per_lemma_senses = {}                   # lemma -> {dict -> [sense dict]}
-    jsonl = {d: [] for d in DICTS}
+    summary, jsonl = [], {}
+    per_lemma = {}                                    # lemma -> {dict -> [sense recs]}
+    ae_index = build_reverse_index('ae')
 
     for lemma_disp, lemma_slp in LEMMAS:
-        per_lemma_senses[lemma_disp] = {}
+        per_lemma[lemma_disp] = {}
+        exclude = variants(lemma_slp)
+        # western + indigenous
         for code in DICTS:
-            src = os.path.join(CSLORIG, code, code + '.txt')
-            if not os.path.exists(src):
+            lines = read_lines(code)
+            if lines is None:
                 continue
-            blocks = extract_blocks(src, lemma_slp)
+            blocks = lemma_blocks(lines, lemma_slp)
             if not blocks:
                 continue
-            exclude = variants(lemma_slp)
-            senses_all, method, clauses = [], 'single', None
-            for lnum, block in blocks[:1]:          # primary entry (first homonym block)
-                ss, method = split_senses(code, block)
+            recs, method = [], 'single'
+            for ln, block in blocks:                  # homonym aggregation: ALL blocks
+                if code in INDIGENOUS:
+                    ss, method = split_indigenous(block)
+                    fp_fn = fingerprint_indigenous
+                else:
+                    ss, method = split_western(code, block)
+                    fp_fn = fingerprint_western
                 for num, raw in ss:
-                    fp = fingerprint(raw, exclude)
-                    if method == 'lumped':          # implicit-sense proxy: ';'-separated sub-meanings
-                        clauses = len([p for p in re.split(r';', clean(raw, 100000)) if len(p.strip()) > 3])
-                    rec = {'dict': code, 'lemma': lemma_disp, 'lnum': lnum,
-                           'sense': num, 'method': method, 'text': clean(raw),
-                           'slp1': sorted(t[2:] for t in fp if t.startswith('s:')),
-                           'cites': sorted(t[3:] for t in fp if t.startswith('ls:')),
-                           'fp': sorted(fp)}
-                    senses_all.append(rec)
-                    jsonl[code].append(rec)
-            per_lemma_senses[lemma_disp][code] = senses_all
-            summary.append({'lemma': lemma_disp, 'dict': code, 'year': YEARS.get(code),
-                            'n_senses': len(senses_all), 'method': method, 'clauses': clauses})
+                    fp = fp_fn(raw, exclude)
+                    recs.append({'dict': code, 'lemma': lemma_disp, 'lnum': ln, 'sense': num,
+                                 'method': method, 'text': clean(raw), 'fp': sorted(fp)})
+            per_lemma[lemma_disp][code] = recs
+            jsonl.setdefault(code, []).extend(recs)
+            n_marked = len([r for r in recs if r['method'] in ('marked', 'iti-units')])
+            summary.append({'lemma': lemma_disp, 'dict': code, 'cluster':
+                            'indigenous' if code in INDIGENOUS else 'western',
+                            'year': YEARS.get(code), 'n_blocks': len(blocks),
+                            'n_senses': len(recs), 'n_marked': n_marked, 'method': method})
+        # reverse (ae): English senses whose <s> equivalents include the lemma
+        ae_hits = []
+        for v in exclude:
+            ae_hits += ae_index.get(v, [])
+        seen = set(); ae_recs = []
+        for h in ae_hits:
+            kk = (h['hw'], h['sense'])
+            if kk in seen:
+                continue
+            seen.add(kk)
+            fp = {'s:' + w for w in h['equivs'] if w not in exclude}
+            ae_recs.append({'dict': 'ae', 'lemma': lemma_disp, 'lnum': h['ln'],
+                            'sense': f"{h['hw']}#{h['sense']}", 'method': 'reverse',
+                            'text': f"EN '{h['hw']}' = " + ', '.join(h['equivs'][:8]), 'fp': sorted(fp)})
+        if ae_recs:
+            per_lemma[lemma_disp]['ae'] = ae_recs
+            jsonl.setdefault('ae', []).extend(ae_recs)
+            summary.append({'lemma': lemma_disp, 'dict': 'ae', 'cluster': 'reverse',
+                            'year': YEARS['ae'], 'n_blocks': len(ae_recs),
+                            'n_senses': len(ae_recs), 'n_marked': len(ae_recs), 'method': 'reverse'})
 
-    # ---- write per-dict JSONL ----
-    for d in DICTS:
-        if jsonl[d]:
-            with open(os.path.join(OUTDIR, f'senses_{d}.jsonl'), 'w', encoding='utf-8', newline='\n') as f:
-                for rec in jsonl[d]:
-                    f.write(json.dumps(rec, ensure_ascii=False) + '\n')
+    for d, recs in jsonl.items():
+        with open(os.path.join(OUTDIR, f'senses_{d}.jsonl'), 'w', encoding='utf-8', newline='\n') as f:
+            for r in recs:
+                f.write(json.dumps(r, ensure_ascii=False) + '\n')
 
-    # ---- alignment per lemma (Sanskrit-fingerprint Jaccard across dicts) ----
+    # alignment per lemma (cross-cluster, fingerprint Jaccard)
     for lemma_disp, _ in LEMMAS:
-        bydict = per_lemma_senses.get(lemma_disp, {})
+        bydict = per_lemma.get(lemma_disp, {})
+        flat = [(d, s) for d, sl in bydict.items() for s in sl]
         pairs = []
-        for (d1, s1), (d2, s2) in itertools.combinations(
-                [(d, s) for d, sl in bydict.items() for s in sl], 2):
+        for (d1, s1), (d2, s2) in itertools.combinations(flat, 2):
             if s1['dict'] == s2['dict']:
                 continue
             f1, f2 = set(s1['fp']), set(s2['fp'])
-            if not f1 or not f2:
-                continue
             inter = f1 & f2
             if not inter:
                 continue
             jac = len(inter) / len(f1 | f2)
             pairs.append({'a': f"{s1['dict']}#{s1['sense']}", 'b': f"{s2['dict']}#{s2['sense']}",
-                          'jaccard': round(jac, 3), 'shared': sorted(inter),
-                          'a_text': s1['text'][:60], 'b_text': s2['text'][:60]})
+                          'jaccard': round(jac, 3), 'shared': sorted(inter)[:6],
+                          'a_text': s1['text'][:55], 'b_text': s2['text'][:55]})
+        # keep only alignments backed by a STRONG shared anchor: a citation, an
+        # indigenous siglum, or a real content word (>=4 SLP1 chars) — drops the
+        # short inflectional-ending noise (maH/maM/eka).
+        def strong(p):
+            return any(t.startswith(('ls:', 'sig:')) or len(t) > 6 for t in p['shared'])
+        pairs = [p for p in pairs if strong(p)]
         pairs.sort(key=lambda p: -p['jaccard'])
-        align = {'lemma': lemma_disp,
-                 'sense_counts': {d: len(sl) for d, sl in bydict.items()},
-                 'top_aligned': pairs[:25]}
         with open(os.path.join(OUTDIR, f'r2_align_{lemma_disp}.json'), 'w', encoding='utf-8', newline='\n') as f:
-            json.dump(align, f, ensure_ascii=False, indent=1)
+            json.dump({'lemma': lemma_disp, 'sense_counts': {d: len(sl) for d, sl in bydict.items()},
+                       'top_aligned': pairs[:30]}, f, ensure_ascii=False, indent=1)
 
     with open(os.path.join(OUTDIR, 'r2_summary.json'), 'w', encoding='utf-8', newline='\n') as f:
         json.dump(summary, f, ensure_ascii=False, indent=1)
 
-    # ---- console report ----
-    print("R2 sense splitter — first slice (Western-tagged cluster)\n")
+    # ---- report ----
+    print("R2 sense splitter — full clusters (homonym-aggregated)\n")
     for lemma_disp, _ in LEMMAS:
         rows = [s for s in summary if s['lemma'] == lemma_disp]
         if not rows:
             continue
-        print(f"== {lemma_disp} ==  (explicit senses by dict, ordered by year — H1 signal)")
+        print(f"== {lemma_disp} ==")
         for s in sorted(rows, key=lambda r: r['year'] or 0):
-            if s['method'] == 'lumped':
-                tag = f"LUMPED (one run-on gloss, ~{s['clauses']} clauses)"
-            else:
-                tag = f"{s['n_senses']:3d} explicit senses [{s['method']}]"
-            print(f"   {s['year']}  {s['dict']:5s}  {tag}")
-        ap = os.path.join(OUTDIR, f'r2_align_{lemma_disp}.json')
-        al = json.load(open(ap, encoding='utf-8'))
-        if al['top_aligned']:
-            best = al['top_aligned'][0]
-            print(f"   top cross-dict alignment: {best['a']} ~ {best['b']}  "
-                  f"(J={best['jaccard']}, shared={best['shared'][:4]})")
+            tag = (f"{s['n_senses']} senses" if s['method'] != 'lumped'
+                   else f"LUMPED bundle x{s['n_blocks']} blocks")
+            print(f"   {s['year']} {s['dict']:4s} [{s['cluster'][:4]}] {tag} ({s['method']}, {s['n_blocks']} blk)")
+        al = json.load(open(os.path.join(OUTDIR, f'r2_align_{lemma_disp}.json'), encoding='utf-8'))
+        for p in al['top_aligned'][:3]:
+            print(f"     align {p['a']} ~ {p['b']}  J={p['jaccard']}  shared={p['shared'][:4]}")
         print()
-    print(f"wrote senses_<dict>.jsonl, r2_align_<lemma>.json, r2_summary.json to data/lexico/")
+
+    if '--corpus' in sys.argv:
+        print("== full-corpus scale pass ==")
+        for code in SCALE_DICTS:
+            lines = read_lines(code)
+            if lines is None:
+                print(f"   {code}: no source"); continue
+            n_entries = n_senses = 0
+            for ln, block in all_blocks(lines):
+                n_entries += 1
+                if code in INDIGENOUS:
+                    ss, _ = split_indigenous(block)
+                else:
+                    ss, _ = split_western(code, block)
+                n_senses += len(ss)
+            print(f"   {code:4s}: {n_entries:6d} entries -> {n_senses:6d} senses "
+                  f"({n_senses / max(n_entries,1):.2f}/entry)")
+    print("wrote senses_<dict>.jsonl, r2_align_<lemma>.json, r2_summary.json")
 
 
 if __name__ == '__main__':

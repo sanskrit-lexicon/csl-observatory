@@ -2,257 +2,521 @@
  {
   "lemma": "gam",
   "dict": "mw",
+  "cluster": "western",
   "year": 1899,
-  "n_senses": 1,
-  "method": "lumped",
-  "clauses": 81
- },
- {
-  "lemma": "gam",
-  "dict": "mw72",
-  "year": 1872,
-  "n_senses": 1,
-  "method": "lumped",
-  "clauses": 47
- },
- {
-  "lemma": "gam",
-  "dict": "pwg",
-  "year": 1855,
-  "n_senses": 42,
-  "method": "marked",
-  "clauses": null
- },
- {
-  "lemma": "gam",
-  "dict": "ap",
-  "year": 1957,
-  "n_senses": 1,
-  "method": "single",
-  "clauses": null
- },
- {
-  "lemma": "gam",
-  "dict": "ap90",
-  "year": 1890,
-  "n_senses": 14,
-  "method": "marked",
-  "clauses": null
- },
- {
-  "lemma": "gam",
-  "dict": "ben",
-  "year": 1866,
-  "n_senses": 23,
-  "method": "marked",
-  "clauses": null
- },
- {
-  "lemma": "gam",
-  "dict": "sch",
-  "year": 1928,
-  "n_senses": 1,
-  "method": "lumped",
-  "clauses": 4
- },
- {
-  "lemma": "dharma",
-  "dict": "mw",
-  "year": 1899,
-  "n_senses": 1,
-  "method": "lumped",
-  "clauses": 2
- },
- {
-  "lemma": "dharma",
-  "dict": "mw72",
-  "year": 1872,
-  "n_senses": 1,
-  "method": "lumped",
-  "clauses": 136
- },
- {
-  "lemma": "dharma",
-  "dict": "pwg",
-  "year": 1855,
+  "n_blocks": 3,
   "n_senses": 3,
-  "method": "marked",
-  "clauses": null
+  "n_marked": 0,
+  "method": "lumped"
+ },
+ {
+  "lemma": "gam",
+  "dict": "mw72",
+  "cluster": "western",
+  "year": 1872,
+  "n_blocks": 2,
+  "n_senses": 2,
+  "n_marked": 0,
+  "method": "lumped"
+ },
+ {
+  "lemma": "gam",
+  "dict": "pwg",
+  "cluster": "western",
+  "year": 1855,
+  "n_blocks": 4,
+  "n_senses": 73,
+  "n_marked": 72,
+  "method": "marked"
+ },
+ {
+  "lemma": "gam",
+  "dict": "ap",
+  "cluster": "western",
+  "year": 1957,
+  "n_blocks": 2,
+  "n_senses": 16,
+  "n_marked": 15,
+  "method": "marked"
+ },
+ {
+  "lemma": "gam",
+  "dict": "ap90",
+  "cluster": "western",
+  "year": 1890,
+  "n_blocks": 1,
+  "n_senses": 14,
+  "n_marked": 14,
+  "method": "marked"
+ },
+ {
+  "lemma": "gam",
+  "dict": "ben",
+  "cluster": "western",
+  "year": 1866,
+  "n_blocks": 1,
+  "n_senses": 23,
+  "n_marked": 23,
+  "method": "marked"
+ },
+ {
+  "lemma": "gam",
+  "dict": "sch",
+  "cluster": "western",
+  "year": 1928,
+  "n_blocks": 1,
+  "n_senses": 1,
+  "n_marked": 0,
+  "method": "lumped"
+ },
+ {
+  "lemma": "gam",
+  "dict": "cae",
+  "cluster": "western",
+  "year": 1891,
+  "n_blocks": 1,
+  "n_senses": 1,
+  "n_marked": 0,
+  "method": "lumped"
+ },
+ {
+  "lemma": "gam",
+  "dict": "ae",
+  "cluster": "reverse",
+  "year": 1884,
+  "n_blocks": 144,
+  "n_senses": 144,
+  "n_marked": 144,
+  "method": "reverse"
+ },
+ {
+  "lemma": "dharma",
+  "dict": "mw",
+  "cluster": "western",
+  "year": 1899,
+  "n_blocks": 33,
+  "n_senses": 33,
+  "n_marked": 0,
+  "method": "lumped"
+ },
+ {
+  "lemma": "dharma",
+  "dict": "mw72",
+  "cluster": "western",
+  "year": 1872,
+  "n_blocks": 3,
+  "n_senses": 3,
+  "n_marked": 0,
+  "method": "lumped"
+ },
+ {
+  "lemma": "dharma",
+  "dict": "pwg",
+  "cluster": "western",
+  "year": 1855,
+  "n_blocks": 2,
+  "n_senses": 5,
+  "n_marked": 5,
+  "method": "marked"
  },
  {
   "lemma": "dharma",
   "dict": "ap",
+  "cluster": "western",
   "year": 1957,
+  "n_blocks": 1,
   "n_senses": 23,
-  "method": "marked",
-  "clauses": null
+  "n_marked": 23,
+  "method": "marked"
  },
  {
   "lemma": "dharma",
   "dict": "ap90",
+  "cluster": "western",
   "year": 1890,
+  "n_blocks": 1,
   "n_senses": 22,
-  "method": "marked",
-  "clauses": null
+  "n_marked": 22,
+  "method": "marked"
  },
  {
   "lemma": "dharma",
   "dict": "ben",
+  "cluster": "western",
   "year": 1866,
+  "n_blocks": 1,
   "n_senses": 11,
-  "method": "marked",
-  "clauses": null
+  "n_marked": 11,
+  "method": "marked"
  },
  {
   "lemma": "dharma",
   "dict": "sch",
+  "cluster": "western",
   "year": 1928,
+  "n_blocks": 1,
   "n_senses": 1,
-  "method": "lumped",
-  "clauses": 4
+  "n_marked": 0,
+  "method": "lumped"
  },
  {
   "lemma": "dharma",
   "dict": "bhs",
+  "cluster": "western",
   "year": 1953,
+  "n_blocks": 4,
+  "n_senses": 10,
+  "n_marked": 8,
+  "method": "single"
+ },
+ {
+  "lemma": "dharma",
+  "dict": "wil",
+  "cluster": "western",
+  "year": 1832,
+  "n_blocks": 1,
+  "n_senses": 20,
+  "n_marked": 20,
+  "method": "marked"
+ },
+ {
+  "lemma": "dharma",
+  "dict": "cae",
+  "cluster": "western",
+  "year": 1891,
+  "n_blocks": 1,
+  "n_senses": 1,
+  "n_marked": 0,
+  "method": "lumped"
+ },
+ {
+  "lemma": "dharma",
+  "dict": "vcp",
+  "cluster": "indigenous",
+  "year": 1873,
+  "n_blocks": 1,
+  "n_senses": 9,
+  "n_marked": 9,
+  "method": "iti-units"
+ },
+ {
+  "lemma": "dharma",
+  "dict": "skd",
+  "cluster": "indigenous",
+  "year": 1822,
+  "n_blocks": 2,
   "n_senses": 4,
-  "method": "marked",
-  "clauses": null
+  "n_marked": 4,
+  "method": "iti-units"
+ },
+ {
+  "lemma": "dharma",
+  "dict": "ae",
+  "cluster": "reverse",
+  "year": 1884,
+  "n_blocks": 24,
+  "n_senses": 24,
+  "n_marked": 24,
+  "method": "reverse"
  },
  {
   "lemma": "rama",
   "dict": "mw",
+  "cluster": "western",
   "year": 1899,
-  "n_senses": 1,
-  "method": "lumped",
-  "clauses": 3
+  "n_blocks": 17,
+  "n_senses": 17,
+  "n_marked": 0,
+  "method": "lumped"
  },
  {
   "lemma": "rama",
   "dict": "mw72",
+  "cluster": "western",
   "year": 1872,
+  "n_blocks": 1,
   "n_senses": 1,
-  "method": "lumped",
-  "clauses": 67
+  "n_marked": 0,
+  "method": "lumped"
  },
  {
   "lemma": "rama",
   "dict": "pwg",
+  "cluster": "western",
   "year": 1855,
-  "n_senses": 4,
-  "method": "marked",
-  "clauses": null
+  "n_blocks": 2,
+  "n_senses": 6,
+  "n_marked": 6,
+  "method": "marked"
  },
  {
   "lemma": "rama",
   "dict": "ap",
+  "cluster": "western",
   "year": 1957,
-  "n_senses": 4,
-  "method": "marked",
-  "clauses": null
+  "n_blocks": 2,
+  "n_senses": 10,
+  "n_marked": 10,
+  "method": "marked"
  },
  {
   "lemma": "rama",
   "dict": "ap90",
+  "cluster": "western",
   "year": 1890,
+  "n_blocks": 1,
   "n_senses": 12,
-  "method": "marked",
-  "clauses": null
+  "n_marked": 12,
+  "method": "marked"
  },
  {
   "lemma": "rama",
   "dict": "ben",
+  "cluster": "western",
   "year": 1866,
+  "n_blocks": 1,
   "n_senses": 7,
-  "method": "marked",
-  "clauses": null
+  "n_marked": 7,
+  "method": "marked"
  },
  {
   "lemma": "rama",
   "dict": "bhs",
+  "cluster": "western",
   "year": 1953,
+  "n_blocks": 1,
   "n_senses": 1,
-  "method": "single",
-  "clauses": null
+  "n_marked": 0,
+  "method": "single"
+ },
+ {
+  "lemma": "rama",
+  "dict": "wil",
+  "cluster": "western",
+  "year": 1832,
+  "n_blocks": 1,
+  "n_senses": 12,
+  "n_marked": 12,
+  "method": "marked"
+ },
+ {
+  "lemma": "rama",
+  "dict": "vcp",
+  "cluster": "indigenous",
+  "year": 1873,
+  "n_blocks": 1,
+  "n_senses": 1,
+  "n_marked": 0,
+  "method": "single"
+ },
+ {
+  "lemma": "rama",
+  "dict": "skd",
+  "cluster": "indigenous",
+  "year": 1822,
+  "n_blocks": 3,
+  "n_senses": 10,
+  "n_marked": 8,
+  "method": "iti-units"
+ },
+ {
+  "lemma": "rama",
+  "dict": "ae",
+  "cluster": "reverse",
+  "year": 1884,
+  "n_blocks": 4,
+  "n_senses": 4,
+  "n_marked": 4,
+  "method": "reverse"
  },
  {
   "lemma": "iti",
   "dict": "mw",
+  "cluster": "western",
   "year": 1899,
-  "n_senses": 1,
-  "method": "lumped",
-  "clauses": 1
+  "n_blocks": 4,
+  "n_senses": 4,
+  "n_marked": 0,
+  "method": "lumped"
  },
  {
   "lemma": "iti",
   "dict": "mw72",
+  "cluster": "western",
   "year": 1872,
-  "n_senses": 1,
-  "method": "lumped",
-  "clauses": 1
+  "n_blocks": 4,
+  "n_senses": 4,
+  "n_marked": 0,
+  "method": "lumped"
  },
  {
   "lemma": "iti",
   "dict": "pwg",
+  "cluster": "western",
   "year": 1855,
-  "n_senses": 1,
-  "method": "marked",
-  "clauses": null
+  "n_blocks": 4,
+  "n_senses": 4,
+  "n_marked": 2,
+  "method": "single"
  },
  {
   "lemma": "iti",
   "dict": "ap",
+  "cluster": "western",
   "year": 1957,
-  "n_senses": 1,
-  "method": "single",
-  "clauses": null
+  "n_blocks": 3,
+  "n_senses": 5,
+  "n_marked": 4,
+  "method": "marked"
  },
  {
   "lemma": "iti",
   "dict": "ap90",
+  "cluster": "western",
   "year": 1890,
-  "n_senses": 1,
-  "method": "single",
-  "clauses": null
+  "n_blocks": 2,
+  "n_senses": 3,
+  "n_marked": 2,
+  "method": "marked"
  },
  {
   "lemma": "iti",
   "dict": "ben",
+  "cluster": "western",
   "year": 1866,
+  "n_blocks": 1,
   "n_senses": 5,
-  "method": "marked",
-  "clauses": null
+  "n_marked": 5,
+  "method": "marked"
+ },
+ {
+  "lemma": "iti",
+  "dict": "wil",
+  "cluster": "western",
+  "year": 1832,
+  "n_blocks": 1,
+  "n_senses": 9,
+  "n_marked": 9,
+  "method": "marked"
+ },
+ {
+  "lemma": "iti",
+  "dict": "cae",
+  "cluster": "western",
+  "year": 1891,
+  "n_blocks": 3,
+  "n_senses": 3,
+  "n_marked": 0,
+  "method": "lumped"
+ },
+ {
+  "lemma": "iti",
+  "dict": "vcp",
+  "cluster": "indigenous",
+  "year": 1873,
+  "n_blocks": 1,
+  "n_senses": 1,
+  "n_marked": 0,
+  "method": "single"
+ },
+ {
+  "lemma": "iti",
+  "dict": "skd",
+  "cluster": "indigenous",
+  "year": 1822,
+  "n_blocks": 1,
+  "n_senses": 1,
+  "n_marked": 0,
+  "method": "single"
+ },
+ {
+  "lemma": "iti",
+  "dict": "ae",
+  "cluster": "reverse",
+  "year": 1884,
+  "n_blocks": 68,
+  "n_senses": 68,
+  "n_marked": 68,
+  "method": "reverse"
  },
  {
   "lemma": "bodhisattva",
   "dict": "mw",
+  "cluster": "western",
   "year": 1899,
-  "n_senses": 1,
-  "method": "lumped",
-  "clauses": 5
+  "n_blocks": 3,
+  "n_senses": 3,
+  "n_marked": 0,
+  "method": "lumped"
  },
  {
   "lemma": "bodhisattva",
   "dict": "pwg",
+  "cluster": "western",
   "year": 1855,
-  "n_senses": 1,
-  "method": "single",
-  "clauses": null
+  "n_blocks": 2,
+  "n_senses": 2,
+  "n_marked": 0,
+  "method": "single"
  },
  {
   "lemma": "bodhisattva",
   "dict": "ap",
+  "cluster": "western",
   "year": 1957,
+  "n_blocks": 1,
   "n_senses": 2,
-  "method": "marked",
-  "clauses": null
+  "n_marked": 2,
+  "method": "marked"
  },
  {
   "lemma": "bodhisattva",
   "dict": "bhs",
+  "cluster": "western",
   "year": 1953,
+  "n_blocks": 1,
   "n_senses": 1,
-  "method": "single",
-  "clauses": null
+  "n_marked": 0,
+  "method": "single"
+ },
+ {
+  "lemma": "bodhisattva",
+  "dict": "wil",
+  "cluster": "western",
+  "year": 1832,
+  "n_blocks": 1,
+  "n_senses": 1,
+  "n_marked": 0,
+  "method": "single"
+ },
+ {
+  "lemma": "bodhisattva",
+  "dict": "cae",
+  "cluster": "western",
+  "year": 1891,
+  "n_blocks": 1,
+  "n_senses": 1,
+  "n_marked": 0,
+  "method": "lumped"
+ },
+ {
+  "lemma": "bodhisattva",
+  "dict": "vcp",
+  "cluster": "indigenous",
+  "year": 1873,
+  "n_blocks": 1,
+  "n_senses": 1,
+  "n_marked": 0,
+  "method": "single"
+ },
+ {
+  "lemma": "bodhisattva",
+  "dict": "skd",
+  "cluster": "indigenous",
+  "year": 1822,
+  "n_blocks": 1,
+  "n_senses": 1,
+  "n_marked": 0,
+  "method": "single"
  }
 ]
