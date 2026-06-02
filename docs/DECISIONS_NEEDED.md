@@ -1,6 +1,6 @@
 # Decisions needed from the maintainer
 
-Consolidated list of items that are **blocked on a human** (a decision, a credential, or an action only you can take). Maintained so an agent can resurface it at the start of a session. Last updated 2026-05-31 (B1/D2/D3 cleared; C deferred).
+Consolidated list of items that are **blocked on a human** (a decision, a credential, or an action only you can take). Maintained so an agent can resurface it at the start of a session. Last updated 2026-05-31 (all A-decisions closed; B1/D2/D3 cleared; C deferred). **Only B2, B3, C1–C3, D1 remain open.**
 
 > Agent note: when M.G. asks "what's next?" or resumes, **surface this list first**.
 
@@ -8,14 +8,7 @@ Consolidated list of items that are **blocked on a human** (a decision, a creden
 
 ## A. Decisions (pick an option)
 
-| # | Decision | Options / recommendation | Source |
-|---|---|---|---|
-| A1 | **KRM license** | Its `LICENSE` is GPL-3.0 but `CITATION.cff` says CC-BY-SA-4.0. Align which way? *Rec: CC-BY-SA-4.0 (it's dictionary data).* | Roadmap M7 / KRM/CLAUDE.md |
-| A3 | **LICENSE full text vs pointer** | The 6 documented dict repos got pointer-style CC-BY-SA-4.0 LICENSEs. Want the full legalcode (for GitHub auto-detection)? | Handoff full-runbook gaps |
-| A4 | **Scan-only dicts** (IEG, MWE, PD, PE, PGN, SNP, YAT — not on GitHub; AE now covered by the ApteES repo) | Ingest via Cologne web-scrape (~1 day each) or omit with a "future work" note? | LEXICOGRAPHY_ROADMAP §11.1 |
-| A5 | **Add PD** (Deccan College encyclopedic dict, 1976–) | Major modern dict; would strengthen Paper L; needs Cologne coordination; only ~2% letter coverage so far. Include now or defer? | LEXICOGRAPHY_ROADMAP §11.2 |
-
-*(A2, A6, A7, A8 resolved — see "Recently resolved" below.)*
+**All A-decisions (A1–A8) are resolved — see "Recently resolved" below.** ✅
 
 ## B. Identifications / facts only you can confirm
 
@@ -52,6 +45,10 @@ Consolidated list of items that are **blocked on a human** (a decision, a creden
 | A6 | Cross-language sense alignment **anchors on Sanskrit** (SLP1 fingerprints) — no gloss translation. | RESEARCH_LAYER_ROADMAP §5.1 |
 | A7 | **Full-corpus** measurement; anchor lemmas `gam`/`dharma`/`rāma`/`iti`/`bodhisattva`. | RESEARCH_LAYER_ROADMAP §5.1 |
 | A8 | R2 sense-splitter = **heuristic per-dict**, deterministic, no LLM. | RESEARCH_LAYER_ROADMAP §5.1 |
+| A1 | KRM license → **CC-BY-SA-4.0** (full legalcode replaced the GPL text). | KRM/LICENSE |
+| A3 | **Full CC-BY-SA-4.0 legalcode** applied to 21 repos (6 documented + 15 M3) — GitHub now auto-detects the license. | */LICENSE |
+| A4 | Not-yet-on-GitHub dicts (IEG/MWE/PE/PGN/SNP/YAT) **deferred to future work**; the "scan-only" framing was flagged inaccurate (re-check status before ingest). | LEXICOGRAPHY_ROADMAP §11 |
+| A5 | **PD included** — its `a-` volumes are the whole practical dictionary; ingestion underway in `csl-pywork`. | LEXICOGRAPHY_ROADMAP §11 |
 | B1 | Dict codes identified: **FRI** = Frish (Sanskrit Reader) · **KNA** = Knauer · **KOW** = Kossowich · **LRV** = Vaidya *Sanskrit-English Dictionary*. | LEXICOGRAPHY_ROADMAP §11.5; memory |
 | B4 | SHS author = **Kulapati Jibananda Vidyāsāgara**. | SHS README/CLAUDE; M3 docs |
 | B5 | ApteES = reverse-direction English→Sanskrit docs built (`{@en@}`/`<s>skt</s>`/Ⓐ-Ⓑ). | ApteES README/CLAUDE; M3 docs |

@@ -359,12 +359,12 @@ Full CSV at [`data/dictionary_inventory.csv`](../data/dictionary_inventory.csv).
 
 - **PWG (1855) is the oldest German Sanskrit-Wörterbuch in the family** — and the oldest non-indigenous source after WIL (1832).
 - **SKD (1822) is the oldest indigenous Sanskrit-Sanskrit dict** — predates everything in the German tradition.
-- **PD (1976) = An Encyclopedic Dictionary of Sanskrit on Historical Principles** (Deccan College, Pune) — major modern Sanskrit lexicographical work; not in our GitHub set yet.
+- **PD (1976) = An Encyclopedic Dictionary of Sanskrit on Historical Principles** (Deccan College, Pune) — major modern Sanskrit lexicographical work. **Included 2026-05-31** (M.G.): its `a-` volumes are the *whole practical dictionary* — the remaining letters are not expected in any foreseeable timeframe — so PD-as-it-stands is complete for analysis. PD distinct files are now being added in `csl-pywork`.
 - **CCS and CAE are sister dicts by the same author** (Cappeller, 1887 German + 1891 English) — testing this pair is a perfect baseline for "near-identical-content, different-language" comparison.
 - **STC and BUR are French**; **GRA, CCS, PW, PWG, SCH are German**; **MWE, AE, BOR are English-Sanskrit (reverse)** — the language structure of the CDSL family is now explicit.
 - **Specialised dicts** include: GRA (Rigveda), INM (MBh-names), MCI (MBh-cultural), VEI (Vedic), KRM (verbs), PUI (Purāṇa), SNP (plants), PE (Purāṇa encyclopaedia), IEG (epigraphy), PGN (Gupta inscriptions), BHS (Buddhist Hybrid).
-- **Identification gaps in our GitHub set**: FRI, KNA, KOW, LRV (codes in repo, full titles unclear) — to be confirmed in Phase L1 from each repo's README/CITATION.cff.
-- **Cologne scan-only dicts** (NOT in GitHub): AE, IEG, MWE, PD, PE, PGN, SNP, YAT — 8 dicts. Decision needed: ingest from Cologne web scrape, or omit?
+- **Dict codes identified (2026-05-31, M.G.)**: FRI = Frish (Sanskrit Reader) · KNA = Knauer · KOW = Kossowich · LRV = Vaidya, *The Standard Sanskrit-English Dictionary* (1889).
+- **Cologne dicts not yet in the GitHub set**: IEG, MWE, PE, PGN, SNP, YAT (AE is now covered by the ApteES repo; PD is being ingested — see above). **Deferred to future work 2026-05-31.** *(M.G. flagged that the earlier "scan-only images" characterization is inaccurate — their actual digital status should be re-checked before any ingest.)*
 
 ### Publication-year direction-of-flow constraints
 
@@ -464,11 +464,11 @@ Example fingerprints (extracted from Patel 2016):
 
 ## 11. Open questions for next round
 
-1. **Scan-only dicts** (AE, IEG, MWE, PD, PE, PGN, SNP, YAT — 8 dicts not on GitHub): ingest from Cologne web scrape (~1 day each), or omit and publish a "future work" note?
-2. **Add PD to the corpus?**: it's a major modern dict; would massively strengthen Paper L; but requires Cologne-side coordination.
-3. **Phase L0 first?**: convention-fingerprint matrix is buildable in 1-2 days from Patel's paper alone (no XML parsing needed yet). Confirm to start.
-4. **Update GitHub repo for missing CITATION.cff data**: should I auto-populate publication-year + author per repo from Patel's inventory CSV → push back as CITATION.cff updates (so contributor-name + year are now machine-readable everywhere)?
-5. **Identify FRI / KNA / KOW / LRV** — these 4 dicts in the GitHub set don't appear in Patel 2016. Are they newer additions? Specialised? Sub-dictionaries of others?
-6. **Translation in L7**: LLM-assisted (faster, fuzzier) or strict bilingual-dictionary route (slower, deterministic)?
+1. ✅ **Not-yet-on-GitHub dicts** (IEG, MWE, PE, PGN, SNP, YAT; AE now = ApteES) — **deferred to future work** (2026-05-31). The "scan-only" label was flagged inaccurate by M.G.; re-check their digital status before any ingest.
+2. ✅ **Add PD** — **yes, included** (2026-05-31): its `a-` volumes are the whole practical dictionary; PD distinct files are being added in `csl-pywork`.
+3. ✅ **Phase L0** — executed (`scripts/L0/`, `data/L0/`; see RESEARCH_LAYER_ROADMAP §0).
+4. **Update CITATION.cff data**: auto-populate year+author per repo from the inventory CSV. *(Partially done — the documented + M3 repos have enriched CITATION.cff; a full-org sweep remains.)*
+5. ✅ **Identify FRI / KNA / KOW / LRV** — resolved (2026-05-31): Frish / Knauer / Kossowich / Vaidya.
+6. ✅ **Translation in L7** — resolved: **anchor on Sanskrit** (SLP1 fingerprints), no gloss translation (RESEARCH_LAYER_ROADMAP §5.1).
 7. **Phylogenetic algorithm**: UPGMA + Neighbor-Joining + Bayesian (per author decision: all three).
 8. **Authorship of Papers M, L, H**: confirmed M. Gasūns + named CDSL maintainers + Claude with disclosure.
