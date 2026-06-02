@@ -20,6 +20,12 @@ export default {
   footer: `Generated from <a href="https://github.com/sanskrit-lexicon">sanskrit-lexicon</a> data.
     Source: <a href="https://github.com/sanskrit-lexicon/csl-observatory">csl-observatory</a>.
     See <a href="/data">data downloads</a> · DOI: pending Zenodo mint`,
+  head: `<meta name="description" content="CSL Observatory: 12 years of Cologne Digital Sanskrit Lexicon (CDSL). Live metrics, charts, and data downloads tracking 77 repos, 5,280+ issues, and commits.">
+  <meta name="keywords" content="Sanskrit, Lexicon, CDSL, GitHub metrics, data dashboard, open source">
+  <meta name="author" content="Cologne Digital Sanskrit Lexicon project contributors">
+  <meta property="og:title" content="CSL Observatory">
+  <meta property="og:description" content="12 years of Cologne Digital Sanskrit Lexicon in numbers and pictures.">
+  <meta property="og:type" content="website">`,
   root: "src",
   output: "dist"
 };
