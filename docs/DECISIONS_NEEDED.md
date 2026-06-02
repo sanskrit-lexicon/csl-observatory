@@ -1,6 +1,6 @@
 # Decisions needed from the maintainer
 
-Consolidated list of items that are **blocked on a human** (a decision, a credential, or an action only you can take). Maintained so an agent can resurface it at the start of a session. Last updated 2026-05-31.
+Consolidated list of items that are **blocked on a human** (a decision, a credential, or an action only you can take). Maintained so an agent can resurface it at the start of a session. Last updated 2026-05-31 (M3 docs).
 
 > Agent note: when M.G. asks "what's next?" or resumes, **surface this list first**.
 
@@ -25,6 +25,8 @@ Consolidated list of items that are **blocked on a human** (a decision, a creden
 | B1 | Identify **FRI, KNA, KOW, LRV** (codes present, full titles unclear; KOW = Kossowich per memory) | LEXICOGRAPHY_ROADMAP §11.5 |
 | B2 | Verify **bibliography** I filled for the 6 documented repos — esp. BUR (Leupol / Maisonneuve) and BOP (1847 edition) | Handoff full-runbook gaps |
 | B3 | Source for `.github/ISSUE_TEMPLATE/*.yml` (templates dir has only the 3 community files) | Handoff full-runbook gaps |
+| B4 | **SHS authorship conflict** — `dictionary_inventory.csv` says **Biswanath Mukerji**, but SHS's existing `CLAUDE.md` says **Tāranātha Tarkavāchaspati** (who is actually the *VCP* author). Which is correct for *Shabda-Sagara* (1900)? Blocks SHS's M3 README. | M3 docs 2026-05-31 |
+| B5 | **ApteES** (Apte *English→Sanskrit*, 1884) — reverse-direction dict with non-standard markup (`{@English@}` headwords, `<s>Sanskrit</s>` glosses, Ⓐ/Ⓑ sense markers). Excluded from the auto-M3 batch; needs a hand-crafted data-format section. OK to do, or leave? | M3 docs 2026-05-31 |
 
 ## C. Credentials / access needed
 
