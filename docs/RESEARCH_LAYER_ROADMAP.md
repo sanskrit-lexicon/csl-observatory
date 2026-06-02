@@ -95,7 +95,7 @@ The macro profile and hypotheses feed the existing **Papers L / M / H** directly
 |---|---|---|---|
 | **R0** (done) | Two prototypes + this roadmap | — | proof of concept |
 | **R1** | Productize the micro explorer (any lemma, web) | parse + index headwords (have `sanhw1`) | students |
-| **R2** | **Sense splitter** per dict format → sense-level corpus | dict format study (have micro typology) | H1–H3, sense-alignment, divergence map |
+| **R2** | **Sense splitter** per dict format → sense-level corpus — *first slice shipped 2026-05-31* ([R2_FINDINGS.md](R2_FINDINGS.md)) | dict format study (have micro typology) | H1–H3, sense-alignment, divergence map |
 | **R3** | Semantic-field classifier (Amarakośa-native) | Amarakośa topical hierarchy (`AMAR`) + gloss-keyword match | H4, semantic treemap |
 | **R4** | Maker QA worklist | R2 + encoding guard + anomaly detectors | dictionary makers |
 | **R5** | Student learning paths + corpus frequency join (DCS) | R1 + DCS local dump (`GitHub/DCS`) | students |
@@ -118,6 +118,8 @@ Decisions (M.G.): a **heuristic per-dict** splitter (deterministic, **no LLM**),
 **Sanskrit-anchored alignment (A6).** Each split sense gets a **Sanskrit fingerprint** — the set of SLP1 tokens it carries (synonyms, cited forms, cognates, the headword). Cross-dict sense alignment is the overlap (Jaccard) of these fingerprints — **language-agnostic and deterministic**, with no German/French/English translation step. This works because every tradition exposes Sanskrit material to anchor on: indigenous dicts gloss directly in Sanskrit, reverse-direction dicts give Sanskrit equivalents, and Western dicts cite Sanskrit forms and cognates.
 
 **Build order:** Western-tagged first (most dicts, cleanest markers, covers the known inheritance edges PWG→MW72→MW and AP90→AP that H1–H3 need) → reverse-direction (small, clean) → indigenous-quotation (hardest) → indexes excluded. **Output:** a sense-level corpus `data/lexico/senses_<dict>.jsonl` (one record per sense: dict, lemma, sense-index, gloss-span, Sanskrit-fingerprint), feeding the sense-alignment view and the divergence map (the maker worklist).
+
+**✅ First slice shipped 2026-05-31** — `scripts/lexico/sense_split.py` on the 5 anchor lemmas × 8 Western-tagged dicts ([R2_FINDINGS.md](R2_FINDINGS.md)). Proven: (1) **Sanskrit-anchored alignment works across the language barrier** — PWG's German *dharma* sense aligned to Apte's English sense with **no translation**, via shared SLP1 + `<ls>` citations; (2) sense granularity is a **lexicographic-family trait** (Apte enumerates ~22 senses, the MW/Petersburg family lumps into one run-on gloss) — a refinement H1 must control for. Next: homonym-block aggregation (MW), verb-marker grammar, then the indigenous + reverse clusters.
 
 ---
 

@@ -1,0 +1,258 @@
+[
+ {
+  "lemma": "gam",
+  "dict": "mw",
+  "year": 1899,
+  "n_senses": 1,
+  "method": "lumped",
+  "clauses": 81
+ },
+ {
+  "lemma": "gam",
+  "dict": "mw72",
+  "year": 1872,
+  "n_senses": 1,
+  "method": "lumped",
+  "clauses": 47
+ },
+ {
+  "lemma": "gam",
+  "dict": "pwg",
+  "year": 1855,
+  "n_senses": 42,
+  "method": "marked",
+  "clauses": null
+ },
+ {
+  "lemma": "gam",
+  "dict": "ap",
+  "year": 1957,
+  "n_senses": 1,
+  "method": "single",
+  "clauses": null
+ },
+ {
+  "lemma": "gam",
+  "dict": "ap90",
+  "year": 1890,
+  "n_senses": 14,
+  "method": "marked",
+  "clauses": null
+ },
+ {
+  "lemma": "gam",
+  "dict": "ben",
+  "year": 1866,
+  "n_senses": 23,
+  "method": "marked",
+  "clauses": null
+ },
+ {
+  "lemma": "gam",
+  "dict": "sch",
+  "year": 1928,
+  "n_senses": 1,
+  "method": "lumped",
+  "clauses": 4
+ },
+ {
+  "lemma": "dharma",
+  "dict": "mw",
+  "year": 1899,
+  "n_senses": 1,
+  "method": "lumped",
+  "clauses": 2
+ },
+ {
+  "lemma": "dharma",
+  "dict": "mw72",
+  "year": 1872,
+  "n_senses": 1,
+  "method": "lumped",
+  "clauses": 136
+ },
+ {
+  "lemma": "dharma",
+  "dict": "pwg",
+  "year": 1855,
+  "n_senses": 3,
+  "method": "marked",
+  "clauses": null
+ },
+ {
+  "lemma": "dharma",
+  "dict": "ap",
+  "year": 1957,
+  "n_senses": 23,
+  "method": "marked",
+  "clauses": null
+ },
+ {
+  "lemma": "dharma",
+  "dict": "ap90",
+  "year": 1890,
+  "n_senses": 22,
+  "method": "marked",
+  "clauses": null
+ },
+ {
+  "lemma": "dharma",
+  "dict": "ben",
+  "year": 1866,
+  "n_senses": 11,
+  "method": "marked",
+  "clauses": null
+ },
+ {
+  "lemma": "dharma",
+  "dict": "sch",
+  "year": 1928,
+  "n_senses": 1,
+  "method": "lumped",
+  "clauses": 4
+ },
+ {
+  "lemma": "dharma",
+  "dict": "bhs",
+  "year": 1953,
+  "n_senses": 4,
+  "method": "marked",
+  "clauses": null
+ },
+ {
+  "lemma": "rama",
+  "dict": "mw",
+  "year": 1899,
+  "n_senses": 1,
+  "method": "lumped",
+  "clauses": 3
+ },
+ {
+  "lemma": "rama",
+  "dict": "mw72",
+  "year": 1872,
+  "n_senses": 1,
+  "method": "lumped",
+  "clauses": 67
+ },
+ {
+  "lemma": "rama",
+  "dict": "pwg",
+  "year": 1855,
+  "n_senses": 4,
+  "method": "marked",
+  "clauses": null
+ },
+ {
+  "lemma": "rama",
+  "dict": "ap",
+  "year": 1957,
+  "n_senses": 4,
+  "method": "marked",
+  "clauses": null
+ },
+ {
+  "lemma": "rama",
+  "dict": "ap90",
+  "year": 1890,
+  "n_senses": 12,
+  "method": "marked",
+  "clauses": null
+ },
+ {
+  "lemma": "rama",
+  "dict": "ben",
+  "year": 1866,
+  "n_senses": 7,
+  "method": "marked",
+  "clauses": null
+ },
+ {
+  "lemma": "rama",
+  "dict": "bhs",
+  "year": 1953,
+  "n_senses": 1,
+  "method": "single",
+  "clauses": null
+ },
+ {
+  "lemma": "iti",
+  "dict": "mw",
+  "year": 1899,
+  "n_senses": 1,
+  "method": "lumped",
+  "clauses": 1
+ },
+ {
+  "lemma": "iti",
+  "dict": "mw72",
+  "year": 1872,
+  "n_senses": 1,
+  "method": "lumped",
+  "clauses": 1
+ },
+ {
+  "lemma": "iti",
+  "dict": "pwg",
+  "year": 1855,
+  "n_senses": 1,
+  "method": "marked",
+  "clauses": null
+ },
+ {
+  "lemma": "iti",
+  "dict": "ap",
+  "year": 1957,
+  "n_senses": 1,
+  "method": "single",
+  "clauses": null
+ },
+ {
+  "lemma": "iti",
+  "dict": "ap90",
+  "year": 1890,
+  "n_senses": 1,
+  "method": "single",
+  "clauses": null
+ },
+ {
+  "lemma": "iti",
+  "dict": "ben",
+  "year": 1866,
+  "n_senses": 5,
+  "method": "marked",
+  "clauses": null
+ },
+ {
+  "lemma": "bodhisattva",
+  "dict": "mw",
+  "year": 1899,
+  "n_senses": 1,
+  "method": "lumped",
+  "clauses": 5
+ },
+ {
+  "lemma": "bodhisattva",
+  "dict": "pwg",
+  "year": 1855,
+  "n_senses": 1,
+  "method": "single",
+  "clauses": null
+ },
+ {
+  "lemma": "bodhisattva",
+  "dict": "ap",
+  "year": 1957,
+  "n_senses": 2,
+  "method": "marked",
+  "clauses": null
+ },
+ {
+  "lemma": "bodhisattva",
+  "dict": "bhs",
+  "year": 1953,
+  "n_senses": 1,
+  "method": "single",
+  "clauses": null
+ }
+]

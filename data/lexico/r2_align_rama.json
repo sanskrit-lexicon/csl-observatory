@@ -1,0 +1,24 @@
+{
+ "lemma": "rama",
+ "sense_counts": {
+  "mw": 1,
+  "mw72": 1,
+  "pwg": 4,
+  "ap": 4,
+  "ap90": 12,
+  "ben": 7,
+  "bhs": 1
+ },
+ "top_aligned": [
+  {
+   "a": "mw#bundle",
+   "b": "pwg#1)",
+   "jaccard": 0.034,
+   "shared": [
+    "ls:AV."
+   ],
+   "a_text": "mf(A/)n. (prob. ‘causing rest’, and in most meanings fr. √ r",
+   "b_text": "adj. (f. A) dunkelfarbig, schwarz NIR. 12,13. AK. 3,4,23,143"
+  }
+ ]
+}

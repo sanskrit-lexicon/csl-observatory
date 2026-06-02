@@ -1,0 +1,296 @@
+{
+ "lemma": "gam",
+ "sense_counts": {
+  "mw": 1,
+  "mw72": 1,
+  "pwg": 42,
+  "ap": 1,
+  "ap90": 14,
+  "ben": 23,
+  "sch": 1
+ },
+ "top_aligned": [
+  {
+   "a": "mw#bundle",
+   "b": "pwg#1)",
+   "jaccard": 0.043,
+   "shared": [
+    "ls:AV.",
+    "ls:TS.",
+    "ls:VS.",
+    "s:Nganti",
+    "s:gAmaya",
+    "s:gamayati",
+    "s:gamizati",
+    "s:ja",
+    "s:jaNgamIti",
+    "s:jaNgamyate",
+    "s:ji"
+   ],
+   "a_text": "Ved. cl. 1. P. ga/mati (Naigh.; Subj. gamam, ga/mat [gamAtas",
+   "b_text": "Jmd (acc.) zum Gehen oder Kommen veranlassen; herbeiführen; "
+  },
+  {
+   "a": "pwg#1)",
+   "b": "ap90#5",
+   "jaccard": 0.04,
+   "shared": [
+    "ls:R.",
+    "s:na"
+   ],
+   "a_text": "einen Umgang halten, einen Umlauf vollbringen; seine Zeit an",
+   "b_text": "To go to the state or condition of, become, undergo, suffer,"
+  },
+  {
+   "a": "pwg#1)",
+   "b": "ap90#4",
+   "jaccard": 0.039,
+   "shared": [
+    "ls:R.",
+    "s:kAlo"
+   ],
+   "a_text": "gehen wollen, im [Page2-0671] Begriff sein zu gehen, zu gela",
+   "b_text": "To pass, pass away, elapse (as time); dinezu gacCatsu R. 3. "
+  },
+  {
+   "a": "pwg#1)",
+   "b": "ap90#5",
+   "jaccard": 0.038,
+   "shared": [
+    "ls:R.",
+    "s:na"
+   ],
+   "a_text": "zurückkehren TBR. 1,3,10,1. GOBH. 3,6,1. MBH. 2,1181. 2490. ",
+   "b_text": "To go to the state or condition of, become, undergo, suffer,"
+  },
+  {
+   "a": "pwg#1)",
+   "b": "ap90#4",
+   "jaccard": 0.038,
+   "shared": [
+    "ls:H.",
+    "ls:R."
+   ],
+   "a_text": "in die Höhe gehen, aufgehen, sich erheben, aufschiessen; von",
+   "b_text": "To pass, pass away, elapse (as time); dinezu gacCatsu R. 3. "
+  },
+  {
+   "a": "pwg#1)",
+   "b": "ap90#4",
+   "jaccard": 0.037,
+   "shared": [
+    "ls:R."
+   ],
+   "a_text": "herbeikommen, hinzutreten zu: gItESca stutisaMyuktEH prItyA ",
+   "b_text": "To pass, pass away, elapse (as time); dinezu gacCatsu R. 3. "
+  },
+  {
+   "a": "pwg#1)",
+   "b": "ap90#4",
+   "jaccard": 0.033,
+   "shared": [
+    "ls:H.",
+    "ls:R."
+   ],
+   "a_text": "herbeikommen, hinzugehen, zu Jmd treten, gehen zu, nach: tat",
+   "b_text": "To pass, pass away, elapse (as time); dinezu gacCatsu R. 3. "
+  },
+  {
+   "a": "pwg#1)",
+   "b": "sch#bundle",
+   "jaccard": 0.033,
+   "shared": [
+    "ls:ṚV."
+   ],
+   "a_text": "weggehen, entgehen, entweichen: yadvo\\ mana\\H parA^gata\\M ya",
+   "b_text": "mit abhi Kaus. auch: zukommen lassen, Sāy. zu ṚV. 9,1,4. -Mi"
+  },
+  {
+   "a": "pwg#1)",
+   "b": "ap90#5",
+   "jaccard": 0.033,
+   "shared": [
+    "ls:R.",
+    "s:na"
+   ],
+   "a_text": "entgegengehen: Bavatu pratigamizyAmastAvat ŚĀK. 18,10. PAÑCA",
+   "b_text": "To go to the state or condition of, become, undergo, suffer,"
+  },
+  {
+   "a": "mw#bundle",
+   "b": "pwg#a)",
+   "jaccard": 0.031,
+   "shared": [
+    "ls:AV.",
+    "ls:R.",
+    "ls:VS.",
+    "s:DaraRIM",
+    "s:dozeRa",
+    "s:gacCati",
+    "s:gacCet",
+    "s:gamizyati",
+    "s:gamyate",
+    "s:gatvA",
+    "s:jagAma",
+    "s:prati"
+   ],
+   "a_text": "Ved. cl. 1. P. ga/mati (Naigh.; Subj. gamam, ga/mat [gamAtas",
+   "b_text": "mit dem acc. P. 2,3,12. ya\\maM ha^ ya\\jYo ga^cCati ṚV. 10,14"
+  },
+  {
+   "a": "pwg#1)",
+   "b": "sch#bundle",
+   "jaccard": 0.029,
+   "shared": [
+    "ls:ṚV."
+   ],
+   "a_text": "in Etwas eingehen, bei Jmd eintreten: de\\vAn AV. 12,4,31. 3,",
+   "b_text": "mit abhi Kaus. auch: zukommen lassen, Sāy. zu ṚV. 9,1,4. -Mi"
+  },
+  {
+   "a": "pwg#1)",
+   "b": "ap90#5",
+   "jaccard": 0.029,
+   "shared": [
+    "ls:R.",
+    "s:na"
+   ],
+   "a_text": "herbeikommen, hinzugehen, zu Jmd treten, gehen zu, nach: tat",
+   "b_text": "To go to the state or condition of, become, undergo, suffer,"
+  },
+  {
+   "a": "pwg#1)",
+   "b": "ap90#5",
+   "jaccard": 0.029,
+   "shared": [
+    "ls:R."
+   ],
+   "a_text": "herbeikommen, hinzutreten zu: gItESca stutisaMyuktEH prItyA ",
+   "b_text": "To go to the state or condition of, become, undergo, suffer,"
+  },
+  {
+   "a": "pwg#1)",
+   "b": "ap90#4",
+   "jaccard": 0.028,
+   "shared": [
+    "ls:R."
+   ],
+   "a_text": "herankommen, hintreten zu, nahen: hantuM samaDigacCati R. 2,",
+   "b_text": "To pass, pass away, elapse (as time); dinezu gacCatsu R. 3. "
+  },
+  {
+   "a": "pwg#a)",
+   "b": "ap90#4",
+   "jaccard": 0.028,
+   "shared": [
+    "ls:H."
+   ],
+   "a_text": "angränzend, in der Nähe befindlich: upagatA daSa yezAm = upa",
+   "b_text": "To pass, pass away, elapse (as time); dinezu gacCatsu R. 3. "
+  },
+  {
+   "a": "pwg#1)",
+   "b": "ap90#5",
+   "jaccard": 0.027,
+   "shared": [
+    "ls:R.",
+    "s:na"
+   ],
+   "a_text": "herbeikommen, zu Jmd oder irgendwohin kommen, — treten, besu",
+   "b_text": "To go to the state or condition of, become, undergo, suffer,"
+  },
+  {
+   "a": "pwg#a)",
+   "b": "ap90#4",
+   "jaccard": 0.026,
+   "shared": [
+    "ls:R."
+   ],
+   "a_text": "Gang, Art zu gehen: gatena BUmiM pratikampayan MBH. 4,297. v",
+   "b_text": "To pass, pass away, elapse (as time); dinezu gacCatsu R. 3. "
+  },
+  {
+   "a": "pwg#1)",
+   "b": "ap90#4",
+   "jaccard": 0.026,
+   "shared": [
+    "ls:R."
+   ],
+   "a_text": "zusammen herbeikommen zu; sich verbinden; hinzutreten zu: sa",
+   "b_text": "To pass, pass away, elapse (as time); dinezu gacCatsu R. 3. "
+  },
+  {
+   "a": "pwg#1)",
+   "b": "ap90#5",
+   "jaccard": 0.024,
+   "shared": [
+    "ls:R.",
+    "s:na"
+   ],
+   "a_text": "herbeikommen, zu Jmd oder irgendwohin kommen, besuchen: upa\\",
+   "b_text": "To go to the state or condition of, become, undergo, suffer,"
+  },
+  {
+   "a": "pwg#1)",
+   "b": "ap90#6",
+   "jaccard": 0.024,
+   "shared": [
+    "s:yo"
+   ],
+   "a_text": "einen Umgang halten, einen Umlauf vollbringen; seine Zeit an",
+   "b_text": "To cohabit, have sexual intercourse with; guroH sutAM… yo ga"
+  },
+  {
+   "a": "mw#bundle",
+   "b": "ap90#5",
+   "jaccard": 0.023,
+   "shared": [
+    "ls:R.",
+    "s:gacCati",
+    "s:jagAma"
+   ],
+   "a_text": "Ved. cl. 1. P. ga/mati (Naigh.; Subj. gamam, ga/mat [gamAtas",
+   "b_text": "To go to the state or condition of, become, undergo, suffer,"
+  },
+  {
+   "a": "pwg#1)",
+   "b": "ap90#5",
+   "jaccard": 0.023,
+   "shared": [
+    "ls:R."
+   ],
+   "a_text": "herankommen, hintreten zu, nahen: hantuM samaDigacCati R. 2,",
+   "b_text": "To go to the state or condition of, become, undergo, suffer,"
+  },
+  {
+   "a": "pwg#1)",
+   "b": "ap90#4",
+   "jaccard": 0.023,
+   "shared": [
+    "ls:R."
+   ],
+   "a_text": "einen Umgang halten, einen Umlauf vollbringen; seine Zeit an",
+   "b_text": "To pass, pass away, elapse (as time); dinezu gacCatsu R. 3. "
+  },
+  {
+   "a": "pwg#a)",
+   "b": "ap90#5",
+   "jaccard": 0.022,
+   "shared": [
+    "ls:R."
+   ],
+   "a_text": "Gang, Art zu gehen: gatena BUmiM pratikampayan MBH. 4,297. v",
+   "b_text": "To go to the state or condition of, become, undergo, suffer,"
+  },
+  {
+   "a": "pwg#1)",
+   "b": "ap90#5",
+   "jaccard": 0.022,
+   "shared": [
+    "s:na"
+   ],
+   "a_text": "in Etwas eingehen, bei Jmd eintreten: de\\vAn AV. 12,4,31. 3,",
+   "b_text": "To go to the state or condition of, become, undergo, suffer,"
+  }
+ ]
+}

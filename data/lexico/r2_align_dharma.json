@@ -1,0 +1,141 @@
+{
+ "lemma": "dharma",
+ "sense_counts": {
+  "mw": 1,
+  "mw72": 1,
+  "pwg": 3,
+  "ap": 23,
+  "ap90": 22,
+  "ben": 11,
+  "sch": 1,
+  "bhs": 4
+ },
+ "top_aligned": [
+  {
+   "a": "ap#4",
+   "b": "ap90#4",
+   "jaccard": 1.0,
+   "shared": [
+    "ls:Ms.",
+    "ls:Ś.",
+    "s:ezaH",
+    "s:zazWAMSavftterapi"
+   ],
+   "a_text": "Duty, prescribed course of conduct; zazWAMSavftterapi Darma ",
+   "b_text": "Duty, prescribed course of conduct; zazWAMSavftterapi Darma "
+  },
+  {
+   "a": "ap#3",
+   "b": "ap90#3",
+   "jaccard": 0.571,
+   "shared": [
+    "ls:H.",
+    "ls:Ku.",
+    "s:eka",
+    "s:eva",
+    "s:niDane'pyanuyAti",
+    "s:suhfdDarmo",
+    "s:trivarga",
+    "s:yaH"
+   ],
+   "a_text": "Religious or moral merit, virtue, righteousness, good works ",
+   "b_text": "Religious or moral merit, virtue, righteousness, good works "
+  },
+  {
+   "a": "ap#9",
+   "b": "ap90#9",
+   "jaccard": 0.556,
+   "shared": [
+    "ls:Pt.",
+    "s:DarmEkyaM",
+    "s:buDAH",
+    "s:dIpakaM",
+    "s:varRyAvarRyAnAM"
+   ],
+   "a_text": "An essential quality, peculiarity, characteristic property, ",
+   "b_text": "An essential quality, peculiarity, characteristic property, "
+  },
+  {
+   "a": "ap#8",
+   "b": "ap90#8",
+   "jaccard": 0.429,
+   "shared": [
+    "ls:Māl.",
+    "s:jIva",
+    "s:prARi"
+   ],
+   "a_text": "Nature. disposition, character; utpatsyate'sti mama ko'pi sa",
+   "b_text": "Nature, disposition, character; Māl. 1. 6; prARi˚, jIva˚."
+  },
+  {
+   "a": "ap#23",
+   "b": "ben#10",
+   "jaccard": 0.2,
+   "shared": [
+    "ls:Rām."
+   ],
+   "a_text": "Mastery, great skill; divyAstraguRasaMpannaH paraM DarmaM ga",
+   "b_text": "Personified justice, Rām. 1, 1, 19."
+  },
+  {
+   "a": "ap#23",
+   "b": "ben#8",
+   "jaccard": 0.167,
+   "shared": [
+    "ls:Rām."
+   ],
+   "a_text": "Mastery, great skill; divyAstraguRasaMpannaH paraM DarmaM ga",
+   "b_text": "Resem- blance, Rām. 2, 123, 14 Gorr. (dharmāt, Like)."
+  },
+  {
+   "a": "pwg#b)",
+   "b": "ap#3",
+   "jaccard": 0.02,
+   "shared": [
+    "ls:H.",
+    "s:eka",
+    "s:eva",
+    "s:suhfdDarmo",
+    "s:yaH"
+   ],
+   "a_text": "Gesetz, Brauch, Vorschrift, Regel; = puRya AK. 1,1,4,2. 3,4,",
+   "b_text": "Religious or moral merit, virtue, righteousness, good works "
+  },
+  {
+   "a": "pwg#b)",
+   "b": "ap90#3",
+   "jaccard": 0.02,
+   "shared": [
+    "ls:H.",
+    "s:eka",
+    "s:eva",
+    "s:suhfdDarmo",
+    "s:yaH"
+   ],
+   "a_text": "Gesetz, Brauch, Vorschrift, Regel; = puRya AK. 1,1,4,2. 3,4,",
+   "b_text": "Religious or moral merit, virtue, righteousness, good works "
+  },
+  {
+   "a": "pwg#b)",
+   "b": "ap#4",
+   "jaccard": 0.008,
+   "shared": [
+    "s:ezaH",
+    "s:zazWAMSavftterapi"
+   ],
+   "a_text": "Gesetz, Brauch, Vorschrift, Regel; = puRya AK. 1,1,4,2. 3,4,",
+   "b_text": "Duty, prescribed course of conduct; zazWAMSavftterapi Darma "
+  },
+  {
+   "a": "pwg#b)",
+   "b": "ap90#4",
+   "jaccard": 0.008,
+   "shared": [
+    "s:ezaH",
+    "s:zazWAMSavftterapi"
+   ],
+   "a_text": "Gesetz, Brauch, Vorschrift, Regel; = puRya AK. 1,1,4,2. 3,4,",
+   "b_text": "Duty, prescribed course of conduct; zazWAMSavftterapi Darma "
+  }
+ ]
+}
