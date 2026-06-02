@@ -58,7 +58,28 @@ The **Apte family** (AP/AP90) enumerates finely (~22); the **Petersburg/MW famil
 
 **Remaining (honest):** the AE reverse index over-matches very common roots (gam → 144 English senses — fine for distinctive words, noisy for `go`-class verbs); SKD headword coverage is partial (works for `Darmma`/`rAma`); indigenous sense-splitting is coarse (`iti`-units); verbs remain coarser than nominals.
 
+## H1 — does sense granularity inflate over time? (family-controlled, full corpus)
+
+[`scripts/lexico/h1_analysis.py`](../scripts/lexico/h1_analysis.py) → [`data/lexico/r2_h1.json`](../data/lexico/r2_h1.json) + `r2_h1.html` (SVG scatter, a Paper-L figure). Metric: **sense-units per entry** over each dictionary's *whole* corpus (explicit markers for enumerating dicts; `;`-meaning-clauses, citations stripped, for lumpers).
+
+**Result: H1 (pure temporal inflation) is NOT supported.** Across 11 general dictionaries 1822–1957, the year-trend is essentially flat — **Pearson r = 0.06** (slope ≈ 0.001 units/year). The variance is captured by **lexicographic family**:
+
+| Family | mean units/entry |
+|---|---|
+| Benfey | 2.53 |
+| Apte | 2.35 |
+| Monier-Williams | 2.06 |
+| Wilson | 1.80 |
+| Cappeller | 1.35 |
+| Petersburg | 1.15 |
+| indigenous | 1.09 |
+
+**Caveat (recorded):** the per-entry metric is confounded by **headword-splitting policy** — MW splits compounds into ~286k separate short entries, diluting its units/entry (1.22) below MW72 (2.90) despite the same family. That's structural, not temporal, and doesn't change the no-trend conclusion. A fixed simple-lemma panel removes it; corroboration from the anchor lemmas — the enumerating dicts show **no** inflation 1866→1957 (BEN dharma=11, AP90=22, AP=23).
+
+**For Paper L:** sense granularity is a **tradition / marking-style trait, to be controlled for** (a covariate), not a function of date — a clean, defensible result, and a useful corrective to the naïve "later = finer" intuition.
+
 ## Next
 
 - Tighten the AE reverse index (rank by equivalent-position); verb-marker grammar; finer indigenous splitting.
+- H1 rigour: a fixed simple-lemma panel (≥20 nouns) to remove the headword-splitting confound entirely.
 - The cross-language + cross-cluster alignment feeds the **sense-alignment view** (R1 dashboard page) and the **divergence map** (maker worklist); the granularity-by-family result is the empirical seed for **H1** (Paper L), measured family-controlled next.
