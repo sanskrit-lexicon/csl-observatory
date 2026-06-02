@@ -119,6 +119,14 @@ Plot.plot({
 })
 ```
 
+## Sense-level structure (R2)
+
+Beyond shared *headwords*, the [R2 sense splitter](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/lexico/sense_split.py) breaks each entry into individual **senses** and aligns them across dictionaries by the **Sanskrit material they share** — SLP1 forms, `<ls>` citations, indigenous `…0` sigla — with **no translation**. This aligns a German PWG sense to an English Apte sense, and a Western sense to an indigenous *Vācaspatya* one, through Sanskrit alone (the "anchor on Sanskrit" method).
+
+**[▶ Open the interactive sense-alignment explorer](/r2-explorer.html)** — pick a headword (`dharma`, `rāma`, …) and browse its senses across up to 13 dictionaries, with the Sanskrit-anchored cross-tradition alignments highlighted.
+
+**H1 — does sense granularity inflate over time?** Measured over the full corpus of 11 general dictionaries (1822–1957): **no.** The year-trend is essentially flat (Pearson *r* = 0.06). Sense granularity is a **lexicographic-family trait** — Benfey/Apte enumerate ~2.5 sense-units per entry, Monier-Williams/Petersburg lump to ~1 — not a function of date, so Paper L treats it as a covariate to control for. [**See the H1 figure**](/r2-h1.html) · [R2_FINDINGS.md](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/R2_FINDINGS.md).
+
 ## What this means for the papers
 
 - **Paper M** (methodology): the unified inheritance score (this lemma signal + convention fingerprints + forensic typos) recovers known CDSL lineage at >90% confidence on the strongest edges. Validates the framework.
