@@ -1,6 +1,7 @@
 # CDSL Research & Practitioner Layer — Roadmap
 
-**Version**: 1.0 · **Date**: 2026-05-30 · **Owner**: M. Gasūns + Claude
+**Version**: 1.1 · **Date**: 2026-05-31 · **Owner**: M. Gasūns + Claude
+*v1.1: R2 sense-splitter design decided (§5.1) — heuristic per-dict, full corpus, Sanskrit-anchored alignment; A6/A7 closed.*
 **Companion to**: [`OBSERVATORY_DESIGN.md`](OBSERVATORY_DESIGN.md) (project measurement), [`LEXICOGRAPHY_ROADMAP.md`](LEXICOGRAPHY_ROADMAP.md) (genealogy/phylogeny), [`MICROSTRUCTURE-MACROSTRUCTURE.md`](MICROSTRUCTURE-MACROSTRUCTURE.md) (structure typology), [`METALEXICOGRAPHY_ROADMAP.md`](METALEXICOGRAPHY_ROADMAP.md).
 
 This stream is **additive**. The existing program is researcher-facing (papers M/L/H + a 50-viz catalog). This roadmap turns those analyses into a **practitioner layer** — usable tools for three audiences — and adds new testable hypotheses and visualizations. Two working prototypes ship with it.
@@ -51,7 +52,7 @@ Samples N entries **stratified across the whole alphabet** of all 43 canonical s
 | **H4** | **Each dict has a measurable semantic-field bias** (ritual / grammar / flora / law / medicine). | gloss-keyword classification → per-dict field distribution | researchers, students | proposed |
 | **H5** | **"Ghost entries"** — shared OCR/typo anomalies — are both a lineage fingerprint **and** an editor QA flag. | rarity-weighted shared-anomaly detection (extends L3 forensic) | makers, historians | proposed |
 | **H6** | **Structural register (citation × grammar-marking) predicts tradition family.** | cluster the macro profile (§1.2); compare to the genealogy tree | researchers | **prototype supports it** |
-| **H7** | **First-N sampling materially biases structure metrics** (early-alphabet entries are shorter/sparser). | compare first-N vs random vs stratified samples on the same dicts | methodology | testable now (see DECISIONS A7) |
+| **H7** | **First-N sampling materially biases structure metrics** (early-alphabet entries are shorter/sparser). | compare first-N vs random vs stratified samples on the same dicts | methodology | **✅ A7 resolved 2026-05-31** — full corpus chosen (bias moot for production); the §1.2 prototype already confirmed the first-N skew empirically |
 
 ---
 
@@ -100,6 +101,23 @@ The macro profile and hypotheses feed the existing **Papers L / M / H** directly
 
 The **sense splitter (R2)** is the critical dependency — it gates H1–H3, the sense-alignment/divergence views, and the maker worklist. Recommended first real build after R0.
 
+### 5.1 R2 — decided design (2026-05-31)
+
+Decisions (M.G.): a **heuristic per-dict** splitter (deterministic, **no LLM**), run on the **full corpus**, with cross-language sense comparison **anchored on Sanskrit** rather than gloss translation. Anchor/test lemmas: **`gam`, `dharma` (Darma), `rāma`, `iti`, `bodhisattva` (BHS)** — chosen to exercise polysemy, proper-noun/homonym handling, the indigenous citation-boundary parser, and the Buddhist register respectively.
+
+**Sense-marker grammars by structural cluster.** The §1.2 structural clusters double as parser families; each dict's exact markers are now documented in its repo `DATA_DICTIONARY.md` and the **M3 `CLAUDE.md` data-format example** (one real annotated first-entry per dict — produced 2026-05-31), which is the per-dict format study R2 depends on.
+
+| Cluster | Dicts | Sense-boundary signal | Sanskrit anchor |
+|---|---|---|---|
+| **Western-tagged** | PWG, PW, PWK, SCH, BEN, CAE, CCS, MW, MW72, AP, AP90, BOP, MD, BHS, STC, KRM, BUR, WIL | Numbered sense markers (`.²N`, bold numerals), `<lex>` category shifts, `;`-delimited sub-glosses | cited SLP1 forms + cognates in the gloss |
+| **Indigenous-quotation** | VCP, SKD | Sanskrit-synonym glosses + `iti`-closed authority quotations; senses run together — synonym blocks are the units (hardest cluster) | the synonym glosses are *already* Sanskrit |
+| **Reverse-direction (EN→SA)** | ApteES/AE (+ future MWE 1851, BOR 1877) | Circled `Ⓐ Ⓑ …` markers + numbered `{@N@}` sub-senses | the `<s>…</s>` Sanskrit equivalents |
+| **Index / catalogue** | ACC, VEI, MCI, INM, SNP, IEG | Not word-senses — entries are references/cross-refs → **out of scope** for sense-splitting (handle as reference-instances) | n/a |
+
+**Sanskrit-anchored alignment (A6).** Each split sense gets a **Sanskrit fingerprint** — the set of SLP1 tokens it carries (synonyms, cited forms, cognates, the headword). Cross-dict sense alignment is the overlap (Jaccard) of these fingerprints — **language-agnostic and deterministic**, with no German/French/English translation step. This works because every tradition exposes Sanskrit material to anchor on: indigenous dicts gloss directly in Sanskrit, reverse-direction dicts give Sanskrit equivalents, and Western dicts cite Sanskrit forms and cognates.
+
+**Build order:** Western-tagged first (most dicts, cleanest markers, covers the known inheritance edges PWG→MW72→MW and AP90→AP that H1–H3 need) → reverse-direction (small, clean) → indigenous-quotation (hardest) → indexes excluded. **Output:** a sense-level corpus `data/lexico/senses_<dict>.jsonl` (one record per sense: dict, lemma, sense-index, gloss-span, Sanskrit-fingerprint), feeding the sense-alignment view and the divergence map (the maker worklist).
+
 ---
 
 ## 6. Caveats & method notes
@@ -112,7 +130,11 @@ The **sense splitter (R2)** is the critical dependency — it gates H1–H3, the
 
 ## 7. Open decisions (→ [`DECISIONS_NEEDED.md`](DECISIONS_NEEDED.md))
 
-A6 (translation method for cross-language sense alignment), A7 (sampling strategy + which test lemmas beyond `gam`), plus: which corpus to join for frequency/difficulty (DCS?), and whether the practitioner layer lives in the main dashboard or a companion site (cf. LEXICOGRAPHY_ROADMAP Phase L10).
+- **✅ A6 resolved 2026-05-31** — cross-language alignment **anchors on Sanskrit** (SLP1 fingerprints), no gloss translation (§5.1).
+- **✅ A7 resolved 2026-05-31** — **full-corpus** measurement; anchor lemmas `gam`/`dharma`/`rāma`/`iti`/`bodhisattva` (§5.1).
+- **✅ R2 method resolved 2026-05-31** — **heuristic per-dict** splitter, deterministic, no LLM (§5.1).
+
+**Still open:** which corpus to join for frequency/difficulty (DCS?); whether the practitioner layer lives in the main dashboard or a companion site (cf. LEXICOGRAPHY_ROADMAP Phase L10); and hypothesis-build priority among H1–H5 once R2 lands.
 
 ---
 *Prototypes: `scripts/lexico/micro_entry.py`, `scripts/lexico/macro_profile.py`. Data: `data/lexico/`.*

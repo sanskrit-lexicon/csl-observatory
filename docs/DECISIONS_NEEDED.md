@@ -15,8 +15,9 @@ Consolidated list of items that are **blocked on a human** (a decision, a creden
 | A3 | **LICENSE full text vs pointer** | The 6 documented dict repos got pointer-style CC-BY-SA-4.0 LICENSEs. Want the full legalcode (for GitHub auto-detection)? | Handoff full-runbook gaps |
 | A4 | **Scan-only dicts** (AE, IEG, MWE, PD, PE, PGN, SNP, YAT — 8, not on GitHub) | Ingest via Cologne web-scrape (~1 day each) or omit with a "future work" note? | LEXICOGRAPHY_ROADMAP §11.1 |
 | A5 | **Add PD** (Deccan College encyclopedic dict, 1976) | Major modern dict; would strengthen Paper L; needs Cologne coordination. Include? | LEXICOGRAPHY_ROADMAP §11.2 |
-| A6 | **Translation method (Phase L7)** | LLM-assisted (fast, fuzzy) vs strict bilingual-dictionary (slow, deterministic)? | LEXICOGRAPHY_ROADMAP §11.6 |
-| A7 | **Microstructure sampling** | Measure every entry, or sample (10% / specific letter-bands / a fixed lemma set)? Which test lemmas beyond `gam` (e.g. `rāma`, `iti`, a BHS term)? | MICROSTRUCTURE-MACROSTRUCTURE §6 |
+| A6 | **Translation method (Phase L7)** | ✅ **Resolved 2026-05-31** — neither: cross-language sense alignment **anchors on Sanskrit** (SLP1 fingerprints shared by every tradition), so no gloss translation is needed. See [`RESEARCH_LAYER_ROADMAP.md`](RESEARCH_LAYER_ROADMAP.md) §5.1. | LEXICOGRAPHY_ROADMAP §11.6 |
+| A7 | **Microstructure sampling** | ✅ **Resolved 2026-05-31** — **full corpus** (R2 is a one-time parse; removes sampling bias). Anchor lemmas: `gam`, `dharma`, `rāma`, `iti`, `bodhisattva`. See RESEARCH_LAYER_ROADMAP §5.1. | MICROSTRUCTURE-MACROSTRUCTURE §6 |
+| A8 | **R2 sense-splitter method** | ✅ **Resolved 2026-05-31** — **heuristic per-dict**, deterministic, no LLM (per-cluster sense-marker grammars). RESEARCH_LAYER_ROADMAP §5.1. | RESEARCH_LAYER_ROADMAP §5.1 |
 
 ## B. Identifications / facts only you can confirm
 
