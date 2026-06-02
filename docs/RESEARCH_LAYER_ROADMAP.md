@@ -1,7 +1,8 @@
 # CDSL Research & Practitioner Layer — Roadmap
 
-**Version**: 1.1 · **Date**: 2026-05-31 · **Owner**: M. Gasūns + Claude
+**Version**: 1.2 · **Date**: 2026-05-31 · **Owner**: M. Gasūns + Claude
 *v1.1: R2 sense-splitter design decided (§5.1) — heuristic per-dict, full corpus, Sanskrit-anchored alignment; A6/A7 closed.*
+*v1.2: round-2 decisions (§7) — DCS frequency join (local dump), main-dashboard hosting, H1 first, Amarakośa-native field scheme.*
 **Companion to**: [`OBSERVATORY_DESIGN.md`](OBSERVATORY_DESIGN.md) (project measurement), [`LEXICOGRAPHY_ROADMAP.md`](LEXICOGRAPHY_ROADMAP.md) (genealogy/phylogeny), [`MICROSTRUCTURE-MACROSTRUCTURE.md`](MICROSTRUCTURE-MACROSTRUCTURE.md) (structure typology), [`METALEXICOGRAPHY_ROADMAP.md`](METALEXICOGRAPHY_ROADMAP.md).
 
 This stream is **additive**. The existing program is researcher-facing (papers M/L/H + a 50-viz catalog). This roadmap turns those analyses into a **practitioner layer** — usable tools for three audiences — and adds new testable hypotheses and visualizations. Two working prototypes ship with it.
@@ -49,7 +50,7 @@ Samples N entries **stratified across the whole alphabet** of all 43 canonical s
 | **H1** | **Sense-granularity inflates over editorial time** — later dicts split senses that earlier ones lump. | meanings-per-entry (sense splitter) vs publication year, on shared lemmas | researchers, makers | needs sense parsing |
 | **H2** | **Citation density predicts a sense's survival** into later dictionaries. | for shared senses, correlate ancestor `<ls>` count with presence in descendants | researchers | needs sense parsing + lineage (have L0) |
 | **H3** | **Polysemy drift** — derivative dicts *add* net senses rather than faithfully copying. | net sense delta along known inheritance edges (PWG→MW72→MW, AP90→AP) | researchers, historians | needs sense parsing |
-| **H4** | **Each dict has a measurable semantic-field bias** (ritual / grammar / flora / law / medicine). | gloss-keyword classification → per-dict field distribution | researchers, students | proposed |
+| **H4** | **Each dict has a measurable semantic-field bias** (ritual / grammar / flora / law / medicine). | classify glosses into **Amarakośa-native topical fields** → per-dict field distribution | researchers, students | scheme decided (Amarakośa-native) |
 | **H5** | **"Ghost entries"** — shared OCR/typo anomalies — are both a lineage fingerprint **and** an editor QA flag. | rarity-weighted shared-anomaly detection (extends L3 forensic) | makers, historians | proposed |
 | **H6** | **Structural register (citation × grammar-marking) predicts tradition family.** | cluster the macro profile (§1.2); compare to the genealogy tree | researchers | **prototype supports it** |
 | **H7** | **First-N sampling materially biases structure metrics** (early-alphabet entries are shorter/sparser). | compare first-N vs random vs stratified samples on the same dicts | methodology | **✅ A7 resolved 2026-05-31** — full corpus chosen (bias moot for production); the §1.2 prototype already confirmed the first-N skew empirically |
@@ -95,9 +96,9 @@ The macro profile and hypotheses feed the existing **Papers L / M / H** directly
 | **R0** (done) | Two prototypes + this roadmap | — | proof of concept |
 | **R1** | Productize the micro explorer (any lemma, web) | parse + index headwords (have `sanhw1`) | students |
 | **R2** | **Sense splitter** per dict format → sense-level corpus | dict format study (have micro typology) | H1–H3, sense-alignment, divergence map |
-| **R3** | Semantic-field classifier | gloss-keyword lexicon / LLM tagging | H4, semantic treemap |
+| **R3** | Semantic-field classifier (Amarakośa-native) | Amarakośa topical hierarchy (`AMAR`) + gloss-keyword match | H4, semantic treemap |
 | **R4** | Maker QA worklist | R2 + encoding guard + anomaly detectors | dictionary makers |
-| **R5** | Student learning paths + corpus frequency join (DCS) | R1 + DCS link | students |
+| **R5** | Student learning paths + corpus frequency join (DCS) | R1 + DCS local dump (`GitHub/DCS`) | students |
 
 The **sense splitter (R2)** is the critical dependency — it gates H1–H3, the sense-alignment/divergence views, and the maker worklist. Recommended first real build after R0.
 
@@ -134,7 +135,13 @@ Decisions (M.G.): a **heuristic per-dict** splitter (deterministic, **no LLM**),
 - **✅ A7 resolved 2026-05-31** — **full-corpus** measurement; anchor lemmas `gam`/`dharma`/`rāma`/`iti`/`bodhisattva` (§5.1).
 - **✅ R2 method resolved 2026-05-31** — **heuristic per-dict** splitter, deterministic, no LLM (§5.1).
 
-**Still open:** which corpus to join for frequency/difficulty (DCS?); whether the practitioner layer lives in the main dashboard or a companion site (cf. LEXICOGRAPHY_ROADMAP Phase L10); and hypothesis-build priority among H1–H5 once R2 lands.
+**Round 2 — resolved 2026-05-31:**
+- **Frequency/difficulty corpus** → **DCS** (Digital Corpus of Sanskrit), joined on SLP1 headword; a **local dump is available at `GitHub/DCS`** (+ `VisualDCS`), so R5 needs no network. Gives per-lemma frequency + earliest-attestation era.
+- **Practitioner-layer hosting** → a **page in the main Observable dashboard** (client-side interactive; the ~10 MB `sanhw1` index loads in-browser). No new infra — leverages the existing static-site stack. (Cologne integration deferred to DNS item C3.)
+- **First hypothesis after R2** → **H1 (sense inflation over editorial time)** — the lead figure / core of Paper L's sense-evolution section.
+- **Semantic-field scheme (H4 / R3)** → **Amarakośa-native**: use the Amarakośa's own topical hierarchy (from the `AMAR` repo) as the field taxonomy — indigenous, culturally grounded, and self-validating against a classical Sanskrit thesaurus.
+
+**Still open:** anomaly/ghost-entry detector scope (H5); whether the H1 study is its own short paper or a Paper-L section; co-author assignment for the sense-evolution work.
 
 ---
-*Prototypes: `scripts/lexico/micro_entry.py`, `scripts/lexico/macro_profile.py`. Data: `data/lexico/`.*
+*Prototypes: `scripts/lexico/micro_entry.py`, `scripts/lexico/macro_profile.py`. Data: `data/lexico/`. Round-2 decisions (DCS / dashboard / H1 / Amarakośa-native) recorded 2026-05-31.*
