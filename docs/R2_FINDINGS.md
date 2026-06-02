@@ -97,6 +97,6 @@ The headline is **forensic**: Śabda-Sāgara's sense glosses are **82% word-iden
 ## Next
 
 - Tighten the AE reverse index (rank by equivalent-position); verb-marker grammar; finer indigenous splitting.
-- H1 rigour: a fixed simple-lemma panel (≥20 nouns) to remove the headword-splitting confound entirely.
+- ✅ **Done** — H1 de-confounded on a fixed 30-noun panel (`h1_panel.py` → `r2_h1_panel.{json,html}`): the year-trend stays flat (Pearson *r* = 0.01) after removing the headword-splitting artifact, confirming H1 is unsupported. (A weak *r* = 0.56 among the 5 explicit-marking dicts is n=5 non-significant + convention-confounded.)
 - These results (H1 tradition-effect, H2 citation-survival, H3 verbatim-copy) are the empirical core of the **standalone methods paper** ([PUBLICATIONS.md](PUBLICATIONS.md)) on Sanskrit-anchored cross-language sense alignment.
 - The cross-language + cross-cluster alignment feeds the **sense-alignment view** (R1 dashboard page) and the **divergence map** (maker worklist); the granularity-by-family result is the empirical seed for **H1** (Paper L), measured family-controlled next.
