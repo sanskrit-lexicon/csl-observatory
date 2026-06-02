@@ -43,6 +43,8 @@ This doc captures the **publication strategy and end-products** of the project:
 **English-language target**: 10 articles (66%).
 **Mixed publication count**: ~9 in Scopus/WoS, ~6 in Russian peer-reviewed.
 
+**New (2026-05-31) — standalone methods paper**: *Anchoring on Sanskrit: deterministic cross-language sense alignment* (outline → [PAPER_SENSE_ALIGNMENT.md](PAPER_SENSE_ALIGNMENT.md)). Spun out of the R2 sense-splitter work; its empirical core — H1 (granularity is a tradition trait, not temporal), H2 (citation density predicts sense survival), H3 (derivatives copy/condense; Śabda-Sāgara reproduces Wilson **82% word-identical**) — see [R2_FINDINGS.md](R2_FINDINGS.md). Directly supplies evidence for **articles 3** (stemmatics WIL→SHS) and **9** (microstructure). Target: a short DH / computational-lexicography venue (~2027), EN.
+
 ### 1.2 Pre-requisite chain
 
 Each article requires data from earlier phases. The dependency graph:
