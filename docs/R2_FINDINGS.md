@@ -78,8 +78,25 @@ The **Apte family** (AP/AP90) enumerates finely (~22); the **Petersburg/MW famil
 
 **For Paper L:** sense granularity is a **tradition / marking-style trait, to be controlled for** (a covariate), not a function of date — a clean, defensible result, and a useful corrective to the naïve "later = finer" intuition.
 
+## H2 / H3 — sense survival & polysemy drift on inheritance edges (2026-05-31)
+
+[`scripts/lexico/h2h3_analysis.py`](../scripts/lexico/h2h3_analysis.py) → [`data/lexico/r2_h2h3.json`](../data/lexico/r2_h2h3.json). A 28-noun panel across three documented, *sense-countable* inheritance edges (added SHS/YAT `N.` sense markers). Survival uses gloss-text overlap (the Wilson-line glosses are English with few per-sense Sanskrit anchors).
+
+**H2 — citation density predicts sense survival: SUPPORTED.** Ancestor senses carrying ≥1 `<ls>` citation survive into the descendant at **70%** (n=96); uncited senses at **54%** (n=715) — a 16-point gap. Well-sourced senses are stickier.
+
+**H3 — derivatives net-ADD senses: NOT supported.** They copy or condense:
+
+| Edge | mean senses (anc → des) | drift | gloss overlap | pattern |
+|---|---|---|---|---|
+| Wilson 1832 → **Śabda-Sāgara 1900** | 7.9 → 8.5 | **+0.6** | **0.82** | **near-verbatim copy** |
+| Wilson 1832 → Yates 1846 | 7.9 → 1.1 | −6.75 | 0.15 | drastic condensation |
+| Apte 1890 → 1957 | 15.5 → 11.0 | −4.5 | 0.61 | revision, no expansion |
+
+The headline is **forensic**: Śabda-Sāgara's sense glosses are **82% word-identical** to Wilson's, sense by sense — a microstructure-level confirmation of the WIL⊆SHS ≈ 0.953 lemma-containment edge. (The Apte direction may be partly a marker-parsing artifact — `∙²N` vs `{@N@}` — but no edge shows systematic net-addition.) The naïve "later dictionaries are richer" intuition is refuted on the edges where it can actually be measured.
+
 ## Next
 
 - Tighten the AE reverse index (rank by equivalent-position); verb-marker grammar; finer indigenous splitting.
 - H1 rigour: a fixed simple-lemma panel (≥20 nouns) to remove the headword-splitting confound entirely.
+- These results (H1 tradition-effect, H2 citation-survival, H3 verbatim-copy) are the empirical core of the **standalone methods paper** ([PUBLICATIONS.md](PUBLICATIONS.md)) on Sanskrit-anchored cross-language sense alignment.
 - The cross-language + cross-cluster alignment feeds the **sense-alignment view** (R1 dashboard page) and the **divergence map** (maker worklist); the granularity-by-family result is the empirical seed for **H1** (Paper L), measured family-controlled next.

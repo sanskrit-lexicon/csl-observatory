@@ -33,7 +33,7 @@ OUTDIR = os.path.join(ROOT, 'data', 'lexico')
 
 LEMMAS = [('gam', 'gam'), ('dharma', 'Darma'), ('rama', 'rAma'),
           ('iti', 'iti'), ('bodhisattva', 'boDisattva')]
-WESTERN = ['mw', 'mw72', 'pwg', 'ap', 'ap90', 'ben', 'sch', 'bhs', 'wil', 'cae']
+WESTERN = ['mw', 'mw72', 'pwg', 'ap', 'ap90', 'ben', 'sch', 'bhs', 'wil', 'cae', 'shs', 'yat']
 INDIGENOUS = ['vcp', 'skd']
 REVERSE = ['ae']
 DICTS = WESTERN + INDIGENOUS
@@ -48,6 +48,9 @@ MARKERS = {
     'bhs':  re.compile(r'\(\{@\s*(\d+)\s*@\}\)'),
     'pwg':  re.compile(r'<div n="\d+">\s*((?:\d+|[a-z])\))'),
     'wil':  re.compile(r'\.\s*²\s*(\d+)'),
+    # SHS / YAT (Wilson descendants): inline "N. Capital…" sense numbers
+    'shs':  re.compile(r'(?<![\d,.])\b(\d+)\.\s+(?=[A-Z{%])'),
+    'yat':  re.compile(r'(?<![\d,.])\b(\d+)\.\s+(?=[A-Za-z{%])'),
 }
 LUMP_DICTS = {'mw', 'mw72', 'sch', 'cae'}
 CUT_DICTS = {'ap', 'ap90', 'ben'}

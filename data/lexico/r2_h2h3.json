@@ -1,0 +1,612 @@
+{
+ "edges": [
+  {
+   "edge": "Wilson 1832 → Śabda-Sāgara 1900",
+   "n_lemmas": 28,
+   "mean_senses_ancestor": 7.86,
+   "mean_senses_descendant": 8.46,
+   "mean_drift": 0.61,
+   "lemmas_added": 7,
+   "lemmas_condensed": 6,
+   "lemmas_same": 15,
+   "mean_gloss_overlap": 0.818,
+   "per_lemma": [
+    {
+     "lemma": "Darma",
+     "na": 20,
+     "nd": 20,
+     "drift": 0,
+     "mean_gloss_overlap": 0.889
+    },
+    {
+     "lemma": "kAma",
+     "na": 8,
+     "nd": 8,
+     "drift": 0,
+     "mean_gloss_overlap": 0.827
+    },
+    {
+     "lemma": "arTa",
+     "na": 1,
+     "nd": 1,
+     "drift": 0,
+     "mean_gloss_overlap": 1.0
+    },
+    {
+     "lemma": "satya",
+     "na": 11,
+     "nd": 14,
+     "drift": 3,
+     "mean_gloss_overlap": 0.856
+    },
+    {
+     "lemma": "jYAna",
+     "na": 2,
+     "nd": 5,
+     "drift": 3,
+     "mean_gloss_overlap": 0.885
+    },
+    {
+     "lemma": "karman",
+     "na": 10,
+     "nd": 9,
+     "drift": -1,
+     "mean_gloss_overlap": 0.88
+    },
+    {
+     "lemma": "yoga",
+     "na": 30,
+     "nd": 29,
+     "drift": -1,
+     "mean_gloss_overlap": 0.833
+    },
+    {
+     "lemma": "manas",
+     "na": 2,
+     "nd": 11,
+     "drift": 9,
+     "mean_gloss_overlap": 0.667
+    },
+    {
+     "lemma": "deva",
+     "na": 1,
+     "nd": 1,
+     "drift": 0,
+     "mean_gloss_overlap": 0.75
+    },
+    {
+     "lemma": "indra",
+     "na": 14,
+     "nd": 13,
+     "drift": -1,
+     "mean_gloss_overlap": 0.743
+    },
+    {
+     "lemma": "agni",
+     "na": 7,
+     "nd": 7,
+     "drift": 0,
+     "mean_gloss_overlap": 1.0
+    },
+    {
+     "lemma": "vAyu",
+     "na": 3,
+     "nd": 3,
+     "drift": 0,
+     "mean_gloss_overlap": 0.613
+    },
+    {
+     "lemma": "jala",
+     "na": 2,
+     "nd": 2,
+     "drift": 0,
+     "mean_gloss_overlap": 0.818
+    },
+    {
+     "lemma": "vana",
+     "na": 6,
+     "nd": 5,
+     "drift": -1,
+     "mean_gloss_overlap": 0.061
+    },
+    {
+     "lemma": "mitra",
+     "na": 2,
+     "nd": 4,
+     "drift": 2,
+     "mean_gloss_overlap": 0.786
+    },
+    {
+     "lemma": "rAjan",
+     "na": 10,
+     "nd": 9,
+     "drift": -1,
+     "mean_gloss_overlap": 0.819
+    },
+    {
+     "lemma": "bala",
+     "na": 5,
+     "nd": 5,
+     "drift": 0,
+     "mean_gloss_overlap": 1.0
+    },
+    {
+     "lemma": "sUrya",
+     "na": 6,
+     "nd": 6,
+     "drift": 0,
+     "mean_gloss_overlap": 0.778
+    },
+    {
+     "lemma": "candra",
+     "na": 13,
+     "nd": 12,
+     "drift": -1,
+     "mean_gloss_overlap": 0.799
+    },
+    {
+     "lemma": "ratna",
+     "na": 2,
+     "nd": 2,
+     "drift": 0,
+     "mean_gloss_overlap": 0.885
+    },
+    {
+     "lemma": "padma",
+     "na": 19,
+     "nd": 21,
+     "drift": 2,
+     "mean_gloss_overlap": 0.773
+    },
+    {
+     "lemma": "guru",
+     "na": 13,
+     "nd": 13,
+     "drift": 0,
+     "mean_gloss_overlap": 0.975
+    },
+    {
+     "lemma": "Sakti",
+     "na": 7,
+     "nd": 10,
+     "drift": 3,
+     "mean_gloss_overlap": 0.761
+    },
+    {
+     "lemma": "duHKa",
+     "na": 1,
+     "nd": 1,
+     "drift": 0,
+     "mean_gloss_overlap": 0.75
+    },
+    {
+     "lemma": "suKa",
+     "na": 1,
+     "nd": 1,
+     "drift": 0,
+     "mean_gloss_overlap": 1.0
+    },
+    {
+     "lemma": "tejas",
+     "na": 16,
+     "nd": 16,
+     "drift": 0,
+     "mean_gloss_overlap": 0.852
+    },
+    {
+     "lemma": "vIrya",
+     "na": 7,
+     "nd": 8,
+     "drift": 1,
+     "mean_gloss_overlap": 0.918
+    },
+    {
+     "lemma": "kAla",
+     "na": 1,
+     "nd": 1,
+     "drift": 0,
+     "mean_gloss_overlap": 1.0
+    }
+   ]
+  },
+  {
+   "edge": "Wilson 1832 → Yates 1846",
+   "n_lemmas": 28,
+   "mean_senses_ancestor": 7.86,
+   "mean_senses_descendant": 1.11,
+   "mean_drift": -6.75,
+   "lemmas_added": 0,
+   "lemmas_condensed": 23,
+   "lemmas_same": 5,
+   "mean_gloss_overlap": 0.15,
+   "per_lemma": [
+    {
+     "lemma": "Darma",
+     "na": 20,
+     "nd": 1,
+     "drift": -19,
+     "mean_gloss_overlap": 0.039
+    },
+    {
+     "lemma": "kAma",
+     "na": 8,
+     "nd": 1,
+     "drift": -7,
+     "mean_gloss_overlap": 0.133
+    },
+    {
+     "lemma": "arTa",
+     "na": 1,
+     "nd": 1,
+     "drift": 0,
+     "mean_gloss_overlap": 0.0
+    },
+    {
+     "lemma": "satya",
+     "na": 11,
+     "nd": 2,
+     "drift": -9,
+     "mean_gloss_overlap": 0.11
+    },
+    {
+     "lemma": "jYAna",
+     "na": 2,
+     "nd": 1,
+     "drift": -1,
+     "mean_gloss_overlap": 0.514
+    },
+    {
+     "lemma": "karman",
+     "na": 10,
+     "nd": 1,
+     "drift": -9,
+     "mean_gloss_overlap": 0.094
+    },
+    {
+     "lemma": "yoga",
+     "na": 30,
+     "nd": 1,
+     "drift": -29,
+     "mean_gloss_overlap": 0.012
+    },
+    {
+     "lemma": "manas",
+     "na": 2,
+     "nd": 1,
+     "drift": -1,
+     "mean_gloss_overlap": 0.083
+    },
+    {
+     "lemma": "deva",
+     "na": 1,
+     "nd": 1,
+     "drift": 0,
+     "mean_gloss_overlap": 0.067
+    },
+    {
+     "lemma": "indra",
+     "na": 14,
+     "nd": 1,
+     "drift": -13,
+     "mean_gloss_overlap": 0.057
+    },
+    {
+     "lemma": "agni",
+     "na": 7,
+     "nd": 1,
+     "drift": -6,
+     "mean_gloss_overlap": 0.113
+    },
+    {
+     "lemma": "vAyu",
+     "na": 3,
+     "nd": 1,
+     "drift": -2,
+     "mean_gloss_overlap": 0.176
+    },
+    {
+     "lemma": "jala",
+     "na": 2,
+     "nd": 1,
+     "drift": -1,
+     "mean_gloss_overlap": 0.0
+    },
+    {
+     "lemma": "vana",
+     "na": 6,
+     "nd": 2,
+     "drift": -4,
+     "mean_gloss_overlap": 0.0
+    },
+    {
+     "lemma": "mitra",
+     "na": 2,
+     "nd": 1,
+     "drift": -1,
+     "mean_gloss_overlap": 0.183
+    },
+    {
+     "lemma": "rAjan",
+     "na": 10,
+     "nd": 1,
+     "drift": -9,
+     "mean_gloss_overlap": 0.075
+    },
+    {
+     "lemma": "bala",
+     "na": 5,
+     "nd": 1,
+     "drift": -4,
+     "mean_gloss_overlap": 0.0
+    },
+    {
+     "lemma": "sUrya",
+     "na": 6,
+     "nd": 2,
+     "drift": -4,
+     "mean_gloss_overlap": 0.249
+    },
+    {
+     "lemma": "candra",
+     "na": 13,
+     "nd": 1,
+     "drift": -12,
+     "mean_gloss_overlap": 0.061
+    },
+    {
+     "lemma": "ratna",
+     "na": 2,
+     "nd": 1,
+     "drift": -1,
+     "mean_gloss_overlap": 0.542
+    },
+    {
+     "lemma": "padma",
+     "na": 19,
+     "nd": 1,
+     "drift": -18,
+     "mean_gloss_overlap": 0.04
+    },
+    {
+     "lemma": "guru",
+     "na": 13,
+     "nd": 1,
+     "drift": -12,
+     "mean_gloss_overlap": 0.037
+    },
+    {
+     "lemma": "Sakti",
+     "na": 7,
+     "nd": 1,
+     "drift": -6,
+     "mean_gloss_overlap": 0.086
+    },
+    {
+     "lemma": "duHKa",
+     "na": 1,
+     "nd": 1,
+     "drift": 0,
+     "mean_gloss_overlap": 0.25
+    },
+    {
+     "lemma": "suKa",
+     "na": 1,
+     "nd": 1,
+     "drift": 0,
+     "mean_gloss_overlap": 0.667
+    },
+    {
+     "lemma": "tejas",
+     "na": 16,
+     "nd": 1,
+     "drift": -15,
+     "mean_gloss_overlap": 0.038
+    },
+    {
+     "lemma": "vIrya",
+     "na": 7,
+     "nd": 1,
+     "drift": -6,
+     "mean_gloss_overlap": 0.067
+    },
+    {
+     "lemma": "kAla",
+     "na": 1,
+     "nd": 1,
+     "drift": 0,
+     "mean_gloss_overlap": 0.5
+    }
+   ]
+  },
+  {
+   "edge": "Apte 1890 → Apte 1957",
+   "n_lemmas": 24,
+   "mean_senses_ancestor": 15.46,
+   "mean_senses_descendant": 10.96,
+   "mean_drift": -4.5,
+   "lemmas_added": 9,
+   "lemmas_condensed": 11,
+   "lemmas_same": 4,
+   "mean_gloss_overlap": 0.606,
+   "per_lemma": [
+    {
+     "lemma": "Darma",
+     "na": 22,
+     "nd": 23,
+     "drift": 1,
+     "mean_gloss_overlap": 0.902
+    },
+    {
+     "lemma": "kAma",
+     "na": 12,
+     "nd": 10,
+     "drift": -2,
+     "mean_gloss_overlap": 0.724
+    },
+    {
+     "lemma": "arTa",
+     "na": 18,
+     "nd": 22,
+     "drift": 4,
+     "mean_gloss_overlap": 0.833
+    },
+    {
+     "lemma": "satya",
+     "na": 17,
+     "nd": 5,
+     "drift": -12,
+     "mean_gloss_overlap": 0.216
+    },
+    {
+     "lemma": "karman",
+     "na": 13,
+     "nd": 15,
+     "drift": 2,
+     "mean_gloss_overlap": 0.843
+    },
+    {
+     "lemma": "yoga",
+     "na": 38,
+     "nd": 42,
+     "drift": 4,
+     "mean_gloss_overlap": 0.875
+    },
+    {
+     "lemma": "manas",
+     "na": 12,
+     "nd": 12,
+     "drift": 0,
+     "mean_gloss_overlap": 0.844
+    },
+    {
+     "lemma": "deva",
+     "na": 17,
+     "nd": 3,
+     "drift": -14,
+     "mean_gloss_overlap": 0.196
+    },
+    {
+     "lemma": "agni",
+     "na": 10,
+     "nd": 13,
+     "drift": 3,
+     "mean_gloss_overlap": 0.814
+    },
+    {
+     "lemma": "vAyu",
+     "na": 4,
+     "nd": 6,
+     "drift": 2,
+     "mean_gloss_overlap": 0.906
+    },
+    {
+     "lemma": "jala",
+     "na": 6,
+     "nd": 2,
+     "drift": -4,
+     "mean_gloss_overlap": 0.333
+    },
+    {
+     "lemma": "putra",
+     "na": 4,
+     "nd": 5,
+     "drift": 1,
+     "mean_gloss_overlap": 0.878
+    },
+    {
+     "lemma": "mitra",
+     "na": 4,
+     "nd": 3,
+     "drift": -1,
+     "mean_gloss_overlap": 0.2
+    },
+    {
+     "lemma": "rAjan",
+     "na": 8,
+     "nd": 8,
+     "drift": 0,
+     "mean_gloss_overlap": 0.725
+    },
+    {
+     "lemma": "bala",
+     "na": 12,
+     "nd": 3,
+     "drift": -9,
+     "mean_gloss_overlap": 0.222
+    },
+    {
+     "lemma": "sUrya",
+     "na": 5,
+     "nd": 5,
+     "drift": 0,
+     "mean_gloss_overlap": 0.979
+    },
+    {
+     "lemma": "padma",
+     "na": 20,
+     "nd": 1,
+     "drift": -19,
+     "mean_gloss_overlap": 0.059
+    },
+    {
+     "lemma": "guru",
+     "na": 28,
+     "nd": 16,
+     "drift": -12,
+     "mean_gloss_overlap": 0.508
+    },
+    {
+     "lemma": "Sakti",
+     "na": 13,
+     "nd": 13,
+     "drift": 0,
+     "mean_gloss_overlap": 0.942
+    },
+    {
+     "lemma": "mAyA",
+     "na": 13,
+     "nd": 15,
+     "drift": 2,
+     "mean_gloss_overlap": 0.895
+    },
+    {
+     "lemma": "duHKa",
+     "na": 4,
+     "nd": 2,
+     "drift": -2,
+     "mean_gloss_overlap": 0.5
+    },
+    {
+     "lemma": "suKa",
+     "na": 19,
+     "nd": 6,
+     "drift": -13,
+     "mean_gloss_overlap": 0.246
+    },
+    {
+     "lemma": "tejas",
+     "na": 29,
+     "nd": 31,
+     "drift": 2,
+     "mean_gloss_overlap": 0.833
+    },
+    {
+     "lemma": "kAla",
+     "na": 43,
+     "nd": 2,
+     "drift": -41,
+     "mean_gloss_overlap": 0.081
+    }
+   ]
+  }
+ ],
+ "h2": {
+  "n_senses": 811,
+  "survival_rate_cited": 0.698,
+  "survival_rate_uncited": 0.537,
+  "n_cited": 96,
+  "n_uncited": 715
+ },
+ "panel_size": 30,
+ "conclusion_h3": "H3 (derivatives net-ADD senses) is NOT supported on the countable edges: Wilson→Śabda-Sāgara COPIES senses near-verbatim (high gloss overlap, ~zero drift); Wilson→Yates CONDENSES (negative drift); Apte 1890→1957 is a revision (~zero drift). Faithful copying / condensation dominates innovation — a forensic, sense-level confirmation of the lemma-overlap genealogy (WIL⊆SHS≈0.953)."
+}
