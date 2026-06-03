@@ -79,7 +79,11 @@ def main():
 
     stats = json.load(open(os.path.join(PARSED_DIR, "_parse_stats.json"), encoding="utf-8"))
     codes = sorted((s["code"].upper() for s in stats if s["citations"] >= MIN_CIT))
-    print(f"\nCitation-bearing dicts (>= {MIN_CIT} cites): {', '.join(codes)}")
+    # NB "citations" here = <ls>-tagged only. SKD/VCP/INM cite densely in the indigenous
+    # style (iti+authority, quotes) with no <ls> -> excluded for lack of the tag, NOT
+    # citation-free. F1 compares the Western <ls> apparatus. See CITATION_TAGGING.md.
+    print(f"\n<ls>-tagging dicts (>= {MIN_CIT} <ls> cites): {', '.join(codes)}")
+    print("  (SKD/VCP/INM cite densely in the indigenous style with no <ls> -> see CITATION_TAGGING.md)")
 
     full = {}
     src = {}
@@ -190,6 +194,11 @@ def main():
     gun_sources = collections.Counter(source_of(g["shared_ref"]) for g in gun_rows)
     report = {
         "min_cit": MIN_CIT, "citation_dicts": codes,
+        "citation_tagging_note": ("'citation_dicts' = <ls>-TAGGED dicts only. SKD (84,616 iti) "
+                                  "and VCP (30,928 iti) are the corpus's MOST citation-dense dicts "
+                                  "but use the indigenous style (iti+authority, quotes) with no "
+                                  "<ls>, so they are absent here -- NOT citation-free. F1 compares "
+                                  "the Western <ls> apparatus. See data/forensic/CITATION_TAGGING.md."),
         "n_pairs": len(rows), "n_smoking_guns": len(gun_rows),
         "smoking_gun_sources": dict(gun_sources.most_common(15)),
         "lineage": {f"{a}/{b}": get(a, b) for a, b in LINEAGE if get(a, b)},

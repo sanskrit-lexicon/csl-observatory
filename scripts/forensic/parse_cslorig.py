@@ -12,6 +12,11 @@ spelling/typos survive here), h (homonym number), e (MW display field), the body
 every <ls>…</ls> citation (inner tags stripped). MW citations are abbreviated
 (`<ls>T.</ls>`), PWG/PW fuller (`<ls>P. 1,1,14</ls>`).
 
+NOTE: the citation count is `<ls>`-ONLY (the Western critical-apparatus tag). Dicts that
+cite in the indigenous style (SKD/VCP: `iti`+authority, `"..."` quotes, `X0` authorities)
+score 0 here yet are the MOST citation-dense in the corpus — see
+data/forensic/CITATION_TAGGING.md. "0 <ls>" never means "citation-free".
+
 Use as a module:  from parse_cslorig import iter_entries, load_entries
 Or build caches:  python parse_cslorig.py pwg pw mw mw72      (--all = every local dict)
                   -> data/forensic/parsed/<code>.tsv  (L, k1, k2, h, e, n_cit, cites)
@@ -101,7 +106,8 @@ def build_cache(code):
             row = [ent["L"], ent["k1"], ent["k2"], ent["h"], ent["e"], len(ent["citations"]), cites]
             w.writerow([str(x if x is not None else "").replace("\t", " ") for x in row])
     stats = {"code": code, "entries": n, "citations": n_cit, "with_homonym": n_h}
-    print(f"  {code:8s} entries={n:>7,} citations={n_cit:>8,} with_homonym={n_h:>7,}")
+    print(f"  {code:8s} entries={n:>7,} ls_cites={n_cit:>8,} with_homonym={n_h:>7,}  "
+          f"(ls only; 0 != citation-free, see CITATION_TAGGING.md)")
     return stats
 
 

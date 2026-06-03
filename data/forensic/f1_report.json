@@ -15,6 +15,7 @@
     "PWKVN",
     "SCH"
   ],
+  "citation_tagging_note": "'citation_dicts' = <ls>-TAGGED dicts only. SKD (84,616 iti) and VCP (30,928 iti) are the corpus's MOST citation-dense dicts but use the indigenous style (iti+authority, quotes) with no <ls>, so they are absent here -- NOT citation-free. F1 compares the Western <ls> apparatus. See data/forensic/CITATION_TAGGING.md.",
   "n_pairs": 78,
   "n_smoking_guns": 587,
   "smoking_gun_sources": {
