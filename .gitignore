@@ -25,6 +25,9 @@ docs/outreach/
 
 /dist/L0/
 
+# forensic intermediate caches — large, regenerable from ../csl-orig via parse_cslorig.py
+data/forensic/parsed/
+
 # audit sidecars
 .contributing_old.md
 .contributing_audit.txt

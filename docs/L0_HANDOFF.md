@@ -76,8 +76,9 @@ magnitude claim needs replacing.
 ### What's needed to make "MW absorbed PWG content" precise — a ladder (cheap → strong)
 
 1. ✅ **Size-corrected association** — `s6_content_lift.py` computes **lift** = |A∩B|·N/(|A|·|B|)
-   (PMI) over the local snapshot `observatory/snapshots/sanhw1.txt` (~470k lemmas — it was **in-repo
-   all along**, not a fetch; this handoff's "not in repo locally" was wrong). Result: **lift fails**
+   (PMI) over `observatory/snapshots/sanhw1.txt` (~470k lemmas — present locally but **gitignored**
+   / regenerable-from-API, so usable here with no fetch; this handoff's "fetch" note holds only for a
+   fresh clone, where the snapshot must be regenerated first). Result: **lift fails**
    to de-confound — BOP→MW has the *highest* lift into MW (2.28); the common core inflates everything ~2×.
 2. ✅ **Rare-lemma containment** — `rare@k` = fraction of the source's df≤k headwords recurring in the
    inheritor (common core dropped). **This is the fix.** It inverts the raw ranking: PWG→MW rare@3 0.70 /
