@@ -63,8 +63,19 @@ sources into a new house style (Monier-Williams; to a lesser degree Yates). A un
 inheritance score that collapsed the two would misread MW as either unrelated to PWG
 (if convention-weighted) or as a faithful copy (if content-weighted); the historically
 correct reading — *faithful in substance, independent in form* — is legible only in the
-gap between them. We accordingly report the two matrices side by side, and treat the
-content−convention residual as a first-class historical variable in §6.
+gap between them.
+
+We make this gap a single scalar, the **reformatting residual**
+`r(A→B) = content_containment(A→B) − convention_similarity(A,B)`, computed over the 25
+documented containment edges. The ranking is unambiguous: the five largest residuals are
+**CAE→MW (0.68)**, **MD→MW (0.65)**, **CCS→MW (0.62)**, GRA→PW (0.58), and **WIL→YAT (0.54)**
+— every high-content edge *into Monier-Williams*, plus Yates's restyling of Wilson. The five
+smallest are SHS↔WIL (0.12–0.17), PWG→PW (0.19), CCS→CAE (0.23), and CAE→PW (0.30) — the
+faithful formatting lineages. Monier-Williams is thus quantitatively the corpus's principal
+reformatter: it drew 89–93% of CAE's, Macdonell's, and Cappeller's lemmas into a house style
+those sources do not share (convention similarity 0.23–0.28). We accordingly report the two
+matrices side by side and treat the residual as a first-class historical variable — the same
+instrument carries the standalone methods note (PUBLICATIONS Article 20).
 
 > **Numbers in this section** are from `data/L0/bootstrap_support.csv` and
 > `validation_report.json` (convention axis) and `data/sanhw1_inheritance_edges.csv`

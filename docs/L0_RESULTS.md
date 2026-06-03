@@ -40,6 +40,26 @@ Recovery is 55%, not higher — and the **pattern of hits vs misses is itself th
 
 So the convention cladogram is a **formatting-genealogy** instrument, distinct from (and complementary to) the sanhw1 content-containment edges. That distinction is a Paper-H/M result, not a shortfall: the 70% target was set for an undifferentiated notion of lineage; against *convention* lineage the strong edges land at 0.70–0.81 bootstrap.
 
+### Phase L0.7 — quantified as a reformatting residual
+
+`s4_residual.py` makes §3 a number: `residual = content_containment(A→B) − convention_similarity(A,B)` over the 25 known sanhw1 containment edges (`data/L0/content_convention_residual.csv`; scatter of all 435 shared pairs in `content_convention_scatter.csv`).
+
+| ranked | top **reformatting** events (high content, recoded form) | residual | | most **faithful** (both axes inherited) | residual |
+|---|---|---|---|---|---|
+| 1 | **CAE→MW** (0.91 / 0.23) | **0.68** | | SHS→WIL (0.90 / 0.78) | 0.12 |
+| 2 | **MD→MW** (0.93 / 0.27) | **0.65** | | WIL→SHS (0.95 / 0.78) | 0.17 |
+| 3 | **CCS→MW** (0.90 / 0.28) | **0.62** | | PWG→PW (0.94 / 0.75) | 0.19 |
+| 4 | GRA→PW (0.87 / 0.29) | 0.58 | | CCS→CAE (0.94 / 0.71) | 0.23 |
+| 5 | **WIL→YAT** (0.93 / 0.39) | 0.54 | | CAE→PW (0.89 / 0.59) | 0.30 |
+
+Every high-content edge **into MW** tops the list — Monier-Williams is the corpus's great
+reformatter, absorbing CAE/MD/CCS/PWG content (89–93% containment) under its own house style
+(convention similarity 0.23–0.28). WIL→YAT confirms Yates re-styled Wilson. The faithful tail
+is exactly the formatting lineages the cladogram recovers. The residual is thus a single
+scalar that **localises editorial recoding** — the instrument behind Paper H §5 and the
+standalone methods note (Article 20). Shown on the dashboard `/conventions` as a two-axis
+scatter + ranked bar.
+
 ## 4. The tree (canonical, `B_whamming` UPGMA, bootstrap-consensus)
 
 `data/L0/trees/canonical_consensus.{newick,txt,png}` — five clean clades:

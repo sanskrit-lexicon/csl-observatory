@@ -467,7 +467,13 @@ lineage families cohere**; bootstrap WIL→SHS 0.81, PWG→PW 0.79, PWG→SCH 0.
 finding: convention-lineage ≠ content-lineage** (Paper H §5 drafted; standalone methods note
 planned — decision 2026-06-03 #3 below).
 
-### Phase L0.7 — Content↔convention residual *(NEXT — decision 2026-06-03 #1)*
+### Phase L0.7 — Content↔convention residual ✅ DONE 2026-06-03
+
+Shipped: `scripts/L0/s4_residual.py` → `data/L0/content_convention_residual.csv` (25 ranked
+directed edges) + `content_convention_scatter.csv` (435 pairs); dashboard scatter + ranked
+bar on `/conventions`; quantified in [`L0_RESULTS.md`](L0_RESULTS.md) §3 and Paper H §5.4.
+**Result:** top reformatting residuals = CAE→MW 0.68, MD→MW 0.65, CCS→MW 0.62, WIL→YAT 0.54
+(MW is the corpus's principal reformatter); faithful tail = SHS↔WIL, PWG→PW, CCS→CAE.
 
 Operationalise the L0 finding as a quantitative instrument. For every dict pair, compute:
 

@@ -26,6 +26,8 @@ const boot = await FileAttachment("data/L0/bootstrap_support.csv").csv({typed: t
 const fp = await FileAttachment("data/L0/convention_fingerprint.csv").csv({typed: true});
 const dist = await FileAttachment("data/L0/distances/B_whamming.csv").csv({typed: true});
 const report = await FileAttachment("data/L0/validation_report.json").json();
+const residual = await FileAttachment("data/L0/content_convention_residual.csv").csv({typed: true});
+const scatter = await FileAttachment("data/L0/content_convention_scatter.csv").csv({typed: true});
 ```
 
 ## At a glance
@@ -157,6 +159,60 @@ gap between near-unity content-containment and near-zero convention-similarity i
 quantitative signature of a re-edited, re-typeset descendant. **Content and convention are
 orthogonal axes of descent**, and their divergence localises editorial intervention — the
 full argument is in [Paper H §5](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/articles/paper_H_convention_vs_content_lineage.md).
+
+### The two axes, plotted (Phase L0.7)
+
+Every point is a dictionary pair: **content** similarity (sanhw1 lemma Jaccard, *x*) against
+**convention** similarity (1 − L0 distance, *y*). Points on the diagonal inherit both axes
+equally; points **below-right** (high content, low convention) are the reformatting events —
+shared vocabulary rendered in a different house style.
+
+```js
+Plot.plot({
+  width: Math.min(width, 700),
+  height: Math.min(width, 700),
+  grid: true,
+  x: {label: "content similarity (sanhw1 lemma Jaccard) →", domain: [0, 1]},
+  y: {label: "↑ convention similarity (1 − L0 distance)", domain: [0, 1]},
+  color: {scheme: "RdYlBu", label: "content − convention gap", legend: true},
+  marks: [
+    Plot.line([[0,0],[1,1]], {stroke: "currentColor", strokeOpacity: 0.3, strokeDasharray: "4,4"}),
+    Plot.dot(scatter, {x: "content_similarity", y: "convention_similarity", fill: "gap", r: 3.5, tip: true,
+                       channels: {pair: d => `${d.a}–${d.b}`}}),
+  ]
+})
+```
+
+### Ranked reformatting events
+
+Directed inheritance edges (sanhw1 containment ≥ 0.85), scored by
+**residual = content containment − convention similarity**. The top rows — everything into
+**MW** (Monier-Williams), and **WIL→YAT** — are the heavy editorial recodings; the bottom
+rows (SHS↔WIL, PWG→PW, CCS→CAE) inherited form as well as substance.
+
+```js
+Plot.plot({
+  width,
+  height: 420,
+  marginLeft: 110,
+  x: {label: "reformatting residual (content − convention)", domain: [0, 0.75], grid: true},
+  y: {label: null, domain: residual.map(d => `${d.source}→${d.inheritor}`)},
+  color: {type: "diverging", scheme: "RdYlBu", reverse: true, legend: true, label: "residual"},
+  marks: [
+    Plot.barX(residual, {x: "reformatting_residual", y: d => `${d.source}→${d.inheritor}`,
+                         fill: "reformatting_residual", tip: true}),
+    Plot.ruleX([0])
+  ]
+})
+```
+
+```js
+Inputs.table(residual, {
+  columns: ["source", "inheritor", "content_containment", "convention_similarity", "reformatting_residual", "temporal_plausible"],
+  header: {content_containment: "content", convention_similarity: "convention", reformatting_residual: "residual"},
+  sort: "reformatting_residual", reverse: true, rows: 26
+})
+```
 
 ## Method & caveats
 
