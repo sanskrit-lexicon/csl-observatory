@@ -1,8 +1,6 @@
 dict,dim_id,dim_name,options_available
 WIL,1,Anusvāra before consonants,opt1|opt2|opt3|opt4|opt5|opt6
-WIL,2,Duplication after r,opt1|opt2
 WIL,3,Words ending with -at,opt1|opt2|opt3|opt4|opt5
-WIL,4,Inflected vs uninflected headword form,inflected|uninflected
 WIL,5,Anusvāra of verbs,present|absent
 WIL,6,ṛkārānta words,opt1|opt2|opt3
 WIL,7,vas/yas suffixes,opt1|opt2|opt3|opt4
@@ -10,9 +8,7 @@ WIL,8,Sandhi handling at compound boundary,preserved|split|both
 WIL,15,Citation format style,abbreviated|full|sanskrit
 WIL,16,Mahābhārata edition reference,pune|critical
 YAT,1,Anusvāra before consonants,opt1|opt2|opt3|opt4|opt5|opt6
-YAT,2,Duplication after r,opt1|opt2
 YAT,3,Words ending with -at,opt1|opt2|opt3|opt4|opt5
-YAT,4,Inflected vs uninflected headword form,inflected|uninflected
 YAT,5,Anusvāra of verbs,present|absent
 YAT,6,ṛkārānta words,opt1|opt2|opt3
 YAT,7,vas/yas suffixes,opt1|opt2|opt3|opt4
@@ -22,9 +18,7 @@ YAT,16,Mahābhārata edition reference,pune|critical
 YAT,18,Verb-class marker style,roman|arabic|sanskrit
 YAT,29,Etymology mean-length,low|med|high
 GST,1,Anusvāra before consonants,opt1|opt2|opt3|opt4|opt5|opt6
-GST,2,Duplication after r,opt1|opt2
 GST,3,Words ending with -at,opt1|opt2|opt3|opt4|opt5
-GST,4,Inflected vs uninflected headword form,inflected|uninflected
 GST,5,Anusvāra of verbs,present|absent
 GST,6,ṛkārānta words,opt1|opt2|opt3
 GST,7,vas/yas suffixes,opt1|opt2|opt3|opt4
@@ -32,9 +26,7 @@ GST,8,Sandhi handling at compound boundary,preserved|split|both
 GST,15,Citation format style,abbreviated|full|sanskrit
 GST,16,Mahābhārata edition reference,pune|critical
 BEN,1,Anusvāra before consonants,opt1|opt2|opt3|opt4|opt5|opt6
-BEN,2,Duplication after r,opt1|opt2
 BEN,3,Words ending with -at,opt1|opt2|opt3|opt4|opt5
-BEN,4,Inflected vs uninflected headword form,inflected|uninflected
 BEN,5,Anusvāra of verbs,present|absent
 BEN,6,ṛkārānta words,opt1|opt2|opt3
 BEN,7,vas/yas suffixes,opt1|opt2|opt3|opt4
@@ -43,9 +35,7 @@ BEN,16,Mahābhārata edition reference,pune|critical
 BEN,18,Verb-class marker style,roman|arabic|sanskrit
 BEN,29,Etymology mean-length,low|med|high
 MW72,1,Anusvāra before consonants,opt1|opt2|opt3|opt4|opt5|opt6
-MW72,2,Duplication after r,opt1|opt2
 MW72,3,Words ending with -at,opt1|opt2|opt3|opt4|opt5
-MW72,4,Inflected vs uninflected headword form,inflected|uninflected
 MW72,5,Anusvāra of verbs,present|absent
 MW72,6,ṛkārānta words,opt1|opt2|opt3
 MW72,7,vas/yas suffixes,opt1|opt2|opt3|opt4
@@ -54,9 +44,7 @@ MW72,15,Citation format style,abbreviated|full|sanskrit
 MW72,16,Mahābhārata edition reference,pune|critical
 MW72,29,Etymology mean-length,low|med|high
 LRV,1,Anusvāra before consonants,opt1|opt2|opt3|opt4|opt5|opt6
-LRV,2,Duplication after r,opt1|opt2
 LRV,3,Words ending with -at,opt1|opt2|opt3|opt4|opt5
-LRV,4,Inflected vs uninflected headword form,inflected|uninflected
 LRV,5,Anusvāra of verbs,present|absent
 LRV,6,ṛkārānta words,opt1|opt2|opt3
 LRV,7,vas/yas suffixes,opt1|opt2|opt3|opt4
@@ -65,9 +53,7 @@ LRV,16,Mahābhārata edition reference,pune|critical
 LRV,18,Verb-class marker style,roman|arabic|sanskrit
 LRV,29,Etymology mean-length,low|med|high
 AP90,1,Anusvāra before consonants,opt1|opt2|opt3|opt4|opt5|opt6
-AP90,2,Duplication after r,opt1|opt2
 AP90,3,Words ending with -at,opt1|opt2|opt3|opt4|opt5
-AP90,4,Inflected vs uninflected headword form,inflected|uninflected
 AP90,5,Anusvāra of verbs,present|absent
 AP90,6,ṛkārānta words,opt1|opt2|opt3
 AP90,7,vas/yas suffixes,opt1|opt2|opt3|opt4
@@ -75,9 +61,7 @@ AP90,8,Sandhi handling at compound boundary,preserved|split|both
 AP90,16,Mahābhārata edition reference,pune|critical
 AP90,18,Verb-class marker style,roman|arabic|sanskrit
 CAE,1,Anusvāra before consonants,opt1|opt2|opt3|opt4|opt5|opt6
-CAE,2,Duplication after r,opt1|opt2
 CAE,3,Words ending with -at,opt1|opt2|opt3|opt4|opt5
-CAE,4,Inflected vs uninflected headword form,inflected|uninflected
 CAE,5,Anusvāra of verbs,present|absent
 CAE,6,ṛkārānta words,opt1|opt2|opt3
 CAE,7,vas/yas suffixes,opt1|opt2|opt3|opt4
@@ -87,9 +71,7 @@ CAE,16,Mahābhārata edition reference,pune|critical
 CAE,18,Verb-class marker style,roman|arabic|sanskrit
 CAE,29,Etymology mean-length,low|med|high
 MD,1,Anusvāra before consonants,opt1|opt2|opt3|opt4|opt5|opt6
-MD,2,Duplication after r,opt1|opt2
 MD,3,Words ending with -at,opt1|opt2|opt3|opt4|opt5
-MD,4,Inflected vs uninflected headword form,inflected|uninflected
 MD,5,Anusvāra of verbs,present|absent
 MD,6,ṛkārānta words,opt1|opt2|opt3
 MD,7,vas/yas suffixes,opt1|opt2|opt3|opt4
@@ -98,9 +80,7 @@ MD,16,Mahābhārata edition reference,pune|critical
 MD,18,Verb-class marker style,roman|arabic|sanskrit
 MD,29,Etymology mean-length,low|med|high
 MW,1,Anusvāra before consonants,opt1|opt2|opt3|opt4|opt5|opt6
-MW,2,Duplication after r,opt1|opt2
 MW,3,Words ending with -at,opt1|opt2|opt3|opt4|opt5
-MW,4,Inflected vs uninflected headword form,inflected|uninflected
 MW,5,Anusvāra of verbs,present|absent
 MW,6,ṛkārānta words,opt1|opt2|opt3
 MW,7,vas/yas suffixes,opt1|opt2|opt3|opt4
@@ -108,9 +88,7 @@ MW,8,Sandhi handling at compound boundary,preserved|split|both
 MW,16,Mahābhārata edition reference,pune|critical
 MW,18,Verb-class marker style,roman|arabic|sanskrit
 SHS,1,Anusvāra before consonants,opt1|opt2|opt3|opt4|opt5|opt6
-SHS,2,Duplication after r,opt1|opt2
 SHS,3,Words ending with -at,opt1|opt2|opt3|opt4|opt5
-SHS,4,Inflected vs uninflected headword form,inflected|uninflected
 SHS,5,Anusvāra of verbs,present|absent
 SHS,6,ṛkārānta words,opt1|opt2|opt3
 SHS,7,vas/yas suffixes,opt1|opt2|opt3|opt4
@@ -118,9 +96,7 @@ SHS,8,Sandhi handling at compound boundary,preserved|split|both
 SHS,15,Citation format style,abbreviated|full|sanskrit
 SHS,16,Mahābhārata edition reference,pune|critical
 AP,1,Anusvāra before consonants,opt1|opt2|opt3|opt4|opt5|opt6
-AP,2,Duplication after r,opt1|opt2
 AP,3,Words ending with -at,opt1|opt2|opt3|opt4|opt5
-AP,4,Inflected vs uninflected headword form,inflected|uninflected
 AP,5,Anusvāra of verbs,present|absent
 AP,6,ṛkārānta words,opt1|opt2|opt3
 AP,7,vas/yas suffixes,opt1|opt2|opt3|opt4
@@ -128,9 +104,7 @@ AP,8,Sandhi handling at compound boundary,preserved|split|both
 AP,16,Mahābhārata edition reference,pune|critical
 AP,18,Verb-class marker style,roman|arabic|sanskrit
 BOR,1,Anusvāra before consonants,opt1|opt2|opt3|opt4|opt5|opt6
-BOR,2,Duplication after r,opt1|opt2
 BOR,3,Words ending with -at,opt1|opt2|opt3|opt4|opt5
-BOR,4,Inflected vs uninflected headword form,inflected|uninflected
 BOR,5,Anusvāra of verbs,present|absent
 BOR,6,ṛkārānta words,opt1|opt2|opt3
 BOR,7,vas/yas suffixes,opt1|opt2|opt3|opt4
@@ -139,9 +113,7 @@ BOR,16,Mahābhārata edition reference,pune|critical
 BOR,18,Verb-class marker style,roman|arabic|sanskrit
 BOR,29,Etymology mean-length,low|med|high
 AE,1,Anusvāra before consonants,opt1|opt2|opt3|opt4|opt5|opt6
-AE,2,Duplication after r,opt1|opt2
 AE,3,Words ending with -at,opt1|opt2|opt3|opt4|opt5
-AE,4,Inflected vs uninflected headword form,inflected|uninflected
 AE,5,Anusvāra of verbs,present|absent
 AE,6,ṛkārānta words,opt1|opt2|opt3
 AE,7,vas/yas suffixes,opt1|opt2|opt3|opt4
@@ -150,9 +122,7 @@ AE,16,Mahābhārata edition reference,pune|critical
 AE,18,Verb-class marker style,roman|arabic|sanskrit
 AE,29,Etymology mean-length,low|med|high
 BUR,1,Anusvāra before consonants,opt1|opt2|opt3|opt4|opt5|opt6
-BUR,2,Duplication after r,opt1|opt2
 BUR,3,Words ending with -at,opt1|opt2|opt3|opt4|opt5
-BUR,4,Inflected vs uninflected headword form,inflected|uninflected
 BUR,5,Anusvāra of verbs,present|absent
 BUR,6,ṛkārānta words,opt1|opt2|opt3
 BUR,7,vas/yas suffixes,opt1|opt2|opt3|opt4
@@ -162,9 +132,7 @@ BUR,16,Mahābhārata edition reference,pune|critical
 BUR,18,Verb-class marker style,roman|arabic|sanskrit
 BUR,29,Etymology mean-length,low|med|high
 STC,1,Anusvāra before consonants,opt1|opt2|opt3|opt4|opt5|opt6
-STC,2,Duplication after r,opt1|opt2
 STC,3,Words ending with -at,opt1|opt2|opt3|opt4|opt5
-STC,4,Inflected vs uninflected headword form,inflected|uninflected
 STC,5,Anusvāra of verbs,present|absent
 STC,6,ṛkārānta words,opt1|opt2|opt3
 STC,7,vas/yas suffixes,opt1|opt2|opt3|opt4
@@ -175,9 +143,7 @@ STC,18,Verb-class marker style,roman|arabic|sanskrit
 STC,22,Vedic accent preservation,present|absent
 STC,29,Etymology mean-length,low|med|high
 PWG,1,Anusvāra before consonants,opt1|opt2|opt3|opt4|opt5|opt6
-PWG,2,Duplication after r,opt1|opt2
 PWG,3,Words ending with -at,opt1|opt2|opt3|opt4|opt5
-PWG,4,Inflected vs uninflected headword form,inflected|uninflected
 PWG,5,Anusvāra of verbs,present|absent
 PWG,6,ṛkārānta words,opt1|opt2|opt3
 PWG,7,vas/yas suffixes,opt1|opt2|opt3|opt4
@@ -185,9 +151,7 @@ PWG,8,Sandhi handling at compound boundary,preserved|split|both
 PWG,16,Mahābhārata edition reference,pune|critical
 PWG,18,Verb-class marker style,roman|arabic|sanskrit
 GRA,1,Anusvāra before consonants,opt1|opt2|opt3|opt4|opt5|opt6
-GRA,2,Duplication after r,opt1|opt2
 GRA,3,Words ending with -at,opt1|opt2|opt3|opt4|opt5
-GRA,4,Inflected vs uninflected headword form,inflected|uninflected
 GRA,5,Anusvāra of verbs,present|absent
 GRA,6,ṛkārānta words,opt1|opt2|opt3
 GRA,7,vas/yas suffixes,opt1|opt2|opt3|opt4
@@ -197,9 +161,7 @@ GRA,18,Verb-class marker style,roman|arabic|sanskrit
 GRA,22,Vedic accent preservation,present|absent
 GRA,29,Etymology mean-length,low|med|high
 PW,1,Anusvāra before consonants,opt1|opt2|opt3|opt4|opt5|opt6
-PW,2,Duplication after r,opt1|opt2
 PW,3,Words ending with -at,opt1|opt2|opt3|opt4|opt5
-PW,4,Inflected vs uninflected headword form,inflected|uninflected
 PW,5,Anusvāra of verbs,present|absent
 PW,6,ṛkārānta words,opt1|opt2|opt3
 PW,7,vas/yas suffixes,opt1|opt2|opt3|opt4
@@ -208,9 +170,7 @@ PW,16,Mahābhārata edition reference,pune|critical
 PW,18,Verb-class marker style,roman|arabic|sanskrit
 PW,29,Etymology mean-length,low|med|high
 CCS,1,Anusvāra before consonants,opt1|opt2|opt3|opt4|opt5|opt6
-CCS,2,Duplication after r,opt1|opt2
 CCS,3,Words ending with -at,opt1|opt2|opt3|opt4|opt5
-CCS,4,Inflected vs uninflected headword form,inflected|uninflected
 CCS,5,Anusvāra of verbs,present|absent
 CCS,6,ṛkārānta words,opt1|opt2|opt3
 CCS,7,vas/yas suffixes,opt1|opt2|opt3|opt4
@@ -220,9 +180,7 @@ CCS,16,Mahābhārata edition reference,pune|critical
 CCS,18,Verb-class marker style,roman|arabic|sanskrit
 CCS,29,Etymology mean-length,low|med|high
 SCH,1,Anusvāra before consonants,opt1|opt2|opt3|opt4|opt5|opt6
-SCH,2,Duplication after r,opt1|opt2
 SCH,3,Words ending with -at,opt1|opt2|opt3|opt4|opt5
-SCH,4,Inflected vs uninflected headword form,inflected|uninflected
 SCH,5,Anusvāra of verbs,present|absent
 SCH,6,ṛkārānta words,opt1|opt2|opt3
 SCH,7,vas/yas suffixes,opt1|opt2|opt3|opt4
@@ -232,9 +190,7 @@ SCH,18,Verb-class marker style,roman|arabic|sanskrit
 SCH,22,Vedic accent preservation,present|absent
 SCH,29,Etymology mean-length,low|med|high
 BOP,1,Anusvāra before consonants,opt1|opt2|opt3|opt4|opt5|opt6
-BOP,2,Duplication after r,opt1|opt2
 BOP,3,Words ending with -at,opt1|opt2|opt3|opt4|opt5
-BOP,4,Inflected vs uninflected headword form,inflected|uninflected
 BOP,5,Anusvāra of verbs,present|absent
 BOP,6,ṛkārānta words,opt1|opt2|opt3
 BOP,7,vas/yas suffixes,opt1|opt2|opt3|opt4
@@ -242,9 +198,7 @@ BOP,8,Sandhi handling at compound boundary,preserved|split|both
 BOP,15,Citation format style,abbreviated|full|sanskrit
 BOP,16,Mahābhārata edition reference,pune|critical
 VCP,1,Anusvāra before consonants,opt1|opt2|opt3|opt4|opt5|opt6
-VCP,2,Duplication after r,opt1|opt2
 VCP,3,Words ending with -at,opt1|opt2|opt3|opt4|opt5
-VCP,4,Inflected vs uninflected headword form,inflected|uninflected
 VCP,5,Anusvāra of verbs,present|absent
 VCP,6,ṛkārānta words,opt1|opt2|opt3
 VCP,7,vas/yas suffixes,opt1|opt2|opt3|opt4
@@ -255,9 +209,7 @@ VCP,18,Verb-class marker style,roman|arabic|sanskrit
 VCP,22,Vedic accent preservation,present|absent
 VCP,29,Etymology mean-length,low|med|high
 SKD,1,Anusvāra before consonants,opt1|opt2|opt3|opt4|opt5|opt6
-SKD,2,Duplication after r,opt1|opt2
 SKD,3,Words ending with -at,opt1|opt2|opt3|opt4|opt5
-SKD,4,Inflected vs uninflected headword form,inflected|uninflected
 SKD,5,Anusvāra of verbs,present|absent
 SKD,6,ṛkārānta words,opt1|opt2|opt3
 SKD,7,vas/yas suffixes,opt1|opt2|opt3|opt4
@@ -268,9 +220,7 @@ SKD,18,Verb-class marker style,roman|arabic|sanskrit
 SKD,22,Vedic accent preservation,present|absent
 SKD,29,Etymology mean-length,low|med|high
 INM,1,Anusvāra before consonants,opt1|opt2|opt3|opt4|opt5|opt6
-INM,2,Duplication after r,opt1|opt2
 INM,3,Words ending with -at,opt1|opt2|opt3|opt4|opt5
-INM,4,Inflected vs uninflected headword form,inflected|uninflected
 INM,5,Anusvāra of verbs,present|absent
 INM,6,ṛkārānta words,opt1|opt2|opt3
 INM,7,vas/yas suffixes,opt1|opt2|opt3|opt4
@@ -281,9 +231,7 @@ INM,18,Verb-class marker style,roman|arabic|sanskrit
 INM,22,Vedic accent preservation,present|absent
 INM,29,Etymology mean-length,low|med|high
 VEI,1,Anusvāra before consonants,opt1|opt2|opt3|opt4|opt5|opt6
-VEI,2,Duplication after r,opt1|opt2
 VEI,3,Words ending with -at,opt1|opt2|opt3|opt4|opt5
-VEI,4,Inflected vs uninflected headword form,inflected|uninflected
 VEI,5,Anusvāra of verbs,present|absent
 VEI,6,ṛkārānta words,opt1|opt2|opt3
 VEI,7,vas/yas suffixes,opt1|opt2|opt3|opt4
@@ -294,9 +242,7 @@ VEI,18,Verb-class marker style,roman|arabic|sanskrit
 VEI,22,Vedic accent preservation,present|absent
 VEI,29,Etymology mean-length,low|med|high
 PUI,1,Anusvāra before consonants,opt1|opt2|opt3|opt4|opt5|opt6
-PUI,2,Duplication after r,opt1|opt2
 PUI,3,Words ending with -at,opt1|opt2|opt3|opt4|opt5
-PUI,4,Inflected vs uninflected headword form,inflected|uninflected
 PUI,5,Anusvāra of verbs,present|absent
 PUI,6,ṛkārānta words,opt1|opt2|opt3
 PUI,7,vas/yas suffixes,opt1|opt2|opt3|opt4
@@ -307,9 +253,7 @@ PUI,18,Verb-class marker style,roman|arabic|sanskrit
 PUI,22,Vedic accent preservation,present|absent
 PUI,29,Etymology mean-length,low|med|high
 BHS,1,Anusvāra before consonants,opt1|opt2|opt3|opt4|opt5|opt6
-BHS,2,Duplication after r,opt1|opt2
 BHS,3,Words ending with -at,opt1|opt2|opt3|opt4|opt5
-BHS,4,Inflected vs uninflected headword form,inflected|uninflected
 BHS,5,Anusvāra of verbs,present|absent
 BHS,6,ṛkārānta words,opt1|opt2|opt3
 BHS,7,vas/yas suffixes,opt1|opt2|opt3|opt4
@@ -319,9 +263,7 @@ BHS,18,Verb-class marker style,roman|arabic|sanskrit
 BHS,22,Vedic accent preservation,present|absent
 BHS,29,Etymology mean-length,low|med|high
 FRI,1,Anusvāra before consonants,opt1|opt2|opt3|opt4|opt5|opt6
-FRI,2,Duplication after r,opt1|opt2
 FRI,3,Words ending with -at,opt1|opt2|opt3|opt4|opt5
-FRI,4,Inflected vs uninflected headword form,inflected|uninflected
 FRI,5,Anusvāra of verbs,present|absent
 FRI,6,ṛkārānta words,opt1|opt2|opt3
 FRI,7,vas/yas suffixes,opt1|opt2|opt3|opt4
@@ -332,9 +274,7 @@ FRI,18,Verb-class marker style,roman|arabic|sanskrit
 FRI,22,Vedic accent preservation,present|absent
 FRI,29,Etymology mean-length,low|med|high
 ACC,1,Anusvāra before consonants,opt1|opt2|opt3|opt4|opt5|opt6
-ACC,2,Duplication after r,opt1|opt2
 ACC,3,Words ending with -at,opt1|opt2|opt3|opt4|opt5
-ACC,4,Inflected vs uninflected headword form,inflected|uninflected
 ACC,5,Anusvāra of verbs,present|absent
 ACC,6,ṛkārānta words,opt1|opt2|opt3
 ACC,7,vas/yas suffixes,opt1|opt2|opt3|opt4
@@ -345,9 +285,7 @@ ACC,17,Grammar marker style,abbreviated|full|sanskrit
 ACC,18,Verb-class marker style,roman|arabic|sanskrit
 ACC,29,Etymology mean-length,low|med|high
 KRM,1,Anusvāra before consonants,opt1|opt2|opt3|opt4|opt5|opt6
-KRM,2,Duplication after r,opt1|opt2
 KRM,3,Words ending with -at,opt1|opt2|opt3|opt4|opt5
-KRM,4,Inflected vs uninflected headword form,inflected|uninflected
 KRM,5,Anusvāra of verbs,present|absent
 KRM,6,ṛkārānta words,opt1|opt2|opt3
 KRM,7,vas/yas suffixes,opt1|opt2|opt3|opt4
@@ -358,9 +296,7 @@ KRM,17,Grammar marker style,abbreviated|full|sanskrit
 KRM,18,Verb-class marker style,roman|arabic|sanskrit
 KRM,29,Etymology mean-length,low|med|high
 MCI,1,Anusvāra before consonants,opt1|opt2|opt3|opt4|opt5|opt6
-MCI,2,Duplication after r,opt1|opt2
 MCI,3,Words ending with -at,opt1|opt2|opt3|opt4|opt5
-MCI,4,Inflected vs uninflected headword form,inflected|uninflected
 MCI,5,Anusvāra of verbs,present|absent
 MCI,6,ṛkārānta words,opt1|opt2|opt3
 MCI,7,vas/yas suffixes,opt1|opt2|opt3|opt4
