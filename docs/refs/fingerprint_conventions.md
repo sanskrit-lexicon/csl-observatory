@@ -7,7 +7,8 @@ dimension's option set, how it is currently obtained, and — for Patel's canoni
 Patel 2016 and must be slotted in by M.G. / V. Patel.
 
 **Companion**: [`../L0_DESIGN.md`](../L0_DESIGN.md) §2 (rationale), [`../L0_RESULTS.md`](../L0_RESULTS.md)
-(first tree), [`../L0_PATEL_ANNOTATION.md`](../L0_PATEL_ANNOTATION.md) (the fill-in sheet).
+(first tree), [`../L0_PATEL_ANNOTATION.md`](../L0_PATEL_ANNOTATION.md) (the fill-in sheet),
+[`concordance.md`](concordance.md) (numbering ↔ Patel 2016 ↔ CSV columns; the stability contract).
 **Source of truth for code**: `scripts/L0/s2_fingerprint.py` (DIMS), `s2b_patel_auto.py`, `s2c_patel_evidence.py`.
 
 ### Status legend
