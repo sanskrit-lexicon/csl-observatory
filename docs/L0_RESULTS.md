@@ -55,12 +55,46 @@ So the convention cladogram is a **formatting-genealogy** instrument, distinct f
 | 5 | **WIL→YAT** (0.93 / 0.39) | 0.54 | | CAE→PW (0.89 / 0.59) | 0.30 |
 
 Every high-content edge **into MW** tops the list — Monier-Williams is the corpus's great
-reformatter, absorbing CAE/MD/CCS/PWG content (89–93% containment) under its own house style
-(convention similarity 0.23–0.28). WIL→YAT confirms Yates re-styled Wilson. The faithful tail
-is exactly the formatting lineages the cladogram recovers. The residual is thus a single
-scalar that **localises editorial recoding** — the instrument behind Paper H §5 and the
-standalone methods note (Article 20). Shown on the dashboard `/conventions` as a two-axis
-scatter + ranked bar.
+reformatter, carrying CAE/MD/CCS/PWG **headwords** under its own house style (convention
+similarity 0.23–0.28). WIL→YAT confirms Yates re-styled Wilson. The faithful tail is exactly
+the formatting lineages the cladogram recovers. The residual is thus a single scalar that
+**localises editorial recoding** — the instrument behind Paper H §5 and the standalone methods
+note (Article 20). Shown on the dashboard `/conventions` as a two-axis scatter + ranked bar.
+**Caveat**: the residual's content axis is *raw* containment, which is size-confounded (§3.8);
+the residual *ranking* survives de-confounding, but the *magnitude* must be read from the
+rare-lemma instrument, never from raw containment.
+
+### Phase L0.8 — de-confounding the content magnitude (`s6_content_lift.py`)
+
+Raw containment `|A∩B|/|A|` is **size-confounded**: it falls monotonically with source size
+and is *highest* for the unrelated, tiny **BOP** (0.94 into MW). MW (194k lemmas) contains
+almost any older dict's common-core vocabulary regardless of descent, so raw containment
+measures *MW's coverage × the source's rarity profile*, not inheritance. `s6` (loader validated
+exactly against the committed edge sizes) replaces it with two size-aware instruments over
+sanhw1 (`data/L0/content_lift.csv`, `content_lift_report.json`, `exclusive_pair_lemmas.csv`):
+
+- **lift** = `|A∩B|·N / (|A|·|B|)` — *fails* to separate lineage from coincidence (BOP→MW has
+  the **highest** lift into MW, 2.28; the common core inflates everything ~2×).
+- **rare-lemma containment `rare@k`** — fraction of the source's *rare* headwords
+  (document-frequency ≤ k across all 41 dicts; common core dropped) that recur in the
+  inheritor. This is the discriminating instrument (handoff §3 "highest-value computation").
+
+| edge into MW | raw cont. | lift | **rare@3** | **rare@5** | exclusive-pair |
+|---|---|---|---|---|---|
+| PW→MW | 0.85 | 2.06 | **0.71** | — | **17,007** |
+| PWG→MW | 0.89 | 2.16 | **0.70** | **0.82** | 721 |
+| MW72→MW | 0.90 | 2.17 | **0.57** | 0.75 | 2,572 |
+| BOP→MW *(unrelated)* | **0.94** | **2.28** | **0.35** | 0.49 | 48 |
+
+Rare-lemma containment **inverts** the raw ranking: the Petersburg spine (PW, PWG) and the
+same-author MW72 rise to the top; the unrelated BOP collapses from first to last. And
+**17,007 headwords occur in *only* MW and PW** (exclusive-pair, df=2) — a forensic-grade copy
+signal for the Petersburg→MW lexicon transfer; BOP→MW shares just 48.
+
+**Corrected claim** (replaces "MW absorbed 89–94% of content"): *MW carries **70–82%** of PWG's
+idiosyncratic (rare) headwords (rare@3 0.70 / rare@5 0.82), versus 35–49% for the unrelated BOP;
+17k headwords are exclusive to the MW/PW pair.* The convention≠content finding is unchanged — it
+never relied on the magnitude.
 
 ## 4. The tree (canonical, `B_whamming` UPGMA, bootstrap-consensus)
 

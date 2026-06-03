@@ -17,6 +17,7 @@ The convention-fingerprint cladogram (L0_DESIGN) and all four post-L0 decisions 
 | L0.7 | content↔convention **reformatting residual** | ✅ |
 | L0.9 | Patel's open conventions (dims 31–33) + **hwnorm1#21** contribution | ✅ |
 | L0-rigor | **Bayesian Mk MCMC** + NJ bootstrap; three-algorithm comparison | ✅ |
+| L0.8 | **content-magnitude de-confound** — lift + rare-lemma containment + exclusive-pair (`s6`) | ✅ |
 
 Read in order: [`L0_DESIGN.md`](L0_DESIGN.md) → [`L0_RESULTS.md`](L0_RESULTS.md) →
 [`refs/fingerprint_conventions.md`](refs/fingerprint_conventions.md) +
@@ -74,12 +75,15 @@ magnitude claim needs replacing.
 
 ### What's needed to make "MW absorbed PWG content" precise — a ladder (cheap → strong)
 
-1. **Size-corrected association** (cheap, sanhw1 only): replace raw containment with **lift**
-   = observed overlap ÷ expected-given-sizes (hypergeometric / PMI), or a coverage-null. Needs
-   per-dict lemma *sets* (sanhw1.txt, ~10 MB, at `hwnorm1/sanhw1` — fetch; not in repo locally).
-2. **Rare/exclusive-lemma containment** (cheap): restrict to the source's *rare* lemmas (drop
-   the common core). If MW contains PWG's idiosyncratic/rare lemmas, that *is* lineage evidence.
-   This is the single highest-value next computation.
+1. ✅ **Size-corrected association** — `s6_content_lift.py` computes **lift** = |A∩B|·N/(|A|·|B|)
+   (PMI) over the local snapshot `observatory/snapshots/sanhw1.txt` (~470k lemmas — it was **in-repo
+   all along**, not a fetch; this handoff's "not in repo locally" was wrong). Result: **lift fails**
+   to de-confound — BOP→MW has the *highest* lift into MW (2.28); the common core inflates everything ~2×.
+2. ✅ **Rare-lemma containment** — `rare@k` = fraction of the source's df≤k headwords recurring in the
+   inheritor (common core dropped). **This is the fix.** It inverts the raw ranking: PWG→MW rare@3 0.70 /
+   rare@5 0.82, PW→MW 0.71, MW72→MW 0.57; the unrelated **BOP→MW collapses to 0.35**. Bonus exclusive-pair
+   (df=2): **17,007 headwords unique to MW∩PW**, 48 to BOP∩MW. (`data/L0/content_lift.csv`,
+   `content_lift_report.json`, `exclusive_pair_lemmas.csv`; loader validated exactly vs committed edges.)
 3. **Citation-set overlap** (Phase L6, needs corpus parse): do MW and PWG cite the *same* `<ls>`
    references for the same lemma? Language-neutral, strong copy signal.
 4. **Entry-text similarity** (Phase L4): for shared lemmas, definition/gloss string similarity
@@ -90,13 +94,16 @@ magnitude claim needs replacing.
    vols 1–4 (≈ letters a–p). Compute PWG→MW72 containment *restricted to PWG's pre-1872 letters*
    (L0_DESIGN §13). Makes the directed claim historically exact.
 
-Until (1)–(2) land, phrase results as **"X% of PWG's *headwords* recur in MW"** (lemma-set
-presence), never "absorbed X% of content".
+(1)–(2) **landed 2026-06-03** (`s6`). Phrase results as **rare-lemma containment** ("MW carries
+**70–82%** of PWG's *rare* headwords") or lift — never raw "absorbed X% of content". See L0_RESULTS §3.8.
+Steps 3–6 (citation-set / entry-similarity / forensic) remain → §4(D).
 
 ## 4. Queued next work (pick up here)
 
-- **(A) Sharpen the content claim** — implement ladder steps 1–2 (size-corrected lift +
-  rare-lemma containment) using sanhw1.txt. Fast, high-value, directly answers this handoff.
+- **(A) ✅ DONE (2026-06-03)** — `s6_content_lift.py`: size-corrected lift + rare-lemma containment +
+  exclusive-pair, de-confounding the MW magnitude (→ L0_RESULTS §3.8). Ladder steps 1–2 complete.
+  *Next on this thread*: feed the corrected numbers into (B); optionally re-axis the s4 residual on
+  rare-lemma containment instead of raw containment.
 - **(B) Write Article 20 / Paper H §5 in full** — all convention-side numbers are in hand;
   the content side should use (A)'s corrected numbers, not raw containment.
 - **(C) Complete the dict set** — LRV/FRI are gated (not in Patel's 36; annotate from source);
