@@ -15,7 +15,8 @@ Böhtlingk & Roth's *Großes Petersburger Wörterbuch* (PWG, 1855–75) and Böh
 abridgement (PW, 1879–89). *How* it inherited has been asserted but not measured. Using
 five language-neutral signals across 43 digitised dictionaries plus a scholar-curated
 error list, we show that MW inherited Böhtlingk's **apparatus** — which words to enter,
-which texts to cite, how to divide homonyms — but **not** his mechanical errors. Where a
+which texts to cite **and in what order**, how to divide homonyms — but **not** his
+mechanical errors. Where a
 PWG headword is misspelled, MW has the correct form in ~98% of curated cases; MW and PWG
 share **zero** documented print errors. The inheritance is of scholarship, not of
 typesetting. This resolves the size-confounded "MW absorbed 89–94% of PWG" claim into a
@@ -74,6 +75,20 @@ Petersburg divisions 64–77% of the time (MW/PWG 65%, MW/PW 64%, MW/MW72 77%) v
 for index-type nulls (INM, PUI, PE); the same-author PW/PWG ceiling is 81.5%. Homonym
 division is partly linguistically forced, so this corroborates rather than proves.
 
+**3.4 Citation order — MW worked *from* PWG's articles.** Sharing *which* texts to cite
+(§3.2) is consistent with merely using the same sources; sharing their *order* is not.
+Over 3,593 shared headwords for which both works cite ≥3 common sources, MW reproduces
+PWG's citation **sequence** at **0.811** concordance, with **47.8% of entries in perfectly
+identical order** — against a random baseline of 0.50 concordance and only ~5–17%
+chance-identical for k≥3 sources (a 3–10× excess). For example *droṇa*: both cite
+MBH · YĀJÑ · SUŚR · HARIV · VP in that order; *pratikartavya*: MBH · HARIV · ŚAṂK · R ·
+PRAB · SUŚR (six sources, identical sequence — random odds 1/720). The effect is
+Petersburg-*specific*, not a shared scholarly ordering convention: agreement falls
+monotonically with distance from the tradition — PWG 0.81 > PW 0.73 > Benfey 0.68 (itself
+Petersburg-influenced) > the independent Apte 0.42. MW did not merely consult Böhtlingk's
+sources; it assembled its entries **following Böhtlingk's entry**. This is the strongest
+single copying signal in the suite, and it is structural, not lexical.
+
 ## 4. What MW did *not* inherit — the errors
 
 **4.1 The decisive test.** `CORRECTIONS/dictionaries/PWG/ahlborn.txt` is a scholar-curated
@@ -98,10 +113,12 @@ it tracks Apte's independent English (Spearman 0.564 vs 0.576; differential −0
 
 ## 5. Discussion
 
-The signals converge on one statement: **MW is a faithful heir of Böhtlingk's scholarship
-and an independent typesetting.** It reproduced *what Böhtlingk knew* — the lemma inventory,
-the textual loci, the sense divisions — but composed its own English articles and did not
-carry over the German edition's mechanical errors. This is the forensic complement to the
+The signals converge on one statement: **MW is a structural copycat of Böhtlingk's apparatus
+and an independent typesetting.** It worked *from* the Petersburg articles — reproducing not
+only the lemma inventory and the textual loci but their **order** within the entry (§3.4),
+the surest sign that the German article lay open on the desk — yet it composed its own English
+prose and, separately keyed, carried over none of the German edition's mechanical errors.
+"Heir of the scholarship, author of the prose." This is the forensic complement to the
 Phase-L0 finding that MW absorbed the Petersburg *content* while recoding its *conventions*
 (PWG→MW convention bootstrap 0.02 vs formatting-lineage edges 0.70–0.81): a dictionary can
 inherit an apparatus wholesale yet share neither its house style nor its errors.
