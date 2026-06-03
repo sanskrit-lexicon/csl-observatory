@@ -15,6 +15,11 @@ high-resolution discriminators — filling them closes the gate and produces the
 
 **You do not need the Patel 2016 PDF in front of you** — the evidence columns carry the discriminating signal. Where my candidate option labels differ from Patel's exact taxonomy, just write Patel's label in `VALUE`; the pipeline treats values as free categorical strings.
 
+> The full convention taxonomy (all 30 dims + the numbered slots for Patel's exact
+> option codes) lives in [`refs/fingerprint_conventions.md`](refs/fingerprint_conventions.md).
+> If you have Patel 2016 to hand, dropping his enumerated options into the `(c.1)…(c.N)`
+> slots there lets me pre-map more cells and shrink this sheet further.
+
 Time estimate: ~30–50 cells carry real signal (many dicts share an obvious value); ~1–2 h.
 
 ---
