@@ -30,13 +30,13 @@ paper order can be confirmed or revised here **without touching code or data**.
 
 | L0 dim | CSV column key | slug | category | Patel2016 § | #opts | status |
 |---:|---|---|---|:---:|:---:|---|
-| 1 | `dim_1_*` | anusvara-before-cons | Patel-orthography | conv. 1 ⟲ | 6 | gate+pdf |
-| 2 | `dim_2_*` | r-duplication | Patel-orthography | conv. 2 ⟲ | 2 | auto-patel ✅ |
-| 3 | `dim_3_*` | at-ending (śatṛ/vatup) | Patel-orthography | conv. 3 ⟲ | 5 | gate+pdf |
-| 4 | `dim_4_*` | inflected-headword | Patel-orthography | conv. 4 ⟲ | 2 | auto-patel ✅ |
-| 5 | `dim_5_*` | verb-anusvara | Patel-orthography | conv. 5 ⟲ | N | gate+pdf |
-| 6 | `dim_6_*` | rkaranta | Patel-orthography | conv. 6 ⟲ | 3 | gate |
-| 7 | `dim_7_*` | vas-yas-suffix | Patel-orthography | conv. 7 ⟲ | 4 | gate+pdf |
+| 1 | `dim_1_*` | anusvara-before-cons | Patel-orthography | **conv. 1** ✅ | 6 | patel2016 |
+| 2 | `dim_2_*` | r-duplication | Patel-orthography | **conv. 2** ✅ | 2 | patel2016 |
+| 3 | `dim_3_*` | at-ending (śatṛ/vatup) | Patel-orthography | **conv. 3** ✅ | 5 | patel2016 |
+| 4 | `dim_4_*` | inflected-headword | Patel-orthography | **conv. 4** ✅ | 2 | patel2016 |
+| 5 | `dim_5_*` | verb-anusvara | Patel-orthography | **conv. 5** ✅ | 3 | patel2016 |
+| 6 | `dim_6_*` | rkaranta | Patel-orthography | **conv. 6** ✅ | 3 | patel2016 |
+| 7 | `dim_7_*` | vas-yas-suffix | Patel-orthography | **conv. 7** ✅ | 4 | patel2016 |
 | 8 | `dim_8_*` | sandhi-compound-boundary | sandhi/compound | — | 3 | gate |
 | 9 | `dim_9_*` | compound-hw-separation | sandhi/compound | — | 3 | auto |
 | 10 | `dim_10_*` | variant-hw-k2 | sandhi/compound | — | 3 | auto |
@@ -62,31 +62,32 @@ paper order can be confirmed or revised here **without touching code or data**.
 | 30 | `dim_30_*` | etym-marker-patterns | etym-richness | — | 3 | auto |
 
 **Legend.** `Patel2016 §` — the convention's number in Dhaval Patel's 2016 paper;
-`⟲` = our assumed mapping, **to be confirmed against the PDF** (see below). `—` = a
-project addition, not in Patel 2016. `#opts` — option count (see `fingerprint_conventions.md`).
-Status tags as in `fingerprint_conventions.md` (`auto` / `auto-patel` / `gate` / `gate+pdf`).
+`✅` = confirmed against the PDF. `—` = a project addition, not in Patel 2016.
+`#opts` — option count (see `fingerprint_conventions.md`). `patel2016` status = the
+cell is populated from Patel's own per-dict assignments.
 
 ---
 
-## Patel 2016 ⟶ L0 (the 7 to confirm)
+## Patel 2016 ⟶ L0 (confirmed 2026-06-03)
 
-We currently assume Patel's conventions appear in his paper in the same order as our
-`dim_1…dim_7`. If his numbering differs, fill the **Patel # / Patel title** columns
-from the paper and the `⟲` flags above resolve to `=`.
+Confirmed against `refs/Patel_2016_Normalizing_headwords.pdf`: Patel's conventions
+appear in his paper in the **same order** as our `dim_1…dim_7`. The numbering coincides.
 
-| our L0 dim | our short name | Patel 2016 conv. # | Patel's own title | confirmed? |
+| our L0 dim | our short name | Patel 2016 conv. # | Patel's own title | confirmed |
 |---:|---|:---:|---|:---:|
-| 1 | anusvara-before-cons | _to fill_ | _to fill_ | ☐ |
-| 2 | r-duplication | _to fill_ | _to fill_ | ☐ |
-| 3 | at-ending | _to fill_ | _to fill_ | ☐ |
-| 4 | inflected-headword | _to fill_ | _to fill_ | ☐ |
-| 5 | verb-anusvara | _to fill_ | _to fill_ | ☐ |
-| 6 | rkaranta | _to fill_ | _to fill_ | ☐ |
-| 7 | vas-yas-suffix | _to fill_ | _to fill_ | ☐ |
+| 1 | anusvara-before-cons | 1 | Treatment of anusvāra before consonants | ✅ |
+| 2 | r-duplication | 2 | Duplication of consonants after 'r' | ✅ |
+| 3 | at-ending | 3 | Treatment of words ending with 'at' | ✅ |
+| 4 | inflected-headword | 4 | Uninflected / inflected forms | ✅ |
+| 5 | verb-anusvara | 5 | Treatment of anusvāra of verb | ✅ |
+| 6 | rkaranta | 6 | Treatment of ṛkārānta words | ✅ |
+| 7 | vas-yas-suffix | 7 | Treatment of words ending with vas/yas (kvasu/vasu/īyasun) | ✅ |
 
-> Reference: D. Patel & ___, "____" (2016). _Add full citation + stable URL/DOI here._
-> The PDF is expected at `data/sources/patel_2016.pdf` (checked by `s1_bootstrap.py`,
-> currently `pending`).
+> **Reference**: Dhaval Patel. 2016. *Normalizing headwords of Cologne digital dictionaries.*
+> PDF: `docs/refs/Patel_2016_Normalizing_headwords.pdf`. Living version + issues:
+> `https://github.com/sanskrit-lexicon/hwnorm1`. Per-dict assignments transcribed into
+> `scripts/L0/s2d_patel_gold.py` → `data/L0/patel2016_assignments.csv`.
+> Coverage: all 36 Cologne-2016 dicts. **Not** covered (still `gate`): LRV, FRI, KNA, KOW, AMAR.
 
 ---
 

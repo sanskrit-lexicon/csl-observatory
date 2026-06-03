@@ -95,47 +95,64 @@ def load():
 
 
 def informative_dims(codes, vals):
-    """Dims filled for ≥ half the dicts AND non-constant among the filled."""
+    """Dims filled for ≥ a third of the dicts AND non-constant among the filled."""
     keep = []
     for d in range(1, 31):
         present = [vals[c][d] for c in codes if d in vals[c]]
-        if len(present) >= len(codes) / 2 and len(set(present)) > 1:
+        if len(present) >= len(codes) / 3 and len(set(present)) > 1:
             keep.append(d)
     return keep
 
 
 # --------------------------------------------------------- option freqs ---
 def option_freq(codes, vals, dims):
-    """p(option) per dim across the dicts that have it filled — for IDF weights."""
+    """p(option) per dim across the dicts (multi-valued cells count each option)."""
     freq = {}
     for d in dims:
-        c = Counter(vals[k][d] for k in codes if d in vals[k])
-        tot = sum(c.values())
+        c = Counter()
+        ndict = 0
+        for k in codes:
+            if d in vals[k]:
+                ndict += 1
+                for o in vals[k][d].split("+"):
+                    c[o] += 1
+        tot = max(ndict, 1)
         freq[d] = {opt: n / tot for opt, n in c.items()}
     return freq
 
 
 # ------------------------------------------------------------ distances ---
+def opts(val):
+    """A cell value may be a `+`-joined option set (multi-valued Patel conv.)."""
+    return set(val.split("+"))
+
+
+def cell_dissim(va, vb):
+    """1 − Jaccard over the two cells' option sets (0 if identical, 1 if disjoint)."""
+    A, B = opts(va), opts(vb)
+    u = len(A | B)
+    return 1 - len(A & B) / u if u else 0.0
+
+
 def d_hamming(a, b, dims, **kw):
-    common = diff = 0
+    common = diff = 0.0
     for d in dims:
         if d in a and d in b:
             common += 1
-            diff += (a[d] != b[d])
+            diff += cell_dissim(a[d], b[d])
     return diff / common if common else 1.0
 
 
 def d_whamming(a, b, dims, freq=None, **kw):
-    """IDF-weighted: a mismatch on a rare option costs more."""
+    """IDF-weighted: a mismatch on a rare option costs more (multi-value aware)."""
     wsum = wdiff = 0.0
     for d in dims:
         if d in a and d in b:
-            wi = 0.5 * (-math.log2(freq[d].get(a[d], 1e-6))
-                        - math.log2(freq[d].get(b[d], 1e-6)))
+            union = opts(a[d]) | opts(b[d])
+            wi = sum(-math.log2(freq[d].get(o, 1e-6)) for o in union) / max(len(union), 1)
             wi = max(wi, 1e-3)
             wsum += wi
-            if a[d] != b[d]:
-                wdiff += wi
+            wdiff += wi * cell_dissim(a[d], b[d])
     return wdiff / wsum if wsum else 1.0
 
 
@@ -146,8 +163,7 @@ def d_chamming(a, b, dims, ca=None, cb=None, **kw):
         if d in a and d in b:
             wi = 0.5 * (ca.get(d, 0.7) + cb.get(d, 0.7))
             wsum += wi
-            if a[d] != b[d]:
-                wdiff += wi
+            wdiff += wi * cell_dissim(a[d], b[d])
     return wdiff / wsum if wsum else 1.0
 
 
@@ -159,7 +175,8 @@ def d_jaccard(sa, sb, **kw):
 def build_matrix(codes, kind, vals, confs, dims, freq):
     n = len(codes)
     D = np.zeros((n, n))
-    sets = {c: {f"{d}={vals[c][d]}" for d in dims if d in vals[c]} for c in codes}
+    sets = {c: {f"{d}={o}" for d in dims if d in vals[c] for o in vals[c][d].split("+")}
+            for c in codes}
     for i in range(n):
         for j in range(i + 1, n):
             a, b = vals[codes[i]], vals[codes[j]]
@@ -258,12 +275,13 @@ def main():
     print(f"{len(codes)} dicts × {len(dims)} informative dims: {dims}\n")
 
     # encoding A one-hot dump
-    all_tokens = sorted({f"{d}={vals[c][d]}" for c in codes for d in dims if d in vals[c]})
+    all_tokens = sorted({f"{d}={o}" for c in codes for d in dims if d in vals[c]
+                         for o in vals[c][d].split("+")})
     with open("data/L0/encoded/onehot.csv", "w", encoding="utf-8", newline="") as f:
         w = csv.writer(f)
         w.writerow(["dict"] + all_tokens)
         for c in codes:
-            present = {f"{d}={vals[c][d]}" for d in dims if d in vals[c]}
+            present = {f"{d}={o}" for d in dims if d in vals[c] for o in vals[c][d].split("+")}
             w.writerow([c] + [1 if t in present else 0 for t in all_tokens])
 
     configs = ["A_jaccard", "B_hamming", "B_whamming", "C_chamming"]

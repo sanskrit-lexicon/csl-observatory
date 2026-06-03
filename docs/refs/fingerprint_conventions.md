@@ -27,84 +27,70 @@ Patel 2016 and must be slotted in by M.G. / V. Patel.
 
 ---
 
-## A. Patel's canonical 7 (dims 1–7)
+## A. Patel's canonical 7 (dims 1–7) — exact taxonomy from Patel 2016
 
-These are V. Patel's 2016 transliteration/citation conventions. Dims 2 & 4 are
-mechanically recoverable (now `auto-patel`); the other five are `gate`/`gate+pdf`.
+Source: **Dhaval Patel, "Normalizing headwords of Cologne digital dictionaries" (2016)**
+(`refs/Patel_2016_Normalizing_headwords.pdf`; project repo `sanskrit-lexicon/hwnorm1`).
+Patel both defines the options **and assigns every Cologne dictionary** to them — so dims
+1–7 are now populated from his ground truth (source `patel2016`), not annotation. The
+**Standard** line is Patel's recommended normalization target. Conventions are
+multi-valued (a dict may follow several options); cells store the `+`-joined set.
+English-headword dicts (BOR, AE, MWE) are excluded by Patel → dims 1–7 N/A.
+Status: all `patel2016` ✅ (gate closed) except **LRV, FRI** (not in Patel's 36 → still `gate`).
 
-### dim 1 — Anusvāra before consonants  ·  **6 options** · `gate+pdf`
-*Phenomenon*: representation of a word-internal nasal before a following consonant.
-Measured signal: `anusvāra-share` = (`M`+stop) ÷ (`M`+stop + homorganic-nasal+stop).
+### dim 1 — Anusvāra before consonants  ·  **6 options**
+Before `य र ल व श ष स ह` every dict uses anusvāra uniformly (out of scope). Otherwise:
+- **1.1** internal nasal → anusvāra (not when 1st compound-member ends in `m`), e.g. `akuṃṭhita` — *AP90*.
+- **1.2** internal nasal → fifth letter of the varga (homorganic), e.g. `cañcala` — *31 dicts (almost all)*.
+- **1.3** final anusvāra denotes **neuter gender**, e.g. `akauṭilyaṃ` — *AP90, SKD*.
+- **1.4** final anusvāra denotes **avyaya** (where `m` expected), e.g. `anukāmaṃ` — *YAT*.
+- **1.5** 1st compound-member ends `m` + 2nd starts with *jhar* → anusvāra, e.g. `saṃgīta` — *ACC,AP,AP90,BEN,BHS,CAE,CCS,MCI,MD,PD,PW,PWG,SCH,STC,VEI,WIL*.
+- **1.6** compound-final `m` → fifth letter, e.g. `saṃgīta`→`saṅgīta` — *BOP,BUR,GRA,GST,KRM,IEG,INM,MW72,PGN,PUI,SKD,VCP,YAT*.
+- Inconsistent on 1.5/1.6: PE, SHS, MW. KRM: 1.1/1.2 N/A (verbs). **Standard**: internal→anusvāra; final→`m`.
 
-Contrastive states we can measure (map to Patel's 6):
-- **homorganic** — class nasal per varga: `aṅka, pañca, daṇḍa, anta, ambu` (SLP1 `aNka…`).
-- **anusvāra** — `ṃ` before any consonant: `aṃka, paṃca…` (SLP1 `aMka`).
-- **anusvāra-before-sibilant-only** — `saṃskāra` but `aṅka` (the common scholarly compromise).
-- **mixed / inconsistent**.
+### dim 2 — Duplication of consonants after r  ·  **2 options**
+- **2.1** duplication in all cases, e.g. `pūrvva` — *SKD, WIL*.
+- **2.2** no duplication, e.g. `pūrva` — *all others*.
+- Inconsistent: SHS, YAT (stored `2.1+2.2`); VCP leans 2.2 with a few exceptions. **Standard**: 2.2.
 
-Patel's exact 6:
-- (1.1) ⟶ _to fill from Patel 2016_
-- (1.2) ⟶ …
-- (1.3) ⟶ …
-- (1.4) ⟶ …
-- (1.5) ⟶ …
-- (1.6) ⟶ …
+### dim 3 — Words ending with -at (śatṛ + vatup/matup)  ·  **5 options (3+2)**
+śatṛ present participles:
+- **3.1** → `-at`, e.g. `gacchat` — *AP,AP90,BOP,BUR,GRA,GST,MD,MW,MW72,PD,SHS,VCP,WIL,YAT*.
+- **3.2** → `-ant`, e.g. `anāgacchant` — *BEN,BHS,CAE,CCS,PW,PWG,SCH,STC,VEI*.
+- **3.3** → `-an`, e.g. `paśyan` — *SKD*.
+vatup/matup possessives:
+- **3.4** → `-vat/-mat`, e.g. `bhagavat` — *ACC,AP,AP90,BOP,BUR,GRA,GST,IEG,INM,MCI,MD,MW,PD,SHS,VCP,WIL,YAT*.
+- **3.5** → `-vant/-mant`, e.g. `bhagavant` — *BEN,BHS,CAE,CCS,PW,PWG,SCH,STC*.
+- Insufficient data: ACC,IEG,INM,KRM,MCI,PE,PGN,PUI,SNP (for śatṛ). **Standard**: 3.1 (`-at`).
 
-Measured (anusvāra-share, 32 sourced dicts): AP90 0.999, LRV 0.565, FRI 0.235; all
-others < 0.13 (homorganic). → suggested: AP90/LRV `anusvara`, FRI `mixed`, rest `homorganic`.
+### dim 4 — Uninflected / inflected headword  ·  **2 options**
+- **4.1** inflected (nom. sg., prathamā ekavacana), e.g. `dharmaḥ` — *AP, AP90, SKD*.
+- **4.2** uninflected stem, e.g. `dharma` — *all others*.
+- ACC inconsistent (`4.1+4.2`); KRM N/A (verbs). **Standard**: 4.2. *(My s2b mechanical agreed exactly: AP/AP90/SKD inflected.)*
 
-### dim 2 — Duplication after r  ·  **2 options** · `auto-patel` ✅
-*Phenomenon*: a consonant following a consonant-`r` is geminated (older orthography)
-or single (modern). Test: char-level `rCC` vs `rCV`.
-- (2.1) **single** — `akarkaSa, akarRa` (modern).
-- (2.2) **duplicated** — `akarkkaSa, akarRRa` (older). Intermediate → **mixed**.
+### dim 5 — Anusvāra of verb  ·  **3 options**
+- **5.1** verbs as in **Dhātupāṭha**, e.g. `stambh` (with anubandhas) — *KRM,PD,SKD,VCP,WIL*.
+- **5.2** remove anubandha + convert to fifth letter, e.g. `stambh`→`stambh` — *AP,BEN,BOP,BUR,CAE,CCS,GRA,GST,MD,MW,MW72,PD,PW,PWG,SCH,SHS,STC,YAT*.
+- **5.3** remove anubandha, keep anusvāra, e.g. `staṃbh` — *AP90*.
+- Insufficient: ACC,BHS,IEG,INM,MCI,PE,PGN,PUI,SNP,VEI. PD in both 5.1 & 5.2. **Standard**: 5.3.
 
-Measured: WIL/YAT/SHS/VCP ≈ 0.32–0.34 (`mixed`), SKD 0.41 (`duplicated`); all others ≤ 0.02 (`single`).
+### dim 6 — ṛkārānta words  ·  **3 options**
+- **6.1** → `-ar`, e.g. `kartar` (SLP1 `…ar`) — *BHS, CCS, PW, PWG, SCH* (Petersburg school).
+- **6.2** → `-ṛ`, e.g. `kartṛ` (SLP1 `…f`) — *ACC,AP,AP90,BEN,BOP,BUR,CAE,GRA,GST,IEG,INM,MD,MW,MW72,PD,SHS,STC,VCP,VEI,WIL,YAT*.
+- **6.3** → `-ā` inflected, e.g. `kartā` — *PUI, SKD*.
+- Insufficient: KRM,MCI,PE,PGN,SNP. **Standard**: 6.2. *(My s2c mechanical agreed: PWG/PW/CCS/SCH `-ar`.)*
 
-### dim 3 — Words ending with -at (śatṛ / vatup-matup)  ·  **5 options (3+2)** · `gate+pdf`
-*Phenomenon*: how present participles in `-at` (śatṛ) and possessives in `-vat`/`-mat`
-(vatup/matup) are cited. Patel: 3 sub-options for `-at`, 2 for `-vat/-mat`.
+### dim 7 — vas/yas suffixes (kvasu/vasu/īyasun)  ·  **4 options**
+- **7.1** → `-vas/-yas`, e.g. `vidvas` — *AP,AP90,BOP,BUR,CCS,GRA,GST,INM,MCI,MD,MW,MW72,PD,PE,SHS,VCP,WIL,YAT*.
+- **7.2** → `-vāṃs/-yāṃs`, e.g. `vidvāṃs` — *BHS, STC*.
+- **7.3** → `-vān/-yān`, e.g. `vidvān` — *PUI, SKD*.
+- **7.4** → `-vaṃs/-yaṃs`, e.g. `vidvaṃs` — *CAE, PW, PWG, SCH*.
+- Insufficient: ACC,BEN,IEG,PGN,SNP,VEI; KRM excluded. **Standard**: 7.1.
 
-Patel's exact options:
-- `-at` sub-conventions: (3.1) … (3.2) … (3.3) … ⟶ _to fill_
-- `-vat/-mat` sub-conventions: (3.4) … (3.5) … ⟶ _to fill_
-
-Measured counts (per dict): in `patel_fillin.csv` (`-at`/`-vat`/`-mat` + examples).
-Notable: GRA `-vat` 274 (Vedic), BOR/AE `-vat` ≈ 1 (English-headword dicts).
-
-### dim 4 — Inflected vs uninflected headword form  ·  **2 options** · `auto-patel` ✅
-*Phenomenon*: citation form carries nominative inflection or is the bare stem.
-Test: trailing visarga `-H` / neuter anusvāra `-M` rate on `k1`.
-- (4.1) **uninflected** — bare stem `aMSa`.
-- (4.2) **inflected** — `aMSaH`, neuter `aMSakaM`.
-
-Measured: AP90 0.32, AP 0.27, SKD 0.72 visarga-rate → `inflected`; all others `uninflected`.
-
-### dim 5 — Anusvāra of verbs  ·  **N options** · `gate+pdf`
-*Phenomenon*: nasal verbal **roots** cited with anusvāra (`aMS`, `aMh`) vs nasal letter
-(`aMs`); some dicts list both as separate root entries.
-- (5.1) **anusvara** · (5.2) **nasal-letter** · (5.3) **both/mixed** · (5.4) **n.a.** (no verb roots).
-- Patel's exact set ⟶ _to fill_.
-
-Measured: short nasal-root inventory + examples per dict in `patel_fillin.csv`. Index/
-reverse dicts (INM, ACC, BOR, AE) → n.a.
-
-### dim 6 — ṛkārānta words (ṛ-final agent nouns)  ·  **3 options** · `gate`
-*Phenomenon*: citation of an ṛ-stem agent noun (`kartṛ`).
-- (6.1) **stem-f** — bare stem, SLP1 `kartf` (Anglo-Indian / Apte / MW school).
-- (6.2) **ar** — `kartar`, SLP1 `…ar` (Böhtlingk–Roth / Petersburg school).
-- (6.3) **nominative-A** — `kartā`, SLP1 `…A`.
-- Patel's exact 3 ⟶ confirm mapping above.
-
-Measured (f-stem / -ar counts): **PWG 0/134, PW 1, CCS 6, SCH 16** → `ar`; WIL 80, MW72 228,
-AP90 222, MD 227, STC 259 etc. → `stem-f`. Clean Petersburg-vs-rest split.
-
-### dim 7 — vas/yas suffixes  ·  **4 options** · `gate+pdf`
-*Phenomenon*: spelling/listing of `-vas` (perfect participle, `vidvas`) and `-yas`
-(comparative, `garīyas`) stems.
-- (7.1) … (7.2) … (7.3) … (7.4) … ⟶ _to fill from Patel 2016_.
-
-Measured: `-vas`/`-yas` counts + examples per dict. GRA 83/81 (Vedic outlier); BOR/AE/SKD/ACC/BHS ≈ 0 → n.a.
+> **Patel's open TODO** (paper §TODO, candidate future dim): *tकारान्त* words (`mahat`/`mahant`/`mahā`/`mahān`)
+> — split `महत्` {AP,AP90,BHS,BOP,BUR,GRA,INM,MD,MW,MW72,PUI,PW,SHS,SKD,VCP,WIL,YAT} ·
+> `महन्त्` {BEN,CAE,CCS,IEG,PW,PWG,SCH} · `महान्त्` {STC} · `महान्` {PE,PUI,SKD}. Also pending in
+> Patel: ṛkārānta-nipātita (`jāmātṛ`), सकारान्त, रेफान्त. Add as dims 31+ when operationalised.
 
 ---
 

@@ -35,8 +35,13 @@
     "MCI"
   ],
   "informative_dims": [
+    1,
     2,
+    3,
     4,
+    5,
+    6,
+    7,
     9,
     10,
     11,
@@ -56,7 +61,7 @@
     28,
     30
   ],
-  "n_dims": 20,
+  "n_dims": 25,
   "dropped_no_source": [
     "AMAR",
     "KNA",
@@ -70,11 +75,11 @@
   ],
   "canonical_config": "B_whamming",
   "n_bootstrap": 1000,
-  "global_mean_distance": 0.6434,
+  "global_mean_distance": 0.6495,
   "known_edge_recovery": {
     "tierA_n": 11,
-    "tierA_recovered": 3,
-    "recovery_rate": 0.273,
+    "tierA_recovered": 6,
+    "recovery_rate": 0.545,
     "target": 0.7,
     "passes": false,
     "per_edge": [
@@ -106,17 +111,17 @@
         "parent": "PWG",
         "child": "PW",
         "tier": "A",
-        "knn3": false,
-        "clade<=5": false,
-        "smallest_clade": 9
+        "knn3": true,
+        "clade<=5": true,
+        "smallest_clade": 3
       },
       {
         "parent": "PW",
         "child": "CCS",
         "tier": "A",
         "knn3": false,
-        "clade<=5": false,
-        "smallest_clade": 9
+        "clade<=5": true,
+        "smallest_clade": 5
       },
       {
         "parent": "CCS",
@@ -132,7 +137,7 @@
         "tier": "A",
         "knn3": false,
         "clade<=5": false,
-        "smallest_clade": 7
+        "smallest_clade": 6
       },
       {
         "parent": "AP90",
@@ -140,7 +145,7 @@
         "tier": "A",
         "knn3": true,
         "clade<=5": true,
-        "smallest_clade": 2
+        "smallest_clade": 3
       },
       {
         "parent": "PWG",
@@ -162,9 +167,9 @@
         "parent": "PWG",
         "child": "SCH",
         "tier": "A",
-        "knn3": false,
-        "clade<=5": false,
-        "smallest_clade": 9
+        "knn3": true,
+        "clade<=5": true,
+        "smallest_clade": 3
       },
       {
         "parent": "BOP",
@@ -172,7 +177,7 @@
         "tier": "B",
         "knn3": false,
         "clade<=5": false,
-        "smallest_clade": 7
+        "smallest_clade": 6
       },
       {
         "parent": "BEN",
@@ -180,12 +185,12 @@
         "tier": "B",
         "knn3": false,
         "clade<=5": false,
-        "smallest_clade": 7
+        "smallest_clade": 8
       }
     ]
   },
   "loo_nearest_neighbour": {
-    "accuracy": 0.538,
+    "accuracy": 0.462,
     "target": 0.6,
     "passes": false,
     "per_edge": [
@@ -234,8 +239,8 @@
       {
         "edge": "AP90->AP",
         "tier": "A",
-        "nn_of_child": "AP90",
-        "hit": true
+        "nn_of_child": "GST",
+        "hit": false
       },
       {
         "edge": "PWG->MW72",
@@ -273,7 +278,7 @@
     [
       "WIL",
       "SHS",
-      0.896
+      0.813
     ]
   ],
   "lineage_cohesion": {
@@ -283,7 +288,7 @@
         "YAT",
         "SHS"
       ],
-      "mean_within": 0.3975,
+      "mean_within": 0.4517,
       "tighter_than_global": true
     },
     "Petersburg (PWG/PW/SCH/CCS/GRA)": {
@@ -294,7 +299,7 @@
         "CCS",
         "GRA"
       ],
-      "mean_within": 0.558,
+      "mean_within": 0.5091,
       "tighter_than_global": true
     },
     "Apte (AP90/AP)": {
@@ -302,7 +307,7 @@
         "AP90",
         "AP"
       ],
-      "mean_within": 0.316,
+      "mean_within": 0.3837,
       "tighter_than_global": true
     },
     "Monier-Williams (MW72/MW)": {
@@ -310,7 +315,7 @@
         "MW72",
         "MW"
       ],
-      "mean_within": 0.4655,
+      "mean_within": 0.4381,
       "tighter_than_global": true
     },
     "Cappeller (CAE/CCS)": {
@@ -318,7 +323,7 @@
         "CAE",
         "CCS"
       ],
-      "mean_within": 0.2017,
+      "mean_within": 0.2926,
       "tighter_than_global": true
     },
     "Indigenous (VCP/SKD)": {
@@ -326,7 +331,7 @@
         "VCP",
         "SKD"
       ],
-      "mean_within": 0.2507,
+      "mean_within": 0.3254,
       "tighter_than_global": true
     }
   },

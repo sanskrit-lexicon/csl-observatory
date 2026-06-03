@@ -1,5 +1,13 @@
 # Phase L0 — Patel co-annotation guide (the 5 judgement-bound conventions)
 
+> **2026-06-03 UPDATE — gate largely CLOSED.** The Patel 2016 PDF
+> (`refs/Patel_2016_Normalizing_headwords.pdf`) supplies the convention author's **own
+> per-dict assignments** for all 7 conventions across the 36 Cologne-2016 dicts. These were
+> ingested as gold (`s2d_patel_gold.py` → `data/L0/patel2016_assignments.csv`) and dims 1–7
+> are now filled for **30 of our 32** dicts — no manual annotation needed. The sheet below is
+> retained only for the **2 dicts Patel does not cover (LRV, FRI)** and the 3 source-less ones
+> (KNA, KOW, AMAR). See [`L0_RESULTS.md`](L0_RESULTS.md) for the resulting tree.
+
 **Date**: 2026-06-03 · **For**: M. Gasūns · **Sheet**: [`data/L0/patel_fillin.csv`](../data/L0/patel_fillin.csv)
 **Why this exists**: dims 2 + 4 are auto-filled mechanically; the cladogram recovers all 6
 lineage *families* but not fine directed lineage. Patel's other five conventions are the

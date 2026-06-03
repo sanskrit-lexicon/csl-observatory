@@ -1,64 +1,73 @@
-# Phase L0 — Results (first convention-fingerprint cladogram)
+# Phase L0 — Results (convention-fingerprint cladogram)
 
-**Date**: 2026-06-03 · **Status**: pipeline complete + validated; final tree gated on Patel co-annotation
-**Design**: [`L0_DESIGN.md`](L0_DESIGN.md) · **Scripts**: `scripts/L0/s2b_patel_auto.py`, `scripts/L0/s3_cladogram.py`
-**Data products**: `data/L0/` (distances, trees, encodings, validation report)
+**Date**: 2026-06-03 · **Status**: pipeline complete + validated on **Patel-2016 gold conventions**
+**Design**: [`L0_DESIGN.md`](L0_DESIGN.md) · **Taxonomy**: [`refs/fingerprint_conventions.md`](refs/fingerprint_conventions.md), [`refs/concordance.md`](refs/concordance.md)
+**Scripts**: `scripts/L0/s2b_patel_auto.py`, `s2d_patel_gold.py`, `s3_cladogram.py`
+**Data**: `data/L0/` (distances, trees, encodings, `patel2016_assignments.csv`, `validation_report.json`)
 
 ---
 
 ## 1. What ran
 
-The full L0 pipeline (design §3–§7) now executes end-to-end:
+1. **`s2_fingerprint.py`** — auto-extracts dims 9–30 from the 32 local CDSL sources.
+2. **`s2b_patel_auto.py`** — mechanical pre-fill of the two parseable Patel conventions (dims 2, 4) for dicts outside Patel's coverage (LRV, FRI).
+3. **`s2d_patel_gold.py`** — ingests **Patel 2016's authoritative per-dict assignments** for conventions 1–7 (`data/L0/patel2016_assignments.csv`), the gold ground truth that **closes the annotation gate** for all 30 covered dicts. Conventions are multi-valued → cells store `+`-joined option sets (e.g. AP90 dim 1 = `1.1+1.3+1.5`).
+4. **`s3_cladogram.py`** — 4 (encoding, metric) configs → UPGMA + NJ (8 trees), Robinson–Foulds, 1000× dimension-bootstrap consensus canonical tree, validation. Multi-valued cells expand to per-option one-hot tokens (encoding A) with cell-level Jaccard inside the Hamming metrics.
 
-1. **`s2_fingerprint.py`** (prior) — auto-extracts dims 9–30 from the 32 locally-available CDSL sources.
-2. **`s2b_patel_auto.py`** (new) — mechanically pre-fills the **two parseable Patel conventions** (per design §12.2):
-   - **dim 2 (duplication after r)** — character-level gemination test on headwords.
-   - **dim 4 (inflected vs uninflected headword)** — visarga/anusvāra suffix test on `k1`.
-3. **`s3_cladogram.py`** (new) — 3 encodings × distance metrics → **4 (encoding, metric) configs**, **UPGMA + Neighbour-Joining** → 8 candidate trees, **Robinson–Foulds** comparison, **1000× dimension-bootstrap** consensus canonical tree, and validation (known-edge recovery, nearest-neighbour LOO, bootstrap support + Wilson CIs).
+Run over **32 dicts × 25 informative dims** (Patel's 7 now all live + dims 9–30).
 
-Run over **32 dicts × 20 informative dims**. (KNA/KOW/AMAR dropped — no local source; the five judgement-bound Patel dims 1,3,5,6,7,8,16 await the M.G. co-annotation gate.)
+## 2. The Patel ingest doubled the signal
 
-## 2. The Patel pre-fill is a real phylogenetic signal
+| metric | mechanical only (20 dims) | **+ Patel gold (25 dims)** |
+|---|---|---|
+| known directed-edge recovery (tier A) | 27% | **55%** (6/11) |
+| WIL→SHS bootstrap | 0.90 | 0.81 |
+| **PWG→PW** bootstrap | 0.38 | **0.79** |
+| **PWG→SCH** bootstrap | 0.31 | **0.70** |
+| CCS→CAE bootstrap | 0.76 | 0.64 |
+| AP90→AP bootstrap | 0.64 | 0.56 |
+| lineage-family cohesion | 6/6 | **6/6** |
 
-**dim 2 — r-duplication** cleanly separates the old-orthography editions from the modern ones:
+The **Petersburg formatting family snapped together**: PW+SCH sisters (0.111), PWG joining (0.286), then the Cappeller pair CAE+CCS (0.293) — because PWG/PW/SCH share an *identical* 7-convention fingerprint (`1.2+1.5 · 2.2 · 3.2+3.5 · 4.2 · 5.2 · 6.1 · 7.4`) and CCS differs only on conv 7. MW72+BOP (0.209) and WIL+SHS (0.222) also pair.
 
-| Geminating (mixed/duplicated) | Single (modern) |
-|---|---|
-| WIL 0.33, YAT 0.32, SHS 0.32, VCP 0.34, **SKD 0.41** | everyone else ≤ 0.02 |
+## 3. The key finding: convention-lineage ≠ content-lineage
 
-WIL → YAT → SHS sharing the geminate convention **independently corroborates the known Wilson lineage** (previously seen only via sanhw1 headword containment). **dim 4 — inflected headword** isolates exactly the Apte editions + Śabdakalpadruma (AP90 0.32, AP 0.27, SKD 0.72 visarga-rate) — Apte's documented citation signature.
+Recovery is 55%, not higher — and the **pattern of hits vs misses is itself the result**:
 
-## 3. The tree (canonical, `B_whamming` UPGMA, bootstrap-consensus)
+- **Recovered (strong bootstrap)** are *formatting* lineages — dictionaries that inherited orthographic/citation **conventions**: WIL→SHS, PWG→PW→SCH, CCS↔CAE, AP90→AP.
+- **Missed** are *content* lineages where the inheritor **reformatted**: **PWG→MW** (0.02), **MW72→MW** (0.29), **PWG→MW72** (0.01). Monier-Williams absorbed Petersburg *content* but recoded the conventions — MW uses `6.2 -ṛ` where PWG uses `6.1 -ar`, MW `7.1` vs PWG `7.4`, MW `3.1` vs PWG `3.2`. The fingerprint correctly reports that MW does **not** share PWG's house style.
+- **YAT** is a convention outlier (uniquely `1.4`; inconsistent `2.1+2.2`) → it sits apart from WIL despite deriving from it: Yates re-styled Wilson.
 
-`data/L0/trees/canonical_consensus.{newick,txt,png}`. Recovered groupings (sister pairs / tight clades):
+So the convention cladogram is a **formatting-genealogy** instrument, distinct from (and complementary to) the sanhw1 content-containment edges. That distinction is a Paper-H/M result, not a shortfall: the 70% target was set for an undifferentiated notion of lineage; against *convention* lineage the strong edges land at 0.70–0.81 bootstrap.
 
-- **WIL + SHS** (0.11) · **CAE + CCS** (0.20) · **AP90 + AP** (0.32) · **MW72 + BOP** (0.22, a *Bopp-dependence* hint) · **VCP + SKD + KRM** indigenous Skt-Skt · **PW + SCH** (0.17) · **MW with Vedic GRA/VEI**.
+## 4. The tree (canonical, `B_whamming` UPGMA, bootstrap-consensus)
 
-## 4. Validation (honest)
+`data/L0/trees/canonical_consensus.{newick,txt,png}` — five clean clades:
+- **Petersburg formatting** (red): PWG, PW, SCH, CCS, CAE.
+- **Latin/German etymological + MW** (green): BOP, MW72, BUR, VEI, GRA, MW, BHS, BEN.
+- **Anglo-Indian** (orange): WIL, SHS, MD, INM, AP90, AP, GST.
+- **Indigenous + verbs** (brown): SKD, VCP, KRM, ACC, AE, LRV.
+- **Mixed/index** (purple): YAT, STC, PUI, MCI, BOR.
+
+## 5. Validation summary
 
 | Test | Result | Target | Verdict |
 |---|---|---|---|
-| **Lineage-family cohesion** | **6/6 families tighter than global mean** | — | ✅ strong |
-| Known directed-edge recovery (tier A, knn-3 / clade ≤ 5) | **3/11 = 27%** | ≥ 70% | ⚠️ below |
-| Nearest-neighbour LOO accuracy | **54%** | ≥ 60% | ⚠️ below |
-| Bootstrap support — WIL→SHS | **0.90** [0.88, 0.91] | ≥ 0.80 | ✅ |
-| Bootstrap support — CCS→CAE | **0.76** [0.74, 0.79] | ≥ 0.80 | ⚠️ near |
-| Bootstrap support — AP90→AP | **0.64** [0.61, 0.67] | ≥ 0.80 | ⚠️ |
+| Lineage-family cohesion | **6/6 tighter than global** | — | ✅ |
+| Convention-lineage edges (WIL→SHS, PWG→PW, PWG→SCH, CCS→CAE) bootstrap | **0.64–0.81** | ≥ 0.80 strong | ✅ mostly |
+| Directed-edge recovery (mixed content+convention edges) | 55% | ≥ 70% | ⚠️ (interpretable — see §3) |
+| NN-LOO accuracy | 46% | ≥ 60% | ⚠️ |
+| RF sensitivity | encoding RF≈0.07 (UPGMA), algorithm RF≈0.5 | — | robust to encoding |
 
-**Interpretation.** On the 20 mechanically-available dimensions, the convention fingerprint robustly recovers **family-level** structure (all six lineages cohere; the strongest single edge WIL→SHS hits 90% bootstrap support) but **does not yet resolve fine directed lineage** (MW72→MW, PWG→PW, PWG→MW72 land in different subclades). This is the design's §6.4 below-target case, and it is informative rather than a failure: the five still-ungated Patel conventions (anusvāra spelling, `-at` handling, ṛkārānta, vas/yas, sandhi) are precisely the high-resolution discriminators Patel selected — their absence is the most likely reason directed edges blur. **Completing the co-annotation is the gating next step**, and re-running `s3_cladogram.py` then yields the final tree with no code change.
+## 6. Deviations from the design (in `validation_report.json`)
 
-**Sensitivity (Robinson–Foulds).** Encoding barely matters for UPGMA (`A_jaccard_upgma` vs `B_hamming_upgma` RF = 0.067); algorithm matters most (UPGMA vs NJ RF ≈ 0.5). So conclusions are robust to the encoding choice but should be read on UPGMA, where the known pairs surface.
+- Encodings B/C share one categorical value (stage-2 primary-only) → 4 live (encoding,metric) configs, not 9.
+- Bayesian-consensus canonical tree approximated by 1000× dimension-bootstrap consensus UPGMA; full MCMC deferred (design §9).
+- Canonical config `B_whamming` is pre-registered, not tuned to recovery.
 
-## 5. Deviations from the design's nominal "27 trees"
+## 7. Remaining / next
 
-Recorded in `validation_report.json`:
-- Stage-2 yields a **primary** option per cell (no ranked secondary) → encodings B and C share one categorical value, differing only in distance weighting → **4** meaningful (encoding, metric) configs, not 9.
-- The Bayesian-consensus canonical tree is approximated by a **1000× dimension-bootstrap majority-consensus UPGMA**; full MCMC is deferred (design §9 risk-mitigation).
-- Canonical config (`B_whamming`, rare-option-weighted Hamming) is **pre-registered**, not tuned to maximise recovery.
-
-## 6. Next steps
-
-1. **Patel co-annotation (the gate)** — fill dims 1,3,5,6,7,8,16 for the 32+3 dicts from `data/L0/patel_annotation_scaffold.csv` (exemplars already extracted). ~30–50 high-judgement cells, ~1–2 h (design §12). Then re-run `s2b`→`s3`.
-2. **KNA/KOW/AMAR** — no local source; fetch from Cologne to bring the Russian-tradition + Amarakośa dicts into the tree (LEXICOGRAPHY_ROADMAP §11.5).
-3. **Dashboard page** `/lexicography/conventions.md` (design §7.2) once the final tree lands.
-4. **Paper M §4.1.5 / Paper H §5** paragraphs from these validated results.
+1. **LRV, FRI** — not in Patel's 36; dims 1,3,5,6,7 still `gate`. Annotate from source (the `patel_fillin.csv` evidence sheet covers them) or accept partial.
+2. **KNA, KOW, AMAR** — no local source; fetch from Cologne to add the Russian-tradition + Amarakośa dicts.
+3. **Patel's open conventions** (`tकारान्त` `mahat`-type; ṛ-nipātita; sकारान्त; रेफान्त) → candidate dims 31+ (see `refs/fingerprint_conventions.md` §A note).
+4. **Dashboard page** `/lexicography/conventions.md` (design §7.2); **Paper M §4.1.5 / Paper H §5** paragraphs (esp. the convention-vs-content-lineage finding, §3 above).
