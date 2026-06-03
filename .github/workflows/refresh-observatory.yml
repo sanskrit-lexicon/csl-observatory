@@ -70,6 +70,13 @@ jobs:
         run: |
           mkdir -p observatory/site/src/data
           cp data/*.csv observatory/site/src/data/
+          # L0 convention-cladogram products for the /conventions page
+          mkdir -p observatory/site/src/data/L0/distances observatory/site/src/data/L0/trees
+          cp data/L0/patel2016_assignments.csv data/L0/bootstrap_support.csv \
+             data/L0/convention_fingerprint.csv data/L0/validation_report.json \
+             observatory/site/src/data/L0/ 2>/dev/null || true
+          cp data/L0/distances/B_whamming.csv observatory/site/src/data/L0/distances/ 2>/dev/null || true
+          cp data/L0/trees/canonical_consensus.png observatory/site/src/data/L0/trees/ 2>/dev/null || true
 
       - name: Build site
         run: |

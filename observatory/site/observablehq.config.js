@@ -9,6 +9,7 @@ export default {
     {name: "Community", path: "/community"},
     {name: "Tech Stack", path: "/tech-stack"},
     {name: "Lexicography", path: "/lexicography"},
+    {name: "Conventions (L0)", path: "/conventions"},
     {name: "Benchmarks", path: "/benchmarks"},
     {name: "Data", path: "/data"}
   ],
