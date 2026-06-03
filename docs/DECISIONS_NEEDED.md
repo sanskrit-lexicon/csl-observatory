@@ -1,6 +1,6 @@
 # Decisions needed from the maintainer
 
-Consolidated list of items that are **blocked on a human** (a decision, a credential, or an action only you can take). Maintained so an agent can resurface it at the start of a session. Last updated 2026-05-31 (all A-decisions closed; B1/D2/D3 cleared; C deferred). **Only B2, B3, C1–C3, D1 remain open.**
+Consolidated list of items that are **blocked on a human** (a decision, a credential, or an action only you can take). Maintained so an agent can resurface it at the start of a session. Last updated 2026-06-03 (all A-decisions closed; B1/B3/D2/D3 cleared; C deferred). **Only B2, C1–C3, D1 remain open.**
 
 > Agent note: when M.G. asks "what's next?" or resumes, **surface this list first**.
 
@@ -15,9 +15,8 @@ Consolidated list of items that are **blocked on a human** (a decision, a creden
 | # | Item | Source |
 |---|---|---|
 | B2 | Verify **bibliography** I filled for the 6 documented repos — esp. BUR (Leupol / Maisonneuve) and BOP (1847 edition) | Handoff full-runbook gaps |
-| B3 | Source for `.github/ISSUE_TEMPLATE/*.yml` (templates dir has only the 3 community files) | Handoff full-runbook gaps |
 
-*(B1, B4, B5 resolved — see "Recently resolved" below.)*
+*(B1, B3, B4, B5 resolved — see "Recently resolved" below.)*
 
 ## C. Credentials / access needed — ⏸ deferred (none available now, per M.G. 2026-05-31)
 
@@ -50,6 +49,7 @@ Consolidated list of items that are **blocked on a human** (a decision, a creden
 | A4 | Not-yet-on-GitHub dicts (IEG/MWE/PE/PGN/SNP/YAT) **deferred to future work**; the "scan-only" framing was flagged inaccurate (re-check status before ingest). | LEXICOGRAPHY_ROADMAP §11 |
 | A5 | **PD included** — its `a-` volumes are the whole practical dictionary; ingestion underway in `csl-pywork`. | LEXICOGRAPHY_ROADMAP §11 |
 | B1 | Dict codes identified: **FRI** = Frish (Sanskrit Reader) · **KNA** = Knauer · **KOW** = Kossowich · **LRV** = Vaidya *Sanskrit-English Dictionary*. | LEXICOGRAPHY_ROADMAP §11.5; memory |
+| B3 | `.github/ISSUE_TEMPLATE/*.yml` + PULL_REQUEST_TEMPLATE.md pushed to BOR/BUR/INM/KRM/BOP/MW72 (48 files). | csl-corrections `.ai_state.md`; SESSION_HANDOFF.md |
 | B4 | SHS author = **Kulapati Jibananda Vidyāsāgara**. | SHS README/CLAUDE; M3 docs |
 | B5 | ApteES = reverse-direction English→Sanskrit docs built (`{@en@}`/`<s>skt</s>`/Ⓐ-Ⓑ). | ApteES README/CLAUDE; M3 docs |
 | D2 | **YES** — do the M1 refresh-script modernization as a backward-compatible refactor. | ROADMAP M1 / csl-pywork#53 |
