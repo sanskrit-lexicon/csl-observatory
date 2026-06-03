@@ -56,6 +56,15 @@ Consolidated list of items that are **blocked on a human** (a decision, a creden
 | D3 | **YES** — wire the full `make_xml` XML-parse check into CI. | csl-pywork#51 |
 | Research round-2 | Frequency join = **DCS** (local dump `GitHub/DCS`); practitioner hosting = **main dashboard page**; first hypothesis = **H1**; semantic fields = **Amarakośa-native**. | RESEARCH_LAYER_ROADMAP §7 |
 
+### ✅ Post-L0 decisions (2026-06-03)
+
+| # | Resolution | Documented in |
+|---|---|---|
+| L0-next | Next build = **Phase L0.7** content↔convention reformatting residual. | LEXICOGRAPHY_ROADMAP §10 |
+| L0-patel-open | Patel's undone conventions (mahat-type/sakārānta/rephānta/ṛ-nipātita) → dims 31+ **and contribute back to `hwnorm1`** (Phase L0.9; one substantive PR, comment-noise-aware). | LEXICOGRAPHY_ROADMAP §10 |
+| L0-paper | Convention-vs-content finding → **both** standalone methods note (PUBLICATIONS article 20) **and** Paper H §5. | PUBLICATIONS §6.2; articles/paper_H_*.md |
+| L0-rigor | Paper-final tree → **add full Bayesian MCMC + NJ-posterior** (Phase L0-rigor), not just bootstrap-consensus UPGMA. | LEXICOGRAPHY_ROADMAP §10 |
+
 ---
 
 *Engineering items trace to [`ROADMAP.md`](ROADMAP.md) + the [csl-corrections handoff](https://github.com/sanskrit-lexicon/csl-corrections/blob/master/.ai_state.md). Research items trace to [`LEXICOGRAPHY_ROADMAP.md`](LEXICOGRAPHY_ROADMAP.md) §11 and [`MICROSTRUCTURE-MACROSTRUCTURE.md`](MICROSTRUCTURE-MACROSTRUCTURE.md) §6.*

@@ -5,7 +5,8 @@
 
 This is a **separate research stream** from Paper 1's *measurement framework*. Paper 1 quantifies the project; this stream quantifies the **dictionaries themselves** and reconstructs their genealogy.
 
-It will produce **three further papers**, each independently submittable.
+It will produce **three further papers** (M, L, H), each independently submittable — plus a
+**standalone methods note** on the content↔convention two-axis result (added 2026-06-03; see §6).
 
 ---
 
@@ -298,6 +299,14 @@ Sections:
 6. Specialized dictionaries — niche coverage
 7. Discussion — what gaps remain; recommendations for future digitisation
 
+### Standalone methods note (NEW, decision 2026-06-03 #3 — "both")
+**Working title**: *Two axes of descent: separating content-inheritance from convention-inheritance in digital dictionary genealogy*
+
+A short, self-contained methods paper built on Phase L0 + L0.7: the convention fingerprint
+and the content↔convention **reformatting residual** as a general DH instrument (any corpus
+of related editions). Reuses the same result as **Paper H §5** ([`articles/paper_H_convention_vs_content_lineage.md`](articles/paper_H_convention_vs_content_lineage.md)).
+**Add to [`PUBLICATIONS.md`](PUBLICATIONS.md) as article 16+.** Venue: a DH methods venue (DSH / *Journal of Cultural Analytics*).
+
 ### Paper H — Historical
 **Title**: *From Petersburg to Cologne: 170 years of Sanskrit lexicography traced through computational stemmatics*
 
@@ -422,7 +431,9 @@ Adopted as the **default normalisation** for all parsing in Phase L1. Encoded as
 
 **Insight**: Each dict's choice across all 7 conventions is itself a fingerprint. Dicts following the same fingerprint pattern likely share lineage. Patel's per-dict membership lists give us this fingerprint **for free**.
 
-Example fingerprints (extracted from Patel 2016):
+Example fingerprints (early single-value preview — **superseded** by the authoritative
+multi-valued ingest in [`data/L0/patel2016_assignments.csv`](../data/L0/patel2016_assignments.csv)
+via `s2d_patel_gold.py`; e.g. PWG's true conv-1 is `1.2+1.5`, not a single `1.5`):
 
 | Dict | C1 | C2 | C3 | C4 | C5 | C6 | C7 |
 |---|---|---|---|---|---|---|---|
@@ -447,18 +458,51 @@ Example fingerprints (extracted from Patel 2016):
 - **SKD is an outlier** (most idiosyncratic across conventions) → consistent with indigenous origin separate from German tradition.
 - **AP90 → AP** shows divergence (AP90 has 1.1+1.5 while AP has 1.2; AP90 has 5.3 while AP has 5.2) → revised editor introduced normalisation changes.
 
-### Phase L0 (NEW, fastest possible win)
+### Phase L0 — Convention-fingerprint cladogram ✅ DONE 2026-06-03
 
-**Phase L0 — Convention-fingerprint matrix** (1-2 days, can run TODAY):
+Executed and validated. Scripts `scripts/L0/s2*.py` + `s3_cladogram.py`; results in
+[`L0_RESULTS.md`](L0_RESULTS.md); taxonomy/concordance in [`refs/`](refs/); dashboard page
+`/conventions` live; **25 dims** (7 Patel `patel2016` gold + 18 auto) × 32 dicts. **All 6
+lineage families cohere**; bootstrap WIL→SHS 0.81, PWG→PW 0.79, PWG→SCH 0.70. **Headline
+finding: convention-lineage ≠ content-lineage** (Paper H §5 drafted; standalone methods note
+planned — decision 2026-06-03 #3 below).
 
-1. Extract Patel's per-convention dict-membership lists into structured CSV
-2. Build the 35×7 fingerprint matrix
-3. Compute Hamming distance for every dict pair
-4. Cluster: hierarchical clustering with average linkage → first cladogram
-5. Compare to known lineage → measure recovery accuracy
-6. Output: `data/convention_fingerprint.csv` + first phylogenetic tree as `convention_cladogram.svg`
-7. New dashboard page section: `/lexicography/conventions.md`
-8. **Paper M Section**: §4.1.5 — convention-fingerprint as cheap signal
+### Phase L0.7 — Content↔convention residual *(NEXT — decision 2026-06-03 #1)*
+
+Operationalise the L0 finding as a quantitative instrument. For every dict pair, compute:
+
+```
+reformatting_residual(A→B) = content_containment(A→B)  [sanhw1 Jaccard/containment]
+                           − convention_similarity(A,B) [1 − L0 convention distance]
+```
+
+- High residual = "absorbed the lexicon, recoded the house style" (predicts MW←PWG, YAT←WIL).
+- Rank all pairs; the top residuals are the editorial-recoding events.
+- Cross-plot the two axes (content vs convention) → every dict pair a point; the off-diagonal is the finding.
+- Outputs: `data/L0/content_convention_residual.csv`, a scatter + ranked-table dashboard panel on `/conventions`.
+- **Feeds**: the standalone methods note + Paper H §5 + Paper M §4 (two-axis inheritance model).
+
+### Phase L0.9 — Extend the fingerprint to Patel's open conventions *(decision 2026-06-03 #2)*
+
+Patel 2016 flagged four conventions as undone (paper §TODO): **takārānta** (`mahat`/`mahant`/
+`mahā`/`mahān` — he gives the per-dict split), **sakārānta**, **rephānta**, **ṛ-nipātita**
+(`jāmātṛ`). These are mechanically computable from headwords.
+
+1. Operationalise as fingerprint **dims 31+** (`s2e_patel_open.py`); start with `mahat`-type
+   (Patel already provides the gold split) + auto-detect sakārānta/rephānta.
+2. **Contribute back to `hwnorm1`** (Patel's repo): one substantive issue/PR with the computed
+   per-dict assignments completing his TODO — *mindful of the comment-noise norm: a single,
+   high-value contribution, not a stream*. Potential co-authorship/collaboration with D. Patel.
+3. Re-run `s3` with the extra dims; report recovery delta.
+
+### Phase L0-rigor — Full Bayesian MCMC + NJ for the paper-final tree *(decision 2026-06-03 #4)*
+
+Upgrade from bootstrap-consensus UPGMA to the design's full "all three algorithms":
+- Proper **Neighbour-Joining** posterior (already have the NJ trees; add support).
+- **Bayesian MCMC** over tree topologies (MrBayes-style on the binary character matrix, or a
+  light beam-search posterior) → posterior clade-support, not just bootstrap frequency.
+- Report UPGMA vs NJ vs Bayesian consensus + Robinson–Foulds; pick the paper-final canonical
+  with stated justification. Gate the paper-final tree on the completed dict set if feasible.
 
 ---
 
@@ -470,5 +514,12 @@ Example fingerprints (extracted from Patel 2016):
 4. **Update CITATION.cff data**: auto-populate year+author per repo from the inventory CSV. *(Partially done — the documented + M3 repos have enriched CITATION.cff; a full-org sweep remains.)*
 5. ✅ **Identify FRI / KNA / KOW / LRV** — resolved (2026-05-31): Frish / Knauer / Kossowich / Vaidya.
 6. ✅ **Translation in L7** — resolved: **anchor on Sanskrit** (SLP1 fingerprints), no gloss translation (RESEARCH_LAYER_ROADMAP §5.1).
-7. **Phylogenetic algorithm**: UPGMA + Neighbor-Joining + Bayesian (per author decision: all three).
+7. ✅ **Phylogenetic algorithm**: UPGMA + Neighbor-Joining + Bayesian — **all three confirmed 2026-06-03**; L0 shipped bootstrap-consensus UPGMA, full NJ-posterior + Bayesian MCMC queued as **Phase L0-rigor** (§10).
 8. **Authorship of Papers M, L, H**: confirmed M. Gasūns + named CDSL maintainers + Claude with disclosure.
+
+### Decisions captured 2026-06-03 (post-L0)
+
+1. ✅ **Next build = Phase L0.7** content↔convention reformatting residual (§10).
+2. ✅ **Patel's open conventions** (mahat-type/sakārānta/rephānta/ṛ-nipātita) → operationalise as dims 31+ **and contribute back to `hwnorm1`** (Phase L0.9, §10).
+3. ✅ **Convention-vs-content finding → both** a standalone methods note (article 16+ in PUBLICATIONS) **and** Paper H §5.
+4. ✅ **Paper-final tree rigor** → add full Bayesian MCMC + NJ-posterior (Phase L0-rigor, §10).
