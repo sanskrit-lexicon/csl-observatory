@@ -268,5 +268,32 @@
       "1",
       ">1"
     ]
+  },
+  {
+    "dim_id": 31,
+    "name": "takārānta words (mahat-type)",
+    "options": [
+      "31.1",
+      "31.2",
+      "31.3",
+      "31.4"
+    ]
+  },
+  {
+    "dim_id": 32,
+    "name": "sakārānta words (s-final stems)",
+    "options": [
+      "32.1",
+      "32.2",
+      "32.3"
+    ]
+  },
+  {
+    "dim_id": 33,
+    "name": "rephānta words (r-final stems)",
+    "options": [
+      "33.1",
+      "33.2"
+    ]
   }
 ]

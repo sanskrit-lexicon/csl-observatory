@@ -60,6 +60,9 @@ paper order can be confirmed or revised here **without touching code or data**.
 | 28 | `dim_28_*` | etym-presence-rate | etym-richness | — | 2 | auto |
 | 29 | `dim_29_*` | etym-mean-length | etym-richness | — | 3 | auto |
 | 30 | `dim_30_*` | etym-marker-patterns | etym-richness | — | 3 | auto |
+| 31 | `dim_31_*` | takārānta (mahat) | Patel-open §TODO | TODO ✅ | 4 | patel-open |
+| 32 | `dim_32_*` | sakārānta | Patel-open §TODO | TODO (new) | 2–3 | patel-open |
+| 33 | `dim_33_*` | rephānta | Patel-open §TODO | TODO (new) | 2 | patel-open |
 
 **Legend.** `Patel2016 §` — the convention's number in Dhaval Patel's 2016 paper;
 `✅` = confirmed against the PDF. `—` = a project addition, not in Patel 2016.

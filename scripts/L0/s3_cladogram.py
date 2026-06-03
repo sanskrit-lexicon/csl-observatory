@@ -31,6 +31,7 @@ Outputs (data/L0/):
 
 import os
 import sys
+import re
 import csv
 import json
 import math
@@ -71,6 +72,15 @@ LINEAGES = {
 
 
 # ---------------------------------------------------------------- load ----
+def max_dim():
+    with open(FP, encoding="utf-8") as f:
+        header = f.readline()
+    return max(int(m) for m in re.findall(r"dim_(\d+)_value", header))
+
+
+MAXDIM = max_dim()
+
+
 def load():
     codes, vals, confs = [], {}, {}
     with open(FP, encoding="utf-8") as f:
@@ -80,7 +90,7 @@ def load():
                 continue
             codes.append(code)
             v, cf = {}, {}
-            for d in range(1, 31):
+            for d in range(1, MAXDIM + 1):
                 val = r[f"dim_{d}_value"]
                 src = r[f"dim_{d}_source"]
                 if src not in ("unknown",) and val not in ("unknown", ""):
@@ -97,7 +107,7 @@ def load():
 def informative_dims(codes, vals):
     """Dims filled for ≥ a third of the dicts AND non-constant among the filled."""
     keep = []
-    for d in range(1, 31):
+    for d in range(1, MAXDIM + 1):
         present = [vals[c][d] for c in codes if d in vals[c]]
         if len(present) >= len(codes) / 3 and len(set(present)) > 1:
             keep.append(d)

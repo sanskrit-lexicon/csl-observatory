@@ -488,18 +488,19 @@ reformatting_residual(A→B) = content_containment(A→B)  [sanhw1 Jaccard/conta
 - Outputs: `data/L0/content_convention_residual.csv`, a scatter + ranked-table dashboard panel on `/conventions`.
 - **Feeds**: the standalone methods note + Paper H §5 + Paper M §4 (two-axis inheritance model).
 
-### Phase L0.9 — Extend the fingerprint to Patel's open conventions *(decision 2026-06-03 #2)*
+### Phase L0.9 — Patel's open conventions + hwnorm1 contribution ✅ DONE 2026-06-03
 
-Patel 2016 flagged four conventions as undone (paper §TODO): **takārānta** (`mahat`/`mahant`/
-`mahā`/`mahān` — he gives the per-dict split), **sakārānta**, **rephānta**, **ṛ-nipātita**
-(`jāmātṛ`). These are mechanically computable from headwords.
-
-1. Operationalise as fingerprint **dims 31+** (`s2e_patel_open.py`); start with `mahat`-type
-   (Patel already provides the gold split) + auto-detect sakārānta/rephānta.
-2. **Contribute back to `hwnorm1`** (Patel's repo): one substantive issue/PR with the computed
-   per-dict assignments completing his TODO — *mindful of the comment-noise norm: a single,
-   high-value contribution, not a stream*. Potential co-authorship/collaboration with D. Patel.
-3. Re-run `s3` with the extra dims; report recovery delta.
+Shipped `scripts/L0/s2e_patel_open.py` (probe-lemma method, full-file scan):
+- **dim 31 takārānta** — reproduces Patel's published महत् split at **23/23 = 100%** on the
+  dicts he classified; extends to FRI/LRV. Discriminating (−ant group = Petersburg+Cappeller).
+- **dim 32 sakārānta** + **dim 33 rephānta** — *newly computed* per-dict (his §TODO); near-uniform
+  (`-as`/`-ar`), visarga variants only in AP/AP90/MW/SKD/STC.
+- **ṛ-nipātita** — method ready, needs a curated nipātita list; documented, not yet a dim.
+- `s3_cladogram.py` made dim-count-dynamic; re-run held recovery at 55% (PWG→PW → 0.806, now a
+  2nd strong edge) — sakārānta/rephānta near-constant so little tree signal, as expected.
+- **Contributed back to hwnorm1**: [`sanskrit-lexicon/hwnorm1#21`](https://github.com/sanskrit-lexicon/hwnorm1/issues/21)
+  (one substantive issue, authored by M.G./gasyoun — comment-noise-aware). Data in
+  `data/L0/patel_open_assignments.csv`; issue body archived at `refs/hwnorm1_contribution.md`.
 
 ### Phase L0-rigor — Full Bayesian MCMC + NJ for the paper-final tree *(decision 2026-06-03 #4)*
 

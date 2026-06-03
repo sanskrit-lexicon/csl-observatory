@@ -1,1 +1,1 @@
-(BHS,(((((PWG,(PW,SCH)),(CAE,CCS)),(PUI,(INM,MCI))),((SKD,(VCP,KRM)),(BOR,((YAT,STC),(LRV,(AE,ACC)))))),((AP90,AP),((VEI,(MW,GRA)),(FRI,((BEN,(BUR,(MW72,BOP))),(GST,(MD,(WIL,SHS)))))))));
+(((((YAT,STC),(LRV,(AE,ACC))),((SKD,(VCP,KRM)),(BOR,PUI))),(FRI,(((CAE,CCS),(PWG,(PW,SCH))),(((MCI,(MD,INM)),(GST,(WIL,SHS))),((MW,GRA),(VEI,(BEN,(BUR,(MW72,BOP))))))))),(BHS,(AP90,AP)));

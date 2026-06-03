@@ -59,9 +59,12 @@
     26,
     27,
     28,
-    30
+    30,
+    31,
+    32,
+    33
   ],
-  "n_dims": 25,
+  "n_dims": 28,
   "dropped_no_source": [
     "AMAR",
     "KNA",
@@ -75,7 +78,7 @@
   ],
   "canonical_config": "B_whamming",
   "n_bootstrap": 1000,
-  "global_mean_distance": 0.6495,
+  "global_mean_distance": 0.6444,
   "known_edge_recovery": {
     "tierA_n": 11,
     "tierA_recovered": 6,
@@ -278,7 +281,12 @@
     [
       "WIL",
       "SHS",
-      0.813
+      0.806
+    ],
+    [
+      "PWG",
+      "PW",
+      0.806
     ]
   ],
   "lineage_cohesion": {
@@ -288,7 +296,7 @@
         "YAT",
         "SHS"
       ],
-      "mean_within": 0.4517,
+      "mean_within": 0.4408,
       "tighter_than_global": true
     },
     "Petersburg (PWG/PW/SCH/CCS/GRA)": {
@@ -299,7 +307,7 @@
         "CCS",
         "GRA"
       ],
-      "mean_within": 0.5091,
+      "mean_within": 0.5048,
       "tighter_than_global": true
     },
     "Apte (AP90/AP)": {
@@ -307,7 +315,7 @@
         "AP90",
         "AP"
       ],
-      "mean_within": 0.3837,
+      "mean_within": 0.3703,
       "tighter_than_global": true
     },
     "Monier-Williams (MW72/MW)": {
@@ -315,7 +323,7 @@
         "MW72",
         "MW"
       ],
-      "mean_within": 0.4381,
+      "mean_within": 0.4166,
       "tighter_than_global": true
     },
     "Cappeller (CAE/CCS)": {
@@ -323,7 +331,7 @@
         "CAE",
         "CCS"
       ],
-      "mean_within": 0.2926,
+      "mean_within": 0.2702,
       "tighter_than_global": true
     },
     "Indigenous (VCP/SKD)": {
@@ -331,7 +339,7 @@
         "VCP",
         "SKD"
       ],
-      "mean_within": 0.3254,
+      "mean_within": 0.3614,
       "tighter_than_global": true
     }
   },

@@ -87,10 +87,30 @@ vatup/matup possessives:
 - **7.4** → `-vaṃs/-yaṃs`, e.g. `vidvaṃs` — *CAE, PW, PWG, SCH*.
 - Insufficient: ACC,BEN,IEG,PGN,SNP,VEI; KRM excluded. **Standard**: 7.1.
 
-> **Patel's open TODO** (paper §TODO, candidate future dim): *tकारान्त* words (`mahat`/`mahant`/`mahā`/`mahān`)
-> — split `महत्` {AP,AP90,BHS,BOP,BUR,GRA,INM,MD,MW,MW72,PUI,PW,SHS,SKD,VCP,WIL,YAT} ·
-> `महन्त्` {BEN,CAE,CCS,IEG,PW,PWG,SCH} · `महान्त्` {STC} · `महान्` {PE,PUI,SKD}. Also pending in
-> Patel: ṛkārānta-nipātita (`jāmātṛ`), सकारान्त, रेफान्त. Add as dims 31+ when operationalised.
+---
+
+## A′. Patel's open conventions — dims 31–33 (`patel-open`, computed L0.9 2026-06-03)
+
+Patel's paper §TODO left four conventions unfinished. `s2e_patel_open.py` operationalises
+three via his own **probe-lemma method** (test which citation form of a diagnostic lemma each
+dict lists as a headword). Multi-valued cells (`+`-joined). Contributed back as [hwnorm1#21](https://github.com/sanskrit-lexicon/hwnorm1/issues/21);
+data in `data/L0/patel_open_assignments.csv`.
+
+### dim 31 — takārānta (mahat-type) · **4 options** · `patel-open` ✅ (validated 100% vs Patel's महत्)
+Probe `mahat`/`bṛhat`. **31.1** `-at` · **31.2** `-ant` · **31.3** `-ān` · **31.4** `-ānt`.
+−ant group {BEN,CAE,CCS,FRI,PW,PWG,SCH,STC} ≈ the Petersburg+Cappeller cluster (tracks dim 3).
+Reproduces the paper's published महत् split at **23/23 (100%)** on classified dicts.
+
+### dim 32 — sakārānta (s-final stems) · **2–3 options** · `patel-open` *(new — completes §TODO)*
+Probe `manas/tejas/payas/yaśas/dhanus/cakṣus`. **32.1** `-as` (near-universal) · **32.2** `-aḥ`
+visarga {AP,AP90,BHS,MW,SKD,STC}. Near-constant → low tree signal.
+
+### dim 33 — rephānta (r-final stems) · **2 options** · `patel-open` *(new — completes §TODO)*
+Probe `antar/punar/prātar/svar`. **33.1** `-ar/-r` (near-universal) · **33.2** `-aḥ` visarga
+{AP,FRI,MW,MW72,SKD,STC}. Near-constant.
+
+### (documented, not yet a dim) ṛ-nipātita
+Probe `jāmātṛ/naptṛ/…`; same method, needs a curated nipātita lemma list before it is conclusive.
 
 ---
 
