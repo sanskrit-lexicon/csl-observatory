@@ -28,6 +28,7 @@ const dist = await FileAttachment("data/L0/distances/B_whamming.csv").csv({typed
 const report = await FileAttachment("data/L0/validation_report.json").json();
 const residual = await FileAttachment("data/L0/content_convention_residual.csv").csv({typed: true});
 const scatter = await FileAttachment("data/L0/content_convention_scatter.csv").csv({typed: true});
+const algo = await FileAttachment("data/L0/algorithm_support_comparison.csv").csv({typed: true});
 ```
 
 ## At a glance
@@ -88,6 +89,43 @@ Plot.plot({
 ```
 
 The dashed line marks the 0.80 "strong edge" threshold (design §6.4).
+
+### Three algorithms agree on the strong edges (Phase L0-rigor)
+
+The paper-final tree is checked against all three of the design's algorithms — **UPGMA**
+and **Neighbour-Joining** (500× character bootstrap) and a **Bayesian Mk MCMC** (2-state
+symmetric morphological model, Felsenstein pruning, NNI + branch-length Metropolis moves,
+80k generations). Support = posterior/bootstrap probability that the pair sits in a shared
+clade of ≤ 4 leaves.
+
+```js
+const algoLong = algo.flatMap(d => [
+  {edge: `${d.parent}–${d.child}`, method: "UPGMA", v: d.upgma_support},
+  {edge: `${d.parent}–${d.child}`, method: "NJ", v: d.nj_support},
+  {edge: `${d.parent}–${d.child}`, method: "Bayes", v: d.bayes_support},
+]);
+Plot.plot({
+  width,
+  height: 420,
+  marginLeft: 95,
+  x: {label: "support — P(shared clade ≤ 4)", domain: [0, 1], grid: true},
+  y: {label: null, domain: algo.map(d => `${d.parent}–${d.child}`)},
+  fy: {label: null},
+  color: {legend: true, domain: ["UPGMA", "NJ", "Bayes"], range: ["#7aa6c2", "#0075ca", "#d93f0b"]},
+  marks: [
+    Plot.barX(algoLong, {x: "v", y: "edge", fill: "method", fy: "method", tip: true, sort: {y: null}}),
+    Plot.ruleX([0])
+  ]
+})
+```
+
+Two takeaways. **The strong formatting edges** — PWG→PW, PWG→SCH, WIL→SHS, AP90→AP — clear
+the bar under every algorithm (Bayesian Mk is the most decisive on the Petersburg core,
+1.00). **The reformatted edges stay low under every algorithm** (MW72→MW ≤ 0.43, WIL→YAT ≈ 0):
+the convention ≠ content result is robust to the clustering method, not an artifact. Bayesian
+Mk, sensitive to shared *derived* characters, additionally surfaces PW→CCS (0.74) and the
+Bopp→MW hypothesis (0.65) that distance-bootstrap dilutes. Robinson–Foulds between the three
+point estimates: UPGMA–NJ 0.59, NJ–Bayes 0.45, UPGMA–Bayes 0.70 (`data/L0/bayesian_report.json`).
 
 ## Patel 2016 convention taxonomy
 

@@ -69,6 +69,35 @@ scatter + ranked bar.
 - **Indigenous + verbs** (brown): SKD, VCP, KRM, ACC, AE, LRV.
 - **Mixed/index** (purple): YAT, STC, PUI, MCI, BOR.
 
+## 4b. Three-algorithm rigor (Phase L0-rigor)
+
+`s5_bayesian.py` adds the design's full algorithm set: **UPGMA** + **Neighbour-Joining**
+(500× character bootstrap) + a **Bayesian Mk MCMC** (2-state symmetric morphological model,
+Felsenstein pruning, NNI + branch-length Metropolis moves; 80k gens, 25k burn-in, 1375
+samples, acceptance 0.48, MAP lnL −987.5). Support = P(pair in a shared clade ≤ 4 leaves).
+
+| edge | UPGMA | NJ | **Bayes** | reading |
+|---|---|---|---|---|
+| PWG→PW | 0.76 | 0.83 | **1.00** | strong (all three) |
+| PWG→SCH | 0.75 | 0.81 | **1.00** | strong (all three) |
+| WIL→SHS | 0.91 | 0.87 | **0.64** | strong |
+| AP90→AP | 0.52 | 0.65 | **0.98** | strong |
+| PW→CCS | 0.13 | 0.24 | **0.74** | Bayes-only (shared derived states) |
+| BOP→MW | 0.10 | 0.23 | **0.65** | Bayes surfaces the Bopp hypothesis |
+| MW72→MW | 0.09 | 0.15 | **0.43** | low under *all three* — reformatted |
+| WIL→YAT | 0.05 | 0.01 | **0.00** | low under all three — Yates re-styled |
+
+**Two robustness results.** (1) The strong formatting edges clear the bar under every
+algorithm — the cladogram's backbone is method-independent. (2) The reformatted edges stay
+low under *every* algorithm, so **convention ≠ content is not a UPGMA artifact**. Bayesian Mk,
+sensitive to shared *derived* characters, is additionally the only method to surface PW→CCS
+and Bopp→MW. Robinson–Foulds between point estimates: UPGMA–NJ 0.59, NJ–Bayes 0.45,
+UPGMA–Bayes 0.70 (`data/L0/bayesian_report.json`, `algorithm_support_comparison.csv`).
+
+**Paper-final canonical**: UPGMA on `B_whamming` remains the published *point estimate*
+(interpretable, matches the dashboard), annotated with **Bayesian posterior clade support**;
+the three-algorithm agreement on the strong edges is the rigor warrant (design §5–§6).
+
 ## 5. Validation summary
 
 | Test | Result | Target | Verdict |

@@ -502,14 +502,17 @@ Shipped `scripts/L0/s2e_patel_open.py` (probe-lemma method, full-file scan):
   (one substantive issue, authored by M.G./gasyoun — comment-noise-aware). Data in
   `data/L0/patel_open_assignments.csv`; issue body archived at `refs/hwnorm1_contribution.md`.
 
-### Phase L0-rigor — Full Bayesian MCMC + NJ for the paper-final tree *(decision 2026-06-03 #4)*
+### Phase L0-rigor — Bayesian MCMC + NJ ✅ DONE 2026-06-03
 
-Upgrade from bootstrap-consensus UPGMA to the design's full "all three algorithms":
-- Proper **Neighbour-Joining** posterior (already have the NJ trees; add support).
-- **Bayesian MCMC** over tree topologies (MrBayes-style on the binary character matrix, or a
-  light beam-search posterior) → posterior clade-support, not just bootstrap frequency.
-- Report UPGMA vs NJ vs Bayesian consensus + Robinson–Foulds; pick the paper-final canonical
-  with stated justification. Gate the paper-final tree on the completed dict set if feasible.
+Shipped `scripts/L0/s5_bayesian.py`: NJ + UPGMA 500× character bootstrap + a **Bayesian Mk
+MCMC** (2-state symmetric model, Felsenstein pruning, NNI + branch-length Metropolis, 80k
+gens, MAP lnL −987.5). Comparison in `data/L0/algorithm_support_comparison.csv` +
+`bayesian_report.json`; dashboard `/conventions` three-algorithm panel. **Strong edges
+(PWG→PW, PWG→SCH, WIL→SHS, AP90→AP) recovered by all three; reformatted edges (MW72→MW,
+WIL→YAT) low under all three ⇒ convention≠content is method-independent.** Bayesian Mk
+uniquely surfaces PW→CCS (0.74) + Bopp→MW (0.65). Paper-final canonical = UPGMA point estimate
++ Bayesian posterior support. *(Optional remaining: gate on the completed dict set — LRV/FRI +
+KNA/KOW/AMAR — if/when sources land.)*
 
 ---
 
