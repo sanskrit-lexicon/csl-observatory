@@ -39,8 +39,8 @@ heir adopted not only its predecessor's entries but its predecessor's way of wri
 
 The instructive counter-cases are the lineages the convention fingerprint **fails** to
 recover — and they fail for a reason. By content, Monier-Williams (1899) is the
-convergence point of the German scholarly tradition: 89.3% of PWG's lemmas and the bulk
-of MW72's recur in MW (sanhw1 containment). Yet PWG→MW draws only **0.02** bootstrap
+convergence point of the German scholarly tradition: 89.3% of PWG's *headwords* and the bulk
+of MW72's recur in MW (sanhw1 lemma containment).¹ Yet PWG→MW draws only **0.02** bootstrap
 support in the convention tree, and MW72→MW only **0.29**. The fingerprint is not in
 error: Monier-Williams *reformatted*. Where PWG cites ṛ-stems as *-ar* (convention 6.1,
 `kartar`), MW uses *-ṛ* (6.2, `kartṛ`); where PWG writes śatṛ participles as *-ant*
@@ -76,6 +76,16 @@ reformatter: it drew 89–93% of CAE's, Macdonell's, and Cappeller's lemmas into
 those sources do not share (convention similarity 0.23–0.28). We accordingly report the two
 matrices side by side and treat the residual as a first-class historical variable — the same
 instrument carries the standalone methods note (PUBLICATIONS Article 20).
+
+¹ **Caveat on the content figure.** Raw sanhw1 containment is confounded by dictionary size:
+MW's ~194k headwords contain almost any older work's common-core vocabulary, so containment
+ranks track *source size/rarity* rather than descent (the unrelated Latin glossary BOP scores
+a *higher* 0.94; containment falls monotonically from small to large sources). The content
+axis as used here is therefore lemma-set **presence**, adequate to contrast with the *direct*
+convention dissimilarity but not a measure of content-copying. A precise content-inheritance
+figure requires size-corrected association (lift over a coverage null), rare/exclusive-lemma
+containment, and entry-text + citation-set comparison (Phases L4/L6) — pending; see
+[`L0_HANDOFF.md`](../L0_HANDOFF.md) §3. The §5 finding does not depend on the magnitude.
 
 > **Numbers in this section** are from `data/L0/bootstrap_support.csv` and
 > `validation_report.json` (convention axis) and `data/sanhw1_inheritance_edges.csv`
