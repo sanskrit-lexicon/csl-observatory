@@ -96,10 +96,10 @@ Plot.plot({
 ## Navigation
 
 - [**Activity**](/activity) — issue/commit/PR throughput timelines, heatmaps, GitHub-style year grids
-- [**Coverage**](/coverage) — what got digitized, corrected, linked. Issue typology by repo
+- [**Issue taxonomy**](/coverage) — GitHub issue and PR label patterns by repo
 - [**Community**](/community) — contributor growth, retention, bus-factor analysis
 - [**Tech Stack**](/tech-stack) — language evolution, dependency graphs, runbook adoption
-- [**Benchmarks**](/benchmarks) — comparison with TLG, Perseus, CDLI, DDBDP, sister projects
+- [**Repository Benchmarks**](/benchmarks) — project-level openness and repository evidence
 - [**Data**](/data) — raw downloads (CSV, JSON, Parquet) for reproducibility
 
 ---

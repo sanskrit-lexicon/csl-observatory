@@ -1,6 +1,6 @@
 # CDSL Ecosystem — Improvement & Optimization Roadmap
 
-_Engineering/quality roadmap for the [`sanskrit-lexicon`](https://github.com/sanskrit-lexicon) organisation (77 repos). Distinct from the **paper roadmap** in the [README](../README.md). Drafted 2026-05-30, grounded in concrete issues observed during the 2026-05 correction + documentation + analytics cycle. For the WSC research programme see [`docs/OBSERVATORY_DESIGN.md`](OBSERVATORY_DESIGN.md)._
+_Engineering/quality roadmap for the [`sanskrit-lexicon`](https://github.com/sanskrit-lexicon) organisation (77 repos). Drafted 2026-05-30, grounded in concrete issues observed during the 2026-05 correction + documentation + analytics cycle. After the 2026-06 boundary decision, this roadmap is limited to GitHub/org maintenance work. Dictionary content, standards/export, DCS/corpus, and broad publication planning live elsewhere._
 
 ## How to read
 
@@ -39,10 +39,10 @@ _Engineering/quality roadmap for the [`sanskrit-lexicon`](https://github.com/san
 | # | Item | Lens | Impact | Effort | Why / evidence |
 |---|---|---|---|---|---|
 | S1 | **Migrate the generation/refresh pipeline off the single Cologne server** (containerise; CI/CD; drop hardcoded paths, python2, cross-org push) | 🛡⚙ | H | L | The whole public-artefact pipeline is a single-host cron with hardcoded assumptions — a resilience and bus-factor risk. |
-| S2 | **Dictionary-to-Book programme**: systematic `<ls>` → scanned-page linking + link-splitting across all dicts | 📖 | H | L | The DTB milestone (`link-target`/`link-splitting`) is the largest standing body of per-dict work. |
-| S3 | **Structured-data enhancement** (SD milestone): markup → machine-readable senses/fields, cross-dict linking | 📖 | H | L | Moves the corpus from display-markup to queryable structured data — the basis for richer apps and the papers. |
+| S2 | **Org-wide repository health baseline**: README, license, citation, issue-template, PR-template, workflow, and release metadata coverage | 📚 | H | M | Keeps the observatory on repository evidence and gives maintainers a concrete cleanup queue. |
+| S3 | **Workflow reliability baseline**: CI, cron, Dependabot, release, and artifact-refresh workflow status across active repos | ⚙ | H | M | Turns maintenance risk into measurable repository/process evidence without owning dictionary or standards pipelines. |
 | S4 | **Unified CI/CD + pre-commit + CodeQL + Dependabot org-wide** (skills exist) | ⚙ | M | M | One source of truth for conventions; today each repo is configured ad hoc. |
-| S5 | **Measurement & papers programme** (WSC 2028→2031) on the observatory backbone | 📚📖 | H | L | The contributor/issue analytics built this cycle are the empirical spine; formalise reproducible, citable metrics. See [`OBSERVATORY_DESIGN.md`](OBSERVATORY_DESIGN.md). |
+| S5 | **Reusable observatory report package** on the GitHub/org backbone | 📚 | M | M | Formalise reproducible, citable repository metrics. Keep broad publication planning outside this repo. See [`OBSERVATORY_DESIGN.md`](OBSERVATORY_DESIGN.md). |
 
 ---
 

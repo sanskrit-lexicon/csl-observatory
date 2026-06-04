@@ -1,18 +1,19 @@
 ---
-title: Coverage and quality
+title: Issue taxonomy
 toc: true
 ---
 
-# Coverage and quality
+# Issue Taxonomy
 
-What got digitized, corrected, linked. The 9-label issue typology over time.
+How digitisation work is represented in GitHub issues and PR labels. This page
+does not measure dictionary-entry coverage directly.
 
 ```js
 const typology = await FileAttachment("data/issue_typology_annual.csv").csv({typed: true});
 const issues = await FileAttachment("data/issues.csv").csv({typed: true});
 ```
 
-## Issue typology evolution (Paper 1 lead figure)
+## Issue typology evolution
 
 ```js
 Plot.plot({
