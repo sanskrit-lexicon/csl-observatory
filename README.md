@@ -5,17 +5,18 @@
 
 ## What this is
 
-A meta-repository that **measures the entire sanskrit-lexicon GitHub organisation** and turns 12 years of distributed work into measurable, citable, reproducible knowledge. Built as the empirical backbone for a sequence of papers at WSC 2028.
+A meta-repository that **measures the entire sanskrit-lexicon GitHub organisation** and turns 12 years of distributed work into measurable, citable, reproducible knowledge. It is intentionally limited to repositories, issues, pull requests, commits, contributors, workflows, and organization-level maintenance evidence.
 
 ## Quick links
 
 - **[Observatory dashboard](https://sanskrit-lexicon.github.io/csl-observatory/)** — live charts (deploys after first GH Actions build)
-- **[Design document](docs/OBSERVATORY_DESIGN.md)** — architecture, KPIs, paper roadmap
+- **[Boundary rules](docs/BOUNDARY_RULES.md)** — what belongs in the GitHub/org observatory, and what must move elsewhere
+- **[Design document](docs/OBSERVATORY_DESIGN.md)** — boundary-safe architecture and KPI scope
 - **[Data downloads](data/)** — every chart's source as CSV / JSON / Parquet
 - **[Runbooks](runbook/)** — the issue-taxonomy procedures applied to all 63 active repos
 - **[Contributor & work statistics](docs/CONTRIBUTOR_STATS.md)** — per-contributor & per-repo commits, churn, tenure, and issues (2014–2026)
 - **[Improvement & optimization roadmap](docs/ROADMAP.md)** — prioritized engineering/quality roadmap for the whole ecosystem
-- **[Research & practitioner layer](docs/RESEARCH_LAYER_ROADMAP.md)** — hypotheses, micro/macro visualization prototypes, and tools for students, dictionary makers, and researchers
+- **[Research & practitioner layer](docs/RESEARCH_LAYER_ROADMAP.md)** — moved pointer; dictionary-structure research now lives in `csl-atlas`
 - **[Decisions needed](docs/DECISIONS_NEEDED.md)** — open items blocked on a maintainer (decisions, credentials, confirmations)
 
 ## What's in this repo
@@ -27,7 +28,7 @@ A meta-repository that **measures the entire sanskrit-lexicon GitHub organisatio
 | `observatory/build_people.py` | Consolidates contributor identities from CITATION.cff + GitHub |
 | `observatory/site/` | Observable Framework dashboard source |
 | `data/` | Transformed time-series CSVs (snapshot 2026-05) |
-| `docs/OBSERVATORY_DESIGN.md` | 2-page design doc with KPI catalog and paper roadmap |
+| `docs/OBSERVATORY_DESIGN.md` | Boundary-safe design doc with GitHub/org KPI catalog |
 | `runbook/cologne-issue-runbook.md` | 16-phase **dictionary**-repo taxonomy (35 repos) |
 | `runbook/cologne-tooling-runbook.md` | 17-phase **tooling**-repo taxonomy (28 repos) |
 | `.github/workflows/refresh-observatory.yml` | Monthly auto-refresh (template; needs `workflow` token scope to push) |
@@ -50,14 +51,13 @@ A meta-repository that **measures the entire sanskrit-lexicon GitHub organisatio
 - **Manual**: `cd observatory && python fetch.py && python transform.py && python build_people.py`
 - **Auto**: monthly via GitHub Actions (`.github/workflows/refresh-observatory.yml`)
 
-## Paper roadmap (WSC 2028 → 2031)
+## Report Roadmap
 
-1. **Quantifying digital lexicography** — the measurement framework (WSC 2028 long paper)
-2. **Community-driven correction at scale** — empirical case study
-3. **From rescue to reference** — historical narrative 2014→2028
-4. **The CDSL ecosystem** — architectural cross-repo dependency analysis
+1. **GitHub/org observatory release** — reproducible repository, issue, PR, commit, contributor, and workflow metrics.
+2. **Repository health report** — license, citation, README, template, and workflow coverage across the organization.
+3. **Maintenance-process report** — taxonomy coverage, refresh bottlenecks, and cross-repo workflow evidence.
 
-See [`docs/OBSERVATORY_DESIGN.md`](docs/OBSERVATORY_DESIGN.md) for details.
+The former broad publication roadmap is preserved only as legacy reference in `docs/*LEGACY_BROAD_METRICS.md`.
 
 ## Citation
 

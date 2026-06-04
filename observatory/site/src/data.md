@@ -9,16 +9,34 @@ Every chart on this site is backed by a stable, citable, downloadable dataset. U
 
 ## Files
 
-| File | Rows | Description | Download |
-|---|---|---|---|
-| repos.csv | 77 | One row per repository in the org | [📥](data/repos.csv) |
-| issues.csv | 5,280 | All issues + PRs (slimmed schema) | [📥](data/issues.csv) |
-| commits.csv | 9,176 | All commits since 2014 | [📥](data/commits.csv) |
-| contributors.csv | 207 | (login, repo) pairs with commit counts | [📥](data/contributors.csv) |
-| timeseries_monthly.csv | 1,340 | (year-month, repo) aggregates | [📥](data/timeseries_monthly.csv) |
-| timeseries_annual.csv | 383 | (year, repo) aggregates | [📥](data/timeseries_annual.csv) |
-| issue_typology_annual.csv | 135 | (year, type-label, count) | [📥](data/issue_typology_annual.csv) |
-| people_summary.csv | 17 | Curated contributors index | [📥](data/people_summary.csv) |
+```js
+const downloads = [
+  ["repos.csv", "77", "One row per repository in the org"],
+  ["issues.csv", "5,280", "All issues + PRs (slimmed schema)"],
+  ["commits.csv", "9,176", "All commits since 2014"],
+  ["contributors.csv", "207", "(login, repo) pairs with commit counts"],
+  ["timeseries_monthly.csv", "1,340", "(year-month, repo) aggregates"],
+  ["timeseries_annual.csv", "383", "(year, repo) aggregates"],
+  ["issue_typology_annual.csv", "135", "(year, type-label, count)"],
+  ["people_summary.csv", "17", "Curated contributors index"]
+];
+```
+
+```js
+display(html`<table>
+  <thead>
+    <tr><th>File</th><th>Rows</th><th>Description</th><th>Download</th></tr>
+  </thead>
+  <tbody>
+    ${await Promise.all(downloads.map(async ([name, rows, description]) => html`<tr>
+      <td><code>${name}</code></td>
+      <td>${rows}</td>
+      <td>${description}</td>
+      <td><a href=${await FileAttachment(`data/${name}`).url()}>download</a></td>
+    </tr>`))}
+  </tbody>
+</table>`);
+```
 
 *Numbers are from snapshot **2026-05**. Refreshed manually + monthly fallback.*
 
