@@ -1,6 +1,7 @@
 # Boundary Rules
 
 Date: 2026-06-03
+Last updated: 2026-06-04
 
 Status: human decision. These rules define the direction of `csl-observatory`
 and supersede broader "research around dictionaries" language wherever it
@@ -67,13 +68,18 @@ acceptable when it explains repository work or organization history.
 
 ## Boundary Cleanup Completed
 
-Completed on 2026-06-03:
+Completed on 2026-06-04 and merged in
+[`csl-observatory` PR #14](https://github.com/sanskrit-lexicon/csl-observatory/pull/14):
 
 - Dictionary-structure research moved to `csl-atlas`: `docs/L0_*`,
   lexicography roadmaps, microstructure/macrostructure notes, R2 sense work,
   scripts and data for L0/lexico/forensic pipelines, and the observatory site's
   lexicography/conventions/R2 pages.
 - Technical standards/export implementation moved to `csl-standards`.
+- Public standards home:
+  `https://github.com/sanskrit-lexicon/csl-standards`.
+- DCS/corpus handoff material landed in
+  `https://github.com/gasyoun/VisualDCS/tree/main/docs/csl-atlas-migration`.
 - Pointer: `docs/DICTIONARY_STRUCTURE_MOVED.md`.
 - Broad pre-boundary observatory plans archived as
   `docs/*LEGACY_BROAD_METRICS.md`; the active design, roadmap, and report

@@ -9,6 +9,9 @@ measurement, dashboards, contribution analytics, repo health, issue
 taxonomy, release/process documentation, and organization-level governance
 for the Cologne Digital Sanskrit Lexicon ecosystem.
 
+Boundary cleanup status: merged on 2026-06-04 in
+[`csl-observatory` PR #14](https://github.com/sanskrit-lexicon/csl-observatory/pull/14).
+
 ## Start Here
 
 1. Read `docs/DECISIONS_NEEDED.md` and surface the open human blockers.
@@ -35,8 +38,10 @@ for the Cologne Digital Sanskrit Lexicon ecosystem.
   `csl-atlas/docs/SESSION_HANDOFF.md`.
 - A local pointer is kept at `docs/DICTIONARY_STRUCTURE_MOVED.md`.
 - TEI/OntoLex/FrAC/SHACL/RDF export and validation work belongs in
-  `csl-standards`.
-- DCS/corpus data belongs in `VisualDCS`; grammar needs a future separate repo.
+  [`csl-standards`](https://github.com/sanskrit-lexicon/csl-standards).
+- DCS/corpus data belongs in [`VisualDCS`](https://github.com/gasyoun/VisualDCS);
+  the atlas handoff material is in `docs/csl-atlas-migration/`. Grammar needs
+  a future separate repo.
 
 ## Agent Rules
 

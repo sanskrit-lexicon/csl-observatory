@@ -5,7 +5,7 @@
 
 ## What this is
 
-A meta-repository that **measures the entire sanskrit-lexicon GitHub organisation** and turns 12 years of distributed work into measurable, citable, reproducible knowledge. It is intentionally limited to repositories, issues, pull requests, commits, contributors, workflows, and organization-level maintenance evidence.
+A meta-repository that **measures the entire sanskrit-lexicon GitHub organisation** and turns 12 years of distributed work into measurable, citable, reproducible knowledge. It is intentionally limited to repositories, issues, pull requests, commits, contributors, workflows, and organization-level maintenance evidence. The 2026-06-04 boundary cleanup is merged: dictionary-structure research belongs in [`csl-atlas`](https://github.com/sanskrit-lexicon/csl-atlas), standards/export work belongs in [`csl-standards`](https://github.com/sanskrit-lexicon/csl-standards), and DCS/corpus work belongs in [`VisualDCS`](https://github.com/gasyoun/VisualDCS).
 
 ## Quick links
 
@@ -58,6 +58,13 @@ A meta-repository that **measures the entire sanskrit-lexicon GitHub organisatio
 3. **Maintenance-process report** — taxonomy coverage, refresh bottlenecks, and cross-repo workflow evidence.
 
 The former broad publication roadmap is preserved only as legacy reference in `docs/*LEGACY_BROAD_METRICS.md`.
+
+## Boundary Status
+
+The scope split was merged on 2026-06-04 in
+[`csl-observatory` PR #14](https://github.com/sanskrit-lexicon/csl-observatory/pull/14).
+New observatory work must start from GitHub repository, issue, PR, commit,
+contributor, workflow, project, or organization-process evidence.
 
 ## Citation
 
