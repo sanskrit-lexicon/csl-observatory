@@ -1,12 +1,22 @@
 # State of the observatory — synthesis
 
-_Synthesis of the four org-observability findings, 2026-06-05. Each headline
-number below is computed offline and reproducibly from the data in
-`observatory/site/src/data/`; this document only ties them together. Sources:
+**csl-observatory · 2026-06-05 · Cologne Digital Sanskrit Dictionaries**
+
+> **Abstract.** Four offline, reproducible analyses of the `sanskrit-lexicon`
+> GitHub organization — contributor concentration, repository health, issue-
+> taxonomy conformance, and activity over time — converge on one structural
+> portrait: a 13-year, 76-repository digitisation effort that is highly
+> productive and well-governed at the issue level, yet carried by three people
+> and thin on the reuse metadata (licenses, ORCIDs) that would make it FAIR and
+> citable. The organization's risk is continuity and metadata, not abandonment.
+
+_Each headline number below is computed offline and reproducibly from the data
+in `observatory/site/src/data/`; this document only ties them together. Sources:
 [`bus_factor.md`](bus_factor.md), [`repo_health.md`](repo_health.md),
 [`taxonomy_adoption.md`](taxonomy_adoption.md),
 [`velocity_timeline.md`](velocity_timeline.md),
-[`contributor_identity.md`](contributor_identity.md)._
+[`contributor_identity.md`](contributor_identity.md). Index of all reports:
+[`README.md`](README.md)._
 
 ## The ecosystem in one paragraph
 
@@ -73,6 +83,15 @@ time by re-running `scripts/{bus_factor,repo_health,taxonomy_adoption,velocity_t
 Each finding is also surfaced on the Observable site (Community, Repo Health,
 Issue Taxonomy, Activity pages), where the page JavaScript recomputes the same
 numbers as a cross-check.
+
+## Citation
+
+> Gasūns, M. et al. (2026). *State of the Observatory: a multi-signal analysis
+> of the Cologne Digital Sanskrit Lexicon GitHub organization.* csl-observatory,
+> Cologne Digital Sanskrit Dictionaries. Snapshot 2026-06-05. DOI: pending
+> Zenodo mint.
+
+Cite with the snapshot date for reproducibility; see [`../CITATION.cff`](../CITATION.cff).
 
 *Object of analysis: the GitHub organization as a whole — in scope per
 `docs/BOUNDARY_RULES.md`.*

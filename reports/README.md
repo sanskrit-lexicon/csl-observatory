@@ -1,0 +1,55 @@
+# Observatory reports
+
+Offline, reproducible analyses of the `sanskrit-lexicon` GitHub organization.
+Each finding is produced by a script in [`../scripts/`](../scripts/) over the
+committed CSV snapshots in
+[`../observatory/site/src/data/`](../observatory/site/src/data/) — no live API
+calls — and is mirrored on the [Observable dashboard](https://sanskrit-lexicon.github.io/csl-observatory/).
+
+**Start here:** [`synthesis.md`](synthesis.md) ties the four findings into one
+picture.
+
+## Findings
+
+| Report | Script | Site page | Headline |
+|---|---|---|---|
+| [`bus_factor.md`](bus_factor.md) | `bus_factor.py` | [Community](https://sanskrit-lexicon.github.io/csl-observatory/community) | Core trio = 97.6% of contributions; 65/76 repos have bus factor 1; Gini 0.86 |
+| [`repo_health.md`](repo_health.md) | `repo_health.py` | [Repo Health](https://sanskrit-lexicon.github.io/csl-observatory/repo-health) | 41/76 repos unlicensed; 46/76 default to `master`; only 5 fully clean |
+| [`taxonomy_adoption.md`](taxonomy_adoption.md) | `taxonomy_adoption.py` | [Issue Taxonomy](https://sanskrit-lexicon.github.io/csl-observatory/coverage) | 89% of issues typed, 63% fully conformant; 92% peak in 2025; 54 stray labels |
+| [`velocity_timeline.md`](velocity_timeline.md) | `velocity_timeline.py` | [Activity](https://sanskrit-lexicon.github.io/csl-observatory/activity) | 9,877 commits over 13 yrs; peak 11 distinct authors/yr; backlog 1,742 (2025) → 913 (2026) |
+| [`contributor_identity.md`](contributor_identity.md) | `contributor_identity.py` | — | 0/16 authors have a registered ORCID; 7 named await registration, 9 to identify |
+
+## Synthesis
+
+[`synthesis.md`](synthesis.md) — *State of the observatory.* A productive,
+well-governed, actively-maintained but structurally fragile ecosystem whose
+risks are **continuity** (3 people carry it) and **reuse metadata** (licenses,
+ORCIDs), not abandonment.
+
+## From findings to action
+
+Each finding's actionable follow-ups are filed on the
+[Tooling Roadmap (project #9)](https://github.com/orgs/sanskrit-lexicon/projects/9),
+split by a `Category` field into **Findings** (issues #22–#25) and **Actions**
+(#15–#21). The action drafts and their rationale live in
+[`../docs/hygiene_issues_draft.md`](../docs/hygiene_issues_draft.md).
+
+## Reproducing
+
+```sh
+python scripts/bus_factor.py
+python scripts/repo_health.py
+python scripts/taxonomy_adoption.py
+python scripts/velocity_timeline.py
+python scripts/contributor_identity.py
+```
+
+Each writes its `reports/<name>.md` and refreshes the matching
+`observatory/site/src/data/<name>.csv`. The numbers are deterministic from the
+committed snapshot, so a re-run reproduces the reports exactly.
+
+---
+
+_Other files in this directory (`contributors.md`, `coverage.md`,
+`dashboard.md`, `timeline.md`) are generated summary tables from the
+`render_reports.py` pipeline, distinct from the analytical findings above._
