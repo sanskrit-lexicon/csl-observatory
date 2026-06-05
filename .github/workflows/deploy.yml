@@ -1,0 +1,62 @@
+name: Deploy dashboard
+
+# Builds the Observable dashboard from the committed data snapshot and
+# publishes it to GitHub Pages. Runs on every push to main that touches the
+# site or its data, and on manual dispatch. Data refresh is a separate
+# workflow (refresh-observatory.yml); when it commits new CSVs, that push
+# triggers this deploy.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'observatory/site/**'
+      - '.github/workflows/deploy.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment; don't cancel an in-progress one.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        working-directory: observatory/site
+        run: npm ci || npm install
+
+      - name: Build site
+        working-directory: observatory/site
+        run: npm run build
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: observatory/site/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
