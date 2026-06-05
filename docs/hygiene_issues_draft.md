@@ -1,14 +1,18 @@
-# Org-hygiene issues — DRAFTS (not filed)
+# Org-hygiene issues
 
 Date: 2026-06-05
 
-These are **drafts for human review, not filed issues.** They turn the
-findings in [`reports/repo_health.md`](../reports/repo_health.md),
+**Status: FILED on 2026-06-05** as issues
+[#15](https://github.com/sanskrit-lexicon/csl-observatory/issues/15)–[#21](https://github.com/sanskrit-lexicon/csl-observatory/issues/21)
+in `csl-observatory` (see the mapping in the summary table below). This file
+is retained as the rationale/source-of-truth for those issues.
+
+These turn the findings in [`reports/repo_health.md`](../reports/repo_health.md),
 [`reports/taxonomy_adoption.md`](../reports/taxonomy_adoption.md), and
 [`reports/contributor_identity.md`](../reports/contributor_identity.md) into
-ready-to-file GitHub issues. **Do not file without maintainer sign-off** —
-each carries a `⚠ Care` note where an action is visible or partly
-irreversible.
+GitHub issues. Each carries a `⚠ Care` note where an action is visible or
+partly irreversible — those notes are reproduced in the filed issues and still
+require maintainer judgement before execution.
 
 Suggested labels follow the `csl-observatory` tooling taxonomy (one type +
 one severity + one milestone). These are written as **org-level tracking
@@ -158,15 +162,15 @@ before filing in case they have moved.
 
 ## Summary
 
-| # | Action | Type | Severity | Scope | Care |
+| Issue | Action | Type | Severity | Scope | Care |
 |---|---|---|---|---:|:---:|
-| 1 | Add licenses | documentation | major | 41 repos | ⚠ data vs code |
-| 2 | Normalise NOASSERTION | documentation | minor | 21 repos | — |
-| 3 | Default branch → `main` | infrastructure | major | 46 repos | ⚠ high-touch |
-| 4 | Add descriptions | documentation | trivial | 5 repos | — |
-| 5 | Archive disposable repos | tech-debt | minor | 6 repos | ⚠ confirm merged |
-| 6 | ORCIDs / identity | documentation | minor | 16 people | — |
-| 7 | Taxonomy cleanup tail | tech-debt | minor | ~1,300 issues | — |
+| [#15](https://github.com/sanskrit-lexicon/csl-observatory/issues/15) | Add licenses | documentation | major | 41 repos | ⚠ data vs code |
+| [#16](https://github.com/sanskrit-lexicon/csl-observatory/issues/16) | Normalise NOASSERTION | documentation | minor | 21 repos | — |
+| [#17](https://github.com/sanskrit-lexicon/csl-observatory/issues/17) | Default branch → `main` | infrastructure | major | 46 repos | ⚠ high-touch |
+| [#18](https://github.com/sanskrit-lexicon/csl-observatory/issues/18) | Add descriptions | documentation | trivial | 5 repos | — |
+| [#19](https://github.com/sanskrit-lexicon/csl-observatory/issues/19) | Archive disposable repos | tech-debt | minor | 6 repos | ⚠ confirm merged |
+| [#20](https://github.com/sanskrit-lexicon/csl-observatory/issues/20) | ORCIDs / identity | documentation | minor | 16 people | — |
+| [#21](https://github.com/sanskrit-lexicon/csl-observatory/issues/21) | Taxonomy cleanup tail | tech-debt | minor | ~1,300 issues | — |
 
 *Object of analysis: GitHub repositories, issues, and contributors — in scope
 per `docs/BOUNDARY_RULES.md`. These drafts act on the observatory's own
