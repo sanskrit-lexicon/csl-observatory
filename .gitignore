@@ -18,6 +18,7 @@ observatory/data/*.duckdb
 # Observable Framework build artifacts
 observatory/site/dist/
 observatory/site/.observablehq/cache/
+observatory/site/src/.observablehq/
 observatory/site/node_modules/
 
 # Outreach drafts — keep local only (sensitive: email contents)
