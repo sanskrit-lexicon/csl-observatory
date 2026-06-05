@@ -1,7 +1,23 @@
-# Status — autonomous work session 2026-05-07
+# Status
+
+> **Current status (2026-06-05).** The observatory build-out is complete:
+> four reproducible findings + synthesis + a contributor-identity worksheet,
+> all on the [dashboard](https://sanskrit-lexicon.github.io/csl-observatory/),
+> with actionable follow-ups filed as issues #15–#25 on
+> [Tooling Roadmap project #9](https://github.com/orgs/sanskrit-lexicon/projects/9).
+> To catch up, read **[`README.md`](README.md)** → **[`reports/README.md`](reports/README.md)**
+> → **[`reports/synthesis.md`](reports/synthesis.md)**. Live working state is in
+> [`.ai_state.md`](.ai_state.md).
+>
+> The section below is the **historical** record of the 2026-05-07 session,
+> retained for provenance.
+
+---
+
+## Historical — autonomous work session 2026-05-07
 
 This file summarises what was built during the two-hour autonomous session
-on 2026-05-07. It is the single document to read to catch up.
+on 2026-05-07.
 
 ## Strategic decision taken without confirmation
 
