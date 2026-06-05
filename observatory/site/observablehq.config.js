@@ -9,6 +9,7 @@ export default {
     {name: "Community", path: "/community"},
     {name: "Tech Stack", path: "/tech-stack"},
     {name: "Repo Benchmarks", path: "/benchmarks"},
+    {name: "Repo Health", path: "/repo-health"},
     {name: "Data", path: "/data"}
   ],
   theme: ["air", "alt", "wide"],
