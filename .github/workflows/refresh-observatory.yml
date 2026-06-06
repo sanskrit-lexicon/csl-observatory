@@ -70,15 +70,14 @@ jobs:
         run: |
           mkdir -p observatory/site/src/data
           cp data/*.csv observatory/site/src/data/
-          # L0 convention-cladogram products for the /conventions page
-          mkdir -p observatory/site/src/data/L0/distances observatory/site/src/data/L0/trees
-          cp data/L0/patel2016_assignments.csv data/L0/bootstrap_support.csv \
-             data/L0/convention_fingerprint.csv data/L0/validation_report.json \
-             data/L0/content_convention_residual.csv data/L0/content_convention_scatter.csv \
-             data/L0/algorithm_support_comparison.csv \
-             observatory/site/src/data/L0/ 2>/dev/null || true
-          cp data/L0/distances/B_whamming.csv observatory/site/src/data/L0/distances/ 2>/dev/null || true
-          cp data/L0/trees/canonical_consensus.png observatory/site/src/data/L0/trees/ 2>/dev/null || true
+
+      - name: Regenerate findings
+        run: |
+          python scripts/bus_factor.py
+          python scripts/repo_health.py
+          python scripts/taxonomy_adoption.py
+          python scripts/velocity_timeline.py
+          python scripts/contributor_identity.py
 
       - name: Build site
         run: |
@@ -86,7 +85,7 @@ jobs:
           npm run build
 
       - name: Upload artifact for Pages
-        uses: actions/upload-pages-artifact@v5
+        uses: actions/upload-pages-artifact@v3
         with:
           path: observatory/site/dist
 
@@ -94,8 +93,9 @@ jobs:
         run: |
           git config user.name "csl-observatory-bot"
           git config user.email "actions@github.com"
-          git add data/ observatory/snapshots/ -- ':!observatory/snapshots/2*/issues' ':!observatory/snapshots/2*/commits' || true
-          # Snapshot raw data is gitignored; only commit transformed CSVs
+          # Commit the transformed CSVs, the copied site data, and the
+          # regenerated finding reports/CSVs. Raw JSONL snapshots are gitignored.
+          git add data/ observatory/site/src/data/ reports/ || true
           git diff --quiet && git diff --staged --quiet || git commit -m "data: monthly refresh ($(date -u +%Y-%m-%d))"
           git push || true
 
@@ -108,4 +108,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@v4
