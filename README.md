@@ -9,7 +9,7 @@ A meta-repository that **measures the entire sanskrit-lexicon GitHub organisatio
 
 ## Quick links
 
-- **[Observatory dashboard](https://sanskrit-lexicon.github.io/csl-observatory/)** — live charts (deploys after first GH Actions build)
+- **[Observatory dashboard](https://sanskrit-lexicon.github.io/csl-observatory/)** — live charts, deployed to GitHub Pages via `.github/workflows/deploy.yml`
 - **[Findings & reports](reports/README.md)** — the five reproducible analyses + the synthesis (start here)
 - **[Synthesis](reports/synthesis.md)** — *State of the observatory*, the four findings tied into one picture
 - **[Tooling Roadmap (project #9)](https://github.com/orgs/sanskrit-lexicon/projects/9)** — findings (#22–25) and action issues (#15–21), grouped by `Category`
