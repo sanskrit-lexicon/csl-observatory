@@ -18,6 +18,17 @@ picture.
 | [`taxonomy_adoption.md`](taxonomy_adoption.md) | `taxonomy_adoption.py` | [Issue Taxonomy](https://sanskrit-lexicon.github.io/csl-observatory/coverage) | 89% of issues typed, 63% fully conformant; 92% peak in 2025; 54 stray labels |
 | [`velocity_timeline.md`](velocity_timeline.md) | `velocity_timeline.py` | [Activity](https://sanskrit-lexicon.github.io/csl-observatory/activity) | 9,877 commits over 13 yrs; peak 11 distinct authors/yr; backlog 1,742 (2025) → 913 (2026) |
 | [`contributor_identity.md`](contributor_identity.md) | `contributor_identity.py` | — | 0/16 authors have a registered ORCID; 7 named await registration, 9 to identify |
+| [`obs_q_correction_sustainability.md`](obs_q_correction_sustainability.md) | _(probe; `obs_q_correction.py` is next)_ | — | Content corrections are single-person-burst-driven: ≤4 correctors/yr, lead 51–100%; resolution median 6 d but a tail to 6.4 yr |
+
+## Research-paper hypotheses (OBS-*)
+
+A separate line of work frames probes as falsifiable hypotheses for lexicography
+/ Indology journals. **OBS-Q** (above) is org-process evidence and lives here.
+**OBS-R** (redundancy/derivation) and **OBS-C** (citations) are *dictionary-content*
+findings and belong in [`csl-atlas`](https://github.com/sanskrit-lexicon/csl-atlas)
+per the boundary rules — [`obs_rc_atlas_bridge.md`](obs_rc_atlas_bridge.md) records
+their corpus-wide numbers and routes each to the existing `csl-atlas` hypothesis it
+extends (`M1-M2-MACRO`, `XREF-CORE`, `INDIG-CITE`).
 
 ## Synthesis
 
