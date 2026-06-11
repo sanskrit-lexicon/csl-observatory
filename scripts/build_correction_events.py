@@ -199,8 +199,8 @@ def _unit(a, b):
     c = a or b
     if c is None:
         return 'other'
-    if unicodedata.combining(c):
-        return 'diacritic'
+    if (a and unicodedata.combining(a)) or (b and unicodedata.combining(b)):
+        return 'diacritic'          # a diacritic on either side = a diacritic edit
     if c.isspace():
         return 'whitespace'
     if c.isdigit():
@@ -373,8 +373,10 @@ def main():
                 parts = (parts + [''] * 8)[:8]
             ts, dct, lcode, hw, old_raw, new_raw, comment, corr = parts
             dt = parse_time(ts)
-            new_corr, inline = split_new(new_raw)
-            old_iast = normalize_to_iast(old_raw.strip())
+            old_corr, old_inline = split_new(old_raw)   # strip commentary from both cells
+            new_corr, new_inline = split_new(new_raw)
+            inline = ' '.join(x for x in (old_inline, new_inline) if x)
+            old_iast = normalize_to_iast(old_corr.strip())
             new_iast = normalize_to_iast(new_corr.strip())
             ops, dist = edit_ops(old_iast, new_iast)
             login, cname, latency = parse_corrector(corr, dt, resolve, realname)
@@ -396,7 +398,7 @@ def main():
                 'inline_comment': inline,
                 'edit_ops': json.dumps(ops, ensure_ascii=False),
                 'edit_distance': dist,
-                'script_old': detect_script(old_raw),
+                'script_old': detect_script(old_corr),
                 'script_new': detect_script(new_corr),
                 'comment_raw': comment.strip(),
                 'error_type_empirical': empirical_cluster(comment + ' ' + inline),

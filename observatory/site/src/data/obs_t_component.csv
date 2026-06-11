@@ -12,7 +12,7 @@ orthography,form,wil,802
 markup,git,pwg,787
 encoding,form,pd,765
 headword,form,ccs,727
-orthography,form,mw,696
+orthography,form,mw,694
 sense,git,pwg,642
 orthography,form,pd,610
 orthography,git,md,588
@@ -179,13 +179,13 @@ headword,git,pe,13
 orthography,git,lan,13
 orthography,form,ae,12
 orthography,form,bhs,12
+citation,form,mw,12
 encoding,form,bur,12
 sense,git,wil,12
 headword,form,stc,11
 headword,git,yat,11
 orthography,git,inm,11
 orthography,git,abch,11
-citation,form,mw,10
 headword,git,sch,10
 encoding,form,pwg2013,9
 markup,form,ccs,9

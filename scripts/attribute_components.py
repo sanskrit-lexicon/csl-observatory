@@ -148,7 +148,7 @@ def norm(s):
 
 def first_tok(s):
     """First word of a cell, dropping trailing commentary/variants ('a / b', 'a (x)')."""
-    return re.split(r'[\s/(]', s.strip(), 1)[0]
+    return re.split(r'[\s/(]', s.strip(), maxsplit=1)[0]
 
 
 _K1_LINE = re.compile(r'<k1>([^<]*)')

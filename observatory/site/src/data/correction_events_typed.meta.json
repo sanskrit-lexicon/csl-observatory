@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-06-11T12:22:39.627109+00:00",
+  "generatedAt": "2026-06-11T12:45:07.373471+00:00",
   "sourcePath": "correction_events_all.csv + ../csl-orig (form join)",
   "recordCount": 50953,
   "assumptions": [
@@ -18,7 +18,7 @@
     "componentTotals": [
       [
         "orthography",
-        23199
+        23197
       ],
       [
         "sense",
@@ -34,7 +34,7 @@
       ],
       [
         "citation",
-        3534
+        3536
       ],
       [
         "encoding",
@@ -57,7 +57,7 @@
       "form": [
         [
           "orthography",
-          18898
+          18896
         ],
         [
           "headword",
@@ -77,7 +77,7 @@
         ],
         [
           "citation",
-          300
+          302
         ],
         [
           "unknown",

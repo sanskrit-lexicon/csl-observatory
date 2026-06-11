@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-06-11T12:18:18.379398+00:00",
+  "generatedAt": "2026-06-11T12:32:39.849476+00:00",
   "sourcePath": "../CORRECTIONS/cfr.tsv",
   "recordCount": 24441,
   "assumptions": [
@@ -73,11 +73,11 @@
     "empiricalClusters": [
       [
         "typo",
-        18519
+        18517
       ],
       [
         "ocr-print",
-        1793
+        1794
       ],
       [
         "capitalization",
@@ -97,11 +97,11 @@
       ],
       [
         "reference",
-        251
+        253
       ],
       [
         "other",
-        170
+        171
       ],
       [
         "variant",
@@ -109,69 +109,69 @@
       ],
       [
         "unspecified",
-        6
+        4
       ]
     ],
     "topEditUnits": [
       [
-        "del:punctuation",
-        17097
-      ],
-      [
-        "del:consonant",
-        12817
-      ],
-      [
-        "del:diacritic",
-        8984
+        "ins:consonant",
+        8937
       ],
       [
         "ins:diacritic",
-        8673
+        8783
       ],
       [
-        "ins:consonant",
-        8237
-      ],
-      [
-        "del:vowel",
-        7978
+        "del:diacritic",
+        6725
       ],
       [
         "sub:consonant",
-        7729
+        6164
       ],
       [
-        "del:whitespace",
-        6006
+        "del:punctuation",
+        5719
+      ],
+      [
+        "del:consonant",
+        5541
       ],
       [
         "sub:case",
-        4949
+        4942
       ],
       [
         "ins:vowel",
-        4423
-      ],
-      [
-        "sub:punctuation",
-        3451
-      ],
-      [
-        "sub:vowel",
-        3201
-      ],
-      [
-        "ins:punctuation",
-        3200
-      ],
-      [
-        "del:digit",
-        2597
+        4818
       ],
       [
         "sub:diacritic",
-        2520
+        4651
+      ],
+      [
+        "ins:punctuation",
+        3489
+      ],
+      [
+        "del:vowel",
+        3392
+      ],
+      [
+        "sub:punctuation",
+        3175
+      ],
+      [
+        "sub:vowel",
+        2760
+      ],
+      [
+        "del:whitespace",
+        2621
+      ],
+      [
+        "ins:whitespace",
+        2608
       ]
     ]
   }
