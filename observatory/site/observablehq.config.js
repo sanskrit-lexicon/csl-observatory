@@ -5,6 +5,7 @@ export default {
   title: "CSL Observatory",
   pages: [
     {name: "Activity", path: "/activity"},
+    {name: "Error Typology", path: "/error-typology"},
     {name: "Issue Taxonomy", path: "/coverage"},
     {name: "Community", path: "/community"},
     {name: "Tech Stack", path: "/tech-stack"},
