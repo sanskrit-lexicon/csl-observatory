@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-06-11T13:03:02.627370+00:00",
+  "generatedAt": "2026-06-11T17:38:18.372414+00:00",
   "sourcePath": "correction_events_typed.csv",
   "recordCount": 50953,
   "assumptions": [
@@ -14,15 +14,15 @@
     "ocr": [
       [
         "substitution",
-        15943
+        15847
       ],
       [
         "insertion",
-        13121
+        13195
       ],
       [
         "deletion",
-        10542
+        10564
       ],
       [
         "segmentation",
@@ -30,33 +30,33 @@
       ],
       [
         "unknown",
-        888
+        890
       ],
       [
         "transposition",
-        709
+        707
       ]
     ],
     "textcrit": [
       [
         "addition",
-        18803
+        18877
       ],
       [
         "substitution",
-        16526
+        16432
       ],
       [
         "omission",
-        13320
+        13340
       ],
       [
         "unknown",
-        888
+        890
       ],
       [
         "metathesis",
-        734
+        732
       ],
       [
         "haplography",
@@ -78,11 +78,11 @@
       ],
       [
         "R:CONSONANT",
-        5640
+        5533
       ],
       [
         "M:CONSONANT",
-        5287
+        5301
       ],
       [
         "R:CASE",
@@ -90,11 +90,11 @@
       ],
       [
         "U:CONSONANT",
-        3400
+        3422
       ],
       [
         "M:DIACRITIC",
-        3322
+        3382
       ],
       [
         "R:VOWEL",
@@ -110,7 +110,7 @@
       ],
       [
         "U:WHITESPACE",
-        1379
+        1377
       ],
       [
         "U:VOWEL",
@@ -126,7 +126,7 @@
       ],
       [
         "R:DIACRITIC",
-        1066
+        1079
       ]
     ],
     "confusionTopForm": [
@@ -188,7 +188,7 @@
         "from": "̣",
         "to": "n",
         "unit": "diacritic",
-        "count": 266
+        "count": 267
       },
       {
         "from": "k",
@@ -200,7 +200,7 @@
         "from": "E",
         "to": "e",
         "unit": "case",
-        "count": 236
+        "count": 238
       },
       {
         "from": "a",
@@ -224,7 +224,7 @@
         "from": "j",
         "to": "̃",
         "unit": "diacritic",
-        "count": 200
+        "count": 204
       },
       {
         "from": "s",

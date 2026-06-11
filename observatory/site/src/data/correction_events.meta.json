@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-06-11T12:32:39.849476+00:00",
+  "generatedAt": "2026-06-11T17:37:35.178495+00:00",
   "sourcePath": "../CORRECTIONS/cfr.tsv",
   "recordCount": 24441,
   "assumptions": [
@@ -115,19 +115,19 @@
     "topEditUnits": [
       [
         "ins:consonant",
-        8937
+        8952
       ],
       [
         "ins:diacritic",
-        8783
+        8849
       ],
       [
         "del:diacritic",
-        6725
+        6742
       ],
       [
         "sub:consonant",
-        6164
+        6049
       ],
       [
         "del:punctuation",
@@ -135,19 +135,19 @@
       ],
       [
         "del:consonant",
-        5541
+        5565
       ],
       [
         "sub:case",
-        4942
+        4944
       ],
       [
         "ins:vowel",
-        4818
+        4817
       ],
       [
         "sub:diacritic",
-        4651
+        4681
       ],
       [
         "ins:punctuation",
@@ -159,15 +159,15 @@
       ],
       [
         "sub:punctuation",
-        3175
+        3174
       ],
       [
         "sub:vowel",
-        2760
+        2757
       ],
       [
         "del:whitespace",
-        2621
+        2620
       ],
       [
         "ins:whitespace",

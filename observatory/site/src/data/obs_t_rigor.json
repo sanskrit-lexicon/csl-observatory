@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-06-11T17:27:51.900737+00:00",
+  "generatedAt": "2026-06-11T17:39:45.898350+00:00",
   "h1_typology_dominance": {
     "all": {
       "n": 50953,
-      "meaning_share": 0.2731,
+      "meaning_share": 0.2732,
       "ci95": [
         0.2693,
-        0.277
+        0.2771
       ],
-      "surface_share": 0.7269
+      "surface_share": 0.7268
     },
     "form": {
       "n": 24441,
-      "meaning_share": 0.0277,
+      "meaning_share": 0.0279,
       "ci95": [
-        0.0257,
-        0.0298
+        0.0259,
+        0.03
       ],
-      "surface_share": 0.9723
+      "surface_share": 0.9721
     },
     "git": {
       "n": 26512,
@@ -29,18 +29,18 @@
       "surface_share": 0.5006
     },
     "derived_only": {
-      "n": 33500,
-      "meaning_share": 0.414,
+      "n": 33561,
+      "meaning_share": 0.4134,
       "ci95": [
-        0.4087,
-        0.4193
+        0.4081,
+        0.4186
       ],
-      "surface_share": 0.586
+      "surface_share": 0.5866
     }
   },
   "h2_cross_dictionary": {
     "dicts_tested": 15,
-    "chi2": 58749.9,
+    "chi2": 58934.6,
     "dof": 112,
     "p_value": 0.0,
     "cramers_v": 0.411,
@@ -76,7 +76,7 @@
       "z": -1.65,
       "p_value": 0.0995,
       "direction": "flat",
-      "first_year_share": 0.47,
+      "first_year_share": 0.478,
       "last_year_share": 0.119
     },
     "markup": {
@@ -100,7 +100,7 @@
       "z": -2.75,
       "p_value": 0.006,
       "direction": "falling",
-      "first_year_share": 0.431,
+      "first_year_share": 0.422,
       "last_year_share": 0.407
     },
     "sense": {
@@ -108,7 +108,7 @@
       "z": 1.65,
       "p_value": 0.0995,
       "direction": "flat",
-      "first_year_share": 0.048,
+      "first_year_share": 0.049,
       "last_year_share": 0.335
     },
     "unknown": {

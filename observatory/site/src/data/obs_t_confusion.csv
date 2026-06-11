@@ -10,17 +10,17 @@ p,P,case,form,336
 g,̇,diacritic,form,329
 n,̣,diacritic,form,271
 1,2,digit,git,268
-̣,n,diacritic,form,266
+̣,n,diacritic,form,267
 .,",",punctuation,git,256
 k,t,consonant,form,255
-E,e,case,form,236
+E,e,case,form,238
 a,i,vowel,form,235
 *,e,punctuation,form,227
 O,g,vowel,form,226
 h,̣,diacritic,git,215
  ,-,whitespace,git,207
 h, ,consonant,git,205
-j,̃,diacritic,form,200
+j,̃,diacritic,form,204
 s,m,consonant,form,198
 e,o,vowel,form,194
 k,K,case,form,188
@@ -50,9 +50,9 @@ t,/,consonant,git,126
 ̣,.,diacritic,form,125
 v,b,consonant,form,123
 I,̣,diacritic,git,122
+n,m,consonant,form,120
 s,i,consonant,git,120
 h,/,consonant,git,120
-n,m,consonant,form,119
  ,",",whitespace,git,119
 ̣,p,diacritic,form,118
 c,e,consonant,git,116
@@ -93,7 +93,7 @@ w,W,case,form,84
 a,i,vowel,git,84
 2,1,digit,git,84
 o,s,vowel,git,83
-r,n,consonant,form,81
+r,n,consonant,form,82
 d,n,consonant,form,81
 ̂,́,diacritic,git,81
 k,c,consonant,git,80
@@ -110,24 +110,23 @@ e,a,vowel,git,77
 o,>,vowel,git,71
 o,O,case,form,70
 n,r,consonant,form,69
-),n,punctuation,form,69
 m,n,consonant,git,69
+),n,punctuation,form,68
 o,e,vowel,git,68
+",",n,punctuation,form,67
 U,u,case,git,67
 o,a,vowel,git,67
 },́,diacritic,git,67
 i,a,vowel,form,66
 ̄,̣,diacritic,form,66
-",",n,punctuation,form,66
 M,m,case,git,66
 S,h,consonant,git,66
+m,n,consonant,form,63
 m,s,consonant,git,63
 n,>,consonant,git,63
-m,n,consonant,form,62
-n,Y,consonant,form,62
-̣,e,diacritic,form,61
 l,s,consonant,git,61
 t, ,consonant,git,61
+̣,e,diacritic,form,60
 o,e,vowel,form,60
 .,n,punctuation,form,60
 n,u,consonant,git,59
@@ -168,13 +167,13 @@ v,n,consonant,form,46
 i,e,vowel,git,46
 t,w,consonant,form,45
 ., ,punctuation,form,45
-̄,a,diacritic,form,45
 u,U,case,git,45
 u,n,vowel,git,45
 l,i,consonant,git,45
 s,z,consonant,git,45
 3,1,digit,git,45
 v,K,consonant,form,44
+̄,a,diacritic,form,44
 S,̣,diacritic,form,44
 q,d,consonant,form,44
 s,t,consonant,git,44
@@ -201,18 +200,18 @@ t,s,consonant,git,39
 ),.,punctuation,git,39
 s,t,consonant,form,38
 ",",.,punctuation,form,38
+s,n,consonant,form,38
 0,1,digit,git,38
 s,S,case,git,38
 },̣,diacritic,git,38
 a,n,vowel,git,38
+̣,a,diacritic,form,37
 ̄,r,diacritic,form,37
 s,o,consonant,git,37
 n,N,case,git,37
 d,a,consonant,form,36
-̣,a,diacritic,form,36
 A,̄,diacritic,form,36
 t,d,consonant,form,36
-s,n,consonant,form,36
 c,j,consonant,form,36
 n,R,consonant,git,36
  ,<,whitespace,git,36
@@ -221,10 +220,10 @@ a, ,vowel,form,35
 <, ,punctuation,git,35
 l, ,consonant,git,35
 ^,>,punctuation,git,35
-t,r,consonant,form,34
 ̣,h,diacritic,form,34
 N,̣,diacritic,form,34
 l,.,consonant,git,34
+t,r,consonant,form,33
 O,h,vowel,form,33
 4,7,digit,form,33
 ̄,7,diacritic,form,33
@@ -240,14 +239,14 @@ a,c,vowel,git,32
 œ,e,latin,git,32
 %,́,diacritic,git,32
 u,=,vowel,git,32
+n,h,consonant,form,31
 a,̣,diacritic,form,31
+l,̣,diacritic,form,31
 t,l,consonant,git,31
 e,h,vowel,git,31
 >,u,punctuation,git,31
 v,c,consonant,form,30
 a,o,vowel,form,30
-n,h,consonant,form,30
-l,̣,diacritic,form,30
 ̣,h,diacritic,git,30
 e,i,vowel,git,30
 2,~,digit,git,30
@@ -280,6 +279,7 @@ n,h,consonant,git,28
 l,>,consonant,git,28
 t,l,consonant,form,27
 h,c,consonant,form,27
+̣,r,diacritic,form,27
 a,E,vowel,form,27
 K,p,consonant,form,27
 r,l,consonant,git,27
@@ -293,7 +293,6 @@ u,v,vowel,form,26
 d,t,consonant,form,26
 n,l,consonant,form,26
 e,i,vowel,form,26
-̣,r,diacritic,form,26
 7,e,digit,form,26
 ¯,‹,punctuation,form,26
 ‹,¯,punctuation,form,26
@@ -305,6 +304,7 @@ I,a,vowel,git,26
 y,p,consonant,form,25
 i,o,vowel,form,25
 s,e,consonant,form,25
+n,s,consonant,form,25
 ̣,q,diacritic,form,25
 m,f,consonant,form,25
 4,5,digit,form,25
@@ -323,11 +323,11 @@ a,<,vowel,git,24
 A,I,vowel,git,24
 o,<,vowel,git,24
 K,k,case,form,23
-n,s,consonant,form,23
 r,a,consonant,form,23
  ,a,whitespace,form,23
 ̣,W,diacritic,form,23
 7,̈,diacritic,form,23
+‹,",",punctuation,form,23
 a,.,vowel,git,23
 s,a,consonant,git,23
 e,r,vowel,git,23
@@ -343,7 +343,6 @@ r,h,consonant,form,22
 ̣,y,diacritic,form,22
 v,k,consonant,form,22
 o,n,vowel,form,22
-‹,",",punctuation,form,22
  ,̄,diacritic,form,22
 f,^,consonant,form,22
 v,y,consonant,git,22
@@ -385,6 +384,7 @@ h,n,consonant,form,20
 1,r,digit,form,20
 ",",p,punctuation,form,20
 3,7,digit,form,20
+.,̣,diacritic,form,20
 n,p,consonant,git,20
 t,d,consonant,git,20
 i,n,vowel,git,20
@@ -393,16 +393,15 @@ i,n,vowel,git,20
 a,>,vowel,git,20
 1,4,digit,git,20
 t,a,consonant,git,20
+n,u,consonant,form,19
 t,s,consonant,form,19
 V,v,case,form,19
 f,̄,diacritic,form,19
 2,a,digit,form,19
-n,j,consonant,form,19
 ̣,s,diacritic,form,19
 w,t,consonant,form,19
 4,g,digit,form,19
 .,̄,diacritic,form,19
-.,̣,diacritic,form,19
 t,n,consonant,git,19
 b,h,consonant,git,19
 t,f,consonant,git,19
@@ -418,7 +417,6 @@ n,v,consonant,git,19
 g,-,consonant,git,19
 c,e,consonant,form,18
 a,s,vowel,form,18
-n,u,consonant,form,18
 y,w,consonant,form,18
 2,r,digit,form,18
 p,́,diacritic,form,18
@@ -461,7 +459,7 @@ r, ,consonant,form,16
 g,m,consonant,form,16
 1,n,digit,form,16
 E,i,vowel,form,16
-y,̣,diacritic,form,16
+̃,̣,diacritic,form,16
 ́,̣,diacritic,form,16
 ̄,O,diacritic,form,16
 d,w,consonant,form,16
@@ -489,17 +487,18 @@ r,%,consonant,git,16
 /,},punctuation,git,16
 ̣,v,diacritic,form,15
  ,e,whitespace,form,15
+̃,j,diacritic,form,15
 ̄,i,diacritic,form,15
 r,m,consonant,form,15
 a,h,vowel,form,15
 O,̄,diacritic,form,15
 e,h,vowel,form,15
+y,̣,diacritic,form,15
 r,s,consonant,form,15
 ̄,A,diacritic,form,15
 K,v,consonant,form,15
-̃,Y,diacritic,form,15
 .,¯,punctuation,form,15
-Y,7,consonant,form,15
+̃,7,diacritic,form,15
 B,›,consonant,form,15
 V,‹,consonant,form,15
 r,m,consonant,git,15
@@ -572,11 +571,13 @@ e,̣,diacritic,form,13
 l,i,consonant,form,13
 ̣,D,diacritic,form,13
 h,̣,diacritic,form,13
+n,a,consonant,form,13
 u,n,vowel,form,13
  ,r,whitespace,form,13
 r,̄,diacritic,form,13
 F,f,case,form,13
 g,r,consonant,form,13
+̣,̃,diacritic,form,13
 Q,d,consonant,form,13
 s,d,consonant,form,13
 .,h,punctuation,form,13
@@ -608,7 +609,6 @@ t,त,consonant,git,13
 ̈,̀,diacritic,git,13
  ,t,whitespace,form,12
 y,m,consonant,form,12
-n,a,consonant,form,12
 ̣,́,diacritic,form,12
  ,o,whitespace,form,12
 e,t,vowel,form,12
@@ -822,10 +822,10 @@ V,p,consonant,form,9
 7,r,digit,form,9
 P,a,consonant,form,9
 ",",e,punctuation,form,9
+c,n,consonant,form,9
 ›,),punctuation,form,9
 4,E,digit,form,9
 ̣,u,diacritic,form,9
-̃,̣,diacritic,form,9
 E,̣,diacritic,form,9
 .,‹,punctuation,form,9
 a,l,vowel,form,9
@@ -897,9 +897,7 @@ t,u,consonant,form,8
 5,e,digit,form,8
 a,c,vowel,form,8
 u,e,vowel,form,8
-̣,Y,diacritic,form,8
 d,h,consonant,form,8
-Y,c,consonant,form,8
 ̇,́,diacritic,form,8
 l,s,consonant,form,8
 s,y,consonant,form,8
@@ -921,8 +919,6 @@ M,̣,diacritic,form,8
 m, ,consonant,form,8
 4,n,digit,form,8
 9,e,digit,form,8
-c,n,consonant,form,8
-̃,j,diacritic,form,8
 5,7,digit,form,8
 †,¯,punctuation,form,8
 E,K,vowel,form,8
@@ -1008,16 +1004,15 @@ n,.,consonant,form,7
 l,e,consonant,form,7
 e, ,vowel,form,7
 e,c,vowel,form,7
-Y,j,consonant,form,7
 f,i,consonant,form,7
 h,t,consonant,form,7
 s,c,consonant,form,7
 c,t,consonant,form,7
 h,́,diacritic,form,7
-Y,̣,diacritic,form,7
 d,e,consonant,form,7
 n,v,consonant,form,7
 ́,p,diacritic,form,7
+̃,c,diacritic,form,7
 x,f,consonant,form,7
 b,n,consonant,form,7
 g,e,consonant,form,7
@@ -1034,6 +1029,7 @@ g,h,consonant,form,7
 2,e,digit,form,7
 ),g,punctuation,form,7
 B,e,consonant,form,7
+n,p,consonant,form,7
 4,c,digit,form,7
 6,e,digit,form,7
 4,a,digit,form,7
@@ -1168,7 +1164,6 @@ e,n,vowel,form,6
 7,g,digit,form,6
 7,a,digit,form,6
 0,r,digit,form,6
-n,p,consonant,form,6
 8,g,digit,form,6
 .,p,punctuation,form,6
 s,h,consonant,form,6
@@ -1326,7 +1321,6 @@ g,o,consonant,form,5
 p,o,consonant,form,5
 x,̣,diacritic,form,5
 l,̄,diacritic,form,5
-j,Y,consonant,form,5
 c,́,diacritic,form,5
 ̄,m,diacritic,form,5
 t,o,consonant,form,5
@@ -1361,11 +1355,9 @@ B,p,consonant,form,5
 |,e,punctuation,form,5
 |,n,punctuation,form,5
 .,g,punctuation,form,5
-i,p,vowel,form,5
 3,2,digit,form,5
 j,O,consonant,form,5
 .,2,punctuation,form,5
-̣,̃,diacritic,form,5
 C,̄,diacritic,form,5
  ,P,whitespace,form,5
 L,̣,diacritic,form,5
@@ -1557,7 +1549,6 @@ t,j,consonant,form,4
 q,w,consonant,form,4
 p,a,consonant,form,4
 ̇,K,diacritic,form,4
-j,n,consonant,form,4
 v,́,diacritic,form,4
 T,̣,diacritic,form,4
 g,̣,diacritic,form,4
@@ -1570,7 +1561,7 @@ d,k,consonant,form,4
 n,y,consonant,form,4
 u,̄,diacritic,form,4
 u, ,vowel,form,4
-m,Y,consonant,form,4
+m,̃,diacritic,form,4
 v,d,consonant,form,4
 e,f,vowel,form,4
 ̂,̀,diacritic,form,4
@@ -1588,7 +1579,6 @@ m,i,consonant,form,4
 3,n,digit,form,4
 0,p,digit,form,4
 ̇,a,diacritic,form,4
-E,r,vowel,form,4
 E,n,vowel,form,4
 l,p,consonant,form,4
 3,g,digit,form,4
@@ -1597,6 +1587,7 @@ l,p,consonant,form,4
 K, ,consonant,form,4
 6,g,digit,form,4
 7,h,digit,form,4
+i,p,vowel,form,4
 9,c,digit,form,4
 C,p,consonant,form,4
 8,e,digit,form,4
@@ -1618,6 +1609,7 @@ t,",",consonant,form,4
 P,V,consonant,form,4
 2,.,digit,form,4
 ̣,7,diacritic,form,4
+̃,̄,diacritic,form,4
 •,¯,punctuation,form,4
 ̣,V,diacritic,form,4
 E,›,vowel,form,4
@@ -1627,7 +1619,6 @@ O,‹,vowel,form,4
 ̣,2,diacritic,form,4
 o,.,vowel,form,4
 ̄,́,diacritic,form,4
-Y,̃,diacritic,form,4
 g,s,consonant,form,4
 p,t,consonant,form,4
 k, ,consonant,form,4
@@ -1851,6 +1842,7 @@ K,W,consonant,git,4
 u,̣,diacritic,form,3
 o,u,vowel,form,3
 u,t,vowel,form,3
+y,l,consonant,form,3
 m,l,consonant,form,3
  ,g,whitespace,form,3
 i,<,vowel,form,3
@@ -1884,9 +1876,9 @@ f,w,consonant,form,3
 v,i,consonant,form,3
 t,̣,diacritic,form,3
 b,́,diacritic,form,3
-Y,n,consonant,form,3
 v,̇,diacritic,form,3
 ́,v,diacritic,form,3
+n,̃,diacritic,form,3
 ̣,d,diacritic,form,3
 w,v,consonant,form,3
 a,y,vowel,form,3
@@ -1894,6 +1886,7 @@ u,O,vowel,form,3
 b,y,consonant,form,3
 J,̃,diacritic,form,3
 E,o,vowel,form,3
+j,k,consonant,form,3
 y,d,consonant,form,3
 ́,r,diacritic,form,3
 ̈, ,diacritic,form,3
@@ -1925,6 +1918,7 @@ e,k,vowel,form,3
 K,g,consonant,form,3
 ¯, ,punctuation,form,3
 B,c,consonant,form,3
+E,r,vowel,form,3
 8,c,digit,form,3
 3,c,digit,form,3
 K,e,consonant,form,3
@@ -1947,12 +1941,13 @@ Z,s,consonant,form,3
  ,k,whitespace,form,3
 ‹, ,punctuation,form,3
 ‹,̇,diacritic,form,3
+ ,̃,diacritic,form,3
+.,̃,diacritic,form,3
 ÷,/,punctuation,form,3
 ̇,C,diacritic,form,3
 t,2,consonant,form,3
 ",",7,punctuation,form,3
 .,4,punctuation,form,3
-̃,̄,diacritic,form,3
 E,̄,diacritic,form,3
 Z,̣,diacritic,form,3
 2,7,digit,form,3
@@ -2296,7 +2291,6 @@ D,Q,consonant,git,3
 ?,n,punctuation,form,2
 },a,punctuation,form,2
 h,x,consonant,form,2
-y,l,consonant,form,2
 S, ,consonant,form,2
 m,k,consonant,form,2
 L,h,consonant,form,2
@@ -2372,9 +2366,10 @@ W,q,consonant,form,2
 r,P,consonant,form,2
 v,̄,diacritic,form,2
 g,v,consonant,form,2
+j,n,consonant,form,2
 p,g,consonant,form,2
 y,K,consonant,form,2
-j,s,consonant,form,2
+̄,j,diacritic,form,2
 d,1,consonant,form,2
 g,1,consonant,form,2
 -,a,punctuation,form,2
@@ -2447,7 +2442,6 @@ V,n,consonant,form,2
 4, ,digit,form,2
 9,p,digit,form,2
 O, ,vowel,form,2
-F,a,consonant,form,2
 ̇,c,diacritic,form,2
 C,r,consonant,form,2
 *,h,punctuation,form,2
@@ -2464,10 +2458,8 @@ l,7,consonant,form,2
 s,‹,consonant,form,2
 ¯,n,punctuation,form,2
 t,h,consonant,form,2
- ,̃,diacritic,form,2
 i,2,vowel,form,2
 B,P,consonant,form,2
-.,Y,punctuation,form,2
 ̇,̃,diacritic,form,2
 ¯,-,punctuation,form,2
 2,E,digit,form,2
@@ -2507,7 +2499,6 @@ i,́,diacritic,form,2
 ̇,.,diacritic,form,2
 ̣,H,diacritic,form,2
 ̣,%,diacritic,form,2
-.,̃,diacritic,form,2
 K,.,consonant,form,2
 r,.,consonant,form,2
 ‹,i,punctuation,form,2
@@ -2537,7 +2528,6 @@ S,a,consonant,form,2
 .,f,punctuation,form,2
 W,d,consonant,form,2
 g,u,consonant,form,2
-j,k,consonant,form,2
 i,y,vowel,form,2
 l,v,consonant,form,2
 d,p,consonant,form,2
@@ -2545,6 +2535,7 @@ h,2,consonant,form,2
 b,d,consonant,form,2
 g,B,consonant,form,2
 B,s,consonant,form,2
+n,j,consonant,form,2
 ̣,k,diacritic,form,2
 j,b,consonant,form,2
 v,m,consonant,form,2
@@ -3274,11 +3265,10 @@ y,°,consonant,form,1
 £,_,punctuation,form,1
 Q,W,consonant,form,1
 m,́,diacritic,form,1
-Y,v,consonant,form,1
+̃,v,diacritic,form,1
 Q,w,consonant,form,1
 ́,n,diacritic,form,1
 w,̇,diacritic,form,1
-n,̃,diacritic,form,1
 ̃,k,diacritic,form,1
 ́,c,diacritic,form,1
 T,P,consonant,form,1
@@ -3287,7 +3277,7 @@ w,b,consonant,form,1
 n,4,consonant,form,1
 j,g,consonant,form,1
 w,y,consonant,form,1
-c,Y,consonant,form,1
+c,̃,diacritic,form,1
 s,K,consonant,form,1
 v,w,consonant,form,1
 q,v,consonant,form,1
@@ -3297,7 +3287,7 @@ l,B,consonant,form,1
 n,̇,diacritic,form,1
 ́,y,diacritic,form,1
 j,r,consonant,form,1
-Y,́,diacritic,form,1
+̃,́,diacritic,form,1
 y,́,diacritic,form,1
 T,s,consonant,form,1
 $,>,punctuation,form,1
@@ -3437,7 +3427,7 @@ V,g,consonant,form,1
 ̇,n,diacritic,form,1
 ),h,punctuation,form,1
 C,e,consonant,form,1
-Y,e,consonant,form,1
+F,r,consonant,form,1
 ̇,e,diacritic,form,1
 *,c,punctuation,form,1
 C,g,consonant,form,1
@@ -3459,6 +3449,7 @@ f, ,consonant,form,1
 ~,e,punctuation,form,1
 !,a,punctuation,form,1
 5,g,digit,form,1
+F,a,consonant,form,1
 V,r,consonant,form,1
  ,>,whitespace,form,1
 p,l,consonant,form,1
@@ -3512,7 +3503,7 @@ V,̄,diacritic,form,1
  ,E,whitespace,form,1
 ^,.,punctuation,form,1
 P,^,consonant,form,1
-Y,V,consonant,form,1
+̃,V,diacritic,form,1
 K,B,consonant,form,1
 h,E,consonant,form,1
 6,5,digit,form,1
@@ -3627,7 +3618,6 @@ n,2,consonant,form,1
 ̇,%,diacritic,form,1
 l,w,consonant,form,1
 ‹,l,punctuation,form,1
-Y,̄,diacritic,form,1
 S,¯,consonant,form,1
 r,§,consonant,form,1
 …,‹,punctuation,form,1
@@ -3699,7 +3689,7 @@ t,Q,consonant,form,1
 5,2,digit,form,1
 /,r,punctuation,form,1
 U,̄,diacritic,form,1
-a,Y,vowel,form,1
+a,̃,diacritic,form,1
 v,W,consonant,form,1
 1,2,digit,form,1
 a,́,diacritic,form,1
@@ -3762,6 +3752,7 @@ i,w,vowel,form,1
 e,},vowel,form,1
 %,e,punctuation,form,1
 F,X,consonant,form,1
+j,s,consonant,form,1
 r,%,consonant,form,1
 s,},consonant,form,1
 .,{,punctuation,form,1

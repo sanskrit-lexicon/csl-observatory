@@ -11,7 +11,7 @@ Minimal-pair ranking: does a character-trigram LM (trained on correct forms) ass
 | metric | value |
 |---|---:|
 | train tokens | 14,670 |
-| test pairs | 3,128 |
+| test pairs | 3,127 |
 | **pairwise accuracy** (chance 0.5) | **0.516** |
 | tie rate | 0.012 |
 
@@ -22,9 +22,9 @@ Noisy-channel: pick the edit-1 candidate the character-LM scores highest (Norvig
 | metric | value |
 |---|---:|
 | train lexicon | 11,173 forms |
-| test pairs | 3,128 |
+| test pairs | 3,127 |
 | **accuracy@1** | **0.059** |
-| share of test errors at edit-distance 1 | 0.786 (model's reach) |
+| share of test errors at edit-distance 1 | 0.787 (model's reach) |
 
 ## 3. Error-type classification (all derived events)
 
@@ -32,7 +32,7 @@ Predict the microstructure `error_component` from edit-op features (dominant ope
 
 | metric | value |
 |---|---:|
-| train / test | 17,021 / 8,359 |
+| train / test | 17,082 / 8,359 |
 | classes | 7 |
 | **accuracy** | **0.388** |
 | macro-F1 | 0.302 |
