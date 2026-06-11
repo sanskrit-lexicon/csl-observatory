@@ -1,0 +1,156 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-06-11T09:38:55.647524+00:00",
+  "sourcePath": "../csl-orig (git history, v02)",
+  "recordCount": 26512,
+  "assumptions": [
+    "Only correction-classified commits (obs_q classify()) are mined.",
+    "Old/new are SLP1-encoded source lines kept verbatim; edit ops run over them directly (alignment reports only differing characters).",
+    "lcode/<k1> attributed from the nearest record markers within the hunk (-U10 context); only <k1> is transliterated SLP1->IAST.",
+    "Change runs paired positionally (i-th deletion with i-th addition)."
+  ],
+  "warnings": [
+    "287 commits skipped as bulk reformats (>250 changed lines)."
+  ],
+  "stats": {
+    "commitsMined": 1243,
+    "commitsSkippedBulk": 287,
+    "eventsRaw": 26566,
+    "eventsDeduped": 26512,
+    "dateRange": [
+      "2019-11-04",
+      "2026-05-30"
+    ],
+    "byYear": [
+      [
+        "2019",
+        21
+      ],
+      [
+        "2020",
+        2249
+      ],
+      [
+        "2021",
+        5054
+      ],
+      [
+        "2022",
+        2709
+      ],
+      [
+        "2023",
+        2966
+      ],
+      [
+        "2024",
+        5154
+      ],
+      [
+        "2025",
+        4712
+      ],
+      [
+        "2026",
+        3647
+      ]
+    ],
+    "topDicts": [
+      [
+        "mw",
+        7034
+      ],
+      [
+        "pwg",
+        3617
+      ],
+      [
+        "ap90",
+        2059
+      ],
+      [
+        "pw",
+        1875
+      ],
+      [
+        "ap",
+        1381
+      ],
+      [
+        "md",
+        1158
+      ],
+      [
+        "bur",
+        1110
+      ],
+      [
+        "ben",
+        758
+      ],
+      [
+        "vcp",
+        517
+      ],
+      [
+        "shs",
+        513
+      ],
+      [
+        "sch",
+        425
+      ],
+      [
+        "lrv",
+        409
+      ],
+      [
+        "cae",
+        401
+      ],
+      [
+        "yat",
+        343
+      ],
+      [
+        "gra",
+        330
+      ]
+    ],
+    "clusters": [
+      [
+        "other",
+        20108
+      ],
+      [
+        "markup",
+        4136
+      ],
+      [
+        "typo",
+        679
+      ],
+      [
+        "ocr-print",
+        589
+      ],
+      [
+        "reference",
+        520
+      ],
+      [
+        "iast-diacritic",
+        465
+      ],
+      [
+        "capitalization",
+        13
+      ],
+      [
+        "variant",
+        2
+      ]
+    ],
+    "allLayersTotal": 50953
+  }
+}
