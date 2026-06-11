@@ -114,11 +114,16 @@ that is followed by Latin/explanatory text; the leading run is the correction, t
 remainder is `inline_comment`. Conservative — when ambiguous, keep the whole cell
 as `new_raw` and flag a warning. This heuristic is `inferred` and review-sampled.
 
-### 5.3 Script detection + Devanagari→IAST
-Self-contained transliterator (stdlib only, no dependency): map the Devanagari
-block (U+0900–U+097F) to IAST with correct inherent-`a`, virāma, and
-vowel-sign handling; leave Latin/IAST runs untouched; record `script_*`. Output
-normalized to Unicode **NFC** for storage/display.
+### 5.3 Script detection + transliteration to IAST
+The cfr cells are **mixed-encoding across dictionaries** (a finding in itself): some
+dicts (e.g. APES) use Devanagari, others (e.g. PW, the largest) use **Harvard-Kyoto**
+(`bharahezaravRtti` = bharaheśaravṛtti; HK `z`=ś, `S`=ṣ, `R`=ṛ, `T`=ṭ). Two
+self-contained transliterators (stdlib only): Devanagari→IAST (inherent-`a`, virāma,
+vowel-sign handling) and HK→IAST (greedy longest-match). `normalize_to_iast` routes
+Devanagari runs to the first and HK-looking roman tokens (internal capital, or HK `z`)
+to the second; plain Latin/English is left alone. `csl-orig` source files, by
+contrast, are **SLP1** — so the form-layer join transliterates both sides to a common
+IAST. Output normalized to Unicode **NFC**.
 
 ### 5.4 Edit-operation trace
 Compute over **NFD** (so a diacritic is its own combining char and therefore its
@@ -159,8 +164,25 @@ text:
 | `crossref` | `<lb>`,link refs | broken cross-reference |
 | `orthography` | body word, no tag | plain spelling typo in body |
 
-When the join fails (no lcode, or string not located) the component is assigned
-from the empirical cluster + edit-op signature and flagged `inferred`.
+When the join fails the component is assigned from the empirical cluster and
+flagged `inferred`.
+
+**Phase 3 outcome (2026-06-11).** Implemented in `scripts/attribute_components.py`.
+- **git layer: 26,512 events, 100% positionally derived** — the changed source line
+  carries its tags, so the component is read off directly. Distribution: sense 12,988,
+  orthography 4,301, markup 3,945, citation 3,234 (PWG's dense `<ls>`), headword 1,002.
+- **form layer: 12.9% derived (3,158), the rest inferred.** Two legacy-data findings
+  forced the join onto the **headword** rather than the L-code: (a) the cfr "L code"
+  cell is free-text (`[L=5590] [p= 1-299]`), and (b) more fundamentally, the 2014-era
+  sequential `<L>` ids have **drifted** against today's csl-orig (cfr L=4477 → utkaṇṭhā,
+  but current record 4477 = utkalaṃ). The headword is the only stable key; even so, the
+  cfr "headword" cell is usually the *old* (mistyped) form, so the join also tries the
+  corrected value and first tokens as entry keys.
+- **Overall 58% derived / 42% inferred** across 50,953 events. The low form-layer
+  link rate is reported, not hidden: historical correction-form data is only partly
+  machine-linkable to current sources because of encoding heterogeneity and id drift —
+  a result the paper can state directly. Future work (Phase 3.1): fuzzy/edit-distance
+  headword matching and per-dictionary encoding profiles to raise the form link rate.
 
 ### 6.2 Empirical clusters (bottom-up, hybrid)
 Normalize `comment_raw` (lowercase, strip, collapse the 40+ `typo` variants);

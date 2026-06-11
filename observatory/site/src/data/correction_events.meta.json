@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-06-11T08:17:51.910393+00:00",
+  "generatedAt": "2026-06-11T12:18:18.379398+00:00",
   "sourcePath": "../CORRECTIONS/cfr.tsv",
   "recordCount": 24441,
   "assumptions": [
@@ -115,63 +115,63 @@
     "topEditUnits": [
       [
         "del:punctuation",
-        16718
-      ],
-      [
-        "sub:case",
-        16235
+        17097
       ],
       [
         "del:consonant",
-        12393
+        12817
       ],
       [
-        "sub:consonant",
-        7855
+        "del:diacritic",
+        8984
       ],
       [
-        "del:vowel",
-        7722
+        "ins:diacritic",
+        8673
       ],
       [
         "ins:consonant",
-        7124
+        8237
+      ],
+      [
+        "del:vowel",
+        7978
+      ],
+      [
+        "sub:consonant",
+        7729
       ],
       [
         "del:whitespace",
-        6103
+        6006
+      ],
+      [
+        "sub:case",
+        4949
       ],
       [
         "ins:vowel",
-        4180
+        4423
       ],
       [
         "sub:punctuation",
-        3749
+        3451
       ],
       [
         "sub:vowel",
-        3741
+        3201
       ],
       [
         "ins:punctuation",
-        3302
-      ],
-      [
-        "ins:whitespace",
-        2414
+        3200
       ],
       [
         "del:digit",
-        2320
+        2597
       ],
       [
-        "sub:digit",
-        1412
-      ],
-      [
-        "ins:digit",
-        1334
+        "sub:diacritic",
+        2520
       ]
     ]
   }

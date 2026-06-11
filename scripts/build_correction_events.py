@@ -113,6 +113,49 @@ def deva_to_iast(s):
 _DEVA_RE = re.compile(r'[ऀ-ॿ]')
 _LATIN_RE = re.compile(r'[A-Za-z]')
 
+# --- Harvard-Kyoto -> IAST (the cfr form encodes roman cells in HK, e.g. PW:
+#     'bharahezaravRtti' = bharaheśaravṛtti — HK z=ś, S=ṣ, R=ṛ, T=ṭ) ---
+_HK = {  # longest-match keys first (3,2,1 chars)
+    'lRR': 'ḹ',
+    'RR': 'ṝ', 'lR': 'ḷ', 'kh': 'kh', 'gh': 'gh', 'ch': 'ch', 'jh': 'jh',
+    'Th': 'ṭh', 'Dh': 'ḍh', 'th': 'th', 'dh': 'dh', 'ph': 'ph', 'bh': 'bh',
+    'a': 'a', 'A': 'ā', 'i': 'i', 'I': 'ī', 'u': 'u', 'U': 'ū', 'R': 'ṛ',
+    'e': 'e', 'o': 'o', 'M': 'ṃ', 'H': 'ḥ', 'k': 'k', 'g': 'g', 'G': 'ṅ',
+    'c': 'c', 'j': 'j', 'J': 'ñ', 'T': 'ṭ', 'D': 'ḍ', 'N': 'ṇ', 't': 't',
+    'd': 'd', 'n': 'n', 'p': 'p', 'b': 'b', 'm': 'm', 'y': 'y', 'r': 'r',
+    'l': 'l', 'v': 'v', 'z': 'ś', 'S': 'ṣ', 's': 's', 'h': 'h', 'L': 'ḷ',
+    '˚': '°',
+}
+_HK_KEYS = sorted(_HK, key=len, reverse=True)
+
+
+def hk_to_iast(tok):
+    out, i, n = [], 0, len(tok)
+    while i < n:
+        for k in _HK_KEYS:
+            if tok.startswith(k, i):
+                out.append(_HK[k]); i += len(k); break
+        else:
+            out.append(tok[i]); i += 1
+    return unicodedata.normalize('NFC', ''.join(out))
+
+
+def looks_hk(tok):
+    """A no-space roman token is Harvard-Kyoto if it carries HK-only signals —
+    an internal capital (rare in English) or the HK letter z (=ś)."""
+    if not any(c.isalpha() for c in tok):
+        return False
+    if any(c.isupper() for c in tok[1:]):
+        return True
+    return 'z' in tok
+
+
+def normalize_to_iast(s):
+    """Normalize a cfr cell to IAST: Devanagari runs first, else token-wise HK."""
+    if _DEVA_RE.search(s):
+        return deva_to_iast(s)
+    return ' '.join(hk_to_iast(t) if looks_hk(t) else t for t in s.split(' '))
+
 
 def detect_script(s):
     has_d = bool(_DEVA_RE.search(s))
@@ -125,6 +168,8 @@ def detect_script(s):
         # IAST = Latin carrying combining diacritics or IAST letters
         if re.search(r'[āīūṛṝḷḹṅñṭḍṇśṣṃḥ]', s):
             return 'iast'
+        if any(looks_hk(t) for t in s.split(' ')):
+            return 'hk'
         return 'latin'
     return 'other'
 
@@ -329,8 +374,8 @@ def main():
             ts, dct, lcode, hw, old_raw, new_raw, comment, corr = parts
             dt = parse_time(ts)
             new_corr, inline = split_new(new_raw)
-            old_iast = deva_to_iast(old_raw.strip())
-            new_iast = deva_to_iast(new_corr.strip())
+            old_iast = normalize_to_iast(old_raw.strip())
+            new_iast = normalize_to_iast(new_corr.strip())
             ops, dist = edit_ops(old_iast, new_iast)
             login, cname, latency = parse_corrector(corr, dt, resolve, realname)
             lc = '' if (not lcode or lcode.strip().startswith('0(')) else lcode.strip()
@@ -343,7 +388,7 @@ def main():
                 'source_layer': 'form',
                 'dict': dct.strip().lower(),
                 'lcode': lc,
-                'headword_iast': deva_to_iast(hw.strip()),
+                'headword_iast': normalize_to_iast(hw.strip()),
                 'old_iast': old_iast,
                 'new_iast': new_iast,
                 'old_raw': old_raw.strip(),
@@ -425,8 +470,8 @@ def main():
             'inline_comment': {'type': 'string'},
             'edit_ops': {'type': 'string', 'description': 'JSON array of typed ops'},
             'edit_distance': {'type': 'integer'},
-            'script_old': {'enum': ['deva', 'iast', 'latin', 'mixed', 'other']},
-            'script_new': {'enum': ['deva', 'iast', 'latin', 'mixed', 'other']},
+            'script_old': {'enum': ['deva', 'iast', 'hk', 'latin', 'mixed', 'other']},
+            'script_new': {'enum': ['deva', 'iast', 'hk', 'latin', 'mixed', 'other']},
             'comment_raw': {'type': 'string'},
             'error_type_empirical': {'type': 'string'},
             'corrector': {'type': 'string'}, 'corrector_name': {'type': 'string'},

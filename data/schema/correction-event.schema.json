@@ -61,6 +61,7 @@
       "enum": [
         "deva",
         "iast",
+        "hk",
         "latin",
         "mixed",
         "other"
@@ -70,6 +71,7 @@
       "enum": [
         "deva",
         "iast",
+        "hk",
         "latin",
         "mixed",
         "other"

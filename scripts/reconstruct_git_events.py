@@ -166,7 +166,25 @@ def parse_show(sha):
     return acc, False
 
 
+def merge_only():
+    """Rebuild correction_events_all.csv from the existing form + git CSVs,
+    without re-mining git (use after re-running Phase 1)."""
+    git_rows = list(csv.DictReader(open(OUT_GIT, encoding='utf-8'))) \
+        if os.path.exists(OUT_GIT) else []
+    form_rows = list(csv.DictReader(open(FORM_CSV, encoding='utf-8'))) \
+        if os.path.exists(FORM_CSV) else []
+    all_rows = form_rows + git_rows
+    all_rows.sort(key=lambda r: (r.get('date', ''), r['event_id']))
+    with open(OUT_ALL, 'w', encoding='utf-8', newline='') as f:
+        w = csv.DictWriter(f, fieldnames=FIELDS); w.writeheader(); w.writerows(all_rows)
+    print(f'merge-only: wrote {OUT_ALL}  '
+          f'({len(form_rows)} form + {len(git_rows)} git = {len(all_rows)})')
+
+
 def main():
+    if '--merge-only' in sys.argv:
+        merge_only()
+        return
     if not os.path.isdir(os.path.join(CSL_ORIG, 'v02')):
         sys.exit(f'csl-orig not found at {CSL_ORIG} (expected sibling)')
     with open(MAP, encoding='utf-8') as f:
