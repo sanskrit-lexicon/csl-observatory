@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "correction-event.schema.json",
+  "title": "CDSL correction event (OBS-T)",
+  "type": "object",
+  "required": [
+    "event_id",
+    "date",
+    "source_layer",
+    "dict",
+    "old_iast",
+    "new_iast"
+  ],
+  "properties": {
+    "event_id": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "source_layer": {
+      "enum": [
+        "form",
+        "git",
+        "printchange",
+        "batch"
+      ]
+    },
+    "dict": {
+      "type": "string"
+    },
+    "lcode": {
+      "type": "string"
+    },
+    "headword_iast": {
+      "type": "string"
+    },
+    "old_iast": {
+      "type": "string"
+    },
+    "new_iast": {
+      "type": "string"
+    },
+    "old_raw": {
+      "type": "string"
+    },
+    "new_raw": {
+      "type": "string"
+    },
+    "inline_comment": {
+      "type": "string"
+    },
+    "edit_ops": {
+      "type": "string",
+      "description": "JSON array of typed ops"
+    },
+    "edit_distance": {
+      "type": "integer"
+    },
+    "script_old": {
+      "enum": [
+        "deva",
+        "iast",
+        "latin",
+        "mixed",
+        "other"
+      ]
+    },
+    "script_new": {
+      "enum": [
+        "deva",
+        "iast",
+        "latin",
+        "mixed",
+        "other"
+      ]
+    },
+    "comment_raw": {
+      "type": "string"
+    },
+    "error_type_empirical": {
+      "type": "string"
+    },
+    "corrector": {
+      "type": "string"
+    },
+    "corrector_name": {
+      "type": "string"
+    },
+    "latency_days": {
+      "type": [
+        "integer",
+        "string"
+      ]
+    },
+    "evidence_level": {
+      "enum": [
+        "observed",
+        "derived",
+        "inferred"
+      ]
+    }
+  }
+}

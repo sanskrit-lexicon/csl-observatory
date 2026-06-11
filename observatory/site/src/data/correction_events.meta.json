@@ -1,0 +1,178 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-06-11T08:17:51.910393+00:00",
+  "sourcePath": "../CORRECTIONS/cfr.tsv",
+  "recordCount": 24441,
+  "assumptions": [
+    "cfr.tsv is the L1 correction-form export; 8 tab-separated columns.",
+    "Devanagari runs transliterated to IAST by a self-contained map (NFC).",
+    "NEW-cell inline commentary split heuristically (inferred) when a Latin tail follows \" - \", \"(\", or a double space.",
+    "Edit ops computed over NFD via optimal-string-alignment incl. transposition.",
+    "Correctors alias-merged via contributors_map.json + form aliases."
+  ],
+  "warnings": [],
+  "stats": {
+    "rowsIn": 24441,
+    "rowsOut": 24441,
+    "malformedRows": 0,
+    "rowsWithLatency": 1580,
+    "dateRange": [
+      "2014-03-18",
+      "2019-07-21"
+    ],
+    "topDicts": [
+      [
+        "pw",
+        11776
+      ],
+      [
+        "ccs",
+        2229
+      ],
+      [
+        "mw",
+        1397
+      ],
+      [
+        "pd",
+        1375
+      ],
+      [
+        "cae",
+        1298
+      ],
+      [
+        "wil",
+        1133
+      ],
+      [
+        "bur",
+        693
+      ],
+      [
+        "pui",
+        644
+      ],
+      [
+        "ap",
+        495
+      ],
+      [
+        "ben",
+        463
+      ],
+      [
+        "ap90",
+        415
+      ],
+      [
+        "vcp",
+        393
+      ]
+    ],
+    "empiricalClusters": [
+      [
+        "typo",
+        18519
+      ],
+      [
+        "ocr-print",
+        1793
+      ],
+      [
+        "capitalization",
+        1473
+      ],
+      [
+        "iast-diacritic",
+        884
+      ],
+      [
+        "markup",
+        765
+      ],
+      [
+        "as-number",
+        493
+      ],
+      [
+        "reference",
+        251
+      ],
+      [
+        "other",
+        170
+      ],
+      [
+        "variant",
+        87
+      ],
+      [
+        "unspecified",
+        6
+      ]
+    ],
+    "topEditUnits": [
+      [
+        "del:punctuation",
+        16718
+      ],
+      [
+        "sub:case",
+        16235
+      ],
+      [
+        "del:consonant",
+        12393
+      ],
+      [
+        "sub:consonant",
+        7855
+      ],
+      [
+        "del:vowel",
+        7722
+      ],
+      [
+        "ins:consonant",
+        7124
+      ],
+      [
+        "del:whitespace",
+        6103
+      ],
+      [
+        "ins:vowel",
+        4180
+      ],
+      [
+        "sub:punctuation",
+        3749
+      ],
+      [
+        "sub:vowel",
+        3741
+      ],
+      [
+        "ins:punctuation",
+        3302
+      ],
+      [
+        "ins:whitespace",
+        2414
+      ],
+      [
+        "del:digit",
+        2320
+      ],
+      [
+        "sub:digit",
+        1412
+      ],
+      [
+        "ins:digit",
+        1334
+      ]
+    ]
+  }
+}
