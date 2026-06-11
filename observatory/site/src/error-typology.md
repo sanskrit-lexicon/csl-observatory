@@ -19,6 +19,7 @@ const monthly  = await FileAttachment("data/obs_t_timeline_monthly.csv").csv({ty
 const dicts    = await FileAttachment("data/obs_t_dict.csv").csv({typed: true});
 const confus   = await FileAttachment("data/obs_t_confusion.csv").csv({typed: true});
 const cross    = await FileAttachment("data/obs_t_crosswalk.csv").csv({typed: true});
+const baselines = await FileAttachment("data/obs_t_baselines.json").json();
 ```
 
 <div class="grid grid-cols-4">
@@ -155,6 +156,23 @@ Plot.plot({
   ]
 })
 ```
+
+## Reference baselines
+
+Stdlib-only, deterministic baselines that define the NLP tasks the released corpus
+supports, on a temporal split. See [`reports/obs_t_baselines.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_t_baselines.md)
+and the [datasheet](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/DATASHEET.md).
+
+<div class="grid grid-cols-3">
+  <div class="card"><h2>Detection (char-LM, minimal pair)</h2><span class="big">${baselines.detection.pairwise_accuracy}</span><br>pairwise accuracy (chance 0.5)</div>
+  <div class="card"><h2>Correction (noisy-channel)</h2><span class="big">${baselines.correction.accuracy_at_1}</span><br>accuracy@1 — ${baselines.correction.dist1_share} reachable at dist-1</div>
+  <div class="card"><h2>Type classifier (Naive Bayes)</h2><span class="big">${baselines.classification.accuracy}</span><br>accuracy vs ${baselines.classification.majority_baseline_accuracy} majority</div>
+</div>
+
+Detection and correction are deliberately hard for context-free baselines — a
+one-character-different Sanskrit string is usually also plausible — which is the
+headroom a neural model is meant to fill. Error-type classification clearly beats
+the majority class.
 
 ---
 
