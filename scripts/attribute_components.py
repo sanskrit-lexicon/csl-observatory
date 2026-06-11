@@ -154,27 +154,75 @@ def first_tok(s):
 _K1_LINE = re.compile(r'<k1>([^<]*)')
 
 
+def deletes1(s):
+    """All edit-distance-1 deletions of s (SymSpell key set)."""
+    return {s[:i] + s[i + 1:] for i in range(len(s))}
+
+
+def within1(a, b):
+    """True if a and b are within Damerau-ish edit distance 1 (sub/ins/del)."""
+    if a == b:
+        return True
+    la, lb = len(a), len(b)
+    if abs(la - lb) > 1:
+        return False
+    if la == lb:
+        return sum(1 for x, y in zip(a, b) if x != y) == 1
+    if la > lb:
+        a, b, la, lb = b, a, lb, la
+    i = j = diff = 0
+    while i < la and j < lb:
+        if a[i] == b[j]:
+            i += 1; j += 1
+        else:
+            diff += 1; j += 1
+            if diff > 1:
+                return False
+    return True
+
+
 def build_index(dict_path, needed_hw):
-    """norm(headword IAST) -> list of segment-lists, for the needed headwords only.
-    Keyed by headword (not <L> id): the 2014-era cfr L-codes have drifted against
-    today's sequential csl-orig ids, but the headword is stable."""
+    """norm(headword IAST query) -> list of segment-lists for csl-orig records whose
+    <k1> is exact or **edit-distance-1** to the query. Keyed by headword (not <L>
+    id): the 2014-era cfr L-codes have drifted, and the cfr headword is usually the
+    *old (mistyped)* form, so a fuzzy match recovers the corrected record. Bounded:
+    a delete-1 index over the (small) query set, one streaming pass over the dict."""
+    qdel = defaultdict(list)            # delete-1 variant -> queries
+    for q in needed_hw:
+        qdel[q].append(q)
+        for d in deletes1(q):
+            qdel[d].append(q)
     idx = defaultdict(list)
     cur_lines, cur_k1 = [], None
+
+    def flush():
+        if not cur_k1:
+            return
+        cands = set()
+        for kd in (cur_k1, *deletes1(cur_k1)):
+            for q in qdel.get(kd, ()):
+                cands.add(q)
+        cands = {q for q in cands if within1(cur_k1, q)}
+        if cands:
+            segs = [(fld, slp1_to_iast(c)) for fld, c in
+                    parse_segments(' '.join(cur_lines)) if c.strip()]
+            for q in cands:
+                idx[q].append(segs)
+
     with open(dict_path, encoding='utf-8') as f:
         for line in f:
             line = line.rstrip('\n')
             if line.startswith('<L>'):
+                flush()
                 m = _K1_LINE.search(line)
                 cur_k1 = norm(slp1_to_iast(m.group(1))) if m else None
                 cur_lines = [line]
             elif line.startswith('<LEND>'):
-                if cur_k1 and cur_k1 in needed_hw:
-                    segs = [(fld, slp1_to_iast(c)) for fld, c in
-                            parse_segments(' '.join(cur_lines)) if c.strip()]
-                    idx[cur_k1].append(segs)
+                flush()
                 cur_lines, cur_k1 = [], None
             elif cur_lines:
                 cur_lines.append(line)
+    flush()
     return idx
 
 

@@ -13,7 +13,7 @@ Complements [`obs_q_correction_sustainability.md`](obs_q_correction_sustainabili
 | Correction events | **50,953** (2014-03-18–2026-05-30) |
 | Dictionaries | 43 |
 | Correctors | 210 |
-| Evidence: derived / inferred | 29,670 / 21,283 (**58.2% derived**) |
+| Evidence: derived / inferred | 33,500 / 17,453 (**65.7% derived**) |
 | Form-era correction latency (median / p90 / max) | 12 / 73 / 447 days |
 
 ## 1. The microstructure error typology (canonical)
@@ -22,15 +22,15 @@ Each correction is attributed to the dictionary component it repairs. The git la
 
 | Component | Events | Share |
 |---|---:|---:|
-| orthography | 23,197 | 45.5% |
-| sense | 13,430 | 26.4% |
-| markup | 4,557 | 8.9% |
-| headword | 3,687 | 7.2% |
-| citation | 3,536 | 6.9% |
-| encoding | 1,337 | 2.6% |
-| meta | 815 | 1.6% |
-| grammar | 272 | 0.5% |
-| unknown | 122 | 0.2% |
+| orthography | 19,590 | 38.4% |
+| sense | 13,621 | 26.7% |
+| headword | 7,226 | 14.2% |
+| markup | 4,400 | 8.6% |
+| citation | 3,579 | 7.0% |
+| encoding | 1,325 | 2.6% |
+| meta | 822 | 1.6% |
+| grammar | 295 | 0.6% |
+| unknown | 95 | 0.2% |
 
 ## 2. Diachronic profile
 
@@ -45,7 +45,7 @@ Events per 1,000 entries (`<L>` count), dictionaries with ≥30 events — a siz
 | pgn | 78 | 485 | 160.82 | sense |
 | bur | 1,803 | 19,776 | 91.17 | sense |
 | pw | 13,651 | 170,556 | 80.04 | orthography |
-| ccs | 2,290 | 30,010 | 76.31 | orthography |
+| ccs | 2,290 | 30,010 | 76.31 | headword |
 | mci | 195 | 2,643 | 73.78 | sense |
 | ap90 | 2,474 | 34,882 | 70.92 | sense |
 | ben | 1,221 | 17,310 | 70.54 | sense |
@@ -53,7 +53,7 @@ Events per 1,000 entries (`<L>` count), dictionaries with ≥30 events — a siz
 | vei | 222 | 3,834 | 57.9 | markup |
 | md | 1,171 | 20,749 | 56.44 | orthography |
 | gra | 710 | 12,785 | 55.53 | sense |
-| pui | 927 | 17,512 | 52.94 | orthography |
+| pui | 927 | 17,512 | 52.94 | headword |
 
 ## 4. Crosswalk typologies
 
@@ -86,17 +86,17 @@ The `b → v` confusion leads — a classic Sanskrit orthographic merger — alo
 
 | Corrector | Events | Top component | Span |
 |---|---:|---|---|
-| Jim Funderburk | 34,489 | orthography | 2014-07–2026-05 |
+| Jim Funderburk | 34,489 | sense | 2014-07–2026-05 |
 | Dhaval Patel | 7,271 | orthography | 2014-10–2026-05 |
 | dhaval_ejf | 6,206 | orthography | 2015-12–2016-01 |
-| ss | 451 | orthography | 2015-03–2015-03 |
-| Mārcis Gasūns | 445 | orthography | 2014-09–2026-05 |
+| ss | 451 | headword | 2015-03–2015-03 |
+| Mārcis Gasūns | 445 | headword | 2014-09–2026-05 |
 | dhavel_ejf | 338 | orthography | 2016-01–2016-01 |
 | unknown | 225 | orthography | 2014-03–2019-07 |
-| sampada/ejf | 161 | orthography | 2015-01–2015-01 |
-| ejf_etal | 159 | orthography | 2016-02–2016-02 |
+| sampada/ejf | 161 | headword | 2015-01–2015-01 |
+| ejf_etal | 159 | headword | 2016-02–2016-02 |
 | zaaf2@hotmail.com | 99 | sense | 2014-09–2018-04 |
-| frank.ziesing@web.de | 91 | orthography | 2015-01–2019-07 |
+| frank.ziesing@web.de | 91 | headword | 2015-01–2019-07 |
 | Caujolle | 79 | sense | 2015-03–2019-07 |
 
 ## Draft abstract

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-06-11T12:45:07.373471+00:00",
+  "generatedAt": "2026-06-11T13:01:38.910092+00:00",
   "sourcePath": "correction_events_all.csv + ../csl-orig (form join)",
   "recordCount": 50953,
   "assumptions": [
@@ -12,84 +12,84 @@
   "warnings": [],
   "stats": {
     "gitAttributed": 26512,
-    "formJoinHits": 3158,
-    "formFallback": 21283,
-    "formJoinRate": 0.129,
+    "formJoinHits": 6988,
+    "formFallback": 17453,
+    "formJoinRate": 0.286,
     "componentTotals": [
       [
         "orthography",
-        23197
+        19590
       ],
       [
         "sense",
-        13430
-      ],
-      [
-        "markup",
-        4557
+        13621
       ],
       [
         "headword",
-        3687
+        7226
+      ],
+      [
+        "markup",
+        4400
       ],
       [
         "citation",
-        3536
+        3579
       ],
       [
         "encoding",
-        1337
+        1325
       ],
       [
         "meta",
-        815
+        822
       ],
       [
         "grammar",
-        272
+        295
       ],
       [
         "unknown",
-        122
+        95
       ]
     ],
     "byLayer": {
       "form": [
         [
           "orthography",
-          18896
+          15289
         ],
         [
           "headword",
-          2685
+          6224
         ],
         [
           "encoding",
-          1337
-        ],
-        [
-          "markup",
-          612
+          1325
         ],
         [
           "sense",
-          442
+          633
+        ],
+        [
+          "markup",
+          455
         ],
         [
           "citation",
-          302
+          345
         ],
         [
           "unknown",
-          122
-        ],
-        [
-          "meta",
-          24
+          95
         ],
         [
           "grammar",
-          21
+          44
+        ],
+        [
+          "meta",
+          31
         ]
       ],
       "git": [
