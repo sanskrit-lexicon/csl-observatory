@@ -1,0 +1,138 @@
+{
+  "generatedAt": "2026-06-11T17:27:51.900737+00:00",
+  "h1_typology_dominance": {
+    "all": {
+      "n": 50953,
+      "meaning_share": 0.2731,
+      "ci95": [
+        0.2693,
+        0.277
+      ],
+      "surface_share": 0.7269
+    },
+    "form": {
+      "n": 24441,
+      "meaning_share": 0.0277,
+      "ci95": [
+        0.0257,
+        0.0298
+      ],
+      "surface_share": 0.9723
+    },
+    "git": {
+      "n": 26512,
+      "meaning_share": 0.4994,
+      "ci95": [
+        0.4933,
+        0.5054
+      ],
+      "surface_share": 0.5006
+    },
+    "derived_only": {
+      "n": 33500,
+      "meaning_share": 0.414,
+      "ci95": [
+        0.4087,
+        0.4193
+      ],
+      "surface_share": 0.586
+    }
+  },
+  "h2_cross_dictionary": {
+    "dicts_tested": 15,
+    "chi2": 58749.9,
+    "dof": 112,
+    "p_value": 0.0,
+    "cramers_v": 0.411,
+    "interpretation": "profiles differ by dictionary beyond volume"
+  },
+  "h3_diachronic_trends": {
+    "citation": {
+      "tau": 0.372,
+      "z": 1.71,
+      "p_value": 0.0876,
+      "direction": "flat",
+      "first_year_share": 0.0,
+      "last_year_share": 0.026
+    },
+    "encoding": {
+      "tau": -0.462,
+      "z": -2.14,
+      "p_value": 0.0327,
+      "direction": "falling",
+      "first_year_share": 0.012,
+      "last_year_share": 0.0
+    },
+    "grammar": {
+      "tau": 0.09,
+      "z": 0.37,
+      "p_value": 0.7143,
+      "direction": "flat",
+      "first_year_share": 0.002,
+      "last_year_share": 0.018
+    },
+    "headword": {
+      "tau": -0.359,
+      "z": -1.65,
+      "p_value": 0.0995,
+      "direction": "flat",
+      "first_year_share": 0.47,
+      "last_year_share": 0.119
+    },
+    "markup": {
+      "tau": 0.59,
+      "z": 2.75,
+      "p_value": 0.006,
+      "direction": "rising",
+      "first_year_share": 0.021,
+      "last_year_share": 0.061
+    },
+    "meta": {
+      "tau": 0.513,
+      "z": 2.38,
+      "p_value": 0.0173,
+      "direction": "rising",
+      "first_year_share": 0.001,
+      "last_year_share": 0.034
+    },
+    "orthography": {
+      "tau": -0.59,
+      "z": -2.75,
+      "p_value": 0.006,
+      "direction": "falling",
+      "first_year_share": 0.431,
+      "last_year_share": 0.407
+    },
+    "sense": {
+      "tau": 0.359,
+      "z": 1.65,
+      "p_value": 0.0995,
+      "direction": "flat",
+      "first_year_share": 0.048,
+      "last_year_share": 0.335
+    },
+    "unknown": {
+      "tau": -0.423,
+      "z": -1.95,
+      "p_value": 0.0509,
+      "direction": "flat",
+      "first_year_share": 0.013,
+      "last_year_share": 0.0
+    }
+  },
+  "years": [
+    "2014",
+    "2015",
+    "2016",
+    "2017",
+    "2018",
+    "2019",
+    "2020",
+    "2021",
+    "2022",
+    "2023",
+    "2024",
+    "2025",
+    "2026"
+  ]
+}
