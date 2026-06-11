@@ -13,7 +13,7 @@ Complements [`obs_q_correction_sustainability.md`](obs_q_correction_sustainabili
 | Correction events | **50,953** (2014-03-18–2026-05-30) |
 | Dictionaries | 43 |
 | Correctors | 210 |
-| Evidence: derived / inferred | 33,500 / 17,453 (**65.7% derived**) |
+| Evidence: derived / inferred | 33,561 / 17,392 (**65.9% derived**) |
 | Form-era correction latency (median / p90 / max) | 12 / 73 / 447 days |
 
 ## 1. The microstructure error typology (canonical)
@@ -22,14 +22,14 @@ Each correction is attributed to the dictionary component it repairs. The git la
 
 | Component | Events | Share |
 |---|---:|---:|
-| orthography | 19,590 | 38.4% |
-| sense | 13,621 | 26.7% |
-| headword | 7,226 | 14.2% |
+| orthography | 19,529 | 38.3% |
+| sense | 13,626 | 26.7% |
+| headword | 7,282 | 14.3% |
 | markup | 4,400 | 8.6% |
-| citation | 3,579 | 7.0% |
+| citation | 3,580 | 7.0% |
 | encoding | 1,325 | 2.6% |
 | meta | 822 | 1.6% |
-| grammar | 295 | 0.6% |
+| grammar | 294 | 0.6% |
 | unknown | 95 | 0.2% |
 
 ## 2. Diachronic profile
@@ -59,9 +59,9 @@ Events per 1,000 entries (`<L>` count), dictionaries with ≥30 events — a siz
 
 The same events under three secondary frames (derived from the edit-op trace).
 
-**OCR / digitization:** substitution 15,943, insertion 13,121, deletion 10,542, segmentation 9,750, unknown 888, transposition 709
+**OCR / digitization:** substitution 15,847, insertion 13,195, deletion 10,564, segmentation 9,750, unknown 890, transposition 707
 
-**Textual criticism (Katre):** addition 18,803, substitution 16,526, omission 13,320, unknown 888, metathesis 734, haplography 489, dittography 193
+**Textual criticism (Katre):** addition 18,877, substitution 16,432, omission 13,340, unknown 890, metathesis 732, haplography 489, dittography 193
 
 **Top Sanskrit consonant confusions** (form layer, IAST — the clean phoneme-confusion signal):
 
@@ -74,7 +74,7 @@ The same events under three secondary frames (derived from the edit-op trace).
 | t → a | 180 |
 | r → c | 173 |
 | v → b | 123 |
-| n → m | 119 |
+| n → m | 120 |
 | n → d | 115 |
 | f → a | 102 |
 | m → s | 94 |

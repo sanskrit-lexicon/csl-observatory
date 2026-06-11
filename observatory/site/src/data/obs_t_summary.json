@@ -1,27 +1,27 @@
 {
-  "generatedAt": "2026-06-11T13:03:06.500504+00:00",
+  "generatedAt": "2026-06-11T17:38:25.482082+00:00",
   "events": 50953,
   "dateRange": [
     "2014-03-18",
     "2026-05-30"
   ],
   "evidence": {
-    "inferred": 17453,
-    "derived": 33500
+    "inferred": 17392,
+    "derived": 33561
   },
-  "derivedPct": 65.7,
+  "derivedPct": 65.9,
   "components": [
     [
       "orthography",
-      19590
+      19529
     ],
     [
       "sense",
-      13621
+      13626
     ],
     [
       "headword",
-      7226
+      7282
     ],
     [
       "markup",
@@ -29,7 +29,7 @@
     ],
     [
       "citation",
-      3579
+      3580
     ],
     [
       "encoding",
@@ -41,7 +41,7 @@
     ],
     [
       "grammar",
-      295
+      294
     ],
     [
       "unknown",
@@ -52,11 +52,11 @@
     "form": [
       [
         "orthography",
-        15289
+        15228
       ],
       [
         "headword",
-        6224
+        6280
       ],
       [
         "encoding",
@@ -64,7 +64,7 @@
       ],
       [
         "sense",
-        633
+        638
       ],
       [
         "markup",
@@ -72,7 +72,7 @@
       ],
       [
         "citation",
-        345
+        346
       ],
       [
         "unknown",
@@ -80,7 +80,7 @@
       ],
       [
         "grammar",
-        44
+        43
       ],
       [
         "meta",
@@ -121,15 +121,15 @@
   "ocr": [
     [
       "substitution",
-      15943
+      15847
     ],
     [
       "insertion",
-      13121
+      13195
     ],
     [
       "deletion",
-      10542
+      10564
     ],
     [
       "segmentation",
@@ -137,33 +137,33 @@
     ],
     [
       "unknown",
-      888
+      890
     ],
     [
       "transposition",
-      709
+      707
     ]
   ],
   "textcrit": [
     [
       "addition",
-      18803
+      18877
     ],
     [
       "substitution",
-      16526
+      16432
     ],
     [
       "omission",
-      13320
+      13340
     ],
     [
       "unknown",
-      888
+      890
     ],
     [
       "metathesis",
-      734
+      732
     ],
     [
       "haplography",
@@ -185,11 +185,11 @@
     ],
     [
       "R:CONSONANT",
-      5640
+      5533
     ],
     [
       "M:CONSONANT",
-      5287
+      5301
     ],
     [
       "R:CASE",
@@ -197,11 +197,11 @@
     ],
     [
       "U:CONSONANT",
-      3400
+      3422
     ],
     [
       "M:DIACRITIC",
-      3322
+      3382
     ],
     [
       "R:VOWEL",
@@ -217,7 +217,7 @@
     ],
     [
       "U:WHITESPACE",
-      1379
+      1377
     ],
     [
       "U:VOWEL",
@@ -263,7 +263,7 @@
     {
       "from": "n",
       "to": "m",
-      "count": 119
+      "count": 120
     },
     {
       "from": "n",
@@ -288,7 +288,7 @@
     {
       "from": "r",
       "to": "n",
-      "count": 81
+      "count": 82
     },
     {
       "from": "d",
