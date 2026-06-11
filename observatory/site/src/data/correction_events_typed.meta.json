@@ -1,0 +1,127 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-06-11T13:01:38.910092+00:00",
+  "sourcePath": "correction_events_all.csv + ../csl-orig (form join)",
+  "recordCount": 50953,
+  "assumptions": [
+    "Canonical typology = microstructure component (which part of the entry).",
+    "git layer: component read positionally from the changed source line tags.",
+    "form layer: component from the csl-orig <L> record segment whose IAST content contains the corrected value; else empirical-cluster fallback.",
+    "encoding/orthography components arise mainly from the form fallback; in the git layer such edits are attributed by location (headword/sense)."
+  ],
+  "warnings": [],
+  "stats": {
+    "gitAttributed": 26512,
+    "formJoinHits": 6988,
+    "formFallback": 17453,
+    "formJoinRate": 0.286,
+    "componentTotals": [
+      [
+        "orthography",
+        19590
+      ],
+      [
+        "sense",
+        13621
+      ],
+      [
+        "headword",
+        7226
+      ],
+      [
+        "markup",
+        4400
+      ],
+      [
+        "citation",
+        3579
+      ],
+      [
+        "encoding",
+        1325
+      ],
+      [
+        "meta",
+        822
+      ],
+      [
+        "grammar",
+        295
+      ],
+      [
+        "unknown",
+        95
+      ]
+    ],
+    "byLayer": {
+      "form": [
+        [
+          "orthography",
+          15289
+        ],
+        [
+          "headword",
+          6224
+        ],
+        [
+          "encoding",
+          1325
+        ],
+        [
+          "sense",
+          633
+        ],
+        [
+          "markup",
+          455
+        ],
+        [
+          "citation",
+          345
+        ],
+        [
+          "unknown",
+          95
+        ],
+        [
+          "grammar",
+          44
+        ],
+        [
+          "meta",
+          31
+        ]
+      ],
+      "git": [
+        [
+          "sense",
+          12988
+        ],
+        [
+          "orthography",
+          4301
+        ],
+        [
+          "markup",
+          3945
+        ],
+        [
+          "citation",
+          3234
+        ],
+        [
+          "headword",
+          1002
+        ],
+        [
+          "meta",
+          791
+        ],
+        [
+          "grammar",
+          251
+        ]
+      ]
+    }
+  }
+}

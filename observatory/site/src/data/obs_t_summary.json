@@ -1,0 +1,423 @@
+{
+  "generatedAt": "2026-06-11T13:03:06.500504+00:00",
+  "events": 50953,
+  "dateRange": [
+    "2014-03-18",
+    "2026-05-30"
+  ],
+  "evidence": {
+    "inferred": 17453,
+    "derived": 33500
+  },
+  "derivedPct": 65.7,
+  "components": [
+    [
+      "orthography",
+      19590
+    ],
+    [
+      "sense",
+      13621
+    ],
+    [
+      "headword",
+      7226
+    ],
+    [
+      "markup",
+      4400
+    ],
+    [
+      "citation",
+      3579
+    ],
+    [
+      "encoding",
+      1325
+    ],
+    [
+      "meta",
+      822
+    ],
+    [
+      "grammar",
+      295
+    ],
+    [
+      "unknown",
+      95
+    ]
+  ],
+  "componentsByLayer": {
+    "form": [
+      [
+        "orthography",
+        15289
+      ],
+      [
+        "headword",
+        6224
+      ],
+      [
+        "encoding",
+        1325
+      ],
+      [
+        "sense",
+        633
+      ],
+      [
+        "markup",
+        455
+      ],
+      [
+        "citation",
+        345
+      ],
+      [
+        "unknown",
+        95
+      ],
+      [
+        "grammar",
+        44
+      ],
+      [
+        "meta",
+        31
+      ]
+    ],
+    "git": [
+      [
+        "sense",
+        12988
+      ],
+      [
+        "orthography",
+        4301
+      ],
+      [
+        "markup",
+        3945
+      ],
+      [
+        "citation",
+        3234
+      ],
+      [
+        "headword",
+        1002
+      ],
+      [
+        "meta",
+        791
+      ],
+      [
+        "grammar",
+        251
+      ]
+    ]
+  },
+  "ocr": [
+    [
+      "substitution",
+      15943
+    ],
+    [
+      "insertion",
+      13121
+    ],
+    [
+      "deletion",
+      10542
+    ],
+    [
+      "segmentation",
+      9750
+    ],
+    [
+      "unknown",
+      888
+    ],
+    [
+      "transposition",
+      709
+    ]
+  ],
+  "textcrit": [
+    [
+      "addition",
+      18803
+    ],
+    [
+      "substitution",
+      16526
+    ],
+    [
+      "omission",
+      13320
+    ],
+    [
+      "unknown",
+      888
+    ],
+    [
+      "metathesis",
+      734
+    ],
+    [
+      "haplography",
+      489
+    ],
+    [
+      "dittography",
+      193
+    ]
+  ],
+  "errantTop": [
+    [
+      "M:PUNCTUATION",
+      6675
+    ],
+    [
+      "U:PUNCTUATION",
+      5994
+    ],
+    [
+      "R:CONSONANT",
+      5640
+    ],
+    [
+      "M:CONSONANT",
+      5287
+    ],
+    [
+      "R:CASE",
+      4462
+    ],
+    [
+      "U:CONSONANT",
+      3400
+    ],
+    [
+      "M:DIACRITIC",
+      3322
+    ],
+    [
+      "R:VOWEL",
+      2041
+    ],
+    [
+      "R:PUNCTUATION",
+      1916
+    ],
+    [
+      "M:VOWEL",
+      1481
+    ],
+    [
+      "U:WHITESPACE",
+      1379
+    ],
+    [
+      "U:VOWEL",
+      1245
+    ]
+  ],
+  "topFormConsonantConfusions": [
+    {
+      "from": "b",
+      "to": "v",
+      "count": 341
+    },
+    {
+      "from": "k",
+      "to": "t",
+      "count": 255
+    },
+    {
+      "from": "s",
+      "to": "m",
+      "count": 198
+    },
+    {
+      "from": "s",
+      "to": "a",
+      "count": 187
+    },
+    {
+      "from": "t",
+      "to": "a",
+      "count": 180
+    },
+    {
+      "from": "r",
+      "to": "c",
+      "count": 173
+    },
+    {
+      "from": "v",
+      "to": "b",
+      "count": 123
+    },
+    {
+      "from": "n",
+      "to": "m",
+      "count": 119
+    },
+    {
+      "from": "n",
+      "to": "d",
+      "count": 115
+    },
+    {
+      "from": "f",
+      "to": "a",
+      "count": 102
+    },
+    {
+      "from": "m",
+      "to": "s",
+      "count": 94
+    },
+    {
+      "from": "w",
+      "to": "d",
+      "count": 88
+    },
+    {
+      "from": "r",
+      "to": "n",
+      "count": 81
+    },
+    {
+      "from": "d",
+      "to": "n",
+      "count": 81
+    },
+    {
+      "from": "B",
+      "to": "m",
+      "count": 77
+    }
+  ],
+  "dictionaries": 43,
+  "topDensity": [
+    {
+      "dict": "pgn",
+      "events": 78,
+      "entries": 485,
+      "per_1k_entries": 160.82,
+      "top_component": "sense",
+      "form": 0,
+      "git": 78
+    },
+    {
+      "dict": "bur",
+      "events": 1803,
+      "entries": 19776,
+      "per_1k_entries": 91.17,
+      "top_component": "sense",
+      "form": 693,
+      "git": 1110
+    },
+    {
+      "dict": "pw",
+      "events": 13651,
+      "entries": 170556,
+      "per_1k_entries": 80.04,
+      "top_component": "orthography",
+      "form": 11776,
+      "git": 1875
+    },
+    {
+      "dict": "ccs",
+      "events": 2290,
+      "entries": 30010,
+      "per_1k_entries": 76.31,
+      "top_component": "headword",
+      "form": 2229,
+      "git": 61
+    },
+    {
+      "dict": "mci",
+      "events": 195,
+      "entries": 2643,
+      "per_1k_entries": 73.78,
+      "top_component": "sense",
+      "form": 10,
+      "git": 185
+    },
+    {
+      "dict": "ap90",
+      "events": 2474,
+      "entries": 34882,
+      "per_1k_entries": 70.92,
+      "top_component": "sense",
+      "form": 415,
+      "git": 2059
+    },
+    {
+      "dict": "ben",
+      "events": 1221,
+      "entries": 17310,
+      "per_1k_entries": 70.54,
+      "top_component": "sense",
+      "form": 463,
+      "git": 758
+    },
+    {
+      "dict": "abch",
+      "events": 119,
+      "entries": 1965,
+      "per_1k_entries": 60.56,
+      "top_component": "sense",
+      "form": 0,
+      "git": 119
+    },
+    {
+      "dict": "vei",
+      "events": 222,
+      "entries": 3834,
+      "per_1k_entries": 57.9,
+      "top_component": "markup",
+      "form": 42,
+      "git": 180
+    },
+    {
+      "dict": "md",
+      "events": 1171,
+      "entries": 20749,
+      "per_1k_entries": 56.44,
+      "top_component": "orthography",
+      "form": 13,
+      "git": 1158
+    },
+    {
+      "dict": "gra",
+      "events": 710,
+      "entries": 12785,
+      "per_1k_entries": 55.53,
+      "top_component": "sense",
+      "form": 380,
+      "git": 330
+    },
+    {
+      "dict": "pui",
+      "events": 927,
+      "entries": 17512,
+      "per_1k_entries": 52.94,
+      "top_component": "headword",
+      "form": 644,
+      "git": 283
+    }
+  ],
+  "correctors": 210,
+  "latency": {
+    "n": 1580,
+    "median": 12,
+    "mean": 23.9,
+    "p90": 73,
+    "max": 447
+  }
+}
