@@ -1,8 +1,8 @@
 # Datasheet — CDSL correction-event corpus (OBS-T)
 
 Following Gebru et al., *Datasheets for Datasets* (2021). Describes the released
-resource `observatory/site/src/data/correction_events_release.csv` and its
-derivation. Snapshot 2026-06-11; regenerate with the OBS-T pipeline (below).
+resource [`observatory/site/src/data/correction_events_release.csv`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/observatory/site/src/data/correction_events_release.csv)
+and its derivation. Snapshot 2026-06-12; regenerate with the OBS-T pipeline (below).
 
 ## Motivation
 
@@ -18,14 +18,23 @@ derivation. Snapshot 2026-06-11; regenerate with the OBS-T pipeline (below).
 
 - **Instances.** 50,953 correction *events*; one row = one old→new edit to a
   dictionary source, with date, dictionary, headword (IAST), old/new strings
-  (IAST), edit-op trace, microstructure component, ERRANT/OCR/textual-criticism
-  crosswalk labels, corrector, latency (form era), evidence label, and split.
+  (IAST), edit-op trace, the **two typology axes** (see Labels),
+  ERRANT/OCR/textual-criticism crosswalk labels, corrector, latency (form era),
+  evidence label, and temporal split.
 - **Layers.** 24,441 from the 2014–2019 correction-form archive (`cfr.tsv`);
   26,512 reconstructed from the 2019–2026 `csl-orig` git history.
 - **Coverage.** 43 dictionaries; 210 (alias-merged) correctors.
-- **Labels.** `error_component` ∈ {headword, grammar, citation, sense, markup,
-  crossref, meta, encoding, orthography, unknown}; each event carries an evidence
-  label (`observed`/`derived`/`inferred`) — 65.7% derived, the rest heuristic.
+- **Labels (two orthogonal axes).**
+  - **LOCATION** (`error_component`) — where in the entry — ∈ {headword, grammar,
+    citation, sense, markup, crossref, meta, **unattributed**}. Reported on
+    `derived` events; `unattributed` when the location could not be derived. (Note:
+    `orthography`/`encoding` were removed in Phase 8 — they are edit *types*, not
+    locations.)
+  - **EDIT-TYPE** (`edit_type`) — what kind of change — ∈ {spelling, diacritic,
+    case, spacing, punctuation, digit, transposition, none}.
+  Each event also carries an evidence label (`observed`/`derived`/`inferred`) —
+  **65.9% derived**, the rest `unattributed` location (the edit-type axis is
+  defined for all events).
 - **Sampling.** Not a sample: the full available correction record. Known gaps —
   287 bulk-reformat git commits excluded; form-era events only ~28.6% machine-linked
   to current sources (encoding heterogeneity + L-code drift).

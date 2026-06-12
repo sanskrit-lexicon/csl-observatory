@@ -101,6 +101,52 @@
         "derived",
         "inferred"
       ]
+    },
+    "error_component": {
+      "description": "LOCATION axis (where in the entry); derived labels only, else unattributed",
+      "enum": [
+        "headword",
+        "grammar",
+        "citation",
+        "sense",
+        "markup",
+        "crossref",
+        "meta",
+        "unattributed"
+      ]
+    },
+    "edit_type": {
+      "description": "EDIT-TYPE axis (what kind of change), from the edit-op trace",
+      "enum": [
+        "spelling",
+        "diacritic",
+        "case",
+        "spacing",
+        "punctuation",
+        "digit",
+        "transposition",
+        "none"
+      ]
+    },
+    "errant_type": {
+      "type": "string",
+      "description": "ERRANT-style operation x unit crosswalk"
+    },
+    "ocr_class": {
+      "type": "string",
+      "description": "OCR/digitization crosswalk"
+    },
+    "textcrit_class": {
+      "type": "string",
+      "description": "textual-criticism (Katre) crosswalk"
+    },
+    "split": {
+      "description": "temporal split of the released resource",
+      "enum": [
+        "train",
+        "dev",
+        "test"
+      ]
     }
   }
 }

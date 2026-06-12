@@ -1,16 +1,68 @@
 # Error typology of digital Sanskrit dictionaries — design spec
 
-Date: 2026-06-11
-Status: active design. Authoritative spec for the error-typology / correction-event
-track (working code **OBS-T**). Circulate to co-authors before code review.
-Owner: Mārcis Gasūns.
+Date: 2026-06-11 · **Updated 2026-06-12 (Phases 1–8 shipped; two-axis typology)**
+Status: implemented. Authoritative spec for the error-typology / correction-event
+track (working code **OBS-T**). Owner: Mārcis Gasūns.
 
-This document specifies a new observatory finding layer that complements the
+This document specifies an observatory finding layer that complements the
 existing correction-*sustainability* finding
-([`reports/obs_q_correction_sustainability.md`](../reports/obs_q_correction_sustainability.md),
-`scripts/obs_q_correction.py`). OBS-Q answers **who corrects, when, and how
+([`reports/obs_q_correction_sustainability.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_q_correction_sustainability.md),
+[`scripts/obs_q_correction.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/obs_q_correction.py)). OBS-Q answers **who corrects, when, and how
 fast**; OBS-T answers **what was wrong, where in the entry, and how the error
 profile changed over twelve years**.
+
+---
+
+## 0. Final state (Phases 1–8) — read this first
+
+The track is **implemented and merged to `main`**. The original single-axis
+"microstructure component" plan below (§1–§13) was **superseded in Phase 8** after a
+validation finding (see [`reports/obs_t_silver.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_t_silver.md)): the
+component column conflated two different things. The shipped design is **two
+orthogonal axes**:
+
+- **LOCATION** (`error_component`) — *where* in the entry: `headword · grammar ·
+  citation · sense · markup · crossref · meta`; reported on **derived** labels;
+  join-failures = `unattributed`. (Phase 3 / 8 in
+  [`scripts/attribute_components.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/attribute_components.py).)
+- **EDIT-TYPE** (`edit_type`) — *what kind* of change, from the edit-op trace:
+  `spelling · diacritic · case · spacing · punctuation · digit · transposition`.
+  (Phase 8 in
+  [`scripts/attribute_crosswalks.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/attribute_crosswalks.py).)
+
+Headline results (see [`reports/obs_t_typology.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_t_typology.md),
+[`reports/obs_t_rigor.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_t_rigor.md)): 50,953 events · 43 dicts · 210
+correctors · 65.9% derived. **Location** (derived): sense 53% · headword 22% ·
+markup 12% · citation 10%. **Edit-type**: spelling 33% · punctuation 20% · spacing
+19% · diacritic 11% · case 9%. **H1** (restated) — corrections are micro surface
+edits (median distance 2; 66% ≤ 2 chars) at *every* location. **H2** — location ×
+dictionary Cramér's V = 0.415 (bootstrap [0.41, 0.42], minus-PW 0.437). **H3** —
+location trends: headword falling, markup/meta rising; campaigns (citation-source
+~12k) vs organic drift separated in [`reports/obs_t_campaigns.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_t_campaigns.md).
+
+Pipeline (all stdlib, offline; reproduce in order):
+[`build_correction_events`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/build_correction_events.py) →
+[`reconstruct_git_events`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/reconstruct_git_events.py) →
+[`attribute_components`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/attribute_components.py) →
+[`attribute_crosswalks`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/attribute_crosswalks.py) →
+[`obs_t_release`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/obs_t_release.py) →
+[`obs_t_typology`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/obs_t_typology.py) →
+[`obs_t_baselines`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/obs_t_baselines.py) →
+[`obs_t_rigor`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/obs_t_rigor.py) →
+[`obs_t_robustness`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/obs_t_robustness.py) →
+[`obs_t_campaigns`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/obs_t_campaigns.py) ·
+validation-only: [`obs_t_translit_check`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/obs_t_translit_check.py),
+[`obs_t_gold`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/obs_t_gold.py),
+[`obs_t_errorsample`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/obs_t_errorsample.py),
+[`obs_t_issuelabel`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/obs_t_issuelabel.py),
+[`obs_t_silver`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/obs_t_silver.py).
+
+Open: human gold/error annotation ([`validation/gold_sample.csv`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/validation/gold_sample.csv),
+[`validation/error_sample.csv`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/validation/error_sample.csv)) + a second annotator for κ.
+
+The sections below are retained for provenance and the parts still accurate (data
+layers, normalization, NLP resource). Where they say "component = canonical
+typology", read "location = one of two axes".
 
 ---
 
@@ -40,7 +92,7 @@ the XML-tagged `csl-orig` sources locally.
 |---|---|
 | Output | One paper, NLP/CL venue; released language resource + baselines |
 | Time span | Full 2014–2026 (all five data layers unified) |
-| Canonical typology | **Lexicographic microstructure** (component-attributed) |
+| Canonical typology | **Two axes** (Phase 8): LOCATION (microstructure component, derived) × EDIT-TYPE (from edit-ops). Was single-axis "microstructure component"; see §0. |
 | Crosswalk taxonomies | NLP/ERRANT edit-ops · OCR/digitization · textual-criticism (Katre) |
 | Normalization | **IAST** canonical (NFC for display, NFD for diacritic-level edit ops) |
 | Resource split | **Temporal** (train past → test recent) |
