@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-11T17:38:25.482082+00:00",
+  "generatedAt": "2026-06-11T19:44:54.700614+00:00",
   "events": 50953,
   "dateRange": [
     "2014-03-18",
@@ -12,12 +12,12 @@
   "derivedPct": 65.9,
   "components": [
     [
-      "orthography",
-      19529
+      "sense",
+      17880
     ],
     [
-      "sense",
-      13626
+      "unattributed",
+      17392
     ],
     [
       "headword",
@@ -25,15 +25,11 @@
     ],
     [
       "markup",
-      4400
+      3945
     ],
     [
       "citation",
-      3580
-    ],
-    [
-      "encoding",
-      1325
+      3338
     ],
     [
       "meta",
@@ -42,41 +38,85 @@
     [
       "grammar",
       294
+    ]
+  ],
+  "locationDerived": [
+    [
+      "sense",
+      17880
     ],
     [
-      "unknown",
-      95
+      "headword",
+      7282
+    ],
+    [
+      "markup",
+      3945
+    ],
+    [
+      "citation",
+      3338
+    ],
+    [
+      "meta",
+      822
+    ],
+    [
+      "grammar",
+      294
+    ]
+  ],
+  "editType": [
+    [
+      "spelling",
+      16953
+    ],
+    [
+      "punctuation",
+      10193
+    ],
+    [
+      "spacing",
+      9725
+    ],
+    [
+      "diacritic",
+      5396
+    ],
+    [
+      "case",
+      4432
+    ],
+    [
+      "digit",
+      2632
+    ],
+    [
+      "none",
+      890
+    ],
+    [
+      "transposition",
+      732
     ]
   ],
   "componentsByLayer": {
     "form": [
       [
-        "orthography",
-        15228
+        "unattributed",
+        17392
       ],
       [
         "headword",
         6280
       ],
       [
-        "encoding",
-        1325
-      ],
-      [
         "sense",
-        638
-      ],
-      [
-        "markup",
-        455
+        591
       ],
       [
         "citation",
-        346
-      ],
-      [
-        "unknown",
-        95
+        104
       ],
       [
         "grammar",
@@ -90,11 +130,7 @@
     "git": [
       [
         "sense",
-        12988
-      ],
-      [
-        "orthography",
-        4301
+        17289
       ],
       [
         "markup",
@@ -326,7 +362,7 @@
       "events": 13651,
       "entries": 170556,
       "per_1k_entries": 80.04,
-      "top_component": "orthography",
+      "top_component": "unattributed",
       "form": 11776,
       "git": 1875
     },
@@ -389,7 +425,7 @@
       "events": 1171,
       "entries": 20749,
       "per_1k_entries": 56.44,
-      "top_component": "orthography",
+      "top_component": "sense",
       "form": 13,
       "git": 1158
     },

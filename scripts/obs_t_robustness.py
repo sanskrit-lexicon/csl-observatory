@@ -1,17 +1,12 @@
 #!/usr/bin/env python3
-"""OBS-T Phase 7h — robustness / sensitivity battery (selection-bias defense).
+"""OBS-T Phase 7h/8 — robustness / sensitivity for the two-axis hypotheses.
 
-Shows the headline results survive the obvious "it's an artifact" objections, all
-computed on the existing final table (no re-mining):
+Shows the headlines survive resampling and the removal of the dominant dictionary
+or a whole layer, on the existing table (no re-mining):
 
-* **H2 bootstrap CI** on Cramer's V (resampled events) — the cross-dictionary
-  effect is stable, not a fluke of the sample.
-* **H2 minus PW** — drop the single dominant dictionary; the profile difference
-  must remain.
-* **H2 git-only** — restrict to the 100%-positional (no-heuristic) git labels; the
-  difference must hold without any inferred labels.
-* **H1 / component mix: all vs derived-only** — the typology is not driven by the
-  ~34% inferred (heuristic) labels.
+* **H2** location × dictionary Cramer's V — bootstrap CI, minus-PW, git-only.
+* **H1** micro-edit rate (a small surface edit) — overall, per layer, with Wilson
+  CIs, plus the location mix on derived labels.
 
 Input : observatory/site/src/data/correction_events_final.csv
 Output: reports/obs_t_robustness.md, observatory/site/src/data/obs_t_robustness.json
@@ -32,22 +27,27 @@ OUT_JSON = os.path.join(DATA, 'obs_t_robustness.json')
 csv.field_size_limit(10_000_000)
 
 sys.path.insert(0, HERE)
-from obs_t_rigor import chi2_independence, wilson, MEANING  # noqa
+from obs_t_rigor import chi2_independence, wilson, MINOR_TYPES  # noqa
 
 B = 300
+
+
+def is_minor(r):
+    try:
+        d = int(r['edit_distance'])
+    except (ValueError, KeyError):
+        d = 9
+    return r['edit_type'] in MINOR_TYPES and d <= 3
 
 
 def v_of(rows, top_dicts):
     table = Counter((r['dict'], r['error_component']) for r in rows
                     if r['dict'] in top_dicts)
-    chi2, dof, p, v = chi2_independence(table)
-    return chi2, dof, p, v
+    return chi2_independence(table)
 
 
 def bootstrap_v(sub, top_dicts):
-    rng = random.Random(0)
-    n = len(sub)
-    vs = []
+    rng = random.Random(0); n = len(sub); vs = []
     for _ in range(B):
         table = Counter()
         for _ in range(n):
@@ -58,8 +58,8 @@ def bootstrap_v(sub, top_dicts):
     return round(vs[int(0.025 * B)], 3), round(vs[int(0.975 * B)], 3)
 
 
-def meaning_share(rows):
-    k = sum(1 for r in rows if r['error_component'] in MEANING)
+def minor_rate(rows):
+    k = sum(1 for r in rows if is_minor(r))
     p, lo, hi = wilson(k, len(rows))
     return round(p, 4), round(lo, 4), round(hi, 4), len(rows)
 
@@ -67,81 +67,70 @@ def meaning_share(rows):
 def main():
     with open(IN_CSV, encoding='utf-8') as f:
         rows = list(csv.DictReader(f))
+    derived = [r for r in rows if r['evidence_level'] == 'derived']
 
-    top_dicts = [d for d, _ in Counter(r['dict'] for r in rows).most_common(15)]
-    sub = [r for r in rows if r['dict'] in top_dicts]
-
-    # H2 variants
-    base = v_of(rows, top_dicts)
+    # H2 on LOCATION (derived only)
+    top_dicts = [d for d, _ in Counter(r['dict'] for r in derived).most_common(15)]
+    sub = [r for r in derived if r['dict'] in top_dicts]
+    base = v_of(derived, top_dicts)
     boot = bootstrap_v(sub, top_dicts)
-    no_pw_dicts = [d for d in top_dicts if d != 'pw']
-    nopw = v_of([r for r in rows if r['dict'] != 'pw'], no_pw_dicts)
-    git = [r for r in rows if r['source_layer'] == 'git']
+    no_pw = [d for d in top_dicts if d != 'pw']
+    nopw = v_of([r for r in derived if r['dict'] != 'pw'], no_pw)
+    git = [r for r in derived if r['source_layer'] == 'git']
     git_top = [d for d, _ in Counter(r['dict'] for r in git).most_common(15)]
     gitv = v_of(git, git_top)
-    der = [r for r in rows if r['evidence_level'] == 'derived']
-    der_top = [d for d, _ in Counter(r['dict'] for r in der).most_common(15)]
-    derv = v_of(der, der_top)
 
-    # H1 / component mix
-    h1_all = meaning_share(rows)
-    h1_der = meaning_share(der)
-    mix_all = Counter(r['error_component'] for r in rows)
-    mix_der = Counter(r['error_component'] for r in der)
-    ta, td = sum(mix_all.values()), sum(mix_der.values())
+    # H1 micro-edit rate
+    h1_all = minor_rate(rows)
+    h1_form = minor_rate([r for r in rows if r['source_layer'] == 'form'])
+    h1_git = minor_rate([r for r in rows if r['source_layer'] == 'git'])
+    loc_mix = Counter(r['error_component'] for r in derived)
+    tl = sum(loc_mix.values())
 
     out = {
         'generatedAt': datetime.now(timezone.utc).isoformat(),
-        'h2': {
+        'h2_location': {
             'base': {'cramers_v': base[3], 'p': base[2]},
             'bootstrap_v_ci95': list(boot),
-            'minus_pw': {'cramers_v': nopw[3], 'p': nopw[2]},
-            'git_only': {'cramers_v': gitv[3], 'p': gitv[2]},
-            'derived_only': {'cramers_v': derv[3], 'p': derv[2]},
+            'minus_pw': base[3] and nopw[3], 'minus_pw_v': nopw[3],
+            'git_only_v': gitv[3],
         },
-        'h1': {'all_meaning_ci': h1_all, 'derived_meaning_ci': h1_der},
-        'componentMix': {
-            'all': {k: round(v / ta, 4) for k, v in mix_all.most_common()},
-            'derived_only': {k: round(v / td, 4) for k, v in mix_der.most_common()},
-        },
+        'h1_minor_edit': {'all': h1_all, 'form': h1_form, 'git': h1_git},
+        'location_mix_derived': {k: round(v / tl, 4) for k, v in loc_mix.most_common()},
     }
     with open(OUT_JSON, 'w', encoding='utf-8') as f:
         json.dump(out, f, ensure_ascii=False, indent=2)
 
     L = []; A = L.append
-    A('# Robustness & sensitivity (OBS-T)')
+    A('# Robustness & sensitivity — two-axis (OBS-T)')
     A('')
-    A('_Generated by `scripts/obs_t_robustness.py`. Shows the headline results '
-      'survive resampling and the removal of the dominant dictionary / the '
-      'heuristic labels._')
+    A('_Generated by `scripts/obs_t_robustness.py`._')
     A('')
-    A('## H2 — cross-dictionary effect is robust')
+    A('## H2 — location × dictionary effect is robust (derived labels)')
     A('')
     A('| variant | Cramér\'s V | note |')
     A('|---|---:|---|')
     A(f'| all top-15 dicts | {base[3]} | p {"<0.001" if base[2] < 0.001 else base[2]} |')
-    A(f'| bootstrap 95% CI | [{boot[0]}, {boot[1]}] | resampled events (B={B}) |')
-    A(f'| **minus PW** (drop dominant dict) | {nopw[3]} | effect persists |')
-    A(f'| **git layer only** (no heuristic labels) | {gitv[3]} | effect persists |')
-    A(f'| derived-only | {derv[3]} | effect persists |')
+    A(f'| bootstrap 95% CI | [{boot[0]}, {boot[1]}] | resampled (B={B}) |')
+    A(f'| minus PW | {nopw[3]} | effect persists |')
+    A(f'| git layer only | {gitv[3]} | positional labels only |')
     A('')
-    A('The dictionary error-profile difference is a large, stable effect — not an '
-      'artifact of PW, of one sample, or of the inferred labels.')
+    A('## H1 — micro-edit dominance is robust across layers')
     A('')
-    A('## H1 — typology mix is not driven by the heuristic labels')
+    A('Minor-edit rate = a small surface edit (edit_type spelling/diacritic/case/'
+      'spacing/punctuation/digit and edit distance ≤ 3).')
     A('')
-    A('| subset | meaning share (95% CI) |')
-    A('|---|---|')
-    A(f'| all events | {h1_all[0]:.3f} [{h1_all[1]:.3f}, {h1_all[2]:.3f}] |')
-    A(f'| derived-only | {h1_der[0]:.3f} [{h1_der[1]:.3f}, {h1_der[2]:.3f}] |')
+    A('| subset | minor-edit rate (95% CI) | n |')
+    A('|---|---|---:|')
+    for name, d in (('all', h1_all), ('form', h1_form), ('git', h1_git)):
+        A(f'| {name} | {d[0]:.1%} [{d[1]:.1%}, {d[2]:.1%}] | {d[3]:,} |')
     A('')
-    A('| component | all | derived-only |')
-    A('|---|---:|---:|')
-    for c in sorted(mix_all, key=lambda c: -mix_all[c]):
-        A(f'| {c} | {mix_all[c]/ta:.1%} | {mix_der.get(c,0)/td:.1%} |')
+    A('## Location mix (derived) — the clean microstructure typology')
     A('')
-    A('The component ranking is the same with the inferred labels removed; the '
-      'typology is a property of the data, not of the fallback heuristic.')
+    A('| location | share |')
+    A('|---|---:|')
+    for c, v in loc_mix.most_common():
+        A(f'| {c} | {v/tl:.1%} |')
     A('')
     A('*Object of analysis in scope per `docs/BOUNDARY_RULES.md`.*')
     with open(OUT_MD, 'w', encoding='utf-8', newline='\n') as f:
@@ -149,9 +138,9 @@ def main():
 
     print(f'wrote {OUT_MD}')
     print(f'wrote {OUT_JSON}')
-    print(f'  H2 V base={base[3]} boot95=[{boot[0]},{boot[1]}] minusPW={nopw[3]} '
-          f'gitOnly={gitv[3]} derived={derv[3]}')
-    print(f'  H1 meaning all={h1_all[0]} derived={h1_der[0]}')
+    print(f'  H2 V base={base[3]} boot95=[{boot[0]},{boot[1]}] minusPW={nopw[3]} gitOnly={gitv[3]}')
+    print(f'  H1 minor-edit all={h1_all[0]:.1%} form={h1_form[0]:.1%} git={h1_git[0]:.1%}')
+    print(f'  location mix derived: {loc_mix.most_common()}')
 
 
 if __name__ == '__main__':

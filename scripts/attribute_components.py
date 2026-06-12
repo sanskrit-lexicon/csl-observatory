@@ -61,8 +61,10 @@ CLUSTER2COMP = {
     'ocr-print': 'orthography', 'variant': 'sense', 'typo': 'orthography',
     'unspecified': 'unknown', 'other': 'unknown',
 }
+# LOCATION axis only (microstructure component / where in the entry). Edit-TYPE
+# (orthography/encoding/diacritic) is a separate axis — see edit_type in crosswalks.
 COMPONENTS = ['headword', 'grammar', 'citation', 'sense', 'crossref', 'meta',
-              'encoding', 'markup', 'orthography', 'unknown']
+              'markup', 'unattributed']
 
 _TAG_RE = re.compile(r'<[^>]*>')
 
@@ -73,7 +75,7 @@ def component_of_line(line, pos):
         return 'unknown'
     tags = list(_TAG_RE.finditer(line))
     if not tags:
-        return 'orthography'          # bare text, no markup
+        return 'sense'                # bare text in a record = definition prose
     for m in tags:
         if m.start() <= pos < m.end():
             return 'markup'           # the edit hit the tag delimiter itself
@@ -228,9 +230,12 @@ def build_index(dict_path, needed_hw):
 
 def form_component(event, idx):
     """Join to a csl-orig record by headword (stable key), then locate the corrected
-    value within its segments. The cfr 'headword' cell is often the *old* (mistyped)
-    word, so we also try the new/old values as entry keys: if the corrected value is
-    itself a k1, the correction was to the headword. Returns (component, evidence)."""
+    value within its segments — this gives the LOCATION (microstructure component).
+    The cfr 'headword' cell is often the *old* (mistyped) word, so we also try the
+    new/old values as entry keys: if the corrected value is itself a k1, the
+    correction was to the headword. When the location cannot be derived we return
+    `unattributed` rather than guessing from the edit type (which is a different
+    axis — see edit_type). Returns (location, evidence)."""
     hw, ni, oi = norm(event['headword_iast']), norm(event['new_iast']), norm(event['old_iast'])
     ni1, oi1 = norm(first_tok(event['new_iast'])), norm(first_tok(event['old_iast']))
     needles = [n for n in (ni, oi, ni1, oi1) if n]
@@ -245,8 +250,8 @@ def form_component(event, idx):
     for key in (ni, ni1, oi, oi1):
         if key and key in idx:
             return 'headword', 'derived'
-    # 3) fallback: empirical cluster -> component (inferred)
-    return CLUSTER2COMP.get(event['error_type_empirical'], 'unknown'), 'inferred'
+    # 3) location not derivable -> unattributed (do NOT guess from edit type)
+    return 'unattributed', 'inferred'
 
 
 def main():
@@ -316,12 +321,13 @@ def main():
         'sourcePath': 'correction_events_all.csv + ../csl-orig (form join)',
         'recordCount': len(rows),
         'assumptions': [
-            'Canonical typology = microstructure component (which part of the entry).',
-            'git layer: component read positionally from the changed source line tags.',
-            'form layer: component from the csl-orig <L> record segment whose IAST '
-            'content contains the corrected value; else empirical-cluster fallback.',
-            'encoding/orthography components arise mainly from the form fallback; '
-            'in the git layer such edits are attributed by location (headword/sense).',
+            'error_component is the LOCATION axis (which part of the entry); edit '
+            'TYPE (orthography/encoding/diacritic) is a separate axis -> edit_type.',
+            'git layer: location read positionally from the changed source line tags; '
+            'untagged record text = sense (definition prose).',
+            'form layer: location from the csl-orig <L> record segment whose IAST '
+            'content contains the corrected value; if not derivable -> unattributed '
+            '(we do NOT guess a location from the edit type).',
         ],
         'warnings': [],
         'stats': {

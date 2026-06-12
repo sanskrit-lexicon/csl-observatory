@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-11T17:39:44.438964+00:00",
+  "generatedAt": "2026-06-11T19:41:17.210264+00:00",
   "detection": {
     "train_tokens": 14670,
     "test_pairs": 3127,
@@ -15,10 +15,10 @@
   "classification": {
     "train": 17082,
     "test": 8359,
-    "accuracy": 0.388,
-    "macro_f1": 0.302,
-    "majority_baseline_accuracy": 0.226,
+    "accuracy": 0.594,
+    "macro_f1": 0.403,
+    "majority_baseline_accuracy": 0.44,
     "majority_class": "sense",
-    "classes": 7
+    "classes": 6
   }
 }
