@@ -1,13 +1,12 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-06-11T17:38:15.183094+00:00",
+  "generatedAt": "2026-06-11T19:36:24.999245+00:00",
   "sourcePath": "correction_events_all.csv + ../csl-orig (form join)",
   "recordCount": 50953,
   "assumptions": [
-    "Canonical typology = microstructure component (which part of the entry).",
-    "git layer: component read positionally from the changed source line tags.",
-    "form layer: component from the csl-orig <L> record segment whose IAST content contains the corrected value; else empirical-cluster fallback.",
-    "encoding/orthography components arise mainly from the form fallback; in the git layer such edits are attributed by location (headword/sense)."
+    "error_component is the LOCATION axis (which part of the entry); edit TYPE (orthography/encoding/diacritic) is a separate axis -> edit_type.",
+    "git layer: location read positionally from the changed source line tags; untagged record text = sense (definition prose).",
+    "form layer: location from the csl-orig <L> record segment whose IAST content contains the corrected value; if not derivable -> unattributed (we do NOT guess a location from the edit type)."
   ],
   "warnings": [],
   "stats": {
@@ -17,12 +16,12 @@
     "formJoinRate": 0.288,
     "componentTotals": [
       [
-        "orthography",
-        19529
+        "sense",
+        17880
       ],
       [
-        "sense",
-        13626
+        "unattributed",
+        17392
       ],
       [
         "headword",
@@ -30,15 +29,11 @@
       ],
       [
         "markup",
-        4400
+        3945
       ],
       [
         "citation",
-        3580
-      ],
-      [
-        "encoding",
-        1325
+        3338
       ],
       [
         "meta",
@@ -47,41 +42,25 @@
       [
         "grammar",
         294
-      ],
-      [
-        "unknown",
-        95
       ]
     ],
     "byLayer": {
       "form": [
         [
-          "orthography",
-          15228
+          "unattributed",
+          17392
         ],
         [
           "headword",
           6280
         ],
         [
-          "encoding",
-          1325
-        ],
-        [
           "sense",
-          638
-        ],
-        [
-          "markup",
-          455
+          591
         ],
         [
           "citation",
-          346
-        ],
-        [
-          "unknown",
-          95
+          104
         ],
         [
           "grammar",
@@ -95,11 +74,7 @@
       "git": [
         [
           "sense",
-          12988
-        ],
-        [
-          "orthography",
-          4301
+          17289
         ],
         [
           "markup",

@@ -29,29 +29,56 @@ const baselines = await FileAttachment("data/obs_t_baselines.json").json();
   <div class="card"><h2>Derived (not heuristic)</h2><span class="big">${summary.derivedPct}%</span></div>
 </div>
 
-## The microstructure error typology
+## Two axes: location × edit-type
 
-Which component of the dictionary entry each correction repairs. The git layer
-(2019–2026) is attributed positionally from the source XML tags; the form layer
-(2014–2019) is joined to `csl-orig` by headword.
+Each correction is described on two orthogonal axes — **where** in the entry it
+lands (the microstructure *location*) and **what kind** of change it is (the
+*edit-type*). Mixing them was a pitfall; keeping them apart is the honest typology.
+
+### Axis A — location (derived labels)
+
+Where in the entry the correction repairs. Git layer is attributed positionally
+from the source XML tags; the form layer is joined to `csl-orig` by headword.
+Reported on derived labels (location is not guessed when the join fails).
 
 ```js
-const compTotals = summary.components.map(([component, count]) => ({component, count}));
+const locTotals = (summary.locationDerived ?? summary.components).map(([location, count]) => ({location, count}));
 Plot.plot({
-  width, height: 340, marginLeft: 110,
-  x: {label: "events", grid: true},
-  y: {label: null, domain: compTotals.map(d => d.component)},
+  width, height: 300, marginLeft: 110,
+  x: {label: "events (derived)", grid: true},
+  y: {label: null, domain: locTotals.map(d => d.location)},
   marks: [
-    Plot.barX(compTotals, {x: "count", y: "component", fill: "#5319e7", tip: true}),
+    Plot.barX(locTotals, {x: "count", y: "location", fill: "#5319e7", tip: true}),
     Plot.ruleX([0])
   ]
 })
 ```
 
-## Twelve-year timelapse — components over time
+Corrections concentrate in the **sense (definition)** and **headword** — the
+meaning-bearing fields.
 
-Monthly correction volume, coloured by the component repaired. The form-form era
-and the git era meet at mid-2019 into one continuous record.
+### Axis B — edit-type (all events)
+
+What kind of change. Every category is a surface micro-edit; there is no
+"content rewrite" type — even corrections to definitions are small form fixes.
+
+```js
+const etTotals = (summary.editType ?? []).map(([type, count]) => ({type, count}));
+Plot.plot({
+  width, height: 300, marginLeft: 110,
+  x: {label: "events", grid: true},
+  y: {label: null, domain: etTotals.map(d => d.type)},
+  marks: [
+    Plot.barX(etTotals, {x: "count", y: "type", fill: "#fb8c00", tip: true}),
+    Plot.ruleX([0])
+  ]
+})
+```
+
+## Twelve-year timelapse — location over time
+
+Monthly correction volume, coloured by the location repaired. The form era and the
+git era meet at mid-2019 into one continuous record.
 
 ```js
 const monthlyDated = monthly.map(d => ({...d, date: new Date(d.ym + "-01")}));
@@ -59,7 +86,7 @@ Plot.plot({
   width, height: 380,
   x: {label: null},
   y: {label: "events / month", grid: true},
-  color: {legend: true, scheme: "Tableau10"},
+  color: {legend: true, scheme: "Tableau10", label: "location"},
   marks: [
     Plot.areaY(monthlyDated, {x: "date", y: "count", fill: "component", tip: true}),
     Plot.ruleY([0])

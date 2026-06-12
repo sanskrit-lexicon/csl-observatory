@@ -69,7 +69,9 @@ def main():
     dict_layers = defaultdict(Counter)
     by_corr = defaultdict(lambda: {'n': 0, 'name': '', 'comp': Counter(),
                                    'dates': []})
-    comp_total = Counter()
+    comp_total = Counter()        # location, all events (incl. unattributed)
+    comp_derived = Counter()      # location, derived only (the real typology)
+    edit_type = Counter()         # the edit-TYPE axis, all events
     comp_layer = defaultdict(Counter)
     evidence = Counter()
     ocr = Counter(); textcrit = Counter(); errant = Counter()
@@ -80,6 +82,9 @@ def main():
         ym = r['date'][:7]
         comp = r['error_component']
         layer = r['source_layer']
+        edit_type[r['edit_type']] += 1
+        if r['evidence_level'] == 'derived':
+            comp_derived[comp] += 1
         if y:
             timeline[(y, layer, comp)] += 1
             monthly[(ym, comp)] += 1
@@ -161,6 +166,8 @@ def main():
         'evidence': dict(evidence),
         'derivedPct': round(100 * evidence['derived'] / len(rows), 1) if rows else 0,
         'components': comp_total.most_common(),
+        'locationDerived': comp_derived.most_common(),
+        'editType': edit_type.most_common(),
         'componentsByLayer': {k: v.most_common() for k, v in comp_layer.items()},
         'ocr': ocr.most_common(), 'textcrit': textcrit.most_common(),
         'errantTop': errant.most_common(12),
@@ -199,15 +206,17 @@ def write_report(s, dict_rows, corr_rows, form_cons):
       '(`observed`/`derived`/`inferred`); entry counts for density come from '
       '`../csl-orig` `<L>` markers._')
     A('')
-    A('> **Claim.** Across twelve years and 43 dictionaries, dictionary correction is '
-      'dominated not by content/meaning edits but by **orthographic and structural** '
-      'repair — typos, diacritics, capitalization, citation and markup. Classifying '
-      'each correction by the *microstructure component* it repairs turns a flat '
-      'change-log into a measurable error profile that differs by dictionary and '
-      'shifts over time.')
+    A('> **Claim (two axes).** Across twelve years and 43 dictionaries, each '
+      'correction is described on two orthogonal axes: a **location** — which '
+      'microstructure component it repairs (headword, sense, citation, markup, …) — '
+      'and an **edit-type** — what kind of change it is (spelling, diacritic, case, '
+      'spacing, …). Corrections concentrate in the **sense (definition) and '
+      'headword**, yet are almost all **small surface edits** rather than content '
+      'rewrites; and the location profile differs by dictionary and shifts over time.')
     A('')
     A('Complements [`obs_q_correction_sustainability.md`](obs_q_correction_sustainability.md) '
-      '(who corrects, how fast) by measuring **what** was wrong and **where** in the entry.')
+      '(who corrects, how fast) by measuring **what** was wrong and **where** in the entry. '
+      'See [`obs_t_rigor.md`](obs_t_rigor.md) for the tested claims.')
     A('')
     A('## Headline')
     A('')
@@ -224,19 +233,36 @@ def write_report(s, dict_rows, corr_rows, form_cons):
         A(f'| Form-era correction latency (median / p90 / max) | {lt["median"]} / '
           f'{lt["p90"]} / {lt["max"]} days |')
     A('')
-    A('## 1. The microstructure error typology (canonical)')
+    A('## 1. Axis A — location (microstructure component)')
     A('')
-    A('Each correction is attributed to the dictionary component it repairs. The git '
-      'layer is attributed positionally from the source tags; the form layer joins to '
-      '`csl-orig` by headword (fallback: empirical cluster).')
+    A('Where in the entry each correction lands. Git layer is attributed '
+      'positionally from the source tags; form layer joins to `csl-orig` by '
+      'headword. Reported on **derived** labels (location is not guessed when the '
+      'join fails — those are `unattributed`).')
     A('')
-    A('| Component | Events | Share |')
+    derloc = s.get('locationDerived', [])
+    dtot = sum(n for _, n in derloc) or 1
+    A('| Location | Events (derived) | Share |')
     A('|---|---:|---:|')
-    tot = s['events']
-    for comp, n in s['components']:
-        A(f'| {comp} | {n:,} | {100*n/tot:.1f}% |')
+    for comp, n in derloc:
+        A(f'| {comp} | {n:,} | {100*n/dtot:.1f}% |')
     A('')
-    A('## 2. Diachronic profile')
+    A('Corrections concentrate in the **sense (definition)** and **headword** — the '
+      'meaning-bearing fields — not in markup or metadata.')
+    A('')
+    A('## 2. Axis B — edit type')
+    A('')
+    A('What kind of change each correction is (from the edit-op trace, all events). '
+      'Every category is a surface change; there is no "content rewrite" type.')
+    A('')
+    et = s.get('editType', [])
+    ett = sum(n for _, n in et) or 1
+    A('| Edit type | Events | Share |')
+    A('|---|---:|---:|')
+    for t, n in et:
+        A(f'| {t} | {n:,} | {100*n/ett:.1f}% |')
+    A('')
+    A('## 3. Diachronic profile')
     A('')
     A('Correction volume and component mix by year are in '
       '[`obs_t_timeline.csv`](../observatory/site/src/data/obs_t_timeline.csv) '
@@ -244,18 +270,18 @@ def write_report(s, dict_rows, corr_rows, form_cons):
       'stacked-area source). The form era (2014–2019) and the git era (2019–2026) '
       'meet at mid-2019, giving a continuous twelve-year record.')
     A('')
-    A('## 3. Cross-dictionary error density')
+    A('## 4. Cross-dictionary error density')
     A('')
     A('Events per 1,000 entries (`<L>` count), dictionaries with ≥30 events — a '
       'size-normalized quality signal.')
     A('')
-    A('| Dict | Events | Entries | Per 1k | Top component |')
+    A('| Dict | Events | Entries | Per 1k | Top location |')
     A('|---|---:|---:|---:|---|')
     for d in s['topDensity']:
         A(f'| {d["dict"]} | {d["events"]:,} | {d["entries"]:,} | '
           f'{d["per_1k_entries"]} | {d["top_component"]} |')
     A('')
-    A('## 4. Crosswalk typologies')
+    A('## 5. Crosswalk typologies')
     A('')
     A('The same events under three secondary frames (derived from the edit-op trace).')
     A('')
@@ -274,9 +300,9 @@ def write_report(s, dict_rows, corr_rows, form_cons):
     A('The `b → v` confusion leads — a classic Sanskrit orthographic merger — '
       'alongside retroflex/diacritic repairs.')
     A('')
-    A('## 5. Who repairs what')
+    A('## 6. Who repairs what')
     A('')
-    A('| Corrector | Events | Top component | Span |')
+    A('| Corrector | Events | Top location | Span |')
     A('|---|---:|---|---|')
     for c in corr_rows[:12]:
         A(f'| {c["name"] or c["corrector"]} | {c["events"]:,} | {c["top_component"]} | '
@@ -285,14 +311,16 @@ def write_report(s, dict_rows, corr_rows, form_cons):
     A('## Draft abstract')
     A('')
     A('> We present a twelve-year, 50,953-event corpus of corrections to the Cologne '
-      'Digital Sanskrit Lexicon (43 dictionaries) and a typology of the errors they '
-      'repair. Unifying a 2014–2019 correction-form archive with the 2019–2026 source '
-      'git history, we normalize every edit to IAST (handling the form\'s mixed '
-      'Devanagari/Harvard-Kyoto encoding) and attribute it to the dictionary '
-      'microstructure component it repairs, cross-walked to OCR, textual-criticism, '
-      'and ERRANT edit-type frames. Corrections are dominated by orthographic and '
-      'structural repair; error density varies markedly by dictionary; and a stable '
-      'character-confusion signal (led by b/v) emerges. We release the corpus with '
+      'Digital Sanskrit Lexicon (43 dictionaries) and a two-axis typology of the '
+      'errors they repair. Unifying a 2014–2019 correction-form archive with the '
+      '2019–2026 source git history, we normalize every edit to IAST (handling the '
+      'form\'s mixed Devanagari/Harvard-Kyoto encoding) and describe it by its '
+      '**location** in the dictionary microstructure and its **edit type**. '
+      'Corrections concentrate in the sense and headword fields yet are '
+      'overwhelmingly small surface edits (median edit distance 2; two-thirds ≤ 2 '
+      'characters) rather than content rewrites; the location profile differs '
+      'markedly by dictionary (Cramér\'s V ≈ 0.42); and a stable character-confusion '
+      'signal (led by b/v) emerges. We release the corpus with '
       'evidence labels and a temporal split as a language resource for Sanskrit '
       'error detection and correction.')
     A('')

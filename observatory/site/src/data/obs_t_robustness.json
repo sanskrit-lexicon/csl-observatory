@@ -1,61 +1,44 @@
 {
-  "generatedAt": "2026-06-11T19:20:08.219056+00:00",
-  "h2": {
+  "generatedAt": "2026-06-11T19:40:12.188970+00:00",
+  "h2_location": {
     "base": {
-      "cramers_v": 0.411,
+      "cramers_v": 0.415,
       "p": 0.0
     },
     "bootstrap_v_ci95": [
-      0.407,
-      0.417
+      0.41,
+      0.42
     ],
-    "minus_pw": {
-      "cramers_v": 0.432,
-      "p": 0.0
-    },
-    "git_only": {
-      "cramers_v": 0.406,
-      "p": 0.0
-    },
-    "derived_only": {
-      "cramers_v": 0.429,
-      "p": 0.0
-    }
+    "minus_pw": 0.437,
+    "minus_pw_v": 0.437,
+    "git_only_v": 0.374
   },
-  "h1": {
-    "all_meaning_ci": [
-      0.2732,
-      0.2693,
-      0.2771,
+  "h1_minor_edit": {
+    "all": [
+      0.6769,
+      0.6728,
+      0.681,
       50953
     ],
-    "derived_meaning_ci": [
-      0.4134,
-      0.4081,
-      0.4186,
-      33561
+    "form": [
+      0.7863,
+      0.7811,
+      0.7914,
+      24441
+    ],
+    "git": [
+      0.5761,
+      0.5702,
+      0.5821,
+      26512
     ]
   },
-  "componentMix": {
-    "all": {
-      "orthography": 0.3833,
-      "sense": 0.2674,
-      "headword": 0.1429,
-      "markup": 0.0864,
-      "citation": 0.0703,
-      "encoding": 0.026,
-      "meta": 0.0161,
-      "grammar": 0.0058,
-      "unknown": 0.0019
-    },
-    "derived_only": {
-      "sense": 0.4046,
-      "headword": 0.217,
-      "orthography": 0.1282,
-      "markup": 0.1175,
-      "citation": 0.0995,
-      "meta": 0.0245,
-      "grammar": 0.0088
-    }
+  "location_mix_derived": {
+    "sense": 0.5328,
+    "headword": 0.217,
+    "markup": 0.1175,
+    "citation": 0.0995,
+    "meta": 0.0245,
+    "grammar": 0.0088
   }
 }

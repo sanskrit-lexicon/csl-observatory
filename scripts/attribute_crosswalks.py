@@ -64,6 +64,26 @@ def scribal_refine(old, new):
     return None
 
 
+# EDIT-TYPE axis (what kind of change), orthogonal to the location component.
+_UNIT2TYPE = {'diacritic': 'diacritic', 'case': 'case', 'whitespace': 'spacing',
+              'punctuation': 'punctuation', 'digit': 'digit',
+              'consonant': 'spelling', 'vowel': 'spelling', 'latin': 'spelling',
+              'other': 'spelling'}
+
+
+def edit_type_of(ops):
+    """Primary edit TYPE from the dominant op/unit (spelling / diacritic / case /
+    spacing / punctuation / transposition). The axis the corpus was missing."""
+    if not ops:
+        return 'none'
+    if any(o['op'] == 'transpose' for o in ops):
+        return 'transposition'
+    if any(o['unit'] == 'whitespace' for o in ops):
+        return 'spacing'
+    _op, unit = dominant(ops)
+    return _UNIT2TYPE.get(unit, 'spelling')
+
+
 def classify(ops, old, new):
     """Return (errant_type, ocr_class, textcrit_class)."""
     if not ops:
@@ -96,7 +116,7 @@ def main():
         sys.exit('input lacks edit_ops; run Phase 1-3 first')
 
     fields = list(rows[0].keys())
-    for col in ('errant_type', 'ocr_class', 'textcrit_class'):
+    for col in ('edit_type', 'errant_type', 'ocr_class', 'textcrit_class'):
         if col not in fields:
             fields.insert(fields.index('error_component') + 1, col)
 
@@ -105,6 +125,7 @@ def main():
         ops = json.loads(r['edit_ops']) if r['edit_ops'] else []
         r['errant_type'], r['ocr_class'], r['textcrit_class'] = \
             classify(ops, r['old_iast'], r['new_iast'])
+        r['edit_type'] = edit_type_of(ops)
         for o in ops:
             if o['op'] == 'sub' and len(o['from']) == 1 and len(o['to']) == 1:
                 # layer matters: form ops are over IAST (clean Sanskrit), git ops

@@ -33,9 +33,9 @@ Predict the microstructure `error_component` from edit-op features (dominant ope
 | metric | value |
 |---|---:|
 | train / test | 17,082 / 8,359 |
-| classes | 7 |
-| **accuracy** | **0.388** |
-| macro-F1 | 0.302 |
-| majority baseline (sense) | 0.226 |
+| classes | 6 |
+| **accuracy** | **0.594** |
+| macro-F1 | 0.403 |
+| majority baseline (sense) | 0.44 |
 
 *Reference baselines only — the paper compares these against neural sequence models. Object of analysis in scope per `docs/BOUNDARY_RULES.md`.*
