@@ -1,0 +1,61 @@
+{
+  "generatedAt": "2026-06-11T19:20:08.219056+00:00",
+  "h2": {
+    "base": {
+      "cramers_v": 0.411,
+      "p": 0.0
+    },
+    "bootstrap_v_ci95": [
+      0.407,
+      0.417
+    ],
+    "minus_pw": {
+      "cramers_v": 0.432,
+      "p": 0.0
+    },
+    "git_only": {
+      "cramers_v": 0.406,
+      "p": 0.0
+    },
+    "derived_only": {
+      "cramers_v": 0.429,
+      "p": 0.0
+    }
+  },
+  "h1": {
+    "all_meaning_ci": [
+      0.2732,
+      0.2693,
+      0.2771,
+      50953
+    ],
+    "derived_meaning_ci": [
+      0.4134,
+      0.4081,
+      0.4186,
+      33561
+    ]
+  },
+  "componentMix": {
+    "all": {
+      "orthography": 0.3833,
+      "sense": 0.2674,
+      "headword": 0.1429,
+      "markup": 0.0864,
+      "citation": 0.0703,
+      "encoding": 0.026,
+      "meta": 0.0161,
+      "grammar": 0.0058,
+      "unknown": 0.0019
+    },
+    "derived_only": {
+      "sense": 0.4046,
+      "headword": 0.217,
+      "orthography": 0.1282,
+      "markup": 0.1175,
+      "citation": 0.0995,
+      "meta": 0.0245,
+      "grammar": 0.0088
+    }
+  }
+}
