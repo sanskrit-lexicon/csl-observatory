@@ -293,7 +293,7 @@ Create or update `CLAUDE.md` in the repo root. Include:
 
 Create or update `README.md`. Required sections in order:
 1. Title + one-paragraph description
-2. **Documentation callout (preserve-if-present)** — if the repo has an authoritative human guide (e.g. `docs/*.md` referenced from `CLAUDE.md`, or an existing `## Documentation` block in the current README), carry that link forward verbatim. **Never drop it.** Before overwriting, grep the existing README for a `## Documentation` heading and any `docs/` links and re-emit them in the regenerated file.
+2. **Manual overview block (preserve verbatim)** — human-maintained README material belongs between `<!-- BEGIN MANUAL: overview -->` and `<!-- END MANUAL: overview -->`. Preserve every `<!-- BEGIN MANUAL:* -->` block exactly when regenerating README content. Use the Jim-style templates in [`docs/README_TEMPLATE_TYPOLOGY.md`](../docs/README_TEMPLATE_TYPOLOGY.md), especially Template A for dictionary workbench repos.
 3. Contents table (top-level directories)
 4. Timeline table (period → work, derived from git log and issue dates)
 5. Projects & Milestones table with live counts + two Mermaid pie charts (closed by ms, open by ms)
