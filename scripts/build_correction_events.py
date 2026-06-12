@@ -479,6 +479,19 @@ def main():
             'corrector': {'type': 'string'}, 'corrector_name': {'type': 'string'},
             'latency_days': {'type': ['integer', 'string']},
             'evidence_level': {'enum': ['observed', 'derived', 'inferred']},
+            # --- axes + crosswalks + split, added downstream (Phases 3/4/6/8) ---
+            'error_component': {'enum': ['headword', 'grammar', 'citation', 'sense',
+                                         'markup', 'crossref', 'meta', 'unattributed'],
+                                'description': 'LOCATION axis (where in the entry); '
+                                'derived labels only, else unattributed'},
+            'edit_type': {'enum': ['spelling', 'diacritic', 'case', 'spacing',
+                                   'punctuation', 'digit', 'transposition', 'none'],
+                          'description': 'EDIT-TYPE axis (what kind of change)'},
+            'errant_type': {'type': 'string', 'description': 'ERRANT op x unit crosswalk'},
+            'ocr_class': {'type': 'string', 'description': 'OCR/digitization crosswalk'},
+            'textcrit_class': {'type': 'string', 'description': 'textual-criticism crosswalk'},
+            'split': {'enum': ['train', 'dev', 'test'],
+                      'description': 'temporal split of the released resource'},
         },
     }
     with open(OUT_SCHEMA, 'w', encoding='utf-8') as f:

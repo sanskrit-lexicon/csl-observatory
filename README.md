@@ -34,9 +34,24 @@ The headline picture is in **[`reports/synthesis.md`](reports/synthesis.md)**.
 | Issue-taxonomy adoption | [`taxonomy_adoption.md`](reports/taxonomy_adoption.md) | 89% typed, 63% conformant; 92% peak in 2025; 54 stray labels |
 | Velocity & health timeline | [`velocity_timeline.md`](reports/velocity_timeline.md) | 9,877 commits; peak 11 authors/yr; backlog 1,742 (2025) → 913 (2026) |
 | Contributor identity | [`contributor_identity.md`](reports/contributor_identity.md) | 0/16 authors have a registered ORCID |
+| **Error typology (OBS-T)** | [`obs_t_typology.md`](reports/obs_t_typology.md) | 50,953 corrections, two axes — location (sense 53% · headword 22%) × edit-type (mostly micro surface edits, 66% ≤2 chars); cross-dict V=0.42 |
 
 Actionable follow-ups are filed on the [Tooling Roadmap](https://github.com/orgs/sanskrit-lexicon/projects/9)
 as issues #15–#21 (Actions), with the findings themselves as #22–#25 (Findings).
+
+### OBS-T — error typology of digital Sanskrit dictionaries
+
+A standalone language-resource + finding track (Phases 1–8), distinct from the
+org-process findings above. It unifies 12 years of corrections (correction-form
+archive + `csl-orig` git history) into a 50,953-event corpus and a **two-axis
+typology** — **location** (where in the entry) × **edit-type** (what kind of edit).
+Design: [`docs/ERROR_TYPOLOGY_DESIGN.md`](docs/ERROR_TYPOLOGY_DESIGN.md) · datasheet:
+[`docs/DATASHEET.md`](docs/DATASHEET.md) · live page:
+[Error Typology](https://sanskrit-lexicon.github.io/csl-observatory/error-typology).
+Reports: [typology](reports/obs_t_typology.md) · [rigor](reports/obs_t_rigor.md) ·
+[robustness](reports/obs_t_robustness.md) · [baselines](reports/obs_t_baselines.md) ·
+[campaigns](reports/obs_t_campaigns.md) · [transliterator validation](reports/obs_t_translit_validation.md) ·
+[silver validation](reports/obs_t_silver.md) · [issue-label corroboration](reports/obs_t_issuelabel.md).
 
 ## What's in this repo
 
