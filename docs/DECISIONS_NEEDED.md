@@ -25,7 +25,7 @@ Deferred: none available now, per M.G. 2026-05-31.
 
 | # | Need | For |
 |---|---|---|
-| C1 | GitHub token with workflow + `read:project` scope as a repo secret. | Automate observatory refresh; tooling-roadmap audit |
+| C1 | GitHub token with workflow + `read:project` scope as a repo secret. | Automate observatory refresh; tooling-roadmap audit; **dictionary drift-watch audit** (`dict-audit.yml`, see [DRIFT_WATCH.md](DRIFT_WATCH.md)) |
 | C2 | Cologne server access for `redo_xampp_selective.sh`, if the observatory is asked to track the repository/process side of public artifact refreshes. | Public artifact refresh as repository/process evidence |
 | C3 | DNS for `observatory.sanskrit-lexicon.org` plus Cologne `uni-koeln.de/observatory` handover. | Observatory mirrors |
 
@@ -34,6 +34,7 @@ Deferred: none available now, per M.G. 2026-05-31.
 | # | Item | Status |
 |---|---|---|
 | D1 | A Cologne admin will run, or let the cron run, `redo_xampp_selective.sh` so the 2026-05 `csl-orig` fixes propagate to Stardict/JSON/homepage. | Awaiting Cologne admin; not M.G.'s action |
+| D4 | **Taxonomy drift watch** ([DRIFT_WATCH.md](DRIFT_WATCH.md)): OK to (a) enable the weekly `dict-audit.yml` backstop now (reuses `TOOLING_AUDIT_TOKEN`), and (b) pilot the event-driven `needs-triage` guard on `GRA` before fanning out to all repos? | Awaiting M.G. decision |
 
 ---
 

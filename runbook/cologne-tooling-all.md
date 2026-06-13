@@ -70,13 +70,16 @@ Queue every repo printed `UNPROCESSED` (after routing dictionary/archive repos v
 ### Skip these (dictionary repos — use `cologne-issue-runbook.md` instead)
 `PWG`, `PWK`, `MWS`, `MD`, `AP`, `AP90`, `GRA`, `FRI`, `SCH`, `DCS`, `VCP`, `ApteES`, `SKD`, `MCI`, `WIL`, `BHS`, `VEI`, `ACC`, `KRM`, `BUR`, `CAE`, `CCS`, `STC`, `BEN`, `BOR`, `INM`, `BOP`, `LRV`, `AMAR`, `SHS`, `KNA`, `KOW`, `PUI`
 
-(`CORRECTIONS` is **not** a dictionary — it is the cross-dictionary correction-history meta repo; it is triaged here, under Build/meta below.)
+(`CORRECTIONS` is **not** a dictionary — it is the cross-dictionary correction-history meta repo. Per [DECISIONS_NEEDED.md](../docs/DECISIONS_NEEDED.md) A2 it is **skipped as meta** (like `COLOGNE`); see *Skip these (meta repos)* below.)
 
 ### Skip these (archives, no triage needed)
 `santamlegacy`, `temp_corrections_*`, `test_cologne_push`, `Wil-YAT`, `MW72` (legacy 1872 dict, low activity)
 
 ### Already-processed (skip)
 `csl-observatory` (was processed under the dictionary runbook by accident — needs **re-processing** with the tooling runbook to swap label sets).
+
+### Skip these (meta / coordination repos — per DECISIONS_NEEDED.md A2)
+`COLOGNE` (456 issues) and `CORRECTIONS` (442 issues) are cross-dictionary **issue-tracker / coordination** repos — not dictionaries and not tooling code. Item A2 records them as intentionally **not triaged** under either taxonomy (legacy/meta), alongside `temp_corrections_*`. Leave them untouched unless that decision is revisited.
 
 ### Tool repo categories and processing order
 
@@ -89,7 +92,7 @@ Process in this order (most foundational first):
 5. **Scanned books**: `csl-kale`, `csl-westergaard`, `csl-whitroot`
 6. **Web backend**: `csl-apidev`, `mw-dev`
 7. **Web frontend**: `csl-app`, `csl-websanlexicon`, `csl-homepage`, `csl-doc`, `sanskrit-lexicon.github.io`
-8. **Build/meta**: `cologne-hugo`, `sanskrit-fonts`, `csl-newsletter`, `COLOGNE`, `CORRECTIONS` (correction-history meta repo)
+8. **Build/meta**: `cologne-hugo`, `sanskrit-fonts`, `csl-newsletter`
 9. **Cross-script add-ons**: `ArabicInSanskrit`, `GreekInSanskrit`
 
 Plus the special meta repo: `csl-observatory` (re-process with tooling labels).
