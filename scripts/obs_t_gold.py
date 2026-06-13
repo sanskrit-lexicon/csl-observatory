@@ -22,7 +22,10 @@ I/O   : validation/gold_sample.csv          (blind sheet to annotate)
         reports/obs_t_validation.md          (--score output)
         validation/gold_metrics.json         (--score output)
 
-Usage:  python scripts/obs_t_gold.py --make [N_PER_CELL]
+--make refuses to overwrite a sheet that already carries hand annotations (it
+would discard them); pass --force to draw a fresh sample anyway.
+
+Usage:  python scripts/obs_t_gold.py --make [N_PER_CELL] [--force]
         python scripts/obs_t_gold.py --score
 """
 import csv, json, os, random, sys
@@ -81,7 +84,33 @@ Tips:
 """
 
 
-def make(cap):
+# Columns a human fills in by hand; never clobber these without --force.
+ANNOTATION_COLS = ('gold_component', 'gold_component_2', 'notes')
+
+
+def count_annotations(path, cols):
+    """How many rows in an existing sheet carry hand-entered annotations."""
+    if not os.path.exists(path):
+        return 0
+    try:
+        with open(path, encoding='utf-8') as f:
+            rows = list(csv.DictReader(f))
+    except Exception:
+        return 0
+    return sum(1 for r in rows if any((r.get(c) or '').strip() for c in cols))
+
+
+def make(cap, force=False):
+    # The sheet is git-tracked and gets hand-annotated (gold_component). Drawing a
+    # fresh blind sample would discard that work, so refuse unless --force.
+    existing = count_annotations(SHEET, ANNOTATION_COLS)
+    if existing and not force:
+        sys.exit(
+            f'refusing to overwrite {os.path.relpath(SHEET, ROOT)}: it carries '
+            f'{existing} hand-annotated row(s). Re-drawing the blind sample would '
+            f'discard them. Use --score to read the current sheet, or back it up '
+            f'and pass --force to draw a new sample.'
+        )
     with open(FINAL, encoding='utf-8') as f:
         rows = list(csv.DictReader(f))
     cells = defaultdict(list)
@@ -230,7 +259,7 @@ def main():
     if '--make' in sys.argv:
         i = sys.argv.index('--make')
         cap = int(sys.argv[i + 1]) if len(sys.argv) > i + 1 and sys.argv[i + 1].isdigit() else CAP_PER_CELL
-        make(cap)
+        make(cap, force='--force' in sys.argv)
     elif '--score' in sys.argv:
         score()
     else:
