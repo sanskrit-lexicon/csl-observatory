@@ -12,6 +12,10 @@ const annual = await FileAttachment("data/timeseries_annual.csv").csv({typed: tr
 const repos = await FileAttachment("data/repos.csv").csv({typed: true});
 const typology = await FileAttachment("data/issue_typology_annual.csv").csv({typed: true});
 const contributors = await FileAttachment("data/contributors.csv").csv({typed: true});
+const busFactor = await FileAttachment("data/bus_factor.csv").csv({typed: true});
+const repoHealth = await FileAttachment("data/repo_health.csv").csv({typed: true});
+const taxonomy = await FileAttachment("data/taxonomy_adoption.csv").csv({typed: true});
+const velocity = await FileAttachment("data/velocity_timeline.csv").csv({typed: true});
 ```
 
 <div class="grid grid-cols-4">
@@ -32,6 +36,26 @@ const contributors = await FileAttachment("data/contributors.csv").csv({typed: t
     <span class="big">${new Set(contributors.map(d => d.login)).size}</span>
   </div>
 </div>
+
+## Key findings
+
+```js
+const humans = contributors.filter(d => d.type !== "Bot");
+const personTotal = d3.rollup(humans, v => d3.sum(v, x => x.contributions), d => d.login);
+const grand = d3.sum(personTotal.values());
+const coreShare = d3.sum(["funderburkjim", "drdhaval2785", "gasyoun"], l => personTotal.get(l) || 0) / grand;
+const bf1 = busFactor.filter(d => d.bus_factor === 1).length;
+const noLicense = repoHealth.filter(d => d.license_class === "none").length;
+const conformant = d3.sum(taxonomy, d => d.conformant) / d3.sum(taxonomy, d => d.issues);
+const peakAuthors = d3.max(velocity, d => d.active_authors);
+```
+
+Four offline, reproducible analyses of the organization. The picture: productive, well-governed, actively maintained — but carried by a tiny core and thin on reuse metadata. Full write-up: [synthesis report](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/synthesis.md).
+
+- **Concentration** — the core trio carries **${(coreShare * 100).toFixed(0)}%** of all contributions, and **${bf1} of ${busFactor.length}** repos have a bus factor of 1. [Community →](/community)
+- **Activity** — thousands of commits, yet the busiest year drew only **${peakAuthors}** distinct authors: volume-per-person, not a growing base. [Activity →](/activity)
+- **Process** — **${(conformant * 100).toFixed(0)}%** of issues are fully taxonomy-conformant, after adoption climbed to a 92% peak in 2025. [Issue taxonomy →](/coverage)
+- **Hygiene** — **${noLicense} of ${repoHealth.length}** repos carry no license, and no contributor has a registered ORCID. [Repo health →](/repo-health)
 
 ## Lead figure: How the work changed over 12 years
 
@@ -96,10 +120,11 @@ Plot.plot({
 ## Navigation
 
 - [**Activity**](/activity) — issue/commit/PR throughput timelines, heatmaps, GitHub-style year grids
-- [**Coverage**](/coverage) — what got digitized, corrected, linked. Issue typology by repo
+- [**Issue taxonomy**](/coverage) — GitHub issue and PR label patterns by repo
 - [**Community**](/community) — contributor growth, retention, bus-factor analysis
+- [**Repository Health**](/repo-health) — licensing, default-branch, and hygiene audit
 - [**Tech Stack**](/tech-stack) — language evolution, dependency graphs, runbook adoption
-- [**Benchmarks**](/benchmarks) — comparison with TLG, Perseus, CDLI, DDBDP, sister projects
+- [**Repository Benchmarks**](/benchmarks) — project-level openness and repository evidence
 - [**Data**](/data) — raw downloads (CSV, JSON, Parquet) for reproducibility
 
 ---

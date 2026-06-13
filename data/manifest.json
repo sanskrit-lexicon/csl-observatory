@@ -1,13 +1,13 @@
 {
-  "snapshot_date": "2026-05",
-  "transformed_at": "2026-05-16T05:50:41.465288",
+  "snapshot_date": "2026-06",
+  "transformed_at": "2026-06-01T08:35:35.166758",
   "files": {
-    "issues.csv": 5277,
-    "commits.csv": 9292,
+    "issues.csv": 5413,
+    "commits.csv": 9877,
     "repos.csv": 76,
-    "contributors.csv": 206,
-    "timeseries_monthly.csv": 1339,
+    "contributors.csv": 209,
+    "timeseries_monthly.csv": 1341,
     "timeseries_annual.csv": 382,
-    "issue_typology_annual.csv": 135
+    "issue_typology_annual.csv": 140
   }
 }

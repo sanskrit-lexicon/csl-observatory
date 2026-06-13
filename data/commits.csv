@@ -8,6 +8,7 @@ ACC,6a349af264c5,2026-05-15T09:24:51Z,gasyoun,Mārcis Gasūns,gasyoun@users.nore
 ACC,324e7e0627bd,2026-05-15T09:24:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: update README.md with issue taxonomy
 ACC,6524cbfb74b1,2026-05-15T07:38:40Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 ACC,0287cf231518,2017-05-28T18:26:15Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+AMAR,71f492c698bc,2026-05-29T05:14:33Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs: initial README and CLAUDE.md; full issue triage (labels, milestones, projects)"
 AMAR,c91f38c11af6,2026-05-16T04:09:33Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (n/a, Amarasiṃha (anc.))"
 AMAR,2993d26f6798,2026-05-15T07:19:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 AMAR,d2235bbd197c,2024-01-30T05:22:00Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,gender info listed
@@ -15,6 +16,14 @@ AMAR,b32522acb934,2024-01-30T05:16:43Z,drdhaval2785,drdhaval2785,drdhaval2785@gm
 AMAR,5a0b37adacc5,2024-01-30T04:11:43Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,amar1 converted to amar.txt
 AMAR,9c1ac6fc71cb,2024-01-30T04:10:41Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,initial commit
 AMAR,7d064f3640c9,2024-01-30T03:54:09Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+AP,752a18116e49,2026-05-29T03:13:15Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .pre-commit-config.yaml (yaml-only)
+AP,16939c854d25,2026-05-29T03:11:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add CodeQL SAST workflow (php)
+AP,5242c4d3c6ce,2026-05-29T03:07:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .github/dependabot.yml for GitHub Actions auto-updates
+AP,bce7262118ab,2026-05-28T23:59:52Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): smarter change-file validator + per-repo excludes
+AP,4c3fd1232d2f,2026-05-28T23:56:09Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): smarter change-file validator + per-repo excludes
+AP,9b9425ecae49,2026-05-28T23:40:35Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add CI workflow (dictionary (excluded: ['issues']))
+AP,a6a522bcf5ea,2026-05-28T22:02:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add LICENSE (CC-BY-SA-4.0)
+AP,baf5ccf9ac6a,2026-05-28T15:46:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: standardise CONTRIBUTING.md (verdict=boilerplate)
 AP,1bf2b9d871b6,2026-05-16T04:08:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1957, V.S. Apte (rev. P.K. Gode et al.))"
 AP,1bb942c5cecc,2026-05-14T22:51:35Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: trim redundant issue taxonomy from CLAUDE.md (covered by org-level)
 AP,503948e2a022,2026-05-14T06:54:11Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,removed accidental commit of tmp
@@ -148,6 +157,17 @@ AP,e367c106da00,2025-07-06T20:54:23Z,funderburkjim,funderburkjim,funderburkjim@g
 AP,3eb244c4d4a6,2025-07-06T20:14:16Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,initialize issues and issues/issue1. #1
 AP,090dd4101e28,2025-07-06T20:07:47Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initialize .gitignore
 AP,ca4b6efeb3ee,2025-07-06T20:04:17Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+AP90,49d31068931b,2026-05-29T03:13:15Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .pre-commit-config.yaml (yaml-only)
+AP90,e1abbf60313d,2026-05-29T03:11:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add CodeQL SAST workflow (php)
+AP90,843799bbe28c,2026-05-29T03:07:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .github/dependabot.yml for GitHub Actions auto-updates
+AP90,a7cd2d3b62b1,2026-05-28T23:59:56Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): smarter change-file validator + per-repo excludes
+AP90,78d62f4bd663,2026-05-28T23:56:13Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): smarter change-file validator + per-repo excludes
+AP90,f2f88e69ac42,2026-05-28T23:51:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): remove double-comma in ruff.toml exclude array
+AP90,adf5619f7b80,2026-05-28T23:40:40Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: add CI workflow (dictionary (excluded: ['ap57_verbs01', 'apte_s2h', 'compounds', 'verbs01']))"
+AP90,5022338d1299,2026-05-28T15:50:50Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: merge remote changes (keep our CONTRIBUTING.md)
+AP90,6a8179a8e19c,2026-05-28T15:46:07Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: standardise CONTRIBUTING.md (verdict=boilerplate)
+AP90,da2671041943,2026-05-17T16:39:15Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Merge branch 'master' of github.com:sanskrit-lexicon/AP90
+AP90,1b67d3c79e9e,2026-05-17T16:39:05Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,ap90 link targets. #29
 AP90,9c67fdb7a0e7,2026-05-16T04:08:14Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1890, V.S. Apte)"
 AP90,6ae1f7ae6162,2026-05-15T12:04:21Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 AP90,1c01d468c925,2026-05-15T12:04:18Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
@@ -199,6 +219,17 @@ AP90,2c30e42dfc90,2020-03-16T01:06:23Z,funderburkjim,funderburkjim,funderburkjim
 AP90,654a0781729a,2020-03-16T01:05:35Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,additional verbs found by comparison to 1957ap
 AP90,b96fa717ea4c,2020-03-14T19:06:57Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,initial commit. verbs01
 AP90,1f2709b23b87,2020-03-14T19:00:33Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+ApteES,2a7f8b060805,2026-05-29T03:13:15Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .pre-commit-config.yaml (yaml-only)
+ApteES,1582d5c94ea1,2026-05-29T03:07:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .github/dependabot.yml for GitHub Actions auto-updates
+ApteES,d9db69396e4a,2026-05-28T23:59:59Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): smarter change-file validator + per-repo excludes
+ApteES,40a84bf3d5ae,2026-05-28T23:56:17Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): smarter change-file validator + per-repo excludes
+ApteES,9b9bfb24120b,2026-05-28T23:51:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): remove double-comma in ruff.toml exclude array
+ApteES,9434b51d7ad3,2026-05-28T23:40:44Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: add CI workflow (dictionary (excluded: ['ae_saninvert', 'hwspellcheck', 'issues', 'transcode']))"
+ApteES,ec1325492560,2026-05-28T22:40:37Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add issue templates
+ApteES,d0b288e7bff8,2026-05-28T22:04:03Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add PR template
+ApteES,07c72c24eb48,2026-05-28T22:02:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add LICENSE (CC-BY-SA-4.0)
+ApteES,aa97e3d16d53,2026-05-28T15:50:56Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: merge remote changes (keep our CONTRIBUTING.md)
+ApteES,0f743eb69ace,2026-05-28T15:46:13Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: standardise CONTRIBUTING.md (verdict=missing)
 ApteES,b558b61ee49f,2026-05-16T04:08:33Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1884, V.S. Apte)"
 ApteES,2512fe9e7162,2026-05-15T09:31:06Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 ApteES,be7d4add1374,2026-05-15T09:31:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
@@ -301,6 +332,8 @@ BHS,7693d4f8e52d,2021-08-19T20:14:43Z,funderburkjim,funderburkjim,funderburkjim@
 BHS,a3962b63bbe6,2016-01-02T04:16:54Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,Correction issue 216
 BHS,aaf232301c6e,2016-01-02T03:47:54Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,Initial unaltered commit
 BHS,21df15923ae0,2016-01-02T03:42:33Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+BOP,f0120e6bd65b,2026-05-30T11:27:54Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore: add .gitattributes to normalize line endings
+BOP,64ad0936201d,2026-05-29T22:20:20Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs: expand README + CLAUDE.md; add community, license & citation files"
 BOP,b65742ed82d6,2026-05-16T04:09:27Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1847, Franz Bopp)"
 BOP,9efaf6cf8e02,2026-05-15T07:20:00Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 BOP,28f19db3f422,2024-05-09T18:57:35Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,#6 Finishing touches
@@ -327,6 +360,8 @@ BOP,184959b657ca,2022-05-23T21:21:30Z,funderburkjim,funderburkjim,funderburkjim@
 BOP,e107de0f2a97,2022-05-23T17:31:49Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,punctuation after greek text. #1
 BOP,4465d3a1ac6c,2022-05-04T21:58:33Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Greek text addition. #1
 BOP,8ffbd8512411,2022-05-02T16:46:21Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+BOR,bc3aa82af969,2026-05-30T11:28:16Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore: add .gitattributes to normalize line endings
+BOR,5c6e6cb11679,2026-05-29T22:20:38Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs: expand README + CLAUDE.md; add community, license & citation files"
 BOR,469658e00b01,2026-05-16T04:09:21Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1877, A. Borooah)"
 BOR,d36fb923c72c,2026-05-15T07:38:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 BOR,99b353d58c71,2021-09-14T12:12:31Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,added equal mark
@@ -341,6 +376,8 @@ BOR,d877742df320,2021-09-14T11:19:51Z,drdhaval2785,Dhaval Patel,drdhaval2785@gma
 BOR,45224e31f8c8,2021-09-14T04:54:03Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,removed space
 BOR,7d25470b9310,2021-09-14T04:52:48Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,initial try
 BOR,75af7dab0858,2021-09-14T04:47:08Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,first commit
+BUR,40f26f73f297,2026-05-30T11:27:48Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore: add .gitattributes to normalize line endings
+BUR,885dec1e09b3,2026-05-29T22:20:15Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs: expand README + CLAUDE.md; add community, license & citation files"
 BUR,68dbafe27e00,2026-05-16T04:09:05Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1866, Émile Burnouf)"
 BUR,e15674408ff3,2026-05-15T09:32:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 BUR,ad3ff3d43eaf,2026-05-15T09:32:31Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
@@ -410,6 +447,17 @@ CCS,d3ab8313ad13,2026-05-15T07:38:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.nore
 CCS,07eb4dad8829,2020-04-18T00:44:52Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Update README.md
 CCS,9d2f4fb5556d,2020-04-15T02:25:26Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,verbs01 inital commit
 CCS,44b9187e01cf,2020-04-15T01:40:12Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+COLOGNE,bc7a75d3eb07,2026-05-29T03:13:21Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .pre-commit-config.yaml (python+yaml)
+COLOGNE,2796382dc930,2026-05-29T03:11:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add CodeQL SAST workflow (python)
+COLOGNE,d547dffe2e94,2026-05-29T03:07:09Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .github/dependabot.yml for GitHub Actions auto-updates
+COLOGNE,20f5f078a055,2026-05-29T00:00:36Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): smarter change-file validator + per-repo excludes
+COLOGNE,d4bdd62e3958,2026-05-28T23:56:56Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): smarter change-file validator + per-repo excludes
+COLOGNE,8aef437d0114,2026-05-28T23:52:14Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): remove double-comma in ruff.toml exclude array
+COLOGNE,2e2657ff0f51,2026-05-28T23:40:25Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: add CI workflow (tooling-text (excluded: ['enhancements', 'iast', 'stardict']))"
+COLOGNE,ef0aadb123e9,2026-05-28T22:40:52Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add issue templates
+COLOGNE,1b985cad242d,2026-05-28T22:04:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add PR template
+COLOGNE,f06e01ab0ce4,2026-05-28T22:02:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add LICENSE (GPL-3.0)
+COLOGNE,034a39a8978f,2026-05-28T15:38:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: standardise CONTRIBUTING.md (verdict=boilerplate)
 COLOGNE,35d33a81b51c,2026-05-15T15:03:37Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add cleanup taxonomy proposal tooling
 COLOGNE,191a67119413,2026-05-15T14:22:29Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add architecture review roadmap
 COLOGNE,4699cdd04531,2026-05-15T13:55:10Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CODE_OF_CONDUCT.md
@@ -1312,6 +1360,17 @@ CORRECTIONS,fc6425eef0c8,2014-10-02T22:32:10Z,funderburkjim,funderburkjim,funder
 CORRECTIONS,c25d7de00947,2014-09-30T01:23:48Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initial commit
 CORRECTIONS,e1ccb24221a0,2014-09-30T01:19:25Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Update README.md
 CORRECTIONS,fed7c9d9b720,2014-09-30T01:17:52Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+DCS,9c27d8a75a3a,2026-05-29T05:14:33Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs: initial README and CLAUDE.md; full issue triage (labels, milestones, projects)"
+DCS,30cabf8e16bf,2026-05-29T03:13:21Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .pre-commit-config.yaml (yaml-only)
+DCS,c7fecf5e507a,2026-05-29T03:07:09Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .github/dependabot.yml for GitHub Actions auto-updates
+DCS,8715ef294f41,2026-05-29T00:00:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): smarter change-file validator + per-repo excludes
+DCS,7258f6c12576,2026-05-28T23:56:21Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): smarter change-file validator + per-repo excludes
+DCS,e7bf2be9aaf2,2026-05-28T23:40:48Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add CI workflow (dictionary (excluded: none))
+DCS,2b5ace3f28f3,2026-05-28T22:40:41Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add issue templates
+DCS,bbbb59cf6279,2026-05-28T22:04:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add PR template
+DCS,d683fea0b1ea,2026-05-28T22:02:02Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add LICENSE (CC-BY-SA-4.0)
+DCS,66a01055d66b,2026-05-28T15:51:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: merge remote changes (keep our CONTRIBUTING.md)
+DCS,b407e7b6128e,2026-05-28T15:46:24Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: standardise CONTRIBUTING.md (verdict=missing)
 DCS,8a38dc7aeada,2026-05-16T04:08:26Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (n/a, Hellwig (sister project))"
 DCS,90d3c62b08a3,2026-05-15T09:30:47Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 DCS,b763e2657a74,2026-05-15T09:30:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
@@ -1324,6 +1383,13 @@ DCS,2962b125c7d8,2014-10-19T08:51:04Z,gasyoun,Marcis Gasuns,gasyoun@users.norepl
 DCS,3d15595736f0,2014-10-06T15:25:37Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Renamed abbreviations
 DCS,e676a72be5ae,2014-10-06T15:12:27Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Lexical Data
 DCS,01637b5b703e,2014-01-17T07:47:11Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Initial commit
+FRI,60247a141be2,2026-05-29T03:13:25Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .pre-commit-config.yaml (yaml-only)
+FRI,f0dae9a94707,2026-05-29T03:07:09Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .github/dependabot.yml for GitHub Actions auto-updates
+FRI,877d7e264f1b,2026-05-29T00:00:08Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): smarter change-file validator + per-repo excludes
+FRI,b617f9672e1b,2026-05-28T23:56:25Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): smarter change-file validator + per-repo excludes
+FRI,e2efd6eb0d7d,2026-05-28T23:40:53Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add CI workflow (dictionary (excluded: none))
+FRI,4e4bb7986ecd,2026-05-28T22:02:02Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add LICENSE (CC-BY-SA-4.0)
+FRI,c0cdd7301cc2,2026-05-28T15:46:27Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: standardise CONTRIBUTING.md (verdict=boilerplate)
 FRI,4a357b8bcfc8,2026-05-16T04:08:20Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (2015, Oldřich Fríš (ed. ABV Moscow))"
 FRI,db163ae48cee,2026-05-14T22:51:36Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: trim redundant issue taxonomy from CLAUDE.md (covered by org-level)
 FRI,1b77b901aa1d,2026-05-08T08:53:59Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add session state journal
@@ -1335,6 +1401,16 @@ FRI,596f26b84c3b,2025-02-02T03:24:29Z,funderburkjim,funderburkjim,funderburkjim@
 FRI,c0d6bf299037,2024-01-26T20:49:53Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,"Initial version of fri.txt, named as fri_00.txt. #1"
 FRI,b82479ccb71e,2024-01-26T20:40:17Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Add .gitignore
 FRI,56219ea8adbb,2024-01-26T12:33:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Initial commit
+GRA,9ce3bc142d01,2026-05-29T03:13:26Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .pre-commit-config.yaml (yaml-only)
+GRA,41290eb07965,2026-05-29T03:11:48Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add CodeQL SAST workflow (php)
+GRA,2d6527eb671b,2026-05-29T03:07:14Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .github/dependabot.yml for GitHub Actions auto-updates
+GRA,765b022084b1,2026-05-29T00:00:12Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): smarter change-file validator + per-repo excludes
+GRA,f54f17481a30,2026-05-28T23:56:29Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): smarter change-file validator + per-repo excludes
+GRA,35979215c3a3,2026-05-28T23:51:53Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): remove double-comma in ruff.toml exclude array
+GRA,0b76d395d21a,2026-05-28T23:40:57Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: add CI workflow (dictionary (excluded: ['issues', 'verbs01', 'vn']))"
+GRA,ebcda65e78b4,2026-05-28T22:02:02Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add LICENSE (CC-BY-SA-4.0)
+GRA,92c1ae7acddd,2026-05-28T15:51:07Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: merge remote changes (keep our CONTRIBUTING.md)
+GRA,0b04133365a6,2026-05-28T15:46:30Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: standardise CONTRIBUTING.md (verdict=boilerplate)
 GRA,422b3b497a57,2026-05-16T04:08:17Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1873, Hermann Grassmann)"
 GRA,7b5bcee1fb90,2026-05-15T12:04:03Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 GRA,dead32e45e62,2026-05-15T12:04:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
@@ -1401,6 +1477,8 @@ GreekInSanskrit,982b78a5418e,2026-05-15T13:57:11Z,gasyoun,Mārcis Gasūns,gasyou
 GreekInSanskrit,3ec1f87e992b,2026-05-15T07:38:47Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 GreekInSanskrit,05dfd404909d,2015-09-09T17:05:09Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,"Place of accents, word structure, word endings, praefixoid list"
 GreekInSanskrit,b1955c3ac34a,2015-04-15T01:46:39Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+INM,3b5fe7abbd65,2026-05-30T11:28:00Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore: add .gitattributes to normalize line endings
+INM,53b0b425443b,2026-05-29T22:20:24Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs: expand README + CLAUDE.md; add community, license & citation files"
 INM,a9f0da1e733f,2026-05-16T04:09:24Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1904, Sörensen)"
 INM,9a0f89a67fa4,2026-05-15T07:20:23Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 INM,c5e91237ee9a,2022-06-02T02:09:52Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,compare_greek1.  #9
@@ -1410,12 +1488,16 @@ INM,1bcf101577ae,2021-12-15T02:49:36Z,funderburkjim,funderburkjim,funderburkjim@
 INM,783d282d803c,2021-12-11T03:13:49Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,greek folder contains details of insertion of Greek text into
 INM,187bd4c66e72,2021-12-04T03:20:40Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Add Andhrabharati's version of the concordance. #1
 INM,7ac4e606c9af,2021-12-03T23:44:57Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+KNA,9c12fb46f4f7,2026-05-29T05:13:40Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs: initial README and CLAUDE.md; full issue triage (labels, milestones, projects)"
 KNA,3bf341fd06aa,2026-05-16T04:09:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1893, Friedrich Knauer)"
 KNA,765fd43d12c8,2026-05-15T07:20:05Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 KNA,dfb870ad0351,2026-02-21T14:10:52Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Initial commit
+KOW,4f1f06c6adf2,2026-05-29T05:13:23Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs: initial README and CLAUDE.md; full issue triage (labels, milestones, projects)"
 KOW,9ac6017ede40,2026-05-16T04:09:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1854, Каэтан Коссович (1815-1883))"
 KOW,3f223a8d4fe1,2026-05-15T07:20:06Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 KOW,bf0d64a8e670,2026-02-21T14:29:22Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Initial commit
+KRM,0523c6b731c0,2026-05-30T11:28:05Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore: add .gitattributes to normalize line endings
+KRM,aca56e7f9f98,2026-05-29T22:20:29Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs: expand README + CLAUDE.md; add community, license & citation files"
 KRM,efc731137939,2026-05-16T04:09:02Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1965, Bhattoji Dīkṣita (anc.))"
 KRM,42ca49b752b8,2026-05-15T09:32:24Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 KRM,ac4824c0c9e7,2026-05-15T09:32:21Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
@@ -1428,6 +1510,8 @@ KRM,0d47b59df01d,2020-04-18T00:53:53Z,funderburkjim,funderburkjim,funderburkjim@
 KRM,d6b8f367bc1c,2020-03-31T19:01:41Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,note on unfinished work re Westergaard Dhatupatha
 KRM,c9d844038768,2020-03-31T18:55:19Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initial commit
 KRM,24ca2b5cf65c,2020-03-31T18:37:43Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+LRV,713c40d213d0,2026-05-22T12:45:24Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,LRV missing compound headwords added
+LRV,946befc7f717,2026-05-22T12:27:53Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Started handling missing compound headword info in #28
 LRV,92b386fd619d,2026-05-16T04:09:30Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1889, L.R. Vaidya)"
 LRV,62f5bfce303b,2026-05-15T07:20:12Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 LRV,5b0363aa915d,2026-02-16T04:51:42Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,insert lbody where missing
@@ -1560,6 +1644,15 @@ MCI,ef25cdab4d2c,2026-05-15T09:31:18Z,gasyoun,Mārcis Gasūns,gasyoun@users.nore
 MCI,3dbe54909e85,2026-05-15T09:24:27Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: update CLAUDE.md
 MCI,c761419ac636,2026-05-15T09:24:24Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: update README.md with issue taxonomy
 MCI,1ae1f310e349,2026-05-15T07:38:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
+MD,7cdffc5043e7,2026-05-29T03:13:26Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .pre-commit-config.yaml (yaml-only)
+MD,2d5618bf7cdb,2026-05-29T03:07:14Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .github/dependabot.yml for GitHub Actions auto-updates
+MD,ba2d09f6d989,2026-05-29T00:00:16Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): smarter change-file validator + per-repo excludes
+MD,c7cb07036388,2026-05-28T23:56:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): smarter change-file validator + per-repo excludes
+MD,f255f19b33d0,2026-05-28T23:51:57Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): remove double-comma in ruff.toml exclude array
+MD,30bd3f9381c1,2026-05-28T23:41:02Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: add CI workflow (dictionary (excluded: ['mdissues', 'verbs01']))"
+MD,a3e41d242166,2026-05-28T22:02:02Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add LICENSE (CC-BY-SA-4.0)
+MD,c662cd37eb84,2026-05-28T15:51:19Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: merge remote changes (keep our CONTRIBUTING.md)
+MD,4205b8da9c08,2026-05-28T15:46:35Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: standardise CONTRIBUTING.md (verdict=boilerplate)
 MD,953eb887433e,2026-05-16T04:08:08Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1893, A.A. Macdonell)"
 MD,212846f767ff,2026-05-15T12:04:38Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 MD,26d4810693b5,2026-05-15T12:04:36Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
@@ -1636,12 +1729,88 @@ MD,ce260770698f,2022-01-03T03:20:09Z,funderburkjim,funderburkjim,funderburkjim@g
 MD,4b49b176d26b,2020-04-18T00:35:20Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Update README.md
 MD,f0a25fe30f73,2020-04-17T21:42:10Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,verbs01 initial commit
 MD,48ad31cc87f3,2020-04-17T21:09:32Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+MW72,32132c238a5a,2026-05-30T11:28:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore: add .gitattributes to normalize line endings
+MW72,441046c1c990,2026-05-29T22:20:33Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs: expand README + CLAUDE.md; add community, license & citation files"
 MW72,f60aef05f9ac,2026-05-15T07:53:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 MW72,8d1d9de1b5be,2016-11-19T20:24:57Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,"correct check_ea, check_ea1 and rerun"
 MW72,5cf4de93d91c,2016-11-19T03:15:45Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,finish with corrections from prior commit
 MW72,6152839e897d,2016-11-18T20:02:16Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,revise for corrections to mw72
 MW72,407551355822,2016-11-16T00:18:12Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,20161107 initial commit
 MW72,1f9d6101296f,2014-08-24T21:07:18Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+MWS,52b224de114c,2026-05-29T03:13:30Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .pre-commit-config.yaml (yaml-only)
+MWS,06a2e67dddcf,2026-05-29T03:11:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add CodeQL SAST workflow (php)
+MWS,8e35153d5177,2026-05-29T03:07:15Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .github/dependabot.yml for GitHub Actions auto-updates
+MWS,37ebd5054abb,2026-05-29T00:00:19Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): smarter change-file validator + per-repo excludes
+MWS,b615393dd4c8,2026-05-28T23:56:38Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): smarter change-file validator + per-repo excludes
+MWS,a0f8e3602a46,2026-05-28T23:52:50Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add CI workflow (dictionary)
+MWS,19cb95bbcdcb,2026-05-28T14:19:21Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Silence remaining Liquid warning + document the gotcha (#202)
+MWS,bfe917c87058,2026-05-28T06:48:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Wrap files containing `{{…}}` literals in `{% raw %}` to fix Pages build (#201)
+MWS,101000fe0d3a,2026-05-28T06:38:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Fix remaining Liquid syntax errors blocking Pages build (#200)
+MWS,7e33532974e8,2026-05-28T05:35:10Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Fix Liquid syntax error in DATA_DICTIONARY.md inline-markup table (#198)
+MWS,726535bc10a1,2026-05-27T21:31:22Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #196 from sanskrit-lexicon/docs-pass
+MWS,ceda6e3125ca,2026-05-27T21:09:06Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: Round 2 complete — HANDOFF_R2_OPUS updated to ✅ all 10 done
+MWS,a6b0476b779e,2026-05-27T20:45:28Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: HANDOFF_R2_OPUS.md — fresh-chat handoff for atlas authoring
+MWS,4fed16bfb6f8,2026-05-27T20:38:50Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: HANDOFF_PROMPTS — reconcile decision-flow vs Round-2 pipeline
+MWS,55a4b5db9407,2026-05-27T20:30:29Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: HANDOFF_PROMPTS Round 2 — atlas authoring across all 3 tiers
+MWS,d2584db5fb08,2026-05-27T19:37:47Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: HANDOFF reflects final post-Opus state
+MWS,2f7b6404175d,2026-05-27T19:36:46Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: refresh supplement ZIP manifest post-rebase
+MWS,24005406e032,2026-05-27T19:34:29Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: rebuild SUPPLEMENT_MANIFEST.md against current branch state
+MWS,dd6862a710e4,2026-05-27T19:29:18Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: Batch B — D18 + D19 + D20 (empirical doubts closed)
+MWS,aa3731ff2f1c,2026-05-27T19:19:19Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: Batch A — D17 + D16 + D22 (editorial doubts closed)
+MWS,4d6fb37edcab,2026-05-27T19:14:24Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs-pass: D21 RESOLVED — MW 1872 preface check, three-stage L.-hedge lineage"
+MWS,620900697c76,2026-05-27T14:31:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs-pass: O9 — Russian-language venue paper (PAPER_RU.md, ~4.8K words)"
+MWS,851e577a379f,2026-05-27T14:26:22Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs-pass: O8 — IJL cover letter (single-page, 4 justifications)"
+MWS,33cd6482cbce,2026-05-27T14:25:05Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs-pass: O7 — hostile peer-review pass (D16–D22 recorded, not fixed)"
+MWS,a7409eed2c44,2026-05-27T14:22:28Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: O6 — maintainer-review status refresh across 5 pilots
+MWS,3a9e55f83170,2026-05-27T11:07:08Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs-pass: O5 — Phase-4 atlas dict ordering, chapter templates, minimum data (Decision 29)"
+MWS,88e526c7a801,2026-05-27T11:04:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: O4 — Russian translation review pass (Sanskritology conventions)
+MWS,4a9289feafca,2026-05-27T11:01:33Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: O3 — IJL polish (5.7K → 7.7K words; abstract tightened; §9 now reflects O1+O2)
+MWS,98178495517d,2026-05-27T10:57:21Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: O2 — refactor typology to 8 primary types + 3 orthogonal properties
+MWS,c0d152155f8d,2026-05-27T10:53:08Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: O1 — resolve D2 by reading Cappeller/Benfey print prefaces
+MWS,9b2881e78136,2026-05-27T18:58:07Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: PNG↔SVG parity check and re-render
+MWS,1b410c751937,2026-05-27T18:57:16Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: footer/version-stamp regeneration
+MWS,cb5908300468,2026-05-27T18:55:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: README synchronisation
+MWS,506b15424dab,2026-05-27T18:54:02Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: lint sweep
+MWS,c190573f4b44,2026-05-27T18:53:03Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: link audit
+MWS,d98cec2d90e7,2026-05-27T18:46:25Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: S11 consistency audit + S12 ROADMAP velocity update
+MWS,48dfda4fc1c1,2026-05-27T14:29:29Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: S9 fully-linked issue body (PWK #115)
+MWS,e730a344ab7e,2026-05-27T14:28:09Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: full PWG DICT_PROFILE.md (S8)
+MWS,2541404ce816,2026-05-27T14:24:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: PWG ROADMAP.md composition (S7)
+MWS,aee9ff97bc2f,2026-05-27T14:19:51Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: Phase-4 wave-1 rollout script (S6)
+MWS,867d09b9ab7b,2026-05-27T14:05:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: S5 — per-dict block-matrix JSON + export_dict_blocks.py
+MWS,b5caaf8e2596,2026-05-27T13:47:48Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs-pass: S1 — refresh reproducibility supplement manifest (88 files, +SUPPLEMENT_MANIFEST.md self-bundled)"
+MWS,baf563dbeb10,2026-05-27T10:36:09Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs-pass: restructure HANDOFF_PROMPTS as three lists by model, with downshift criteria"
+MWS,617bdd034a90,2026-05-27T09:33:35Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: add HANDOFF_PROMPTS.md (kickoff templates + model selection)
+MWS,fb936821ee26,2026-05-27T09:26:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs-pass: refresh HANDOFF.md to current state (HEAD=1f8090c, post-audit-pass)"
+MWS,1f8090ceacb1,2026-05-24T11:37:29Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: reproducibility supplement builder (Decision 16)
+MWS,9d3bccac4b62,2026-05-24T11:31:41Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: full FDR stats appendix + docs-integrity pass (fix broken links/anchors)
+MWS,8e17f09af9d9,2026-05-24T10:14:06Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: add cross-dictionary comparison figures (Fig 5-6)
+MWS,b5cbaf4dc168,2026-05-24T05:47:48Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: complete cross-dict profiles for all 9 dicts (PWG/PWK/SKD/VCP)
+MWS,6d03eac45dc0,2026-05-24T05:41:21Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: deepen D1 to per-type profiles; resolve Cappeller asterisk to print-preface gap
+MWS,ded06f78400d,2026-05-23T21:16:54Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: add Cappeller (CAE) to the D2 hedge + D1 cross-dict audits
+MWS,be8f0a20d6d3,2026-05-23T21:05:46Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: empirical audits for microanalysis doubts D1/D2/D6/D7
+MWS,ca757697521a,2026-05-23T20:51:54Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: consolidate microanalysis into one paper (D4) + confirm Observable stack (D8)
+MWS,4d1ef958c177,2026-05-23T20:14:32Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: add HANDOFF.md for new chat continuity
+MWS,6e6fb28e0bba,2026-05-23T12:36:57Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: restructure VISUALISATIONS.md design rationale into 7 thematic decision sub-docs
+MWS,0901c8143b58,2026-05-23T12:24:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs-pass: build Tier-1 figures (heatmap, treemap, Sankey, Mermaid timeline) + DOUBTS critical review"
+MWS,e4b202b436bc,2026-05-23T12:10:47Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: add VCP+PWK to cross-dict; replace VISUALISATIONS estimates with real counts; fix csl-microsite -> csl-atlas
+MWS,a36614ac073c,2026-05-23T08:42:41Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: document VISUALISATIONS round-7 decisions (locale / footer / CI / versioning)
+MWS,2e6b23a9e33c,2026-05-23T08:37:44Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: document VISUALISATIONS round-6 decisions (heatmap layout / Sankey / citation style / atlas name)
+MWS,abc859678091,2026-05-23T08:30:00Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: document VISUALISATIONS round-5 decisions (dimensions / font / license / nav)
+MWS,8e5107d7f397,2026-05-23T08:25:35Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: document VISUALISATIONS round-4 decisions (legends / a11y / numbering / supp materials)
+MWS,2bb37af07de5,2026-05-23T08:19:41Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: document VISUALISATIONS round-3 decisions + summary table
+MWS,be41dc97884f,2026-05-23T08:15:46Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: document VISUALISATIONS implementation decisions round 2 (4 more)
+MWS,b3e355c8ef0b,2026-05-23T08:10:31Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: document VISUALISATIONS design decisions (5) + detailed normalisation analysis
+MWS,91c0dff1fc86,2026-05-23T07:42:43Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs-pass: add VISUALISATIONS.md catalogue (10 categories, 3 priority tiers)"
+MWS,de5f73bde512,2026-05-23T07:34:12Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: add 4-framework microstructural analysis of MW1899
+MWS,60cdc190e0ed,2026-05-23T07:07:25Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: distinguish operative (csl-pywork 2024) vs audit (MWS 2017) mwab_input
+MWS,b26e17431936,2026-05-23T05:21:13Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs-pass: prove WIL<-kosha, MW<-PWG lineage with quantified evidence"
+MWS,717f5b906fed,2026-05-23T05:09:25Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: add ROADMAP.md + fix WIL characterization
+MWS,6016641f07ee,2026-05-23T04:42:09Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs-pass: orthographical conventions, Beyond-PWG analysis, cross-dict comparison"
+MWS,aa29b4255144,2026-05-23T02:10:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs-pass: add typology, citation-markers callout, stats, MW72 links"
+MWS,1ae5fc006651,2026-05-22T20:27:41Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs-pass: deepen MWS documentation (CONTRIBUTING, CITATION, DATA_DICTIONARY, ENTRY_GUIDE)"
+MWS,1ab6c9841226,2026-05-22T19:46:29Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs-pass: replace [DRAFT] placeholders with researched content
+MWS,fd1d44ac23a2,2026-05-22T13:53:57Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs-pass: add DICT_PROFILE, ENTRY_GUIDE, update DATA_DICTIONARY, add issue templates"
 MWS,ac965c3afd24,2026-05-16T04:08:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1899, Monier Monier-Williams)"
 MWS,e5f98f43931c,2026-05-15T12:03:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 MWS,0e10abb40dae,2026-05-15T12:03:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
@@ -1977,6 +2146,7 @@ MWS,5192ab9002b9,2014-10-04T21:45:21Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Unique
 MWS,3ae269a730d5,2014-09-23T01:37:51Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,"Transcoder example, re issue #5"
 MWS,fcb6185f7723,2014-01-22T21:41:25Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,missing1.html
 MWS,8798269ddbf9,2014-01-16T19:34:16Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Initial commit
+MWinflect,f3e8a78de1ff,2026-05-28T22:53:08Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): refresh tooling-repo README with live counts
 MWinflect,4366f02cb1cf,2026-05-15T14:04:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CODE_OF_CONDUCT.md
 MWinflect,344c369ced84,2026-05-15T14:04:36Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CONTRIBUTING.md
 MWinflect,fd2b64a20ecc,2026-05-15T14:04:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CITATION.cff
@@ -2065,6 +2235,28 @@ MWinflect,b598f126ec37,2018-10-16T21:37:32Z,funderburkjim,funderburkjim,funderbu
 MWinflect,035bd6fa64f5,2018-10-16T21:34:35Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,initial lexnorm-all2.txt
 MWinflect,8c5f17cf6e1f,2018-10-16T20:29:54Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,initial repository description
 MWinflect,62cec0aa6bb1,2018-10-16T20:28:08Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+PWG,e3e13aa8286c,2026-06-01T01:56:47Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,revise compare_meta study. #180
+PWG,7f2ec7eb3ab6,2026-06-01T01:12:46Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,basevn reverse-engineered.  #180
+PWG,b15ed55a8dbf,2026-05-29T03:13:31Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .pre-commit-config.yaml (yaml-only)
+PWG,cae1925c95c9,2026-05-29T03:07:21Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .github/dependabot.yml for GitHub Actions auto-updates
+PWG,86e54e93b9da,2026-05-29T00:01:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): backport improved validator from batch deploy
+PWG,418beced08c2,2026-05-28T23:16:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): exclude pwgissues/ and legacy dirs; skip non-change stats files
+PWG,5f948bab58a4,2026-05-28T23:14:08Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): add ruff.toml to configure lint exclusions persistently
+PWG,55b1c6efda75,2026-05-28T23:10:46Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): exclude misc/ (Python 2 utility scripts)
+PWG,4bf55229df9d,2026-05-28T23:09:07Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): drop F82 from ruff (false positives in legacy issue scripts)
+PWG,ae2c1b098013,2026-05-28T23:07:40Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): allow empty-content change lines (NNN new without trailing text)
+PWG,b1a39ffc3a6d,2026-05-28T23:03:53Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): scope UTF-8 check to correction files only
+PWG,f611f16ebc85,2026-05-28T22:58:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add CI workflow (dictionary baseline)
+PWG,a7e8cbe14561,2026-05-28T22:02:03Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add LICENSE (CC-BY-SA-4.0)
+PWG,31eaa6ad5f83,2026-05-28T15:46:41Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: standardise CONTRIBUTING.md (verdict=boilerplate)
+PWG,e4f4f6662361,2026-05-27T17:11:14Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,issue178 PWG abbreviations. #178
+PWG,98831be895e1,2026-05-24T01:55:53Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,tips/pwgab_input_new.txt #174
+PWG,6cf8c3251c83,2026-05-21T18:52:58Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #177 from sanskrit-lexicon/issue174-status-comment
+PWG,dc6f8c30e748,2026-05-21T18:50:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(issue174): coordination comment summarizing state of abbreviation markup
+PWG,e5f13c61606f,2026-05-21T01:06:21Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,issue174 folder revised. #174
+PWG,c25385fa422f,2026-05-19T02:32:31Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Preliminary work on abbreviations. #174
+PWG,21c795cca751,2026-05-18T09:43:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge branch 'master' of https://github.com/sanskrit-lexicon/PWG
+PWG,9904c68651ef,2026-05-18T09:43:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Opus 4.7 on 174
 PWG,b74f78622209,2026-05-16T04:07:58Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1855, Böhtlingk + Roth)"
 PWG,ff460678c436,2026-05-15T12:03:31Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 PWG,3394e61fdd77,2026-05-15T12:03:28Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
@@ -2443,6 +2635,18 @@ PWG,087a677e9362,2014-11-06T21:09:00Z,funderburkjim,funderburkjim,funderburkjim@
 PWG,5221d87ec45e,2014-10-05T10:49:24Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Stat added
 PWG,200cd2073f4f,2014-10-04T21:29:49Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Update to Jim's PWG Accents
 PWG,a6b29a2159b7,2014-09-25T09:57:25Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,3/52 Russian etymologies fixed
+PWK,92e4a6820a2b,2026-05-29T03:13:31Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .pre-commit-config.yaml (yaml-only)
+PWK,3c74d5e83005,2026-05-29T03:11:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add CodeQL SAST workflow (php)
+PWK,2727eb90915b,2026-05-29T03:07:21Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .github/dependabot.yml for GitHub Actions auto-updates
+PWK,81b2d20d1fe9,2026-05-29T00:00:23Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): smarter change-file validator + per-repo excludes
+PWK,b76aa9a59a14,2026-05-28T23:56:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): smarter change-file validator + per-repo excludes
+PWK,f45b066633cb,2026-05-28T23:52:05Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): remove double-comma in ruff.toml exclude array
+PWK,8e6e34e20755,2026-05-28T23:41:29Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: add CI workflow (dictionary (excluded: ['convertwork', 'pw_ls', 'pwkissues', 'pwkvn', 'verbs01', 'vn-sch']))"
+PWK,bf6dae230c6b,2026-05-28T22:02:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add LICENSE (CC-BY-SA-4.0)
+PWK,1f91a22223b1,2026-05-28T15:51:25Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: merge remote changes (keep our CONTRIBUTING.md)
+PWK,ab2469e27816,2026-05-28T15:46:46Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: standardise CONTRIBUTING.md (verdict=boilerplate)
+PWK,76814137d31d,2026-05-25T05:48:20Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #114 from sanskrit-lexicon/markup-fix-audit
+PWK,7faafb45245e,2026-05-21T19:26:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add markup fixer + audit for pw.txt
 PWK,5bdd8a3b723a,2026-05-16T04:08:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1879, Otto Böhtlingk)"
 PWK,eb283d1ea641,2026-05-15T12:03:53Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 PWK,9f05e3e97883,2026-05-15T12:03:50Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
@@ -2708,6 +2912,16 @@ PWK,c945e3fa4bd1,2015-11-16T21:33:36Z,funderburkjim,funderburkjim,funderburkjim@
 PWK,f220be5dc89f,2015-11-16T21:22:10Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Moved from https://github.com/sanskrit-lexicon/CORRECTIONS/
 PWK,aa8c1730fe61,2015-11-16T21:16:37Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Moved to https://github.com/sanskrit-lexicon/CORRECTIONS/
 PWK,573cc6ee6787,2014-11-08T02:51:31Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,construction of pw_orig_utf8_slp1.txt
+SCH,aa5d250c1246,2026-05-29T03:13:36Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .pre-commit-config.yaml (yaml-only)
+SCH,aa5e4c40d6e8,2026-05-29T03:07:26Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .github/dependabot.yml for GitHub Actions auto-updates
+SCH,b48dc6c7bda3,2026-05-29T00:00:28Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): smarter change-file validator + per-repo excludes
+SCH,c1709a3a5eff,2026-05-28T23:56:47Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): smarter change-file validator + per-repo excludes
+SCH,c3046bd37a0a,2026-05-28T23:41:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add CI workflow (dictionary (excluded: none))
+SCH,56cc23210055,2026-05-28T22:40:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add issue templates
+SCH,8df718476d0e,2026-05-28T22:04:06Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add PR template
+SCH,15f1a2f623e7,2026-05-28T22:02:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add LICENSE (CC-BY-SA-4.0)
+SCH,12e9e0434910,2026-05-28T15:51:32Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: merge remote changes (keep our CONTRIBUTING.md)
+SCH,5cbe2118514e,2026-05-28T15:47:00Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: standardise CONTRIBUTING.md (verdict=missing)
 SCH,a66ab9c6e895,2026-05-16T04:08:23Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1928, Richard Schmidt)"
 SCH,d839d7459238,2026-05-15T09:30:37Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 SCH,3586e7bd3812,2026-05-15T09:30:35Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
@@ -2738,6 +2952,20 @@ SCH,e9aee0778daa,2014-01-22T00:47:37Z,funderburkjim,funderburkjim,funderburkjim@
 SCH,82d48efdf10a,2014-01-16T02:45:49Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,first schmidt change file
 SCH,d27e0ea65d14,2014-01-16T00:04:41Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,"original schmidt, and initial changes"
 SCH,f78bc1015d35,2014-01-15T18:51:50Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initial commit
+SHS,454956686a27,2026-05-26T02:10:35Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,redo.sh for rerun
+SHS,5b1c867921e4,2026-05-25T15:36:53Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,diff 25993
+SHS,ed08ecfbaaea,2026-05-25T15:02:33Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,diff 26069
+SHS,073f7a073cae,2026-05-25T14:49:59Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,diff 27948
+SHS,4c031c3516d7,2026-05-25T14:35:43Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,diff 29148
+SHS,f7cfb2e81952,2026-05-25T14:24:39Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,diff is now 30002 lines
+SHS,8798621eda84,2026-05-25T14:01:24Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,diff now at 32000
+SHS,b8df3b58986c,2026-05-25T13:45:27Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,lex Ind. handled. Diff 36142
+SHS,7212cf047815,2026-05-25T13:43:29Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,step1 and step2 updated for parenthesis and period. Diff 38220
+SHS,72983ce58b5e,2026-05-25T13:38:21Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,step1.py update. Diff 45845
+SHS,8f0f09ea1b83,2026-05-25T13:18:05Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,step1.py update. Diff 65014
+SHS,3427cdc44911,2026-05-25T11:48:36Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,step2.py update for period wrongly placed outside Devanagari markup in shs-AB.txt. Diff lines 72621
+SHS,efee5507bfd3,2026-05-25T11:43:37Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,step1.py and step2.py started for SHS #1. Diff count 93914
+SHS,130abb0aa009,2026-05-23T01:58:12Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,SHS AB version init #1
 SHS,db5eaca3dc75,2026-05-16T04:09:36Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1900, Biswanath Mukerji)"
 SHS,197503cc1479,2026-05-15T07:20:17Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 SHS,accd301e25b0,2025-12-22T02:01:13Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,"init .gitignore, README.md"
@@ -2810,6 +3038,17 @@ STC,06751fc084cd,2026-05-15T09:25:16Z,gasyoun,Mārcis Gasūns,gasyoun@users.nore
 STC,b53b989d51e3,2026-05-15T07:38:51Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 STC,f5cfee0f359d,2020-04-19T20:59:15Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,verbs01 initial commit
 STC,ad8172120944,2020-04-19T20:55:40Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+VCP,ca983284ee41,2026-05-29T03:13:46Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .pre-commit-config.yaml (yaml-only)
+VCP,946e6f768f6b,2026-05-29T03:07:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .github/dependabot.yml for GitHub Actions auto-updates
+VCP,18f8a6b97207,2026-05-29T00:00:32Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): smarter change-file validator + per-repo excludes
+VCP,d0990993112f,2026-05-28T23:56:52Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): smarter change-file validator + per-repo excludes
+VCP,ce7c35061dc9,2026-05-28T23:52:10Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): remove double-comma in ruff.toml exclude array
+VCP,8c010350facf,2026-05-28T23:41:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: add CI workflow (dictionary (excluded: ['abbrevprep', 'alternateheadword', 'vac-vcp-cmp1', 'vac-vcp-cmp2', 'vcpte-vac', 'vcpte-vcp-cmp', 'verbs01']))"
+VCP,81f50fd4d1ee,2026-05-28T22:40:48Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add issue templates
+VCP,19842179db30,2026-05-28T22:04:07Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add PR template
+VCP,db25e556521e,2026-05-28T22:02:05Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add LICENSE (CC-BY-SA-4.0)
+VCP,c5877dd37279,2026-05-28T15:57:48Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge branch 'master' of https://github.com/sanskrit-lexicon/VCP
+VCP,d88c9f5a7b99,2026-05-28T15:57:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: standardise CONTRIBUTING.md (verdict=missing)
 VCP,c686103a3cc0,2026-05-16T04:08:30Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1873, Tarkavachaspati)"
 VCP,6e650c20e68b,2026-05-15T09:30:56Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 VCP,02176d43860c,2026-05-15T09:30:54Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
@@ -2940,6 +3179,39 @@ VEI,ad6ecb776bb7,2016-01-02T10:33:26Z,drdhaval2785,drdhaval2785,drdhaval2785@gma
 VEI,1bdf92e1bf80,2016-01-02T10:29:29Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,vei.xml without alterations
 VEI,4fc8228932e0,2016-01-02T10:26:11Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,initial commit
 VEI,f354d4e0cb58,2016-01-02T10:19:41Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+WIL,c0bd3b82b281,2026-05-18T14:38:36Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,readme update for #15
+WIL,541b5ffe1d89,2026-05-18T14:24:16Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,removed unnecessary files from #15
+WIL,aa75c2e0adea,2026-05-18T14:23:13Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,removed unnecessary files from #15
+WIL,6bb6becc3b5b,2026-05-18T12:08:18Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,step1 and step2 update
+WIL,3e73494ca08a,2026-05-18T10:12:52Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,step1 update
+WIL,af0bc112cea8,2026-05-18T09:34:25Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,step2 in #15
+WIL,e32c98e086dc,2026-05-18T07:38:34Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,step1.py update in #15
+WIL,ab3919ebfbd2,2026-05-18T07:29:41Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,step1.py added to #15
+WIL,b024c5e1d812,2026-05-18T05:21:12Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,ab2cdsl.py updated to reduce diff to 45838
+WIL,2f8e021af940,2026-05-18T05:05:28Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,small.diff reduced to 13044. Diffs are now idiosyncratic
+WIL,778bf16ffd85,2026-05-18T04:49:19Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,diffs in cdsl2ab reduced to 13044 in #15
+WIL,2c65cdaa0375,2026-05-18T04:14:34Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,diffs in cdsl2ab reduced to 13735 in #15
+WIL,4ac65e6950f4,2026-05-18T04:10:24Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,diffs in cdsl2ab reduced to 13854 in #15
+WIL,054d0949ac79,2026-05-17T16:09:31Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,diffs in cdsl2ab reduced to 14746 in #15
+WIL,bf1ae2aa96c5,2026-05-17T16:01:56Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,diffs in cdsl2ab reduced to 14938 in #15
+WIL,e42653eb4c2f,2026-05-17T15:57:27Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,diffs in cdsl2ab reduced to 15734 in #15
+WIL,c3243ca539f6,2026-05-17T15:40:39Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,diffs in cdsl2ab reduced to 16470 in #15
+WIL,69801cc6be72,2026-05-17T15:33:30Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,diffs in cdsl2ab reduced to 17056 in #15
+WIL,bdfc10e986ac,2026-05-17T15:19:05Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,diffs in cdsl2ab reduced to 18189 in #15
+WIL,1cb6f68b5317,2026-05-17T13:57:59Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,diffs in cdsl2ab reduced to 22467 in #15
+WIL,16b7c50317a8,2026-05-17T13:52:46Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,diffs in cdsl2ab reduced to 23165 in #15
+WIL,212d5e54c05b,2026-05-17T13:41:20Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,diffs in cdsl2ab reduced to 23392 in #15
+WIL,1a232920d34f,2026-05-17T13:37:02Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,diffs in cdsl2ab reduced to 29097 in #15
+WIL,e44d9850a0cb,2026-05-17T13:28:58Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,diffs in cdsl2ab reduced to 30375 in #15
+WIL,2b6fd29e1898,2026-05-17T13:21:32Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,diffs in cdsl2ab reduced to 30424 in #15
+WIL,5b630bf5b8d7,2026-05-17T13:16:05Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,diffs in cdsl2ab reduced to 31582 in #15
+WIL,b1f36b73763a,2026-05-17T13:12:52Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,diffs in cdsl2ab reduced to 34457 in #15
+WIL,8e4d6fe39c4b,2026-05-17T13:02:34Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,diffs in cdsl2ab reduced to 38798 in #15
+WIL,62117ca43c79,2026-05-17T12:56:48Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,diffs in cdsl2ab reduced to 39394 in #15
+WIL,9d11361f5fe9,2026-05-17T12:51:25Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,diffs in cdsl2ab reduced to 46697 in #15
+WIL,eaf52aeca4d0,2026-05-17T12:49:13Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,diffs in cdsl2ab reduced to 47599 in #15
+WIL,2b83e7195b4e,2026-05-17T12:46:48Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,diffs in cdsl2ab reduced to 54175 in #15
+WIL,df1cc92ee9a5,2026-05-17T12:06:11Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial data and scripts for #15
 WIL,8538cc78f135,2026-05-16T04:08:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1832, H.H. Wilson)"
 WIL,7eed6dcd4a1c,2026-05-15T09:31:44Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CODE_OF_CONDUCT.md
 WIL,b6e2dd83b7db,2026-05-15T09:31:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: Phase 16 CONTRIBUTING.md
@@ -2990,6 +3262,7 @@ Wil-YAT,8a821a454d24,2015-03-13T18:28:53Z,funderburkjim,funderburkjim,funderburk
 Wil-YAT,fe66e9b76e57,2015-03-10T20:00:44Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Create LICENSE.md
 Wil-YAT,c63a5c154fc4,2015-03-10T19:21:22Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Create README.md
 Wil-YAT,d4495c4d93ac,2015-03-10T19:18:05Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initial commit
+alternateheadwords,a8813585a2e5,2026-05-28T23:01:57Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): refresh tooling-repo README with live counts
 alternateheadwords,45e9e24c5c7f,2026-05-15T13:59:21Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CODE_OF_CONDUCT.md
 alternateheadwords,2ff9ec21e615,2026-05-15T13:59:18Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CONTRIBUTING.md
 alternateheadwords,615603fcf215,2026-05-15T13:59:16Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CITATION.cff
@@ -3107,6 +3380,7 @@ alternateheadwords,27de5532a2a9,2016-10-01T08:54:37Z,drdhaval2785,drdhaval2785,d
 alternateheadwords,7d37062c78f0,2016-10-01T08:49:42Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,vcpahw1.txt added
 alternateheadwords,78a712e38bbc,2016-10-01T08:48:58Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,edit-distance method added
 alternateheadwords,3ab62a8f4ca0,2016-10-01T08:25:27Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,initial commit
+avlinks,dd6ab0978df2,2026-05-29T05:10:26Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): refresh tooling-repo README with live counts (2026-05-29)
 avlinks,e7a9819e1f53,2026-05-15T14:21:58Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CODE_OF_CONDUCT.md
 avlinks,9f8c353c1e53,2026-05-15T14:21:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CONTRIBUTING.md
 avlinks,fb38542bb26a,2026-05-15T14:21:53Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CITATION.cff
@@ -3120,8 +3394,44 @@ avlinks,915e66495009,2021-04-09T01:28:23Z,funderburkjim,funderburkjim,funderburk
 avlinks,a3f97d5397ef,2021-04-08T20:24:32Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Change tab character to space
 avlinks,35a653d0e33b,2021-04-08T20:08:42Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,newline at end.  unix line endings
 avlinks,743350606e39,2021-04-08T19:46:14Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initial commit -- Atharva veda html file
+cologne-hugo,33e04b625b7e,2026-05-29T05:11:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): refresh tooling-repo README with live counts (2026-05-29)
 cologne-hugo,27567866a9e7,2026-05-15T07:39:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 cologne-hugo,17af959d4467,2021-01-20T04:59:40Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+cologne-stardict,9d41153480db,2026-05-31T05:03:34Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 2151963d9ba87954cccc78db44eecf0ec5d01c26
+cologne-stardict,63721fe630c2,2026-05-31T04:02:20Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 27f813796b0fe2e9e1b555cc7a6f7ff4cae13d53
+cologne-stardict,8cd2948344bc,2026-05-31T01:31:21Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 7cb1608c9da6a6ae5e3c3f9cb7992d17a2109986
+cologne-stardict,52e670e2f676,2026-05-30T11:07:53Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 162e0601b2914a8532b8af4f6cb3336b66b48e29
+cologne-stardict,7217cf367f78,2026-05-30T10:47:24Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 2efc5b8861da66c24b5a0846985e4fef7512f11b
+cologne-stardict,399e4f93d935,2026-05-29T16:28:17Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 49f3a0ca4356adf4e27d92555458f09a3c3a0df3
+cologne-stardict,041c60590ea5,2026-05-29T13:07:59Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 2fdff76924c1fa3ce906cb4a4937eb08ad557956
+cologne-stardict,591a038888d1,2026-05-29T08:34:51Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 922602ce2ef5f54c9f8384f5a426f23ea309d98f
+cologne-stardict,3488e08c4d84,2026-05-29T07:26:58Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 969e0b831acca6cf3d0f60d00f9315ceb2fd9dc9
+cologne-stardict,9a9963a97cc2,2026-05-29T07:12:14Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 51a764b431b263039c458f411b73accbd3870cfa
+cologne-stardict,67b2ff1789fd,2026-05-29T07:07:26Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 8b051ab08ec0fb8f870c1ebd2797311c68022959
+cologne-stardict,d21dbbea227a,2026-05-29T07:02:10Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 442e0d72a8cb4525bc44f0d924417aac288db429
+cologne-stardict,4c1f4634c84c,2026-05-29T06:55:49Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit d7ef9ad2d912d8a4bcfdff60e06016db59873461
+cologne-stardict,7b9820685d87,2026-05-29T05:34:37Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 752d447c0d2d5d61281b393cfbb8cbdeced3cb95
+cologne-stardict,9a8b95f998a8,2026-05-28T14:36:07Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit d6f66fa38c679588fb9f0f7d1de345c79447e81d
+cologne-stardict,b32cf24e66b4,2026-05-28T14:18:20Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit de1e736f1fb9f58573d910a8548b3fbdda47e066
+cologne-stardict,8c965426f1bc,2026-05-27T17:03:38Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit b03b359e10eb2768b25201338733a35814e75026
+cologne-stardict,e62f67501e78,2026-05-22T13:12:44Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit b877f841176786cb8e13775ea8bc15bc23018419
+cologne-stardict,2997bc8b2ba1,2026-05-22T11:54:04Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit cd2a72a54a41c60337ada65315fc51f1255a70cf
+cologne-stardict,0831ec8741ec,2026-05-22T08:49:22Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit e058ceaeae403e89d56c68fd1b27f01e0d2f4aae
+cologne-stardict,5474b6d9f19e,2026-05-22T06:49:56Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 0dc6e8e847e93064c4b5e491024cf254704b80e1
+cologne-stardict,537654d9bc8e,2026-05-21T15:10:06Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 0e7a95f1405305edfeb84630528b40848bde25fe
+cologne-stardict,01e45aeb0f10,2026-05-21T05:34:32Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit b56e1ecb46ee70f4d8d7579b42b40d79ee98f378
+cologne-stardict,fd18d3bdb363,2026-05-21T00:33:12Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 6decc986f60f2bd387258287f45a46f66efc4c9e
+cologne-stardict,39aa366abf10,2026-05-20T13:08:49Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 98f3acb5918426ac130c9cf4bc447decd6bf1b2b
+cologne-stardict,ed010346b491,2026-05-20T11:21:56Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit fe70ba60615802b21ed8b04aede2937fc832fb14
+cologne-stardict,90b1997d3033,2026-05-20T09:06:04Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit f06042e9c810cd2cf82497d988f348689b373560
+cologne-stardict,3f43c67cda00,2026-05-20T08:45:05Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 342676ad7748e899612d1dc1f357c006783d964b
+cologne-stardict,09ef2b04e62e,2026-05-20T08:22:54Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 5c89b5df204a1efbe5f4b630ccaa9de0561a5e2c
+cologne-stardict,215a63d95641,2026-05-19T15:04:23Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit a269a6a750269ba7f702d334e8e8ca21879acc2f
+cologne-stardict,76de98d2e206,2026-05-19T09:11:42Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 47e4ba0594fbd024d30553fae0dba50d625ef1d5
+cologne-stardict,fe0a5a5fb68c,2026-05-18T15:07:11Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit bfd9efd9cedfa1b465b53c679081730591cd908d
+cologne-stardict,1b79684c91da,2026-05-18T14:25:22Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit db3d2e9f0c8b330d2c393a417b854c68e47df0ec
+cologne-stardict,ccccab73a820,2026-05-17T06:56:27Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 837b40b16424eff6b7def975385b37e7b606cca5
+cologne-stardict,b88d651ccf77,2026-05-17T04:28:07Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit accd2b8d05026a5cfddf192f538ba33a746fc902
 cologne-stardict,69396ab32aa3,2026-05-15T17:48:34Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit e4c798558ee6adcf07656807a71d9594ac661856
 cologne-stardict,310127328b9d,2026-05-15T15:23:57Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 47891de24fdc8cd9e5acdf494d563bbaa33e7a46
 cologne-stardict,c596155e2113,2026-05-15T15:06:22Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 58046555954c130432ea7062ec5bf6563f188941
@@ -3811,6 +4121,7 @@ cologne-stardict,5d3eac3f589c,2017-04-04T16:05:41Z,drdhaval2785,drdhaval2785,drd
 cologne-stardict,82cf5cf8ca13,2017-04-04T15:39:46Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,GST added
 cologne-stardict,d7f4222e9a19,2017-04-04T10:51:20Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,CCS GRA added
 cologne-stardict,9e7133046729,2017-04-04T06:45:28Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,added CAE
+csl-apidev,c3390318de25,2026-05-16T21:21:17Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,AP90: link targets.
 csl-apidev,5de002348487,2026-05-15T14:06:51Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CODE_OF_CONDUCT.md
 csl-apidev,c511a498672e,2026-05-15T14:06:48Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CONTRIBUTING.md
 csl-apidev,15ae51629069,2026-05-15T14:06:46Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CITATION.cff
@@ -4330,6 +4641,7 @@ csl-apidev,05921188eede,2018-07-15T21:33:50Z,funderburkjim,funderburkjim,funderb
 csl-apidev,e301d0de32f0,2018-04-18T22:38:55Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,xampp version of simple-search - only html file changed
 csl-apidev,65dd76fc5c62,2018-04-18T21:41:03Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,sample/basic-0.2 and list-0.2 for XAMPP. Uses local resources
 csl-apidev,c686084d3b31,2018-04-17T21:16:26Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initial commit. No changes from Cologne
+csl-app,94eafd063315,2026-05-29T05:08:29Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): refresh tooling-repo README with live counts (2026-05-29)
 csl-app,feeb80941859,2026-05-15T14:29:48Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CODE_OF_CONDUCT.md
 csl-app,785634b90d74,2026-05-15T14:29:46Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CONTRIBUTING.md
 csl-app,3a452cc5ccb6,2026-05-15T14:29:43Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CITATION.cff
@@ -4508,6 +4820,76 @@ csl-app,3f5f02ce0114,2026-03-18T19:13:28Z,drdhaval2785,Dr. Dhaval Patel,drdhaval
 csl-app,41a87dfe9b1a,2026-03-18T17:59:44Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,v0.1.0
 csl-app,601df1e6d0c8,2026-03-18T17:25:31Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,app working
 csl-app,3827040885b1,2026-03-18T16:14:06Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,initial commit
+csl-corrections,faca07a57bfc,2026-06-01T02:53:39Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-05-31
+csl-corrections,8e9bf99bc4f3,2026-05-31T04:56:53Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 24 May 2026. Close https://github.com/sanskrit-lexicon/csl-corrections/issues/235
+csl-corrections,6f17e8e74b1f,2026-05-31T04:06:47Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 23 May 2026. Close https://github.com/sanskrit-lexicon/csl-corrections/issues/234
+csl-corrections,cffc8ee6182a,2026-05-31T03:57:23Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 22 May 2026. Close https://github.com/sanskrit-lexicon/csl-corrections/issues/233
+csl-corrections,b7e672a7e063,2026-05-31T03:44:41Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 21 May 2026. See https://github.com/sanskrit-lexicon/csl-corrections/issues/231. The questions are not settled
+csl-corrections,acb2698b73d8,2026-05-31T03:11:59Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: Q7 tooling-repo taxonomy complete — 4 repos, 153 issues, all-clean"
+csl-corrections,40d1b4fcaeb7,2026-05-31T02:44:46Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-05-30
+csl-corrections,3cc451f72245,2026-05-31T01:27:57Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: Q7 dict taxonomy rollout complete — 24 repos, 786 issues, all-clean"
+csl-corrections,4bc0ee6a765e,2026-05-30T19:22:15Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: log SKD/VCP citation correction + point to new-chat SESSION_HANDOFF (2026-05-30)
+csl-corrections,9a72f2aaa420,2026-05-30T19:06:05Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: log research+practitioner layer, prototypes, and decisions doc (2026-05-30)"
+csl-corrections,69f740702b45,2026-05-30T18:07:08Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: log structural-check + clone_org.py + taxonomy audit (2026-05-30)
+csl-corrections,f379f1094c4f,2026-05-30T11:42:41Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: log roadmap quick wins Q1-Q6 implemented (2026-05-30)
+csl-corrections,864a52bfadcb,2026-05-30T11:18:26Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: log improvement roadmap + org-wide churn in handoff (2026-05-30)
+csl-corrections,5f9ab35a83d3,2026-05-30T11:01:13Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 20 May 2026. Close https://github.com/sanskrit-lexicon/csl-corrections/issues/229
+csl-corrections,0e93b91e911c,2026-05-30T08:34:52Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Merge pull request #241 from sanskrit-lexicon/dependabot/github_actions/actions/checkout-6
+csl-corrections,749198e750ca,2026-05-30T04:54:22Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: record org-wide contributor stats report (2026-05-30)
+csl-corrections,3e250c373746,2026-05-30T02:28:04Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-05-29
+csl-corrections,f6a66361f734,2026-05-29T22:21:52Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: record full-runbook docs (phases 8-16) for 6 dict repos (2026-05-30)
+csl-corrections,904019cfe4e6,2026-05-29T21:45:16Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: record csl-pywork#50 BOM-hardening issue in handoff
+csl-corrections,50f4b33c0932,2026-05-29T21:31:40Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: session handoff update — taxonomy core applied to 6 repos (2026-05-30)
+csl-corrections,ec2264a57337,2026-05-29T20:21:58Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: session handoff in .ai_state.md — 2026-05-29 correction-workflow follow-ups
+csl-corrections,858b71d748b7,2026-05-29T16:19:48Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 19 May 2026. Close #227
+csl-corrections,807b0848f05f,2026-05-29T12:57:42Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Merge remote-tracking branch 'refs/remotes/origin/master'
+csl-corrections,cc0ec5209110,2026-05-29T12:57:28Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 18 May 2026. Closed https://github.com/sanskrit-lexicon/csl-corrections/issues/226
+csl-corrections,2991656f6b99,2026-05-29T08:44:25Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: add authoritative csl-orig correction workflow guide
+csl-corrections,e338f252e467,2026-05-29T08:29:15Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: batch_20260529 — markup whitespace fixes for 10 dicts
+csl-corrections,8027e5a11b25,2026-05-29T03:13:51Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .pre-commit-config.yaml (python+yaml)
+csl-corrections,6586caa2cf54,2026-05-29T03:08:44Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,Bump actions/checkout from 4 to 6
+csl-corrections,f6d05adbc668,2026-05-29T03:07:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .github/dependabot.yml for GitHub Actions auto-updates
+csl-corrections,7ab64bb40d20,2026-05-29T02:34:13Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-05-28
+csl-corrections,905b4ded295d,2026-05-28T22:41:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add issue templates
+csl-corrections,2dbaced63159,2026-05-28T22:04:09Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add PR template
+csl-corrections,b12c19d7e79d,2026-05-28T15:47:32Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: standardise CONTRIBUTING.md (verdict=boilerplate)
+csl-corrections,69c727235b07,2026-05-28T14:28:49Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 17 May 2026. Close https://github.com/sanskrit-lexicon/csl-corrections/issues/225
+csl-corrections,ec964f35e174,2026-05-28T14:08:46Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 16 May 2026. Close https://github.com/sanskrit-lexicon/csl-corrections/issues/224
+csl-corrections,094602d0f96a,2026-05-28T02:29:43Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-05-27
+csl-corrections,a1a3c3be1c6d,2026-05-27T02:42:54Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-05-26
+csl-corrections,2c0f20c16ea9,2026-05-26T02:33:08Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-05-25
+csl-corrections,f2c8337b56b7,2026-05-25T02:43:42Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-05-24
+csl-corrections,ef516a7d6156,2026-05-24T02:34:57Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-05-23
+csl-corrections,38bebe1c9ea3,2026-05-23T02:25:19Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-05-22
+csl-corrections,311741f1602a,2026-05-22T08:41:00Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 15 May 2026. Close #222
+csl-corrections,ce1ce96a28e2,2026-05-22T06:41:32Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 14 May 2026. Close #221
+csl-corrections,bd115822599d,2026-05-22T02:39:53Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-05-21
+csl-corrections,1adbbeb8f4c1,2026-05-21T18:47:04Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,PD printchange name typo correction
+csl-corrections,6eab55a2885c,2026-05-21T18:41:31Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,PD printchange adjustments per #87 - all handled - no WARNINGs
+csl-corrections,4df3b9b7164f,2026-05-21T17:43:02Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,PD printchange adjustments per #87 - 511/511 entries handled. Now some minor adjustments pending
+csl-corrections,68117a073232,2026-05-21T15:49:31Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,PD - AS to IAST change in printchange for #87
+csl-corrections,f5f4388d6b89,2026-05-21T15:42:00Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,PD adjustment started for #87
+csl-corrections,fd097ea96cec,2026-05-21T15:22:38Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,mw_printchange_old.txt file for backup in #87
+csl-corrections,666a575a19f6,2026-05-21T15:08:00Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,BEN and BUR trial for roman
+csl-corrections,0be95928e3b5,2026-05-21T15:07:46Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,INM printchange adjustments per #87
+csl-corrections,6dde94d15ffd,2026-05-21T05:30:11Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,YAT printchange adjustments per #87
+csl-corrections,0c88bf5a68c6,2026-05-21T02:38:35Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-05-20
+csl-corrections,f1a643fd9965,2026-05-20T13:03:18Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,WIL printchange adjustments per #87
+csl-corrections,8120e3443fed,2026-05-20T11:18:40Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,VEI printchange adjustments per #87
+csl-corrections,7a2def2fb105,2026-05-20T11:18:25Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,VCP printchange adjustments per #87
+csl-corrections,70f3633fd636,2026-05-20T08:40:18Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,STC printchange adjustments per #87
+csl-corrections,0c6f9888dfe6,2026-05-20T08:18:02Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Merge remote-tracking branch 'refs/remotes/origin/master'
+csl-corrections,63926f68eb62,2026-05-20T08:17:48Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,SCH and SKD printchange adjustments per #87
+csl-corrections,d73ec59f5f30,2026-05-20T02:36:46Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-05-19
+csl-corrections,df22f1ee975e,2026-05-19T14:59:17Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,SCH printchange adjustments per #87
+csl-corrections,a1f9a84eb705,2026-05-19T14:14:15Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,SCH printchange adjustments per #87
+csl-corrections,c340ca0f7121,2026-05-19T14:13:53Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,PWKVN printchange adjustments per #87
+csl-corrections,39ba192df889,2026-05-19T02:36:22Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-05-18
+csl-corrections,d865b2500c29,2026-05-18T02:37:53Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-05-17
+csl-corrections,d979a3f87a1c,2026-05-17T06:57:03Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Merge remote-tracking branch 'refs/remotes/origin/master'
+csl-corrections,1398aa1972cc,2026-05-17T06:56:54Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,PW printchange adjustments per #87
+csl-corrections,e042535b80c8,2026-05-17T02:27:36Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-05-16
+csl-corrections,94743fcfafe8,2026-05-16T03:55:40Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,PW printchange adjustments per #87 part 3
 csl-corrections,b18fad28a0b5,2026-05-16T03:54:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge branch 'master' of https://github.com/sanskrit-lexicon/csl-corrections
 csl-corrections,80184a294e13,2026-05-16T03:53:58Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Claude counting
 csl-corrections,91f1e9e09d19,2026-05-16T02:12:29Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-05-15
@@ -5286,6 +5668,7 @@ csl-corrections,03c38c194339,2019-12-16T23:50:54Z,,James Funderburk,jfunderb@dia
 csl-corrections,e23efa275d19,2019-12-16T22:28:35Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,initialization from Cologne /php
 csl-corrections,6fa5aa987701,2019-12-16T21:49:45Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initialize material from sanskrit-lexicon/CORRECTIONS repository
 csl-corrections,e854ffd2f3cc,2019-12-16T20:34:56Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+csl-devanagari,e58b2234972b,2026-05-29T02:57:53Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): refresh tooling-repo README with live counts
 csl-devanagari,2359339d97d6,2026-05-15T14:23:56Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CODE_OF_CONDUCT.md
 csl-devanagari,815031603ee6,2026-05-15T14:23:53Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CONTRIBUTING.md
 csl-devanagari,ff9e9fd3984a,2026-05-15T14:23:50Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CITATION.cff
@@ -5403,6 +5786,7 @@ csl-devanagari,2f1bb70e7788,2021-09-02T17:59:29Z,drdhaval2785,drdhaval2785,drdha
 csl-devanagari,d668287f4920,2021-09-02T17:55:59Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,VCP first commit
 csl-devanagari,fc84eb497570,2021-09-02T17:55:46Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,to_devanagari first commit
 csl-devanagari,2bfdf12026e3,2021-09-02T17:37:27Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,ignore slp1 folder
+csl-doc,49270c927204,2026-05-29T05:08:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): refresh tooling-repo README with live counts (2026-05-29)
 csl-doc,e6aa328bd8ca,2026-05-15T14:05:08Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CODE_OF_CONDUCT.md
 csl-doc,10d40f04e66f,2026-05-15T14:05:06Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CONTRIBUTING.md
 csl-doc,a71daeecf572,2026-05-15T14:05:03Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CITATION.cff
@@ -5443,6 +5827,7 @@ csl-doc,8ff154efb810,2018-10-24T21:17:56Z,funderburkjim,funderburkjim,funderburk
 csl-doc,bd14b74b4772,2018-10-24T20:14:08Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,build with just bhs
 csl-doc,765253c73da1,2018-10-24T20:08:17Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,bhs dictionary front matter
 csl-doc,ddedf4c08457,2018-10-23T02:06:19Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initial commit
+csl-homepage,f47d80cad190,2026-05-29T05:08:03Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): refresh tooling-repo README with live counts (2026-05-29)
 csl-homepage,bb3b32dffc04,2026-05-15T14:07:43Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CODE_OF_CONDUCT.md
 csl-homepage,28a796e7b8a3,2026-05-15T14:07:40Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CONTRIBUTING.md
 csl-homepage,14baa5a48975,2026-05-15T14:07:38Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CITATION.cff
@@ -5517,6 +5902,7 @@ csl-homepage,39824ee261fc,2019-01-17T21:00:54Z,,James Funderburk,jfunderb@dialog
 csl-homepage,1e2e3cdfff5e,2018-08-30T22:22:34Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,Changes. See https://github.com/sanskrit-lexicon/Cologne/issues/232
 csl-homepage,58b48fdb7833,2018-08-08T20:13:43Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Create readme.md
 csl-homepage,4fe451a1680a,2018-08-08T20:06:14Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,initial commit from Cologne /scans/awork/homepage
+csl-inflect,a4180a798efa,2026-05-29T03:05:41Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): apply tooling-repo taxonomy (12 open issues)
 csl-inflect,dd819444617e,2026-05-15T14:17:27Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CODE_OF_CONDUCT.md
 csl-inflect,ecf47df7b619,2026-05-15T14:17:24Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CONTRIBUTING.md
 csl-inflect,ac5651dd1271,2026-05-15T14:17:22Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CITATION.cff
@@ -5584,6 +5970,7 @@ csl-inflect,874fa8b88f06,2019-11-27T19:15:06Z,,James Funderburk,jfunderb@dialog6
 csl-inflect,1a46abf2c5e2,2019-11-27T02:28:35Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,remove python transcode directory. It is not used.
 csl-inflect,3945e534a655,2019-11-27T02:23:40Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Create LICENSE
 csl-inflect,d49fe31a06bb,2019-11-27T02:19:14Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,"Initial commit, based upon zipped download of MWinflect repository"
+csl-json,48b4f8f92140,2026-05-29T05:10:58Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): refresh tooling-repo README with live counts (2026-05-29)
 csl-json,35acc18f54f1,2026-05-15T07:20:27Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 csl-json,49316c1b0f3a,2022-06-14T15:12:04Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,csl-json regen 14 June 2022
 csl-json,57548f8a80d9,2022-02-14T15:59:32Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,"[text, pc, lnum] as a list"
@@ -5677,6 +6064,7 @@ csl-json,68bcaa26e92b,2021-08-16T04:56:19Z,drdhaval2785,drdhaval2785,drdhaval278
 csl-json,f9ee45a8f8a0,2021-08-16T04:38:38Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,yat json
 csl-json,1a666aac8ecd,2021-08-16T04:36:00Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,first generation of yat in ashtadhyayi.com format
 csl-json,7f8e85f197b5,2021-08-16T03:40:49Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,initial commit
+csl-kale,acd1f327d85a,2026-05-29T05:09:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): refresh tooling-repo README with live counts (2026-05-29)
 csl-kale,7cf4dffaab99,2026-05-15T14:16:50Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CODE_OF_CONDUCT.md
 csl-kale,929836631ea3,2026-05-15T14:16:47Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CONTRIBUTING.md
 csl-kale,42ab7289774c,2026-05-15T14:16:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CITATION.cff
@@ -5688,6 +6076,7 @@ csl-kale,092a0a38616b,2022-05-05T21:54:45Z,funderburkjim,funderburkjim,funderbur
 csl-kale,4e9d835691b6,2019-11-09T02:47:27Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,display code
 csl-kale,06ef1a0c5158,2019-11-09T02:45:27Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,scanned images
 csl-kale,523cfe5b651e,2019-11-09T00:43:46Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+csl-ldev,d457a9479d01,2026-05-29T05:07:35Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): refresh tooling-repo README with live counts (2026-05-29)
 csl-ldev,2d9bec54f388,2026-05-15T14:26:02Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CODE_OF_CONDUCT.md
 csl-ldev,388f5ae28491,2026-05-15T14:25:59Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CONTRIBUTING.md
 csl-ldev,07a80815def4,2026-05-15T14:25:56Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CITATION.cff
@@ -5758,6 +6147,7 @@ csl-ldev,d7cc88430dc8,2021-10-05T03:08:02Z,drdhaval2785,drdhaval2785,drdhaval278
 csl-ldev,b16fb7da9012,2021-10-05T03:06:26Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,print progress only after 10000 headwords
 csl-ldev,faf4d49dc2dd,2021-10-05T02:15:30Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,redo and txt_to_ldev init
 csl-ldev,71b35f176b4a,2021-10-05T02:14:54Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,readme init
+csl-lnum,f2af011305fd,2026-05-29T05:09:47Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): refresh tooling-repo README with live counts (2026-05-29)
 csl-lnum,27ab0b9cc5b6,2026-05-15T14:24:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CODE_OF_CONDUCT.md
 csl-lnum,8c529f1a595a,2026-05-15T14:24:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CONTRIBUTING.md
 csl-lnum,d5e0da3dadb1,2026-05-15T14:24:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CITATION.cff
@@ -5816,6 +6206,8 @@ csl-lnum,5ffe5b4f1469,2021-10-02T09:31:01Z,drdhaval2785,drdhaval2785,drdhaval278
 csl-lnum,d511b856d73d,2021-10-02T09:25:42Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,snp added
 csl-lnum,2589782e07d3,2021-10-02T09:22:18Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,txt_to_lnum
 csl-lnum,0d0d66bfd466,2021-10-02T09:19:15Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,make MD files from csl-orig/v02/xxx/xxx.txt file
+csl-lslink,9eb2e0b430f6,2026-05-29T05:10:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): refresh tooling-repo README with live counts (2026-05-29)
+csl-lslink,e0d891f3d051,2026-05-17T16:35:27Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,ap90_lslinks prepared.
 csl-lslink,7fad2991d704,2026-05-15T14:30:06Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CODE_OF_CONDUCT.md
 csl-lslink,5ab67c1316f5,2026-05-15T14:30:03Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CONTRIBUTING.md
 csl-lslink,5e19e900fcf6,2026-05-15T14:30:00Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CITATION.cff
@@ -5833,6 +6225,7 @@ csl-lslink,2842b0274af8,2026-03-31T18:03:03Z,funderburkjim,funderburkjim,funderb
 csl-lslink,3de81a0a1a4f,2026-03-31T02:24:40Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,"created link files for gra, mw, pw, pwg"
 csl-lslink,077ec47bd51d,2026-03-31T02:12:42Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,"Initial commit, sch"
 csl-lslink,e36bec73e813,2026-03-31T01:43:07Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+csl-newsletter,9f92fcffc48c,2026-05-29T05:09:08Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): refresh tooling-repo README with live counts (2026-05-29)
 csl-newsletter,fe9547933c3b,2026-05-15T14:24:16Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CODE_OF_CONDUCT.md
 csl-newsletter,5a5fc71ade49,2026-05-15T14:24:13Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CONTRIBUTING.md
 csl-newsletter,7458278dd762,2026-05-15T14:24:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CITATION.cff
@@ -5876,6 +6269,83 @@ csl-newsletter,bced52b7f19f,2021-09-14T04:37:04Z,drdhaval2785,Dhaval Patel,drdha
 csl-newsletter,53c6fa85e014,2021-09-13T14:34:31Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,csl-orig commits taken into consideration
 csl-newsletter,b04b08d7e699,2021-09-13T13:28:15Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,addition
 csl-newsletter,5ab58ee2cd64,2021-09-13T12:33:30Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,september started
+csl-observatory,c0f3953cfc46,2026-05-31T17:52:16Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"runbook: route CORRECTIONS to the tooling runbook, not dictionary"
+csl-observatory,590c9e229f9a,2026-05-31T03:36:57Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"runbook: detect ""processed"" per-issue, not by label definition"
+csl-observatory,ce23fb4a4c45,2026-05-31T03:11:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: A2/Q7 fully done — 4 tooling repos taxonomy verified all-clean
+csl-observatory,e8518bdb9685,2026-05-31T01:27:51Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: A2/Q7 dict-issue taxonomy rollout done — 24 repos verified all-clean
+csl-observatory,bfb154fa3695,2026-05-30T19:21:48Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: SESSION_HANDOFF — add 2026-05-30 consolidated current-state section for a new chat
+csl-observatory,fdb9e6f42476,2026-05-30T19:18:06Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(lexico): detect indigenous citations + stratified sampling + convention-aware lemma lookup
+csl-observatory,294171217b52,2026-05-30T19:05:58Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: link research-layer roadmap + decisions-needed from README
+csl-observatory,5480bf86aabe,2026-05-30T19:04:46Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"feat: research + practitioner layer — roadmap, hypotheses, micro/macro viz prototypes"
+csl-observatory,8931cf440852,2026-05-30T18:16:13Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: add DECISIONS_NEEDED.md — consolidated maintainer-decision queue
+csl-observatory,97b62672a830,2026-05-30T18:02:06Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"feat: scripts/clone_org.py — idempotent, non-destructive full-clone of org siblings"
+csl-observatory,e0eba83449ad,2026-05-30T11:41:00Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"feat: roadmap quick wins — Mermaid validator, AI-contribution policy, contributor-identity map"
+csl-observatory,3e846e6c3583,2026-05-30T11:27:43Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore: add .gitattributes to normalize line endings
+csl-observatory,efcb0e96fa38,2026-05-30T11:01:40Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: add ecosystem improvement & optimization roadmap; link from README
+csl-observatory,33c0179e3026,2026-05-30T09:31:24Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: org-wide line churn in contributor stats + link report from README
+csl-observatory,175241edbda1,2026-05-30T04:53:16Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: org-wide contributor & work statistics report + generator
+csl-observatory,552def7d8190,2026-05-29T10:41:41Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,runbook: Phase 9 README must preserve an existing ## Documentation callout
+csl-observatory,dd174cf5cdae,2026-05-29T09:13:15Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ci: weekly Tooling Roadmap audit (Mon 03:00 UTC)
+csl-observatory,b85af869eaf6,2026-05-29T09:00:38Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,runbook(README): note Tooling Roadmap audit re-run reproduced the result
+csl-observatory,07b320cb9854,2026-05-29T08:51:53Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,runbook(README): link RUNBOOK_NOTES.md and tooling_runbook.py from Files table
+csl-observatory,a8b45df1f658,2026-05-29T08:48:44Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: add RUNBOOK_NOTES.md — tooling-runbook operating notes
+csl-observatory,1e45a11fcc4b,2026-05-29T08:42:12Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,runbook(README): add Tooling Roadmap audit result
+csl-observatory,e5e2f7269cf8,2026-05-29T08:07:25Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,runbook(README): update status — all 33 tooling repos processed
+csl-observatory,b01002a1b849,2026-05-29T08:03:24Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,scripts: tooling-runbook executor
+csl-observatory,199a1c655502,2026-05-29T03:13:51Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .pre-commit-config.yaml (python+yaml)
+csl-observatory,edf2740281a2,2026-05-29T03:07:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .github/dependabot.yml for GitHub Actions auto-updates
+csl-observatory,a9bdde48a747,2026-05-28T22:41:08Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add issue templates
+csl-observatory,040b306223af,2026-05-28T22:07:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): refresh tooling-repo taxonomy artifacts
+csl-observatory,6b7f04ac032a,2026-05-28T22:04:09Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add PR template
+csl-observatory,5dfaff31a972,2026-05-28T15:51:46Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: merge remote changes (keep our CONTRIBUTING.md)
+csl-observatory,92a600b7e70f,2026-05-28T15:47:35Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: standardise CONTRIBUTING.md (verdict=substantive)
+csl-observatory,26b70aedcf96,2026-05-28T14:19:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: Patel annotation scaffold (315 rows, 224 with exemplars) + guide"
+csl-observatory,6ea508456e6f,2026-05-28T14:13:13Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: self-review sect.3.5 + sect.5.2.1 (six clarity + consistency fixes)
+csl-observatory,32a5bf4a8fec,2026-05-28T05:42:58Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: tighten extractor (SHS bare E. + mid-line arabic) -> 3/28 shared clades, WIL-SHS 0.053"
+csl-observatory,97c41d271d76,2026-05-28T05:27:47Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: draft Paper-1 sect.5.2.1 'Dictionary pairs that pass the joint inheritance test'
+csl-observatory,af3312264dc7,2026-05-28T05:19:18Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: draft Paper-1 sect.3.5 'Inheritance detection: two complementary signals'
+csl-observatory,5bfcacb879ba,2026-05-28T05:09:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: tanglegram quantifies convention<->descent homoplasy (Mantel r=0.22, 2/28 clades shared)"
+csl-observatory,b01eaa2e37b9,2026-05-27T20:28:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: fix {%...%}-as-language-tag bug (dims 21/27); YAT-STC is real convergent minimalism
+csl-observatory,737534381b13,2026-05-27T20:20:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: L0 preview cladogram on 19 informative dims (6/6 known lineages recovered)
+csl-observatory,e4fe08b2b3b6,2026-05-27T19:26:26Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: log Stage 2 real re-extraction + revive .ai_state.md
+csl-observatory,2247803b8c2e,2026-05-27T19:25:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: L0/stage2 real fingerprint extraction (replaces degenerate placeholder)
+csl-observatory,bfbcdca4ca08,2026-05-25T10:21:22Z,github-actions[bot],github-actions[bot],41898282+github-actions[bot]@users.noreply.github.com,data: weekly snapshot 2026-05-25
+csl-observatory,7fbf620e2106,2026-05-18T10:19:05Z,github-actions[bot],github-actions[bot],41898282+github-actions[bot]@users.noreply.github.com,data: weekly snapshot 2026-05-18
+csl-observatory,71c06e45bd34,2026-05-18T08:14:22Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,L0/stage2: fingerprint auto-fill (Patel + 6 auto dims)
+csl-observatory,49fde40e86b9,2026-05-18T08:12:35Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,L0/stage1: bootstrap working tree
+csl-observatory,c12b74b96734,2026-05-18T07:53:13Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs/handoffs: add Phase L0 Gemini Flash handoff (architecture + 6 stages + log)
+csl-observatory,9f6b6713e4a2,2026-05-18T07:53:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs/handoffs: add Phase L0 Gemini Flash handoff (architecture + 6 stages + log)
+csl-observatory,fd3665ea0360,2026-05-18T07:53:08Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs/handoffs: add Phase L0 Gemini Flash handoff (architecture + 6 stages + log)
+csl-observatory,3f134509a997,2026-05-18T07:53:05Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs/handoffs: add Phase L0 Gemini Flash handoff (architecture + 6 stages + log)
+csl-observatory,57d4e63b688e,2026-05-18T07:53:03Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs/handoffs: add Phase L0 Gemini Flash handoff (architecture + 6 stages + log)
+csl-observatory,26a218c60050,2026-05-18T07:53:00Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs/handoffs: add Phase L0 Gemini Flash handoff (architecture + 6 stages + log)
+csl-observatory,cf35dc9f25e1,2026-05-18T07:52:58Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs/handoffs: add Phase L0 Gemini Flash handoff (architecture + 6 stages + log)
+csl-observatory,da726b195c57,2026-05-18T07:52:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs/handoffs: add Phase L0 Gemini Flash handoff (architecture + 6 stages + log)
+csl-observatory,0836dd4b5d47,2026-05-16T09:56:30Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: capture 2026-05-16 prompting-round Q&A; bump article count to 19
+csl-observatory,83313f8d72e2,2026-05-16T09:56:28Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: capture 2026-05-16 prompting-round Q&A; bump article count to 19
+csl-observatory,05819b969856,2026-05-16T09:56:25Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: capture 2026-05-16 prompting-round Q&A; bump article count to 19
+csl-observatory,8862e4ff5963,2026-05-16T09:32:00Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: session handoff for context-density continuation in new chat
+csl-observatory,864a38e7ff66,2026-05-16T09:03:44Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: remove BOOK.md (renamed to PUBLICATIONS.md)
+csl-observatory,0036c4a906ba,2026-05-16T09:03:40Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: update internal references (BOOK.md → PUBLICATIONS.md)
+csl-observatory,0f85905305e8,2026-05-16T09:03:37Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: rename BOOK.md → PUBLICATIONS.md (emphasises 15-article track)
+csl-observatory,4972085a0530,2026-05-16T08:54:21Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore: remove email draft from public repo (now in gitignored docs/outreach/)
+csl-observatory,ea19b962344a,2026-05-16T08:54:19Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: remove combined doc (split into MICROSTRUCTURE-MACROSTRUCTURE + BOOK)
+csl-observatory,fdf1e0f6bfa2,2026-05-16T08:54:16Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore: gitignore docs/outreach/ (private email drafts)
+csl-observatory,50a5fd544f65,2026-05-16T08:54:13Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs: split publication+book+manual+dictionary into Book (15 articles, 4-product roadmap)"
+csl-observatory,538c4664ec25,2026-05-16T08:54:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: split typology content into Microstructure-Macrostructure (30 dims + 50+ viz)
+csl-observatory,2834570a9947,2026-05-16T08:38:00Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,trends: 2026-Q2 quarterly digest skeleton (DH + digital lexicography tracking)
+csl-observatory,d446fb3ddbdc,2026-05-16T08:37:58Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,outreach: email draft to Prof. Amba Kulkarni (IIT Hyderabad) - Apte-Hindi data + Article 9 co-author
+csl-observatory,fec8d1778a08,2026-05-16T08:37:51Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,article: Article 1 Methods section draft (1700 words; Results pending L0+M1)
+csl-observatory,5ae415913ea8,2026-05-16T08:32:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: add Macrostructure typology (20 dims) + DH/lexicography trend-tracking plan (quarterly digest + annual briefing)
+csl-observatory,c4cb6cabe9ab,2026-05-16T08:22:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs: microstructure typology (24 verb dims, 10 nominal dims) + 15-article 10-year Doktor Nauk plan + book+manual+dictionary roadmap"
+csl-observatory,307c9c119b91,2026-05-16T06:42:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(L0): add Phase L0.5 (WIL Nirukta deep), L0.6 (subentry analysis), MW-Bopp cognate test, AP-Hindi action item; new Paper N possible"
+csl-observatory,8c4b78befec8,2026-05-16T06:36:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,data(lex): top 16 Nirukta abbreviation tokens in WIL .E. blocks
+csl-observatory,582f5337f1c9,2026-05-16T06:36:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"data(lex): preliminary etymology marker scan (WIL=89% Nirukta, MW=Western cf, MW72=10k cf, AP=verbal subentries)"
+csl-observatory,b67ffb8d2165,2026-05-16T06:08:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"data(lex): PE multi-volume metadata (Mani 1964 Malayalam original, 1975 English)"
+csl-observatory,bcc8b57ef466,2026-05-16T06:08:46Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"data(lex): empirical per-letter coverage from sanhw1 (confirms GST/PD a-only, MW72->MW 4x expansion, PWKVN partial)"
+csl-observatory,f9eff0679432,2026-05-16T06:00:26Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(L0): add multi-volume year handling, etymology dims 28-30, KCH, Phase P (preface analysis) deferred"
+csl-observatory,857aca5576a7,2026-05-16T06:00:23Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"data(lex): add KCH (Kochergina 1978) + multi-volume metadata (start_year, end_year, n_volumes, letter_coverage) for all 47 dicts"
+csl-observatory,d1f0523c362c,2026-05-16T05:51:53Z,actions-user,csl-observatory-bot,actions@github.com,data: monthly refresh (2026-05-16)
 csl-observatory,a68ca27ec9fc,2026-05-16T05:45:46Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs: rich CONTRIBUTING.md - 6 open roles, authorship policy, archival commitments"
 csl-observatory,fa8b072e3cd0,2026-05-16T05:45:44Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,feat(site): lexicography page - first findings from sanhw1 cladogram
 csl-observatory,29abaec035da,2026-05-16T05:45:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,feat(site): add Lexicography page to navigation
@@ -5967,6 +6437,67 @@ csl-observatory,eec8dc712aed,2026-05-07T19:29:28Z,gasyoun,Mārcis Gasūns,gasyou
 csl-observatory,c236fb5ac130,2026-05-07T19:28:08Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"feat: companion paper, headword counter, retry logic, templates"
 csl-observatory,1947ea3757ed,2026-05-07T17:04:56Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Create gasuns-cologne-30-report.md
 csl-observatory,e24574b2785a,2026-05-07T15:58:23Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"chore: bootstrap observatory — scripts, first data snapshot, dashboards, article scaffold"
+csl-orig,2151963d9ba8,2026-05-31T04:57:13Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 24 May 2026. See https://github.com/sanskrit-lexicon/csl-corrections/issues/235
+csl-orig,27f813796b0f,2026-05-31T03:56:46Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 22 May 2026. See https://github.com/sanskrit-lexicon/csl-corrections/issues/233
+csl-orig,7cb1608c9da6,2026-05-31T01:22:49Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Merge remote-tracking branch 'refs/remotes/origin/master'
+csl-orig,677a24c1dc49,2026-05-31T01:22:12Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,"Revert ""UrdDa->UrdDva. Close https://github.com/sanskrit-lexicon/csl-corrections/issues/228"""
+csl-orig,cbcf6be7707d,2026-05-30T18:00:27Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ci: encoding guard also checks <L>/<LEND> structural balance
+csl-orig,3444aa3188b0,2026-05-30T11:35:28Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ci: encoding guard (BOM / invalid-UTF-8) for canonical dict sources
+csl-orig,162e0601b291,2026-05-30T11:01:27Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 20 May 2026. See https://github.com/sanskrit-lexicon/csl-corrections/issues/229
+csl-orig,2efc5b8861da,2026-05-30T10:38:28Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,UrdDa->UrdDva. Close https://github.com/sanskrit-lexicon/csl-corrections/issues/228
+csl-orig,49f3a0ca4356,2026-05-29T16:21:50Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 19 May 2026. See https://github.com/sanskrit-lexicon/csl-corrections/issues/227
+csl-orig,2fdff76924c1,2026-05-29T13:00:45Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Merge remote-tracking branch 'refs/remotes/origin/master'
+csl-orig,3739d8d16988,2026-05-29T13:00:05Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 18 May 2026. See https://github.com/sanskrit-lexicon/csl-corrections/issues/226
+csl-orig,922602ce2ef5,2026-05-29T08:27:05Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix: remove spurious UTF-8 BOM from ap90/mw/ap/bur/inm/krm
+csl-orig,3f5319234089,2026-05-29T07:22:47Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: BOP/MW72 markup fixes — whitespace trims in lang tags
+csl-orig,969e0b831acc,2026-05-29T07:20:59Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: BUR/INM/KRM markup fixes — whitespace trims in lang/is/s tags
+csl-orig,51a764b431b2,2026-05-29T07:06:37Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: AP markup fix — remove trailing space in <ls> at line 151977
+csl-orig,8b051ab08ec0,2026-05-29T07:03:02Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: MWS markup fix — whitespace trims in <lex>, <bio>, <arab>, <bot> tags (9 lines)"
+csl-orig,a74c1998d989,2026-05-29T07:00:31Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: GRA markup fix — whitespace trims in <chg> tags (60 lines)
+csl-orig,863d559a4ef6,2026-05-29T06:59:37Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: AP90 markup fix — remove trailing space in <ls> at line 42758
+csl-orig,442e0d72a8cb,2026-05-29T06:56:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: BOR markup fix — remove spaces before </div> throughout bor.txt
+csl-orig,e2ed7bb5a51c,2026-05-29T06:54:13Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"BEN: trim trailing space inside <lang n=""greek""> at line 58227"
+csl-orig,83dec89c9657,2026-05-29T06:51:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,SKD: trim 3 trailing spaces inside <F> tags (lines 131540/42/46)
+csl-orig,cdae14996bba,2026-05-29T06:51:09Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,WIL: trim trailing space inside <ab>S. W. </ab> (line 294494)
+csl-orig,d7ef9ad2d912,2026-05-29T06:49:46Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,PW: fix missing space and glued page-marker (2 lines)
+csl-orig,6068fe9803d3,2026-05-29T05:30:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,PWG: trim 4 whitespace oddities in <lang>/<ls> tags
+csl-orig,752d447c0d2d,2026-05-29T05:28:23Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"PWG: fix stray > in <ls n=""...""> at line 62270"
+csl-orig,97e9085002a1,2026-05-29T05:12:33Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): refresh tooling-repo README with live counts (2026-05-29)
+csl-orig,dc3bbd7281fb,2026-05-29T03:13:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .pre-commit-config.yaml (yaml-only)
+csl-orig,e2d9a3ecd926,2026-05-29T03:07:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .github/dependabot.yml for GitHub Actions auto-updates
+csl-orig,585b872c8862,2026-05-28T22:41:12Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add issue templates
+csl-orig,f2680550b7bd,2026-05-28T22:04:10Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add PR template
+csl-orig,2f4752dc8b3e,2026-05-28T22:02:07Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add LICENSE (GPL-3.0)
+csl-orig,817011821c98,2026-05-28T15:51:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: merge remote changes (keep our CONTRIBUTING.md)
+csl-orig,98624290b39a,2026-05-28T15:47:37Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: standardise CONTRIBUTING.md (verdict=missing)
+csl-orig,d6f66fa38c67,2026-05-28T14:29:02Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 17 May 2026. See https://github.com/sanskrit-lexicon/csl-corrections/issues/225
+csl-orig,de1e736f1fb9,2026-05-28T14:11:22Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 16 May 2026. See https://github.com/sanskrit-lexicon/csl-corrections/issues/224
+csl-orig,b03b359e10eb,2026-05-27T16:56:58Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,PWG abbreviations
+csl-orig,b877f8411767,2026-05-22T13:07:30Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Added compound details for all Lbody. Close https://github.com/sanskrit-lexicon/LRV/issues/28
+csl-orig,cd2a72a54a41,2026-05-22T11:48:07Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,MW minor correction - Close https://github.com/sanskrit-lexicon/csl-corrections/issues/232
+csl-orig,e058ceaeae40,2026-05-22T08:43:49Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 15 May 2026. See https://github.com/sanskrit-lexicon/csl-corrections/issues/222
+csl-orig,0dc6e8e847e9,2026-05-22T06:43:35Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 14 May 2026. See https://github.com/sanskrit-lexicon/csl-corrections/issues/221
+csl-orig,ac8dc2201d69,2026-05-21T19:04:45Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,PWKVN minor typo corrected - Close https://github.com/sanskrit-lexicon/csl-corrections/issues/230
+csl-orig,0e7a95f14053,2026-05-21T15:05:05Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,INM printchange incorporated in inm.txt
+csl-orig,b56e1ecb46ee,2026-05-21T05:29:55Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,YAT printchange incorporated in yat.txt
+csl-orig,ecd11db6d3d8,2026-05-21T00:36:49Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,"PWG abbreviations, (temp_pwg_8) #174"
+csl-orig,8416e2e76065,2026-05-21T00:34:48Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,"PWG abbreviations, (temp_pwg_7) #174"
+csl-orig,6decc986f60f,2026-05-21T00:27:33Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,"PWG abbreviations, (temp_pwg_6) #174"
+csl-orig,98f3acb59184,2026-05-20T13:03:46Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,WIL printchange incorporated in wil.txt
+csl-orig,fe70ba606158,2026-05-20T11:16:14Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,VEI printchange incorporated in vei.txt
+csl-orig,f06042e9c810,2026-05-20T09:00:35Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,SKD printchange incorporated in skd.txt
+csl-orig,342676ad7748,2026-05-20T08:39:56Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,STC printchange incorporated in stc.txt
+csl-orig,5c89b5df204a,2026-05-20T08:17:23Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,SKD printchange incorporated in skd.txt
+csl-orig,a269a6a75026,2026-05-19T14:58:53Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,SCH printchange incorporated in sch.txt
+csl-orig,cd671118e8e1,2026-05-19T09:28:43Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,PWKVN printhchange missing entity added
+csl-orig,f04e5a2fe005,2026-05-19T09:24:36Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,PWKVN printchange incorporated in pwkvn.txt
+csl-orig,47e4ba0594fb,2026-05-19T09:07:00Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Added missing corrections in WIL per https://github.com/sanskrit-lexicon/WIL/issues/15#issuecomment-4479487804
+csl-orig,bfd9efd9cedf,2026-05-18T15:02:03Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,WIL - incorporating the changes per https://github.com/sanskrit-lexicon/csl-corrections/issues/10#issuecomment-4470948353
+csl-orig,db3d2e9f0c8b,2026-05-18T12:44:52Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,WIL as generated from AB data by WIL/issues/issue15/step2.py
+csl-orig,3744b2c95ac0,2026-05-18T12:44:13Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,WIL as generated by WIL/issues/issue15/step1.py
+csl-orig,837b40b16424,2026-05-17T06:51:39Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,AP minor typo
+csl-orig,4991480ee205,2026-05-17T06:49:37Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,AP printchange adjustments to bring broken bars out of the changelog
+csl-orig,accd2b8d0502,2026-05-17T04:21:10Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,PW princhange incorporated in pw.txt
 csl-orig,e4c798558ee6,2026-05-15T17:42:59Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Missed Printchange added in PW
 csl-orig,47891de24fdc,2026-05-15T15:17:45Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,printchanges to et cætera - See https://github.com/sanskrit-lexicon/csl-orig/pull/2845 and https://github.com/sanskrit-lexicon/csl-orig/issues/711
 csl-orig,58046555954c,2026-05-15T15:01:02Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Merge pull request #2845 from adminlip/fix/mw-28747
@@ -7891,6 +8422,28 @@ csl-orig,ecc689a3a281,2019-07-20T05:43:47Z,drdhaval2785,drdhaval2785,drdhaval278
 csl-orig,661fb1081d4f,2019-07-20T05:21:21Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,copy to cologne web structure
 csl-orig,f325e2abde72,2019-07-20T05:15:30Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,added hwextra
 csl-orig,6f45dd5ce45d,2019-07-20T04:50:29Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,csl-orig initial commit
+csl-pywork,e6d0f3097bda,2026-05-30T11:23:47Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix: read sources with utf-8-sig so a leading BOM can't break hw.py
+csl-pywork,46ca8d93f6d7,2026-05-29T08:53:07Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: remove stale lowercase readme.md (case-collision orphan)
+csl-pywork,526f6ea3fa35,2026-05-29T08:44:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: link to authoritative correction workflow in csl-corrections
+csl-pywork,93f7e1eba6a3,2026-05-29T05:07:50Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): refresh tooling-repo README with live counts (2026-05-29)
+csl-pywork,d68d74e97bc5,2026-05-29T05:06:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add dictparms invariant tests + coverage measurement (Phase 3)
+csl-pywork,e7bac64d0d12,2026-05-29T03:34:26Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,feat(ci): add unit tests for updateByLine.py correction engine
+csl-pywork,3e85be17faf4,2026-05-29T03:13:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .pre-commit-config.yaml (yaml-only)
+csl-pywork,36e1bfb09ea7,2026-05-29T03:12:08Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add CodeQL SAST workflow (php)
+csl-pywork,3d3046b3dd66,2026-05-29T03:07:43Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .github/dependabot.yml for GitHub Actions auto-updates
+csl-pywork,1e6b6fe31344,2026-05-28T23:03:58Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"fix(ci): drop F82, exclude v02/distinctfiles from ruff"
+csl-pywork,982d6721958d,2026-05-28T23:00:32Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): exclude Mako templates and Python 2 legacy dirs from ruff
+csl-pywork,06d61a302b1f,2026-05-28T22:58:07Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add CI workflow (Python tooling baseline)
+csl-pywork,88af0f8342c4,2026-05-28T22:41:16Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add issue templates
+csl-pywork,e37468fa490b,2026-05-28T22:04:10Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add PR template
+csl-pywork,36780ba9b385,2026-05-28T22:02:07Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add LICENSE (GPL-3.0)
+csl-pywork,6f03281cf310,2026-05-28T15:52:09Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: merge remote changes (keep our CONTRIBUTING.md)
+csl-pywork,d7922bac4ccd,2026-05-28T15:47:40Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: standardise CONTRIBUTING.md (verdict=missing)
+csl-pywork,0216e013d36a,2026-05-27T16:59:39Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,PWG abbreviations - tooltips
+csl-pywork,175a8341c5fe,2026-05-21T19:09:53Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,gitignore to ignore PD pywork files
+csl-pywork,23e3a67588ed,2026-05-18T15:20:32Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,script to refresh all csl repos
+csl-pywork,1fdaf879ddd4,2026-05-18T14:15:26Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,make_xml.py updated to avoid WARNINGs as noted in https://github.com/sanskrit-lexicon/WIL/issues/15#issuecomment-4477944775
+csl-pywork,d0489af88dfa,2026-05-18T14:09:03Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,make_xml.py to capture WIL line breaks
 csl-pywork,93217bc71d1d,2026-05-15T17:22:34Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,AE: revise aeauth/tooltip.txt.
 csl-pywork,efd32dd24fe1,2026-05-15T14:11:27Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CODE_OF_CONDUCT.md
 csl-pywork,14eaffe4fa49,2026-05-15T14:11:24Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CONTRIBUTING.md
@@ -8363,9 +8916,26 @@ csl-pywork,85ce663e2269,2019-07-22T06:48:04Z,drdhaval2785,drdhaval2785,drdhaval2
 csl-pywork,39208cc59d43,2019-07-20T15:54:34Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,compare.sh compares between generated and cologne versions
 csl-pywork,68da950d5517,2019-07-20T05:54:26Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,make_xml of 2013 added
 csl-pywork,a0ca4a27bdb0,2019-07-20T04:08:01Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,first commit
+csl-sqlite,a6a257a9a836,2026-05-29T05:10:13Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): refresh tooling-repo README with live counts (2026-05-29)
 csl-sqlite,299157791231,2026-05-15T06:00:57Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 csl-sqlite,fc82dcdff2e1,2026-04-11T06:00:27Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,README update
 csl-sqlite,fca7cdc9f757,2026-04-08T11:48:40Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+csl-websanlexicon,24e43897a80e,2026-05-29T03:13:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .pre-commit-config.yaml (python+yaml)
+csl-websanlexicon,7774eeda15ed,2026-05-29T03:12:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: add CodeQL SAST workflow (python, php)"
+csl-websanlexicon,ed36e8eb627a,2026-05-29T03:07:43Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .github/dependabot.yml for GitHub Actions auto-updates
+csl-websanlexicon,e234af99e0e5,2026-05-28T23:40:31Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add CI workflow (tooling-php)
+csl-websanlexicon,97f2c03c90fb,2026-05-28T22:41:20Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add issue templates
+csl-websanlexicon,e3fb05cecdd1,2026-05-28T22:04:10Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add PR template
+csl-websanlexicon,8600c02dbf38,2026-05-28T22:02:08Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add LICENSE (GPL-3.0)
+csl-websanlexicon,1370ba87a80e,2026-05-28T15:52:15Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: merge remote changes (keep our CONTRIBUTING.md)
+csl-websanlexicon,4de94645a932,2026-05-28T15:47:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: standardise CONTRIBUTING.md (verdict=missing)
+csl-websanlexicon,1effe5ecc657,2026-05-18T14:16:20Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,line break adjustments in basicdisplay
+csl-websanlexicon,2814cf97c95c,2026-05-18T13:44:08Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,display adjustments for multiple lex tags WIL
+csl-websanlexicon,dbbeb53b5013,2026-05-18T13:36:30Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,display adjustments for etymology WIL
+csl-websanlexicon,289d565b50da,2026-05-18T13:28:07Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,display adjustments for WIL
+csl-websanlexicon,520ab7ad7ccc,2026-05-17T06:55:29Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Merge remote-tracking branch 'refs/remotes/origin/master'
+csl-websanlexicon,cbe367d8c919,2026-05-17T06:55:05Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,readme update
+csl-websanlexicon,47c6f3ab9283,2026-05-16T21:19:51Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,AP90: link targets.
 csl-websanlexicon,44940115a076,2026-05-15T14:09:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CODE_OF_CONDUCT.md
 csl-websanlexicon,a090c382a08a,2026-05-15T14:09:47Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CONTRIBUTING.md
 csl-websanlexicon,ff8acba51e71,2026-05-15T14:09:44Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CITATION.cff
@@ -8822,6 +9392,7 @@ csl-websanlexicon,9dd72c0e9df0,2018-07-05T20:32:17Z,funderburkjim,funderburkjim,
 csl-websanlexicon,b66f40fb4704,2018-07-05T20:12:16Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,version 00 of installation python script
 csl-websanlexicon,01aa411e8151,2018-07-05T02:43:59Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initial template driven version v00
 csl-websanlexicon,70d100e4cf79,2018-07-02T22:07:39Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initial webinstall commit -- gra backup
+csl-westergaard,b481a087e3c2,2026-05-29T05:09:21Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): refresh tooling-repo README with live counts (2026-05-29)
 csl-westergaard,2506860a0e50,2026-05-15T14:16:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CODE_OF_CONDUCT.md
 csl-westergaard,dc3c1f1c43b9,2026-05-15T14:16:31Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CONTRIBUTING.md
 csl-westergaard,658f6ab41568,2026-05-15T14:16:28Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CITATION.cff
@@ -8831,12 +9402,17 @@ csl-westergaard,b76ddd4bde96,2026-05-15T07:20:29Z,gasyoun,Mārcis Gasūns,gasyou
 csl-westergaard,1bbb460f5387,2022-11-11T01:59:02Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Minor corrections re php 8.1.
 csl-westergaard,10ce6fd814c3,2019-11-08T20:42:07Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,Initial commit
 csl-westergaard,725181b85f8c,2019-11-08T20:38:09Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+csl-whitroot,639343e77451,2026-05-29T05:10:48Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): refresh tooling-repo README with live counts (2026-05-29)
 csl-whitroot,bf76af98d1eb,2026-05-15T07:53:53Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 csl-whitroot,9fb6a6864adb,2023-04-10T18:00:37Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,update README.md
 csl-whitroot,8cc498b236a4,2020-03-10T00:40:41Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,list of roots with upasargas. ref: https://github.com/sanskrit-lexicon/PWK/issues/68
 csl-whitroot,1ad3839f7ae5,2019-11-08T22:16:37Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Avoid PHP 'notice undefined index'
 csl-whitroot,50b959a5b934,2019-11-08T21:59:14Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,Initial commit
 csl-whitroot,0dcec9223ad0,2019-11-08T21:19:28Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+hwnorm1,0a20c3e35403,2026-05-31T08:19:03Z,actions-user,HWNORM1 BOT,actions@github.com,Regenerated hwnorm1.sqlite as on 20260531-081901
+hwnorm1,c84cefe22582,2026-05-28T23:46:41Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): refresh tooling-repo README with live counts
+hwnorm1,1643e72081e3,2026-05-24T07:55:32Z,actions-user,HWNORM1 BOT,actions@github.com,Regenerated hwnorm1.sqlite as on 20260524-075530
+hwnorm1,9a0938c9a288,2026-05-17T07:39:58Z,actions-user,HWNORM1 BOT,actions@github.com,Regenerated hwnorm1.sqlite as on 20260517-073957
 hwnorm1,e0913e166f9e,2026-05-15T13:58:16Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CODE_OF_CONDUCT.md
 hwnorm1,a7c76ddb1528,2026-05-15T13:58:14Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CONTRIBUTING.md
 hwnorm1,b7ccd464b8b9,2026-05-15T13:58:12Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CITATION.cff
@@ -9021,6 +9597,10 @@ hwnorm1,d1624f255cc6,2015-11-21T12:17:04Z,drdhaval2785,Dr. Dhaval Patel,drdhaval
 hwnorm1,a9366009ac66,2015-11-21T05:48:32Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,no restrictions
 hwnorm1,44f02cbe0c06,2015-11-21T05:04:03Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Convention 1 raw files
 hwnorm1,0edc815b114a,2015-11-19T05:22:04Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+hwnorm2,2abc19a469a2,2026-05-31T08:20:54Z,actions-user,HWNORM1 BOT,actions@github.com,Regenerated hwnorm2 repo as on 20260531-082053
+hwnorm2,debba138eca0,2026-05-29T05:08:16Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): refresh tooling-repo README with live counts (2026-05-29)
+hwnorm2,dccf11e28372,2026-05-24T07:57:27Z,actions-user,HWNORM1 BOT,actions@github.com,Regenerated hwnorm2 repo as on 20260524-075726
+hwnorm2,4281aeb6f7c3,2026-05-17T07:41:43Z,actions-user,HWNORM1 BOT,actions@github.com,Regenerated hwnorm2 repo as on 20260517-074143
 hwnorm2,35c02b2ef681,2026-05-15T14:21:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CODE_OF_CONDUCT.md
 hwnorm2,a61e30f2cf6b,2026-05-15T14:21:36Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CONTRIBUTING.md
 hwnorm2,c52873bb75bf,2026-05-15T14:21:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CITATION.cff
@@ -9062,6 +9642,7 @@ hwnorm2,c414caee7610,2020-02-06T22:19:57Z,funderburkjim,funderburkjim,funderburk
 hwnorm2,f91a4f37bf9f,2020-02-02T23:11:34Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,improve by removing some duplicates
 hwnorm2,201db9a32025,2020-02-02T00:36:35Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,minor correction
 hwnorm2,f03c95b8acd6,2020-02-01T22:00:20Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,initial commit
+literarysource,c232e280ae82,2026-05-29T05:08:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): refresh tooling-repo README with live counts (2026-05-29)
 literarysource,773f2a6c1b83,2026-05-15T14:26:24Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CODE_OF_CONDUCT.md
 literarysource,d8f02bcdcd08,2026-05-15T14:26:22Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CONTRIBUTING.md
 literarysource,dade088ed5eb,2026-05-15T14:26:19Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CITATION.cff
@@ -9093,6 +9674,7 @@ literarysource,4b9f48e61e36,2022-02-15T02:14:19Z,drdhaval2785,drdhaval2785,drdha
 literarysource,645fc9a2cbb7,2022-02-14T16:30:53Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,mw72 init
 literarysource,ffb14d9add68,2022-02-14T16:30:34Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,PWG ls statistics as on 14 Feb 2022
 literarysource,29780111536b,2022-02-12T05:50:27Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,initial commit based on csl-pywork
+mw-dev,b904b67821bf,2026-05-29T03:01:54Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): apply tooling-repo taxonomy
 mw-dev,6eda93239552,2026-05-15T14:27:48Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CODE_OF_CONDUCT.md
 mw-dev,6b19624cd5b0,2026-05-15T14:27:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CONTRIBUTING.md
 mw-dev,08e9ef09c0cf,2026-05-15T14:27:43Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CITATION.cff
@@ -9137,6 +9719,7 @@ mw-dev,9013f68f18c8,2023-02-09T04:48:13Z,Andhrabharati,Andhrabharati,knbrao@gmai
 mw-dev,f7d9c0881b29,2023-02-08T17:18:35Z,Andhrabharati,Andhrabharati,knbrao@gmail.com,Create mw_AB.txt
 mw-dev,547bc0de0da5,2023-01-19T13:15:57Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,initial commit on 19 Jan 2023
 mw-dev,46c56bb52cfa,2023-01-19T13:10:48Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+rvlinks,3169ac044d5d,2026-05-29T05:10:38Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): refresh tooling-repo README with live counts (2026-05-29)
 rvlinks,9bc7b471e97d,2026-05-15T14:01:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CODE_OF_CONDUCT.md
 rvlinks,b2edb73813bc,2026-05-15T14:01:53Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CONTRIBUTING.md
 rvlinks,0e7723e82508,2026-05-15T14:01:50Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): CITATION.cff
@@ -9156,9 +9739,11 @@ rvlinks,427cb46fba9b,2018-08-29T22:48:19Z,funderburkjim,funderburkjim,funderburk
 rvlinks,f7ee4aeb4e49,2018-08-29T22:36:00Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,"The initial version, with rvhymns constructed"
 rvlinks,e4ebf1ead069,2018-08-29T22:30:53Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,begin populating with files
 rvlinks,4e17c11d5348,2018-08-29T22:21:10Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,first commit
+sanskrit-fonts,f79bfe4c48d1,2026-05-29T05:11:29Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): refresh tooling-repo README with live counts (2026-05-29)
 sanskrit-fonts,4a86c5b9f39d,2026-05-15T07:39:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 sanskrit-fonts,fee5ad4e5a29,2018-09-05T03:50:42Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,siddhanta font
 sanskrit-fonts,9432607282a6,2018-09-05T03:39:54Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+sanskrit-lexicon.github.io,c02ea6bdc5be,2026-05-29T05:11:48Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): refresh tooling-repo README with live counts (2026-05-29)
 sanskrit-lexicon.github.io,9af5d0fea884,2026-05-15T07:39:07Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 sanskrit-lexicon.github.io,7fec0e297cab,2021-02-03T22:57:56Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Update index.html
 sanskrit-lexicon.github.io,30afc3f14762,2021-02-03T22:56:31Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Update index.html

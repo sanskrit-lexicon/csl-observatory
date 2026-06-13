@@ -1,48 +1,71 @@
-# Decisions needed from the maintainer
+# Decisions Needed From The Maintainer
 
-Consolidated list of items that are **blocked on a human** (a decision, a credential, or an action only you can take). Maintained so an agent can resurface it at the start of a session. Last updated 2026-05-31.
+Consolidated list of items that are blocked on a human decision,
+credential, or action. This file is now scoped to `csl-observatory` as
+the GitHub/org observatory only.
 
-> Agent note: when M.G. asks "what's next?" or resumes, **surface this list first**.
+Last updated: 2026-06-03.
+
+> Agent note: when M.G. asks "what's next?" or resumes observatory work,
+> surface this list first.
 
 ---
 
-## A. Decisions (pick an option)
+## Open Observatory Items
 
-| # | Decision | Options / recommendation | Source |
-|---|---|---|---|
-| A1 | **KRM license** | Its `LICENSE` is GPL-3.0 but `CITATION.cff` says CC-BY-SA-4.0. Align which way? *Rec: CC-BY-SA-4.0 (it's dictionary data).* | Roadmap M7 / KRM/CLAUDE.md |
-| A2 | **Taxonomy rollout scope** | ✅ **FULLY DONE 2026-05-31.** (a) **Dict taxonomy** — 24 dictionary repos (786 issues) verified all-clean (1 type + 1 severity + 1 milestone + matching project 1–4/MWS 5–8). (b) **Tooling taxonomy** — the 4 non-dictionary repos **csl-apidev, cologne-stardict, GreekInSanskrit, ArabicInSanskrit** (153 issues) verified all-clean under the tooling label set (17 types + 4 severities + 5 milestones; open issues → org project #9 Tooling Roadmap; closed issues labelled but not boarded, per the deployed convention). Greek/Arabic "provide foreign-text" task issues → `enhancement`, matching GreekInSanskrit's existing convention. COLOGNE/CORRECTIONS/temp_corrections_* remain skipped (legacy/meta) — 2026-05-31 the tooling-all runbook was aligned to list them under *Skip these (meta repos)* (they had drifted into its processing-order list). **A2 is closed — can be removed from this list.** | Roadmap Q7 / audit 2026-05-30 |
-| A3 | **LICENSE full text vs pointer** | The 6 documented dict repos got pointer-style CC-BY-SA-4.0 LICENSEs. Want the full legalcode (for GitHub auto-detection)? | Handoff full-runbook gaps |
-| A4 | **Scan-only dicts** (AE, IEG, MWE, PD, PE, PGN, SNP, YAT — 8, not on GitHub) | Ingest via Cologne web-scrape (~1 day each) or omit with a "future work" note? | LEXICOGRAPHY_ROADMAP §11.1 |
-| A5 | **Add PD** (Deccan College encyclopedic dict, 1976) | Major modern dict; would strengthen Paper L; needs Cologne coordination. Include? | LEXICOGRAPHY_ROADMAP §11.2 |
-| A6 | **Translation method (Phase L7)** | LLM-assisted (fast, fuzzy) vs strict bilingual-dictionary (slow, deterministic)? | LEXICOGRAPHY_ROADMAP §11.6 |
-| A7 | **Microstructure sampling** | Measure every entry, or sample (10% / specific letter-bands / a fixed lemma set)? Which test lemmas beyond `gam` (e.g. `rāma`, `iti`, a BHS term)? | MICROSTRUCTURE-MACROSTRUCTURE §6 |
-
-## B. Identifications / facts only you can confirm
+### B. Identifications / Facts Only You Can Confirm
 
 | # | Item | Source |
 |---|---|---|
-| B1 | Identify **FRI, KNA, KOW, LRV** (codes present, full titles unclear; KOW = Kossowich per memory) | LEXICOGRAPHY_ROADMAP §11.5 |
-| B2 | Verify **bibliography** I filled for the 6 documented repos — esp. BUR (Leupol / Maisonneuve) and BOP (1847 edition) | Handoff full-runbook gaps |
-| B3 | Source for `.github/ISSUE_TEMPLATE/*.yml` (templates dir has only the 3 community files) | Handoff full-runbook gaps |
+| B2 | Verify bibliography filled for the 6 documented repos, especially BUR (Leupol / Maisonneuve) and BOP (1847 edition). | Handoff full-runbook gaps |
 
-## C. Credentials / access needed
+### C. Credentials / Access Needed
+
+Deferred: none available now, per M.G. 2026-05-31.
 
 | # | Need | For |
 |---|---|---|
-| C1 | **GitHub token** (workflow + read:project scope) as repo secret `TOOLING_AUDIT_TOKEN` | Automate observatory refresh (M4 / csl-observatory#12); Tooling Roadmap audit; **dictionary drift-watch audit** (`dict-audit.yml`, see [DRIFT_WATCH.md](DRIFT_WATCH.md)) |
-| C2 | **Cologne server / analytics access** (Matomo/GA/logs; ability to run `redo_xampp_selective.sh`) | Public-artefact refresh; OBSERVATORY_DESIGN Phase 12 |
-| C3 | **DNS** for `observatory.sanskrit-lexicon.org` + Cologne `uni-koeln.de/observatory` handover | Observatory mirrors |
+| C1 | GitHub token with workflow + `read:project` scope as a repo secret. | Automate observatory refresh; tooling-roadmap audit; **dictionary drift-watch audit** (`dict-audit.yml`, see [DRIFT_WATCH.md](DRIFT_WATCH.md)) |
+| C2 | Cologne server access for `redo_xampp_selective.sh`, if the observatory is asked to track the repository/process side of public artifact refreshes. | Public artifact refresh as repository/process evidence |
+| C3 | DNS for `observatory.sanskrit-lexicon.org` plus Cologne `uni-koeln.de/observatory` handover. | Observatory mirrors |
 
-## D. Confirmations (likely yes, just need a nod)
+### D. Confirmations
 
-| # | Item |
-|---|---|
-| D1 | A Cologne admin will run / let the cron run `redo_xampp_selective.sh` so the 2026-05 csl-orig fixes propagate to Stardict/JSON/homepage. |
-| D2 | OK to do the **M1** refresh-script modernization as a *backward-compatible* refactor (parameterise path with a default), even though python2→3 of `make_babylon.py`/`json_from_babylon.py` still needs the server to test. |
-| D3 | OK to wire the full `make_xml` XML-parse check into CI (heavier), or is the source-level BOM/UTF-8/`<L>`-balance guard enough? (csl-pywork#51) |
-| D4 | **Taxonomy drift watch** ([DRIFT_WATCH.md](DRIFT_WATCH.md)): OK to (a) enable the weekly `dict-audit.yml` backstop now (reuses `TOOLING_AUDIT_TOKEN`), and (b) pilot the event-driven `needs-triage` guard on `GRA` before fanning out to all repos? |
+| # | Item | Status |
+|---|---|---|
+| D1 | A Cologne admin will run, or let the cron run, `redo_xampp_selective.sh` so the 2026-05 `csl-orig` fixes propagate to Stardict/JSON/homepage. | Awaiting Cologne admin; not M.G.'s action |
+| D4 | **Taxonomy drift watch** ([DRIFT_WATCH.md](DRIFT_WATCH.md)): OK to (a) enable the weekly `dict-audit.yml` backstop now (reuses `TOOLING_AUDIT_TOKEN`), and (b) pilot the event-driven `needs-triage` guard on `GRA` before fanning out to all repos? | Awaiting M.G. decision |
 
 ---
 
-*Engineering items trace to [`ROADMAP.md`](ROADMAP.md) + the [csl-corrections handoff](https://github.com/sanskrit-lexicon/csl-corrections/blob/master/.ai_state.md). Research items trace to [`LEXICOGRAPHY_ROADMAP.md`](LEXICOGRAPHY_ROADMAP.md) §11 and [`MICROSTRUCTURE-MACROSTRUCTURE.md`](MICROSTRUCTURE-MACROSTRUCTURE.md) §6.*
+## Recently Resolved Observatory Items
+
+| # | Resolution | Documented in |
+|---|---|---|
+| A2 | Taxonomy rollout done: 24 dictionary repos (786 issues) plus 4 tooling repos (153 issues), all verified clean. | `SESSION_HANDOFF.md`; `csl-corrections/.ai_state.md` |
+| A1 | KRM license set to CC-BY-SA-4.0; full legalcode replaced the GPL text. | KRM `LICENSE` |
+| A3 | Full CC-BY-SA-4.0 legalcode applied to 21 repos; GitHub now auto-detects the license. | `*/LICENSE` |
+| B3 | `.github/ISSUE_TEMPLATE/*.yml` plus `PULL_REQUEST_TEMPLATE.md` pushed to BOR/BUR/INM/KRM/BOP/MW72. | `csl-corrections/.ai_state.md`; previous handoff |
+| B4 | SHS author confirmed as Kulapati Jibananda Vidyasagara. | SHS README/CLAUDE; M3 docs |
+| B5 | ApteES reverse-direction English-to-Sanskrit docs built. | ApteES README/CLAUDE; M3 docs |
+| D2 | Approved M1 refresh-script modernization as a backward-compatible refactor. | `docs/ROADMAP.md`; `csl-pywork#53` |
+| D3 | Approved wiring the full `make_xml` XML-parse check into CI. | `csl-pywork#51` |
+
+---
+
+## Moved Out Of Observatory
+
+Dictionary-structure and dictionary-evidence decisions now live in
+`csl-atlas`. The preserved legacy copy is:
+
+- `csl-atlas/docs/DECISIONS_NEEDED_LEGACY_OBSERVATORY.md`
+
+This includes the former A6/A7/A8 research decisions, L0/Post-L0
+decisions, R2 sense-splitter decisions, Patel convention work,
+dictionary genealogy, and microstructure/macrostructure work.
+
+Standards/export decisions belong in `csl-standards`. DCS/corpus decisions
+belong in `VisualDCS` or a future grammar/corpus repository, not here.
+Matomo/top-entry analytics, backlinks, and broad publication schedules are
+also outside the active observatory boundary until a new human decision gives
+them a home.

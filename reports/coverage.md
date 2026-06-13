@@ -77,41 +77,41 @@ pie title Top-10 dictionaries by entry count
 | Repo | License | Issues triaged |
 |---|---|:---:|
 | ACC | *(none)* | ✓ |
-| AMAR | GPL-2.0 |  |
-| AP | *(none)* | ✓ |
+| AMAR | GPL-2.0 | ✓ |
+| AP | NOASSERTION | ✓ |
 | AP90 | GPL-3.0 | ✓ |
-| ApteES | *(none)* | ✓ |
-| ArabicInSanskrit | *(none)* |  |
+| ApteES | NOASSERTION | ✓ |
+| ArabicInSanskrit | *(none)* | ✓ |
 | BEN | *(none)* | ✓ |
 | BHS | *(none)* | ✓ |
-| BOP | *(none)* | ✓ |
-| BOR | *(none)* | ✓ |
-| BUR | *(none)* | ✓ |
+| BOP | NOASSERTION | ✓ |
+| BOR | NOASSERTION | ✓ |
+| BUR | NOASSERTION | ✓ |
 | CAE | *(none)* | ✓ |
 | CCS | *(none)* | ✓ |
-| COLOGNE | *(none)* | ✓ |
+| COLOGNE | NOASSERTION | ✓ |
 | CORRECTIONS | *(none)* |  |
-| DCS | *(none)* |  |
-| FRI | *(none)* | ✓ |
-| GRA | *(none)* | ✓ |
+| DCS | NOASSERTION | ✓ |
+| FRI | NOASSERTION | ✓ |
+| GRA | NOASSERTION | ✓ |
 | GreekInSanskrit | *(none)* | ✓ |
-| INM | *(none)* | ✓ |
-| KNA | *(none)* |  |
-| KOW | *(none)* |  |
+| INM | NOASSERTION | ✓ |
+| KNA | *(none)* | ✓ |
+| KOW | *(none)* | ✓ |
 | KRM | GPL-3.0 | ✓ |
 | LRV | *(none)* | ✓ |
 | MCI | *(none)* | ✓ |
-| MD | *(none)* | ✓ |
-| MW72 | *(none)* | ✓ |
+| MD | NOASSERTION | ✓ |
+| MW72 | NOASSERTION | ✓ |
 | MWS | NOASSERTION | ✓ |
 | MWinflect | *(none)* | ✓ |
-| PWG | *(none)* | ✓ |
-| PWK | *(none)* | ✓ |
-| SCH | *(none)* | ✓ |
+| PWG | NOASSERTION | ✓ |
+| PWK | NOASSERTION | ✓ |
+| SCH | NOASSERTION | ✓ |
 | SHS | *(none)* | ✓ |
 | SKD | *(none)* | ✓ |
 | STC | *(none)* | ✓ |
-| VCP | *(none)* | ✓ |
+| VCP | NOASSERTION | ✓ |
 | VEI | *(none)* | ✓ |
 | WIL | *(none)* | ✓ |
 | Wil-YAT | NOASSERTION | ✓ |
@@ -128,17 +128,17 @@ pie title Top-10 dictionaries by entry count
 | csl-homepage | *(none)* |  |
 | csl-inflect | LGPL-3.0 | ✓ |
 | csl-json | *(none)* |  |
-| csl-kale | GPL-3.0 |  |
+| csl-kale | GPL-3.0 | ✓ |
 | csl-ldev | *(none)* | ✓ |
 | csl-lnum | *(none)* | ✓ |
-| csl-lslink | *(none)* |  |
-| csl-newsletter | *(none)* |  |
+| csl-lslink | *(none)* | ✓ |
+| csl-newsletter | *(none)* | ✓ |
 | csl-observatory | GPL-3.0 | ✓ |
-| csl-orig | *(none)* | ✓ |
-| csl-pywork | *(none)* | ✓ |
+| csl-orig | NOASSERTION | ✓ |
+| csl-pywork | NOASSERTION | ✓ |
 | csl-santam | NOASSERTION |  |
-| csl-sqlite | GPL-3.0 |  |
-| csl-websanlexicon | *(none)* |  |
+| csl-sqlite | GPL-3.0 | ✓ |
+| csl-websanlexicon | NOASSERTION |  |
 | csl-westergaard | GPL-3.0 | ✓ |
 | csl-whitroot | GPL-3.0 |  |
 | hwnorm1 | *(none)* | ✓ |
@@ -155,5 +155,5 @@ pie title Top-10 dictionaries by entry count
 | temp_corrections_mw | *(none)* |  |
 | test_cologne_push | *(none)* |  |
 
-**License coverage**: 18 of 78 repos declare a license; **60 are unlicensed** (FAIR R1.1 violation, addressed by runbook Phase 11).
+**License coverage**: 37 of 78 repos declare a license; **41 are unlicensed** (FAIR R1.1 violation, addressed by runbook Phase 11).
 

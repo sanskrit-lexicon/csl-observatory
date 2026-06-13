@@ -18,12 +18,16 @@ observatory/data/*.duckdb
 # Observable Framework build artifacts
 observatory/site/dist/
 observatory/site/.observablehq/cache/
+observatory/site/src/.observablehq/
 observatory/site/node_modules/
 
 # Outreach drafts — keep local only (sensitive: email contents)
 docs/outreach/
 
 /dist/L0/
+
+# forensic intermediate caches — large, regenerable from ../csl-orig via parse_cslorig.py
+data/forensic/parsed/
 
 # audit sidecars
 .contributing_old.md

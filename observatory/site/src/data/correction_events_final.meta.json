@@ -1,0 +1,255 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-06-11T19:36:28.005004+00:00",
+  "sourcePath": "correction_events_typed.csv",
+  "recordCount": 50953,
+  "assumptions": [
+    "Crosswalks are secondary views derived from the typed edit-op trace; the canonical typology remains the microstructure component.",
+    "Event-level label = the dominant (op, unit) of the edit trace.",
+    "dittography/haplography detected only for clean single-char in/del.",
+    "Confusion matrix counts single-char substitutions over NFD chars."
+  ],
+  "warnings": [],
+  "stats": {
+    "ocr": [
+      [
+        "substitution",
+        15847
+      ],
+      [
+        "insertion",
+        13195
+      ],
+      [
+        "deletion",
+        10564
+      ],
+      [
+        "segmentation",
+        9750
+      ],
+      [
+        "unknown",
+        890
+      ],
+      [
+        "transposition",
+        707
+      ]
+    ],
+    "textcrit": [
+      [
+        "addition",
+        18877
+      ],
+      [
+        "substitution",
+        16432
+      ],
+      [
+        "omission",
+        13340
+      ],
+      [
+        "unknown",
+        890
+      ],
+      [
+        "metathesis",
+        732
+      ],
+      [
+        "haplography",
+        489
+      ],
+      [
+        "dittography",
+        193
+      ]
+    ],
+    "errantTop": [
+      [
+        "M:PUNCTUATION",
+        6675
+      ],
+      [
+        "U:PUNCTUATION",
+        5994
+      ],
+      [
+        "R:CONSONANT",
+        5533
+      ],
+      [
+        "M:CONSONANT",
+        5301
+      ],
+      [
+        "R:CASE",
+        4462
+      ],
+      [
+        "U:CONSONANT",
+        3422
+      ],
+      [
+        "M:DIACRITIC",
+        3382
+      ],
+      [
+        "R:VOWEL",
+        2041
+      ],
+      [
+        "R:PUNCTUATION",
+        1916
+      ],
+      [
+        "M:VOWEL",
+        1481
+      ],
+      [
+        "U:WHITESPACE",
+        1377
+      ],
+      [
+        "U:VOWEL",
+        1245
+      ],
+      [
+        "R:DIGIT",
+        1151
+      ],
+      [
+        "U:DIACRITIC",
+        1138
+      ],
+      [
+        "R:DIACRITIC",
+        1079
+      ]
+    ],
+    "confusionTopForm": [
+      {
+        "from": "P",
+        "to": "p",
+        "unit": "case",
+        "count": 2945
+      },
+      {
+        "from": ".",
+        "to": ",",
+        "unit": "punctuation",
+        "count": 988
+      },
+      {
+        "from": "¯",
+        "to": ".",
+        "unit": "punctuation",
+        "count": 488
+      },
+      {
+        "from": "v",
+        "to": "V",
+        "unit": "case",
+        "count": 346
+      },
+      {
+        "from": "b",
+        "to": "v",
+        "unit": "consonant",
+        "count": 341
+      },
+      {
+        "from": "2",
+        "to": "²",
+        "unit": "digit",
+        "count": 340
+      },
+      {
+        "from": "p",
+        "to": "P",
+        "unit": "case",
+        "count": 336
+      },
+      {
+        "from": "g",
+        "to": "̇",
+        "unit": "diacritic",
+        "count": 329
+      },
+      {
+        "from": "n",
+        "to": "̣",
+        "unit": "diacritic",
+        "count": 271
+      },
+      {
+        "from": "̣",
+        "to": "n",
+        "unit": "diacritic",
+        "count": 267
+      },
+      {
+        "from": "k",
+        "to": "t",
+        "unit": "consonant",
+        "count": 255
+      },
+      {
+        "from": "E",
+        "to": "e",
+        "unit": "case",
+        "count": 238
+      },
+      {
+        "from": "a",
+        "to": "i",
+        "unit": "vowel",
+        "count": 235
+      },
+      {
+        "from": "*",
+        "to": "e",
+        "unit": "punctuation",
+        "count": 227
+      },
+      {
+        "from": "O",
+        "to": "g",
+        "unit": "vowel",
+        "count": 226
+      },
+      {
+        "from": "j",
+        "to": "̃",
+        "unit": "diacritic",
+        "count": 204
+      },
+      {
+        "from": "s",
+        "to": "m",
+        "unit": "consonant",
+        "count": 198
+      },
+      {
+        "from": "e",
+        "to": "o",
+        "unit": "vowel",
+        "count": 194
+      },
+      {
+        "from": "k",
+        "to": "K",
+        "unit": "case",
+        "count": 188
+      },
+      {
+        "from": "s",
+        "to": "a",
+        "unit": "consonant",
+        "count": 187
+      }
+    ]
+  }
+}

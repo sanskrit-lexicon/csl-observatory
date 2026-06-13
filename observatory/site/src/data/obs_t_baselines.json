@@ -1,0 +1,24 @@
+{
+  "generatedAt": "2026-06-11T19:41:17.210264+00:00",
+  "detection": {
+    "train_tokens": 14670,
+    "test_pairs": 3127,
+    "pairwise_accuracy": 0.516,
+    "tie_rate": 0.012
+  },
+  "correction": {
+    "train_lexicon": 11173,
+    "test_pairs": 3127,
+    "accuracy_at_1": 0.059,
+    "dist1_share": 0.787
+  },
+  "classification": {
+    "train": 17082,
+    "test": 8359,
+    "accuracy": 0.594,
+    "macro_f1": 0.403,
+    "majority_baseline_accuracy": 0.44,
+    "majority_class": "sense",
+    "classes": 6
+  }
+}

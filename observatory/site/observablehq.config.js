@@ -5,11 +5,12 @@ export default {
   title: "CSL Observatory",
   pages: [
     {name: "Activity", path: "/activity"},
-    {name: "Coverage", path: "/coverage"},
+    {name: "Error Typology", path: "/error-typology"},
+    {name: "Issue Taxonomy", path: "/coverage"},
     {name: "Community", path: "/community"},
     {name: "Tech Stack", path: "/tech-stack"},
-    {name: "Lexicography", path: "/lexicography"},
-    {name: "Benchmarks", path: "/benchmarks"},
+    {name: "Repo Benchmarks", path: "/benchmarks"},
+    {name: "Repo Health", path: "/repo-health"},
     {name: "Data", path: "/data"}
   ],
   theme: ["air", "alt", "wide"],

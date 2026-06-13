@@ -1,0 +1,180 @@
+{
+  "generatedAt": "2026-06-11T17:39:48.230730+00:00",
+  "reference": "indic_transliteration (sanscript)",
+  "slp1": {
+    "n": 4000,
+    "agree": 4000,
+    "rate": 1.0,
+    "sample_diffs": []
+  },
+  "hk": {
+    "n": 4000,
+    "agree": 3822,
+    "rate": 0.9555,
+    "sample_diffs": [
+      {
+        "tok": "gobijakAYcana",
+        "mine": "gobijakāñcana",
+        "ref": "gobijakāẏcana",
+        "n": 2
+      },
+      {
+        "tok": "gobIjakAYcana",
+        "mine": "gobījakāñcana",
+        "ref": "gobījakāẏcana",
+        "n": 2
+      },
+      {
+        "tok": "nyaYcana",
+        "mine": "nyañcana",
+        "ref": "nyaẏcana",
+        "n": 2
+      },
+      {
+        "tok": "sItAyajYa",
+        "mine": "sītāyajña",
+        "ref": "sītāyajẏa",
+        "n": 2
+      },
+      {
+        "tok": "sahasraYit",
+        "mine": "sahasrañit",
+        "ref": "sahasraẏit",
+        "n": 1
+      },
+      {
+        "tok": "sAvitrIpeYjara",
+        "mine": "sāvitrīpeñjara",
+        "ref": "sāvitrīpeẏjara",
+        "n": 1
+      },
+      {
+        "tok": "sAvitrIpaYjara",
+        "mine": "sāvitrīpañjara",
+        "ref": "sāvitrīpaẏjara",
+        "n": 1
+      },
+      {
+        "tok": "paYcatrinSacClokI",
+        "mine": "pañcatrinṣacClokī",
+        "ref": "paẏcatrinṣacClokī",
+        "n": 1
+      },
+      {
+        "tok": "paYcatriMSacClokI",
+        "mine": "pañcatriṃṣacClokī",
+        "ref": "paẏcatriṃṣacClokī",
+        "n": 1
+      },
+      {
+        "tok": "paYcatrinSatpIWikA",
+        "mine": "pañcatrinṣatpīWikā",
+        "ref": "paẏcatrinṣatpīWikā",
+        "n": 1
+      },
+      {
+        "tok": "paYcatriMSatpIWikA",
+        "mine": "pañcatriṃṣatpīWikā",
+        "ref": "paẏcatriṃṣatpīWikā",
+        "n": 1
+      },
+      {
+        "tok": "paYcatrinSat",
+        "mine": "pañcatrinṣat",
+        "ref": "paẏcatrinṣat",
+        "n": 1
+      },
+      {
+        "tok": "paYcatriMSat",
+        "mine": "pañcatriṃṣat",
+        "ref": "paẏcatriṃṣat",
+        "n": 1
+      },
+      {
+        "tok": "pAtaYjalaBAzyavarttika",
+        "mine": "pātañjalaBāśyavarttika",
+        "ref": "pātaẏjalaBāśyavarttika",
+        "n": 1
+      },
+      {
+        "tok": "pAtaYjalaBAzyavArttika",
+        "mine": "pātañjalaBāśyavārttika",
+        "ref": "pātaẏjalaBāśyavārttika",
+        "n": 1
+      }
+    ]
+  },
+  "devanagari": {
+    "n": 780,
+    "agree": 768,
+    "rate": 0.9846,
+    "sample_diffs": [
+      {
+        "tok": "अ॑न्या.).",
+        "mine": "a॑nyā.).",
+        "ref": "a̭nyā.).",
+        "n": 2
+      },
+      {
+        "tok": "म॑थति",
+        "mine": "ma॑thati",
+        "ref": "ma̭thati",
+        "n": 1
+      },
+      {
+        "tok": "रस॑यति",
+        "mine": "rasa॑yati",
+        "ref": "rasa̭yati",
+        "n": 1
+      },
+      {
+        "tok": "पोस्क॑यति",
+        "mine": "poska॑yati",
+        "ref": "poska̭yati",
+        "n": 1
+      },
+      {
+        "tok": "पोष॑यति",
+        "mine": "poṣa॑yati",
+        "ref": "poṣa̭yati",
+        "n": 1
+      },
+      {
+        "tok": "र॑थ-",
+        "mine": "ra॑tha-",
+        "ref": "ra̭tha-",
+        "n": 1
+      },
+      {
+        "tok": "अ॑क्षि॑",
+        "mine": "a॑kṣi॑",
+        "ref": "a̭kṣi̭",
+        "n": 1
+      },
+      {
+        "tok": "अ॑क्षी॑",
+        "mine": "a॑kṣī॑",
+        "ref": "a̭kṣī̭",
+        "n": 1
+      },
+      {
+        "tok": "य॑स्यति",
+        "mine": "ya॑syati",
+        "ref": "ya̭syati",
+        "n": 1
+      },
+      {
+        "tok": "अ॑ःअर्",
+        "mine": "a॑ḥar",
+        "ref": "a̭ḥar",
+        "n": 1
+      },
+      {
+        "tok": "अ॑हर्",
+        "mine": "a॑har",
+        "ref": "a̭har",
+        "n": 1
+      }
+    ]
+  }
+}

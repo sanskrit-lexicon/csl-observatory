@@ -1,8 +1,11 @@
-name: Refresh data snapshot
+name: Refresh data snapshot (legacy pipeline)
+
+# Manual-only. The canonical scheduled refresh is refresh-observatory.yml,
+# which feeds the dashboard + findings. This older pull_data/compute_metrics/
+# render_reports pipeline is kept for the legacy report tables; its schedule
+# was removed to avoid two crons racing to commit data/.
 
 on:
-  schedule:
-    - cron: '0 6 * * 1'  # Mondays 06:00 UTC
   workflow_dispatch:
 
 permissions:
@@ -12,10 +15,10 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
 
