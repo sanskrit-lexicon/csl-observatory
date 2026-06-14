@@ -8,6 +8,10 @@ Last updated: 2026-06-03.
 
 > Agent note: when M.G. asks "what's next?" or resumes observatory work,
 > surface this list first.
+>
+> **Org-wide view:** for pending decisions across *all* Sanskrit Lexicon
+> repos (not just the observatory), see the master index
+> [`CROSS_REPO_DECISIONS.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/CROSS_REPO_DECISIONS.md).
 
 ---
 
