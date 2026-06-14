@@ -40,9 +40,10 @@ jobs:
       - name: Fetch all repo data
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SINCE: ${{ inputs.since || '2014-01-01' }}
         run: |
           cd observatory
-          python fetch.py --since "${{ inputs.since || '2014-01-01' }}"
+          python fetch.py --since "$SINCE"
 
       - name: Transform snapshots
         run: |
