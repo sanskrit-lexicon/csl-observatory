@@ -108,15 +108,25 @@ when you need exotic schemes the package doesn't cover.
    round-trip + the `ṁ`(U+1E41)→`M` handling, then sanscript can be dropped wholesale. (`slug.py` is Cyrillic→Latin
    BGN/PCGN — out of sanskrit-util scope entirely.)
 
-> **SLP1-gap unlock (the real blocker, 2026-06-15).** The queue was built from a name/hash census; behaviour +
-> deploy analysis shows the remaining JS/Py app consumers mostly need things sanskrit-util doesn't expose yet.
-> sanskrit-util is **IAST/Devanāgarī-centric**; the CDSL dictionary world is **SLP1-native**. To unlock real dedup
-> (SanskritSpellCheck #2, the dict-repo `hwnorm`/`word_frequency_norm` consumers, and csl-atlas's still-local
-> `dict-normalize.normalizeLemma`), sanskrit-util needs an **SLP1-side API**: SLP1 alphabet/vowel/consonant sets,
-> an SLP1-input `form_key`/normalizer (case-preserving), and a proper Devanāgarī⇄SLP1 round-trip. That package
-> enhancement — not the per-repo swaps — is the high-value next step.
-5. **RussianRamayana** `transliterate_filenames.py`; **CORRECTIONS** `hwchk_iast*.py` (×4 dicts);
-   **ApteES/AP** `hwnorm1*.py`; **csl-apidev** `word_frequency_norm.py`.
+> **SLP1-gap unlock (mostly SHIPPED, 2026-06-15).** The queue was built from a name/hash census; behaviour +
+> deploy analysis showed the JS/Py app consumers needed things sanskrit-util didn't expose. sanskrit-util is
+> IAST/Devanāgarī-centric; the CDSL dictionary world is **SLP1-native** — so the unlock was an **SLP1-side API**.
+> That has now shipped: SLP1 alphabet/vowel/consonant sets + `slp1_norm` + `slp1_form_key` (PR #1, merged) and
+> `deva_to_slp1` (a proper Devanāgarī→SLP1 round-trip, on `feat/slp1-api`). It unblocked **SanskritSpellCheck #12**
+> and **csl-atlas #124** (`normalizeSlp1Lemma`/`normalizeLemma` now delegate to `slp1_norm`). **Residual gap:** the
+> dict-repo `hwnorm`/`word_frequency_norm` consumers fold *morphology/sandhi* (a canonicalization key), not just
+> accents — that's a **different, still-unbuilt** function, not the SLP1-side API; those consumers stay N/A (item 5).
+5. **RussianRamayana / CORRECTIONS / ApteES / AP / csl-apidev** — **all NOT APPLICABLE**
+   (behaviour + deploy gate, 2026-06-15). `RussianRamayana/web/transliterate_filenames.py` is
+   Cyrillic→Latin filename renaming (not Sanskrit) and a frozen one-off. `CORRECTIONS/hwchk_iast*`
+   (×4), `ApteES/ae_saninvert/hwnorm1`, and `AP/issues/issue10/dalglobpy/hwnorm1c` are **frozen
+   issue-processing scripts** (outputs committed, no live callers). The one LIVE consumer,
+   `csl-apidev/simple-search/wf0/word_frequency_norm.py`, uses `hwnorm1c.normalize_key`, which
+   applies ~10 **morphological/sandhi** rules (`aM`/`am`/`aH`→base vowel, `ant`→`at`, `cC`, `rxX`→`rX`,
+   homorganic nasals); `slp1_norm` (accent + homonym-digit stripping only) matched **0 % of 4121**
+   real word-frequency diff entries — fundamentally different operations, so no swap. That `hwnorm1c`
+   morphological folder is *itself* duplicated (csl-apidev + AP); if ever worth sharing it is a **new
+   sanskrit-util function** (an SLP1 morphological-fold key), not a migration of these files.
 6. **WhitneyRoots JS** `reader.js`/`linguistics.js` — ship an IIFE/global build of `sanskrit-util`
    so the browser readers (WhitneyRoots + BookIndex) can drop their inline copies (deferred: both
    are deployed; do it with a verified build, not a hand-edit).
