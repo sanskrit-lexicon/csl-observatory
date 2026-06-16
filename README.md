@@ -1,11 +1,11 @@
 # csl-observatory
 
-> **Live observatory for 12 years of Cologne Digital Sanskrit Lexicon (CDSL).**
+> **Live observatory for 13 years of Cologne Digital Sanskrit Lexicon (CDSL).**
 > Tracking 76 repos, 5,413 issues+PRs, 9,877 commits, and 16 contributors since 2014.
 
 ## What this is
 
-A meta-repository that **measures the entire sanskrit-lexicon GitHub organisation** and turns 12 years of distributed work into measurable, citable, reproducible knowledge. It is intentionally limited to repositories, issues, pull requests, commits, contributors, workflows, and organization-level maintenance evidence. The 2026-06-04 boundary cleanup is merged: dictionary-structure research belongs in [`csl-atlas`](https://github.com/sanskrit-lexicon/csl-atlas), standards/export work belongs in [`csl-standards`](https://github.com/sanskrit-lexicon/csl-standards), and DCS/corpus work belongs in [`VisualDCS`](https://github.com/gasyoun/VisualDCS).
+A meta-repository that **measures the entire sanskrit-lexicon GitHub organisation** and turns 13 years of distributed work into measurable, citable, reproducible knowledge. It is intentionally limited to repositories, issues, pull requests, commits, contributors, workflows, and organization-level maintenance evidence. The 2026-06-04 boundary cleanup is merged: dictionary-structure research belongs in [`csl-atlas`](https://github.com/sanskrit-lexicon/csl-atlas), standards/export work belongs in [`csl-standards`](https://github.com/sanskrit-lexicon/csl-standards), and DCS/corpus work belongs in [`VisualDCS`](https://github.com/gasyoun/VisualDCS).
 
 ## Quick links
 
@@ -43,7 +43,7 @@ as issues #15–#21 (Actions), with the findings themselves as #22–#25 (Findin
 ### OBS-T — error typology of digital Sanskrit dictionaries
 
 A standalone language-resource + finding track (Phases 1–8), distinct from the
-org-process findings above. It unifies 12 years of corrections (correction-form
+org-process findings above. It unifies 13 years of corrections (correction-form
 archive + `csl-orig` git history) into a 50,953-event corpus and a **two-axis
 typology** — **location** (where in the entry) × **edit-type** (what kind of edit).
 Design: [`docs/ERROR_TYPOLOGY_DESIGN.md`](docs/ERROR_TYPOLOGY_DESIGN.md) · datasheet:
@@ -93,7 +93,7 @@ Install: `git clone` that repo, then `cp .claude/commands/*.md ~/.claude/command
 | Most active repo | `csl-orig` (the git-based correction workflow) |
 | Peak commit year | 2026 (2,519 commits) |
 | Peak issue year | 2025 (1,178 opened) |
-| Dominant work type | `text-correction` (4,000+ across 12 years) |
+| Dominant work type | `text-correction` (4,000+ across 13 years) |
 
 ## Refresh cadence
 
@@ -119,7 +119,7 @@ contributor, workflow, project, or organization-process evidence.
 
 If you use these data in published work:
 
-> Gasūns, M. et al. (2026). *CSL Observatory: 12 years of Cologne Digital Sanskrit Lexicon* [Data set]. Zenodo. DOI: pending mint.
+> Gasūns, M. et al. (2026). *CSL Observatory: 13 years of Cologne Digital Sanskrit Lexicon* [Data set]. Zenodo. DOI: pending mint.
 
 Plus the snapshot date for reproducibility.
 

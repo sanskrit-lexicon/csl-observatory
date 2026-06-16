@@ -159,7 +159,7 @@ Each event is attributed to the microstructure component it repairs by joining t
 `csl-orig` record and locating the changed text among its XML tags (`<k1>`/`<h>` →
 headword, `<lex>` → grammar, `<ls>` → citation, definition prose → sense, tag delimiters
 → markup, …). On the **git layer the join is 100 % positional** — the changed source line
-carries its own tags — so location is read off directly. On the **form layer only 12.9 %
+carries its own tags — so location is read off directly. On the **form layer only 28.8 %
 join**, for two legacy-data reasons we report rather than hide: the form's "L-code" cell
 is free text, and the 2014-era sequential record ids have **drifted** against today's
 sources (a form pointer to record 4477 once meant *utkaṇṭhā*; that slot now holds
@@ -354,7 +354,7 @@ whichever axis its fallback heuristic happens to encode. Separate the axes first
 
 ## 8. Limitations and future work
 
-**Form-layer linkage.** Only 12.9 % of form-era events join to a current source record, so
+**Form-layer linkage.** Only 28.8 % of form-era events join to a current source record, so
 the location axis leans on the git layer; raising the form link rate (fuzzy headword
 matching, per-dictionary encoding profiles, id-drift reconciliation) is the main avenue to
 extend location coverage backward in time.

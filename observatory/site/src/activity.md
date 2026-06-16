@@ -5,7 +5,7 @@ toc: true
 
 # Activity timeline
 
-Issue, PR, and commit throughput over 12 years across all 77 sanskrit-lexicon repos.
+Issue, PR, and commit throughput over 13 years across all 76 sanskrit-lexicon repos.
 
 ```js
 const monthly = await FileAttachment("data/timeseries_monthly.csv").csv({typed: true});
