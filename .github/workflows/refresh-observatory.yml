@@ -2,8 +2,8 @@ name: Refresh observatory
 
 on:
   schedule:
-    # Monthly fallback: 1st of each month at 03:00 UTC
-    - cron: '0 3 1 * *'
+    # Weekly: every Monday at 03:00 UTC
+    - cron: '0 3 * * 1'
   workflow_dispatch:
     # Manual trigger via GitHub UI / API
     inputs:
@@ -16,6 +16,14 @@ permissions:
   contents: write
   pages: write
   id-token: write
+
+concurrency:
+  # Serialise data refreshes: the scheduled run and any manual dispatch (here
+  # or in the legacy refresh.yml, which shares this group) both commit data/,
+  # so they must never run at the same time. Queue rather than cancel so an
+  # in-flight commit+deploy always finishes.
+  group: observatory-data
+  cancel-in-progress: false
 
 jobs:
   fetch-and-build:
@@ -44,6 +52,13 @@ jobs:
         run: |
           cd observatory
           python fetch.py --since "$SINCE"
+
+      - name: Guard against silently dropped repos
+        run: |
+          # Fail loudly (leaving the last-good committed data live) if a large
+          # repo came back with zero commits — a transient REST failure would
+          # otherwise rebuild the dashboard with that history missing.
+          python observatory/check_coverage.py
 
       - name: Transform snapshots
         run: |
