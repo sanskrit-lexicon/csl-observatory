@@ -5,7 +5,7 @@ toc: true
 
 # Community growth
 
-Contributors over 12 years. Bus-factor, retention, geographic distribution.
+Contributors over 13 years. Bus-factor, retention, geographic distribution.
 
 ```js
 const contributors = await FileAttachment("data/contributors.csv").csv({typed: true});

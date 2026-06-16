@@ -13,7 +13,7 @@ traffic, or publication impact.
 
 | Project | Domain | Started | Open source | Issues tracked publicly | Repos |
 |---|---|---:|---|---|---:|
-| **CDSL** (this) | Sanskrit lexicography | 2014 | Yes (CC-BY-SA + GPL) | Yes (GitHub) | 77 |
+| **CDSL** (this) | Sanskrit lexicography | 2014 | Yes (CC-BY-SA + GPL) | Yes (GitHub) | 76 |
 | Thesaurus Linguae Graecae (TLG) | Greek lexicography | 1972 | No | No | n/a |
 | Perseus Digital Library | Greek + Latin lexicon + corpus | 1985 | Yes | Partial (issues on GitHub) | ~30 |
 | Cuneiform Digital Library Initiative (CDLI) | Sumerian / Akkadian | 2000 | Yes | Yes (GitHub) | ~10 |

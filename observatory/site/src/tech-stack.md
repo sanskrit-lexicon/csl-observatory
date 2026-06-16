@@ -5,7 +5,7 @@ toc: true
 
 # Tech stack and ecosystem
 
-How the technical infrastructure evolved over 12 years.
+How the technical infrastructure evolved over 13 years.
 
 ```js
 const repos = await FileAttachment("data/repos.csv").csv({typed: true});

@@ -36,7 +36,7 @@ and its derivation. Snapshot 2026-06-12; regenerate with the OBS-T pipeline (bel
   **65.9% derived**, the rest `unattributed` location (the edit-type axis is
   defined for all events).
 - **Sampling.** Not a sample: the full available correction record. Known gaps —
-  287 bulk-reformat git commits excluded; form-era events only ~28.6% machine-linked
+  287 bulk-reformat git commits excluded; form-era events only ~28.8% machine-linked
   to current sources (encoding heterogeneity + L-code drift).
 - **Sensitive data.** Corrector names (already public in the CDSL git history and
   `contributors_map.json`); raw email addresses are **not** included.
