@@ -18,6 +18,7 @@ A meta-repository that **measures the entire sanskrit-lexicon GitHub organisatio
 - **[Docs archive index](docs/ARCHIVE.md)** — legacy and moved-to-`csl-atlas` documents in one place
 - **[Data downloads](observatory/site/src/data/)** — every chart's source as CSV
 - **[Runbooks](runbook/)** — the issue-taxonomy procedures applied to all active repos
+- **[Maintenance skills](https://github.com/sanskrit-lexicon/cologne-skills)** — portable Claude Code skills for org-wide security & maintenance (PHP XSS sweep · security audit · alert triage)
 - **[Contributor & work statistics](docs/CONTRIBUTOR_STATS.md)** — per-contributor & per-repo commits, churn, tenure, and issues (2014–2026)
 - **[Decisions needed](docs/DECISIONS_NEEDED.md)** — open items blocked on a maintainer (decisions, credentials, confirmations)
 
@@ -67,6 +68,18 @@ Reports: [typology](reports/obs_t_typology.md) · [rigor](reports/obs_t_rigor.md
 | `runbook/cologne-issue-runbook.md` | Dictionary-repo issue-taxonomy runbook |
 | `runbook/cologne-tooling-runbook.md` | Tooling-repo issue-taxonomy runbook |
 | `.github/workflows/refresh-observatory.yml` | Monthly auto-refresh (template; needs `workflow` token scope to push) |
+
+## Org maintenance skills
+
+Reusable [Claude Code](https://claude.com/claude-code) skills for security and maintenance across the organisation live in **[`sanskrit-lexicon/cologne-skills`](https://github.com/sanskrit-lexicon/cologne-skills)** — the shareable cut of the `/cologne-*` command family, encoding battle-tested playbooks (escaping decision tables, false-positive heuristics, the gotchas).
+
+| Command | What it does |
+|---|---|
+| `/cologne-php-xss-sweep <repo\|all>` | Find + fix reflected-XSS / SQL-injection / injection in a repo's PHP web-frontend (context-correct escaping), PR-only |
+| `/cologne-security-audit-all` | Org-wide audit — GitHub Actions (pwn-request / script-injection / token scope), committed secrets, SAST coverage |
+| `/cologne-alert-triage <repo>` | Triage CodeQL + Semgrep alerts: fix the genuine ones (PR), dismiss false-positives/won't-fixes with written justifications |
+
+Install: `git clone` that repo, then `cp .claude/commands/*.md ~/.claude/commands/` (or symlink). These complement the issue-taxonomy [runbooks](runbook/) above.
 
 ## Headline numbers (snapshot 2026-06)
 
