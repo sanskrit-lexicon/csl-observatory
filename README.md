@@ -1,11 +1,11 @@
 # csl-observatory
 
-> **Live observatory for 12 years of Cologne Digital Sanskrit Lexicon (CDSL).**
+> **Live observatory for 13 years of Cologne Digital Sanskrit Lexicon (CDSL).**
 > Tracking 76 repos, 5,413 issues+PRs, 9,877 commits, and 16 contributors since 2014.
 
 ## What this is
 
-A meta-repository that **measures the entire sanskrit-lexicon GitHub organisation** and turns 12 years of distributed work into measurable, citable, reproducible knowledge. It is intentionally limited to repositories, issues, pull requests, commits, contributors, workflows, and organization-level maintenance evidence. The 2026-06-04 boundary cleanup is merged: dictionary-structure research belongs in [`csl-atlas`](https://github.com/sanskrit-lexicon/csl-atlas), standards/export work belongs in [`csl-standards`](https://github.com/sanskrit-lexicon/csl-standards), and DCS/corpus work belongs in [`VisualDCS`](https://github.com/gasyoun/VisualDCS).
+A meta-repository that **measures the entire sanskrit-lexicon GitHub organisation** and turns 13 years of distributed work into measurable, citable, reproducible knowledge. It is intentionally limited to repositories, issues, pull requests, commits, contributors, workflows, and organization-level maintenance evidence. The 2026-06-04 boundary cleanup is merged: dictionary-structure research belongs in [`csl-atlas`](https://github.com/sanskrit-lexicon/csl-atlas), standards/export work belongs in [`csl-standards`](https://github.com/sanskrit-lexicon/csl-standards), and DCS/corpus work belongs in [`VisualDCS`](https://github.com/gasyoun/VisualDCS).
 
 ## Quick links
 
@@ -18,6 +18,7 @@ A meta-repository that **measures the entire sanskrit-lexicon GitHub organisatio
 - **[Docs archive index](docs/ARCHIVE.md)** — legacy and moved-to-`csl-atlas` documents in one place
 - **[Data downloads](observatory/site/src/data/)** — every chart's source as CSV
 - **[Runbooks](runbook/)** — the issue-taxonomy procedures applied to all active repos
+- **[Maintenance skills](https://github.com/sanskrit-lexicon/cologne-skills)** — portable Claude Code skills for org-wide security & maintenance (PHP XSS sweep · security audit · alert triage)
 - **[Contributor & work statistics](docs/CONTRIBUTOR_STATS.md)** — per-contributor & per-repo commits, churn, tenure, and issues (2014–2026)
 - **[Decisions needed](docs/DECISIONS_NEEDED.md)** — open items blocked on a maintainer (decisions, credentials, confirmations)
 - **[AI / bot contribution policy](docs/AI_CONTRIBUTION_POLICY.md)** - norms for AI-assisted commits, comments, and shared tooling changes
@@ -44,7 +45,7 @@ as issues #15–#21 (Actions), with the findings themselves as #22–#25 (Findin
 ### OBS-T — error typology of digital Sanskrit dictionaries
 
 A standalone language-resource + finding track (Phases 1–8), distinct from the
-org-process findings above. It unifies 12 years of corrections (correction-form
+org-process findings above. It unifies 13 years of corrections (correction-form
 archive + `csl-orig` git history) into a 50,953-event corpus and a **two-axis
 typology** — **location** (where in the entry) × **edit-type** (what kind of edit).
 Design: [`docs/ERROR_TYPOLOGY_DESIGN.md`](docs/ERROR_TYPOLOGY_DESIGN.md) · datasheet:
@@ -73,6 +74,18 @@ Reports: [typology](reports/obs_t_typology.md) · [rigor](reports/obs_t_rigor.md
 | `runbook/cologne-tooling-runbook.md` | Tooling-repo issue-taxonomy runbook |
 | `.github/workflows/refresh-observatory.yml` | Monthly auto-refresh (template; needs `workflow` token scope to push) |
 
+## Org maintenance skills
+
+Reusable [Claude Code](https://claude.com/claude-code) skills for security and maintenance across the organisation live in **[`sanskrit-lexicon/cologne-skills`](https://github.com/sanskrit-lexicon/cologne-skills)** — the shareable cut of the `/cologne-*` command family, encoding battle-tested playbooks (escaping decision tables, false-positive heuristics, the gotchas).
+
+| Command | What it does |
+|---|---|
+| `/cologne-php-xss-sweep <repo\|all>` | Find + fix reflected-XSS / SQL-injection / injection in a repo's PHP web-frontend (context-correct escaping), PR-only |
+| `/cologne-security-audit-all` | Org-wide audit — GitHub Actions (pwn-request / script-injection / token scope), committed secrets, SAST coverage |
+| `/cologne-alert-triage <repo>` | Triage CodeQL + Semgrep alerts: fix the genuine ones (PR), dismiss false-positives/won't-fixes with written justifications |
+
+Install: `git clone` that repo, then `cp .claude/commands/*.md ~/.claude/commands/` (or symlink). These complement the issue-taxonomy [runbooks](runbook/) above.
+
 ## Headline numbers (snapshot 2026-06)
 
 | Metric | Value |
@@ -85,7 +98,7 @@ Reports: [typology](reports/obs_t_typology.md) · [rigor](reports/obs_t_rigor.md
 | Most active repo | `csl-orig` (the git-based correction workflow) |
 | Peak commit year | 2026 (2,519 commits) |
 | Peak issue year | 2025 (1,178 opened) |
-| Dominant work type | `text-correction` (4,000+ across 12 years) |
+| Dominant work type | `text-correction` (4,000+ across 13 years) |
 
 ## Refresh cadence
 
@@ -111,7 +124,7 @@ contributor, workflow, project, or organization-process evidence.
 
 If you use these data in published work:
 
-> Gasūns, M. et al. (2026). *CSL Observatory: 12 years of Cologne Digital Sanskrit Lexicon* [Data set]. Zenodo. DOI: pending mint.
+> Gasūns, M. et al. (2026). *CSL Observatory: 13 years of Cologne Digital Sanskrit Lexicon* [Data set]. Zenodo. DOI: pending mint.
 
 Plus the snapshot date for reproducibility.
 

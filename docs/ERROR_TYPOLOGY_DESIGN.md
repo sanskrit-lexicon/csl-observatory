@@ -61,6 +61,13 @@ validation-only: [`obs_t_translit_check`](https://github.com/sanskrit-lexicon/cs
 Open: human gold/error annotation ([`validation/gold_sample.csv`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/validation/gold_sample.csv),
 [`validation/error_sample.csv`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/validation/error_sample.csv)) + a second annotator for κ.
 
+**Manuscript (2026-06-13).** The paper drafted from this spec lives at the repo root:
+[`paper-obs-t-error-typology.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/paper-obs-t-error-typology.md)
+— *Surface, Not Substance* — carrying the two-axis typology, H1–H3 with their statistics,
+the three crosswalks, the released-resource baselines, and the corrected-≠-error-rate
+caveat. Targets an NLP/language-resource venue (LREC-COLING; IJL alternate). No κ is
+asserted; the gold annotation above remains the open validation gate.
+
 The sections below are retained for provenance and the parts still accurate (data
 layers, normalization, NLP resource). Where they say "component = canonical
 typology", read "location = one of two axes".

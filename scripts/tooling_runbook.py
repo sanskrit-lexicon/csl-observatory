@@ -113,6 +113,10 @@ TYPE_SET = {n for n, _, _ in CORE_LABELS
             if n not in ("trivial", "minor", "major", "critical")}
 SEV_SET = {"trivial", "minor", "major", "critical"}
 
+# Auto-generated log issues (e.g. csl-corrections "Daily Corrections - <date>")
+# are not triageable work — exclude them from verify + audit.
+EXEMPT_LABELS = {"daily-corrections"}
+
 
 def gh(args, **kw):
     return subprocess.run(["gh"] + args, capture_output=True, encoding="utf-8", **kw)
@@ -191,6 +195,8 @@ def verify(repo):
     mt, ms_, mm, mut, mus = [], [], [], [], []
     for i in issues:
         n, lbls, ms = i["n"], set(i["labels"]), i["milestone"]
+        if lbls & EXEMPT_LABELS:
+            continue
         ts = lbls & TYPE_SET
         ss = lbls & SEV_SET
         if not ts:
@@ -408,7 +414,7 @@ def audit(repos):
                 nodes {{
                   content {{
                     __typename
-                    ... on Issue        {{ number state repository {{ name }} }}
+                    ... on Issue        {{ number state labels(first:20){{nodes{{name}}}} repository {{ name }} }}
                     ... on PullRequest  {{ number state repository {{ name }} }}
                   }}
                 }}
@@ -427,15 +433,23 @@ def audit(repos):
     by_repo = Counter()
     for it in items:
         c = it.get("content") or {}
-        if c.get("__typename") in ("Issue", "PullRequest") and c.get("repository"):
+        # count only OPEN, non-exempt issues on the board — closed issues / PRs and
+        # exempt auto-logs would otherwise skew the board count vs the triage set
+        if (c.get("__typename") == "Issue" and c.get("state") == "OPEN"
+                and c.get("repository")):
+            lbls = {l["name"] for l in c.get("labels", {}).get("nodes", [])}
+            if lbls & EXEMPT_LABELS:
+                continue
             by_repo[c["repository"]["name"]] += 1
 
-    print(f"total items in project #{PROJECT_NUMBER}: {len(items)}")
-    print(f"{'Repo':30} {'InProject':>10} {'OpenIssues':>12} {'Diff':>6}")
+    print(f"total OPEN issues on project #{PROJECT_NUMBER}: {sum(by_repo.values())}")
+    print(f"{'Repo':30} {'OnBoard':>10} {'Triageable':>12} {'Diff':>6}")
     mismatches = []
     for repo in repos:
         in_proj = by_repo.get(repo, 0)
-        actual, _ = _fetch_total_counts(repo)
+        # triageable = open, PR-free, minus exempt auto-log issues (daily-corrections)
+        actual = sum(1 for i in _fetch_issues(repo, "open")
+                     if not (set(i["labels"]) & EXEMPT_LABELS))
         diff = in_proj - actual
         flag = "" if diff == 0 else "MISS"
         if diff != 0:

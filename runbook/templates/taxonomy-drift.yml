@@ -1,0 +1,74 @@
+# DRAFT TEMPLATE — per-repo taxonomy drift guard (event-driven layer).
+#
+# Not active anywhere yet. This file is a TEMPLATE under runbook/templates/, not
+# a live workflow. It is fanned out into each watched repo's .github/workflows/
+# by a future `cologne-drift-watch-all` batch skill, after the pilot decision
+# (see ../../docs/DRIFT_WATCH.md and DECISIONS_NEEDED.md). The weekly backstop is
+# csl-observatory/.github/workflows/dict-audit.yml + tooling-audit.yml.
+#
+# What it does: on any issue event, re-check that single issue for taxonomy
+# completeness and toggle a `needs-triage` label. It does NOT auto-apply the
+# taxonomy (that stays the human-run runbook) and never pushes to a branch.
+#
+# Deploy notes:
+#   - `needs-triage` label must exist in the repo (the fan-out skill creates it).
+#   - Uses --no-project: the default GITHUB_TOKEN cannot read org projectV2
+#     membership, so the project dimension is left to the weekly cron audit
+#     (which has the read:project PAT). Type/severity/milestone are checked here.
+#   - Dictionary repos use scripts/dict_runbook.py; tooling repos need the
+#     equivalent single-issue mode added to scripts/tooling_runbook.py (TODO).
+
+name: Taxonomy drift guard
+
+on:
+  issues:
+    types: [opened, reopened, labeled, unlabeled, milestoned, demilestoned]
+
+permissions:
+  issues: write          # toggle the needs-triage label
+  contents: read
+
+concurrency:
+  group: drift-${{ github.event.issue.number }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Fetch the checker from csl-observatory
+        uses: actions/checkout@v4
+        with:
+          repository: sanskrit-lexicon/csl-observatory
+          sparse-checkout: scripts/dict_runbook.py
+          sparse-checkout-cone-mode: false
+          path: _obs
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Check this issue
+        id: check
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if python _obs/scripts/dict_runbook.py issue \
+               "${{ github.event.repository.name }}" \
+               "${{ github.event.issue.number }}" --no-project; then
+            echo "drift=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "drift=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Toggle needs-triage label
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          n="${{ github.event.issue.number }}"
+          if [ "${{ steps.check.outputs.drift }}" = "true" ]; then
+            gh issue edit "$n" --repo "${{ github.repository }}" --add-label needs-triage
+          else
+            gh issue edit "$n" --repo "${{ github.repository }}" --remove-label needs-triage || true
+          fi

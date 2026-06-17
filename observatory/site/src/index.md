@@ -5,7 +5,7 @@ toc: false
 
 # CSL Observatory
 
-12 years of Cologne Digital Sanskrit Lexicon, in numbers and pictures.
+**A living, fully-open measurement of the [Cologne Digital Sanskrit Lexicon](https://www.sanskrit-lexicon.uni-koeln.de/)** — 13 years of volunteer work digitising and correcting the foundational Sanskrit dictionaries, turned into citable, reproducible data. Every figure below is computed live from datasets you can [download and reuse](/data); nothing here is hand-typed.
 
 ```js
 const annual = await FileAttachment("data/timeseries_annual.csv").csv({typed: true});
@@ -16,6 +16,13 @@ const busFactor = await FileAttachment("data/bus_factor.csv").csv({typed: true})
 const repoHealth = await FileAttachment("data/repo_health.csv").csv({typed: true});
 const taxonomy = await FileAttachment("data/taxonomy_adoption.csv").csv({typed: true});
 const velocity = await FileAttachment("data/velocity_timeline.csv").csv({typed: true});
+const manifest = await FileAttachment("data/manifest.json").json();
+const obsT = await FileAttachment("data/obs_t_summary.json").json();
+
+// One canonical "human contributor" definition, matching reports/contributor_identity.md
+// (16): exclude type=Bot, [bot]-suffixed logins, and service accounts like actions-user.
+const isHuman = (d) => d.type !== "Bot" && !/\[bot\]$/.test(d.login) && !["actions-user", "github-actions"].includes(d.login);
+const humanLogins = new Set(contributors.filter(isHuman).map(d => d.login));
 ```
 
 <div class="grid grid-cols-4">
@@ -32,15 +39,15 @@ const velocity = await FileAttachment("data/velocity_timeline.csv").csv({typed: 
     <span class="big">${d3.sum(annual, d => d.commits).toLocaleString()}</span>
   </div>
   <div class="card">
-    <h2>Distinct contributors</h2>
-    <span class="big">${new Set(contributors.map(d => d.login)).size}</span>
+    <h2>Human contributors</h2>
+    <span class="big">${humanLogins.size}</span>
   </div>
 </div>
 
 ## Key findings
 
 ```js
-const humans = contributors.filter(d => d.type !== "Bot");
+const humans = contributors.filter(isHuman);
 const personTotal = d3.rollup(humans, v => d3.sum(v, x => x.contributions), d => d.login);
 const grand = d3.sum(personTotal.values());
 const coreShare = d3.sum(["funderburkjim", "drdhaval2785", "gasyoun"], l => personTotal.get(l) || 0) / grand;
@@ -50,14 +57,14 @@ const conformant = d3.sum(taxonomy, d => d.conformant) / d3.sum(taxonomy, d => d
 const peakAuthors = d3.max(velocity, d => d.active_authors);
 ```
 
-Four offline, reproducible analyses of the organization. The picture: productive, well-governed, actively maintained — but carried by a tiny core and thin on reuse metadata. Full write-up: [synthesis report](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/synthesis.md).
+Across 13 years and ${repos.length} repositories, a small, dedicated team has logged tens of thousands of dictionary corrections entirely in the open — and the [error-typology study](/error-typology) turns ${obsT.events.toLocaleString()} of them, across ${obsT.dictionaries} dictionaries, into a published, reusable language resource. Four offline, reproducible analyses describe the organisation behind that work: productive, well-governed, and actively maintained — though carried by a tiny core and still thin on reuse metadata. Full write-up: [synthesis report](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/synthesis.md).
 
 - **Concentration** — the core trio carries **${(coreShare * 100).toFixed(0)}%** of all contributions, and **${bf1} of ${busFactor.length}** repos have a bus factor of 1. [Community →](/community)
 - **Activity** — thousands of commits, yet the busiest year drew only **${peakAuthors}** distinct authors: volume-per-person, not a growing base. [Activity →](/activity)
 - **Process** — **${(conformant * 100).toFixed(0)}%** of issues are fully taxonomy-conformant, after adoption climbed to a 92% peak in 2025. [Issue taxonomy →](/coverage)
 - **Hygiene** — **${noLicense} of ${repoHealth.length}** repos carry no license, and no contributor has a registered ORCID. [Repo health →](/repo-health)
 
-## Lead figure: How the work changed over 12 years
+## Lead figure: How the work changed over 13 years
 
 Stacked-area chart of issue typology by year. Watch `text-correction` dominate; see the rise of `link-target`, `markup`, and (recently) `bug` / `enhancement` as the project matured.
 
@@ -133,10 +140,15 @@ Plot.plot({
 - [**Repository Benchmarks**](/benchmarks) — project-level openness and repository evidence
 - [**Data**](/data) — raw downloads (CSV, JSON, Parquet) for reproducibility
 
+## About & how to cite
+
+The observatory is an open-source project of the [sanskrit-lexicon](https://github.com/sanskrit-lexicon) organisation, part of the [Cologne Digital Sanskrit Dictionaries](https://www.sanskrit-lexicon.uni-koeln.de/) effort. It measures only the org's own GitHub activity — repositories, issues, commits, contributors — and the public correction record; the dictionary *content* itself lives in the upstream dictionary repos. Code and data are released under open licences (GPL-3.0 for code, CC-BY-4.0 for the datasets).
+
+To cite the data, see [Data downloads → Citation](/data). The error-typology corpus has its own [datasheet](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/DATASHEET.md).
+
 ---
 
-*Last refreshed from GitHub on ${new Date().toISOString().slice(0, 10)}.
-Refresh cadence: manual + monthly fallback (see [design doc](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/OBSERVATORY_DESIGN.md)).*
+*Data snapshot: **${manifest.snapshot_date}**, refreshed monthly from the GitHub API — see [how it's built](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/OBSERVATORY_DESIGN.md) and [Data downloads](/data) for the exact figures.*
 
 <style>
 .card .big { font-size: 2rem; font-weight: 600; display: block; }

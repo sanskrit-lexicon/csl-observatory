@@ -8,6 +8,10 @@ Last updated: 2026-06-17.
 
 > Agent note: when M.G. asks "what's next?" or resumes observatory work,
 > surface this list first.
+>
+> **Org-wide view:** for pending decisions across *all* Sanskrit Lexicon
+> repos (not just the observatory), see the master index
+> [`CROSS_REPO_DECISIONS.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/CROSS_REPO_DECISIONS.md).
 
 ---
 
@@ -38,7 +42,7 @@ automation and project-board audits.
 
 | # | Need | For |
 |---|---|---|
-| C1 | GitHub token/CLI auth with workflow + `read:project` scope as a repo secret or durable local credential. | Automate observatory refresh and tooling-roadmap audit; B3 live metadata fetch now works locally but should not depend on an interactive session. |
+| C1 | GitHub token/CLI auth with workflow + `read:project` scope as a repo secret or durable local credential. | Automate observatory refresh; tooling-roadmap audit; **dictionary drift-watch audit** (`dict-audit.yml`, see [DRIFT_WATCH.md](DRIFT_WATCH.md)); B3 live metadata fetch now works locally but should not depend on an interactive session. |
 | C2 | Cologne server access for `redo_xampp_selective.sh`, if the observatory is asked to track the repository/process side of public artifact refreshes. | Public artifact refresh as repository/process evidence |
 | C3 | DNS for `observatory.sanskrit-lexicon.org` plus Cologne `uni-koeln.de/observatory` handover. | Observatory mirrors |
 
@@ -47,6 +51,7 @@ automation and project-board audits.
 | # | Item | Status |
 |---|---|---|
 | D1 | A Cologne admin will run, or let the cron run, `redo_xampp_selective.sh` so the 2026-05 `csl-orig` fixes propagate to Stardict/JSON/homepage. | Awaiting Cologne admin; not M.G.'s action |
+| D4 | **Taxonomy drift watch** ([DRIFT_WATCH.md](DRIFT_WATCH.md)): OK to (a) enable the weekly `dict-audit.yml` backstop now (reuses `TOOLING_AUDIT_TOKEN`), and (b) pilot the event-driven `needs-triage` guard on `GRA` before fanning out to all repos? | Awaiting M.G. decision |
 
 ---
 

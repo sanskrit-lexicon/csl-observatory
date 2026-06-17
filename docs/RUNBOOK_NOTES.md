@@ -132,6 +132,17 @@ early and fails with a clear message.
 If you add a newly processed tooling repo, append its name to the
 `REPOS` env var in the workflow so it's included in the weekly check.
 
+## Exempt labels — `daily-corrections`
+
+Auto-generated issues (e.g. csl-corrections "Daily Corrections - <date>", opened
+by a daily job) are **not triageable work**. Both `tooling_runbook.py` and
+`dict_runbook.py` skip any issue labelled `daily-corrections` in `verify` and
+`audit`, so they never count as drift.
+
+The `audit` subcommand also now counts only **open issues on the board** (not
+closed items or PRs); previously, issues closing over time inflated the
+project-item count and produced false mismatches.
+
 ## Status snapshot (2026-05-29)
 
 - **34 tooling repos** processed end-to-end (Phases 0–10).
