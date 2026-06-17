@@ -126,10 +126,16 @@ Plot.plot({
 
 ## Navigation
 
+- [**Ops Command**](/ops-command) - maintainer operating dashboard across blockers, issue pressure, metadata, and bus factor
 - [**Activity**](/activity) — issue/commit/PR throughput timelines, heatmaps, GitHub-style year grids
+- [**OBS-T Maintenance**](/obs-t-maintenance) - light operational checks for the correction typology release
 - [**Issue taxonomy**](/coverage) — GitHub issue and PR label patterns by repo
+- [**Taxonomy Triage**](/taxonomy-triage) - label quality, conformance, and open issue triage views
 - [**Community**](/community) — contributor growth, retention, bus-factor analysis
+- [**Community Continuity**](/community-continuity) - maintainer concentration, retention, and identity readiness
 - [**Repository Health**](/repo-health) — licensing, default-branch, and hygiene audit
+- [**Repository Risk**](/repository-risk) - deeper license, branch, flag, size, and cleanup-risk charts
+- [**Metadata Readiness**](/metadata-readiness) - B3 documentation, automation, release, and unknown-field blockers
 - [**Tech Stack**](/tech-stack) — language evolution, dependency graphs, runbook adoption
 - [**Repository Benchmarks**](/benchmarks) — project-level openness and repository evidence
 - [**Data**](/data) — raw downloads (CSV, JSON, Parquet) for reproducibility

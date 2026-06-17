@@ -1,22 +1,46 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-06-11T12:44:55.251713+00:00",
+  "generatedAt": "2026-06-12T10:01:24.716497+00:00",
   "sourcePath": "../csl-orig (git history, v02)",
-  "recordCount": 26512,
+  "recordCount": 28057,
   "assumptions": [
     "Only correction-classified commits (obs_q classify()) are mined.",
-    "Old/new are SLP1-encoded source lines kept verbatim; edit ops run over them directly (alignment reports only differing characters).",
+    "Only v02/<dict>/<dict>.txt dictionary entry files are emitted; helper, metadata, header, and update files under v02 are ignored.",
+    "Old/new raw source lines are kept verbatim; edit ops run over IAST only when the changed span is inside Sanskrit-bearing markup, otherwise over the raw source space marked by edit_space.",
     "lcode/<k1> attributed from the nearest record markers within the hunk (-U10 context); only <k1> is transliterated SLP1->IAST.",
-    "Change runs paired positionally (i-th deletion with i-th addition)."
+    "Unequal delete/add runs emit paired replacements plus explicit insertion or deletion events for unmatched lines."
   ],
   "warnings": [
-    "287 commits skipped as bulk reformats (>250 changed lines)."
+    "304 commits skipped as bulk reformats (>250 changed lines)."
   ],
   "stats": {
     "commitsMined": 1243,
-    "commitsSkippedBulk": 287,
-    "eventsRaw": 26566,
-    "eventsDeduped": 26512,
+    "commitsSkippedBulk": 304,
+    "commitsWithEntryEvents": 917,
+    "eventsRaw": 28314,
+    "eventsDeduped": 28057,
+    "eventsByChangeKind": [
+      [
+        "replace",
+        25080
+      ],
+      [
+        "insert",
+        1769
+      ],
+      [
+        "delete",
+        1465
+      ]
+    ],
+    "diffPairing": {
+      "replacements": 91802,
+      "unequal_runs": 4237,
+      "unmatched_deletions": 4953,
+      "unmatched_additions": 4552,
+      "deletions": 4953,
+      "insertions": 4552
+    },
     "dateRange": [
       "2019-11-04",
       "2026-05-30"
@@ -24,89 +48,89 @@
     "byYear": [
       [
         "2019",
-        21
+        57
       ],
       [
         "2020",
-        2249
+        2253
       ],
       [
         "2021",
-        5054
+        5287
       ],
       [
         "2022",
-        2709
+        2493
       ],
       [
         "2023",
-        2966
+        2994
       ],
       [
         "2024",
-        5154
+        5244
       ],
       [
         "2025",
-        4712
+        5392
       ],
       [
         "2026",
-        3647
+        4337
       ]
     ],
     "topDicts": [
       [
         "mw",
-        7034
+        8241
       ],
       [
         "pwg",
-        3617
+        3621
       ],
       [
         "ap90",
-        2059
-      ],
-      [
-        "pw",
-        1875
+        2124
       ],
       [
         "ap",
-        1381
+        1912
       ],
       [
-        "md",
-        1158
+        "pw",
+        1886
       ],
       [
         "bur",
-        1110
+        1114
+      ],
+      [
+        "md",
+        1111
       ],
       [
         "ben",
-        758
-      ],
-      [
-        "vcp",
-        517
+        757
       ],
       [
         "shs",
-        513
+        519
+      ],
+      [
+        "vcp",
+        511
       ],
       [
         "sch",
-        425
-      ],
-      [
-        "lrv",
-        409
+        456
       ],
       [
         "cae",
-        401
+        398
+      ],
+      [
+        "bop",
+        378
       ],
       [
         "yat",
@@ -114,33 +138,33 @@
       ],
       [
         "gra",
-        330
+        337
       ]
     ],
     "clusters": [
       [
         "other",
-        20108
+        21761
       ],
       [
         "markup",
-        4136
+        4084
       ],
       [
         "typo",
-        679
+        606
       ],
       [
         "ocr-print",
-        589
-      ],
-      [
-        "reference",
-        520
+        538
       ],
       [
         "iast-diacritic",
-        465
+        530
+      ],
+      [
+        "reference",
+        523
       ],
       [
         "capitalization",
@@ -151,6 +175,6 @@
         2
       ]
     ],
-    "allLayersTotal": 50953
+    "allLayersTotal": 52498
   }
 }

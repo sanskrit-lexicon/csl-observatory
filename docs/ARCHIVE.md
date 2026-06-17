@@ -36,6 +36,15 @@ moved out of the GitHub/org observatory on 2026-06-03. The files below are
 - [`RESEARCH_LAYER_ROADMAP.md`](RESEARCH_LAYER_ROADMAP.md) — research/practitioner layer plan
 - [`PUBLICATIONS.md`](PUBLICATIONS.md) — dictionary-paper publication plan
 
+## Completed implementation plans
+
+These were active implementation trackers, completed and archived so the active
+roadmaps stay focused on future work.
+
+| Archived | Outcome |
+|---|---|
+| [`archive/OBS_T_FIX_PLAN_2026-06-12.md`](archive/OBS_T_FIX_PLAN_2026-06-12.md) | OBS-T post-Codex-review fixes implemented, full pipeline rerun, regression checks passed. |
+
 ## Still active (not archived)
 
 For orientation, the live `docs/` set includes:

@@ -1,79 +1,84 @@
 {
-  "generatedAt": "2026-06-11T19:40:02.446857+00:00",
+  "generatedAt": "2026-06-12T10:06:38.881471+00:00",
   "h1_micro_edit": {
     "edit_distance": {
       "median": 2,
-      "pct_le2": 0.658,
-      "p90": 18,
-      "max": 404
+      "pct_le2": 0.63,
+      "p90": 20,
+      "max": 508
     },
     "edit_type_share": {
-      "spelling": 0.333,
-      "punctuation": 0.2,
-      "spacing": 0.191,
-      "diacritic": 0.106,
-      "case": 0.087,
-      "digit": 0.052,
-      "none": 0.017,
-      "transposition": 0.014
+      "spelling": 0.223,
+      "spacing": 0.195,
+      "punctuation": 0.181,
+      "source-raw": 0.15,
+      "diacritic": 0.091,
+      "case": 0.073,
+      "digit": 0.055,
+      "none": 0.023,
+      "transposition": 0.009
     },
     "minor_rate_by_location": {
       "headword": {
-        "n": 7282,
-        "minor_rate": 0.815,
+        "n": 5823,
+        "minor_rate": 0.856,
         "ci95": [
-          0.806,
-          0.824
+          0.847,
+          0.865
         ]
       },
       "meta": {
-        "n": 822,
-        "minor_rate": 0.886,
+        "n": 624,
+        "minor_rate": 0.662,
         "ci95": [
-          0.862,
-          0.906
+          0.624,
+          0.698
         ]
       },
       "sense": {
-        "n": 17880,
-        "minor_rate": 0.698,
+        "n": 17778,
+        "minor_rate": 0.382,
         "ci95": [
-          0.691,
-          0.705
+          0.375,
+          0.39
         ]
       },
       "grammar": {
-        "n": 294,
-        "minor_rate": 0.316,
+        "n": 293,
+        "minor_rate": 0.133,
         "ci95": [
-          0.266,
-          0.372
+          0.099,
+          0.177
         ]
       },
       "citation": {
-        "n": 3338,
-        "minor_rate": 0.307,
+        "n": 3335,
+        "minor_rate": 0.25,
         "ci95": [
-          0.292,
-          0.323
+          0.236,
+          0.265
         ]
       },
       "markup": {
-        "n": 3945,
-        "minor_rate": 0.182,
+        "n": 5902,
+        "minor_rate": 0.052,
         "ci95": [
-          0.171,
-          0.195
+          0.046,
+          0.057
         ]
       }
     }
   },
   "h2_cross_dictionary": {
     "dicts_tested": 15,
-    "chi2": 23674.5,
+    "chi2": 26192.5,
     "dof": 70,
-    "p_value": 0.0,
-    "cramers_v": 0.415
+    "p_value_descriptive": 0.0,
+    "cramers_v": 0.432,
+    "block_bootstrap_v_ci95": [
+      0.407,
+      0.482
+    ]
   },
   "h3_location_trends": {
     "citation": {
@@ -81,162 +86,190 @@
       "p_value": 0.1127,
       "direction": "flat",
       "first": 0.0,
-      "last": 0.026
+      "last": 0.022,
+      "q_value": 0.1908
     },
     "grammar": {
-      "tau": -0.013,
-      "p_value": 1.0,
+      "tau": -0.09,
+      "p_value": 0.7143,
       "direction": "flat",
       "first": 0.004,
-      "last": 0.018
+      "last": 0.015,
+      "q_value": 0.7143
     },
     "headword": {
-      "tau": -0.436,
-      "p_value": 0.0441,
-      "direction": "falling",
-      "first": 0.901,
-      "last": 0.119
+      "tau": -0.462,
+      "p_value": 0.0327,
+      "direction": "flat",
+      "first": 0.882,
+      "last": 0.1,
+      "q_value": 0.0981
     },
     "markup": {
-      "tau": 0.641,
-      "p_value": 0.0028,
-      "direction": "rising",
+      "tau": 0.564,
+      "p_value": 0.0087,
+      "direction": "flat",
       "first": 0.0,
-      "last": 0.061
+      "last": 0.167,
+      "q_value": 0.0522
     },
     "meta": {
-      "tau": 0.436,
-      "p_value": 0.0441,
-      "direction": "rising",
-      "first": 0.003,
-      "last": 0.034
-    },
-    "sense": {
-      "tau": 0.41,
-      "p_value": 0.0586,
-      "direction": "flat",
-      "first": 0.093,
-      "last": 0.742
-    }
-  },
-  "h3_edittype_trends": {
-    "case": {
-      "tau": 0.077,
-      "p_value": 0.7603,
-      "direction": "flat",
-      "first": 0.025,
-      "last": 0.049
-    },
-    "diacritic": {
-      "tau": -0.436,
-      "p_value": 0.0441,
-      "direction": "falling",
-      "first": 0.117,
-      "last": 0.093
-    },
-    "digit": {
       "tau": 0.282,
       "p_value": 0.2001,
       "direction": "flat",
       "first": 0.003,
-      "last": 0.036
+      "last": 0.028,
+      "q_value": 0.2401
     },
-    "none": {
-      "tau": -0.077,
-      "p_value": 0.7603,
+    "sense": {
+      "tau": 0.333,
+      "p_value": 0.1272,
       "direction": "flat",
-      "first": 0.016,
-      "last": 0.011
+      "first": 0.111,
+      "last": 0.668,
+      "q_value": 0.1908
+    }
+  },
+  "h3_edittype_trends": {
+    "case": {
+      "tau": -0.577,
+      "p_value": 0.0073,
+      "direction": "flat",
+      "first": 0.025,
+      "last": 0.0,
+      "q_value": 0.0657
     },
-    "punctuation": {
-      "tau": 0.436,
-      "p_value": 0.0441,
-      "direction": "rising",
-      "first": 0.027,
-      "last": 0.315
-    },
-    "spacing": {
-      "tau": 0.487,
-      "p_value": 0.024,
-      "direction": "rising",
-      "first": 0.054,
-      "last": 0.147
-    },
-    "spelling": {
+    "diacritic": {
       "tau": -0.385,
       "p_value": 0.0769,
       "direction": "flat",
+      "first": 0.117,
+      "last": 0.045,
+      "q_value": 0.0989
+    },
+    "digit": {
+      "tau": 0.179,
+      "p_value": 0.4277,
+      "direction": "flat",
+      "first": 0.003,
+      "last": 0.095,
+      "q_value": 0.4812
+    },
+    "none": {
+      "tau": -0.051,
+      "p_value": 0.8548,
+      "direction": "flat",
+      "first": 0.016,
+      "last": 0.019,
+      "q_value": 0.8548
+    },
+    "punctuation": {
+      "tau": 0.41,
+      "p_value": 0.0586,
+      "direction": "flat",
+      "first": 0.027,
+      "last": 0.235,
+      "q_value": 0.0879
+    },
+    "source-raw": {
+      "tau": 0.41,
+      "p_value": 0.0586,
+      "direction": "flat",
+      "first": 0.0,
+      "last": 0.261,
+      "q_value": 0.0879
+    },
+    "spacing": {
+      "tau": 0.513,
+      "p_value": 0.0173,
+      "direction": "flat",
+      "first": 0.054,
+      "last": 0.165,
+      "q_value": 0.0779
+    },
+    "spelling": {
+      "tau": -0.436,
+      "p_value": 0.0441,
+      "direction": "flat",
       "first": 0.726,
-      "last": 0.345
+      "last": 0.178,
+      "q_value": 0.0879
     },
     "transposition": {
-      "tau": -0.308,
-      "p_value": 0.1606,
+      "tau": -0.462,
+      "p_value": 0.0327,
       "direction": "flat",
       "first": 0.032,
-      "last": 0.003
+      "last": 0.002,
+      "q_value": 0.0879
     }
   },
   "location_x_edittype": {
     "citation": {
-      "spelling": 214,
-      "spacing": 2239,
+      "spacing": 2238,
+      "source-raw": 249,
       "punctuation": 310,
-      "diacritic": 100,
+      "spelling": 71,
+      "diacritic": 5,
       "digit": 413,
-      "case": 14,
+      "none": 43,
       "transposition": 5,
-      "none": 43
+      "case": 1
     },
     "grammar": {
-      "spelling": 69,
       "spacing": 204,
+      "source-raw": 57,
       "punctuation": 14,
+      "spelling": 11,
       "diacritic": 1,
       "digit": 0,
-      "case": 0,
+      "none": 6,
       "transposition": 0,
-      "none": 6
+      "case": 0
     },
     "headword": {
-      "spelling": 4740,
-      "spacing": 493,
-      "punctuation": 214,
-      "diacritic": 1207,
-      "digit": 136,
-      "case": 237,
-      "transposition": 121,
-      "none": 134
+      "spacing": 230,
+      "source-raw": 1,
+      "punctuation": 129,
+      "spelling": 3836,
+      "diacritic": 1221,
+      "digit": 116,
+      "none": 169,
+      "transposition": 66,
+      "case": 55
     },
     "markup": {
-      "spelling": 648,
-      "spacing": 1808,
-      "punctuation": 1264,
-      "diacritic": 66,
-      "digit": 73,
-      "case": 5,
-      "transposition": 4,
-      "none": 77
+      "spacing": 2359,
+      "source-raw": 1774,
+      "punctuation": 1006,
+      "spelling": 342,
+      "diacritic": 13,
+      "digit": 316,
+      "none": 90,
+      "transposition": 2,
+      "case": 0
     },
     "meta": {
-      "spelling": 196,
       "spacing": 18,
-      "punctuation": 54,
+      "source-raw": 167,
+      "punctuation": 10,
+      "spelling": 6,
       "diacritic": 2,
-      "digit": 544,
-      "case": 1,
-      "transposition": 3,
-      "none": 4
+      "digit": 415,
+      "none": 4,
+      "transposition": 2,
+      "case": 0
     },
     "sense": {
-      "spelling": 6105,
-      "spacing": 3470,
-      "punctuation": 5763,
-      "diacritic": 1298,
-      "digit": 128,
-      "case": 447,
-      "transposition": 480,
-      "none": 189
+      "spacing": 3488,
+      "source-raw": 5604,
+      "punctuation": 5430,
+      "spelling": 1637,
+      "diacritic": 637,
+      "digit": 288,
+      "none": 435,
+      "transposition": 254,
+      "case": 5
     }
   },
   "years": [

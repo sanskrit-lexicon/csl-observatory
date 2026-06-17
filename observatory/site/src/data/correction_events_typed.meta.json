@@ -1,58 +1,59 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-06-11T19:36:24.999245+00:00",
+  "generatedAt": "2026-06-12T10:02:03.409707+00:00",
   "sourcePath": "correction_events_all.csv + ../csl-orig (form join)",
-  "recordCount": 50953,
+  "recordCount": 52498,
   "assumptions": [
     "error_component is the LOCATION axis (which part of the entry); edit TYPE (orthography/encoding/diacritic) is a separate axis -> edit_type.",
     "git layer: location read positionally from the changed source line tags; untagged record text = sense (definition prose).",
-    "form layer: location from the csl-orig <L> record segment whose IAST content contains the corrected value; if not derivable -> unattributed (we do NOT guess a location from the edit type)."
+    "form layer: location from the csl-orig <L> record segment whose IAST content contains the corrected value; if not derivable -> unattributed (we do NOT guess a location from the edit type).",
+    "form value-is-headword shortcuts are derived only when the matching key is unique and length >= 4; weaker shortcuts are unattributed/inferred."
   ],
   "warnings": [],
   "stats": {
-    "gitAttributed": 26512,
-    "formJoinHits": 7049,
-    "formFallback": 17392,
-    "formJoinRate": 0.288,
+    "gitAttributed": 28057,
+    "formJoinHits": 5698,
+    "formFallback": 18743,
+    "formJoinRate": 0.233,
     "componentTotals": [
       [
-        "sense",
-        17880
-      ],
-      [
         "unattributed",
-        17392
+        18743
       ],
       [
-        "headword",
-        7282
+        "sense",
+        17778
       ],
       [
         "markup",
-        3945
+        5902
+      ],
+      [
+        "headword",
+        5823
       ],
       [
         "citation",
-        3338
+        3335
       ],
       [
         "meta",
-        822
+        624
       ],
       [
         "grammar",
-        294
+        293
       ]
     ],
     "byLayer": {
       "form": [
         [
           "unattributed",
-          17392
+          18743
         ],
         [
           "headword",
-          6280
+          4929
         ],
         [
           "sense",
@@ -74,29 +75,61 @@
       "git": [
         [
           "sense",
-          17289
+          17187
         ],
         [
           "markup",
-          3945
+          5902
         ],
         [
           "citation",
-          3234
+          3231
         ],
         [
           "headword",
-          1002
+          894
         ],
         [
           "meta",
-          791
+          593
         ],
         [
           "grammar",
-          251
+          250
         ]
       ]
+    },
+    "attributionRoutes": [
+      [
+        "git_positional",
+        28057
+      ],
+      [
+        "unattributed",
+        17392
+      ],
+      [
+        "value_headword_unique",
+        2552
+      ],
+      [
+        "segment_fuzzy",
+        2440
+      ],
+      [
+        "value_headword_weak",
+        1351
+      ],
+      [
+        "segment_exact",
+        706
+      ]
+    ],
+    "auditSampleRows": 75,
+    "auditSamplePool": {
+      "segment_fuzzy": 2440,
+      "value_headword_unique": 2552,
+      "value_headword_weak": 1351
     }
   }
 }

@@ -7,8 +7,8 @@ After the Phase 7i finding, the typology is two orthogonal axes:
 
 Tested claims, stdlib-only:
 
-1. **H1 micro-edit dominance** — corrections are tiny surface-form edits, not content
-   rewrites, and this holds *across locations* (even sense/headword). Edit-distance
+1. **H1 micro-edit dominance** — corrections are mostly tiny surface-form edits,
+   especially in sense/headword locations. Edit-distance
    distribution + edit_type shares + per-location minor-edit rate (Wilson CIs).
 2. **H2 cross-dictionary** — chi-square independence of LOCATION × dictionary on the
    derived labels, with Cramer's V.
@@ -20,7 +20,7 @@ Output: reports/obs_t_rigor.md, observatory/site/src/data/obs_t_rigor.json
 
 Usage:  python scripts/obs_t_rigor.py
 """
-import csv, json, math, os, sys
+import csv, json, math, os, random, sys
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
 sys.stdout.reconfigure(encoding='utf-8'); sys.stderr.reconfigure(encoding='utf-8')
@@ -110,6 +110,45 @@ def chi2_independence(table):
     return round(chi2, 1), dof, p, round(v, 3)
 
 
+def bh_adjust(trend_map):
+    items = sorted(trend_map.items(), key=lambda kv: kv[1]['p_value'])
+    m = len(items)
+    prev = 1.0
+    adjusted = {}
+    for rank, (label, vals) in enumerate(reversed(items), start=1):
+        orig_rank = m - rank + 1
+        q = min(prev, vals['p_value'] * m / orig_rank)
+        prev = q
+        adjusted[label] = min(1.0, round(q, 4))
+    for label, q in adjusted.items():
+        trend_map[label]['q_value'] = q
+        tau = trend_map[label]['tau']
+        trend_map[label]['direction'] = 'rising' if tau > 0 and q < 0.05 else \
+                                        'falling' if tau < 0 and q < 0.05 else 'flat'
+    return trend_map
+
+
+def block_bootstrap_v(rows, top_dicts, b=300):
+    groups = defaultdict(list)
+    for r in rows:
+        if r['dict'] not in top_dicts:
+            continue
+        groups[r.get('commit_sha') or r.get('event_id')].append(r)
+    keys = list(groups)
+    if not keys:
+        return [0.0, 0.0]
+    rng = random.Random(0)
+    vs = []
+    for _ in range(b):
+        table = Counter()
+        for _ in range(len(keys)):
+            for r in groups[rng.choice(keys)]:
+                table[(r['dict'], r['error_component'])] += 1
+        vs.append(chi2_independence(table)[3])
+    vs.sort()
+    return [round(vs[int(0.025 * b)], 3), round(vs[int(0.975 * b)], 3)]
+
+
 # ----------------------------------------------------------------------- main
 def _dist(r):
     try:
@@ -155,8 +194,10 @@ def main():
     table = Counter((r['dict'], r['error_component']) for r in derived
                     if r['dict'] in top_dicts)
     chi2, dof, p2, v = chi2_independence(table)
+    block_ci = block_bootstrap_v(derived, top_dicts)
     h2 = {'dicts_tested': len(top_dicts), 'chi2': chi2, 'dof': dof,
-          'p_value': p2, 'cramers_v': v}
+          'p_value_descriptive': p2, 'cramers_v': v,
+          'block_bootstrap_v_ci95': block_ci}
 
     # ---- H3: trends per location (derived) and per edit_type (all) ----
     years = sorted({r['date'][:4] for r in rows if r['date']})
@@ -173,7 +214,7 @@ def main():
                                    'falling' if tau < 0 and p < 0.05 else 'flat',
                       'first': round(series[0], 3) if series else 0,
                       'last': round(series[-1], 3) if series else 0}
-        return out
+        return bh_adjust(out)
     h3_loc = trends(derived, 'error_component')
     h3_type = trends(rows, 'edit_type')
 
@@ -199,7 +240,7 @@ def main():
       'of change, from edit-ops). Tested with Wilson CIs, chi-square (Cramér\'s V), '
       'and Mann-Kendall trends._')
     A('')
-    A('## H1 — corrections are micro surface edits, at every location')
+    A('## H1 — corrections are mostly micro surface edits')
     A('')
     A(f'Edit distance: **median {h1["edit_distance"]["median"]}**, '
       f'**{h1["edit_distance"]["pct_le2"]:.0%} are ≤ 2 characters** '
@@ -211,9 +252,11 @@ def main():
     for t, s in h1['edit_type_share'].items():
         A(f'| {t} | {s:.1%} |')
     A('')
-    A('Every type is a surface change — there is no "content rewrite" category. '
-      'Crucially this holds **across locations**: the minor-edit rate (a small '
-      'surface edit) is high even where meaning lives.')
+    A('There is no "content rewrite" edit-type category in the automatic trace. '
+      'The strongest evidence for micro-edit dominance is in the overall distance '
+      'distribution and especially in headword repairs. Sense is the largest '
+      'location but includes many non-minor source/prose edits; markup, citation, '
+      'and grammar also have lower minor-edit rates and should be discussed separately.')
     A('')
     A('| location | n | minor-edit rate (95% CI) |')
     A('|---|---:|---|')
@@ -222,37 +265,40 @@ def main():
         A(f'| {loc} | {d["n"]:,} | {d["minor_rate"]:.1%} '
           f'[{d["ci95"][0]:.1%}, {d["ci95"][1]:.1%}] |')
     A('')
-    A('So even corrections **located in the sense/definition and headword** are '
-      'overwhelmingly small form fixes, not redefinitions — the honest, two-axis '
-      'restatement of the old "surface dominates" claim.')
+    A('Thus **headword** corrections are overwhelmingly small form fixes. Sense is '
+      'the largest location, but its edit-type mix is more varied; other locations '
+      'are also mixed.')
     A('')
     A('## H2 — the LOCATION profile differs by dictionary (derived labels)')
     A('')
-    A(f'Chi-square independence of location × dictionary (top {h2["dicts_tested"]}, '
-      f'derived only): χ² = {h2["chi2"]}, dof = {h2["dof"]}, '
-      f'p {"< 0.001" if h2["p_value"] < 0.001 else f"= {h2["p_value"]:.3f}"}, '
-      f'**Cramér\'s V = {h2["cramers_v"]}**. Dictionaries differ in *where* their '
-      'errors sit, not only how many — now on clean location labels.')
+    A(f'Descriptive chi-square for location × dictionary (top {h2["dicts_tested"]}, '
+      f'derived only): χ² = {h2["chi2"]}, dof = {h2["dof"]}; row-level p-values are '
+      'not treated as inferential because events cluster by commit/campaign. '
+      f'Effect size: **Cramér\'s V = {h2["cramers_v"]}**, commit-block bootstrap '
+      f'95% CI [{block_ci[0]}, {block_ci[1]}]. Dictionaries differ in *where* '
+      'their errors sit, not only how many.')
     A('')
     A('## H3 — diachronic trends')
     A('')
     A('Location (derived) — Mann-Kendall on yearly share:')
     A('')
-    A('| location | τ | p | trend | first→last |')
-    A('|---|---:|---:|---|---|')
+    A('| location | τ | p | q (BH) | trend | first→last |')
+    A('|---|---:|---:|---:|---|---|')
     for c in sorted(h3_loc, key=lambda c: h3_loc[c]['tau']):
         d = h3_loc[c]
         A(f'| {c} | {d["tau"]} | {"<0.001" if d["p_value"]<0.001 else d["p_value"]} '
-          f'| {d["direction"]} | {d["first"]:.2f}→{d["last"]:.2f} |')
+          f'| {"<0.001" if d["q_value"]<0.001 else d["q_value"]} | '
+          f'{d["direction"]} | {d["first"]:.2f}→{d["last"]:.2f} |')
     A('')
     A('Edit-type (all):')
     A('')
-    A('| edit type | τ | p | trend | first→last |')
-    A('|---|---:|---:|---|---|')
+    A('| edit type | τ | p | q (BH) | trend | first→last |')
+    A('|---|---:|---:|---:|---|---|')
     for c in sorted(h3_type, key=lambda c: h3_type[c]['tau']):
         d = h3_type[c]
         A(f'| {c} | {d["tau"]} | {"<0.001" if d["p_value"]<0.001 else d["p_value"]} '
-          f'| {d["direction"]} | {d["first"]:.2f}→{d["last"]:.2f} |')
+          f'| {"<0.001" if d["q_value"]<0.001 else d["q_value"]} | '
+          f'{d["direction"]} | {d["first"]:.2f}→{d["last"]:.2f} |')
     A('')
     A('## Location × edit-type (derived) — the two-axis picture')
     A('')
@@ -270,7 +316,8 @@ def main():
     print(f'wrote {OUT_JSON}')
     print(f'  H1 median dist {h1["edit_distance"]["median"]}  ≤2 {h1["edit_distance"]["pct_le2"]:.0%}  '
           f'types {list(h1["edit_type_share"])[:4]}')
-    print(f'  H2 location×dict V={v} p={p2:.1e}')
+    print(f'  H2 location×dict V={v} block95=[{block_ci[0]},{block_ci[1]}] '
+          f'descriptive-p={p2:.1e}')
     print(f'  H3 loc rising={[c for c in h3_loc if h3_loc[c]["direction"]=="rising"]} '
           f'falling={[c for c in h3_loc if h3_loc[c]["direction"]=="falling"]}')
 

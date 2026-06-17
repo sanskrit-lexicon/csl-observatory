@@ -4,7 +4,8 @@
 Shows the headlines survive resampling and the removal of the dominant dictionary
 or a whole layer, on the existing table (no re-mining):
 
-* **H2** location × dictionary Cramer's V — bootstrap CI, minus-PW, git-only.
+* **H2** location × dictionary Cramer's V — commit-block bootstrap CI, minus-PW,
+  git-only.
 * **H1** micro-edit rate (a small surface edit) — overall, per layer, with Wilson
   CIs, plus the location mix on derived labels.
 
@@ -14,7 +15,7 @@ Output: reports/obs_t_robustness.md, observatory/site/src/data/obs_t_robustness.
 Usage:  python scripts/obs_t_robustness.py
 """
 import csv, json, os, random, sys
-from collections import Counter
+from collections import Counter, defaultdict
 from datetime import datetime, timezone
 sys.stdout.reconfigure(encoding='utf-8'); sys.stderr.reconfigure(encoding='utf-8')
 
@@ -47,12 +48,19 @@ def v_of(rows, top_dicts):
 
 
 def bootstrap_v(sub, top_dicts):
-    rng = random.Random(0); n = len(sub); vs = []
+    groups = defaultdict(list)
+    for r in sub:
+        if r['dict'] in top_dicts:
+            groups[r.get('commit_sha') or r.get('event_id')].append(r)
+    keys = list(groups)
+    if not keys:
+        return 0.0, 0.0
+    rng = random.Random(0); vs = []
     for _ in range(B):
         table = Counter()
-        for _ in range(n):
-            r = sub[rng.randrange(n)]
-            table[(r['dict'], r['error_component'])] += 1
+        for _ in range(len(keys)):
+            for r in groups[rng.choice(keys)]:
+                table[(r['dict'], r['error_component'])] += 1
         vs.append(chi2_independence(table)[3])
     vs.sort()
     return round(vs[int(0.025 * B)], 3), round(vs[int(0.975 * B)], 3)
@@ -111,14 +119,15 @@ def main():
     A('| variant | Cramér\'s V | note |')
     A('|---|---:|---|')
     A(f'| all top-15 dicts | {base[3]} | p {"<0.001" if base[2] < 0.001 else base[2]} |')
-    A(f'| bootstrap 95% CI | [{boot[0]}, {boot[1]}] | resampled (B={B}) |')
+    A(f'| commit-block bootstrap 95% CI | [{boot[0]}, {boot[1]}] | resampled commit/event blocks (B={B}) |')
     A(f'| minus PW | {nopw[3]} | effect persists |')
     A(f'| git layer only | {gitv[3]} | positional labels only |')
     A('')
-    A('## H1 — micro-edit dominance is robust across layers')
+    A('## H1 — micro-edit rate by layer')
     A('')
     A('Minor-edit rate = a small surface edit (edit_type spelling/diacritic/case/'
-      'spacing/punctuation/digit and edit distance ≤ 3).')
+      'spacing/punctuation/digit and edit distance <= 3). Raw source/markup edits '
+      'are retained in the table but are not counted as Sanskrit micro-edits.')
     A('')
     A('| subset | minor-edit rate (95% CI) | n |')
     A('|---|---|---:|')

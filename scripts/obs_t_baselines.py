@@ -10,7 +10,7 @@ resource supports and give non-trivial reference scores for the paper:
 2. **Error correction** (form layer) — propose the correct form of an erroneous
    token by nearest training-lexicon neighbour (edit distance, length+initial
    blocking). Accuracy@1.
-3. **Error-type classification** (all derived events) — predict the microstructure
+3. **Location classification** (all derived events) — predict the microstructure
    `error_component` from edit-op features with a categorical Naive Bayes.
    Accuracy + macro-F1 vs the majority-class baseline.
 
@@ -173,8 +173,8 @@ def correction(form_rows):
             'dist1_share': round(d1 / n, 3) if n else 0}
 
 
-# ------------------------------------------------------- 3. type classification
-def feats(r):
+# ----------------------------------------------------- 3. location classification
+def feats(r, include_empirical=True):
     ops = json.loads(r['edit_ops']) if r['edit_ops'] else []
     if ops:
         dom = Counter((o['op'], o['unit']) for o in ops).most_common(1)[0][0]
@@ -184,16 +184,19 @@ def feats(r):
         dist = min(int(r['edit_distance']), 5)
     except ValueError:
         dist = 0
-    return (f'op={dom[0]}', f'unit={dom[1]}', f'dist={dist}',
-            f'script={r["script_new"]}', f'cl={r["error_type_empirical"]}')
+    out = [f'op={dom[0]}', f'unit={dom[1]}', f'dist={dist}',
+           f'script={r["script_new"]}', f'edit_space={r.get("edit_space", "")}']
+    if include_empirical:
+        out.append(f'cl={r["error_type_empirical"]}')
+    return tuple(out)
 
 
-def classify(rows):
+def classify(rows, include_empirical=True):
     train, test = [], []
     for r in rows:
         if r['evidence_level'] != 'derived' or r['error_component'] == 'unknown':
             continue
-        sample = (feats(r), r['error_component'])
+        sample = (feats(r, include_empirical=include_empirical), r['error_component'])
         if r['split'] == 'train':
             train.append(sample)
         elif r['split'] == 'test':
@@ -250,10 +253,14 @@ def main():
                  and is_token(r['old_iast']) and is_token(r['new_iast'])]
     det = detection(form_rows)
     cor = correction(form_rows)
-    cls = classify(rows)
+    cls = classify(rows, include_empirical=True)
+    cls_no_emp = classify(rows, include_empirical=False)
 
     out = {'generatedAt': datetime.now(timezone.utc).isoformat(),
-           'detection': det, 'correction': cor, 'classification': cls}
+           'detection': det, 'correction': cor,
+           'location_classification': cls,
+           'location_classification_no_empirical': cls_no_emp,
+           'classification': cls}
     with open(OUT_JSON, 'w', encoding='utf-8') as f:
         json.dump(out, f, ensure_ascii=False, indent=2)
 
@@ -294,11 +301,11 @@ def main():
     A(f'| **accuracy@1** | **{cor["accuracy_at_1"]}** |')
     A(f'| share of test errors at edit-distance 1 | {cor["dist1_share"]} (model\'s reach) |')
     A('')
-    A('## 3. Error-type classification (all derived events)')
+    A('## 3. Location classification (all derived events)')
     A('')
     A('Predict the microstructure `error_component` from edit-op features '
-      '(dominant operation, unit, edit-distance bucket, script, empirical cluster) '
-      'with categorical Naive Bayes.')
+      '(dominant operation, unit, edit-distance bucket, script, edit space, and '
+      'optionally empirical cluster) with categorical Naive Bayes.')
     A('')
     if 'accuracy' in cls:
         A('| metric | value |')
@@ -308,6 +315,9 @@ def main():
         A(f'| **accuracy** | **{cls["accuracy"]}** |')
         A(f'| macro-F1 | {cls["macro_f1"]} |')
         A(f'| majority baseline ({cls["majority_class"]}) | {cls["majority_baseline_accuracy"]} |')
+        if 'accuracy' in cls_no_emp:
+            A(f'| ablation: no `error_type_empirical` accuracy | {cls_no_emp["accuracy"]} |')
+            A(f'| ablation: no `error_type_empirical` macro-F1 | {cls_no_emp["macro_f1"]} |')
     else:
         A(f'_{cls.get("note","n/a")}_')
     A('')
@@ -320,7 +330,9 @@ def main():
     print(f'wrote {OUT_MD}')
     print(f'  detection pair-acc={det["pairwise_accuracy"]}  '
           f'correction acc@1={cor["accuracy_at_1"]}  '
-          f'classification acc={cls.get("accuracy","?")} (maj {cls.get("majority_baseline_accuracy","?")})')
+          f'location acc={cls.get("accuracy","?")} '
+          f'no-emp={cls_no_emp.get("accuracy","?")} '
+          f'(maj {cls.get("majority_baseline_accuracy","?")})')
 
 
 if __name__ == '__main__':

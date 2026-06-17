@@ -2,7 +2,7 @@
 
 All notable changes to this repository are documented here, following [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.0.0] - 2026-06-13
 
 ### Fixed
 - Front-door number drift: the landing dashboard now filters bots from the

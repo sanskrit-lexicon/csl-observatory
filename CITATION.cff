@@ -4,6 +4,9 @@ title: csl-observatory
 message: If you use this software, please cite it.
 license: GPL-3.0
 repository-code: https://github.com/sanskrit-lexicon/csl-observatory
+abstract: >
+  Observatory code is GPL-3.0. The OBS-T correction-event data release is
+  licensed separately under CC-BY-4.0; see DATA_LICENSE.md.
 keywords:
   - sanskrit
   - lexicon

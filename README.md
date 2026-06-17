@@ -21,6 +21,8 @@ A meta-repository that **measures the entire sanskrit-lexicon GitHub organisatio
 - **[Maintenance skills](https://github.com/sanskrit-lexicon/cologne-skills)** — portable Claude Code skills for org-wide security & maintenance (PHP XSS sweep · security audit · alert triage)
 - **[Contributor & work statistics](docs/CONTRIBUTOR_STATS.md)** — per-contributor & per-repo commits, churn, tenure, and issues (2014–2026)
 - **[Decisions needed](docs/DECISIONS_NEEDED.md)** — open items blocked on a maintainer (decisions, credentials, confirmations)
+- **[AI / bot contribution policy](docs/AI_CONTRIBUTION_POLICY.md)** - norms for AI-assisted commits, comments, and shared tooling changes
+- **[Contributor entry path](docs/CONTRIBUTOR_ENTRY_PATH.md)** - safe setup, first tasks, taxonomy labels, and review expectations
 
 ## Findings
 
@@ -59,11 +61,14 @@ Reports: [typology](reports/obs_t_typology.md) · [rigor](reports/obs_t_rigor.md
 | Path | Purpose |
 |---|---|
 | `scripts/{bus_factor,repo_health,taxonomy_adoption,velocity_timeline,contributor_identity}.py` | The five finding analyses (offline, over the committed site CSVs) |
+| `scripts/check_workspace.py` | Local workspace and sibling-repo prerequisite check |
 | `reports/` | Finding reports + [`synthesis.md`](reports/synthesis.md) + index |
 | `observatory/fetch.py`, `transform.py`, `build_people.py` | GitHub data fetch → time-series CSVs → contributor identities |
 | `observatory/site/` | Observable Framework dashboard source |
 | `observatory/site/src/data/` | The CSV snapshots the dashboard and findings read |
 | `docs/OBSERVATORY_DESIGN.md` | Boundary-safe design doc with GitHub/org KPI catalog |
+| `docs/AI_CONTRIBUTION_POLICY.md` | AI-assisted and automated contribution norms |
+| `docs/CONTRIBUTOR_ENTRY_PATH.md` | Safe contributor setup and first-task guide |
 | `docs/ARCHIVE.md` | Index of legacy and moved-to-`csl-atlas` docs |
 | `runbook/cologne-issue-runbook.md` | Dictionary-repo issue-taxonomy runbook |
 | `runbook/cologne-tooling-runbook.md` | Tooling-repo issue-taxonomy runbook |
