@@ -13,9 +13,9 @@ and now has a complete live snapshot with no remaining `unknown` live fields.
 
 | Priority | Item | Owner | Target day | Current status | Done when |
 |---|---|---|---|---|---|
-| 1 | Approve or revise RH1 license policy. | MG + Org | 2026-06-14 | blocked | Each repo group has an approved default or an explicit unresolved question. |
+| 1 | Approve or revise RH1 license policy. | MG + Org | 2026-06-14 | approved 2026-06-17 (code GPL-3.0 / data CC-BY-SA-4.0 / mixed split / temps excluded) | Each repo group has an approved default or an explicit unresolved question. |
 | 2 | Convert RH1 into rollout batches. | Codex | 2026-06-15 | ready for prep | Batch list separates safe code/tooling, dictionary data, mixed repos, infrastructure, and excluded archive candidates. |
-| 3 | Decide RH3 cleanup candidates. | MG + Org | 2026-06-16 | blocked | Each candidate is `archive approved`, `retain`, `migrate issue first`, or `blocked with reason`. |
+| 3 | Decide RH3 cleanup candidates. | MG + Org | 2026-06-16 | approved 2026-06-17 (4 archive; ap90/mw archive after open-issue migration) | Each candidate is `archive approved`, `retain`, `migrate issue first`, or `blocked with reason`. |
 | 4 | Close out B3 metadata completeness. | Codex | 2026-06-17 | live snapshot complete | `repo_metadata.csv` has 76 rows, no fetch warnings, and no `unknown` live metadata fields. |
 | 5 | Prepare next-week implementation packets. | Codex | 2026-06-18 | pending decisions | Approved license/archive work has a first implementation target and safety gates. |
 | 6 | Friday review closeout. | MG + Codex | 2026-06-19 | pending | Roadmaps and decision queue reflect the week; checks pass. |

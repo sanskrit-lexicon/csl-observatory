@@ -1,7 +1,11 @@
 # Repository Health Decision Packet
 
-Date: 2026-06-13
-Status: decision-prep only; no repository changes have been made from this file.
+Date: 2026-06-13 (RH1 + RH3 approved 2026-06-17)
+Status: **RH1 license policy and RH3 archive list APPROVED by MG on 2026-06-17.**
+The decisions below are now policy. No external repository mutation has yet been
+made — the gated rollout (tracking issues, LICENSE text per group, archiving on
+GitHub) runs only on an explicit "go", and ap90/mw archiving is blocked on their
+open-issue migration.
 
 This packet prepares the first maintainer decisions from the one-year roadmap:
 
@@ -21,11 +25,11 @@ The active week-level decision queue and rollout batches are in
 
 | Repo group | Proposed default | Status | Notes |
 |---|---|---|---|
-| Code and tooling | GPL-3.0 unless an existing recognized SPDX license is intentionally different. | blocked | Matches several existing tooling repos; do not overwrite MIT/LGPL/GPL-2.0 without a separate decision. |
-| Dictionary data repositories | CC-BY-SA-4.0 or the organization-approved dictionary-data license. | blocked | Confirm this with the maintainers before adding any license text. |
-| Mixed code + dictionary data | Dual statement: code under GPL-3.0, data under the approved dictionary-data license. | blocked | Requires a short README/LICENSE note so GitHub and humans do not conflate code and data rights. |
-| Infrastructure and websites | GPL-3.0 for code; content/data assets under the approved data/content license when separable. | blocked | Handle `COLOGNE`, `csl-homepage`, and `sanskrit-lexicon.github.io` carefully. |
-| Archive/legacy/temporary repos | Decide archive/retain first; if retained, apply the policy for its actual repo group. | blocked | Do not add licenses to disposable repos before the archive decision. |
+| Code and tooling | GPL-3.0 unless an existing recognized SPDX license is intentionally different. | approved 2026-06-17 | Matches several existing tooling repos; do not overwrite MIT/LGPL/GPL-2.0 without a separate decision. |
+| Dictionary data repositories | CC-BY-SA-4.0 or the organization-approved dictionary-data license. | approved 2026-06-17 | Confirm this with the maintainers before adding any license text. |
+| Mixed code + dictionary data | Dual statement: code under GPL-3.0, data under the approved dictionary-data license. | approved 2026-06-17 | Requires a short README/LICENSE note so GitHub and humans do not conflate code and data rights. |
+| Infrastructure and websites | GPL-3.0 for code; content/data assets under the approved data/content license when separable. | approved 2026-06-17 | Handle `COLOGNE`, `csl-homepage`, and `sanskrit-lexicon.github.io` carefully. |
+| Archive/legacy/temporary repos | Decide archive/retain first; if retained, apply the policy for its actual repo group. | approved 2026-06-17 | Do not add licenses to disposable repos before the archive decision. |
 | OBS-T released data | CC-BY-4.0. | decided for `csl-observatory` only | Implemented in `DATA_LICENSE.md`; does not decide dictionary data licensing. |
 
 Default safety rule: do not make a repository license change unless the repo group
@@ -75,12 +79,12 @@ but makes the repository read-only.
 
 | Repository | Evidence | Likely purpose | Recommendation | Status |
 |---|---|---|---|---|
-| `santamlegacy` | 0 open issues; pushed 20 days before the 2026-06-05 audit; description says "php version of Cologne-"; size 0 KB. | Legacy PHP snapshot. | Archive after confirming no current deployment depends on it. | blocked |
-| `temp_corrections_acc` | 0 open issues; pushed 21 days before audit; description says temporary English-word corrections for ACC. | Temporary correction batch. | Archive after confirming corrections were merged or superseded. | blocked |
-| `temp_corrections_ae` | 0 open issues; pushed 21 days before audit; description says temporary Apte English-Sanskrit corrections. | Temporary correction batch. | Archive after confirming corrections were merged or superseded. | blocked |
-| `temp_corrections_ap90` | 1 open issue; pushed 21 days before audit; description says working repository for analyzing AP90 correction batch; Python present. | Temporary analysis repo with one unresolved item. | Review/close or migrate the open issue, then archive if superseded. | blocked |
-| `temp_corrections_mw` | 1 open issue; pushed 21 days before audit; description says MW dictionary digitization corrections. | Temporary correction batch with one unresolved item. | Review/close or migrate the open issue, then archive if superseded. | blocked |
-| `test_cologne_push` | 0 open issues; pushed 20 days before audit; description says temporary push-from-Cologne-server problem; size 2 KB. | Push/deployment test repo. | Archive after confirming the server push problem is no longer being tested here. | blocked |
+| `santamlegacy` | 0 open issues; pushed 20 days before the 2026-06-05 audit; description says "php version of Cologne-"; size 0 KB. | Legacy PHP snapshot. | Archive after confirming no current deployment depends on it. | approved 2026-06-17 |
+| `temp_corrections_acc` | 0 open issues; pushed 21 days before audit; description says temporary English-word corrections for ACC. | Temporary correction batch. | Archive after confirming corrections were merged or superseded. | approved 2026-06-17 |
+| `temp_corrections_ae` | 0 open issues; pushed 21 days before audit; description says temporary Apte English-Sanskrit corrections. | Temporary correction batch. | Archive after confirming corrections were merged or superseded. | approved 2026-06-17 |
+| `temp_corrections_ap90` | 1 open issue; pushed 21 days before audit; description says working repository for analyzing AP90 correction batch; Python present. | Temporary analysis repo with one unresolved item. | Review/close or migrate the open issue, then archive if superseded. | approved 2026-06-17 |
+| `temp_corrections_mw` | 1 open issue; pushed 21 days before audit; description says MW dictionary digitization corrections. | Temporary correction batch with one unresolved item. | Review/close or migrate the open issue, then archive if superseded. | approved 2026-06-17 |
+| `test_cologne_push` | 0 open issues; pushed 20 days before audit; description says temporary push-from-Cologne-server problem; size 2 KB. | Push/deployment test repo. | Archive after confirming the server push problem is no longer being tested here. | approved 2026-06-17 |
 
 ### Decision Questions For Maintainer
 

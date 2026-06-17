@@ -4,7 +4,7 @@ Consolidated list of items that are blocked on a human decision,
 credential, or action. This file is now scoped to `csl-observatory` as
 the GitHub/org observatory only.
 
-Last updated: 2026-06-13.
+Last updated: 2026-06-17.
 
 > Agent note: when M.G. asks "what's next?" or resumes observatory work,
 > surface this list first.
@@ -17,9 +17,12 @@ Last updated: 2026-06-13.
 
 | # | Item | Source |
 |---|---|---|
-| A4 | Approve or revise the license decision matrix: code/tooling default, dictionary-data default, mixed code/data policy, and whether archive candidates are excluded until retained. | `WEEKLY_MAINTAINER_WORK_PLAN_2026-06-13.md`; `REPOSITORY_HEALTH_DECISION_PACKET.md` RH1 |
-| A5 | Decide archive/retain status for `santamlegacy`, `temp_corrections_acc`, `temp_corrections_ae`, `temp_corrections_ap90`, `temp_corrections_mw`, and `test_cologne_push`. | `WEEKLY_MAINTAINER_WORK_PLAN_2026-06-13.md`; `REPOSITORY_HEALTH_DECISION_PACKET.md` RH3 |
 | A7 | Review the bus-factor accepted-risk notes for `DCS`, `KNA`, `KOW`, `MCI`, and `santamlegacy`; confirm whether public artifact tooling should be promoted next. | `BUS_FACTOR_ACTION_PLAN.md` SC3 |
+
+> **A4/A5 approved 2026-06-17 — see Recently Resolved.** The license policy and
+> archive list are now decided; remaining work is the gated *rollout* (filing
+> tracking issues, adding LICENSE text per group, archiving repos on GitHub),
+> which is an external-mutation batch and runs only on an explicit "go".
 
 ### B. Identifications / Facts Only You Can Confirm
 
@@ -70,6 +73,8 @@ automation and project-board audits.
 | B3-plan | Metadata-completeness dashboard plan, cached fetcher, partial live CSV, and Repo Metadata page created. | `METADATA_COMPLETENESS_DASHBOARD_PLAN.md`; `observatory/site/src/repo-metadata.md` |
 | B3-live | Live repository metadata snapshot completed locally: 76 rows, 0 fetch warnings, 0 unknown live fields. | `METADATA_COMPLETENESS_DASHBOARD_PLAN.md`; `observatory/site/src/data/repo_metadata.csv`; `WEEKLY_MAINTAINER_WORK_PLAN_2026-06-13.md` |
 | RH4-pilot | `csl-observatory` line-ending policy tightened to explicit LF for source, docs, and generated data files; org-wide rollout remains active. | `.gitattributes` |
+| A4 (RH1) | License policy **approved 2026-06-17**: code/tooling → **GPL-3.0** (don't overwrite an intentional recognized SPDX license); dictionary data → **CC-BY-SA-4.0**; mixed repos → **dual split** (code GPL-3.0 / data CC-BY-SA-4.0); temp/archive candidates **excluded** until RH3 executed; OBS-T data stays CC-BY-4.0. | `REPOSITORY_HEALTH_DECISION_PACKET.md` RH1 |
+| A5 (RH3) | Archive **approved 2026-06-17**: `santamlegacy`, `temp_corrections_acc`, `temp_corrections_ae`, `test_cologne_push` → archive after the standard dependency/merge confirmation; `temp_corrections_ap90`, `temp_corrections_mw` → archive **only after** their one open issue is migrated or closed. | `REPOSITORY_HEALTH_DECISION_PACKET.md` RH3 |
 
 ---
 
