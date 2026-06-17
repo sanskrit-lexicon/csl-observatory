@@ -2,9 +2,12 @@
 
 Date: 2026-06-13 (RH1 + RH3 approved 2026-06-17)
 Status: **RH1 license policy and RH3 archive list APPROVED by MG on 2026-06-17.**
-The decisions below are now policy. No external repository mutation has yet been
-made — the gated rollout (tracking issues, LICENSE text per group, archiving on
-GitHub) runs only on an explicit "go", and ap90/mw archiving is blocked on their
+The decisions below are now policy. **RH1 rollout STARTED 2026-06-17** — the two
+no-license batches are done (6 code/tooling → GPL-3.0, 4 dictionary-data →
+CC-BY-SA-4.0); see `docs/RH1_LICENSE_ROLLOUT_LOG.md`. The remaining batches
+(NOASSERTION replacements, mixed dual-split, correction/source data,
+infrastructure) are still held pending intent confirmation or sub-decisions.
+RH3 archiving is not started, and ap90/mw archiving is blocked on their
 open-issue migration.
 
 This packet prepares the first maintainer decisions from the one-year roadmap:
