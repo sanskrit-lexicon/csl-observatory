@@ -1,58 +1,136 @@
-# CDSL Ecosystem — Improvement & Optimization Roadmap
+# CDSL Observatory: One-Year Maintainer Roadmap
 
-_Engineering/quality roadmap for the [`sanskrit-lexicon`](https://github.com/sanskrit-lexicon) organisation (77 repos). Drafted 2026-05-30, grounded in concrete issues observed during the 2026-05 correction + documentation + analytics cycle. After the 2026-06 boundary decision, this roadmap is limited to GitHub/org maintenance work. Dictionary content, standards/export, DCS/corpus, and broad publication planning live elsewhere._
+Last updated: 2026-06-13
+Horizon: 2026-06 to 2027-06
+Audience: maintainer first. Contributor and reviewer-facing surfaces are planned
+after the maintenance backbone is sturdier.
 
-## How to read
+## Purpose
 
-- **Lens**: 🛡 reliability/tech-debt · 📖 data-quality · ⚙ automation/CI · 📚 docs/governance
-- **Impact** / **Effort**: H / M / L. "Start here" = high impact, low effort.
-- **Evidence** ties each item to something actually hit this cycle, so nothing here is speculative.
+This is the active maintainer roadmap for `csl-observatory` and the
+repository/process work it measures across the `sanskrit-lexicon` GitHub
+organization. It is action-oriented: every item has an owner, a target date, and
+an acceptance condition.
 
----
+The priority order for the next year is:
 
-## 1 · Quick wins (high value, low effort — start here)
+1. Repository-health actions.
+2. Sustainability and community continuity.
+3. Automation and refresh reliability.
+4. Public observatory release surfaces for future contributors and reviewers.
+5. OBS-T paper readiness, last, after the infrastructure is safer.
 
-| # | Item | Lens | Impact | Effort | Why / evidence |
+For the implementation detail behind the observatory itself, see
+[`OBSERVATORY_ROADMAP.md`](OBSERVATORY_ROADMAP.md).
+
+## Scope Rules
+
+Active roadmap items must start from repository, issue, pull request, commit,
+contributor, workflow, project-board, repository-metadata, release, or
+organization-maintenance evidence.
+
+Out of scope here: dictionary-content research, dictionary genealogy, TEI/OntoLex
+exports, corpus/DCS work, lookup analytics, and broad publication planning. Those
+belong in sibling projects or archived planning docs.
+
+## Status And Owners
+
+| Field | Meaning |
+|---|---|
+| Owner | `MG` = maintainer; `Codex` = implementation assistant; `Org` = requires sanskrit-lexicon maintainer decision |
+| Status | `next`, `active`, `blocked`, `scheduled`, `done` |
+| Cadence | Review this file every Friday; update statuses after each implementation session |
+
+## 2026-Q3: Repository Health First
+
+| ID | Action | Owner | Status | Target | Acceptance |
 |---|---|---|---|---|---|
-| Q1 | **BOM-tolerant `hw.py` / `make_xml.py`** (`utf-8-sig`) | 🛡 | H | S | A stray UTF-8 BOM masqueraded as a cryptic `init_entries Error 2` and cost real diagnosis time. **Filed: [csl-pywork#50](https://github.com/sanskrit-lexicon/csl-pywork/issues/50).** |
-| Q2 | **CI guard on `csl-orig` changes**: no-BOM + UTF-8-NFC + `ElementTree` XML-parse | 🛡⚙ | H | S | The BOM regression reached `origin` before detection. A pre-merge check stops the whole class of encoding/markup breakage. |
-| Q3 | **`.gitattributes` (`* text=auto eol=lf`) across repos** | 🛡 | M | S | Every Windows commit this cycle warned *"LF will be replaced by CRLF"*; normalising EOL removes the noise and avoids accidental whole-file diffs. |
-| Q4 | **Canonical contributor-identity map** (`contributors_map.json`) | 📚 | M | S | Stats showed the same person split as `drdhaval2785` / "Dr. Dhaval Patel", `funderburkjim` / "James Funderburk", plus "Your Name". One map fixes every downstream metric. |
-| Q5 | **Shared Mermaid-validation CI step** for generated READMEs | ⚙ | M | S | Validated 21 diagrams by hand this cycle via `gh api markdown`; a reusable step makes it automatic. |
-| Q6 | **Bot / AI commit + comment policy** (in `CONTRIBUTING`) | 📚 | M | S | Maintainers pushed back on the value of bot-attributed commits/comments (MWS#194). A short written norm (edit-in-place, no attribution noise on dict repos) prevents friction. |
-| Q7 | **Finish issue-taxonomy on remaining repos** (`/cologne-runbook-all`) | 📚 | M | M | 6 milestone-less dict repos were brought to full taxonomy this cycle; the rest of the org still needs the pass. |
+| RH1 | Decide license policy for code/data/dictionary repos. | MG + Org | blocked | 2026-06-28 | Written decision in `docs/DECISIONS_NEEDED.md`; policy distinguishes code, dictionary data, OBS-T data, and legacy repos. |
+| RH2 | Resolve the license backlog from `reports/repo_health.md`: 41 no-license repos and 21 `NOASSERTION` repos. | MG + Codex | scheduled | 2026-08-31 | Each repo has a recognized license or an explicit issue explaining why not. |
+| RH3 | Archive or justify the six cleanup candidates: `santamlegacy`, `temp_corrections_*`, `test_cologne_push`. | MG + Org | blocked | 2026-07-15 | Each candidate is archived or has a short retention note linked from the org project. |
+| RH4 | Add a standard `.gitattributes` / line-ending policy to active tooling repos. | Codex | active | 2026-07-31 | `csl-observatory` now has explicit LF policy; remaining active tooling repos still need rollout. |
+| RH5 | Add no-BOM, UTF-8, NFC, and XML parse guards for dictionary-source change paths. | Codex | scheduled | 2026-08-15 | CI template exists and is piloted on `csl-orig` or the owning tooling repo. |
+| RH6 | Finish issue-taxonomy rollout across remaining repos. | MG + Codex | done | 2026-08-31 | Rollout is verified complete; ongoing taxonomy/project drift is handled by the monthly maintainer review checklist. |
+| RH7 | Normalize missing descriptions and basic metadata for the top flagged repos. | MG | scheduled | 2026-07-31 | `reports/repo_health.md` missing-description list is empty or justified. |
 
-## 2 · Medium-term
+Evidence to keep current: `reports/repo_health.md`,
+`docs/hygiene_issues_draft.md`, `docs/RUNBOOK_NOTES.md`, and
+`docs/REPOSITORY_HEALTH_DECISION_PACKET.md`, and
+`docs/METADATA_COMPLETENESS_DASHBOARD_PLAN.md`. Maintainer dashboard entry
+points: `/ops-command`, `/repository-risk`, and `/metadata-readiness`.
 
-| # | Item | Lens | Impact | Effort | Why / evidence |
+## 2026-Q3/Q4: Sustainability And Community Continuity
+
+| ID | Action | Owner | Status | Target | Acceptance |
 |---|---|---|---|---|---|
-| M1 | **Modernise `redo_xampp_selective.sh`**: python2→3, parameterise the hardcoded `/var/www/html/cologne` path, document prereqs | 🛡⚙ | H | M | The artefact-refresh is unrunnable off the one server (hardcoded paths, python2, cross-org push, 5 sibling repos). Blocks anyone but the server from refreshing Stardict/JSON/homepage. |
-| M2 | **Encoding audit + round-trip validation** (SLP1 ↔ IAST ↔ Devanāgarī); finish AS→SLP1 | 📖⚙ | H | M | MW72 still carries legacy AS-scheme forms (issues #3/#4); a round-trip CI check would flag lossy entries org-wide. |
-| M3 | **README/`CLAUDE.md` + citation/community files for all remaining repos** (runbook phases 8–16) | 📚 | M | M | 6 dict repos were fully documented this cycle; ~30 dict + ~20 tooling repos remain (many have only stub READMEs). |
-| M4 | **Automate the observatory refresh** (monthly CI) on the commits-API + git-churn path | ⚙ | M | M | `/stats/contributors` & `/stats/code_frequency` returned HTTP 202 across the whole org and never resolved; [`scripts/contributor_stats.py`](../scripts/contributor_stats.py) already replaces them — wire it into the dashboard build. |
-| M5 | **Local-clone hygiene**: a setup script that full-clones siblings | 🛡 | M | S | Several repos sat locally as shallow `.git`-only shells (1 commit, no working tree), silently breaking churn and doc generation until un-shallowed. |
-| M6 | **Markup-normalisation sweep across all dicts** (extend the 10-dict whitespace pass; `/cologne-markup-fix`) | 📖 | M | M | The 2026-05 batch fixed 10 dicts; the same `<ls>`/`<lex>`/whitespace classes exist elsewhere. |
-| M7 | **Licensing + FAIR standardisation**: fix KRM's GPL-vs-cff mismatch; LICENSE + CITATION.cff + Zenodo DOI on every repo | 📚 | M | M | KRM ships GPL-3.0 while its `CITATION.cff` declares CC BY-SA 4.0; licensing is inconsistent across repos. |
+| SC1 | Complete the contributor identity worksheet. | MG | next | 2026-09-15 | `scripts/contributors_map.json` has confirmed names/ORCIDs where contributors consent; unknowns are triaged. |
+| SC2 | Create a maintainer continuity packet for the core workflows. | MG + Codex | done | 2026-09-30 | A new maintainer can run observatory refresh, correction reports, and dashboard build from documented steps. |
+| SC3 | Convert the bus-factor finding into an action plan. | MG + Codex | done | 2026-10-15 | Top five bus-factor risks have linked mitigation issues or explicit accepted risk notes. |
+| SC4 | Roll out `AI_CONTRIBUTION_POLICY.md` into contributor guidance. | MG + Codex | done | 2026-08-15 | README/CONTRIBUTING text points to the policy; bot/AI contribution expectations are unambiguous. |
+| SC5 | Prepare a contributor entry path. | MG + Codex | done | 2026-11-15 | A contributor page lists setup, good first issues, taxonomy labels, and where not to work. |
+| SC6 | Add a lightweight monthly maintainer review ritual. | MG | done | 2026-07-01 | Calendar/checklist exists: health report, open blockers, bus-factor risks, next project-board moves. |
 
-## 3 · Strategic / long-term
+Evidence to keep current: `reports/bus_factor.md`,
+`reports/contributor_identity.md`, `reports/synthesis.md`,
+`docs/BUS_FACTOR_ACTION_PLAN.md`, `docs/MAINTAINER_CONTINUITY_PACKET.md`, and
+`docs/MAINTAINER_REVIEW_CHECKLIST.md`. Maintainer dashboard entry points:
+`/community-continuity` and `/ops-command`.
 
-| # | Item | Lens | Impact | Effort | Why / evidence |
+## 2026-Q4: Automation And Refresh Reliability
+
+| ID | Action | Owner | Status | Target | Acceptance |
 |---|---|---|---|---|---|
-| S1 | **Migrate the generation/refresh pipeline off the single Cologne server** (containerise; CI/CD; drop hardcoded paths, python2, cross-org push) | 🛡⚙ | H | L | The whole public-artefact pipeline is a single-host cron with hardcoded assumptions — a resilience and bus-factor risk. |
-| S2 | **Org-wide repository health baseline**: README, license, citation, issue-template, PR-template, workflow, and release metadata coverage | 📚 | H | M | Keeps the observatory on repository evidence and gives maintainers a concrete cleanup queue. |
-| S3 | **Workflow reliability baseline**: CI, cron, Dependabot, release, and artifact-refresh workflow status across active repos | ⚙ | H | M | Turns maintenance risk into measurable repository/process evidence without owning dictionary or standards pipelines. |
-| S4 | **Unified CI/CD + pre-commit + CodeQL + Dependabot org-wide** (skills exist) | ⚙ | M | M | One source of truth for conventions; today each repo is configured ad hoc. |
-| S5 | **Reusable observatory report package** on the GitHub/org backbone | 📚 | M | M | Formalise reproducible, citable repository metrics. Keep broad publication planning outside this repo. See [`OBSERVATORY_DESIGN.md`](OBSERVATORY_DESIGN.md). |
+| AR1 | Modernize `redo_xampp_selective.sh` and related refresh scripts. | Codex | scheduled | 2026-10-31 | Python 2 removed, hardcoded paths parameterized, prerequisites documented, dry-run mode available. |
+| AR2 | Add a local clone/bootstrap checker for sibling repos. | Codex | done | 2026-09-30 | Setup script verifies `csl-observatory`, `csl-orig`, and `CORRECTIONS` are real working trees with enough history. |
+| AR3 | Automate monthly observatory refresh. | Codex | active | 2026-11-30 | Local refresh runner exists with dry-run, manifest, summary, checks, and site build; scheduled workflow/credential hardening remains. |
+| AR4 | Build workflow reliability baseline. | Codex | done | 2026-06-13 | `reports/workflow_health.md`, `/workflow-health`, and `workflow_health.csv` list CI, cron/scheduled, release, artifact-refresh, Dependabot, and CodeQL status for active repos. |
+| AR5 | Keep generated outputs reproducible and reviewable. | Codex | active | ongoing | Generated CSV/JSON/report churn is explained in release notes and gated by regression checks. |
 
----
+Evidence to keep current: `reports/README.md`, generated site data under
+`observatory/site/src/data/`, `docs/REFRESH_SCRIPT_MODERNIZATION_PLAN.md`, and
+the Tooling Roadmap project.
 
-## Suggested first sprint
+## 2027-Q1: Public Observatory Release
 
-Q1 (filed) → **Q2 + Q3** (one CI workflow + `.gitattributes` template, deployable org-wide) → **Q4** (identity map, unblocks all analytics) → **M1** (un-hardcode the refresh, the biggest single operational risk).
+| ID | Action | Owner | Status | Target | Acceptance |
+|---|---|---|---|---|---|
+| PR1 | Produce a 2026/2027 observatory snapshot release. | MG + Codex | scheduled | 2027-01-31 | Tagged release includes data snapshot date, report index, caveats, and reproducibility commands. |
+| PR2 | Make maintainer dashboard pages match the active findings. | Codex | done | 2026-06-13 | Maintainer-first pages now cover operations, repository risk, metadata readiness, taxonomy triage, community continuity, and OBS-T maintenance light; contributor/reviewer polish remains in PR3/PR4. |
+| PR3 | Add a reviewer-facing reproducibility note. | MG + Codex | done | 2026-06-13 | `docs/REVIEWER_REPRODUCIBILITY.md` and `/reproducibility` document report refresh, credentials, dashboard build, OBS-T checks, and human-gated commands. |
+| PR4 | Add a contributor-facing "where to help" page. | MG + Codex | scheduled | 2027-03-31 | Future contributors can see safe entry points: metadata cleanup, issue taxonomy, docs, tests, and dashboards. |
 
-## Tracking
+## 2027-Q2: Paper And OBS-T Readiness Last
 
-Top items are mirrored as GitHub issues on the relevant tooling repos (labelled per the tooling-repo taxonomy) and on the org [Tooling Roadmap](https://github.com/orgs/sanskrit-lexicon/projects/9). Data-quality items that target dictionary text are tracked on those dictionaries' own issue trackers to keep this list engineering-focused.
+| ID | Action | Owner | Status | Target | Acceptance |
+|---|---|---|---|---|---|
+| OT1 | Keep OBS-T release green after infrastructure work. | Codex | scheduled | 2027-04-15 | `scripts/obs_t_regression.py` passes after any refresh; datasheet and reports match generated counts. |
+| OT2 | Run human-gated OBS-T validation samples. | MG | scheduled | 2027-04-30 | `obs_t_gold.py --make/--score` and `obs_t_errorsample.py --make/--score` have annotated outputs or documented deferral. |
+| OT3 | Draft the OBS-T paper package. | MG + Codex | scheduled | 2027-05-31 | Draft has dataset statement, limitations, baselines, statistics, and release checklist. |
+| OT4 | Freeze a paper-reviewer artifact. | MG + Codex | scheduled | 2027-06-15 | DOI/tag or frozen archive exists with exact data, scripts, reports, and reviewer instructions. |
 
----
-*Drafted 2026-05-30 from the 2026-05 observation cycle. Companion data: [`docs/CONTRIBUTOR_STATS.md`](CONTRIBUTOR_STATS.md).*
+The completed post-review OBS-T fix tracker is archived at
+[`archive/OBS_T_FIX_PLAN_2026-06-12.md`](archive/OBS_T_FIX_PLAN_2026-06-12.md).
+
+## Parking Lot
+
+These are valuable but not first-year blockers:
+
+- Org-wide branch-name normalization after license and cleanup decisions.
+- CodeQL/Dependabot rollout for every maintained tooling repo.
+- A reusable observatory report package.
+- Broader comparative project metrics, if restricted to public repository metadata.
+- Dictionary-content roadmaps in `csl-atlas` and standards/export work in
+  `csl-standards`.
+
+## Next Implementation Session
+
+Start by reviewing the blocked human decisions, then turn approved repository
+decisions into implementation packets:
+
+1. Approve or revise the license matrix in `docs/REPOSITORY_HEALTH_DECISION_PACKET.md`.
+2. Approve or revise archive/retain recommendations for the six cleanup candidates.
+3. Use `docs/WEEKLY_MAINTAINER_WORK_PLAN_2026-06-13.md`, `/ops-command`,
+   `/repository-risk`, `/taxonomy-triage`, and
+   `/community-continuity` as the maintainer review control surface.
+4. Prepare the first approved license or cleanup implementation batch; if no
+   decision is made, continue with refresh-script implementation prep.

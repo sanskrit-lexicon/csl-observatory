@@ -26,16 +26,18 @@ Noisy-channel: pick the edit-1 candidate the character-LM scores highest (Norvig
 | **accuracy@1** | **0.059** |
 | share of test errors at edit-distance 1 | 0.787 (model's reach) |
 
-## 3. Error-type classification (all derived events)
+## 3. Location classification (all derived events)
 
-Predict the microstructure `error_component` from edit-op features (dominant operation, unit, edit-distance bucket, script, empirical cluster) with categorical Naive Bayes.
+Predict the microstructure `error_component` from edit-op features (dominant operation, unit, edit-distance bucket, script, edit space, and optionally empirical cluster) with categorical Naive Bayes.
 
 | metric | value |
 |---|---:|
-| train / test | 17,082 / 8,359 |
+| train / test | 15,788 / 9,729 |
 | classes | 6 |
-| **accuracy** | **0.594** |
-| macro-F1 | 0.403 |
-| majority baseline (sense) | 0.44 |
+| **accuracy** | **0.638** |
+| macro-F1 | 0.453 |
+| majority baseline (sense) | 0.402 |
+| ablation: no `error_type_empirical` accuracy | 0.531 |
+| ablation: no `error_type_empirical` macro-F1 | 0.365 |
 
 *Reference baselines only — the paper compares these against neural sequence models. Object of analysis in scope per `docs/BOUNDARY_RULES.md`.*

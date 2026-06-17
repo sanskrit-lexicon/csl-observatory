@@ -1,114 +1,118 @@
 {
-  "generatedAt": "2026-06-11T19:44:54.700614+00:00",
-  "events": 50953,
+  "generatedAt": "2026-06-12T10:07:21.213331+00:00",
+  "events": 52498,
   "dateRange": [
     "2014-03-18",
     "2026-05-30"
   ],
   "evidence": {
-    "inferred": 17392,
-    "derived": 33561
+    "inferred": 18743,
+    "derived": 33755
   },
-  "derivedPct": 65.9,
+  "derivedPct": 64.3,
   "components": [
     [
-      "sense",
-      17880
-    ],
-    [
       "unattributed",
-      17392
+      18743
     ],
     [
-      "headword",
-      7282
+      "sense",
+      17778
     ],
     [
       "markup",
-      3945
+      5902
+    ],
+    [
+      "headword",
+      5823
     ],
     [
       "citation",
-      3338
+      3335
     ],
     [
       "meta",
-      822
+      624
     ],
     [
       "grammar",
-      294
+      293
     ]
   ],
   "locationDerived": [
     [
       "sense",
-      17880
-    ],
-    [
-      "headword",
-      7282
+      17778
     ],
     [
       "markup",
-      3945
+      5902
+    ],
+    [
+      "headword",
+      5823
     ],
     [
       "citation",
-      3338
+      3335
     ],
     [
       "meta",
-      822
+      624
     ],
     [
       "grammar",
-      294
+      293
     ]
   ],
   "editType": [
     [
       "spelling",
-      16953
-    ],
-    [
-      "punctuation",
-      10193
+      11683
     ],
     [
       "spacing",
-      9725
+      10233
+    ],
+    [
+      "punctuation",
+      9506
+    ],
+    [
+      "source-raw",
+      7852
     ],
     [
       "diacritic",
-      5396
+      4785
     ],
     [
       "case",
-      4432
+      3813
     ],
     [
       "digit",
-      2632
+      2907
     ],
     [
       "none",
-      890
+      1228
     ],
     [
       "transposition",
-      732
+      491
     ]
   ],
   "componentsByLayer": {
     "form": [
       [
         "unattributed",
-        17392
+        18743
       ],
       [
         "headword",
-        6280
+        4929
       ],
       [
         "sense",
@@ -130,134 +134,134 @@
     "git": [
       [
         "sense",
-        17289
+        17187
       ],
       [
         "markup",
-        3945
+        5902
       ],
       [
         "citation",
-        3234
+        3231
       ],
       [
         "headword",
-        1002
+        894
       ],
       [
         "meta",
-        791
+        593
       ],
       [
         "grammar",
-        251
+        250
       ]
     ]
   },
   "ocr": [
     [
       "substitution",
-      15847
+      14815
     ],
     [
       "insertion",
-      13195
+      14713
     ],
     [
       "deletion",
-      10564
+      11018
     ],
     [
       "segmentation",
-      9750
+      10253
     ],
     [
       "unknown",
-      890
+      1228
     ],
     [
       "transposition",
-      707
+      471
     ]
   ],
   "textcrit": [
     [
       "addition",
-      18877
+      20546
     ],
     [
       "substitution",
-      16432
+      15246
     ],
     [
       "omission",
-      13340
+      14260
     ],
     [
       "unknown",
-      890
-    ],
-    [
-      "metathesis",
-      732
+      1228
     ],
     [
       "haplography",
-      489
+      496
+    ],
+    [
+      "metathesis",
+      491
     ],
     [
       "dittography",
-      193
+      231
     ]
   ],
   "errantTop": [
     [
       "M:PUNCTUATION",
-      6675
-    ],
-    [
-      "U:PUNCTUATION",
-      5994
-    ],
-    [
-      "R:CONSONANT",
-      5533
+      6596
     ],
     [
       "M:CONSONANT",
-      5301
+      6337
     ],
     [
-      "R:CASE",
-      4462
+      "U:PUNCTUATION",
+      5638
+    ],
+    [
+      "R:CONSONANT",
+      5132
     ],
     [
       "U:CONSONANT",
-      3422
+      4342
+    ],
+    [
+      "R:CASE",
+      3965
     ],
     [
       "M:DIACRITIC",
-      3382
+      3771
     ],
     [
       "R:VOWEL",
-      2041
+      1983
     ],
     [
       "R:PUNCTUATION",
-      1916
+      1815
     ],
     [
       "M:VOWEL",
-      1481
+      1537
+    ],
+    [
+      "U:DIACRITIC",
+      1441
     ],
     [
       "U:WHITESPACE",
-      1377
-    ],
-    [
-      "U:VOWEL",
-      1245
+      1356
     ]
   ],
   "topFormConsonantConfusions": [
@@ -350,66 +354,57 @@
     },
     {
       "dict": "bur",
-      "events": 1803,
+      "events": 1807,
       "entries": 19776,
-      "per_1k_entries": 91.17,
+      "per_1k_entries": 91.37,
       "top_component": "sense",
       "form": 693,
-      "git": 1110
+      "git": 1114
     },
     {
       "dict": "pw",
-      "events": 13651,
+      "events": 13662,
       "entries": 170556,
-      "per_1k_entries": 80.04,
+      "per_1k_entries": 80.1,
       "top_component": "unattributed",
       "form": 11776,
-      "git": 1875
+      "git": 1886
     },
     {
       "dict": "ccs",
-      "events": 2290,
+      "events": 2289,
       "entries": 30010,
-      "per_1k_entries": 76.31,
+      "per_1k_entries": 76.27,
       "top_component": "headword",
       "form": 2229,
-      "git": 61
+      "git": 60
     },
     {
       "dict": "mci",
-      "events": 195,
+      "events": 196,
       "entries": 2643,
-      "per_1k_entries": 73.78,
+      "per_1k_entries": 74.16,
       "top_component": "sense",
       "form": 10,
-      "git": 185
+      "git": 186
     },
     {
       "dict": "ap90",
-      "events": 2474,
+      "events": 2539,
       "entries": 34882,
-      "per_1k_entries": 70.92,
+      "per_1k_entries": 72.79,
       "top_component": "sense",
       "form": 415,
-      "git": 2059
+      "git": 2124
     },
     {
       "dict": "ben",
-      "events": 1221,
+      "events": 1220,
       "entries": 17310,
-      "per_1k_entries": 70.54,
+      "per_1k_entries": 70.48,
       "top_component": "sense",
       "form": 463,
-      "git": 758
-    },
-    {
-      "dict": "abch",
-      "events": 119,
-      "entries": 1965,
-      "per_1k_entries": 60.56,
-      "top_component": "sense",
-      "form": 0,
-      "git": 119
+      "git": 757
     },
     {
       "dict": "vei",
@@ -421,34 +416,43 @@
       "git": 180
     },
     {
-      "dict": "md",
-      "events": 1171,
-      "entries": 20749,
-      "per_1k_entries": 56.44,
-      "top_component": "sense",
-      "form": 13,
-      "git": 1158
-    },
-    {
       "dict": "gra",
-      "events": 710,
+      "events": 717,
       "entries": 12785,
-      "per_1k_entries": 55.53,
+      "per_1k_entries": 56.08,
       "top_component": "sense",
       "form": 380,
-      "git": 330
+      "git": 337
     },
     {
       "dict": "pui",
-      "events": 927,
+      "events": 980,
       "entries": 17512,
-      "per_1k_entries": 52.94,
+      "per_1k_entries": 55.96,
       "top_component": "headword",
       "form": 644,
-      "git": 283
+      "git": 336
+    },
+    {
+      "dict": "md",
+      "events": 1124,
+      "entries": 20749,
+      "per_1k_entries": 54.17,
+      "top_component": "sense",
+      "form": 13,
+      "git": 1111
+    },
+    {
+      "dict": "bop",
+      "events": 408,
+      "entries": 8961,
+      "per_1k_entries": 45.53,
+      "top_component": "sense",
+      "form": 30,
+      "git": 378
     }
   ],
-  "correctors": 210,
+  "correctors": 208,
   "latency": {
     "n": 1580,
     "median": 12,

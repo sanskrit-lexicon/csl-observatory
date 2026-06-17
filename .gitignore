@@ -10,6 +10,9 @@ article/figures/*.png.tmp
 .DS_Store
 Thumbs.db
 
+# Local Claude Code agent settings (machine-specific)
+.claude/settings.local.json
+
 # Observatory snapshots — large, regenerable from API
 observatory/snapshots/
 observatory/data/*.parquet

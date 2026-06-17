@@ -26,19 +26,20 @@ orthogonal axes**:
   join-failures = `unattributed`. (Phase 3 / 8 in
   [`scripts/attribute_components.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/attribute_components.py).)
 - **EDIT-TYPE** (`edit_type`) — *what kind* of change, from the edit-op trace:
-  `spelling · diacritic · case · spacing · punctuation · digit · transposition`.
+  `spelling · diacritic · case · spacing · punctuation · digit · transposition · source-raw`.
   (Phase 8 in
   [`scripts/attribute_crosswalks.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/attribute_crosswalks.py).)
 
-Headline results (see [`reports/obs_t_typology.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_t_typology.md),
-[`reports/obs_t_rigor.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_t_rigor.md)): 50,953 events · 43 dicts · 210
-correctors · 65.9% derived. **Location** (derived): sense 53% · headword 22% ·
-markup 12% · citation 10%. **Edit-type**: spelling 33% · punctuation 20% · spacing
-19% · diacritic 11% · case 9%. **H1** (restated) — corrections are micro surface
-edits (median distance 2; 66% ≤ 2 chars) at *every* location. **H2** — location ×
-dictionary Cramér's V = 0.415 (bootstrap [0.41, 0.42], minus-PW 0.437). **H3** —
-location trends: headword falling, markup/meta rising; campaigns (citation-source
-~12k) vs organic drift separated in [`reports/obs_t_campaigns.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_t_campaigns.md).
+Current headline results are generated, not hand-maintained; see
+[`reports/obs_t_typology.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_t_typology.md),
+[`reports/obs_t_rigor.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_t_rigor.md),
+and the post-review delta tracker in
+[`docs/archive/OBS_T_FIX_PLAN_2026-06-12.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/archive/OBS_T_FIX_PLAN_2026-06-12.md).
+The paper claim is now narrower than the Phase-8 draft: micro-edit dominance is
+strongest overall and in sense/headword locations; markup, citation, and grammar
+are reported separately. H2 p-values are descriptive, with Cramer's V and
+commit/campaign-block sensitivity checks carrying the interpretation. H3 trends
+use multiple-comparison handling.
 
 Pipeline (all stdlib, offline; reproduce in order):
 [`build_correction_events`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/build_correction_events.py) →
@@ -96,8 +97,8 @@ the XML-tagged `csl-orig` sources locally.
 | Crosswalk taxonomies | NLP/ERRANT edit-ops · OCR/digitization · textual-criticism (Katre) |
 | Normalization | **IAST** canonical (NFC for display, NFD for diacritic-level edit ops) |
 | Resource split | **Temporal** (train past → test recent) |
-| Contributors | **Full real names**, alias-merged via `contributors_map.json` |
-| License | **CC-BY-4.0** (more permissive than CDSL's CC-BY-SA, for NLP reuse) |
+| Contributors | Release-safe public aliases or stable pseudonyms; raw form-submit emails removed |
+| License | Code GPL-3.0; OBS-T released data CC-BY-4.0 (`DATA_LICENSE.md`) |
 | Home | `csl-observatory` (process/time framing); cross-links to `csl-atlas` |
 
 ## 3. Data sources (five layers)
@@ -127,25 +128,29 @@ sibling for the schema/envelope). One row = one correction event.
 | `event_id` | str | derived | stable hash of (layer, dict, lcode, old, new, date) |
 | `date` | ISO date | L1/L2/L4 | event date (form submit, commit, or batch date) |
 | `source_layer` | enum | — | `form` \| `git` \| `printchange` \| `batch` |
+| `source_path` | str | L1/L2 | source file/path for the mined event |
+| `commit_sha` | str | L2 | commit SHA for git-layer events |
 | `dict` | str | all | dictionary code, lowercased to csl-orig convention |
 | `lcode` | str | L1/L2 | `<L>` record id when known (`0(NA)` → empty) |
 | `headword_iast` | str | L1 | headword, normalized to IAST |
-| `old_iast` | str | all | erroneous string, IAST/NFC; inline commentary stripped |
-| `new_iast` | str | all | corrected string, IAST/NFC; inline commentary stripped |
+| `old_iast` | str | all | erroneous string, IAST/NFC for Sanskrit spans; raw source span otherwise |
+| `new_iast` | str | all | corrected string, IAST/NFC for Sanskrit spans; raw source span otherwise |
 | `old_raw` / `new_raw` | str | all | verbatim source cells (audit trail) |
 | `inline_comment` | str | L1 | commentary lifted out of the NEW cell |
 | `edit_ops` | json | derived | alignment trace over NFD chars (§5.4) |
 | `edit_distance` | int | derived | Damerau–Levenshtein over NFD |
+| `edit_space` | enum | derived | `iast` \| `slp1_raw` \| `markup_raw` |
 | `script_old` / `script_new` | enum | derived | `deva` \| `iast` \| `latin` \| `mixed` |
 | `comment_raw` | str | L1 | the form's free-text type comment |
-| `error_type_empirical` | str | derived | normalized empirical cluster label (§6.2) |
+| `error_type_empirical` | str | derived | normalized empirical cluster label (§6.2), diagnostic only |
 | `error_component` | enum | derived | microstructure component (§6.1) — the canon |
 | `errant_type` | str | derived | crosswalk: operation × unit (§6.4) |
 | `ocr_class` / `textcrit_class` | str | derived | crosswalk columns (§6.4) |
 | `corrector` | str | L1/L2/L4 | canonical login (alias-merged) |
-| `corrector_name` | str | derived | real name from `contributors_map.json` |
+| `corrector_name` | str | derived | public name or stable pseudonym; no raw form emails |
 | `latency_days` | int | L1 | submit → "Corrected" (when parseable) |
 | `evidence_level` | enum | — | `observed` \| `derived` \| `inferred` |
+| `attribution_route` | str | derived | route used for location attribution (exact segment, shortcut, fuzzy, unattributed) |
 | `warnings` | str | — | per-row caveats (unparsed cell, no lcode join, …) |
 
 Every generated file uses the observatory/atlas **envelope**: `schemaVersion`,
@@ -216,21 +221,25 @@ text:
 | `crossref` | `<lb>`,link refs | broken cross-reference |
 | `orthography` | body word, no tag | plain spelling typo in body |
 
-When the join fails the component is assigned from the empirical cluster and
-flagged `inferred`.
+When the join fails the released component is `unattributed` and flagged
+`inferred`; the empirical cluster is retained only as a diagnostic feature.
 
 **Phase 3 outcome (2026-06-11).** Implemented in `scripts/attribute_components.py`.
 - **git layer: 26,512 events, 100% positionally derived** — the changed source line
   carries its tags, so the component is read off directly. Distribution: sense 12,988,
   orthography 4,301, markup 3,945, citation 3,234 (PWG's dense `<ls>`), headword 1,002.
-- **form layer: 12.9% derived (3,158), the rest inferred.** Two legacy-data findings
+- **Historical Phase-3 form layer: 12.9% derived (3,158), the rest inferred.**
+  The post-review implementation records attribution routes and leaves weak joins
+  `unattributed`. Two legacy-data findings
   forced the join onto the **headword** rather than the L-code: (a) the cfr "L code"
   cell is free-text (`[L=5590] [p= 1-299]`), and (b) more fundamentally, the 2014-era
   sequential `<L>` ids have **drifted** against today's csl-orig (cfr L=4477 → utkaṇṭhā,
   but current record 4477 = utkalaṃ). The headword is the only stable key; even so, the
   cfr "headword" cell is usually the *old* (mistyped) form, so the join also tries the
   corrected value and first tokens as entry keys.
-- **Overall 58% derived / 42% inferred** across 50,953 events. The low form-layer
+- **Historical Phase-3 overall: 58% derived / 42% inferred** across 50,953 events.
+  Current numbers are regenerated by the pipeline and recorded in
+  `docs/archive/OBS_T_FIX_PLAN_2026-06-12.md`. The low form-layer
   link rate is reported, not hidden: historical correction-form data is only partly
   machine-linkable to current sources because of encoding heterogeneity and id drift —
   a result the paper can state directly. Future work (Phase 3.1): fuzzy/edit-distance
@@ -240,13 +249,14 @@ flagged `inferred`.
 Normalize `comment_raw` (lowercase, strip, collapse the 40+ `typo` variants);
 cluster on `comment + edit_op signature`. Produce a frequency table of emergent
 clusters (`typo`, `capitalization`, `AS-number`, `IAST/diacritic`, `markup`,
-`OCR/print`, `reference`, `variant`, `article-splitting`, …) and a **crosswalk
-table** mapping each empirical cluster → canonical `error_component`.
+`OCR/print`, `reference`, `variant`, `article-splitting`, …). These clusters are
+diagnostic features and baseline covariates, not a fallback source for the
+canonical location label.
 
 ### 6.3 Evidence labels
 `observed` = present in source cell; `derived` = deterministic rule (edit ops,
-component join that succeeded); `inferred` = heuristic (NEW-cell split, component
-fallback). No figure hides the label.
+component join that succeeded); `inferred` = heuristic or failed location join
+kept as `unattributed`. No figure hides the label.
 
 ### 6.4 Crosswalk columns
 Same event also typed under three secondary frames so reviewers from any tradition
@@ -286,8 +296,8 @@ Observable Framework pages under the observatory site:
   (`split ∈ {train,dev,test}` by date thresholds, test = most recent).
 - **Baselines**: (1) error **detection** (old vs new token flag, P/R/F1);
   (2) error **correction** (char-level edit transducer / seq2seq old→new);
-  (3) error-**type classifier** (predict `error_component` from edit-ops —
-  validates the taxonomy is learnable).
+  (3) **location classifier** (predict `error_component` from edit-ops, with an
+  ablation that removes `error_type_empirical`).
 
 ## 10. Phased plan
 
@@ -320,8 +330,8 @@ Observable Framework pages under the observatory site:
 - L1∩L2 dedup false-merges (mitigate: conservative fuzzy key + warning).
 - Component join miss-rate on dicts without clean `<L>` codes in the form era
   (mitigate: edit-op fallback, labeled `inferred`).
-- Privacy: full real names — strip raw emails from public output; keep only the
-  canonical login + real name already public in `contributors_map.json`.
+- Privacy: strip raw form-submit emails from public output; keep public canonical
+  aliases/names where already present and stable pseudonyms otherwise.
 
 ## 13. Related
 

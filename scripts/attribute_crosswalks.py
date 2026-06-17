@@ -69,9 +69,11 @@ _UNIT2TYPE = {'diacritic': 'diacritic', 'case': 'case', 'whitespace': 'spacing',
               'punctuation': 'punctuation', 'digit': 'digit',
               'consonant': 'spelling', 'vowel': 'spelling', 'latin': 'spelling',
               'other': 'spelling'}
+_RAW_UNIT2TYPE = {'whitespace': 'spacing', 'punctuation': 'punctuation',
+                  'digit': 'digit'}
 
 
-def edit_type_of(ops):
+def edit_type_of(ops, edit_space='iast'):
     """Primary edit TYPE from the dominant op/unit (spelling / diacritic / case /
     spacing / punctuation / transposition). The axis the corpus was missing."""
     if not ops:
@@ -81,6 +83,8 @@ def edit_type_of(ops):
     if any(o['unit'] == 'whitespace' for o in ops):
         return 'spacing'
     _op, unit = dominant(ops)
+    if edit_space != 'iast':
+        return _RAW_UNIT2TYPE.get(unit, 'source-raw')
     return _UNIT2TYPE.get(unit, 'spelling')
 
 
@@ -125,21 +129,22 @@ def main():
         ops = json.loads(r['edit_ops']) if r['edit_ops'] else []
         r['errant_type'], r['ocr_class'], r['textcrit_class'] = \
             classify(ops, r['old_iast'], r['new_iast'])
-        r['edit_type'] = edit_type_of(ops)
+        r['edit_type'] = edit_type_of(ops, r.get('edit_space', 'iast') or 'iast')
         for o in ops:
             if o['op'] == 'sub' and len(o['from']) == 1 and len(o['to']) == 1:
                 # layer matters: form ops are over IAST (clean Sanskrit), git ops
                 # are over SLP1 source lines (markup/English noise) — keep separable
-                confusion[(o['from'], o['to'], o['unit'], r['source_layer'])] += 1
+                confusion[(o['from'], o['to'], o['unit'], r['source_layer'],
+                           r.get('edit_space', ''))] += 1
 
     with open(OUT_CSV, 'w', encoding='utf-8', newline='') as f:
         w = csv.DictWriter(f, fieldnames=fields); w.writeheader(); w.writerows(rows)
 
     # confusion matrix (layer-tagged: form = IAST Sanskrit, git = SLP1 source)
     with open(OUT_CONF, 'w', encoding='utf-8', newline='') as f:
-        w = csv.writer(f); w.writerow(['from', 'to', 'unit', 'layer', 'count'])
-        for (a, b, u, lyr), n in sorted(confusion.items(), key=lambda kv: -kv[1]):
-            w.writerow([a, b, u, lyr, n])
+        w = csv.writer(f); w.writerow(['from', 'to', 'unit', 'layer', 'edit_space', 'count'])
+        for (a, b, u, lyr, spc), n in sorted(confusion.items(), key=lambda kv: -kv[1]):
+            w.writerow([a, b, u, lyr, spc, n])
 
     # crosswalk distributions (one tidy table for figures)
     with open(OUT_CROSS, 'w', encoding='utf-8', newline='') as f:
@@ -161,6 +166,8 @@ def main():
             'Event-level label = the dominant (op, unit) of the edit trace.',
             'dittography/haplography detected only for clean single-char in/del.',
             'Confusion matrix counts single-char substitutions over NFD chars.',
+            'edit_space distinguishes IAST Sanskrit spans from raw source/markup '
+            'edits; raw source letters are not labeled as Sanskrit case/spelling.',
         ],
         'warnings': [],
         'stats': {
@@ -169,7 +176,7 @@ def main():
             'errantTop': Counter(r['errant_type'] for r in rows).most_common(15),
             'confusionTopForm': [
                 {'from': a, 'to': b, 'unit': u, 'count': n}
-                for (a, b, u, lyr), n in sorted(confusion.items(), key=lambda kv: -kv[1])
+                for (a, b, u, lyr, spc), n in sorted(confusion.items(), key=lambda kv: -kv[1])
                 if lyr == 'form'][:20],
         },
     }
@@ -181,7 +188,7 @@ def main():
     print(f'wrote {OUT_CROSS}')
     print(f'  ocr: {meta["stats"]["ocr"]}')
     print(f'  textcrit: {meta["stats"]["textcrit"]}')
-    formconf = [(a + "->" + b, n) for (a, b, u, lyr), n in
+    formconf = [(a + "->" + b, n) for (a, b, u, lyr, spc), n in
                 sorted(confusion.items(), key=lambda kv: -kv[1]) if lyr == 'form'][:12]
     print(f'  top FORM (IAST) confusions: {formconf}')
 

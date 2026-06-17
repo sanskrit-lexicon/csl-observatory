@@ -5,6 +5,11 @@
 
 The csl-observatory is the **GitHub/org measurement layer** for the Cologne Digital Sanskrit Lexicon (CDSL) project. We welcome contributions from Sanskritists, software engineers, lexicographers, digital humanists, and historians of linguistics when the work starts from repositories, issues, pull requests, commits, contributors, workflows, or organization-level maintenance evidence.
 
+New contributors should start with
+[`docs/CONTRIBUTOR_ENTRY_PATH.md`](docs/CONTRIBUTOR_ENTRY_PATH.md), which lists
+safe setup steps, first-task areas, taxonomy labels, review expectations, and
+where not to work without maintainer approval.
+
 ## Three ways to contribute
 
 ### 1. Specific open roles
@@ -55,6 +60,15 @@ The line between "contribution" and "co-authorship" is a judgment call by the pr
 2. Discuss in the issue thread
 3. If accepted: implement as a script in `observatory/`, add data files to `data/`, add a page or chart to `observatory/site/src/`
 4. Submit PR; reviewer (M. Gasūns or designated maintainer) merges
+
+### For AI-assisted or automated work
+
+Follow [`docs/AI_CONTRIBUTION_POLICY.md`](docs/AI_CONTRIBUTION_POLICY.md).
+In short: keep AI-assisted work auditable but low-noise. Dictionary repos should
+use ordinary project commit conventions without AI co-author trailers; tooling
+and infrastructure repos may use the existing AI co-author convention. Prefer
+editing existing issue comments over adding new bot comments, and reference an
+issue for changes to shared pipeline code.
 
 ### For observatory-report co-authorship interest
 

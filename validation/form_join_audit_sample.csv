@@ -1,0 +1,76 @@
+event_id,dict,date,attribution_route,evidence_level,error_component,headword_iast,old_iast,new_iast,old_raw,new_raw,comment_raw
+ef8f4bd5c496ec48,wil,2015-01-02,segment_fuzzy,derived,headword,dvijamevaka,dvijamevaka,dvijasevaka,dvijamevaka,dvijasevaka,Typo
+42c6e0bca5f54194,yat,2015-01-16,segment_fuzzy,derived,headword,utsarpyin,utsarpyin,utsarppin,utsarpyin,utsarppin,Typo
+ba213a7975aca33c,wil,2015-01-08,segment_fuzzy,derived,headword,divyadivyā,divyadivyā,divyādivyā,divyadivyA,divyAdivyA,Typo
+90b8b107df81823c,shs,2017-09-12,segment_fuzzy,derived,headword,brāhmta,brāhmta,brāhmya,brAhmta,brAhmya,typo
+032ea88f58297389,ccs,2016-04-05,segment_fuzzy,derived,headword,nantava,na/ntava,na/ntva,na/ntava,na/ntva,typo
+db9ea403c000c04f,ccs,2015-03-18,segment_fuzzy,derived,headword,yanttra,yanttra,yantra,yanttra,yantra,Typo
+fec367c69d3edb9d,gra,2015-01-31,segment_fuzzy,derived,headword,pra,pra,pra -> ṇOṭ A ḥEāḍWOṛḍ under 'arc',pra,pra -> NOT A HEADWORD under 'arc',Markup
+f5da8797ccb522f4,ccs,2016-04-05,segment_fuzzy,derived,headword,ḍāsītva,ḍāsītva,dāsītva,DAsItva,dAsItva,typo
+c4dfca79e4486a2c,ccs,2016-04-07,segment_fuzzy,derived,headword,pakkatā,pakkatā,pakvatā,pakkatA,pakvatA,typo
+0e1a4654c9e9ab02,gra,2015-01-31,segment_fuzzy,derived,headword,vajina,vajina,vājina,vajina,vAjina,Typo
+96de8bdfce911bcd,ap,2016-03-15,segment_fuzzy,derived,headword,garutmata,garutmata,garutmat,garutmata,garutmat,typo   virAma hard to see in print
+b66dbbbae05a2700,wil,2015-01-02,segment_fuzzy,derived,headword,sikatābat,sikatābat,sikatāvat,sikatAbat,sikatAvat,Typo
+ca9a6f1a5d758fb8,ccs,2016-04-05,segment_fuzzy,derived,headword,paktra,paktra,pattra,paktra,pattra,typo
+2f842215c3aa4d3e,ap,2015-01-20,segment_fuzzy,derived,headword,dadnuḥ,dadnuḥ,dadruḥ,dadnuH,dadruH,Typo
+7553dca97b961eb1,pw,2014-09-11,segment_fuzzy,derived,headword,nikṣepacitāmaṇi,nikṣepacitāmaṇi,nikṣepacintāmaṇi,nikSepacitAmaNi,nikSepacintAmaNi,Typo
+4cdd2ff4f1642dc6,pw,2016-01-19,segment_fuzzy,derived,citation,guqāpūpa,", ‹ṣch.›",",ṣch.",", ‹Sch.›",",Sch.",typo
+7312a82c3000d7e5,mw,2018-05-18,segment_fuzzy,derived,headword,jāra,"a paramour of a, married woman",a paramour of a married woman,"a paramour of a, married woman",a paramour of a married woman,Typo
+a6d9e1f06f99c5c8,wil,2014-12-25,segment_fuzzy,derived,headword,vipawgrasta,vipawgrasta,vipadgrasta,vipawgrasta,vipadgrasta,Typo
+ffb35a336c7d4da8,pw,2016-03-16,segment_fuzzy,derived,headword,gardayitru,gardayitru,gardayitnu,gardayitru,gardayitnu,typo   ligatures for 'tn' and 'tr' are similar
+90ab98b1156e9a78,ccs,2016-04-05,segment_fuzzy,derived,headword,harviryajña,harviryajña,haviryajña,harviryajYa,haviryajYa,print error
+071195737803981f,cae,2016-04-13,segment_fuzzy,derived,headword,suseru,suseru,sumeru,suseru,sumeru,"print error   cf mw, pw, ccs, etc"
+de17c2d257332018,bur,2016-06-02,segment_fuzzy,derived,headword,niḥstvana,niḥstvana,niḥsvana,niHstvana,niHsvana,typo stv/sv.
+518503902a436f7e,mw,2018-10-24,segment_fuzzy,derived,sense,sac,to he connected with,to be connected with,"to he connected with (instr.), Pat.  on Pāṇ. 1-4, 51 ;","to be connected with (instr.), Pat.  on Pāṇ. 1-4, 51 ;","Typo: ""he connected"" wrong for ""be connected"""
+edeff5ae6404e815,cae,2014-11-23,segment_fuzzy,derived,headword,padajnā,padajnā,padajñā,padajnA,padajYA,Typo
+9bf0ec42202e14fd,pui,2015-05-03,segment_fuzzy,derived,headword,hamsapādī,hamsapādī,haṃsapādī,hamsapAdI,haMsapAdI,Typo
+f238f71c51ebdd10,pw,2015-11-28,value_headword_unique,derived,headword,sparḍā,ṣPṛ.316],paren change,SPR.316],paren change(s),typo
+3bed64744d55a7f1,ccs,2016-04-07,value_headword_unique,derived,headword,mātrāvfkta,mātrāvfkta,mātrāvftta,mAtrAvfkta,mAtrAvftta,typo
+cef6328d077cc0b8,skd,2016-05-04,value_headword_unique,derived,headword,sOlvakaḥ,sOlvakaḥ,sOlvikaḥ,sOlvakaH,sOlvikaH,"print error  a/i. Presume misprint by conferring mw, vcp, etc."
+2bf6054a0f008d41,ccs,2016-04-05,value_headword_unique,derived,headword,aṣocaniya,aṣocaniya,aṣocanīya,aSocaniya,aSocanIya,typo
+03c241e89baff120,ccs,2016-04-05,value_headword_unique,derived,headword,paktrī,pa/ktrī,pa/tnī,pa/ktrI,pa/tnI,typo
+f8ad9061ce2a5cce,wil,2015-01-02,value_headword_unique,derived,headword,daṣanavāsam,daṣanavāsam,daṣanavāsas,daSanavAsam,daSanavAsas,Typo
+6d90f404c9300ade,skd,2016-05-04,value_headword_unique,derived,headword,tagdośāriḥ,tagdośāriḥ,tvagdośāriḥ,tagdozAriH,tvagdozAriH,"print error   alph. order, cf MW, PW"
+8d4db6251be56ed6,bur,2016-06-02,value_headword_unique,derived,headword,niyuḍa,niyuḍa,niyudḍa,niyuDa,niyudDa,typo  D/dD
+70f777e988957549,wil,2015-01-08,value_headword_unique,derived,headword,ṣasramārja,ṣasramārja,ṣastramārja,SasramArja,SastramArja,Typo
+1122cad2792bd60d,pw,2015-11-28,value_headword_unique,derived,headword,pravartayitar,"Kā7ḍ.5,7) *āūṭO*",paren change,"KA7D.5,7) *AUTO*  ||| Ba7dar.2,2,37.(S.593,",paren change(s),typo
+2783ac2f05287cfa,cae,2016-04-13,value_headword_unique,derived,headword,nāyyācārya,nāyyācārya,nāwyācārya,nAyyAcArya,nAwyAcArya,typo
+e52abe770624c1b0,ccs,2015-03-18,value_headword_unique,derived,headword,padnapurāṛa,padnapurāṛa,padmapurāṛa,padnapurARa,padmapurARa,Typo
+77bf5b31b854b695,ccs,2015-03-18,value_headword_unique,derived,headword,nyanku,nyanku,nyaṇku,nyanku,nyaNku,Typo
+b5641993ee2925b9,pui,2015-05-03,value_headword_unique,derived,headword,candrāmṣu,candrāmṣu,candrāṃṣu,candrAmSu,candrAMSu,Typo
+dd7ae1226b606e6b,pw,2015-11-29,value_headword_unique,derived,headword,Sakvara,ḥāṛṣḥāK4.,paren change,"HARSHAK4.(ED. ‹Bomb.)› ¯383,10. ²2) •f. #{A} {%Gries , Kies.%} ‹Richtig.› #{SarkarA}. *TODO*",paren change(s),typo
+da7fe45ada980247,wil,2015-01-02,value_headword_unique,derived,headword,matibiBrama,matibiBrama,mativiBrama,matibiBrama,mativiBrama,Typo
+b9b9c5aacf39e329,ccs,2016-04-05,value_headword_unique,derived,headword,saddftti,saddftti,sadvftti,saddftti,sadvftti,typo
+7618e1936d76a74f,ccs,2015-03-18,value_headword_unique,derived,headword,āsvyātar,āsvyātar,āKyātar,AsvyAtar,AKyAtar,Typo
+476415674a2fbe5e,ben,2016-05-04,value_headword_unique,derived,headword,vyapadeṛa,vyapadeṛa,vyapadeṣa,vyapadeRa,vyapadeSa,"print error  R/S, by derivation from diS"
+bba28e2ed72c8aad,mw,2014-09-13,value_headword_unique,derived,headword,pakśa,apūryamāṛa,āpūryamāṛa,apUryamARa,ApUryamARa,Scan error
+437408008c57be76,ccs,2016-04-07,value_headword_unique,derived,headword,ciktaKeda,ciktaKeda,cittaKeda,ciktaKeda,cittaKeda,typo
+267be5ed0b0c9363,wil,2015-01-08,value_headword_unique,derived,headword,aparāhla,aparāhla,aparāhṛa,aparAhla,aparAhRa,Typo
+d68cb2847064e25c,pui,2015-05-03,value_headword_unique,derived,headword,mftasamjīvinīvidyā,mftasamjīvinīvidyā,mftasaṃjīvanīvidyā,mftasamjIvinIvidyA,mftasaMjIvanIvidyA,Typo
+2adbe514bec3373c,skd,2014-11-22,value_headword_unique,derived,headword,pūrbbarāgaḥ,pūrbbarāgaḥ,pūrvvarāgaḥ,pUrbbarAgaH,pUrvvarAgaH,Typo
+a4f6a1bcc379e582,cae,2016-04-13,value_headword_unique,derived,headword,aKukiri,aKukiri,āKukiri,aKukiri,AKukiri,typo
+5c2a27551668948e,ben,2016-05-04,value_headword_weak,inferred,unattributed,īṣāna,iç + a10na,i10ç + a10na,iç + a10na,i10ç + a10na,print error
+cffef9c0812b20e6,cae,2016-04-13,value_headword_weak,inferred,unattributed,jaḍana,jaḍana,jaṅana,jaDana,jaGana,typo
+02dd18d3ef88e095,pw,2014-10-12,value_headword_weak,inferred,unattributed,samyak,Adv. »s.u. sampañc.,Adv. »s.u. samyañc.,Adv. »s.u. sampañc.,Adv. »s.u. samyañc.,Typo
+9d63a78d289d6838,cae,2016-04-13,value_headword_weak,inferred,unattributed,Gawa,Gawa,Gawwa,Gawa,Gawwa,typo
+898f9c4e3ad421ca,krm,2016-04-14,value_headword_weak,inferred,unattributed,ssvala,ssvala,sKala,ssvala,sKala,typo similar orthography
+67f4fb09b6eae9a3,ccs,2016-04-05,value_headword_weak,inferred,unattributed,breśa,bre/śa,Bre/śa,bre/za,Bre/za,typo
+be8c3643c391b819,wil,2015-01-08,value_headword_weak,inferred,unattributed,ṣuṣira,ṣuṣira,ṣuśira,SuSira,Suzira,Typo
+5fc9c6400d304848,cae,2016-04-13,value_headword_weak,inferred,unattributed,viṣānti,viṣānti,viṣrānti,viSAnti,viSrAnti,typo
+28c0f0e51a5bf274,wil,2014-12-25,value_headword_weak,inferred,unattributed,jyotlī,jyotlī,jyotsnī,jyotlI,jyotsnI,Typo
+4c0d9034322c9125,pw,2016-01-19,value_headword_weak,inferred,unattributed,paryahna,‹śu Av.› ¯Pṛā7ṭ.,‹śu› ¯āV.Pṛā7ṭ.,‹zu Av.› ¯PRA7T.,‹zu› ¯AV.PRA7T.,typo
+b1f4f9aa72a1267c,mw72,2015-01-25,value_headword_weak,inferred,unattributed,sañjf,sañjf,sañjF,saYjf,saYjF,Typo
+f8e1846890ff7f28,ccs,2016-04-05,value_headword_weak,inferred,unattributed,miṣca,miṣca,miṣna,miSca,miSna,typo  cf. mw
+2536ba12703047b8,ccs,2016-04-07,value_headword_weak,inferred,unattributed,sahasrānirṛij,saha/srānirṛij,saha/sranirṛij,saha/srAnirRij,saha/sranirRij,typo
+0024f3c596857c14,wil,2015-01-08,value_headword_weak,inferred,unattributed,Biw,Biw,Bid,Biw,Bid,Typo
+c3b287212c29fac0,cae,2016-04-13,value_headword_weak,inferred,unattributed,gaBa,gaBa,garBa,gaBa,garBa,print error  'r' missing in print
+a121faf5320dd021,pw,2015-11-27,value_headword_weak,inferred,unattributed,maḍuḍvaja,ý,²,ý,²,typo
+7f9eb0e572c0876b,pw,2015-11-27,value_headword_weak,inferred,unattributed,ṣakavarṛa,ý,²,ý,²,typo
+ce7918d0e415e796,cae,2016-04-13,value_headword_weak,inferred,unattributed,viṣuta,viṣuta,viṣruta,viSuta,viSruta,typo
+065d03dc94b4a110,cae,2016-04-13,value_headword_weak,inferred,unattributed,duṅ,duṅ,duḍ,duG,duD,typo
+19043fe0004e6373,ccs,2016-04-07,value_headword_weak,inferred,unattributed,svādiśwa,svā/diśwa,svā/diśWa,svA/dizwa,svA/dizWa,"print error  mw, ap, etc. have 'W' as superl. of svAdu"
+bf420e229be2e46f,mw,2019-01-01,value_headword_weak,inferred,unattributed,prāk,mfn,"<lex type=""inh"">ind.</lex>",mfn,"<lex type=""inh"">ind.</lex>",markup
+6a30023b4b739c8d,gra,2015-01-31,value_headword_weak,inferred,unattributed,niḍana,niḍana,niḍāna,niDana,niDAna,Typo
+9eed8c1524f20a51,cae,2014-12-02,value_headword_weak,inferred,unattributed,Astrfta,Astrfta,Astfta,Astrfta,Astfta,Typo
+1c0d963b41baff55,ieg,2016-01-22,value_headword_weak,inferred,unattributed,shāh,shāh,ṣāh,shAh,SAh,print error sh-Persian
+b070e363cb05b34e,vcp,2014-11-06,value_headword_weak,inferred,unattributed,prOga,prOga,prauga,prOga,prauga,"Typo,hiatus"

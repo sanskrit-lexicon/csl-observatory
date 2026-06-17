@@ -17,7 +17,7 @@ const adoption = await FileAttachment("data/taxonomy_adoption.csv").csv({typed: 
 ## Issue typology evolution
 
 ```js
-Plot.plot({
+display(Plot.plot({
   width,
   height: 500,
   marginLeft: 60,
@@ -28,7 +28,7 @@ Plot.plot({
     Plot.areaY(typology, {x: "year", y: "count", fill: "type_label", curve: "monotone-x", tip: true}),
     Plot.ruleY([0])
   ]
-})
+}))
 ```
 
 ## Taxonomy adoption & conformance
@@ -59,7 +59,7 @@ const series = adoption.flatMap(d => [
   {year: d.year, requirement: "conformant", pct: d.pct_conformant}
 ]);
 
-Plot.plot({
+display(Plot.plot({
   width,
   height: 380,
   marginRight: 90,
@@ -70,19 +70,23 @@ Plot.plot({
     Plot.line(series, {x: "year", y: "pct", stroke: "requirement", curve: "monotone-x", marker: "circle", tip: true}),
     Plot.ruleY([0])
   ]
-})
+}))
 ```
 
 ## Issue type distribution (all-time, top labels)
 
 ```js
-const labelTotals = d3.flatRollup(issues, v => v.length, d => d.labels.split("|").filter(l => l).join("|") || "(no labels)")
-  .filter(([k]) => k && !k.includes("|"))
-  .map(([label, count]) => ({label, count}))
+const typeLabelSet = new Set(typology.map(d => d.type_label));
+const issueLabels = d => String(d.labels ?? "").split("|").map(label => label.trim()).filter(Boolean);
+const issueTypeRows = issues.flatMap(d => {
+  const labels = issueLabels(d).filter(label => typeLabelSet.has(label));
+  return labels.length ? labels.map(label => ({label})) : [{label: "(unlabeled)"}];
+});
+const labelTotals = Array.from(d3.rollup(issueTypeRows, v => v.length, d => d.label), ([label, count]) => ({label, count}))
   .sort((a, b) => b.count - a.count)
   .slice(0, 20);
 
-Plot.plot({
+display(Plot.plot({
   width,
   height: 500,
   marginLeft: 200,
@@ -92,7 +96,7 @@ Plot.plot({
     Plot.barX(labelTotals, {x: "count", y: "label", fill: "#0075ca", tip: true}),
     Plot.ruleX([0])
   ]
-})
+}))
 ```
 
 ## Open vs closed by repo (top 20 most active)
@@ -108,7 +112,7 @@ const repoStats = d3.flatRollup(issues,
  .sort((a, b) => b.total - a.total)
  .slice(0, 20);
 
-Plot.plot({
+display(Plot.plot({
   width,
   height: 600,
   marginLeft: 140,
@@ -122,7 +126,7 @@ Plot.plot({
     ]), {x: "count", y: "repo", fill: "kind", tip: true}),
     Plot.ruleX([0])
   ]
-})
+}))
 ```
 
 [← back to overview](/)
