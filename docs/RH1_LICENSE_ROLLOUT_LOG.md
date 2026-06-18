@@ -54,18 +54,22 @@ was content-confirmed before any overwrite (the "confirm intent" rule).
 - **`csl-orig`** (source-data aggregate, was a GPL-3.0 stub) → **CC-BY-SA-4.0**
   per MG's data-policy choice, @ `79b29bc5`. Verified.
 
-### ⚠️ Held — MWS and Wil-YAT carry a DIFFERENT, intentional license
+### Batch 4 — MWS / Wil-YAT relicensed CC-BY-NC-SA-3.0+MIT → CC-BY-SA-4.0 ✅ done
 
-Their `LICENSE.md` is a deliberate dual statement:
-**data → CC-BY-NC-SA-3.0** (NonCommercial) and **code → MIT**. Migrating them to
-CC-BY-SA-4.0 would *drop the NonCommercial restriction* — a real relicensing
-decision, not a detection fix. **Not touched; awaiting an explicit MG decision.**
+These carried a deliberate dual license in `LICENSE.md`
+(**data → CC-BY-NC-SA-3.0**, **code → MIT**). On **MG's explicit, informed
+decision (2026-06-18)** to standardize and **drop the NonCommercial
+restriction**, they were migrated to CC-BY-SA-4.0:
+
+| Repo | Add canonical LICENSE | Delete old LICENSE.md | Verified |
+|---|---|---|---|
+| `MWS` | `bca2d700` | `99bc18e7` | CC-BY-SA-4.0, LICENSE.md gone |
+| `Wil-YAT` | `d65414b8` | `2d1cd9a3` | CC-BY-SA-4.0, LICENSE.md gone |
 
 ## Remaining batches — NOT yet executed (need a decision or careful handling)
 
 | Batch | Repos | Why it's held |
 |---|---|---|
-| **MWS, Wil-YAT** | `MWS`, `Wil-YAT` | Intentional **CC-BY-NC-SA-3.0 (data) + MIT (code)**. Decide whether to keep, or migrate to CC-BY-SA-4.0 (drops NonCommercial). |
 | Correction/source data | `CORRECTIONS`, `alternateheadwords`, `literarysource` | MG must decide whether these inherit dictionary-data policy or need correction-data wording. |
 | Mixed data/tooling | `MWinflect`, `mw-dev`, `csl-devanagari`, `csl-json`, `csl-ldev`, `csl-lnum`, `csl-lslink` | Need the dual-statement mechanism (code GPL-3.0 / data CC-BY-SA-4.0) decided + a README/LICENSE note design. |
 | Infrastructure/web/content | `COLOGNE`, `csl-homepage`, `sanskrit-fonts`, `sanskrit-lexicon.github.io` | Special review before any license text change. |
