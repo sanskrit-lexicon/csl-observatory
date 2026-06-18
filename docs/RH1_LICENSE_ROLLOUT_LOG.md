@@ -36,12 +36,36 @@ Only 4 were genuinely unlicensed:
 All four verified showing **CC-BY-SA-4.0**. Already-licensed (skipped): `ACC`,
 `BEN`, `BHS`, `CAE`, `CCS`, `LRV`, `MCI`, `SHS`, `SKD`, `STC`, `VEI`, `WIL`.
 
+### Batch 3 — NOASSERTION resolution (existing LICENSE text confirmed, then replaced) ✅ done
+
+The repo-health audit lumped 20 repos under "NOASSERTION", but a retried live
+check (`scripts/rh1_state.py`) + content inspection
+(`scripts/rh1_inspect_noassertion.py`) showed five distinct situations. Each
+was content-confirmed before any overwrite (the "confirm intent" rule).
+
+- **Already canonical, GitHub already detects them (skipped, 8):** `MW72`,
+  `ApteES`, `BOR`, `BUR`, `INM`, `SCH`, `VCP`, `BOP` — all CC-BY-SA-4.0. (Their
+  full-legalcode text is detected fine; they were never broken.)
+- **CC-BY-SA-4.0 deed only (1 KB summary) → replaced with canonical legalcode:**
+  `AP` @ `8c21eba1`, `DCS` @ `35bf993f`, `FRI` @ `ae62f0d4`, `GRA` @ `b8353d15`,
+  `PWG` @ `beece2f0`, `PWK` @ `b510a055`, `MD` @ `7882ab42`. All verified CC-BY-SA-4.0.
+- **GPL-3.0 stub (739 B notice) → replaced with canonical GPL-3.0:**
+  `csl-pywork` @ `2f445127`, `csl-websanlexicon` @ `5471e0d8`. Verified GPL-3.0.
+- **`csl-orig`** (source-data aggregate, was a GPL-3.0 stub) → **CC-BY-SA-4.0**
+  per MG's data-policy choice, @ `79b29bc5`. Verified.
+
+### ⚠️ Held — MWS and Wil-YAT carry a DIFFERENT, intentional license
+
+Their `LICENSE.md` is a deliberate dual statement:
+**data → CC-BY-NC-SA-3.0** (NonCommercial) and **code → MIT**. Migrating them to
+CC-BY-SA-4.0 would *drop the NonCommercial restriction* — a real relicensing
+decision, not a detection fix. **Not touched; awaiting an explicit MG decision.**
+
 ## Remaining batches — NOT yet executed (need a decision or careful handling)
 
 | Batch | Repos | Why it's held |
 |---|---|---|
-| Code/tooling NOASSERTION | `csl-pywork`, `csl-websanlexicon` | Existing LICENSE text that GitHub can't map. Per policy, replace only after **confirming the current text's intent** — needs a per-repo look + go. |
-| Dictionary-data NOASSERTION | `AP`, `ApteES`, `BOP`, `BOR`, `BUR`, `DCS`, `FRI`, `GRA`, `INM`, `MD`, `MW72`, `MWS`, `PWG`, `PWK`, `SCH`, `VCP`, `Wil-YAT` (+ source `csl-orig`) | Same — existing LICENSE text; confirm intent before replacing with canonical CC-BY-SA-4.0. |
+| **MWS, Wil-YAT** | `MWS`, `Wil-YAT` | Intentional **CC-BY-NC-SA-3.0 (data) + MIT (code)**. Decide whether to keep, or migrate to CC-BY-SA-4.0 (drops NonCommercial). |
 | Correction/source data | `CORRECTIONS`, `alternateheadwords`, `literarysource` | MG must decide whether these inherit dictionary-data policy or need correction-data wording. |
 | Mixed data/tooling | `MWinflect`, `mw-dev`, `csl-devanagari`, `csl-json`, `csl-ldev`, `csl-lnum`, `csl-lslink` | Need the dual-statement mechanism (code GPL-3.0 / data CC-BY-SA-4.0) decided + a README/LICENSE note design. |
 | Infrastructure/web/content | `COLOGNE`, `csl-homepage`, `sanskrit-fonts`, `sanskrit-lexicon.github.io` | Special review before any license text change. |

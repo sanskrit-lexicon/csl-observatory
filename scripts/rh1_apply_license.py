@@ -27,6 +27,7 @@ import base64
 import json
 import subprocess
 import sys
+import time
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
@@ -42,9 +43,20 @@ EXPECTED_SPDX = {
 }
 
 
-def gh_json(args):
-    r = subprocess.run(["gh", "api", *args], capture_output=True, encoding="utf-8")
-    return r.returncode, r.stdout, r.stderr
+def gh_json(args, tries=5):
+    """Run a gh api read with retries. A genuine 404 is terminal; any other
+    failure (TLS timeout, 5xx) is transient and retried — so a flaky network
+    is never mistaken for 'repo not found' / 'no license'."""
+    last = ""
+    for i in range(tries):
+        r = subprocess.run(["gh", "api", *args], capture_output=True, encoding="utf-8")
+        if r.returncode == 0:
+            return 0, r.stdout, ""
+        last = (r.stderr or "").strip()
+        if "Not Found" in last or '"status":"404"' in last:
+            return 1, "", "404"
+        time.sleep(2 * (i + 1))
+    return 2, "", f"TRANSIENT:{last[:120]}"
 
 
 def license_text(key):
@@ -56,6 +68,13 @@ def license_text(key):
 
 def default_branch(repo):
     code, out, _ = gh_json([f"repos/{OWNER}/{repo}", "--jq", ".default_branch"])
+    if code == 0:
+        return out.strip()
+    return None  # caller distinguishes via re-query; message notes 404 vs network
+
+
+def current_spdx(repo):
+    code, out, _ = gh_json([f"repos/{OWNER}/{repo}", "--jq", ".license.spdx_id // \"NONE\""])
     return out.strip() if code == 0 else None
 
 
@@ -71,21 +90,40 @@ def existing_license(repo):
     return has_file, spdx
 
 
-def put_license(repo, branch, text, message):
-    body = json.dumps({
-        "message": message,
-        "content": base64.b64encode(text.encode("utf-8")).decode("ascii"),
-        "branch": branch,
-    })
-    r = subprocess.run(
-        ["gh", "api", "--method", "PUT",
-         f"repos/{OWNER}/{repo}/contents/LICENSE", "--input", "-"],
-        input=body, capture_output=True, encoding="utf-8",
-    )
-    if r.returncode != 0:
-        return None, r.stderr.strip()[:300]
-    sha = json.loads(r.stdout)["commit"]["sha"][:8]
-    return sha, None
+def license_blob_sha(repo, path="LICENSE"):
+    """SHA of an existing file (required to overwrite it via the contents API)."""
+    code, out, _ = gh_json([f"repos/{OWNER}/{repo}/contents/{path}", "--jq", ".sha"])
+    return out.strip() if code == 0 and out.strip() else None
+
+
+def put_license(repo, branch, text, message, sha=None, target_spdx=None, tries=4):
+    """PUT the LICENSE, tolerant of the flaky network. A PUT that times out may
+    still have landed server-side, so after any failure we re-check the live
+    license: if it already equals the target, we treat it as success rather
+    than retrying (which would double-apply or 409 on a stale sha)."""
+    content_b64 = base64.b64encode(text.encode("utf-8")).decode("ascii")
+    last_err = "unknown"
+    for i in range(tries):
+        payload = {"message": message, "content": content_b64, "branch": branch}
+        if sha:
+            payload["sha"] = sha
+        r = subprocess.run(
+            ["gh", "api", "--method", "PUT",
+             f"repos/{OWNER}/{repo}/contents/LICENSE", "--input", "-"],
+            input=json.dumps(payload), capture_output=True, encoding="utf-8",
+        )
+        if r.returncode == 0:
+            return json.loads(r.stdout)["commit"]["sha"][:8], None
+        last_err = (r.stderr or "").strip()[:200]
+        time.sleep(3 * (i + 1))
+        if target_spdx and current_spdx(repo) == target_spdx:
+            return "verified-after-timeout", None
+        # a previous attempt may have moved the blob; refresh the sha before retry
+        if sha:
+            fresh = license_blob_sha(repo, "LICENSE")
+            if fresh:
+                sha = fresh
+    return None, last_err
 
 
 def main():
@@ -93,10 +131,14 @@ def main():
     ap.add_argument("license", choices=sorted(EXPECTED_SPDX), help="license key")
     ap.add_argument("repos", nargs="+", help="repo or repo:branch")
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--replace", action="store_true",
+                    help="overwrite an existing LICENSE with the canonical text "
+                         "(intent already confirmed); default is add-only")
     args = ap.parse_args()
 
     text = license_text(args.license)
-    msg = (f"Add {EXPECTED_SPDX[args.license]} license "
+    verb = "Replace LICENSE with canonical" if args.replace else "Add"
+    msg = (f"{verb} {EXPECTED_SPDX[args.license]} license "
            f"(RH1 license policy, approved 2026-06-17)")
     print(f"License: {args.license} -> {EXPECTED_SPDX[args.license]} "
           f"({len(text)} bytes){'  [DRY-RUN]' if args.dry_run else ''}\n")
@@ -106,20 +148,29 @@ def main():
         repo, _, br = spec.partition(":")
         branch = br or default_branch(repo)
         if not branch:
-            print(f"  {repo:18} ERROR: repo not found / no default branch")
+            print(f"  {repo:18} ERROR: could not resolve default branch "
+                  f"(404 or persistent network failure) — skipped, NOT mutated")
             errored.append(repo)
             continue
         has_file, spdx = existing_license(repo)
-        if has_file or (spdx and spdx != "NOASSERTION"):
+        if not args.replace and (has_file or (spdx and spdx != "NOASSERTION")):
             print(f"  {repo:18} SKIP: already has a license "
                   f"(file={has_file}, spdx={spdx}) — not overwriting")
             skipped.append(repo)
             continue
+        if args.replace and spdx and spdx == EXPECTED_SPDX[args.license]:
+            print(f"  {repo:18} SKIP: already canonical {spdx} — nothing to do")
+            skipped.append(repo)
+            continue
+        blob_sha = license_blob_sha(repo) if (args.replace and has_file) else None
+        action = "would replace" if (args.replace and has_file) else "would add"
         if args.dry_run:
-            print(f"  {repo:18} would add LICENSE on '{branch}'")
+            print(f"  {repo:18} {action} LICENSE on '{branch}'"
+                  + (f" (sha {blob_sha[:8]})" if blob_sha else ""))
             applied.append(repo)
             continue
-        sha, err = put_license(repo, branch, text, msg)
+        sha, err = put_license(repo, branch, text, msg, sha=blob_sha,
+                               target_spdx=EXPECTED_SPDX[args.license])
         if err:
             print(f"  {repo:18} ERROR on '{branch}': {err}")
             errored.append(repo)
