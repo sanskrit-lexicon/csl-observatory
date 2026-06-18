@@ -66,6 +66,25 @@ restriction**, they were migrated to CC-BY-SA-4.0:
 | `MWS` | `bca2d700` | `99bc18e7` | CC-BY-SA-4.0, LICENSE.md gone |
 | `Wil-YAT` | `d65414b8` | `2d1cd9a3` | CC-BY-SA-4.0, LICENSE.md gone |
 
+### Batch 5 — mixed code+data ✅ done
+
+The audit's "mixed" list (7 repos) wasn't uniform; `scripts/rh1_mixed_probe.py`
+(language/byte composition) split it:
+
+- **Pure data (no code detected) → single CC-BY-SA-4.0:** `csl-ldev` @ `06e561d4`,
+  `csl-lnum` @ `3cd2a974`.
+- **Genuinely mixed → dual layout** (MG-approved 2026-06-18): root `LICENSE` =
+  CC-BY-SA-4.0 (GitHub-detected), `licenses/GPL-3.0.txt` = GPL-3.0 for source
+  code, and a README "## License" section explaining the split. Applied to
+  `MWinflect`, `mw-dev`, `csl-devanagari`, `csl-json`, `csl-lslink`
+  (`scripts/rh1_apply_dual.py`). All five verified detecting **CC-BY-SA-4.0**.
+
+**Layout gotcha (fixed):** the first attempt put the code license at root as
+`LICENSE-CODE`, which collides with GitHub's `LICENSE*` detection glob and made
+detection ambiguous (`mw-dev` mis-detected as GPL-3.0). Moving the code license
+into `licenses/` (GitHub only scans the repo root) makes root `LICENSE` =
+CC-BY-SA-4.0 detect cleanly. The stray root `LICENSE-CODE` files were deleted.
+
 ## Remaining batches — NOT yet executed (need a decision or careful handling)
 
 | Batch | Repos | Why it's held |
