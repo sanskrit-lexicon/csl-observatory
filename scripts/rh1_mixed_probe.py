@@ -14,8 +14,9 @@ sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
 
 OWNER = "sanskrit-lexicon"
-REPOS = ["MWinflect", "mw-dev", "csl-devanagari", "csl-json",
-         "csl-ldev", "csl-lnum", "csl-lslink"]
+DEFAULT_REPOS = ["MWinflect", "mw-dev", "csl-devanagari", "csl-json",
+                 "csl-ldev", "csl-lnum", "csl-lslink"]
+REPOS = sys.argv[1:] or DEFAULT_REPOS
 
 
 def gh(path, jq=None, tries=5):

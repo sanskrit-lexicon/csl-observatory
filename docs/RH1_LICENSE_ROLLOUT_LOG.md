@@ -85,13 +85,27 @@ detection ambiguous (`mw-dev` mis-detected as GPL-3.0). Moving the code license
 into `licenses/` (GitHub only scans the repo root) makes root `LICENSE` =
 CC-BY-SA-4.0 detect cleanly. The stray root `LICENSE-CODE` files were deleted.
 
+### Batch 6 — correction/source data → CC-BY-SA-4.0 ✅ done
+
+On MG's decision (2026-06-19) to inherit the dictionary-data policy, all three
+got a single canonical CC-BY-SA-4.0 LICENSE (clean adds — none had a license):
+
+| Repo | Branch | Composition | Result |
+|---|---|---|---|
+| `CORRECTIONS` | master | HTML 99% (correction reports) | LICENSE @ `dae60975` — verified |
+| `alternateheadwords` | master | **Python 99%** (code-heavy) | LICENSE @ `239094cd` — verified |
+| `literarysource` | main | data | LICENSE @ `03027a24` — verified |
+
+Note: `alternateheadwords` is 99% Python by language bytes — if MG would rather
+treat its scripts under GPL-3.0, it can be switched to the dual layout (root
+LICENSE=CC-BY-SA-4.0 + `licenses/GPL-3.0.txt`) like the mixed batch. Left as
+single CC-BY-SA-4.0 per the explicit instruction.
+
 ## Remaining batches — NOT yet executed (need a decision or careful handling)
 
 | Batch | Repos | Why it's held |
 |---|---|---|
-| Correction/source data | `CORRECTIONS`, `alternateheadwords`, `literarysource` | MG must decide whether these inherit dictionary-data policy or need correction-data wording. |
-| Mixed data/tooling | `MWinflect`, `mw-dev`, `csl-devanagari`, `csl-json`, `csl-ldev`, `csl-lnum`, `csl-lslink` | Need the dual-statement mechanism (code GPL-3.0 / data CC-BY-SA-4.0) decided + a README/LICENSE note design. |
-| Infrastructure/web/content | `COLOGNE`, `csl-homepage`, `sanskrit-fonts`, `sanskrit-lexicon.github.io` | Special review before any license text change. |
+| Infrastructure/web/content | `COLOGNE`, `csl-homepage`, `sanskrit-fonts`, `sanskrit-lexicon.github.io` | Special review before any license text change (likely bundle third-party fonts/web assets with their own licenses). |
 | Excluded until RH3 | `santamlegacy`, `temp_corrections_*`, `test_cologne_push` | Excluded from licensing until the archive/retain decision is executed. |
 
 ## Note
