@@ -101,12 +101,37 @@ treat its scripts under GPL-3.0, it can be switched to the dual layout (root
 LICENSE=CC-BY-SA-4.0 + `licenses/GPL-3.0.txt`) like the mixed batch. Left as
 single CC-BY-SA-4.0 per the explicit instruction.
 
+### Batch 7 — infrastructure/web (special review) ✅ done
+
+Probed each for third-party content (`scripts/rh1_infra_probe.py`) before acting;
+MG decided per repo (2026-06-19):
+
+| Repo | Decision | Result |
+|---|---|---|
+| `sanskrit-lexicon.github.io` | CC-BY-SA-4.0 (org's own published site) | LICENSE @ `a89e5383` — verified |
+| `COLOGNE` | canonical GPL-3.0 (replaces the 739 B GPL stub; it's site tooling) | LICENSE @ `fe4ece21` — verified GPL-3.0 |
+| `sanskrit-fonts` | CC-BY-SA-4.0 **+ third-party NOTICE** | LICENSE @ `70795d49`, NOTICE @ `e46c878f` |
+| `csl-homepage` | dual (CC-BY-SA-4.0 + `licenses/GPL-3.0.txt`) **+ NOTICE** | LICENSE @ `76b60ebc`, code @ `dc4fe8c6`, README @ `14e2367b`, NOTICE @ `4f8f2062` — verified CC-BY-SA-4.0 |
+
+**Third-party NOTICEs** were added (`scripts/rh1_put_file.py`) so the repo
+licenses don't misstate rights over assets the org doesn't own:
+- `sanskrit-fonts/NOTICE` — `siddhanta.ttf` is Mihail Bayaryn's font under its
+  own terms; the repo LICENSE covers only the repo's own files.
+- `csl-homepage/NOTICE` — the Cologne University seal and CLARIN logo are
+  third-party marks, not covered by the repo licenses.
+
 ## Remaining batches — NOT yet executed (need a decision or careful handling)
 
 | Batch | Repos | Why it's held |
 |---|---|---|
-| Infrastructure/web/content | `COLOGNE`, `csl-homepage`, `sanskrit-fonts`, `sanskrit-lexicon.github.io` | Special review before any license text change (likely bundle third-party fonts/web assets with their own licenses). |
-| Excluded until RH3 | `santamlegacy`, `temp_corrections_*`, `test_cologne_push` | Excluded from licensing until the archive/retain decision is executed. |
+| Excluded until RH3 | `santamlegacy`, `temp_corrections_*`, `test_cologne_push` | Excluded from licensing until the archive/retain (RH3) decision is executed. |
+
+## RH1 rollout — complete except the RH3-excluded repos
+
+Every org repo that was missing a recognized license, or carried an
+unmappable/placeholder one, now has an SPDX-detected license (or, for
+third-party assets, an explicit NOTICE). The only repos still unlicensed are the
+six RH3 archive/temp candidates, intentionally excluded until that decision runs.
 
 ## Note
 

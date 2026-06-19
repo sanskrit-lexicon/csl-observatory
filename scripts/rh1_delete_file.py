@@ -73,10 +73,12 @@ def main():
     args = ap.parse_args()
 
     msg = f"Remove superseded {args.path} (RH1: canonical LICENSE now present)"
+    errored = []
     for repo in args.repos:
         branch = default_branch(repo)
         if not branch:
             print(f"  {repo:14} ERROR: could not resolve branch (404/network) — skipped")
+            errored.append(repo)
             continue
         sha = file_meta(repo, args.path)
         if sha is None:
@@ -88,8 +90,11 @@ def main():
         out, err = delete_file(repo, args.path, sha, branch, msg)
         if err:
             print(f"  {repo:14} ERROR: {err}")
+            errored.append(repo)
         else:
             print(f"  {repo:14} OK  {args.path} deleted on '{branch}' @ {out}")
+    if errored:
+        sys.exit(1)
 
 
 if __name__ == "__main__":

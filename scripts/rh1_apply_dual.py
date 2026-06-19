@@ -2,9 +2,9 @@
 """Apply the RH1 dual-license layout to a 'mixed code+data' repo.
 
 Layout (approved by MG 2026-06-18):
-  LICENSE        = CC-BY-SA-4.0  (canonical text; GitHub detects this)
-  LICENSE-CODE   = GPL-3.0       (canonical text; covers the source code)
-  README.md      = a "## License" section explaining the split (appended once)
+  LICENSE              = CC-BY-SA-4.0  (canonical text; GitHub detects this)
+  licenses/GPL-3.0.txt = GPL-3.0       (canonical text; covers the source code)
+  README.md            = a "## License" section explaining the split (appended once)
 
 Network-resilient (retries reads; rechecks live state after a failed write so a
 timed-out PUT can't double-apply). Idempotent: skips a step already in place.
@@ -191,12 +191,15 @@ def main():
     args = ap.parse_args()
     CC = license_text("cc-by-sa-4.0")
     GPL = license_text("gpl-3.0")
-    print(f"Dual layout: LICENSE=CC-BY-SA-4.0 + LICENSE-CODE=GPL-3.0 + README note"
+    print(f"Dual layout: LICENSE=CC-BY-SA-4.0 + {CODE_LICENSE_PATH}=GPL-3.0 + README note"
           f"{'  [DRY-RUN]' if args.dry_run else ''}\n")
+    ok_all = True
     for spec in args.repos:
         repo, _, br = spec.partition(":")
-        do_repo(repo, args.dry_run, branch=br or None)
+        ok_all = do_repo(repo, args.dry_run, branch=br or None) and ok_all
         print()
+    if not ok_all:
+        sys.exit(1)
 
 
 if __name__ == "__main__":
