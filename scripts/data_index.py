@@ -128,6 +128,12 @@ CATALOG: dict[str, Entry] = {
         "Slim issue and pull-request snapshot used by issue and taxonomy dashboards.",
         "Labels are pipe-separated and may combine type, severity, workflow, and legacy labels.",
     ),
+    "manifest.json": Entry(
+        "github snapshot",
+        "observatory/transform.py",
+        "Snapshot manifest with data row counts and the current observatory snapshot date.",
+        "Counts describe the committed transformed files; rerun the refresh pipeline before citing newer live GitHub state.",
+    ),
     "obs_q_annual.csv": Entry(
         "correction sustainability",
         "scripts/obs_q_correction.py",
