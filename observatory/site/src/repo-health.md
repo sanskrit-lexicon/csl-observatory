@@ -34,7 +34,7 @@ const cleanupRepos = health.filter(d => hasFlag(d, "cleanup-candidate"));
 
 ## Licensing
 
-More than half the ecosystem carries no license, leaving reuse rights legally undefined. A further block has a LICENSE file GitHub cannot map to an SPDX id (`NOASSERTION`) — usually a non-standard or lightly-edited text worth normalising.
+After the RH1 license rollout (2026-06), almost every repository carries a recognised SPDX license: code/tooling under GPL-3.0, dictionary and data repositories under CC-BY-SA-4.0, with mixed repos split (data CC-BY-SA-4.0 + `licenses/GPL-3.0.txt`). The `NOASSERTION` block is cleared. The only repositories still without a license are the RH3 archive/temp candidates, intentionally excluded until that cleanup runs.
 
 ```js
 const licOrder = [
@@ -60,9 +60,10 @@ Plot.plot({
 
 ## License decision queue
 
-The dashboard separates the backlog into the same buckets as the maintainer
-decision packet. License changes remain blocked until RH1 is approved; this
-table is a queue, not authorization to mutate external repositories.
+The dashboard separates licensing into the same buckets as the maintainer
+decision packet. **RH1 is complete (2026-06)** — the no-license and `NOASSERTION`
+backlogs are cleared except the RH3-excluded archive/temp repos. See
+[`docs/RH1_LICENSE_ROLLOUT_LOG.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/RH1_LICENSE_ROLLOUT_LOG.md).
 
 ```js
 const issueUrl = n => `https://github.com/sanskrit-lexicon/csl-observatory/issues/${n}`;
@@ -73,17 +74,17 @@ const licenseQueues = [
     bucket: "No license",
     count: noLicense,
     issue: 15,
-    decision: "RH1 license matrix",
-    status: "blocked on maintainer/org license policy",
-    action: "Classify data vs code, then batch approved license text."
+    decision: "RH1 complete",
+    status: "done — remaining are RH3 archive/temp repos (excluded by design)",
+    action: "License after the archive/retain (RH3) decision runs."
   },
   {
     bucket: "NOASSERTION",
     count: unrecognised,
     issue: 16,
-    decision: "RH1 license matrix",
-    status: "blocked on confirming existing license intent",
-    action: "Replace non-standard text with canonical SPDX only after approval."
+    decision: "RH1 complete",
+    status: "cleared — all normalised to canonical SPDX text",
+    action: "None."
   },
   {
     bucket: "Recognised SPDX",
