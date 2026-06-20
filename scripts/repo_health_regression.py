@@ -34,13 +34,12 @@ REPOS_CSV = DATA / "repos.csv"
 HEALTH_CSV = DATA / "repo_health.csv"
 REPORT_MD = ROOT / "reports" / "repo_health.md"
 
+# After the RH3 archiving (2026-06-19), 4 of the 6 cleanup candidates are
+# archived and so no longer carry the `cleanup-candidate` flag. Only the two
+# still-live repos (open issues pending funderburkjim) remain candidates.
 EXPECTED_CLEANUP_CANDIDATES = {
-    "santamlegacy",
-    "temp_corrections_acc",
-    "temp_corrections_ae",
     "temp_corrections_ap90",
     "temp_corrections_mw",
-    "test_cologne_push",
 }
 
 REPOS_FIELDS = [
