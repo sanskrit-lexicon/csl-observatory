@@ -77,10 +77,10 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install Observable Framework
+      - name: Install site dependencies
         run: |
           cd observatory/site
-          npm install
+          npm ci
 
       - name: Copy data into site
         run: |
@@ -98,6 +98,20 @@ jobs:
           python scripts/velocity_timeline.py
           python scripts/contributor_identity.py
 
+      - name: Commit data refresh
+        run: |
+          git config user.name "csl-observatory-bot"
+          git config user.email "actions@github.com"
+          # Commit the transformed CSVs, the copied site data, and the
+          # regenerated finding reports/CSVs. Raw JSONL snapshots are gitignored.
+          git add data/ observatory/site/src/data/ reports/
+          if git diff --staged --quiet; then
+            echo "No data/report changes to commit."
+          else
+            git commit -m "data: monthly refresh ($(date -u +%Y-%m-%d))"
+            git push
+          fi
+
       - name: Build site
         run: |
           cd observatory/site
@@ -107,16 +121,6 @@ jobs:
         uses: actions/upload-pages-artifact@v5
         with:
           path: observatory/site/dist
-
-      - name: Commit data refresh
-        run: |
-          git config user.name "csl-observatory-bot"
-          git config user.email "actions@github.com"
-          # Commit the transformed CSVs, the copied site data, and the
-          # regenerated finding reports/CSVs. Raw JSONL snapshots are gitignored.
-          git add data/ observatory/site/src/data/ reports/ || true
-          git diff --quiet && git diff --staged --quiet || git commit -m "data: monthly refresh ($(date -u +%Y-%m-%d))"
-          git push || true
 
   deploy:
     needs: fetch-and-build

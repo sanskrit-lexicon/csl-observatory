@@ -2,6 +2,24 @@
 
 All notable changes to this repository are documented here, following [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Fixed
+- Dependabot auto-merge now validates PRs before merge, leaves semver-major
+  updates for human review, and no longer falls back to a blind direct merge.
+- Observatory refresh now uses `npm ci`, commits refreshed data/report artifacts
+  before Pages deployment, and fails loudly if `git push` fails.
+- GitHub snapshot fetching now passes the requested `--since` date into commit
+  collection and records attempted, skipped, and failed repos in the manifest.
+- Refresh coverage now rejects snapshots where attempted repos would silently
+  disappear from `repos.csv`.
+- Contributor identity refresh now reads the current generated repo inventory
+  from `data/repos.csv` instead of a stale hardcoded list.
+- The public data catalog now includes `manifest.json`, restoring
+  `scripts/data_index.py --check`.
+- RH1 helper scripts now exit nonzero on partial batch failures and use the
+  final `licenses/GPL-3.0.txt` dual-license wording.
+
 ## [1.0.0] - 2026-06-13
 
 ### Fixed
@@ -43,5 +61,6 @@ sanskrit-lexicon organisation plus the OBS-T error-typology language resource.
   dictionary-content research moved to `csl-atlas` (see `docs/BOUNDARY_RULES.md`).
 - Citation DOI is pending a Zenodo mint; contributor ORCIDs are not yet registered.
 
-[Unreleased]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v0.1.0...v1.0.0
 [0.1.0]: https://github.com/sanskrit-lexicon/csl-observatory/releases/tag/v0.1.0

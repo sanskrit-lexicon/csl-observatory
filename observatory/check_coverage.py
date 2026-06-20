@@ -21,7 +21,7 @@ repo returning zero commits is an unambiguous regression); smaller empty
 repos are reported as warnings, never failing the build.
 
 Exit codes: 0 = ok (or only sub-threshold gaps, warned), 1 = a large repo
-came back empty, 2 = no snapshot to check.
+came back empty or an attempted repo is missing, 2 = no snapshot to check.
 
 Usage:
     python observatory/check_coverage.py                 # current month
@@ -52,6 +52,17 @@ def count_commits(commits_dir, repo):
         return sum(1 for line in fh if line.strip())
 
 
+def load_manifest(snap):
+    path = snap / "manifest.json"
+    if not path.exists():
+        return {}
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        print(f"::warning::commit-coverage: invalid snapshot manifest at {path}")
+        return {}
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--snapshot", default=datetime.now(timezone.utc).strftime("%Y-%m"),
@@ -67,7 +78,23 @@ def main():
         print(f"ERROR: no metadata snapshot at {meta_dir}", file=sys.stderr)
         return 2
 
+    manifest = load_manifest(snap)
+    attempted = manifest.get("repo_names_attempted") or []
+    if attempted and not isinstance(attempted, list):
+        attempted = []
+    recorded_failed = manifest.get("repo_failures") or manifest.get("repos_failed") or []
+    if recorded_failed:
+        print("::error::commit-coverage: fetch manifest records failed repo(s); "
+              "refusing to transform a partial snapshot.")
+        for item in recorded_failed:
+            if isinstance(item, dict):
+                print(f"  - {item.get('repo')}: {item.get('reason', 'unknown')}")
+            else:
+                print(f"  - {item}")
+        return 1
+
     failures, warnings = [], []
+    metadata_repos = set()
     for meta_file in sorted(meta_dir.glob("*.jsonl")):
         lines = meta_file.read_text(encoding="utf-8").splitlines()
         if not lines:
@@ -77,6 +104,7 @@ def main():
         except json.JSONDecodeError:
             continue
         repo = meta.get("name") or meta_file.stem
+        metadata_repos.add(repo)
         if repo in SKIP or meta.get("archived"):
             continue
         size_kb = meta.get("size") or 0  # GitHub reports repo size in KB
@@ -85,6 +113,14 @@ def main():
             captured = "no commits file" if n is None else "0 commits"
             entry = f"{repo} (size {size_kb:,} KB, {captured})"
             (failures if size_kb >= args.min_size_kb else warnings).append(entry)
+
+    missing_metadata = sorted(repo for repo in attempted if repo not in metadata_repos)
+    if missing_metadata:
+        print("::error::commit-coverage: attempted repo(s) are missing metadata "
+              "and would disappear from repos.csv.")
+        for repo in missing_metadata:
+            print(f"  - {repo}")
+        return 1
 
     for w in warnings:
         print(f"::warning::commit-coverage: small repo returned no commits — {w}")

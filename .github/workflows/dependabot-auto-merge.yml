@@ -1,23 +1,51 @@
 name: Dependabot auto-merge
 
-# Hands-off merge of Dependabot pull requests. When all required checks pass
-# GitHub merges the PR by itself; on repos with no required checks the PR is
-# squash-merged directly. To hold back major bumps for human review, gate the
-# Approve + Enable steps on:
-#   steps.meta.outputs.update-type != 'version-update:semver-major'
+# Hands-off merge of non-major Dependabot pull requests after this workflow's
+# validation job passes. Major bumps are intentionally left for human review.
 # Deployed by /cologne-dependabot-automerge-all.
 
 on: pull_request
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
 
 jobs:
+  validate:
+    name: Validate Dependabot PR
+    runs-on: ubuntu-latest
+    if: ${{ github.actor == 'dependabot[bot]' }}
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Compile Python
+        run: python -m compileall -q scripts observatory
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '20'
+
+      - name: Install site dependencies
+        working-directory: observatory/site
+        run: npm ci
+
+      - name: Build site
+        working-directory: observatory/site
+        run: npm run build
+
   dependabot:
     name: Auto-merge Dependabot PRs
     runs-on: ubuntu-latest
+    needs: validate
     if: ${{ github.actor == 'dependabot[bot]' }}
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - name: Fetch Dependabot metadata
         id: meta
@@ -26,13 +54,19 @@ jobs:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
 
       - name: Approve the PR
+        if: ${{ steps.meta.outputs.update-type != 'version-update:semver-major' }}
         run: gh pr review --approve "$PR_URL" || true
         env:
           PR_URL: ${{ github.event.pull_request.html_url }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Enable auto-merge (falls back to a direct squash-merge where no required checks exist)
-        run: gh pr merge --auto --squash "$PR_URL" || gh pr merge --squash "$PR_URL"
+      - name: Enable auto-merge
+        if: ${{ steps.meta.outputs.update-type != 'version-update:semver-major' }}
+        run: gh pr merge --auto --squash "$PR_URL"
         env:
           PR_URL: ${{ github.event.pull_request.html_url }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Hold major update for review
+        if: ${{ steps.meta.outputs.update-type == 'version-update:semver-major' }}
+        run: echo "Semver-major Dependabot update held for human review."

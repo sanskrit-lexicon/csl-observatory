@@ -2,10 +2,16 @@
 
 Date: 2026-06-13 (RH1 + RH3 approved 2026-06-17)
 Status: **RH1 license policy and RH3 archive list APPROVED by MG on 2026-06-17.**
-The decisions below are now policy. No external repository mutation has yet been
-made — the gated rollout (tracking issues, LICENSE text per group, archiving on
-GitHub) runs only on an explicit "go", and ap90/mw archiving is blocked on their
-open-issue migration.
+**RH1 rollout COMPLETE (2026-06-19)** except the RH3-excluded repos — see
+`docs/RH1_LICENSE_ROLLOUT_LOG.md` (~36 repos licensed across 7 batches).
+**RH3 archiving STARTED 2026-06-19**: `santamlegacy`, `temp_corrections_acc`,
+`temp_corrections_ae`, `test_cologne_push` are **archived** (verified, via
+`scripts/rh3_archive.py`). `temp_corrections_ap90` and `temp_corrections_mw`
+remain **NOT archived** — each has one open, *active* scholarly-question issue
+(ap90 #2 is a 25-comment thread authored by funderburkjim). **MG decision
+(2026-06-19): left for funderburkjim** — as the thread author and lead
+maintainer he migrates/closes the issues, after which these two can be archived
+(`scripts/rh3_archive.py` blocks on open issues, so just re-run it once clear).
 
 This packet prepares the first maintainer decisions from the one-year roadmap:
 

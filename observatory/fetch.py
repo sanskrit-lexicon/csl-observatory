@@ -30,7 +30,7 @@ sys.stderr.reconfigure(encoding='utf-8')
 
 ORG = "sanskrit-lexicon"
 
-# All 63 repos (35 dictionary + 28 tooling)
+# Configured observatory repo inventory.
 DICTIONARY_REPOS = [
     "PWG", "PWK", "MWS", "MD", "AP", "AP90", "GRA", "FRI",
     "SCH", "DCS", "VCP", "ApteES", "SKD", "MCI", "CORRECTIONS", "WIL",
@@ -85,7 +85,7 @@ def gh(*args, timeout=120):
         return "", False, str(e)
 
 def fetch_paginated(endpoint, repo, jq_filter=None):
-    """Fetch a paginated endpoint, return all items."""
+    """Fetch a paginated endpoint, return (all items, success)."""
     items = []
     page = 1
     while True:
@@ -99,7 +99,7 @@ def fetch_paginated(endpoint, repo, jq_filter=None):
                 time.sleep(60)
                 continue
             log(f"  ERROR fetching {endpoint} page {page}: {err[:100]}")
-            break
+            return items, False
         try:
             page_items = json.loads(out)
             if not isinstance(page_items, list) or len(page_items) == 0:
@@ -110,8 +110,8 @@ def fetch_paginated(endpoint, repo, jq_filter=None):
             page += 1
         except json.JSONDecodeError as e:
             log(f"  JSON error on page {page}: {e}")
-            break
-    return items
+            return items, False
+    return items, True
 
 def save_jsonl(topic, repo, items):
     """Save items as JSONL to snapshots/YYYY-MM/<topic>/<repo>.jsonl."""
@@ -203,7 +203,7 @@ def slim_commit(c):
     }
 
 def fetch_repo_commits_since(repo, since="2014-01-01"):
-    """Fetch commits since a date."""
+    """Fetch commits since a date, returning (items, success)."""
     items = []
     page = 1
     while True:
@@ -215,9 +215,9 @@ def fetch_repo_commits_since(repo, since="2014-01-01"):
                 time.sleep(60)
                 continue
             if "409" in err:  # empty repo
-                break
+                return items, True
             log(f"  commits err p{page}: {err[:100]}")
-            break
+            return items, False
         try:
             page_items = json.loads(out)
             if not isinstance(page_items, list) or len(page_items) == 0:
@@ -226,12 +226,13 @@ def fetch_repo_commits_since(repo, since="2014-01-01"):
             if len(page_items) < 100:
                 break
             page += 1
-        except:
-            break
-    return items
+        except json.JSONDecodeError as e:
+            log(f"  commits JSON error on page {page}: {e}")
+            return items, False
+    return items, True
 
-def process_repo(repo, idx, total):
-    """Fetch all data for one repo."""
+def process_repo(repo, idx, total, since):
+    """Fetch all data for one repo. Returns (success, reason)."""
     log(f"[{idx}/{total}] {repo}")
 
     # Metadata
@@ -239,6 +240,8 @@ def process_repo(repo, idx, total):
     if meta:
         save_jsonl("metadata", repo, [meta])
     log(f"  metadata: {'✓' if meta else '✗'}")
+    if not meta:
+        return False, "metadata fetch failed"
 
     # Languages
     langs = fetch_repo_languages(repo)
@@ -256,10 +259,13 @@ def process_repo(repo, idx, total):
     log(f"  releases: {len(rels)}")
 
     # Issues + PRs (both come from /issues endpoint)
-    if not meta or meta.get("has_issues") is False:
+    if meta.get("has_issues") is False:
         log(f"  issues: skipped (has_issues=false)")
+        save_jsonl("issues", repo, [])
     else:
-        issues_raw = fetch_paginated("issues", repo)
+        issues_raw, ok = fetch_paginated("issues", repo)
+        if not ok:
+            return False, "issues fetch failed"
         slimmed = [slim_issue(i) for i in issues_raw]
         save_jsonl("issues", repo, slimmed)
         n_issues = sum(1 for s in slimmed if not s["is_pr"])
@@ -267,12 +273,14 @@ def process_repo(repo, idx, total):
         log(f"  issues: {n_issues} issues + {n_prs} PRs = {len(slimmed)} total")
 
     # Commits
-    commits_raw = fetch_repo_commits_since(repo)
+    commits_raw, ok = fetch_repo_commits_since(repo, since)
+    if not ok:
+        return False, "commits fetch failed"
     slim_commits = [slim_commit(c) for c in commits_raw]
     save_jsonl("commits", repo, slim_commits)
     log(f"  commits: {len(slim_commits)}")
 
-    return True
+    return True, ""
 
 def main():
     parser = argparse.ArgumentParser()
@@ -283,7 +291,7 @@ def main():
     args = parser.parse_args()
 
     if args.repos:
-        repos = args.repos.split(",")
+        repos = [repo.strip() for repo in args.repos.split(",") if repo.strip()]
     else:
         repos = ALL_REPOS
 
@@ -302,6 +310,7 @@ def main():
 
     success = 0
     failed = []
+    skipped = []
     start = time.time()
 
     for i, repo in enumerate(repos, 1):
@@ -312,14 +321,19 @@ def main():
             if issues_file.exists() and commits_file.exists():
                 log(f"[{i}/{len(repos)}] {repo} — SKIP (exists)")
                 success += 1
+                skipped.append(repo)
                 continue
 
         try:
-            if process_repo(repo, i, len(repos)):
+            ok, reason = process_repo(repo, i, len(repos), args.since)
+            if ok:
                 success += 1
+            else:
+                log(f"  FAILED: {reason}")
+                failed.append({"repo": repo, "reason": reason})
         except Exception as e:
             log(f"  ERROR: {e}")
-            failed.append(repo)
+            failed.append({"repo": repo, "reason": str(e)})
 
         # Brief pause every 10 repos to spread API load
         if i % 10 == 0:
@@ -330,7 +344,7 @@ def main():
     log(f"\n" + "=" * 60)
     log(f"COMPLETE: {success}/{len(repos)} repos in {elapsed:.0f}s")
     if failed:
-        log(f"Failed: {', '.join(failed)}")
+        log(f"Failed: {', '.join(f['repo'] for f in failed)}")
     log(f"=" * 60)
 
     # Final rate limit
@@ -343,14 +357,19 @@ def main():
         "snapshot_date": SNAPSHOT_DATE,
         "fetched_at": datetime.now(timezone.utc).isoformat(),
         "repos_attempted": len(repos),
+        "repo_names_attempted": repos,
         "repos_succeeded": success,
-        "repos_failed": failed,
+        "repos_skipped": skipped,
+        "repos_failed": [f["repo"] for f in failed],
+        "repo_failures": failed,
         "since": args.since,
         "duration_seconds": int(elapsed)
     }
     with open(SNAPSHOT_DIR / "manifest.json", "w", encoding="utf-8") as f:
         json.dump(manifest, f, indent=2)
     log(f"Manifest: {SNAPSHOT_DIR / 'manifest.json'}")
+    if failed:
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()
