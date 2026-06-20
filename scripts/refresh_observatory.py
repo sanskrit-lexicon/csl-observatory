@@ -172,6 +172,11 @@ def run_pipeline(args: argparse.Namespace) -> int:
         for phase in phases:
             print(f"- {phase.name}: {command_display(phase)}")
         return 0
+    manifest_path = args.manifest
+    summary_path = args.summary
+    if not args.check_only:
+        manifest_path = manifest_path or DEFAULT_MANIFEST
+        summary_path = summary_path or DEFAULT_SUMMARY
 
     manifest: dict[str, object] = {
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
@@ -209,10 +214,12 @@ def run_pipeline(args: argparse.Namespace) -> int:
 
     manifest["status"] = overall_status
     manifest["git_status_after"] = git_status()
-    write_manifest(args.manifest, manifest)
-    write_summary(args.summary, manifest)
-    print(f"manifest: {args.manifest}")
-    print(f"summary: {args.summary}")
+    if manifest_path is not None:
+        write_manifest(manifest_path, manifest)
+        print(f"manifest: {manifest_path}")
+    if summary_path is not None:
+        write_summary(summary_path, manifest)
+        print(f"summary: {summary_path}")
     if overall_status == "failed" and args.check_only:
         print(
             "note: --check-only validates committed artifacts without rebuilding "
@@ -234,8 +241,18 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     parser.add_argument("--phase", action="append", help="Run only a named phase; repeatable")
     parser.add_argument("--stop-after", help="Stop after the named selected phase")
     parser.add_argument("--list-phases", action="store_true", help="Print phase names and exit")
-    parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST, help="JSON manifest output path")
-    parser.add_argument("--summary", type=Path, default=DEFAULT_SUMMARY, help="Markdown summary output path")
+    parser.add_argument(
+        "--manifest",
+        type=Path,
+        default=None,
+        help="JSON manifest output path; defaults to reports/refresh_observatory_manifest.json in refresh mode only",
+    )
+    parser.add_argument(
+        "--summary",
+        type=Path,
+        default=None,
+        help="Markdown summary output path; defaults to reports/refresh_observatory_summary.md in refresh mode only",
+    )
     return parser.parse_args(argv)
 
 
