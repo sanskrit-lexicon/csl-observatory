@@ -7,8 +7,11 @@ Status: **RH1 license policy and RH3 archive list APPROVED by MG on 2026-06-17.*
 **RH3 archiving STARTED 2026-06-19**: `santamlegacy`, `temp_corrections_acc`,
 `temp_corrections_ae`, `test_cologne_push` are **archived** (verified, via
 `scripts/rh3_archive.py`). `temp_corrections_ap90` and `temp_corrections_mw`
-remain **NOT archived** — each has one open scholarly-question issue that must
-be migrated or closed first (the archive tool blocks on open issues by design).
+remain **NOT archived** — each has one open, *active* scholarly-question issue
+(ap90 #2 is a 25-comment thread authored by funderburkjim). **MG decision
+(2026-06-19): left for funderburkjim** — as the thread author and lead
+maintainer he migrates/closes the issues, after which these two can be archived
+(`scripts/rh3_archive.py` blocks on open issues, so just re-run it once clear).
 
 This packet prepares the first maintainer decisions from the one-year roadmap:
 
