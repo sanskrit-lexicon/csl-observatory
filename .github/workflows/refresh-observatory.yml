@@ -98,6 +98,12 @@ jobs:
           python scripts/velocity_timeline.py
           python scripts/contributor_identity.py
 
+      - name: Regenerate data catalog
+        run: python scripts/data_index.py
+
+      - name: Validate data catalog
+        run: python scripts/data_index.py --check
+
       - name: Commit data refresh
         run: |
           git config user.name "csl-observatory-bot"
