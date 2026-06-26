@@ -16,15 +16,15 @@ and the generated findings
 Process companion to the correction-sustainability finding OBS-Q
 ([`reports/obs_q_correction_sustainability.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_q_correction_sustainability.md));
 lexicographic-structure companion to the* csl-atlas *microstructure papers. All counts
-are the 2026-06-12 snapshot and reproducible from committed data and stdlib-only
+are the released 52,498-event snapshot and reproducible from committed data and stdlib-only
 scripts. Author: M. Gasūns and the CDSL community (byline to finalise).*
 
 ---
 
 ## Abstract
 
-We present a twelve-year, **50,953-event** corpus of corrections to the Cologne Digital
-Sanskrit Lexicon (CDSL — 43 dictionaries, 210 named correctors, 2014–2026) and a
+We present a twelve-year, **52,498-event** corpus of corrections to the Cologne Digital
+Sanskrit Lexicon (CDSL — 43 dictionaries, 208 named correctors, 2014–2026) and a
 **two-axis typology** of the errors those corrections repair. Unifying a 2014–2019
 correction-form archive with the 2019–2026 source git history, we normalise every edit
 to IAST — which requires resolving the form archive's mixed Devanagari/Harvard-Kyoto
@@ -34,14 +34,14 @@ recovered by joining the edit to the XML-tagged source, and its **edit-type** (s
 punctuation, spacing, diacritic, …), read from a character-level edit-operation trace.
 The two axes are genuinely orthogonal: a location-join and an edit-type heuristic that a
 naïve single-axis design conflated agree only 0.1 % of the time, a near-zero we show to
-be structural, not noise. Three results follow. **(H1)** Corrections concentrate in the
-**meaning-bearing fields** — sense 53 %, headword 22 % of located edits — yet are
-**overwhelmingly small surface fixes**, not content rewrites: median edit distance 2,
-two-thirds ≤ 2 characters, and the minor-edit rate stays high *even in* the sense
-(69.8 %) and headword (81.5 %) fields. **(H2)** The location profile differs sharply by
-dictionary (χ² = 23 674, Cramér's V = 0.415). **(H3)** The profile shifts over twelve
-years: headword corrections fall (0.90 → 0.12 of the yearly share), markup and metadata
-rise, and a stable character-confusion signal led by *b*/*v* emerges. We release the
+be structural, not noise. Three results follow. **(H1)** Corrections concentrate first in
+**sense** (52.7 % of located edits), with markup, headword, and citation as the next tier;
+the median edit distance is 2, but minor-edit rates vary sharply by location (headword
+85.6 %, sense 38.2 %, markup 5.2 %). **(H2)** The location profile differs sharply by
+dictionary (χ² = 26,192.5, Cramér's V = 0.432). **(H3)** The yearly profile shows
+directional shifts — headword corrections fall (0.88 → 0.10), markup rises (0.00 → 0.17) —
+while the corrected trend table reports BH-adjusted q-values. A stable character-confusion
+signal led by *b*/*v* emerges. We release the
 corpus with per-event evidence labels, three crosswalk typologies (ERRANT, OCR, Katre
 textual-criticism), a temporal train/test split, and reference baselines for error
 detection, correction and type classification. The central interpretive caveat is stated
@@ -71,7 +71,7 @@ located inside the dictionary microstructure it repairs — a headword versus a 
 versus a source citation — rather than treated as an undifferentiated string change. That
 single capability is what turns a changelog into a typology.
 
-Our contributions are: (i) a unified, IAST-normalised, evidence-labelled corpus of 50,953
+Our contributions are: (i) a unified, IAST-normalised, evidence-labelled corpus of 52,498
 correction events with full provenance across five data layers (§3); (ii) a **two-axis
 typology** — *location* × *edit-type* — whose orthogonality we establish empirically
 (§4); (iii) three tested findings on the shape, dictionary-dependence and diachrony of the
@@ -192,118 +192,119 @@ metathesis). One corpus, four readings.
 
 ### 5.1 Headline
 
-50,953 correction events over **2014-03-18 to 2026-05-30**, across 43 dictionaries and 210
-named correctors; **65.9 % carry a derived (non-heuristic) label** (33,561 derived /
-17,392 inferred). Where the form layer records a resolution date, the median
+52,498 correction events over **2014-03-18 to 2026-05-30**, across 43 dictionaries and 208
+named correctors; **64.3 % carry a derived (non-heuristic) label** (33,755 derived /
+18,743 inferred). Where the form layer records a resolution date, the median
 correction latency is **12 days** (p90 73, max 447).
 
 ### 5.2 Axis A — where corrections land
 
-On derived labels (n = 33,561), corrections concentrate in the **meaning-bearing
-fields**, not in markup or metadata (Table 2).
+On derived labels (n = 33,755), corrections concentrate most strongly in **sense**
+fields, with markup, headword, and citation forming the next tier (Table 2).
 
 **Table 2.** Location of corrections (derived labels).
 
 | Location | Events | Share |
 |---|---:|---:|
-| sense (definition) | 17,880 | 53.3 % |
-| headword | 7,282 | 21.7 % |
-| markup | 3,945 | 11.8 % |
-| citation | 3,338 | 9.9 % |
-| meta | 822 | 2.4 % |
-| grammar | 294 | 0.9 % |
+| sense (definition) | 17,778 | 52.7 % |
+| markup | 5,902 | 17.5 % |
+| headword | 5,823 | 17.3 % |
+| citation | 3,335 | 9.9 % |
+| meta | 624 | 1.8 % |
+| grammar | 293 | 0.9 % |
 
 ### 5.3 Axis B — what kind of change
 
 Every edit-type is a surface change; the corpus contains **no "content rewrite" category**
-(Table 3, all 50,953 events).
+(Table 3, all 52,498 events).
 
 **Table 3.** Edit-type of corrections.
 
 | Edit type | Events | Share |
 |---|---:|---:|
-| spelling | 16,953 | 33.3 % |
-| punctuation | 10,193 | 20.0 % |
-| spacing | 9,725 | 19.1 % |
-| diacritic | 5,396 | 10.6 % |
-| case | 4,432 | 8.7 % |
-| digit | 2,632 | 5.2 % |
-| (none) | 890 | 1.7 % |
-| transposition | 732 | 1.4 % |
+| spelling | 11,683 | 22.3 % |
+| spacing | 10,233 | 19.5 % |
+| punctuation | 9,506 | 18.1 % |
+| source-raw | 7,852 | 15.0 % |
+| diacritic | 4,785 | 9.1 % |
+| case | 3,813 | 7.3 % |
+| digit | 2,907 | 5.5 % |
+| (none) | 1,228 | 2.3 % |
+| transposition | 491 | 0.9 % |
 
-### 5.4 H1 — surface, not substance, at *every* location
+### 5.4 H1 — surface edits, uneven by location
 
-Corrections are small. The median edit distance is **2**, two-thirds (**66 %**) are ≤ 2
-characters (p90 18, max 404). The finding that matters is that this holds **across
-locations** — even where meaning lives, the corrections are small form fixes rather than
-redefinitions (Table 4). A sense correction is, in two cases out of three, a typo or
-spacing repair in a definition, not a reglossing.
+Corrections are usually small. The median edit distance is **2**, and **63 %** are ≤ 2
+characters (p90 20, max 508). The finding that matters is how unevenly this surface-edit
+signal is distributed by location (Table 4). Headword corrections are overwhelmingly small
+form fixes; sense is the largest location, but its edit-type mix is more varied, and markup,
+citation, and grammar often involve longer structural/source edits.
 
 **Table 4.** Minor-edit rate (small surface edit) by location, with 95 % Wilson CIs.
 
 | Location | n | minor-edit rate (95 % CI) |
 |---|---:|---|
-| sense | 17,880 | 69.8 % [69.1, 70.5] |
-| headword | 7,282 | 81.5 % [80.6, 82.4] |
-| meta | 822 | 88.6 % [86.2, 90.6] |
-| grammar | 294 | 31.6 % [26.6, 37.2] |
-| citation | 3,338 | 30.7 % [29.2, 32.3] |
-| markup | 3,945 | 18.2 % [17.1, 19.5] |
+| sense | 17,778 | 38.2 % [37.5, 39.0] |
+| markup | 5,902 | 5.2 % [4.6, 5.7] |
+| headword | 5,823 | 85.6 % [84.7, 86.5] |
+| citation | 3,335 | 25.0 % [23.6, 26.5] |
+| meta | 624 | 66.2 % [62.4, 69.8] |
+| grammar | 293 | 13.3 % [9.9, 17.7] |
 
-The split is itself interpretable: the high-minor-rate fields (sense, headword, meta) are
-where humans fix what they read; the low-rate fields (markup, citation) are where
-edits are structural — re-tagging or re-sourcing — and so span more characters.
+The split is itself interpretable: the high-minor-rate fields (especially headword and
+meta) are where humans fix compact forms; the low-rate fields (markup, citation, grammar)
+are where edits are structural — re-tagging or re-sourcing — and so span more characters.
 
 ### 5.5 H2 — the location profile differs by dictionary
 
 Location is not independent of dictionary. A chi-square test of location × dictionary
-(top 15 by volume, derived labels) gives χ² = 23 674.5, dof = 70, *p* < 0.001,
-**Cramér's V = 0.415** (a moderate-to-strong association; bootstrap CI [0.41, 0.42], and
-0.437 with the outlier PW removed). Dictionaries differ in *where* their errors sit, not
+(top 15 by volume, derived labels) gives χ² = 26,192.5, dof = 70. Row-level p-values
+are descriptive because events cluster by commit/campaign; the effect size is
+**Cramér's V = 0.432** (commit-block bootstrap CI [0.407, 0.482]). Dictionaries differ in *where* their errors sit, not
 merely how many they have — a fingerprint, not just a count.
 
 ### 5.6 H3 — the profile shifts over twelve years
 
-Mann–Kendall trend tests on the yearly shares (Table 5) show a clear movement: **headword**
-corrections fall steeply (τ = −0.44, *p* = 0.044; 0.90 → 0.12 of the yearly share) as the
-early headword-normalisation campaigns complete, while **markup** (τ = 0.64, *p* = 0.003)
-and **metadata** (τ = 0.44, *p* = 0.044) rise as curation moves to structural polish. On
-the edit-type axis, **diacritic** edits fall (τ = −0.44) while **punctuation** (τ = 0.44)
-and **spacing** (τ = 0.49, *p* = 0.024) rise.
+Mann–Kendall trend diagnostics on the yearly shares (Table 5) show directional movement:
+headword corrections fall (τ = −0.462; 0.88 → 0.10 of the yearly share), while markup
+rises (τ = 0.564; 0.00 → 0.17). After Benjamini-Hochberg correction, however, the current
+yearly series remains best reported as directional rather than as a set of significant
+trend claims. On the edit-type axis, spacing, punctuation, and source-raw edits rise
+directionally while spelling, case, and transposition fall.
 
-**Table 5.** Significant diachronic trends (Mann–Kendall on yearly share).
+**Table 5.** Diachronic trend diagnostics (Mann–Kendall on yearly share).
 
-| Axis | Category | τ | *p* | direction | first → last |
-|---|---|---:|---:|---|---|
-| location | headword | −0.44 | 0.044 | falling | 0.90 → 0.12 |
-| location | markup | 0.64 | 0.003 | rising | 0.00 → 0.06 |
-| location | meta | 0.44 | 0.044 | rising | 0.00 → 0.03 |
-| edit-type | diacritic | −0.44 | 0.044 | falling | 0.12 → 0.09 |
-| edit-type | punctuation | 0.44 | 0.044 | rising | 0.03 → 0.32 |
-| edit-type | spacing | 0.49 | 0.024 | rising | 0.05 → 0.15 |
+| Axis | Category | τ | *p* | q (BH) | first → last |
+|---|---|---:|---:|---:|---|
+| location | headword | −0.462 | 0.0327 | 0.0981 | 0.88 → 0.10 |
+| location | markup | 0.564 | 0.0087 | 0.0522 | 0.00 → 0.17 |
+| location | sense | 0.333 | 0.1272 | 0.1908 | 0.11 → 0.67 |
+| edit-type | spacing | 0.513 | 0.0173 | 0.0779 | 0.05 → 0.17 |
+| edit-type | spelling | −0.436 | 0.0441 | 0.0879 | 0.73 → 0.18 |
+| edit-type | source-raw | 0.410 | 0.0586 | 0.0879 | 0.00 → 0.26 |
 
 ### 5.7 Cross-dictionary error density
 
 Normalising by entry count (`<L>` markers), correction *density* ranges widely among
-dictionaries with ≥ 30 events — from **160.8 per 1,000 entries** (PGN) and 91.2 (BUR) down
-to ~53 (PUI). PW, the largest dictionary, carries the most raw events (13,651) at 80.0 per
+dictionaries with ≥ 30 events — from **160.8 per 1,000 entries** (PGN) and 91.4 (BUR) down
+to ~56 (PUI). PW, the largest dictionary, carries the most raw events (13,662) at 80.1 per
 1,000. We stress in §7 that high density reflects curatorial attention as much as latent
 error.
 
 ### 5.8 Crosswalks and the character-confusion signal
 
 Read through the external schemes, the same edits distribute as: **OCR** — substitution
-15,847, insertion 13,195, deletion 10,564, segmentation 9,750; **Katre textual criticism**
-— addition 18,877, substitution 16,432, omission 13,340, with the classical
-metathesis/haplography/dittography tail (732 / 489 / 193). The clean form-layer phoneme
+14,815, insertion 14,713, deletion 11,018, segmentation 10,253; **Katre textual criticism**
+— addition 20,546, substitution 15,246, omission 14,260, with the classical
+metathesis/haplography/dittography tail (491 / 496 / 231). The clean form-layer phoneme
 signal is led by **b → v** (341), the classic Sanskrit orthographic merger, followed by
 *k*/*t*, *s*/*m* and a retroflex-and-diacritic repair cluster — exactly the confusions a
 Sanskrit OCR or spell-checker should target first.
 
 ### 5.9 Who repairs what
 
-Correction labour is concentrated: **Jim Funderburk** (34,489 events, mostly sense) and
-**Dhaval Patel** (7,271, sense) account for the large majority, with a long tail of named
+Correction labour is concentrated: **Jim Funderburk** (35,057 events, mostly sense) and
+**Dhaval Patel** (8,248, sense) account for the large majority, with a long tail of named
 volunteers (the present author among them at 445, mostly headword). The process detail —
 latency, throughput, the contributor network's growth — is the subject of the OBS-Q
 companion.
@@ -324,8 +325,8 @@ give stdlib-only **reference baselines** that define the task rather than tune a
    by a single character.
 2. **Error correction** — a Norvig-style noisy-channel edit-1 model reaches acc@1 **0.059**,
    with 78.7 % of test errors within its edit-distance-1 reach.
-3. **Error-type classification** — Naïve Bayes over edit-op features predicts the location
-   component at accuracy **0.594** (macro-F1 0.403; majority baseline 0.44), evidence the
+3. **Location classification** — Naïve Bayes over edit-op features predicts the location
+   component at accuracy **0.638** (macro-F1 0.453; majority baseline 0.402), evidence the
    location axis is *learnable* from surface features alone.
 
 These low numbers are the point of a baseline: they establish headroom for the neural
