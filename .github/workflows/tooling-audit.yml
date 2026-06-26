@@ -28,7 +28,7 @@ jobs:
         sanskrit-lexicon.github.io,csl-orig,csl-apidev,csl-websanlexicon,
         csl-corrections,cologne-stardict
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: Set up Python
         uses: actions/setup-python@v6

@@ -32,7 +32,7 @@ jobs:
         KNA,KOW,KRM,LRV,MCI,MD,MWS,PUI,PWG,PWK,SCH,SHS,SKD,STC,VCP,VEI,WIL,
         Wil-YAT
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: Set up Python
         uses: actions/setup-python@v6
