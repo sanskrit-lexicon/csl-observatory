@@ -27,7 +27,7 @@ abstract: |
   infrastructure, in numbers and standards. We describe the unified
   issue-taxonomy and ten-phase runbook applied across eight active
   dictionary repositories in 2026; we present a complete data snapshot of
-  the ecosystem (78 repositories, 5,172 issues, 3,706 commits, 49 distinct
+  the ecosystem (78 repositories, 5,172 issues, 3,979 captured commits, 49 distinct
   contributors after alias merge); we demonstrate the path from CDSL's
   plain-text source format to TEI Lex-0 and OntoLex-Lemon RDF; and we
   evaluate the project against the FAIR data principles and ELEXIS
@@ -80,7 +80,7 @@ We focus on four contributions.
 
 2. **An ecosystem-wide data snapshot** (§4): we present the first complete
    quantitative survey of the CDSL ecosystem — 78 repositories, 5,172 issues,
-   3,706 commits, 49 distinct contributors — and analyse the distribution of
+   3,979 captured commits, 49 distinct contributors — and analyse the distribution of
    issue types, contributor labour, and activity over the project's twelve-year
    GitHub history.
 
@@ -254,8 +254,13 @@ We took a complete data snapshot of the `sanskrit-lexicon` organisation on
 endpoint `/repos/$ORG/$REPO/issues` for every repository's issue list, and
 the GraphQL `Repository.defaultBranchRef.target.history` connection for every
 repository's commit history. The raw snapshot is archived under
-`data/snapshots/2026-05-07/`. All counts in this section are reproducible by
-running `python scripts/render_reports.py --snapshot 2026-05-07`.
+`data/snapshots/2026-05-07/`; the headline totals below are taken from that
+archive's `summary.json` after the retry-recovery pass recorded in the file.
+They should not be replaced directly with later Observable CSV row counts:
+the 2026-06 `manifest.json` counts transformed rows (`repos.csv`,
+`issues.csv`, `commits.csv`, and repo-login rows in `contributors.csv`), not
+the same archived REST/GraphQL snapshot or the same distinct-contributor
+definition used here.
 
 ## 4.1 Headline numbers
 
@@ -265,7 +270,7 @@ running `python scripts/render_reports.py --snapshot 2026-05-07`.
 | Repositories with issues enabled | 78 |
 | Issues across the ecosystem (open + closed) | 5,172 |
 | Pull requests (subset of above) | 37 |
-| Commits captured in default branches | 3,706 |
+| Commits captured in default branches | 3,979 |
 | Distinct contributors (commit + issue authors, post-alias-merge) | 49 |
 | Repositories triaged with the 2026 taxonomy | 8 |
 | Typed issues across the eight triaged repositories | 608 |
@@ -647,11 +652,12 @@ are in the repository's `README.md` and `CONTRIBUTING.md`.
 Three limitations of the present analysis are explicit.
 
 **Commit-history pagination failures.** The GraphQL endpoint returned HTTP
-502 errors during commit-history pagination for several large repositories,
-including `csl-orig` (which is reported in the snapshot as having zero
-commits, when its actual commit count exceeds ten thousand). A
-retry-with-backoff pass on `pull_data.py` is required before the article is
-finalised.
+502 errors during commit-history pagination for several large repositories.
+The archived 2026-05-07 snapshot records a retry-recovery pass for twelve
+repositories, raising the captured default-branch commit count to 3,979, but
+`csl-orig` remains reported with zero commits despite having a much larger
+history. The commit totals in §4 are therefore conservative captured counts,
+not a complete all-time commit census.
 
 **Headword counts not yet implemented.** The `coverage.md` report is a
 placeholder; entry counts per dictionary are not yet derived from the source
