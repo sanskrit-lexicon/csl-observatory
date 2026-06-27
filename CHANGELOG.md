@@ -19,6 +19,12 @@ All notable changes to this repository are documented here, following [Keep a Ch
 - **Bot-noise policy** — Phase 3.5 gate (no post without concrete data),
   `<details>` collapsible wrapper on all agent comments, per-skill digest `.md`
   files as non-GitHub finding stores. Documented in `docs/AI_CONTRIBUTION_POLICY.md`.
+- **Tier A P5 — source-correction PRs** — 12 PRs opened (csl-orig ×8,
+  csl-pywork ×1, csl-websanlexicon ×1, csl-apidev ×1); 2 merged same day.
+  Fixes: MW ruci→Ruci, STC broken s.v. lines, INM truncated headword, LRV
+  homonymy markers, SCH double spaces, MW stub entry merge, SHS k1/k2 bracket
+  correction (10 metalines), CAE v. abbreviation, iOS enterkeyhint on search
+  inputs, address-bar pushState for simple-search.
 
 ### Fixed
 - Dependabot auto-merge now validates PRs before merge, leaves semver-major
