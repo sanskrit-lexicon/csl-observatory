@@ -71,7 +71,7 @@ Reports: [typology](reports/obs_t_typology.md) · [rigor](reports/obs_t_rigor.md
 |---|---|
 | **[`docs/AGENT_ROADMAP.md`](docs/AGENT_ROADMAP.md)** | **Living map of 820+ open issues: Tier A (agent-fixable), B (verify+comment), C (needs skill), D (blocked). Start here for any automation session.** |
 | [`docs/question-research-findings.md`](docs/question-research-findings.md) | Digest of question-research sweep (2026-06-27): ~73 posted, ~57 skipped; ready-to-close list |
-| [`docs/bug-triage-findings.md`](docs/bug-triage-findings.md) | Digest of bug-triage sweep (2026-06-27): ~10 new Tier A bugs, ~8 already-fixed, ~18 skipped/network |
+| [`docs/bug-triage-findings.md`](docs/bug-triage-findings.md) | Digest of bug-triage sweep + P5 network retry (2026-06-27): 12 Tier A PRs opened (2 merged), ~8 already-fixed, ~18 skipped; new Tier A: csl-websanlexicon#25, csl-apidev#21 |
 | `scripts/{bus_factor,repo_health,taxonomy_adoption,velocity_timeline,contributor_identity}.py` | The five finding analyses (offline, over the committed site CSVs) |
 | `scripts/check_workspace.py` | Local workspace and sibling-repo prerequisite check |
 | `reports/` | Finding reports + [`synthesis.md`](reports/synthesis.md) + index |
@@ -171,4 +171,4 @@ view → **Group by → Category**.
 
 ---
 
-*Last refreshed 2026-06-05.*
+*Last refreshed 2026-06-27.*
