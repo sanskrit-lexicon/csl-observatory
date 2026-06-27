@@ -133,3 +133,63 @@ These agents hit TLS handshake timeouts and could not post (GitHub connectivity 
 | [csl-apidev #21](https://github.com/sanskrit-lexicon/csl-apidev/issues/21) | csl-apidev | unknown | Re-run |
 | [csl-app #38](https://github.com/sanskrit-lexicon/csl-app/issues/38) | csl-app | Dart accent toggle — **Tier A** code fix | Post when network returns |
 | [csl-orig #2817](https://github.com/sanskrit-lexicon/csl-orig/issues/2817) | csl-orig | unknown | Re-run |
+
+---
+
+## P5 Network Retry Results (2026-06-27)
+
+Re-run of the 9 network-failed issues from the original P4 sweep. Network connectivity restored; all 9 posted successfully.
+
+### Posted — Tier D (server-side)
+
+| Issue | Repo | Classification | Detail |
+|---|---|---|---|
+| [COLOGNE #381](https://github.com/sanskrit-lexicon/COLOGNE/issues/381) | COLOGNE | search-broken, Tier D | HK→SLP1 transcoder failure; `keyprobFlag` block commented out 2019, re-emerged 2021. Server-side display fix only. |
+| [COLOGNE #153](https://github.com/sanskrit-lexicon/COLOGNE/issues/153) | COLOGNE | display-rendering, Tier D | TLS timeout on post (could not post at P4); Android PDF rendering (ACC). Fix = image fallback in `servepdf.php` — server-side only. |
+| [csl-orig #2817](https://github.com/sanskrit-lexicon/csl-orig/issues/2817) | csl-orig | display-rendering, Tier D | MW "id." idem entries (3,086 hits); display-layer feature, not source bug. No csl-orig fix possible. |
+| [csl-ldev #10](https://github.com/sanskrit-lexicon/csl-ldev/issues/10) | csl-ldev | encoding-display, Tier D | CAE/CCS svara `/` overloaded for udātta+svarita (23K lines); needs CCeH Lazarus data before any source fix can proceed. |
+| [csl-ldev #11](https://github.com/sanskrit-lexicon/csl-ldev/issues/11) | csl-ldev | text-correction, Tier D pending sign-off | SKD रसः → वीभत्स (9 occurrences); scanned-print variant, needs maintainer sign-off before a source change can be filed. |
+
+### Posted — New Tier A (agent-fixable)
+
+| Issue | Repo | Fix | PR opened |
+|---|---|---|---|
+| [csl-websanlexicon #25](https://github.com/sanskrit-lexicon/csl-websanlexicon/issues/25) | csl-websanlexicon | Missing `enterkeyhint="search"` on iOS — 3 search-form templates | [PR #74](https://github.com/sanskrit-lexicon/csl-websanlexicon/pull/74) opened |
+| [csl-apidev #21](https://github.com/sanskrit-lexicon/csl-apidev/issues/21) | csl-apidev | Missing `history.pushState` in `listDisplay()` | [PR #61](https://github.com/sanskrit-lexicon/csl-apidev/pull/61) opened |
+
+### Posted — Tier A code-level (needs server regeneration)
+
+| Issue | Repo | Classification | Detail |
+|---|---|---|---|
+| [csl-devanagari #38](https://github.com/sanskrit-lexicon/csl-devanagari/issues/38) | csl-devanagari | code bug in `to_devanagari.py` | Script applies `slp1_accented` conversion to whole lines for VCP/SKD/ARMH, corrupting XML tags; VCP 2,321 / MW 32,981 / SKD 5 instances. Fix is in the Python script; regeneration is server-side once patched. |
+
+### Still pending re-run
+
+| Issue | Status |
+|---|---|
+| [COLOGNE #286](https://github.com/sanskrit-lexicon/COLOGNE/issues/286) | Could not fetch issue body — re-run needed |
+
+---
+
+## PRs Opened This Session (P5, 2026-06-27)
+
+| PR | Status | Fix |
+|---|---|---|
+| [csl-orig #2864](https://github.com/sanskrit-lexicon/csl-orig/pull/2864) | **MERGED** | MW ruci→Ruci (also fixes [csl-devanagari #42](https://github.com/sanskrit-lexicon/csl-devanagari/issues/42)) |
+| [csl-orig #2865](https://github.com/sanskrit-lexicon/csl-orig/pull/2865) | **MERGED** | STC 4 broken s.v. lines |
+| [csl-orig #2866](https://github.com/sanskrit-lexicon/csl-orig/pull/2866) | Open | INM truncated headword SaktreH→SaktreHputra(H) |
+| [csl-orig #2867](https://github.com/sanskrit-lexicon/csl-orig/pull/2867) | Open | LRV homonymy markers for fjvI `<h>1`/`<h>2` |
+| [csl-orig #2868](https://github.com/sanskrit-lexicon/csl-orig/pull/2868) | Open | SCH 4 double-space content lines |
+| [csl-orig #2869](https://github.com/sanskrit-lexicon/csl-orig/pull/2869) | Open | MW stub entry L>1308–1309 merge |
+| [csl-orig #2870](https://github.com/sanskrit-lexicon/csl-orig/pull/2870) | Open | SHS k1/k2 bracket fix (10 metalines, not 844 as estimated) |
+| [csl-pywork #62](https://github.com/sanskrit-lexicon/csl-pywork/pull/62) | Open | CAE `v.` abbreviation = "vide, see" |
+| [csl-websanlexicon #74](https://github.com/sanskrit-lexicon/csl-websanlexicon/pull/74) | Open | iOS `enterkeyhint="search"` on 3 templates |
+| [csl-apidev #61](https://github.com/sanskrit-lexicon/csl-apidev/pull/61) | Open | `history.pushState` in simple-search v1.1/v1.1a |
+
+---
+
+## Awaiting Maintainer
+
+| Issue | Status |
+|---|---|
+| [csl-orig #1788](https://github.com/sanskrit-lexicon/csl-orig/issues/1788) | MW sup→rev (L>592.1) — clarification comment posted; Andhrabharati to confirm before applying |

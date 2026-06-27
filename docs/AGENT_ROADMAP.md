@@ -43,36 +43,44 @@ The original counts treated label names as agent-readiness signals. They are not
 
 These have exact old→new text in the issue body or are trivially greppable. Agent writes the change file, runs XML/ET validation, opens PR, and posts a comment linking it. Human merges + closes.
 
-| Issue | Dict | Fix type | Size |
-|---|---|---|---|
-| [csl-orig #1537](https://github.com/sanskrit-lexicon/csl-orig/issues/1537) | MW | `ruci` → `Ruci` at L=179760 | 1 line |
-| [csl-orig #1788](https://github.com/sanskrit-lexicon/csl-orig/issues/1788) | MW | erase plant name, change `sup`→`rev` at line 592 | 1 line |
-| [csl-orig #2821](https://github.com/sanskrit-lexicon/csl-orig/issues/2821) | STC | broken line-break in `s.v.` ref; grep stc.txt | ~2 lines |
-| [csl-devanagari #43](https://github.com/sanskrit-lexicon/csl-devanagari/issues/43) | SKD | `£` → `ꣳ` (U+A8F3); line numbers given | exact |
-| [csl-devanagari #42](https://github.com/sanskrit-lexicon/csl-devanagari/issues/42) | PWG | `~\` → `\~` at line 23689 | 1 line |
-| [csl-devanagari #41](https://github.com/sanskrit-lexicon/csl-devanagari/issues/41) | MW | trailing space + duplicate `<e>` field; 3 exact diffs | 3 lines |
-| [csl-apidev #24](https://github.com/sanskrit-lexicon/csl-apidev/issues/24) | all | old URL → new URL in `orphus.customized.js` | 1 line |
-| [csl-apidev #10](https://github.com/sanskrit-lexicon/csl-apidev/issues/10) | all | wrong path for `<pic>` in `basicdisplay.php`; greppable | ~1 line |
-| [csl-websanlexicon #60](https://github.com/sanskrit-lexicon/csl-websanlexicon/issues/60) | MW | malformed `<chg>` XML at L=592; body shows snippet | 1–2 lines |
-| [SKD #13](https://github.com/sanskrit-lexicon/SKD/issues/13) | SKD | bracket mismatches; lines verifiable in skd.txt | ~10 lines |
-| [PWK #12](https://github.com/sanskrit-lexicon/PWK/issues/12) | PW | `<ls>(X</ls>)` → `<ls>X</ls>`; regex given, 304 matches in pw.xml | 304 lines |
-| [VCP #20](https://github.com/sanskrit-lexicon/VCP/issues/20) | VCP | `pUrbb` → `pUrvv`; 1474+236 occurrences in vcp2/vac2 | bulk |
+| Issue | Dict | Fix type | Size | Status |
+|---|---|---|---|---|
+| [csl-orig #1537](https://github.com/sanskrit-lexicon/csl-orig/issues/1537) | MW | `ruci` → `Ruci` at L=179760 | 1 line | ✅ [PR #2864](https://github.com/sanskrit-lexicon/csl-orig/pull/2864) MERGED |
+| [csl-orig #1788](https://github.com/sanskrit-lexicon/csl-orig/issues/1788) | MW | erase plant name, change `sup`→`rev` at line 592 | 1 line | Awaiting maintainer (Andhrabharati) |
+| [csl-orig #2821](https://github.com/sanskrit-lexicon/csl-orig/issues/2821) | STC | broken line-break in `s.v.` ref; grep stc.txt | ~2 lines | ✅ [PR #2865](https://github.com/sanskrit-lexicon/csl-orig/pull/2865) MERGED |
+| [csl-devanagari #43](https://github.com/sanskrit-lexicon/csl-devanagari/issues/43) | SKD | `£` → `ꣳ` (U+A8F3); line numbers given | exact | Open |
+| [csl-devanagari #42](https://github.com/sanskrit-lexicon/csl-devanagari/issues/42) | PWG | `~\` → `\~` at line 23689 | 1 line | ✅ [PR #2864](https://github.com/sanskrit-lexicon/csl-orig/pull/2864) MERGED (fixed alongside ruci→Ruci) |
+| [csl-devanagari #41](https://github.com/sanskrit-lexicon/csl-devanagari/issues/41) | MW | trailing space + duplicate `<e>` field; 3 exact diffs | 3 lines | Open |
+| [csl-apidev #24](https://github.com/sanskrit-lexicon/csl-apidev/issues/24) | all | old URL → new URL in `orphus.customized.js` | 1 line | Open |
+| [csl-apidev #10](https://github.com/sanskrit-lexicon/csl-apidev/issues/10) | all | wrong path for `<pic>` in `basicdisplay.php`; greppable | ~1 line | Open |
+| [csl-websanlexicon #60](https://github.com/sanskrit-lexicon/csl-websanlexicon/issues/60) | MW | malformed `<chg>` XML at L=592; body shows snippet | 1–2 lines | Open |
+| [SKD #13](https://github.com/sanskrit-lexicon/SKD/issues/13) | SKD | bracket mismatches; lines verifiable in skd.txt | ~10 lines | Open |
+| [PWK #12](https://github.com/sanskrit-lexicon/PWK/issues/12) | PW | `<ls>(X</ls>)` → `<ls>X</ls>`; regex given, 304 matches in pw.xml | 304 lines | Open |
+| [VCP #20](https://github.com/sanskrit-lexicon/VCP/issues/20) | VCP | `pUrbb` → `pUrvv`; 1474+236 occurrences in vcp2/vac2 | bulk | Open |
 
 **From P4 bug triage sweep (2026-06-27):**
 
-| Issue | Dict | Fix type | Size |
-|---|---|---|---|
-| [csl-orig #2824](https://github.com/sanskrit-lexicon/csl-orig/issues/2824) | LRV | Add `<h>` homonymy discriminators at lines 26971+26980 | 2 lines |
-| [csl-orig #1060](https://github.com/sanskrit-lexicon/csl-orig/issues/1060) | MW | Merge stub L>1308 with L>1309; lines 4777–4782 | ~6 lines |
-| [COLOGNE #430](https://github.com/sanskrit-lexicon/COLOGNE/issues/430) | SHS | k1/k2 metaline truncation at `(` — deterministic strip rule | 844 lines |
-| [COLOGNE #181](https://github.com/sanskrit-lexicon/COLOGNE/issues/181) | SHS | Same bracket-closure pattern (subset of #430) | 840 lines |
-| [COLOGNE #331](https://github.com/sanskrit-lexicon/COLOGNE/issues/331) | CAE | Add `v.` expansion to caeab_input.txt | 1 entry |
-| [COLOGNE #179](https://github.com/sanskrit-lexicon/COLOGNE/issues/179) | INM | Truncated k1/k2 at line 30302 | 1 line |
-| [csl-devanagari #27](https://github.com/sanskrit-lexicon/csl-devanagari/issues/27) | SCH | 4 double-space instances in sch.txt | 4 lines |
-| [csl-ldev #12](https://github.com/sanskrit-lexicon/csl-ldev/issues/12) | SKD | Missing Sāyaṇa attribution at L=22342 | ~1 line |
-| [csl-app #38](https://github.com/sanskrit-lexicon/csl-app/issues/38) | — | Dart accent toggle logic bug — pure code fix | small |
+| Issue | Dict | Fix type | Size | Status |
+|---|---|---|---|---|
+| [csl-orig #2824](https://github.com/sanskrit-lexicon/csl-orig/issues/2824) | LRV | Add `<h>` homonymy discriminators at lines 26971+26980 | 2 lines | ✅ [PR #2867](https://github.com/sanskrit-lexicon/csl-orig/pull/2867) opened |
+| [csl-orig #1060](https://github.com/sanskrit-lexicon/csl-orig/issues/1060) | MW | Merge stub L>1308 with L>1309; lines 4777–4782 | ~6 lines | ✅ [PR #2869](https://github.com/sanskrit-lexicon/csl-orig/pull/2869) opened |
+| [COLOGNE #430](https://github.com/sanskrit-lexicon/COLOGNE/issues/430) | SHS | k1/k2 metaline truncation at `(` — deterministic strip rule | 844 lines | ✅ [PR #2870](https://github.com/sanskrit-lexicon/csl-orig/pull/2870) opened (10 metalines in practice) |
+| [COLOGNE #181](https://github.com/sanskrit-lexicon/COLOGNE/issues/181) | SHS | Same bracket-closure pattern (subset of #430) | 840 lines | ✅ [PR #2870](https://github.com/sanskrit-lexicon/csl-orig/pull/2870) opened (combined with #430) |
+| [COLOGNE #331](https://github.com/sanskrit-lexicon/COLOGNE/issues/331) | CAE | Add `v.` expansion to caeab_input.txt | 1 entry | ✅ [csl-pywork PR #62](https://github.com/sanskrit-lexicon/csl-pywork/pull/62) opened |
+| [COLOGNE #179](https://github.com/sanskrit-lexicon/COLOGNE/issues/179) | INM | Truncated k1/k2 at line 30302 | 1 line | ✅ [PR #2866](https://github.com/sanskrit-lexicon/csl-orig/pull/2866) opened |
+| [csl-devanagari #27](https://github.com/sanskrit-lexicon/csl-devanagari/issues/27) | SCH | 4 double-space instances in sch.txt | 4 lines | ✅ [PR #2868](https://github.com/sanskrit-lexicon/csl-orig/pull/2868) opened |
+| [csl-ldev #12](https://github.com/sanskrit-lexicon/csl-ldev/issues/12) | SKD | Missing Sāyaṇa attribution at L=22342 | ~1 line | Open |
+| [csl-app #38](https://github.com/sanskrit-lexicon/csl-app/issues/38) | — | Dart accent toggle logic bug — pure code fix | small | Open (network failure at P4; not yet posted) |
 
-**Status:** None of these have open PRs yet (except AP90 PR #2863 already open). All can start immediately.
+**From P5 network retry sweep (2026-06-27):**
+
+| Issue | Dict | Fix type | Size | Status |
+|---|---|---|---|---|
+| [csl-websanlexicon #25](https://github.com/sanskrit-lexicon/csl-websanlexicon/issues/25) | all | Missing `enterkeyhint="search"` on iOS — 3 search-form templates | 3 files | ✅ [PR #74](https://github.com/sanskrit-lexicon/csl-websanlexicon/pull/74) opened |
+| [csl-apidev #21](https://github.com/sanskrit-lexicon/csl-apidev/issues/21) | all | Missing `history.pushState` in `listDisplay()` | small | ✅ [PR #61](https://github.com/sanskrit-lexicon/csl-apidev/pull/61) opened |
+| [csl-devanagari #38](https://github.com/sanskrit-lexicon/csl-devanagari/issues/38) | VCP/SKD/MW/ARMH | `to_devanagari.py` applies `slp1_accented` to whole lines, corrupting XML tags (VCP 2,321; MW 32,981; SKD 5 instances) | code bug in script | Open — code fix in `to_devanagari.py`; regeneration server-side |
+
+**Status:** P5 complete. 10 PRs opened (2 merged). Remaining open Tier A items: csl-devanagari #41/#43, csl-apidev #24/#10, csl-websanlexicon #60, SKD #13, PWK #12, VCP #20, csl-ldev #12, csl-orig #1788 (awaiting maintainer), csl-devanagari #38 (code fix needed).
 
 ---
 
