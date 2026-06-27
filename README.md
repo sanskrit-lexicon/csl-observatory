@@ -5,10 +5,17 @@
 
 ## What this is
 
-A meta-repository that **measures the entire sanskrit-lexicon GitHub organisation** and turns 13 years of distributed work into measurable, citable, reproducible knowledge. It is intentionally limited to repositories, issues, pull requests, commits, contributors, workflows, and organization-level maintenance evidence. The 2026-06-04 boundary cleanup is merged: dictionary-structure research belongs in [`csl-atlas`](https://github.com/sanskrit-lexicon/csl-atlas), standards/export work belongs in [`csl-standards`](https://github.com/sanskrit-lexicon/csl-standards), and DCS/corpus work belongs in [`VisualDCS`](https://github.com/gasyoun/VisualDCS).
+A meta-repository that **measures the entire sanskrit-lexicon GitHub organisation** and turns 13 years of distributed work into measurable, citable, reproducible knowledge. It serves three distinct use cases:
+
+1. **Org observability** — repositories, issues, PRs, commits, contributors, workflows, and maintenance evidence, published as reproducible findings and a live dashboard.
+2. **AI-assisted issue triage** — a living [Agent Automation Roadmap](docs/AGENT_ROADMAP.md) maps 820+ open issues across 68 repos by agent-readiness (Tier A: fix+PR; Tier B: verify+comment; Tier C: needs skill; Tier D: blocked on human decision), tracking which corrections agents can supply and in what order.
+3. **Maintainer coordination hub** — runbooks, decision logs, skills inventory, and bot-noise policies so Jim/Dhaval can see exactly what automation has touched and what still needs them.
+
+The 2026-06-04 boundary cleanup is merged: dictionary-structure research belongs in [`csl-atlas`](https://github.com/sanskrit-lexicon/csl-atlas), standards/export work belongs in [`csl-standards`](https://github.com/sanskrit-lexicon/csl-standards), and DCS/corpus work belongs in [`VisualDCS`](https://github.com/gasyoun/VisualDCS).
 
 ## Quick links
 
+- **[Agent Automation Roadmap](docs/AGENT_ROADMAP.md)** — living map of 820+ open issues: which agents can fix/supply data for, which need new skills, and in what order (Tier A–D classification)
 - **[Observatory dashboard](https://sanskrit-lexicon.github.io/csl-observatory/)** — live charts, deployed to GitHub Pages via `.github/workflows/deploy.yml`
 - **[Findings & reports](reports/README.md)** — the five reproducible analyses + the synthesis (start here)
 - **[Synthesis](reports/synthesis.md)** — *State of the observatory*, the four findings tied into one picture
