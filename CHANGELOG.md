@@ -4,6 +4,20 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+### Added
+- **Agent issue-automation roadmap** (`docs/AGENT_ROADMAP.md`) — living map of
+  820+ open issues across 68 repos, classified Tier A–D by agent-readiness;
+  moved here from Uprava and linked prominently in README.
+- **Tier C P3 — `cologne-question-research` skill** — swept ~130 `question`
+  issues org-wide; ~73 comments posted with concrete data; ~57 skipped.
+  Findings digest: `docs/question-research-findings.md`.
+- **Tier C P4 — `cologne-bug-triage` skill** — swept 84 `bug` issues across
+  22 repos; ~24 comments posted; 10 new Tier A bugs surfaced; 8 confirmed
+  already-fixed. Findings digest: `docs/bug-triage-findings.md`.
+- **Bot-noise policy** — Phase 3.5 gate (no post without concrete data),
+  `<details>` collapsible wrapper on all agent comments, per-skill digest `.md`
+  files as non-GitHub finding stores. Documented in `docs/AI_CONTRIBUTION_POLICY.md`.
+
 ### Fixed
 - Dependabot auto-merge now validates PRs before merge, leaves semver-major
   updates for human review, and no longer falls back to a blind direct merge.
@@ -20,7 +34,7 @@ All notable changes to this repository are documented here, following [Keep a Ch
 - RH1 helper scripts now exit nonzero on partial batch failures and use the
   final `licenses/GPL-3.0.txt` dual-license wording.
 
-## [1.0.0] - 2026-06-13
+## [1.0.0] - 2026-06-16
 
 ### Fixed
 - Front-door number drift: the landing dashboard now filters bots from the
@@ -31,7 +45,7 @@ All notable changes to this repository are documented here, following [Keep a Ch
 - OBS-T paper and datasheet: corrected the form-layer link rate (12.9% → 28.8%,
   the post-Phase-8 value computed from the released corpus).
 
-## [0.1.0] - 2026-06-16
+## [0.1.0] - 2026-06-13
 
 First tagged snapshot of the observatory: a reproducible measurement of the
 sanskrit-lexicon organisation plus the OBS-T error-typology language resource.
