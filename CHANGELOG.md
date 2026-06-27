@@ -4,6 +4,8 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-06-27
+
 ### Added
 - **Agent issue-automation roadmap** (`docs/AGENT_ROADMAP.md`) — living map of
   820+ open issues across 68 repos, classified Tier A–D by agent-readiness;
@@ -75,6 +77,7 @@ sanskrit-lexicon organisation plus the OBS-T error-typology language resource.
   dictionary-content research moved to `csl-atlas` (see `docs/BOUNDARY_RULES.md`).
 - Citation DOI is pending a Zenodo mint; contributor ORCIDs are not yet registered.
 
-[Unreleased]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v0.1.0...v1.0.0
 [0.1.0]: https://github.com/sanskrit-lexicon/csl-observatory/releases/tag/v0.1.0
