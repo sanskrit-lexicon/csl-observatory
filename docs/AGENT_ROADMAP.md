@@ -83,10 +83,8 @@ These have diff lists or patterns in the issue body but the issue may already be
 
 | Skill | Issues unlocked | What it does |
 |---|---|---|
-| `cologne-question-research` | ~85 `question` issues | Fetch issue → classify question type (citation / morphology / encoding / policy) → gather evidence from csl-lslink / WhitneyRoots / FINDINGS.md → post structured findings comment |
-| `cologne-bug-triage` | ~26 remaining `bug` issues above "needs-human" | Reproduce → classify → delegate to Tier A fixer or post "needs-server/rendering" comment |
-
-The `cologne-question-research` skill has the higher ROI: 85 issues, all data assets already exist (Grammar+corpus crosswalk, csl-lslink, SanskritLexicography/FINDINGS.md), and even partial answers unblock human review.
+| `cologne-question-research` ✅ **DONE 2026-06-27** | ~130 `question` issues across org | Sweep complete: ~73 comments posted (concrete data only); ~57 skipped. Findings digest: [`docs/question-research-findings.md`](question-research-findings.md). Policy: no "inconclusive" posts; collapsible `<details>` on all future comments. |
+| `cologne-bug-triage` | ~26 remaining `bug` issues above "needs-human" | Reproduce → classify → delegate to Tier A fixer or post "needs-server/rendering" comment — **next Tier C priority** |
 
 ---
 

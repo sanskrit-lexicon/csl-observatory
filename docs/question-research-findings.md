@@ -1,27 +1,28 @@
 # Question Research Findings — 2026-06-27 Sweep
 
 Agent sweep of all `question`-labeled open issues across the `sanskrit-lexicon` org.
-**Policy (from 2026-06-27):** agents post to GitHub only when there is concrete, actionable data (line numbers, counts, a definitive answer). Inconclusive findings, pending items, and well-answered threads are collected here instead.
+**Policy (from 2026-06-27):** agents post to GitHub only when there is concrete, actionable data (line numbers, counts, a definitive answer). Inconclusive findings and well-answered threads are collected here instead.
 
 ---
 
 ## Summary
 
-| Repo | Issues covered | Comments posted | Skipped (already answered) | Pending (network failure) |
-|---|---|---|---|---|
-| COLOGNE | 46 | ~28 | ~18 | — |
-| MWinflect | 8 | 8 | — | — |
-| CORRECTIONS | 7 | 7 | — | — |
-| PWK | 5 | 5 | — | — |
-| ACC | 4 | 4 | — | — |
-| csl-orig | 12 | 0 | — | 12 |
-| MWS | 5 | 0 | — | 5 |
-| VCP | 5 | 0 | — | 5 |
-| alternateheadwords | 3 | 0 | — | 3 |
-| AP90 | 3 | 0 | — | 3 |
-| SKD | 3 | 0 | — | 3 |
-| PWG | 3 | 0 | — | 3 |
-| 20 small repos | ~25 | 0 | — | ~25 |
+| Repo | Issues covered | Comments posted | Skipped (already answered / no data) |
+|---|---|---|---|
+| COLOGNE | 52 | ~28 | ~24 |
+| MWinflect | 8 | 8 | — |
+| CORRECTIONS | 7 | 7 | — |
+| PWK | 5 | 5 | — |
+| ACC | 4 | 4 | — |
+| csl-orig | 12 | 7 | 5 |
+| MWS | 5 | 3 | 2 |
+| VCP | 5 | 2 | 3 |
+| alternateheadwords | 3 | 0 | 3 |
+| AP90 | 3 | 3 | — |
+| SKD | 3 | 0 | 3 |
+| PWG | 3 | 1 | 2 (active threads — skipped to avoid noise) |
+| 20 small repos | ~20 | 5 | 15 |
+| **Total** | **~130** | **~73** | **~57** |
 
 ---
 
@@ -96,25 +97,45 @@ All 8 issues partially answerable; main paradigms are settled. Open gaps per iss
 
 ---
 
-## Pending — network failures (not yet researched)
+## Additional findings from second-wave repos
 
-These repos/issues were queued but agents hit TLS/connection errors. Retry once network is stable.
+### csl-orig (7 comments posted)
+- [#923](https://github.com/sanskrit-lexicon/csl-orig/issues/923) mw:12831 — `abhisampad` dangling `id.` confirmed at lines 46379–46380; fix documented
+- [#1060](https://github.com/sanskrit-lexicon/csl-orig/issues/1060) — MW body-less entry L>1308 `agriyavat` at line 4778 still unfixed; merge policy settled
+- [#1780](https://github.com/sanskrit-lexicon/csl-orig/issues/1780) — ~54 annexure + ~25 main-page 'in comp' cases quantified; policy decided
+- [#1788](https://github.com/sanskrit-lexicon/csl-orig/issues/1788) — MW akṣara L>592: `<chg type="del">` already in place; display-layer gap only
+- [#1790](https://github.com/sanskrit-lexicon/csl-orig/issues/1790) — MW akṣan-vat L>669 at line 2395: headword already correct; supplement L-670.1 cleanup pending
+- [#2817](https://github.com/sanskrit-lexicon/csl-orig/issues/2817) — 3,086 `id.` entries + 662 under-10-char entries + 11 completely blank; source correct, fix in websanlexicon display
+- [#2824](https://github.com/sanskrit-lexicon/csl-orig/issues/2824) — LRV L>7287.1 is a legitimate body-pointer stub; L>7290 is independent; homonomy markers needed in display
 
-### csl-orig (12 issues)
-[#174](https://github.com/sanskrit-lexicon/csl-orig/issues/174) SKD verb headwords · [#631](https://github.com/sanskrit-lexicon/csl-orig/issues/631) IAST ऌ vs ळ · [#923](https://github.com/sanskrit-lexicon/csl-orig/issues/923) mw:12831 · [#1060](https://github.com/sanskrit-lexicon/csl-orig/issues/1060) MW data without meaning · [#1173](https://github.com/sanskrit-lexicon/csl-orig/issues/1173) pwg:7452 · [#1780](https://github.com/sanskrit-lexicon/csl-orig/issues/1780) MW 4112.1 'in comp' · [#1788](https://github.com/sanskrit-lexicon/csl-orig/issues/1788) MW 592.2 akṣara · [#1790](https://github.com/sanskrit-lexicon/csl-orig/issues/1790) MW 669 akṣan-vat · [#2811](https://github.com/sanskrit-lexicon/csl-orig/issues/2811) MW avadhāraṇa · [#2817](https://github.com/sanskrit-lexicon/csl-orig/issues/2817) MW near-blank entries · [#2824](https://github.com/sanskrit-lexicon/csl-orig/issues/2824) LRV 7287.1 double listing · [#2843](https://github.com/sanskrit-lexicon/csl-orig/issues/2843) Duplicate compound headwords
+### MWS (3 posted) · VCP (2 posted)
+- [MWS #179](https://github.com/sanskrit-lexicon/MWS/issues/179) — Kṛṣṇa Āṅgirasa confirmed at MW line 189399; link gap in rvlinks repo
+- [MWS #183](https://github.com/sanskrit-lexicon/MWS/issues/183) — tādṛśī encoded as `<lex>mf(<s>I</s>)n.</lex>` inside tādṛśa (line 282135); no separate headword
+- [MWS #192](https://github.com/sanskrit-lexicon/MWS/issues/192) — karagṛhīti has `<hom>` tags; kararudh lacks them at L=44149.1, L=44378 — actionable gap
+- [VCP #22](https://github.com/sanskrit-lexicon/VCP/issues/22) — `samboDane` 26 occurrences vs `saMboDane` 10; `RR` pattern across 3,705 lines (0.7% of file)
+- [VCP #23](https://github.com/sanskrit-lexicon/VCP/issues/23) — 8 debatable cases mapped to lines; cases 1 (line 59) and 8 (line 3684) have consensus but file not updated
 
-### MWS (5) · VCP (5)
-MWS: [#45](https://github.com/sanskrit-lexicon/MWS/issues/45) cf. · [#179](https://github.com/sanskrit-lexicon/MWS/issues/179) RV poet · [#183](https://github.com/sanskrit-lexicon/MWS/issues/183) tādṛśī headword · [#189](https://github.com/sanskrit-lexicon/MWS/issues/189) Mn. links · [#192](https://github.com/sanskrit-lexicon/MWS/issues/192) kararudh  
-VCP: [#12](https://github.com/sanskrit-lexicon/VCP/issues/12) vac-vcp-cmp2 · [#15](https://github.com/sanskrit-lexicon/VCP/issues/15) Meld diff viewer · [#22](https://github.com/sanskrit-lexicon/VCP/issues/22) patterns later · [#23](https://github.com/sanskrit-lexicon/VCP/issues/23) debatable items · [#25](https://github.com/sanskrit-lexicon/VCP/issues/25) addenda/corrigenda
+### AP90 (3 posted)
+- [#21](https://github.com/sanskrit-lexicon/AP90/issues/21) — 4 original errors all fixed; SanskritSpellCheck AllvsMW.txt has 9 AP90 suspect headwords for triage
+- [#27](https://github.com/sanskrit-lexicon/AP90/issues/27) — `bālhakāḥ` at L185405; MW/PW/all Cologne dicts use `bālh-` form — consistent
+- [#28](https://github.com/sanskrit-lexicon/AP90/issues/28) — `dvāja` L136483 is a redirect header for `dvā-` compounds; structural, not a scan error
 
-### alternateheadwords (3) · AP90 (3) · SKD (3) · PWG (3)
-alternateheadwords: [#2](https://github.com/sanskrit-lexicon/alternateheadwords/issues/2) WIL anubandhas · [#11](https://github.com/sanskrit-lexicon/alternateheadwords/issues/11) VCP anubandha · [#25](https://github.com/sanskrit-lexicon/alternateheadwords/issues/25) usage  
-AP90: [#21](https://github.com/sanskrit-lexicon/AP90/issues/21) spelling errors · [#27](https://github.com/sanskrit-lexicon/AP90/issues/27) bālhakāḥ · [#28](https://github.com/sanskrit-lexicon/AP90/issues/28) dvāja  
-SKD: [#6](https://github.com/sanskrit-lexicon/SKD/issues/6) Wikisource edition · [#12](https://github.com/sanskrit-lexicon/SKD/issues/12) dhātu comparison · [#18](https://github.com/sanskrit-lexicon/SKD/issues/18) Arlo Griffiths  
-PWG: [#44](https://github.com/sanskrit-lexicon/PWG/issues/44) preverbs · [#107](https://github.com/sanskrit-lexicon/PWG/issues/107) commentary citation · [#194](https://github.com/sanskrit-lexicon/PWG/issues/194) underscore v1e
+### PWG (1 posted)
+- [#194](https://github.com/sanskrit-lexicon/PWG/issues/194) — underscore counts: `_zu_` 6,566 · `_in_` 4,874 · `_im_` 16,294 · `_bei_` 2,058; print-change char gone
 
-### Small repos (~25 issues)
-AP · BOR · csl-corrections · csl-devanagari · csl-inflect · csl-ldev · csl-newsletter · DCS · GRA · hwnorm1 · IEG · INM · LRV · MCI · mw-dev · MW72 · SCH · SHS · temp_corrections_ap90 · temp_corrections_mw
+### Small repos (5 posted)
+- [GRA #13](https://github.com/sanskrit-lexicon/GRA/issues/13) — print "aa" notation vs. IAST macron-ā: IAST encoding is correct, no correction needed
+- [INM #11](https://github.com/sanskrit-lexicon/INM/issues/11) — docs-pass: 12,647 L-entries counted in inm.txt
+- [MCI #1](https://github.com/sanskrit-lexicon/MCI/issues/1) — 8 section lines at known positions; 0 `<info section=>` tags in 2,643 entries — not yet implemented
+- [MW72 #7](https://github.com/sanskrit-lexicon/MW72/issues/7) — docs-pass: 55,390 L-entries counted in mw72.txt
+- [SCH #4](https://github.com/sanskrit-lexicon/SCH/issues/4) — 9,254 `º` occurrences and 3,165 `*` occurrences in 29,125-entry sch.txt; encoding decision needed
+- [temp_corrections_ap90 #2](https://github.com/sanskrit-lexicon/temp_corrections_ap90/issues/2) — SHS L=1901 line 7779 "apostable" is OCR error; WIL same entry has "apostate" (correct)
+
+### Not posted — active threads skipped to avoid noise
+- PWG #44 (preverbs) — Andhrabharati giving concrete markup decisions 2026-06-22; left alone
+- PWG #107 (commentary citations) — Andhrabharati owns this; 27,873 relevant lines confirmed
+- mw-dev #22 (homonym numbering) — editorial-policy only, no local MWS source to count
+- IEG #2 — task assigned to @Andhrabharati; L=26 `maṇḍapa` is the sole remaining inconsistency
 
 ---
 
