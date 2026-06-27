@@ -5,11 +5,13 @@
 
 ## What this is
 
-A meta-repository that **measures the entire sanskrit-lexicon GitHub organisation** and turns 13 years of distributed work into measurable, citable, reproducible knowledge. It serves three distinct use cases:
+A meta-repository that **measures the entire sanskrit-lexicon GitHub organisation** and turns 13 years of distributed work into measurable, citable, reproducible knowledge. It serves five distinct use cases:
 
 1. **Org observability** — repositories, issues, PRs, commits, contributors, workflows, and maintenance evidence, published as reproducible findings and a live dashboard.
 2. **AI-assisted issue triage** — a living [Agent Automation Roadmap](docs/AGENT_ROADMAP.md) maps 820+ open issues across 68 repos by agent-readiness (Tier A: fix+PR; Tier B: verify+comment; Tier C: needs skill; Tier D: blocked on human decision), tracking which corrections agents can supply and in what order.
 3. **Maintainer coordination hub** — runbooks, decision logs, skills inventory, and bot-noise policies so Jim/Dhaval can see exactly what automation has touched and what still needs them.
+4. **Bot-noise management** — [AI contribution policy](docs/AI_CONTRIBUTION_POLICY.md), `no-bot` label protocol, and weekly human-activity feeds so automated agent volume does not drown maintainer discussion threads.
+5. **Agent findings digest** — research output from agent sweeps collected in structured `.md` files (see [`docs/question-research-findings.md`](docs/question-research-findings.md)) instead of being scattered as GitHub comments; only concrete, actionable findings are posted to issues.
 
 The 2026-06-04 boundary cleanup is merged: dictionary-structure research belongs in [`csl-atlas`](https://github.com/sanskrit-lexicon/csl-atlas), standards/export work belongs in [`csl-standards`](https://github.com/sanskrit-lexicon/csl-standards), and DCS/corpus work belongs in [`VisualDCS`](https://github.com/gasyoun/VisualDCS).
 
@@ -67,6 +69,8 @@ Reports: [typology](reports/obs_t_typology.md) · [rigor](reports/obs_t_rigor.md
 
 | Path | Purpose |
 |---|---|
+| **[`docs/AGENT_ROADMAP.md`](docs/AGENT_ROADMAP.md)** | **Living map of 820+ open issues: Tier A (agent-fixable), B (verify+comment), C (needs skill), D (blocked). Start here for any automation session.** |
+| [`docs/question-research-findings.md`](docs/question-research-findings.md) | Digest of agent research sweeps — findings that were skipped (inconclusive), pending (network), or need human action, in one browsable file |
 | `scripts/{bus_factor,repo_health,taxonomy_adoption,velocity_timeline,contributor_identity}.py` | The five finding analyses (offline, over the committed site CSVs) |
 | `scripts/check_workspace.py` | Local workspace and sibling-repo prerequisite check |
 | `reports/` | Finding reports + [`synthesis.md`](reports/synthesis.md) + index |
