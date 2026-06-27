@@ -58,6 +58,20 @@ These have exact old→new text in the issue body or are trivially greppable. Ag
 | [PWK #12](https://github.com/sanskrit-lexicon/PWK/issues/12) | PW | `<ls>(X</ls>)` → `<ls>X</ls>`; regex given, 304 matches in pw.xml | 304 lines |
 | [VCP #20](https://github.com/sanskrit-lexicon/VCP/issues/20) | VCP | `pUrbb` → `pUrvv`; 1474+236 occurrences in vcp2/vac2 | bulk |
 
+**From P4 bug triage sweep (2026-06-27):**
+
+| Issue | Dict | Fix type | Size |
+|---|---|---|---|
+| [csl-orig #2824](https://github.com/sanskrit-lexicon/csl-orig/issues/2824) | LRV | Add `<h>` homonymy discriminators at lines 26971+26980 | 2 lines |
+| [csl-orig #1060](https://github.com/sanskrit-lexicon/csl-orig/issues/1060) | MW | Merge stub L>1308 with L>1309; lines 4777–4782 | ~6 lines |
+| [COLOGNE #430](https://github.com/sanskrit-lexicon/COLOGNE/issues/430) | SHS | k1/k2 metaline truncation at `(` — deterministic strip rule | 844 lines |
+| [COLOGNE #181](https://github.com/sanskrit-lexicon/COLOGNE/issues/181) | SHS | Same bracket-closure pattern (subset of #430) | 840 lines |
+| [COLOGNE #331](https://github.com/sanskrit-lexicon/COLOGNE/issues/331) | CAE | Add `v.` expansion to caeab_input.txt | 1 entry |
+| [COLOGNE #179](https://github.com/sanskrit-lexicon/COLOGNE/issues/179) | INM | Truncated k1/k2 at line 30302 | 1 line |
+| [csl-devanagari #27](https://github.com/sanskrit-lexicon/csl-devanagari/issues/27) | SCH | 4 double-space instances in sch.txt | 4 lines |
+| [csl-ldev #12](https://github.com/sanskrit-lexicon/csl-ldev/issues/12) | SKD | Missing Sāyaṇa attribution at L=22342 | ~1 line |
+| [csl-app #38](https://github.com/sanskrit-lexicon/csl-app/issues/38) | — | Dart accent toggle logic bug — pure code fix | small |
+
 **Status:** None of these have open PRs yet (except AP90 PR #2863 already open). All can start immediately.
 
 ---
@@ -84,7 +98,7 @@ These have diff lists or patterns in the issue body but the issue may already be
 | Skill | Issues unlocked | What it does |
 |---|---|---|
 | `cologne-question-research` ✅ **DONE 2026-06-27** | ~130 `question` issues across org | Sweep complete: ~73 comments posted (concrete data only); ~57 skipped. Findings digest: [`docs/question-research-findings.md`](question-research-findings.md). Policy: no "inconclusive" posts; collapsible `<details>` on all future comments. |
-| `cologne-bug-triage` | ~26 remaining `bug` issues above "needs-human" | Reproduce → classify → delegate to Tier A fixer or post "needs-server/rendering" comment — **next Tier C priority** |
+| `cologne-bug-triage` ✅ **DONE 2026-06-27** | 84 `bug` issues across 22 repos | ~24 comments posted; ~10 new Tier A bugs found; ~8 confirmed already-fixed; ~18 skipped (active threads/network). Findings digest: [`docs/bug-triage-findings.md`](bug-triage-findings.md). 9 issues need re-run after network failures. |
 
 ---
 

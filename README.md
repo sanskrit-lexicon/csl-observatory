@@ -70,7 +70,8 @@ Reports: [typology](reports/obs_t_typology.md) · [rigor](reports/obs_t_rigor.md
 | Path | Purpose |
 |---|---|
 | **[`docs/AGENT_ROADMAP.md`](docs/AGENT_ROADMAP.md)** | **Living map of 820+ open issues: Tier A (agent-fixable), B (verify+comment), C (needs skill), D (blocked). Start here for any automation session.** |
-| [`docs/question-research-findings.md`](docs/question-research-findings.md) | Digest of agent research sweeps — findings that were skipped (inconclusive), pending (network), or need human action, in one browsable file |
+| [`docs/question-research-findings.md`](docs/question-research-findings.md) | Digest of question-research sweep (2026-06-27): ~73 posted, ~57 skipped; ready-to-close list |
+| [`docs/bug-triage-findings.md`](docs/bug-triage-findings.md) | Digest of bug-triage sweep (2026-06-27): ~10 new Tier A bugs, ~8 already-fixed, ~18 skipped/network |
 | `scripts/{bus_factor,repo_health,taxonomy_adoption,velocity_timeline,contributor_identity}.py` | The five finding analyses (offline, over the committed site CSVs) |
 | `scripts/check_workspace.py` | Local workspace and sibling-repo prerequisite check |
 | `reports/` | Finding reports + [`synthesis.md`](reports/synthesis.md) + index |
