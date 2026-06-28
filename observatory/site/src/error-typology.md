@@ -43,6 +43,9 @@ Reported on derived labels (location is not guessed when the join fails).
 
 ```js
 const locTotals = (summary.locationDerived ?? summary.components).map(([location, count]) => ({location, count}));
+```
+
+```js
 Plot.plot({
   width, height: 300, marginLeft: 110,
   x: {label: "events (derived)", grid: true},
@@ -64,6 +67,9 @@ What kind of change. Every category is a surface micro-edit; there is no
 
 ```js
 const etTotals = (summary.editType ?? []).map(([type, count]) => ({type, count}));
+```
+
+```js
 Plot.plot({
   width, height: 300, marginLeft: 110,
   x: {label: "events", grid: true},
@@ -82,6 +88,9 @@ git era meet at mid-2019 into one continuous record.
 
 ```js
 const monthlyDated = monthly.map(d => ({...d, date: new Date(d.ym + "-01")}));
+```
+
+```js
 Plot.plot({
   width, height: 380,
   x: {label: null},
@@ -106,7 +115,9 @@ const yearData = d3.flatRollup(
     v => d3.sum(v, x => x.count), d => d.component)
   .map(([component, count]) => ({component, count}))
   .sort((a, b) => b.count - a.count);
+```
 
+```js
 Plot.plot({
   width, height: 300, marginLeft: 110,
   title: `Components corrected in ${year}`,
@@ -128,6 +139,9 @@ by a large one.
 ```js
 const dens = dicts.filter(d => d.entries && d.events >= 30)
   .sort((a, b) => b.per_1k_entries - a.per_1k_entries).slice(0, 20);
+```
+
+```js
 Plot.plot({
   width, height: 460, marginLeft: 70,
   x: {label: "corrections per 1,000 entries", grid: true},
@@ -148,6 +162,9 @@ the genuine phoneme-confusion signal, led by the classic **b ↔ v** merger.
 ```js
 const cons = confus.filter(d => d.layer === "form" && d.unit === "consonant")
   .sort((a, b) => b.count - a.count).slice(0, 25);
+```
+
+```js
 Plot.plot({
   width, height: 420, marginLeft: 70,
   x: {label: null, domain: [...new Set(cons.map(d => d.from))]},
@@ -171,6 +188,9 @@ const ocr = d3.flatRollup(cross.filter(d => d.scheme === "ocr"),
 const tc = d3.flatRollup(cross.filter(d => d.scheme === "textcrit"),
     v => d3.sum(v, x => x.count), d => d.label)
   .map(([label, count]) => ({frame: "Textual criticism", label, count}));
+```
+
+```js
 Plot.plot({
   width, height: 320, marginLeft: 110, marginRight: 80,
   x: {label: "events", grid: true},
