@@ -26,6 +26,10 @@ const humanContribs = contributors.filter(d => d.type !== "Bot");
 
 ## Contributor Retention: First X Last Commit Year
 
+Positions each contributor at their first and last commit year to distinguish long-term participants from one-time visitors. Contributors on the diagonal (first ≈ last year) contributed briefly and left; contributors with a large vertical span between first and last year are the project's long-term backbone. Green dots are people still active in 2026; amber dots are contributors who last committed before 2026.
+
+> **How to read:** Each dot is one contributor; x = year of first commit, y = year of most recent commit, dot size = total commits. **Example 1:** A large green dot at (first=2014, last=2026) is a founding contributor still active 12 years later — the project's highest-value continuity asset. **Example 2:** A small amber dot where first and last year are the same is a one-time contributor who made a single-session contribution and never returned — common in open-source digital humanities projects where scholars contribute one correction batch.
+
 ```js
 const byPerson = d3.rollup(commits.filter(d => d.author_login), v => {
   const years = v.map(d => new Date(d.date).getFullYear()).filter(Boolean);
@@ -57,7 +61,13 @@ display(Plot.plot({
 }))
 ```
 
+> **Conclusion:** The retention chart shows that long-term continuity rests on a very small group of contributors with large vertical spans, while the majority of ever-contributors appeared briefly and left. The project's operational continuity depends almost entirely on the few green dots with the longest vertical spans remaining active.
+
 ## Repo Contributor-Count Distribution
+
+The distribution of how many distinct contributors each repository has accumulated in its entire history — 1, 2, 3, and so on. This is the direct readout of the bus-factor risk landscape across the org: repos with only 1 contributor have zero redundancy, while repos with 5+ contributors can survive the departure of any single person. The shape of the distribution — whether it peaks sharply at 1 or has a meaningful tail — determines the org's collective resilience.
+
+> **How to read:** Each bar is one contributor-count value; height = number of repos with exactly that many contributors. Red = 1–2 (high single-point-of-failure risk). **Example 1:** A very tall bar at "1" means most repos have only ever been touched by a single person — the entire commit history has no second author who could continue the work. **Example 2:** A small but non-zero bar at "5+" means a handful of repos have achieved real contributor diversity — these are the models to emulate for new repo creation.
 
 ```js
 const contributorCounts = Array.from(d3.rollup(busFactor, v => v.length, d => +d.contributors || 0), ([contributors, count]) => ({contributors, count}))
@@ -75,7 +85,13 @@ display(Plot.plot({
 }))
 ```
 
+> **Conclusion:** A peak at 1 with a rapidly decaying tail confirms that most repositories are single-maintainer projects. The handful of repos with broader contributor bases are the ones most likely to survive a maintainer departure intact — studying what made them attract more contributors is worth the analysis.
+
 ## Largest Contributor Share Histogram
+
+Shows how often the single most active contributor accounts for 0–10%, 10–20%, …, 90–100% of a repository's history. This goes beyond the bus-factor-1 binary: a repo where the top contributor holds 55% is bus factor 1, but so is a repo where they hold 99% — yet those two situations are very different in terms of replacement difficulty. A distribution skewed towards the 80–100% bucket means concentration is extreme, not merely majority-level.
+
+> **How to read:** Each bar is a 10-percentage-point bucket of the top contributor's share; height = repos in that bucket. Red = buckets above 50% (bus factor 1). **Example 1:** A tallest bar in the 90–100% bucket means most bus-factor-1 repos are effectively total single-author projects — the top contributor wrote almost everything, making knowledge transfer far harder than a 51% majority. **Example 2:** Any bars in the 0–50% range (green) show repos with genuine work distribution — where no one person dominates more than half the commits.
 
 ```js
 const shareBins = d3.range(0.1, 1.1, 0.1).map(upper => {
@@ -100,7 +116,13 @@ display(Plot.plot({
 }))
 ```
 
+> **Conclusion:** A strong right-skew confirms that bus-factor-1 concentration is extreme, not marginal. In most affected repos, the top contributor did not just edge past 50% — they authored 80–100% of the history. This makes knowledge transfer and succession planning far harder than the headline bus-factor number suggests.
+
 ## Bus-Factor Risk By Primary Language
+
+Bus-factor risk broken down by a repository's primary programming language. This tests whether the concentration problem is uniform across the org's tech stack or whether certain language ecosystems — and their associated repos — are more exposed. If both Python (processing scripts) and HTML (display pages) show predominantly bus-factor-1, the entire technical stack is at risk simultaneously.
+
+> **How to read:** Each row is one language; bars stack bus-factor-1 (red) vs bus-factor-≥-2 (green) repo counts. **Example 1:** A Python row with a large red segment means the correction and pipeline scripts — the core of the project's back-end tooling — are heavily concentrated in single maintainers. **Example 2:** A language row that is entirely green means all repositories of that type have at least two contributors — an unusual positive signal worth noting and protecting.
 
 ```js
 const languageRows = busFactor.map(d => ({
@@ -130,7 +152,13 @@ display(Plot.plot({
 }))
 ```
 
+> **Conclusion:** If both Python and HTML show predominantly red bars, the entire technical stack — back-end scripts and front-end display pages — is single-maintainer territory simultaneously. That means any maintainer departure would affect both the correction pipeline and the live dictionary website, not just one layer.
+
 ## Identity And ORCID Status
+
+The identity and ORCID audit tracks two independent attributes for every contributor: whether they have been identified by their real name (vs remaining as a pseudonymous GitHub login), and whether they have an ORCID persistent researcher identifier. ORCID is required for scholarly citation chains — any paper or dataset release that credits contributors by login rather than ORCID cannot be properly attributed in academic databases. The current state of both fields determines the project's readiness to publish its outputs as citable scholarly resources.
+
+> **How to read:** Two stacked rows — identity status (named / pseudonymous / unknown) and ORCID coverage (has ORCID / missing ORCID). **Example 1:** A "missing ORCID" segment that fills most of the ORCID row means no contributor is currently citable via a persistent identifier — a concrete blocker for any paper submission that requires contributor ORCID fields. **Example 2:** A large "named" segment in the identity row that does not translate to a matching "has ORCID" segment shows contributors who are known by name but still lack the persistent identifier — identity and ORCID are separate attributes that both need to be resolved.
 
 ```js
 const identityRows = peopleSummary.flatMap(d => [
@@ -154,5 +182,7 @@ display(Plot.plot({
   ]
 }))
 ```
+
+> **Conclusion:** Zero or near-zero ORCID coverage is the primary attribution blocker for the OBS-T paper and any future dataset publication. The fix is registration — each named contributor needs to create or link an ORCID account — which requires direct contact and cannot be automated. This is tracked in hygiene issue #20.
 
 [Back to overview](/)

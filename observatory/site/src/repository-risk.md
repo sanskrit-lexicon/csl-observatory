@@ -38,6 +38,10 @@ const scopedRows = rows.filter(d => {
 
 ## License X Branch Heatmap
 
+A two-way matrix crossing license class (rows) against default branch name (columns). The question it answers: are licensing and branch hygiene problems the same repos or different repos? If the "none"/"master" cell is the darkest, repos with both problems cluster together and can be addressed in a single pass. If "recognised"/"master" is large, branch renaming is an isolated, separate-population problem.
+
+> **How to read:** Each cell is the count of repos in that license × branch combination; darker colour = more repos. **Example 1:** A dark "none"/"master" cell means the same repos that lack a license are also on the legacy branch — the problems cluster, so a combined cleanup sweep is efficient. **Example 2:** A bright "recognised"/"main" cell shows the fully-modernised population — licensed and on the preferred branch — which is the target state for every repo.
+
 ```js
 const licenseBranch = Array.from(
   d3.rollup(scopedRows, v => v.length, d => d.license_class, d => d.default_branch),
@@ -58,7 +62,13 @@ display(Plot.plot({
 }))
 ```
 
+> **Conclusion:** The heatmap's darkest cell identifies the dominant hygiene cluster. If "none"/"master" dominates, hygiene problems compound each other and should be fixed together. If "recognised"/"master" is also large, branch naming is a separate isolated issue that a simple default-branch rename can resolve without touching licensing.
+
 ## Flag Co-Occurrence Matrix
+
+A symmetric matrix showing how often pairs of hygiene flags appear together on the same repository. High off-diagonal counts mean fixing one flag often implies fixing both — or that a shared root cause drives multiple symptoms simultaneously. Low off-diagonal counts mean flags are independent, requiring separate targeted actions for each repo.
+
+> **How to read:** Row A, column B shows how many repos carry both flag A and flag B. The diagonal shows repos carrying that single flag. **Example 1:** High co-occurrence between "no-license" and "legacy-branch" means most unlicensed repos are also on "master" — a combined cleanup script can address both in one pass per repo. **Example 2:** A flag with strong off-diagonal entries across many other flags is a marker for overall neglect — those repos likely need a full hygiene sweep rather than targeted single-fix actions.
 
 ```js
 const flagNames = Array.from(new Set(scopedRows.flatMap(d => splitPipe(d.flags)))).sort();
@@ -85,7 +95,13 @@ display(Plot.plot({
 }))
 ```
 
+> **Conclusion:** Co-occurrence clusters guide prioritisation: pairs of flags that appear together frequently should be fixed together in a single automated pass. Isolated flags — those with sparse off-diagonal entries — can be addressed individually without needing to touch other hygiene dimensions.
+
 ## Repo Age X Size
+
+Each repository plotted by its age in years (x-axis) against its size in kilobytes on a square-root scale (y-axis). Dot size encodes hygiene-flag count; colour shows license class. The scatter reveals whether older repos are larger (expected — they have accumulated more corrections), whether the unlicensed repos are the historic ones or recent additions, and whether hygiene problems cluster in the oldest or newest part of the collection.
+
+> **How to read:** Each dot is one repo; x = years since creation, y = size in KB (sqrt scale to compress the large outliers), dot size = hygiene flag count, colour = license class. **Example 1:** Large red dots in the upper-right corner are old, large, and unlicensed — the highest-priority cleanup combination, since these hold the most historical content with the weakest legal frame. **Example 2:** Small green dots near the left edge are recently created repos already carrying a recognised license — evidence that newer repos are being set up with better hygiene practices from the start.
 
 ```js
 const nowYear = 2026;
@@ -114,7 +130,13 @@ display(Plot.plot({
 }))
 ```
 
+> **Conclusion:** The age-size scatter typically shows that the largest repos are the oldest (years of accumulated corrections) and that unlicensed repos span both old and new — not all unlicensed repos are legacy holdovers. Old, large, unlicensed repos are the most urgent targets; new unlicensed repos should be caught before they accumulate history.
+
 ## Cleanup Candidates: Idle Time X Open Issues
+
+A focused view on the small number of repositories flagged as cleanup candidates — temp_*, test_*, or legacy repos that are no longer actively maintained. Each is plotted by how long it has been idle (days since last push) against how many open issues it still carries. Idle repos with open issues are the hardest archiving case: clearly not being maintained, but with unresolved threads that require a decision before the repo can be safely archived.
+
+> **How to read:** Each dot is one cleanup-candidate repo; x = days idle, y = open issues. Labels name each repo directly. **Example 1:** A repo far right with 0 open issues is the easiest archiving case — idle for a long time with no outstanding threads, safe to archive immediately with maintainer sign-off. **Example 2:** A repo with non-zero open issues, even if very idle, is blocked until those issues are either migrated to the primary dictionary repo or explicitly closed — each is a separate decision that requires maintainer attention.
 
 ```js
 const cleanup = scopedRows.filter(d => splitPipe(d.flags).includes("cleanup-candidate"))
@@ -133,7 +155,13 @@ display(Plot.plot({
 }))
 ```
 
+> **Conclusion:** Cleanup candidates with open issues are the RH3 blockers. The specific blocker for each is typically a scholarly question thread that may need to be migrated to the primary dictionary repo before the temp repo can be safely archived. Jim Funderburk was notified in June 2026; archiving depends on his responses to those threads.
+
 ## Hygiene Flag Distribution
+
+The frequency distribution of how many hygiene flags each repository carries — 0, 1, 2, 3, and up. This is the headline summary of the org's overall hygiene state: a tall green bar at 0 means most repos are clean; a long right tail at 3–4 means some repos have accumulated multiple overlapping problems that need a coordinated sweep. After the RH1 rollout the distribution should have shifted left, with the green zero-flag bar significantly taller than before.
+
+> **How to read:** Each bar is one flag-count value; height = repos at that count. Green = 0 flags (clean). **Example 1:** A tall green bar means the majority of repos now pass every hygiene check — the RH1 rollout worked. **Example 2:** A persistent hump at 2–3 flags identifies repos where problems have clustered; these need multi-issue coordinated fixes rather than single targeted actions.
 
 ```js
 const flagHistogram = Array.from(d3.rollup(scopedRows, v => v.length, d => +d.flag_count || 0), ([flag_count, count]) => ({flag_count, count}))
@@ -150,5 +178,7 @@ display(Plot.plot({
   ]
 }))
 ```
+
+> **Conclusion:** The flag distribution is the headline hygiene metric for the org at a snapshot in time. A shift left (more repos at 0) after a cleanup campaign confirms the campaign worked. Any tail at 3+ flags after RH1 identifies the remaining hard cases that need direct maintainer attention, not automation.
 
 [Back to overview](/)

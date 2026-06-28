@@ -50,8 +50,9 @@ display(activeWithUnknowns.length
 
 ## Coverage Summary
 
-Known yes/no/unknown coverage across active repositories. Unknown means the
-field requires a live metadata fetch or an explicit inherited-template decision.
+For eight standard metadata fields — description, README, citation file, issue and PR templates, GitHub Actions workflows, Dependabot, and CodeQL — this chart shows how many active repositories have each field confirmed present (yes), confirmed absent (no), or undetermined (unknown) in the current snapshot. The stacked bars make the coverage gaps and data-uncertainty simultaneously visible in one view, so maintainers can distinguish "we know it is missing" from "we could not confirm either way."
+
+> **How to read:** Each row is one metadata field; bars stack yes (green), no (red), unknown (amber) repo counts. **Example 1:** A long green bar for "README" means the vast majority of repos have a confirmed readme — the most basic documentation standard is broadly met. **Example 2:** A long amber bar for "Citation" means the snapshot could not confirm citation status for many repos — this is typically a live-fetch failure, not confirmation that citation files are absent; re-running the snapshot live will resolve most amber entries.
 
 ```js
 const coverageFields = [
@@ -107,6 +108,8 @@ Plot.plot({
   ]
 })
 ```
+
+> **Conclusion:** Fields with high "no" counts and low "unknown" counts are confirmed coverage gaps — action is needed. Fields with high "unknown" counts are data-quality gaps — re-run the snapshot with live credentials first. The Active Repository Queue table below shows the per-repo breakdown for targeted follow-up.
 
 ## Active Repository Queue
 
