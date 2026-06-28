@@ -20,7 +20,8 @@ export default {
     {name: "Metadata Readiness", path: "/metadata-readiness"},
     {name: "Workflow Health", path: "/workflow-health"},
     {name: "Reproducibility", path: "/reproducibility"},
-    {name: "Data", path: "/data"}
+    {name: "Data", path: "/data"},
+    {name: "Conclusions", path: "/conclusions"}
   ],
   theme: ["air", "alt", "wide"],
   header: `<a href="/" style="display: flex; align-items: center; gap: 0.5rem; color: inherit; text-decoration: none;">

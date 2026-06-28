@@ -66,7 +66,9 @@ Across 13 years and ${repos.length} repositories, a small, dedicated team has lo
 
 ## Lead figure: How the work changed over 13 years
 
-Stacked-area chart of issue typology by year. Watch `text-correction` dominate; see the rise of `link-target`, `markup`, and (recently) `bug` / `enhancement` as the project matured.
+This chart is the single most expressive summary of the project's history. For most of its existence, the org's issue activity was almost entirely `text-correction` — catching OCR errors, transcription mistakes, and print-digitisation artefacts in the scanned dictionary text. Around 2019, `link-target` began to grow as the project built clickable links from dictionary source references to scanned PDF pages. More recently, `markup`, `enhancement`, and `bug` issues have grown, signalling the project's shift from raw content correction towards structured data quality and web-display features.
+
+> **How to read:** Each coloured band is one issue-type label; stacking shows the total issues opened that year across all repos. The total height of the stack in any year is the volume of that year's issue activity. **Example 1:** A year where `text-correction` fills the entire bar almost to the top means nearly all issues that year were correction tickets — the project was in pure digitisation mode. **Example 2:** Watching the top of the stack change colour over time reveals which new workstreams emerged: `link-target` appearing and growing after 2018 is the visual signature of the dictionary-to-book linking phase beginning.
 
 ```js
 Plot.plot({
@@ -84,7 +86,13 @@ Plot.plot({
 })
 ```
 
+> **Conclusion:** The org's issue history is a direct readout of its digitisation roadmap — first correct the text, then build the links, then improve the structure. The recent growth of `enhancement` and `bug` issues reflects a mature project that is now maintaining and improving a stable infrastructure rather than racing to complete a corpus.
+
 ## Annual throughput
+
+The annual throughput chart compares the two most fundamental issue metrics: how many issues were opened each year versus how many were closed. The gap between them in any given year reveals whether the backlog was growing or shrinking. Years where openings far exceed closings correspond to campaign launches; years where closings exceed openings correspond to focused resolution sprints or the tail of a completed campaign.
+
+> **How to read:** Two side-by-side bars for each year — blue for issues opened, green for issues closed. A taller blue bar than green bar in a year means the backlog grew; taller green means it shrank. **Example 1:** A year with a blue bar twice the height of the green bar indicates an intense campaign launch that created far more work than was resolved — issues were opened in bulk as a tracking mechanism. **Example 2:** A year where the green bar matches or exceeds the blue bar shows the project resolving work as fast as it opens it — a steady-state or catch-up mode.
 
 ```js
 Plot.plot({
@@ -102,7 +110,13 @@ Plot.plot({
 })
 ```
 
+> **Conclusion:** The opened/closed gap is largest in 2020–2022, the peak of the correction campaigns, and narrows in 2023–2025 as those campaigns wound down. The 2026 data shows closings keeping pace with openings — a healthier balance, consistent with the backlog-reduction trend visible in the [Activity](/activity) page.
+
 ## Top 10 most active repositories (all-time)
+
+The ten most active repositories by lifetime activity (issues + PRs + commits combined) reveal which parts of the org have absorbed the most collective work. This is dominated by the two central source-data repositories — csl-orig and whichever dictionary has been most actively corrected — plus the web infrastructure repos that are touched on every deploy cycle. Knowing which repos are most active also predicts where bugs, inconsistencies, and coordination bottlenecks are most likely to arise.
+
+> **How to read:** Each horizontal bar is one repository; its length equals the sum of all issues opened, pull requests opened, and commits ever recorded for that repo. Repos are sorted from most to least active, showing only the top 10. **Example 1:** If csl-orig leads by a wide margin, it means the canonical correction source repository has absorbed more combined activity than all other repos — expected, since every dictionary correction flows through it. **Example 2:** A tooling repo appearing in the top 10 (such as csl-pywork or csl-websanlexicon) indicates that the infrastructure layer has needed ongoing, intensive maintenance alongside the dictionary content work.
 
 ```js
 const repoActivity = d3.flatRollup(annual, v => d3.sum(v, x => x.issues_opened + x.prs_opened + x.commits), d => d.repo)
@@ -125,6 +139,8 @@ Plot.plot({
   ]
 })
 ```
+
+> **Conclusion:** The top-10 list is heavily skewed towards csl-orig and a handful of high-correction dictionaries, confirming that the project's activity is driven by content work rather than infrastructure churn. A tooling repo appearing in the top 10 is a signal worth investigating — it may indicate fragile tooling that requires frequent fixes, or an actively developed capability.
 
 ## Navigation
 

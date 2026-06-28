@@ -34,6 +34,10 @@ const cleanupRepos = health.filter(d => hasFlag(d, "cleanup-candidate"));
 
 ## Licensing
 
+The licensing picture changed substantially after the RH1 rollout in mid-2026. Before that rollout, 41 of 76 repositories had no license file and 21 carried a GitHub `NOASSERTION` flag — a legally precarious baseline for a project whose outputs are intended to be freely reusable by scholars worldwide. The RH1 campaign applied GPL-3.0 to code/tooling repos and CC-BY-SA-4.0 to dictionary and data repos, reducing both backlogs to near zero. The only remaining unlicensed repos are archive/temp candidates being held for the RH3 cleanup decision.
+
+> **How to read:** Three horizontal bars represent the three license classes: no license (red, the worst state), unrecognised/NOASSERTION (amber, GitHub cannot parse the license text), and recognised SPDX (green, a valid machine-readable license). **Example 1:** If the "Recognised SPDX" bar is the longest, the majority of repos now carry a license GitHub can correctly attribute — the target state after RH1. **Example 2:** Any remaining length in the "No license" bar after the rollout represents repos intentionally excluded from RH1 (archive candidates) or repos added after the rollout that have not yet been licensed.
+
 After the RH1 license rollout (2026-06), almost every repository carries a recognised SPDX license: code/tooling under GPL-3.0, dictionary and data repositories under CC-BY-SA-4.0, with mixed repos split (data CC-BY-SA-4.0 + `licenses/GPL-3.0.txt`). The `NOASSERTION` block is cleared. The only repositories still without a license are the RH3 archive/temp candidates, intentionally excluded until that cleanup runs.
 
 ```js
@@ -59,6 +63,8 @@ Plot.plot({
   ]
 })
 ```
+
+> **Conclusion:** The RH1 license rollout materially improved the org's licensing posture — the no-license and NOASSERTION backlogs are cleared except for a small number of archive/temp candidates blocked on the RH3 cleanup decision. The org's data is now legally usable by scholars who need a clear license to build on CDSL materials.
 
 ## License decision queue
 
@@ -150,7 +156,9 @@ display(html`${licenseBacklogGroups.map(([label, key, issue], index) => {
 
 ## Default branch
 
-Branch naming is inconsistent — a mix of `master`, `main`, and `gh-pages` complicates tooling, CI defaults, and runbooks.
+Branch naming is inconsistent across the org: most repositories still default to `master`, the Git naming convention that predates the 2020 industry shift to `main`. This matters in practice because CI configuration, runbooks, and pull-request targets frequently hard-code the expected default branch name. Repos on `master` also cannot use GitHub's newer branch-protection defaults, which assume `main`. A rename is tracked in hygiene issue #17 but requires maintainer action on each affected repo.
+
+> **How to read:** Each bar is one branch name used as the default, with length equal to the number of repositories using it. Green = `main` (preferred); amber = anything else. **Example 1:** If `master` has the longest bar, the majority of repos are on the legacy name — still functional but inconsistent with org-wide CI assumptions. **Example 2:** A `gh-pages` entry means some repos have their publish branch set as default, typically intentional for static-site repos where the content lives on `gh-pages`.
 
 ```js
 const branchData = Array.from(
@@ -173,6 +181,8 @@ Plot.plot({
   ]
 })
 ```
+
+> **Conclusion:** Branch naming is the largest remaining hygiene gap after the license rollout: a substantial share of repos still default to `master`, complicating CI defaults and runbook scripts that assume `main`. Unlike licensing, this is a low-risk rename that can be done one repo at a time without touching content — the main barrier is maintainer time, not technical complexity.
 
 ## Cleanup decision queue
 
@@ -210,7 +220,9 @@ display(html`<table>
 
 ## Repositories by flag count
 
-Each repository's hygiene-flag count. Hover for the specific flags. Five repos are fully clean; the rest carry at least one gap.
+The flag-count chart is the single most compact summary of the org's hygiene state: it shows every repository ranked by how many outstanding issues it has, using a simple count of audit flags (no-license, legacy-branch, cleanup-candidate, no-description, and similar). A repo with zero flags is clean on every dimension; a repo with three or four flags has multiple overlapping problems that compound each other. Most repos cluster at one or two flags — the licensing gap was the most common single-flag source, largely resolved by RH1.
+
+> **How to read:** Each horizontal bar is one repository; length equals its total number of active hygiene flags. Green = clean (0 flags). Hover to see the specific flags and license status for that repository. **Example 1:** A repo with 3 flags might carry all of: no license, legacy `master` branch, and cleanup-candidate status — three independent problems that each require a separate action to resolve. **Example 2:** A repo in green with a bar of length 0 has passed every check — it has a recognised SPDX license, uses `main` as its default branch, has a description, and is not flagged for archiving.
 
 ```js
 const ranked = health.slice().sort((a, b) => b.flag_count - a.flag_count || d3.ascending(a.repo, b.repo));
