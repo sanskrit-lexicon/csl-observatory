@@ -47,7 +47,7 @@ Plot.plot({
   x: {label: "Size (KB)", type: "log"},
   y: {label: null, domain: sized.map(d => d.repo)},
   marks: [
-    Plot.barX(sized, {x: "size_kb", y: "repo", fill: "#0075ca", tip: true}),
+    Plot.barX(sized, {x1: 1, x2: "size_kb", y: "repo", fill: "#0075ca", tip: true}),
     Plot.ruleX([1])
   ]
 })
