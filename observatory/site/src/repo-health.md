@@ -43,7 +43,9 @@ const licOrder = [
   {key: "recognised", label: "Recognised SPDX", color: "#1a7f37"}
 ];
 const licData = licOrder.map(d => ({label: d.label, count: licCounts.get(d.key) ?? 0, color: d.color}));
+```
 
+```js
 Plot.plot({
   width,
   height: 180,
@@ -155,7 +157,9 @@ const branchData = Array.from(
   d3.rollup(health, v => v.length, d => d.default_branch),
   ([branch, count]) => ({branch, count})
 ).sort((a, b) => b.count - a.count);
+```
 
+```js
 Plot.plot({
   width,
   height: 160,
@@ -210,7 +214,9 @@ Each repository's hygiene-flag count. Hover for the specific flags. Five repos a
 
 ```js
 const ranked = health.slice().sort((a, b) => b.flag_count - a.flag_count || d3.ascending(a.repo, b.repo));
+```
 
+```js
 Plot.plot({
   width,
   height: 1100,

@@ -91,7 +91,9 @@ const coverageLong = coverageRows.flatMap(row => [
   {label: row.label, status: "no", count: row.no},
   {label: row.label, status: "unknown", count: row.unknown}
 ]);
+```
 
+```js
 Plot.plot({
   width,
   height: 300,

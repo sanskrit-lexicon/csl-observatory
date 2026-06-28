@@ -39,7 +39,9 @@ const flow = velocity.flatMap(d => [
   {year: d.year, metric: "issues opened", n: d.issues_opened},
   {year: d.year, metric: "issues closed", n: d.issues_closed}
 ]);
+```
 
+```js
 Plot.plot({
   width,
   height: 360,
@@ -106,6 +108,9 @@ Plot.plot({
 
 ```js
 const repoSet = Array.from(new Set(annual.map(d => d.repo))).sort();
+```
+
+```js
 Plot.plot({
   width,
   height: 1200,

@@ -22,7 +22,9 @@ const contribTotals = d3.flatRollup(contributors, v => d3.sum(v, x => x.contribu
   .map(([login, total]) => ({login, total}))
   .sort((a, b) => b.total - a.total)
   .slice(0, 20);
+```
 
+```js
 Plot.plot({
   width,
   height: 500,
@@ -45,7 +47,9 @@ const repoCoverage = d3.flatRollup(contributors, v => v.length, d => d.login)
   .map(([login, n_repos]) => ({login, n_repos}))
   .sort((a, b) => b.n_repos - a.n_repos)
   .slice(0, 20);
+```
 
+```js
 Plot.plot({
   width,
   height: 500,
@@ -74,7 +78,9 @@ const newPerYear = d3.flatRollup(
   Array.from(firstCommit, ([login, date]) => ({login, year: date.getFullYear()})),
   v => v.length, d => d.year
 ).map(([year, n]) => ({year, n})).sort((a, b) => a.year - b.year);
+```
 
+```js
 Plot.plot({
   width,
   height: 350,
@@ -126,7 +132,9 @@ Each bar is the largest single contributor's share of that repository. Red bars 
 
 ```js
 const ranked = busFactor.slice().sort((a, b) => b.top_share - a.top_share);
+```
 
+```js
 Plot.plot({
   width,
   height: 760,

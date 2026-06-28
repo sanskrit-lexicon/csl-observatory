@@ -17,7 +17,9 @@ const repos = await FileAttachment("data/repos.csv").csv({typed: true});
 const langCounts = d3.flatRollup(repos, v => v.length, d => d.primary_language || "(none)")
   .map(([lang, count]) => ({lang, count}))
   .sort((a, b) => b.count - a.count);
+```
 
+```js
 Plot.plot({
   width,
   height: 400,
@@ -35,7 +37,9 @@ Plot.plot({
 
 ```js
 const sized = repos.filter(d => d.size_kb > 0).sort((a, b) => b.size_kb - a.size_kb).slice(0, 20);
+```
 
+```js
 Plot.plot({
   width,
   height: 500,
@@ -58,7 +62,9 @@ const repoTimeline = repos
   .filter(d => d.created_at)
   .map(d => ({...d, created: new Date(d.created_at)}))
   .sort((a, b) => a.created - b.created);
+```
 
+```js
 Plot.plot({
   width,
   height: 1100,

@@ -109,7 +109,9 @@ const repoActivity = d3.flatRollup(annual, v => d3.sum(v, x => x.issues_opened +
   .map(([repo, total]) => ({repo, total}))
   .sort((a, b) => b.total - a.total)
   .slice(0, 10);
+```
 
+```js
 Plot.plot({
   title: "Top 10 repos by lifetime activity",
   width,
