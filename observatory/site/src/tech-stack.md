@@ -41,9 +41,13 @@ Plot.plot({
 
 ## Repos by size (KB)
 
-Repository sizes span several orders of magnitude, from near-empty stub repos to large data stores. The largest repositories are source-data holders: csl-orig (the canonical correction target) and csl-corrections (the audit trail of every applied fix), whose sizes reflect years of accumulated change files and dictionary text. Tooling repos are orders of magnitude smaller, typically a few hundred kilobytes of scripts and configuration.
+<p style="font-size: 1.15em; line-height: 1.65;">Repository sizes span several orders of magnitude, from near-empty stub repos to large data stores. The largest repositories are source-data holders: csl-orig (the canonical correction target) and csl-corrections (the audit trail of every applied fix), whose sizes reflect years of accumulated change files and dictionary text. Tooling repos are orders of magnitude smaller, typically a few hundred kilobytes of scripts and configuration.</p>
 
-> **How to read:** The x-axis is logarithmic — each step right is ten times larger, not ten units larger, so a bar twice as long represents a repo ten times the size. Only the 20 largest repositories are shown. **Example 1:** A repo at 100,000 KB is 100× larger than one at 1,000 KB even though the visual difference looks modest on the log scale. **Example 2:** A bar starting very close to the left edge (≈1 KB) indicates an almost empty repo — a stub, placeholder, or pure-metadata repository.
+<blockquote style="padding-left: 2rem; padding-right: 2rem;">
+
+**How to read:** The x-axis is logarithmic — each step right is ten times larger, not ten units larger, so a bar twice as long represents a repo ten times the size. Only the 20 largest repositories are shown. **Example 1:** A repo at 100,000 KB is 100× larger than one at 1,000 KB even though the visual difference looks modest on the log scale. **Example 2:** A bar starting very close to the left edge (≈1 KB) indicates an almost empty repo — a stub, placeholder, or pure-metadata repository.
+
+</blockquote>
 
 ```js
 const sized = repos.filter(d => d.size_kb > 0).sort((a, b) => b.size_kb - a.size_kb).slice(0, 20);
