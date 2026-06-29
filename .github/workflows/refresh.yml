@@ -11,11 +11,17 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  # Shared with refresh-observatory.yml: both pipelines commit data/, so they
+  # must not run concurrently. Queue rather than cancel.
+  group: observatory-data
+  cancel-in-progress: false
+
 jobs:
   refresh:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -27,6 +33,10 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python scripts/pull_data.py
+          # Recover commit history for large repos the GraphQL endpoint can't
+          # serve (csl-orig, cologne-stardict, VCP, hwnorm1, ...) via a bare
+          # blob:none clone, before compute_metrics.py reads data/commits.json.
+          python scripts/retry_via_clone.py
           python scripts/compute_metrics.py
           python scripts/render_reports.py
 

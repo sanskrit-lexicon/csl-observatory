@@ -1,14 +1,23 @@
 # csl-observatory
 
-> **Live observatory for 12 years of Cologne Digital Sanskrit Lexicon (CDSL).**
+> **Live observatory for 13 years of Cologne Digital Sanskrit Lexicon (CDSL).**
 > Tracking 76 repos, 5,413 issues+PRs, 9,877 commits, and 16 contributors since 2014.
 
 ## What this is
 
-A meta-repository that **measures the entire sanskrit-lexicon GitHub organisation** and turns 12 years of distributed work into measurable, citable, reproducible knowledge. It is intentionally limited to repositories, issues, pull requests, commits, contributors, workflows, and organization-level maintenance evidence. The 2026-06-04 boundary cleanup is merged: dictionary-structure research belongs in [`csl-atlas`](https://github.com/sanskrit-lexicon/csl-atlas), standards/export work belongs in [`csl-standards`](https://github.com/sanskrit-lexicon/csl-standards), and DCS/corpus work belongs in [`VisualDCS`](https://github.com/gasyoun/VisualDCS).
+A meta-repository that **measures the entire sanskrit-lexicon GitHub organisation** and turns 13 years of distributed work into measurable, citable, reproducible knowledge. It serves five distinct use cases:
+
+1. **Org observability** — repositories, issues, PRs, commits, contributors, workflows, and maintenance evidence, published as reproducible findings and a live dashboard.
+2. **AI-assisted issue triage** — a living [Agent Automation Roadmap](docs/AGENT_ROADMAP.md) maps 820+ open issues across 68 repos by agent-readiness (Tier A: fix+PR; Tier B: verify+comment; Tier C: needs skill; Tier D: blocked on human decision), tracking which corrections agents can supply and in what order.
+3. **Maintainer coordination hub** — runbooks, decision logs, skills inventory, and bot-noise policies so Jim/Dhaval can see exactly what automation has touched and what still needs them.
+4. **Bot-noise management** — [AI contribution policy](docs/AI_CONTRIBUTION_POLICY.md), `no-bot` label protocol, and weekly human-activity feeds so automated agent volume does not drown maintainer discussion threads.
+5. **Agent findings digest** — research output from agent sweeps collected in structured `.md` files (see [`docs/question-research-findings.md`](docs/question-research-findings.md)) instead of being scattered as GitHub comments; only concrete, actionable findings are posted to issues.
+
+The 2026-06-04 boundary cleanup is merged: dictionary-structure research belongs in [`csl-atlas`](https://github.com/sanskrit-lexicon/csl-atlas), standards/export work belongs in [`csl-standards`](https://github.com/sanskrit-lexicon/csl-standards), and DCS/corpus work belongs in [`VisualDCS`](https://github.com/gasyoun/VisualDCS).
 
 ## Quick links
 
+- **[Agent Automation Roadmap](docs/AGENT_ROADMAP.md)** — living map of 820+ open issues: which agents can fix/supply data for, which need new skills, and in what order (Tier A–D classification)
 - **[Observatory dashboard](https://sanskrit-lexicon.github.io/csl-observatory/)** — live charts, deployed to GitHub Pages via `.github/workflows/deploy.yml`
 - **[Findings & reports](reports/README.md)** — the five reproducible analyses + the synthesis (start here)
 - **[Synthesis](reports/synthesis.md)** — *State of the observatory*, the four findings tied into one picture
@@ -18,8 +27,11 @@ A meta-repository that **measures the entire sanskrit-lexicon GitHub organisatio
 - **[Docs archive index](docs/ARCHIVE.md)** — legacy and moved-to-`csl-atlas` documents in one place
 - **[Data downloads](observatory/site/src/data/)** — every chart's source as CSV
 - **[Runbooks](runbook/)** — the issue-taxonomy procedures applied to all active repos
+- **[Maintenance skills](https://github.com/sanskrit-lexicon/cologne-skills)** — portable Claude Code skills for org-wide security & maintenance (PHP XSS sweep · security audit · alert triage)
 - **[Contributor & work statistics](docs/CONTRIBUTOR_STATS.md)** — per-contributor & per-repo commits, churn, tenure, and issues (2014–2026)
 - **[Decisions needed](docs/DECISIONS_NEEDED.md)** — open items blocked on a maintainer (decisions, credentials, confirmations)
+- **[AI / bot contribution policy](docs/AI_CONTRIBUTION_POLICY.md)** - norms for AI-assisted commits, comments, and shared tooling changes
+- **[Contributor entry path](docs/CONTRIBUTOR_ENTRY_PATH.md)** - safe setup, first tasks, taxonomy labels, and review expectations
 
 ## Findings
 
@@ -34,24 +46,57 @@ The headline picture is in **[`reports/synthesis.md`](reports/synthesis.md)**.
 | Issue-taxonomy adoption | [`taxonomy_adoption.md`](reports/taxonomy_adoption.md) | 89% typed, 63% conformant; 92% peak in 2025; 54 stray labels |
 | Velocity & health timeline | [`velocity_timeline.md`](reports/velocity_timeline.md) | 9,877 commits; peak 11 authors/yr; backlog 1,742 (2025) → 913 (2026) |
 | Contributor identity | [`contributor_identity.md`](reports/contributor_identity.md) | 0/16 authors have a registered ORCID |
+| **Error typology (OBS-T)** | [`obs_t_typology.md`](reports/obs_t_typology.md) | 52,498 corrections, two axes — location (sense 52.7% · markup 17.5% · headword 17.3%) × edit-type (median edit distance 2; 63% ≤2 chars); cross-dict V=0.432 |
 
 Actionable follow-ups are filed on the [Tooling Roadmap](https://github.com/orgs/sanskrit-lexicon/projects/9)
 as issues #15–#21 (Actions), with the findings themselves as #22–#25 (Findings).
+
+### OBS-T — error typology of digital Sanskrit dictionaries
+
+A standalone language-resource + finding track (Phases 1–8), distinct from the
+org-process findings above. It unifies 13 years of corrections (correction-form
+archive + `csl-orig` git history) into a 52,498-event corpus and a **two-axis
+typology** — **location** (where in the entry) × **edit-type** (what kind of edit).
+Design: [`docs/ERROR_TYPOLOGY_DESIGN.md`](docs/ERROR_TYPOLOGY_DESIGN.md) · datasheet:
+[`docs/DATASHEET.md`](docs/DATASHEET.md) · live page:
+[Error Typology](https://sanskrit-lexicon.github.io/csl-observatory/error-typology).
+Reports: [typology](reports/obs_t_typology.md) · [rigor](reports/obs_t_rigor.md) ·
+[robustness](reports/obs_t_robustness.md) · [baselines](reports/obs_t_baselines.md) ·
+[campaigns](reports/obs_t_campaigns.md) · [transliterator validation](reports/obs_t_translit_validation.md) ·
+[silver validation](reports/obs_t_silver.md) · [issue-label corroboration](reports/obs_t_issuelabel.md).
 
 ## What's in this repo
 
 | Path | Purpose |
 |---|---|
+| **[`docs/AGENT_ROADMAP.md`](docs/AGENT_ROADMAP.md)** | **Living map of 820+ open issues: Tier A (agent-fixable), B (verify+comment), C (needs skill), D (blocked). Start here for any automation session.** |
+| [`docs/question-research-findings.md`](docs/question-research-findings.md) | Digest of question-research sweep (2026-06-27): ~73 posted, ~57 skipped; ready-to-close list |
+| [`docs/bug-triage-findings.md`](docs/bug-triage-findings.md) | Digest of bug-triage sweep + P5 network retry (2026-06-27): 12 Tier A PRs opened (2 merged), ~8 already-fixed, ~18 skipped; new Tier A: csl-websanlexicon#25, csl-apidev#21 |
 | `scripts/{bus_factor,repo_health,taxonomy_adoption,velocity_timeline,contributor_identity}.py` | The five finding analyses (offline, over the committed site CSVs) |
+| `scripts/check_workspace.py` | Local workspace and sibling-repo prerequisite check |
 | `reports/` | Finding reports + [`synthesis.md`](reports/synthesis.md) + index |
 | `observatory/fetch.py`, `transform.py`, `build_people.py` | GitHub data fetch → time-series CSVs → contributor identities |
 | `observatory/site/` | Observable Framework dashboard source |
 | `observatory/site/src/data/` | The CSV snapshots the dashboard and findings read |
 | `docs/OBSERVATORY_DESIGN.md` | Boundary-safe design doc with GitHub/org KPI catalog |
+| `docs/AI_CONTRIBUTION_POLICY.md` | AI-assisted and automated contribution norms |
+| `docs/CONTRIBUTOR_ENTRY_PATH.md` | Safe contributor setup and first-task guide |
 | `docs/ARCHIVE.md` | Index of legacy and moved-to-`csl-atlas` docs |
 | `runbook/cologne-issue-runbook.md` | Dictionary-repo issue-taxonomy runbook |
 | `runbook/cologne-tooling-runbook.md` | Tooling-repo issue-taxonomy runbook |
 | `.github/workflows/refresh-observatory.yml` | Monthly auto-refresh (template; needs `workflow` token scope to push) |
+
+## Org maintenance skills
+
+Reusable [Claude Code](https://claude.com/claude-code) skills for security and maintenance across the organisation live in **[`sanskrit-lexicon/cologne-skills`](https://github.com/sanskrit-lexicon/cologne-skills)** — the shareable cut of the `/cologne-*` command family, encoding battle-tested playbooks (escaping decision tables, false-positive heuristics, the gotchas).
+
+| Command | What it does |
+|---|---|
+| `/cologne-php-xss-sweep <repo\|all>` | Find + fix reflected-XSS / SQL-injection / injection in a repo's PHP web-frontend (context-correct escaping), PR-only |
+| `/cologne-security-audit-all` | Org-wide audit — GitHub Actions (pwn-request / script-injection / token scope), committed secrets, SAST coverage |
+| `/cologne-alert-triage <repo>` | Triage CodeQL + Semgrep alerts: fix the genuine ones (PR), dismiss false-positives/won't-fixes with written justifications |
+
+Install: `git clone` that repo, then `cp .claude/commands/*.md ~/.claude/commands/` (or symlink). These complement the issue-taxonomy [runbooks](runbook/) above.
 
 ## Headline numbers (snapshot 2026-06)
 
@@ -65,7 +110,7 @@ as issues #15–#21 (Actions), with the findings themselves as #22–#25 (Findin
 | Most active repo | `csl-orig` (the git-based correction workflow) |
 | Peak commit year | 2026 (2,519 commits) |
 | Peak issue year | 2025 (1,178 opened) |
-| Dominant work type | `text-correction` (4,000+ across 12 years) |
+| Dominant work type | `text-correction` (4,000+ across 13 years) |
 
 ## Refresh cadence
 
@@ -91,7 +136,7 @@ contributor, workflow, project, or organization-process evidence.
 
 If you use these data in published work:
 
-> Gasūns, M. et al. (2026). *CSL Observatory: 12 years of Cologne Digital Sanskrit Lexicon* [Data set]. Zenodo. DOI: pending mint.
+> Gasūns, M. et al. (2026). *CSL Observatory: 13 years of Cologne Digital Sanskrit Lexicon* [Data set]. Zenodo. DOI: pending mint.
 
 Plus the snapshot date for reproducibility.
 
@@ -126,4 +171,4 @@ view → **Group by → Category**.
 
 ---
 
-*Last refreshed 2026-06-05.*
+*Last refreshed 2026-06-27.*

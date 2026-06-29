@@ -29,37 +29,73 @@ const baselines = await FileAttachment("data/obs_t_baselines.json").json();
   <div class="card"><h2>Derived (not heuristic)</h2><span class="big">${summary.derivedPct}%</span></div>
 </div>
 
-## The microstructure error typology
+## Two axes: location × edit-type
 
-Which component of the dictionary entry each correction repairs. The git layer
-(2019–2026) is attributed positionally from the source XML tags; the form layer
-(2014–2019) is joined to `csl-orig` by headword.
+Each correction is described on two orthogonal axes — **where** in the entry it
+lands (the microstructure *location*) and **what kind** of change it is (the
+*edit-type*). Mixing them was a pitfall; keeping them apart is the honest typology.
+
+### Axis A — location (derived labels)
+
+Where in the entry the correction repairs. Git layer is attributed positionally
+from the source XML tags; the form layer is joined to `csl-orig` by headword.
+Reported on derived labels (location is not guessed when the join fails).
 
 ```js
-const compTotals = summary.components.map(([component, count]) => ({component, count}));
+const locTotals = (summary.locationDerived ?? summary.components).map(([location, count]) => ({location, count}));
+```
+
+```js
 Plot.plot({
-  width, height: 340, marginLeft: 110,
-  x: {label: "events", grid: true},
-  y: {label: null, domain: compTotals.map(d => d.component)},
+  width, height: 300, marginLeft: 110,
+  x: {label: "events (derived)", grid: true},
+  y: {label: null, domain: locTotals.map(d => d.location)},
   marks: [
-    Plot.barX(compTotals, {x: "count", y: "component", fill: "#5319e7", tip: true}),
+    Plot.barX(locTotals, {x: "count", y: "location", fill: "#5319e7", tip: true}),
     Plot.ruleX([0])
   ]
 })
 ```
 
-## Twelve-year timelapse — components over time
+Corrections concentrate in the **sense (definition)** and **headword** — the
+meaning-bearing fields.
 
-Monthly correction volume, coloured by the component repaired. The form-form era
-and the git era meet at mid-2019 into one continuous record.
+### Axis B — edit-type (all events)
+
+What kind of change. Every category is a surface micro-edit; there is no
+"content rewrite" type — even corrections to definitions are small form fixes.
+
+```js
+const etTotals = (summary.editType ?? []).map(([type, count]) => ({type, count}));
+```
+
+```js
+Plot.plot({
+  width, height: 300, marginLeft: 110,
+  x: {label: "events", grid: true},
+  y: {label: null, domain: etTotals.map(d => d.type)},
+  marks: [
+    Plot.barX(etTotals, {x: "count", y: "type", fill: "#fb8c00", tip: true}),
+    Plot.ruleX([0])
+  ]
+})
+```
+
+## Twelve-year timelapse — location over time
+
+Monthly correction volume, coloured by the location repaired. The form era and the
+git era meet at mid-2019 into one continuous record.
 
 ```js
 const monthlyDated = monthly.map(d => ({...d, date: new Date(d.ym + "-01")}));
+```
+
+```js
 Plot.plot({
   width, height: 380,
   x: {label: null},
   y: {label: "events / month", grid: true},
-  color: {legend: true, scheme: "Tableau10"},
+  color: {legend: true, scheme: "Tableau10", label: "location"},
   marks: [
     Plot.areaY(monthlyDated, {x: "date", y: "count", fill: "component", tip: true}),
     Plot.ruleY([0])
@@ -79,7 +115,9 @@ const yearData = d3.flatRollup(
     v => d3.sum(v, x => x.count), d => d.component)
   .map(([component, count]) => ({component, count}))
   .sort((a, b) => b.count - a.count);
+```
 
+```js
 Plot.plot({
   width, height: 300, marginLeft: 110,
   title: `Components corrected in ${year}`,
@@ -101,6 +139,9 @@ by a large one.
 ```js
 const dens = dicts.filter(d => d.entries && d.events >= 30)
   .sort((a, b) => b.per_1k_entries - a.per_1k_entries).slice(0, 20);
+```
+
+```js
 Plot.plot({
   width, height: 460, marginLeft: 70,
   x: {label: "corrections per 1,000 entries", grid: true},
@@ -121,6 +162,9 @@ the genuine phoneme-confusion signal, led by the classic **b ↔ v** merger.
 ```js
 const cons = confus.filter(d => d.layer === "form" && d.unit === "consonant")
   .sort((a, b) => b.count - a.count).slice(0, 25);
+```
+
+```js
 Plot.plot({
   width, height: 420, marginLeft: 70,
   x: {label: null, domain: [...new Set(cons.map(d => d.from))]},
@@ -144,6 +188,9 @@ const ocr = d3.flatRollup(cross.filter(d => d.scheme === "ocr"),
 const tc = d3.flatRollup(cross.filter(d => d.scheme === "textcrit"),
     v => d3.sum(v, x => x.count), d => d.label)
   .map(([label, count]) => ({frame: "Textual criticism", label, count}));
+```
+
+```js
 Plot.plot({
   width, height: 320, marginLeft: 110, marginRight: 80,
   x: {label: "events", grid: true},

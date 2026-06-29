@@ -1,132 +1,133 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-06-11T17:38:18.372414+00:00",
+  "generatedAt": "2026-06-12T10:02:07.497475+00:00",
   "sourcePath": "correction_events_typed.csv",
-  "recordCount": 50953,
+  "recordCount": 52498,
   "assumptions": [
     "Crosswalks are secondary views derived from the typed edit-op trace; the canonical typology remains the microstructure component.",
     "Event-level label = the dominant (op, unit) of the edit trace.",
     "dittography/haplography detected only for clean single-char in/del.",
-    "Confusion matrix counts single-char substitutions over NFD chars."
+    "Confusion matrix counts single-char substitutions over NFD chars.",
+    "edit_space distinguishes IAST Sanskrit spans from raw source/markup edits; raw source letters are not labeled as Sanskrit case/spelling."
   ],
   "warnings": [],
   "stats": {
     "ocr": [
       [
         "substitution",
-        15847
+        14815
       ],
       [
         "insertion",
-        13195
+        14713
       ],
       [
         "deletion",
-        10564
+        11018
       ],
       [
         "segmentation",
-        9750
+        10253
       ],
       [
         "unknown",
-        890
+        1228
       ],
       [
         "transposition",
-        707
+        471
       ]
     ],
     "textcrit": [
       [
         "addition",
-        18877
+        20546
       ],
       [
         "substitution",
-        16432
+        15246
       ],
       [
         "omission",
-        13340
+        14260
       ],
       [
         "unknown",
-        890
-      ],
-      [
-        "metathesis",
-        732
+        1228
       ],
       [
         "haplography",
-        489
+        496
+      ],
+      [
+        "metathesis",
+        491
       ],
       [
         "dittography",
-        193
+        231
       ]
     ],
     "errantTop": [
       [
         "M:PUNCTUATION",
-        6675
-      ],
-      [
-        "U:PUNCTUATION",
-        5994
-      ],
-      [
-        "R:CONSONANT",
-        5533
+        6596
       ],
       [
         "M:CONSONANT",
-        5301
+        6337
       ],
       [
-        "R:CASE",
-        4462
+        "U:PUNCTUATION",
+        5638
+      ],
+      [
+        "R:CONSONANT",
+        5132
       ],
       [
         "U:CONSONANT",
-        3422
+        4342
+      ],
+      [
+        "R:CASE",
+        3965
       ],
       [
         "M:DIACRITIC",
-        3382
+        3771
       ],
       [
         "R:VOWEL",
-        2041
+        1983
       ],
       [
         "R:PUNCTUATION",
-        1916
+        1815
       ],
       [
         "M:VOWEL",
-        1481
-      ],
-      [
-        "U:WHITESPACE",
-        1377
-      ],
-      [
-        "U:VOWEL",
-        1245
-      ],
-      [
-        "R:DIGIT",
-        1151
+        1537
       ],
       [
         "U:DIACRITIC",
-        1138
+        1441
       ],
       [
-        "R:DIACRITIC",
-        1079
+        "U:WHITESPACE",
+        1356
+      ],
+      [
+        "M:DIGIT",
+        1327
+      ],
+      [
+        "none",
+        1228
+      ],
+      [
+        "U:VOWEL",
+        1209
       ]
     ],
     "confusionTopForm": [

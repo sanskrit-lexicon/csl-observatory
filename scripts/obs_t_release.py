@@ -66,6 +66,8 @@ def main():
             f'Temporal split: test = year >= {TEST_FROM}, dev = {DEV_FROM}-{TEST_FROM-1}, '
             'train = earlier (incl. the 2014-2019 form era).',
             'Train/test are time-disjoint so evaluation does not leak future edits.',
+            'Released identities use public canonical aliases or stable pseudonyms; '
+            'raw form-submit email addresses are not released.',
         ],
         'warnings': [
             'The form era (2014-2019) falls entirely in train; test is git-era only. '

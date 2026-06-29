@@ -1,87 +1,67 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-06-11T17:38:15.183094+00:00",
+  "generatedAt": "2026-06-12T10:02:03.409707+00:00",
   "sourcePath": "correction_events_all.csv + ../csl-orig (form join)",
-  "recordCount": 50953,
+  "recordCount": 52498,
   "assumptions": [
-    "Canonical typology = microstructure component (which part of the entry).",
-    "git layer: component read positionally from the changed source line tags.",
-    "form layer: component from the csl-orig <L> record segment whose IAST content contains the corrected value; else empirical-cluster fallback.",
-    "encoding/orthography components arise mainly from the form fallback; in the git layer such edits are attributed by location (headword/sense)."
+    "error_component is the LOCATION axis (which part of the entry); edit TYPE (orthography/encoding/diacritic) is a separate axis -> edit_type.",
+    "git layer: location read positionally from the changed source line tags; untagged record text = sense (definition prose).",
+    "form layer: location from the csl-orig <L> record segment whose IAST content contains the corrected value; if not derivable -> unattributed (we do NOT guess a location from the edit type).",
+    "form value-is-headword shortcuts are derived only when the matching key is unique and length >= 4; weaker shortcuts are unattributed/inferred."
   ],
   "warnings": [],
   "stats": {
-    "gitAttributed": 26512,
-    "formJoinHits": 7049,
-    "formFallback": 17392,
-    "formJoinRate": 0.288,
+    "gitAttributed": 28057,
+    "formJoinHits": 5698,
+    "formFallback": 18743,
+    "formJoinRate": 0.233,
     "componentTotals": [
       [
-        "orthography",
-        19529
+        "unattributed",
+        18743
       ],
       [
         "sense",
-        13626
-      ],
-      [
-        "headword",
-        7282
+        17778
       ],
       [
         "markup",
-        4400
+        5902
+      ],
+      [
+        "headword",
+        5823
       ],
       [
         "citation",
-        3580
-      ],
-      [
-        "encoding",
-        1325
+        3335
       ],
       [
         "meta",
-        822
+        624
       ],
       [
         "grammar",
-        294
-      ],
-      [
-        "unknown",
-        95
+        293
       ]
     ],
     "byLayer": {
       "form": [
         [
-          "orthography",
-          15228
+          "unattributed",
+          18743
         ],
         [
           "headword",
-          6280
-        ],
-        [
-          "encoding",
-          1325
+          4929
         ],
         [
           "sense",
-          638
-        ],
-        [
-          "markup",
-          455
+          591
         ],
         [
           "citation",
-          346
-        ],
-        [
-          "unknown",
-          95
+          104
         ],
         [
           "grammar",
@@ -95,33 +75,61 @@
       "git": [
         [
           "sense",
-          12988
-        ],
-        [
-          "orthography",
-          4301
+          17187
         ],
         [
           "markup",
-          3945
+          5902
         ],
         [
           "citation",
-          3234
+          3231
         ],
         [
           "headword",
-          1002
+          894
         ],
         [
           "meta",
-          791
+          593
         ],
         [
           "grammar",
-          251
+          250
         ]
       ]
+    },
+    "attributionRoutes": [
+      [
+        "git_positional",
+        28057
+      ],
+      [
+        "unattributed",
+        17392
+      ],
+      [
+        "value_headword_unique",
+        2552
+      ],
+      [
+        "segment_fuzzy",
+        2440
+      ],
+      [
+        "value_headword_weak",
+        1351
+      ],
+      [
+        "segment_exact",
+        706
+      ]
+    ],
+    "auditSampleRows": 75,
+    "auditSamplePool": {
+      "segment_fuzzy": 2440,
+      "value_headword_unique": 2552,
+      "value_headword_weak": 1351
     }
   }
 }

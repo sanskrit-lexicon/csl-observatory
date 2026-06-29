@@ -16,8 +16,12 @@ const adoption = await FileAttachment("data/taxonomy_adoption.csv").csv({typed: 
 
 ## Issue typology evolution
 
+The stacked area chart shows how the mix of issue types shifted as the project matured. In the early years (2014–2018), `text-correction` dominated overwhelmingly — the project was in raw digitisation mode, catching OCR errors and transcription mistakes. From 2019 onwards, `link-target` and `markup` issues grew as the project moved towards building richer web-display features and structured data. Since 2022, `enhancement` and `bug` issues have appeared in meaningful numbers, reflecting a maturing toolset that is now being actively improved rather than just populated with content corrections.
+
+> **How to read:** Each coloured band is one issue-type label; bands are stacked so the total height equals all issues opened that year. **Example 1:** A thickening `text-correction` band in 2020–2022 means correction issues dominated that peak period — the bulk csl-orig correction campaigns are visible here. **Example 2:** A new colour appearing at the top of the stack in a recent year marks the emergence of a label type that was rarely used before — for instance, `enhancement` growing visibly after 2022 signals the project's shift towards feature work.
+
 ```js
-Plot.plot({
+display(Plot.plot({
   width,
   height: 500,
   marginLeft: 60,
@@ -28,8 +32,10 @@ Plot.plot({
     Plot.areaY(typology, {x: "year", y: "count", fill: "type_label", curve: "monotone-x", tip: true}),
     Plot.ruleY([0])
   ]
-})
+}))
 ```
+
+> **Conclusion:** `text-correction` dominated the issue base for most of the project's life, but since 2022 `markup`, `link-target`, and `enhancement` have all grown, signalling a shift from raw correction work towards structural improvement and web-display feature development. The project's issue history is a direct readout of its digitisation roadmap.
 
 ## Taxonomy adoption & conformance
 
@@ -49,6 +55,8 @@ const totMulti = d3.sum(adoption, d => d.multi_type);
   <div class="card"><h2>Over-typed (&gt;1 type)</h2><span class="big">${totMulti.toLocaleString("en-US")}</span></div>
 </div>
 
+> **How to read:** Four lines track different conformance thresholds for the same cohort of issues: `typed` (carries at least one type label), `severity` (carries a severity label), `milestone` (assigned to a milestone), and `conformant` (all three simultaneously). The `conformant` line is always at or below the lowest of the other three. **Example 1:** A year where all four lines cluster near 100% means nearly every issue opened that year was fully tagged — the taxonomy was working well for that cohort. **Example 2:** A large gap between the `typed` line and the `conformant` line in a given year reveals the bottleneck: type labels are applied but severity or milestone assignment is lagging.
+
 Each line is the share of that year's issues meeting one requirement. Conformance climbs from the low-20s before the taxonomy matured (2014–2018) to a 92% peak in 2025; the 2026 dip reflects recently-opened issues not yet fully triaged (no milestone assigned).
 
 ```js
@@ -59,7 +67,7 @@ const series = adoption.flatMap(d => [
   {year: d.year, requirement: "conformant", pct: d.pct_conformant}
 ]);
 
-Plot.plot({
+display(Plot.plot({
   width,
   height: 380,
   marginRight: 90,
@@ -70,19 +78,29 @@ Plot.plot({
     Plot.line(series, {x: "year", y: "pct", stroke: "requirement", curve: "monotone-x", marker: "circle", tip: true}),
     Plot.ruleY([0])
   ]
-})
+}))
 ```
+
+> **Conclusion:** The taxonomy rollout was effectively complete by 2024–2025, with conformance near 92% at peak. The 2026 dip is expected — newly opened issues are not yet milestoned — and not a sign of declining standards. The data shows that retroactive label application (via the runbook) was largely successful in bringing the historical issue base into conformance.
 
 ## Issue type distribution (all-time, top labels)
 
+The all-time label distribution aggregates every issue ever opened across all repositories, showing the total historical footprint of each label type. This differs from the year-by-year typology chart: rather than showing trends, it shows the cumulative weight of each category over the org's entire history. The result is a direct readout of how the project has spent its collective attention.
+
+> **How to read:** Each bar is one issue label; its length equals the total number of issues carrying that label across all repositories and all time. **Example 1:** If `text-correction` sits at the top with several thousand issues, it means correcting OCR and transcription errors is and has always been the dominant activity of this project. **Example 2:** The `(unlabeled)` bar, if present, shows how many issues never received a type label — the pre-taxonomy historical backlog.
+
 ```js
-const labelTotals = d3.flatRollup(issues, v => v.length, d => d.labels.split("|").filter(l => l).join("|") || "(no labels)")
-  .filter(([k]) => k && !k.includes("|"))
-  .map(([label, count]) => ({label, count}))
+const typeLabelSet = new Set(typology.map(d => d.type_label));
+const issueLabels = d => String(d.labels ?? "").split("|").map(label => label.trim()).filter(Boolean);
+const issueTypeRows = issues.flatMap(d => {
+  const labels = issueLabels(d).filter(label => typeLabelSet.has(label));
+  return labels.length ? labels.map(label => ({label})) : [{label: "(unlabeled)"}];
+});
+const labelTotals = Array.from(d3.rollup(issueTypeRows, v => v.length, d => d.label), ([label, count]) => ({label, count}))
   .sort((a, b) => b.count - a.count)
   .slice(0, 20);
 
-Plot.plot({
+display(Plot.plot({
   width,
   height: 500,
   marginLeft: 200,
@@ -92,10 +110,16 @@ Plot.plot({
     Plot.barX(labelTotals, {x: "count", y: "label", fill: "#0075ca", tip: true}),
     Plot.ruleX([0])
   ]
-})
+}))
 ```
 
+> **Conclusion:** `text-correction` and `link-target` together account for the majority of the project's entire issue history, directly mirroring its two dominant workflow phases: first correcting OCR errors in the scanned dictionary text, then building clickable links from source references to scanned PDF pages. The distribution is the project's work log turned into a bar chart.
+
 ## Open vs closed by repo (top 20 most active)
+
+This chart compares the total number of issues ever opened against the number closed for the 20 most active repositories. The ratio of open to closed tells two different stories depending on the repo: for high-volume correction repos like csl-orig and MWS, a high closure rate signals that bulk correction campaigns ran to completion; for smaller repos with persistent open segments, it reveals where current backlog is concentrated.
+
+> **How to read:** Each bar is split into closed (green) and open (amber); the total length equals all issues ever opened in that repository. Bars are sorted by total issue count. **Example 1:** A bar that is mostly green means the repo's historic backlog has been largely resolved — corrections were opened and closed in coordinated campaigns. **Example 2:** A long amber segment at the right end of a bar, especially for a smaller repo, means significant open work remains — either an active campaign in progress or issues that have been triaged but not yet addressed.
 
 ```js
 const repoStats = d3.flatRollup(issues,
@@ -108,7 +132,7 @@ const repoStats = d3.flatRollup(issues,
  .sort((a, b) => b.total - a.total)
  .slice(0, 20);
 
-Plot.plot({
+display(Plot.plot({
   width,
   height: 600,
   marginLeft: 140,
@@ -122,7 +146,9 @@ Plot.plot({
     ]), {x: "count", y: "repo", fill: "kind", tip: true}),
     Plot.ruleX([0])
   ]
-})
+}))
 ```
+
+> **Conclusion:** The correction-heavy repositories (csl-orig, MWS) carry the most issues in absolute terms but also show high closure rates — their campaigns ran to completion. The current open backlog is concentrated in a smaller number of repos where correction campaigns are still in progress or triaging has not kept pace with issue creation. The open-vs-closed split is a practical triage dashboard: amber-heavy bars are the next places to focus review effort.
 
 [← back to overview](/)

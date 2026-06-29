@@ -1,11 +1,12 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-06-11T17:38:20.749235+00:00",
+  "generatedAt": "2026-06-12T10:02:10.164698+00:00",
   "sourcePath": "correction_events_final.csv",
-  "recordCount": 50953,
+  "recordCount": 52498,
   "assumptions": [
     "Temporal split: test = year >= 2025, dev = 2023-2024, train = earlier (incl. the 2014-2019 form era).",
-    "Train/test are time-disjoint so evaluation does not leak future edits."
+    "Train/test are time-disjoint so evaluation does not leak future edits.",
+    "Released identities use public canonical aliases or stable pseudonyms; raw form-submit email addresses are not released."
   ],
   "warnings": [
     "The form era (2014-2019) falls entirely in train; test is git-era only. Layer-specific baselines (form-only detection/correction) therefore use their own within-form temporal split (see obs_t_baselines.py)."
@@ -14,15 +15,15 @@
     "split": [
       [
         "train",
-        34474
+        34531
       ],
       [
         "test",
-        8359
+        9729
       ],
       [
         "dev",
-        8120
+        8238
       ]
     ],
     "splitByLayer": [
@@ -31,14 +32,14 @@
           "dev",
           "git"
         ],
-        8120
+        8238
       ],
       [
         [
           "test",
           "git"
         ],
-        8359
+        9729
       ],
       [
         [
@@ -52,7 +53,7 @@
           "train",
           "git"
         ],
-        10033
+        10090
       ]
     ]
   }

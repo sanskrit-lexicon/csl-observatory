@@ -1,16 +1,76 @@
 # Error typology of digital Sanskrit dictionaries — design spec
 
-Date: 2026-06-11
-Status: active design. Authoritative spec for the error-typology / correction-event
-track (working code **OBS-T**). Circulate to co-authors before code review.
-Owner: Mārcis Gasūns.
+Date: 2026-06-11 · **Updated 2026-06-12 (Phases 1–8 shipped; two-axis typology)**
+Status: implemented. Authoritative spec for the error-typology / correction-event
+track (working code **OBS-T**). Owner: Mārcis Gasūns.
 
-This document specifies a new observatory finding layer that complements the
+This document specifies an observatory finding layer that complements the
 existing correction-*sustainability* finding
-([`reports/obs_q_correction_sustainability.md`](../reports/obs_q_correction_sustainability.md),
-`scripts/obs_q_correction.py`). OBS-Q answers **who corrects, when, and how
+([`reports/obs_q_correction_sustainability.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_q_correction_sustainability.md),
+[`scripts/obs_q_correction.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/obs_q_correction.py)). OBS-Q answers **who corrects, when, and how
 fast**; OBS-T answers **what was wrong, where in the entry, and how the error
 profile changed over twelve years**.
+
+---
+
+## 0. Final state (Phases 1–8) — read this first
+
+The track is **implemented and merged to `main`**. The original single-axis
+"microstructure component" plan below (§1–§13) was **superseded in Phase 8** after a
+validation finding (see [`reports/obs_t_silver.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_t_silver.md)): the
+component column conflated two different things. The shipped design is **two
+orthogonal axes**:
+
+- **LOCATION** (`error_component`) — *where* in the entry: `headword · grammar ·
+  citation · sense · markup · crossref · meta`; reported on **derived** labels;
+  join-failures = `unattributed`. (Phase 3 / 8 in
+  [`scripts/attribute_components.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/attribute_components.py).)
+- **EDIT-TYPE** (`edit_type`) — *what kind* of change, from the edit-op trace:
+  `spelling · diacritic · case · spacing · punctuation · digit · transposition · source-raw`.
+  (Phase 8 in
+  [`scripts/attribute_crosswalks.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/attribute_crosswalks.py).)
+
+Current headline results are generated, not hand-maintained; see
+[`reports/obs_t_typology.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_t_typology.md),
+[`reports/obs_t_rigor.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_t_rigor.md),
+and the post-review delta tracker in
+[`docs/archive/OBS_T_FIX_PLAN_2026-06-12.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/archive/OBS_T_FIX_PLAN_2026-06-12.md).
+The paper claim is now narrower than the Phase-8 draft: micro-edit dominance is
+strongest overall and in sense/headword locations; markup, citation, and grammar
+are reported separately. H2 p-values are descriptive, with Cramer's V and
+commit/campaign-block sensitivity checks carrying the interpretation. H3 trends
+use multiple-comparison handling.
+
+Pipeline (all stdlib, offline; reproduce in order):
+[`build_correction_events`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/build_correction_events.py) →
+[`reconstruct_git_events`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/reconstruct_git_events.py) →
+[`attribute_components`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/attribute_components.py) →
+[`attribute_crosswalks`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/attribute_crosswalks.py) →
+[`obs_t_release`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/obs_t_release.py) →
+[`obs_t_typology`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/obs_t_typology.py) →
+[`obs_t_baselines`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/obs_t_baselines.py) →
+[`obs_t_rigor`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/obs_t_rigor.py) →
+[`obs_t_robustness`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/obs_t_robustness.py) →
+[`obs_t_campaigns`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/obs_t_campaigns.py) ·
+validation-only: [`obs_t_translit_check`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/obs_t_translit_check.py),
+[`obs_t_gold`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/obs_t_gold.py),
+[`obs_t_errorsample`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/obs_t_errorsample.py),
+[`obs_t_issuelabel`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/obs_t_issuelabel.py),
+[`obs_t_silver`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/obs_t_silver.py).
+
+Open: human gold/error annotation ([`validation/gold_sample.csv`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/validation/gold_sample.csv),
+[`validation/error_sample.csv`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/validation/error_sample.csv)) + a second annotator for κ.
+
+**Manuscript (2026-06-13).** The paper drafted from this spec lives at the repo root:
+[`paper-obs-t-error-typology.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/paper-obs-t-error-typology.md)
+— *Surface, Not Substance* — carrying the two-axis typology, H1–H3 with their statistics,
+the three crosswalks, the released-resource baselines, and the corrected-≠-error-rate
+caveat. Targets an NLP/language-resource venue (LREC-COLING; IJL alternate). No κ is
+asserted; the gold annotation above remains the open validation gate.
+
+The sections below are retained for provenance and the parts still accurate (data
+layers, normalization, NLP resource). Where they say "component = canonical
+typology", read "location = one of two axes".
 
 ---
 
@@ -40,12 +100,12 @@ the XML-tagged `csl-orig` sources locally.
 |---|---|
 | Output | One paper, NLP/CL venue; released language resource + baselines |
 | Time span | Full 2014–2026 (all five data layers unified) |
-| Canonical typology | **Lexicographic microstructure** (component-attributed) |
+| Canonical typology | **Two axes** (Phase 8): LOCATION (microstructure component, derived) × EDIT-TYPE (from edit-ops). Was single-axis "microstructure component"; see §0. |
 | Crosswalk taxonomies | NLP/ERRANT edit-ops · OCR/digitization · textual-criticism (Katre) |
 | Normalization | **IAST** canonical (NFC for display, NFD for diacritic-level edit ops) |
 | Resource split | **Temporal** (train past → test recent) |
-| Contributors | **Full real names**, alias-merged via `contributors_map.json` |
-| License | **CC-BY-4.0** (more permissive than CDSL's CC-BY-SA, for NLP reuse) |
+| Contributors | Release-safe public aliases or stable pseudonyms; raw form-submit emails removed |
+| License | Code GPL-3.0; OBS-T released data CC-BY-4.0 (`DATA_LICENSE.md`) |
 | Home | `csl-observatory` (process/time framing); cross-links to `csl-atlas` |
 
 ## 3. Data sources (five layers)
@@ -75,25 +135,29 @@ sibling for the schema/envelope). One row = one correction event.
 | `event_id` | str | derived | stable hash of (layer, dict, lcode, old, new, date) |
 | `date` | ISO date | L1/L2/L4 | event date (form submit, commit, or batch date) |
 | `source_layer` | enum | — | `form` \| `git` \| `printchange` \| `batch` |
+| `source_path` | str | L1/L2 | source file/path for the mined event |
+| `commit_sha` | str | L2 | commit SHA for git-layer events |
 | `dict` | str | all | dictionary code, lowercased to csl-orig convention |
 | `lcode` | str | L1/L2 | `<L>` record id when known (`0(NA)` → empty) |
 | `headword_iast` | str | L1 | headword, normalized to IAST |
-| `old_iast` | str | all | erroneous string, IAST/NFC; inline commentary stripped |
-| `new_iast` | str | all | corrected string, IAST/NFC; inline commentary stripped |
+| `old_iast` | str | all | erroneous string, IAST/NFC for Sanskrit spans; raw source span otherwise |
+| `new_iast` | str | all | corrected string, IAST/NFC for Sanskrit spans; raw source span otherwise |
 | `old_raw` / `new_raw` | str | all | verbatim source cells (audit trail) |
 | `inline_comment` | str | L1 | commentary lifted out of the NEW cell |
 | `edit_ops` | json | derived | alignment trace over NFD chars (§5.4) |
 | `edit_distance` | int | derived | Damerau–Levenshtein over NFD |
+| `edit_space` | enum | derived | `iast` \| `slp1_raw` \| `markup_raw` |
 | `script_old` / `script_new` | enum | derived | `deva` \| `iast` \| `latin` \| `mixed` |
 | `comment_raw` | str | L1 | the form's free-text type comment |
-| `error_type_empirical` | str | derived | normalized empirical cluster label (§6.2) |
+| `error_type_empirical` | str | derived | normalized empirical cluster label (§6.2), diagnostic only |
 | `error_component` | enum | derived | microstructure component (§6.1) — the canon |
 | `errant_type` | str | derived | crosswalk: operation × unit (§6.4) |
 | `ocr_class` / `textcrit_class` | str | derived | crosswalk columns (§6.4) |
 | `corrector` | str | L1/L2/L4 | canonical login (alias-merged) |
-| `corrector_name` | str | derived | real name from `contributors_map.json` |
+| `corrector_name` | str | derived | public name or stable pseudonym; no raw form emails |
 | `latency_days` | int | L1 | submit → "Corrected" (when parseable) |
 | `evidence_level` | enum | — | `observed` \| `derived` \| `inferred` |
+| `attribution_route` | str | derived | route used for location attribution (exact segment, shortcut, fuzzy, unattributed) |
 | `warnings` | str | — | per-row caveats (unparsed cell, no lcode join, …) |
 
 Every generated file uses the observatory/atlas **envelope**: `schemaVersion`,
@@ -164,21 +228,25 @@ text:
 | `crossref` | `<lb>`,link refs | broken cross-reference |
 | `orthography` | body word, no tag | plain spelling typo in body |
 
-When the join fails the component is assigned from the empirical cluster and
-flagged `inferred`.
+When the join fails the released component is `unattributed` and flagged
+`inferred`; the empirical cluster is retained only as a diagnostic feature.
 
 **Phase 3 outcome (2026-06-11).** Implemented in `scripts/attribute_components.py`.
 - **git layer: 26,512 events, 100% positionally derived** — the changed source line
   carries its tags, so the component is read off directly. Distribution: sense 12,988,
   orthography 4,301, markup 3,945, citation 3,234 (PWG's dense `<ls>`), headword 1,002.
-- **form layer: 12.9% derived (3,158), the rest inferred.** Two legacy-data findings
+- **Historical Phase-3 form layer: 12.9% derived (3,158), the rest inferred.**
+  The post-review implementation records attribution routes and leaves weak joins
+  `unattributed`. Two legacy-data findings
   forced the join onto the **headword** rather than the L-code: (a) the cfr "L code"
   cell is free-text (`[L=5590] [p= 1-299]`), and (b) more fundamentally, the 2014-era
   sequential `<L>` ids have **drifted** against today's csl-orig (cfr L=4477 → utkaṇṭhā,
   but current record 4477 = utkalaṃ). The headword is the only stable key; even so, the
   cfr "headword" cell is usually the *old* (mistyped) form, so the join also tries the
   corrected value and first tokens as entry keys.
-- **Overall 58% derived / 42% inferred** across 50,953 events. The low form-layer
+- **Historical Phase-3 overall: 58% derived / 42% inferred** across 50,953 events.
+  Current numbers are regenerated by the pipeline and recorded in
+  `docs/archive/OBS_T_FIX_PLAN_2026-06-12.md`. The low form-layer
   link rate is reported, not hidden: historical correction-form data is only partly
   machine-linkable to current sources because of encoding heterogeneity and id drift —
   a result the paper can state directly. Future work (Phase 3.1): fuzzy/edit-distance
@@ -188,13 +256,14 @@ flagged `inferred`.
 Normalize `comment_raw` (lowercase, strip, collapse the 40+ `typo` variants);
 cluster on `comment + edit_op signature`. Produce a frequency table of emergent
 clusters (`typo`, `capitalization`, `AS-number`, `IAST/diacritic`, `markup`,
-`OCR/print`, `reference`, `variant`, `article-splitting`, …) and a **crosswalk
-table** mapping each empirical cluster → canonical `error_component`.
+`OCR/print`, `reference`, `variant`, `article-splitting`, …). These clusters are
+diagnostic features and baseline covariates, not a fallback source for the
+canonical location label.
 
 ### 6.3 Evidence labels
 `observed` = present in source cell; `derived` = deterministic rule (edit ops,
-component join that succeeded); `inferred` = heuristic (NEW-cell split, component
-fallback). No figure hides the label.
+component join that succeeded); `inferred` = heuristic or failed location join
+kept as `unattributed`. No figure hides the label.
 
 ### 6.4 Crosswalk columns
 Same event also typed under three secondary frames so reviewers from any tradition
@@ -234,8 +303,8 @@ Observable Framework pages under the observatory site:
   (`split ∈ {train,dev,test}` by date thresholds, test = most recent).
 - **Baselines**: (1) error **detection** (old vs new token flag, P/R/F1);
   (2) error **correction** (char-level edit transducer / seq2seq old→new);
-  (3) error-**type classifier** (predict `error_component` from edit-ops —
-  validates the taxonomy is learnable).
+  (3) **location classifier** (predict `error_component` from edit-ops, with an
+  ablation that removes `error_type_empirical`).
 
 ## 10. Phased plan
 
@@ -268,8 +337,8 @@ Observable Framework pages under the observatory site:
 - L1∩L2 dedup false-merges (mitigate: conservative fuzzy key + warning).
 - Component join miss-rate on dicts without clean `<L>` codes in the form era
   (mitigate: edit-op fallback, labeled `inferred`).
-- Privacy: full real names — strip raw emails from public output; keep only the
-  canonical login + real name already public in `contributors_map.json`.
+- Privacy: strip raw form-submit emails from public output; keep public canonical
+  aliases/names where already present and stable pseudonyms otherwise.
 
 ## 13. Related
 

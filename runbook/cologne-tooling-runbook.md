@@ -448,7 +448,7 @@ Generate `CLAUDE.md` with sections tailored to the repo category:
 
 Required sections (order matters):
 1. Title + one-sentence purpose
-2. **Documentation callout (preserve-if-present)** — if the repo has an authoritative human guide (e.g. `docs/*.md` referenced from `CLAUDE.md`, or an existing `## Documentation` block in the current README), carry that link forward verbatim into the regenerated README. **Never drop it.** Before overwriting, grep the existing README for a `## Documentation` heading and any `docs/` links and re-emit them in the new file.
+2. **Manual overview block (preserve verbatim)** — human-maintained README material belongs between `<!-- BEGIN MANUAL: overview -->` and `<!-- END MANUAL: overview -->`. Preserve every `<!-- BEGIN MANUAL:* -->` block exactly when regenerating README content. Use the Jim-style templates in [`docs/README_TEMPLATE_TYPOLOGY.md`](../docs/README_TEMPLATE_TYPOLOGY.md), especially Templates C-E for source-data, build, and web-runtime repos.
 3. Status badge row (build, license, language, last commit)
 4. Contents (top-level dir table)
 5. **Tech stack table**: runtime, framework, db, build tool, deploy target

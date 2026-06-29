@@ -12,8 +12,8 @@ Phases handled here:
   project    Phase 6          add every open issue to org Project #9
                               (Tooling Roadmap).
   refresh    Phase 9          rewrite README with live counts + Mermaid pies,
-                              validating each mermaid block via the GitHub API
-                              before committing.
+                              preserving manual blocks and validating each
+                              mermaid block via the GitHub API before committing.
   audit                       reconcile project items vs per-repo open counts.
 
 Usage:
@@ -103,10 +103,19 @@ CORE_LABELS = [
 ]
 MILESTONES = ["API Stability", "User Experience", "Data Quality",
               "Developer Experience", "Community"]
+README_PATHS = ("README.md", "readme.md")
+MANUAL_BLOCK_RE = re.compile(
+    r"<!-- BEGIN MANUAL:[\s\S]*?<!-- END MANUAL:[^\n]*?-->",
+    re.MULTILINE,
+)
 
 TYPE_SET = {n for n, _, _ in CORE_LABELS
             if n not in ("trivial", "minor", "major", "critical")}
 SEV_SET = {"trivial", "minor", "major", "critical"}
+
+# Auto-generated log issues (e.g. csl-corrections "Daily Corrections - <date>")
+# are not triageable work — exclude them from verify + audit.
+EXEMPT_LABELS = {"daily-corrections"}
 
 
 def gh(args, **kw):
@@ -186,6 +195,8 @@ def verify(repo):
     mt, ms_, mm, mut, mus = [], [], [], [], []
     for i in issues:
         n, lbls, ms = i["n"], set(i["labels"]), i["milestone"]
+        if lbls & EXEMPT_LABELS:
+            continue
         ts = lbls & TYPE_SET
         ss = lbls & SEV_SET
         if not ts:
@@ -247,10 +258,49 @@ def _fetch_total_counts(repo):
     return o, c
 
 
+def _fetch_readme_info(repo):
+    for path in README_PATHS:
+        r = gh(["api", f"repos/{ORG}/{repo}/contents/{path}"])
+        if r.returncode != 0:
+            continue
+        try:
+            payload = json.loads(r.stdout)
+            raw = payload.get("content") or ""
+            text = base64.b64decode(raw).decode("utf-8")
+            return {"path": payload.get("path") or path,
+                    "sha": payload.get("sha"),
+                    "text": text}
+        except (json.JSONDecodeError, UnicodeDecodeError, ValueError):
+            pass
+    return {"path": "README.md", "sha": None, "text": ""}
+
+
 def _fetch_readme_sha(repo):
-    r = gh(["api", f"repos/{ORG}/{repo}/contents/README.md", "--jq", ".sha"])
-    s = r.stdout.strip()
-    return s if s and "not found" not in s.lower() else None
+    return _fetch_readme_info(repo)["sha"]
+
+
+def _fetch_readme_text(repo):
+    return _fetch_readme_info(repo)["text"]
+
+
+def _fetch_readme_path(repo):
+    return _fetch_readme_info(repo)["path"]
+
+
+def _fetch_readme_payload(repo):
+    info = _fetch_readme_info(repo)
+    if info["sha"] is None:
+        return "README.md", None, ""
+    try:
+        return info["path"], info["sha"], info["text"]
+    except KeyError:
+        return "README.md", None, ""
+
+
+def _extract_manual_blocks(readme_text):
+    if not readme_text:
+        return []
+    return [m.group(0).strip("\n") for m in MANUAL_BLOCK_RE.finditer(readme_text)]
 
 
 def _validate_mermaid(block_text):
@@ -258,8 +308,9 @@ def _validate_mermaid(block_text):
     return "highlight-source-mermaid" in r.stdout
 
 
-def _build_readme(repo, category, meta, issues, milestones, total_open, total_closed):
+def _build_readme(repo, category, meta, issues, milestones, total_open, total_closed, existing_readme=""):
     cat = category
+    manual_blocks = _extract_manual_blocks(existing_readme)
     domains = [f"domain:{n}" for n, _ in DOMAIN_MAP.get(cat, [])]
     type_counts = Counter()
     sev_counts = Counter()
@@ -277,8 +328,10 @@ def _build_readme(repo, category, meta, issues, milestones, total_open, total_cl
 
     md = [f"# {repo}\n",
           f"CDSL **{cat}** repository in the Sanskrit Lexicon project.",
-          desc, "",
-          "## Tech Stack", "",
+          desc, ""]
+    if manual_blocks:
+        md += manual_blocks + [""]
+    md += ["## Tech Stack", "",
           f"- **Runtime**: {lang}",
           "- **Build**: per-repo workflow",
           "- **Pipeline**: see [csl-observatory tooling runbook]"
@@ -326,14 +379,14 @@ def refresh(repo, category):
     issues = _fetch_issues(repo, "open")
     milestones = _fetch_milestones(repo)
     total_open, total_closed = _fetch_total_counts(repo)
-    body = _build_readme(repo, category, meta, issues, milestones, total_open, total_closed)
+    readme_path, sha, existing_readme = _fetch_readme_payload(repo)
+    body = _build_readme(repo, category, meta, issues, milestones, total_open, total_closed, existing_readme)
     for block in re.findall(r"```mermaid\n[\s\S]*?\n```", body):
         if not _validate_mermaid(block):
             print(f"  ABORT mermaid validation failed:\n{block[:120]}")
             return False
-    sha = _fetch_readme_sha(repo)
     content_b64 = base64.b64encode(body.encode("utf-8")).decode("ascii")
-    args = ["api", f"repos/{ORG}/{repo}/contents/README.md", "-X", "PUT",
+    args = ["api", f"repos/{ORG}/{repo}/contents/{readme_path}", "-X", "PUT",
             "-f", "message=docs(runbook): refresh tooling-repo README with live counts",
             "-f", f"content={content_b64}"]
     if sha:
@@ -361,7 +414,7 @@ def audit(repos):
                 nodes {{
                   content {{
                     __typename
-                    ... on Issue        {{ number state repository {{ name }} }}
+                    ... on Issue        {{ number state labels(first:20){{nodes{{name}}}} repository {{ name }} }}
                     ... on PullRequest  {{ number state repository {{ name }} }}
                   }}
                 }}
@@ -380,15 +433,23 @@ def audit(repos):
     by_repo = Counter()
     for it in items:
         c = it.get("content") or {}
-        if c.get("__typename") in ("Issue", "PullRequest") and c.get("repository"):
+        # count only OPEN, non-exempt issues on the board — closed issues / PRs and
+        # exempt auto-logs would otherwise skew the board count vs the triage set
+        if (c.get("__typename") == "Issue" and c.get("state") == "OPEN"
+                and c.get("repository")):
+            lbls = {l["name"] for l in c.get("labels", {}).get("nodes", [])}
+            if lbls & EXEMPT_LABELS:
+                continue
             by_repo[c["repository"]["name"]] += 1
 
-    print(f"total items in project #{PROJECT_NUMBER}: {len(items)}")
-    print(f"{'Repo':30} {'InProject':>10} {'OpenIssues':>12} {'Diff':>6}")
+    print(f"total OPEN issues on project #{PROJECT_NUMBER}: {sum(by_repo.values())}")
+    print(f"{'Repo':30} {'OnBoard':>10} {'Triageable':>12} {'Diff':>6}")
     mismatches = []
     for repo in repos:
         in_proj = by_repo.get(repo, 0)
-        actual, _ = _fetch_total_counts(repo)
+        # triageable = open, PR-free, minus exempt auto-log issues (daily-corrections)
+        actual = sum(1 for i in _fetch_issues(repo, "open")
+                     if not (set(i["labels"]) & EXEMPT_LABELS))
         diff = in_proj - actual
         flag = "" if diff == 0 else "MISS"
         if diff != 0:

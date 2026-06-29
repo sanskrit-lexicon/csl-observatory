@@ -134,10 +134,13 @@ def main():
     A('')
     A('## Licensing')
     A('')
-    A('More than half the ecosystem carries no license, which leaves reuse '
-      'rights legally undefined. A further block has a LICENSE file GitHub '
-      'cannot map to an SPDX id (`NOASSERTION`) — usually a non-standard or '
-      'lightly-edited license text worth normalising.')
+    A('After the RH1 license rollout (2026-06), almost every repository carries '
+      'a recognised SPDX license — code/tooling under GPL-3.0, dictionary and '
+      'data repositories under CC-BY-SA-4.0, mixed repos split (data '
+      'CC-BY-SA-4.0 + `licenses/GPL-3.0.txt`). The `NOASSERTION` block is '
+      'cleared. The only repositories still without a license are the RH3 '
+      'archive/temp candidates, intentionally excluded until that cleanup runs. '
+      'See `docs/RH1_LICENSE_ROLLOUT_LOG.md`.')
     A('')
     A('| License state | Count | Repositories |')
     A('|---|---:|---|')

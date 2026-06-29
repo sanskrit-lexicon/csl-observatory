@@ -3,11 +3,12 @@
 csl-observatory Phase 3 — people.yaml builder.
 
 Consolidates contributor information by:
-1. Fetching CITATION.cff from all 63 repos
-2. Extracting authors (name, ORCID, affiliation, email)
-3. Cross-referencing with GitHub commit/issue contributors
-4. Producing observatory/data/people.yaml with one entry per person
-5. Flagging entries with missing data for maintainer enrichment
+1. Reading the current repo inventory from data/repos.csv
+2. Fetching CITATION.cff from those repos
+3. Extracting authors (name, ORCID, affiliation, email)
+4. Cross-referencing with GitHub commit/issue contributors
+5. Producing data/people.yaml with one entry per person
+6. Flagging entries with missing data for maintainer enrichment
 
 Output schema:
   - login: github_username           # canonical key
@@ -24,34 +25,36 @@ Output schema:
 import subprocess
 import json
 import sys
-import re
+import csv
 import yaml  # pip install pyyaml if missing
 from pathlib import Path
-from datetime import datetime, timezone
 
 sys.stdout.reconfigure(encoding='utf-8')
 sys.stderr.reconfigure(encoding='utf-8')
 
 ORG = "sanskrit-lexicon"
 REPO_ROOT = Path(__file__).parent
-DATA_DIR = REPO_ROOT / "data"
-DATA_DIR.mkdir(parents=True, exist_ok=True)
+DATA_DIR = REPO_ROOT.parent / "data"
 
-ALL_REPOS = [
-    # Dictionary repos (35)
-    "PWG", "PWK", "MWS", "MD", "AP", "AP90", "GRA", "FRI",
-    "SCH", "DCS", "VCP", "ApteES", "SKD", "MCI", "CORRECTIONS", "WIL",
-    "BHS", "VEI", "ACC", "KRM", "BUR", "CAE", "CCS", "STC", "BEN",
-    "BOR", "INM", "BOP", "LRV", "AMAR", "SHS", "KNA", "KOW", "PUI",
-    "csl-observatory",
-    # Tooling repos (28)
-    "COLOGNE", "GreekInSanskrit", "hwnorm1", "alternateheadwords",
-    "cologne-stardict", "rvlinks", "MWinflect", "csl-doc", "csl-apidev",
-    "csl-homepage", "csl-websanlexicon", "csl-pywork", "csl-orig",
-    "csl-westergaard", "csl-kale", "csl-inflect", "csl-corrections",
-    "hwnorm2", "avlinks", "csl-devanagari", "csl-newsletter", "csl-lnum",
-    "csl-ldev", "literarysource", "mw-dev", "csl-app", "csl-lslink"
-]
+
+def load_repo_inventory():
+    """Read the current observatory repo inventory from data/repos.csv."""
+    repos_csv = DATA_DIR / "repos.csv"
+    if not repos_csv.exists():
+        raise SystemExit(
+            f"repo inventory missing: {repos_csv}. Run transform.py before build_people.py."
+        )
+    repos = []
+    seen = set()
+    with open(repos_csv, encoding="utf-8", newline="") as f:
+        for row in csv.DictReader(f):
+            repo = (row.get("repo") or "").strip()
+            if repo and repo not in seen:
+                repos.append(repo)
+                seen.add(repo)
+    if not repos:
+        raise SystemExit(f"repo inventory had no repo rows: {repos_csv}")
+    return repos
 
 def gh(*args, timeout=60):
     """Run gh with arg list."""
@@ -103,12 +106,13 @@ def main():
     print(f"BUILDING people.yaml")
     print(f"{'='*60}")
 
+    repos = load_repo_inventory()
     people = {}  # key: login (or name if no login), value: dict
 
-    print(f"\nStep 1: Fetching CITATION.cff from {len(ALL_REPOS)} repos...")
+    print(f"\nStep 1: Fetching CITATION.cff from {len(repos)} repos...")
     citation_authors_by_repo = {}
-    for i, repo in enumerate(ALL_REPOS, 1):
-        print(f"  [{i}/{len(ALL_REPOS)}] {repo}", end=" ")
+    for i, repo in enumerate(repos, 1):
+        print(f"  [{i}/{len(repos)}] {repo}", end=" ")
         content = fetch_citation(repo)
         if not content:
             print("(no CITATION.cff)")
@@ -117,13 +121,13 @@ def main():
         citation_authors_by_repo[repo] = authors
         print(f"({len(authors)} authors)")
 
-    print(f"\nStep 2: Fetching contributors from {len(ALL_REPOS)} repos...")
+    print(f"\nStep 2: Fetching contributors from {len(repos)} repos...")
     contributors_by_repo = {}
-    for i, repo in enumerate(ALL_REPOS, 1):
+    for i, repo in enumerate(repos, 1):
         contribs = fetch_contributors(repo)
         contributors_by_repo[repo] = contribs
         if i % 10 == 0:
-            print(f"  [{i}/{len(ALL_REPOS)}]...")
+            print(f"  [{i}/{len(repos)}]...")
 
     print(f"\nStep 3: Consolidating people index...")
 
@@ -213,7 +217,7 @@ def main():
     )
 
     # Write YAML
-    output_yaml = REPO_ROOT.parent / "data" / "people.yaml"
+    output_yaml = DATA_DIR / "people.yaml"
     output_yaml.parent.mkdir(parents=True, exist_ok=True)
 
     yaml_content = """# csl-observatory contributors index
@@ -270,7 +274,7 @@ people:
     print(f"{'='*60}")
 
     # Write a CSV summary too
-    output_csv = REPO_ROOT.parent / "data" / "people_summary.csv"
+    output_csv = DATA_DIR / "people_summary.csv"
     with open(output_csv, "w", encoding="utf-8") as f:
         f.write("login,name,orcid,affiliation,n_repos_authored,n_repos_contributed,status\n")
         for p in sorted_people:

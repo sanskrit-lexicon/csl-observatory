@@ -1,0 +1,138 @@
+{
+  "generatedAt": "2026-06-12T10:03:46.607767+00:00",
+  "silver_truth": "form events with a successful csl-orig headword join (derived)",
+  "testable_overlap": 5634,
+  "heuristic_agreement": 0.001,
+  "per_cluster": {
+    "typo": {
+      "agree": 0,
+      "n": 4712,
+      "rate": 0.0
+    },
+    "ocr-print": {
+      "agree": 0,
+      "n": 639,
+      "rate": 0.0
+    },
+    "markup": {
+      "agree": 0,
+      "n": 193,
+      "rate": 0.0
+    },
+    "iast-diacritic": {
+      "agree": 0,
+      "n": 45,
+      "rate": 0.0
+    },
+    "variant": {
+      "agree": 2,
+      "n": 32,
+      "rate": 0.062
+    },
+    "reference": {
+      "agree": 3,
+      "n": 8,
+      "rate": 0.375
+    },
+    "capitalization": {
+      "agree": 0,
+      "n": 5,
+      "rate": 0.0
+    }
+  },
+  "inferred_total": 18743,
+  "inferred_cluster_mix": [
+    [
+      "typo",
+      13805
+    ],
+    [
+      "capitalization",
+      1468
+    ],
+    [
+      "ocr-print",
+      1155
+    ],
+    [
+      "iast-diacritic",
+      839
+    ],
+    [
+      "markup",
+      572
+    ],
+    [
+      "as-number",
+      493
+    ],
+    [
+      "reference",
+      245
+    ],
+    [
+      "other",
+      109
+    ],
+    [
+      "variant",
+      55
+    ],
+    [
+      "unspecified",
+      2
+    ]
+  ],
+  "top_disagreements": [
+    {
+      "heuristic": "orthography",
+      "silver": "headword",
+      "n": 4709
+    },
+    {
+      "heuristic": "orthography",
+      "silver": "sense",
+      "n": 486
+    },
+    {
+      "heuristic": "markup",
+      "silver": "headword",
+      "n": 120
+    },
+    {
+      "heuristic": "orthography",
+      "silver": "citation",
+      "n": 98
+    },
+    {
+      "heuristic": "markup",
+      "silver": "sense",
+      "n": 66
+    },
+    {
+      "heuristic": "encoding",
+      "silver": "headword",
+      "n": 41
+    },
+    {
+      "heuristic": "orthography",
+      "silver": "grammar",
+      "n": 37
+    },
+    {
+      "heuristic": "sense",
+      "silver": "headword",
+      "n": 30
+    },
+    {
+      "heuristic": "orthography",
+      "silver": "meta",
+      "n": 26
+    },
+    {
+      "heuristic": "encoding",
+      "silver": "sense",
+      "n": 4
+    }
+  ]
+}

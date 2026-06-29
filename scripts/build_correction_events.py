@@ -318,11 +318,35 @@ def load_resolver():
 
 
 _DATE_TAIL = re.compile(r'(\d{1,2})/(\d{1,2})/(\d{2,4})')
+_EMAIL_RE = re.compile(r'(?i)\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b')
+
+
+def public_identity(login, name, raw='', layer='form'):
+    """Return release-safe corrector identifiers; never expose raw emails.
+
+    `raw` is the original, *unresolved* author string (e.g. a git commit author
+    email). The git resolver reduces emails to their local part before we ever
+    see `login`, so a raw email never reaches the `login`/`name` checks below —
+    pass the untouched email as `raw` so an unmapped author is pseudonymised
+    rather than published under their email local part. `layer` only labels the
+    pseudonym ('form'/'git'); with the defaults (raw='', layer='form') the
+    form-layer output is unchanged."""
+    candidate = (login or '').strip()
+    display = (name or candidate or 'unknown').strip()
+    raw = (raw or '').strip()
+    if _EMAIL_RE.search(candidate) or _EMAIL_RE.search(display) or _EMAIL_RE.search(raw):
+        seed = (raw or candidate or display).lower().rstrip('.')
+        token = hashlib.sha1(seed.encode('utf-8')).hexdigest()[:10]
+        prefix, title = ('git_corrector', 'Git corrector') if layer == 'git' \
+            else ('form_corrector', 'Form corrector')
+        return f'{prefix}_{token}', f'{title} {token}'
+    return candidate or 'unknown', display or candidate or 'unknown'
 
 
 def parse_corrector(raw, submit_dt, resolve, realname):
     login, _handle = resolve(raw)
     name = realname.get(login, login)
+    login, name = public_identity(login, name)
     latency = ''
     m = _DATE_TAIL.search(raw or '')
     if m and submit_dt:
@@ -388,6 +412,8 @@ def main():
                 'event_id': eid,
                 'date': dt.date().isoformat() if dt else '',
                 'source_layer': 'form',
+                'source_path': '../CORRECTIONS/cfr.tsv',
+                'commit_sha': '',
                 'dict': dct.strip().lower(),
                 'lcode': lc,
                 'headword_iast': normalize_to_iast(hw.strip()),
@@ -398,6 +424,7 @@ def main():
                 'inline_comment': inline,
                 'edit_ops': json.dumps(ops, ensure_ascii=False),
                 'edit_distance': dist,
+                'edit_space': 'iast',
                 'script_old': detect_script(old_corr),
                 'script_new': detect_script(new_corr),
                 'comment_raw': comment.strip(),
@@ -413,7 +440,8 @@ def main():
     fields = ['event_id', 'date', 'source_layer', 'dict', 'lcode', 'headword_iast',
               'old_iast', 'new_iast', 'old_raw', 'new_raw', 'inline_comment',
               'edit_ops', 'edit_distance', 'script_old', 'script_new', 'comment_raw',
-              'error_type_empirical', 'corrector', 'corrector_name', 'latency_days',
+              'source_path', 'commit_sha', 'edit_space', 'error_type_empirical',
+              'corrector', 'corrector_name', 'latency_days',
               'evidence_level']
     with open(OUT_CSV, 'w', encoding='utf-8', newline='') as f:
         w = csv.DictWriter(f, fieldnames=fields)
@@ -464,6 +492,10 @@ def main():
             'event_id': {'type': 'string'},
             'date': {'type': 'string'},
             'source_layer': {'enum': ['form', 'git', 'printchange', 'batch']},
+            'source_path': {'type': 'string',
+                            'description': 'source file/path for the event'},
+            'commit_sha': {'type': 'string',
+                           'description': 'git commit SHA for git-layer events'},
             'dict': {'type': 'string'},
             'lcode': {'type': 'string'},
             'headword_iast': {'type': 'string'},
@@ -472,6 +504,8 @@ def main():
             'inline_comment': {'type': 'string'},
             'edit_ops': {'type': 'string', 'description': 'JSON array of typed ops'},
             'edit_distance': {'type': 'integer'},
+            'edit_space': {'enum': ['iast', 'slp1_raw', 'markup_raw'],
+                           'description': 'character space used for edit_ops'},
             'script_old': {'enum': ['deva', 'iast', 'hk', 'latin', 'mixed', 'other']},
             'script_new': {'enum': ['deva', 'iast', 'hk', 'latin', 'mixed', 'other']},
             'comment_raw': {'type': 'string'},
@@ -479,6 +513,22 @@ def main():
             'corrector': {'type': 'string'}, 'corrector_name': {'type': 'string'},
             'latency_days': {'type': ['integer', 'string']},
             'evidence_level': {'enum': ['observed', 'derived', 'inferred']},
+            'attribution_route': {'type': 'string',
+                                  'description': 'how the LOCATION label was assigned'},
+            # --- axes + crosswalks + split, added downstream (Phases 3/4/6/8) ---
+            'error_component': {'enum': ['headword', 'grammar', 'citation', 'sense',
+                                         'markup', 'crossref', 'meta', 'unattributed'],
+                                'description': 'LOCATION axis (where in the entry); '
+                                'derived labels only, else unattributed'},
+            'edit_type': {'enum': ['spelling', 'diacritic', 'case', 'spacing',
+                                   'punctuation', 'digit', 'transposition',
+                                   'source-raw', 'none'],
+                          'description': 'EDIT-TYPE axis (what kind of change)'},
+            'errant_type': {'type': 'string', 'description': 'ERRANT op x unit crosswalk'},
+            'ocr_class': {'type': 'string', 'description': 'OCR/digitization crosswalk'},
+            'textcrit_class': {'type': 'string', 'description': 'textual-criticism crosswalk'},
+            'split': {'enum': ['train', 'dev', 'test'],
+                      'description': 'temporal split of the released resource'},
         },
     }
     with open(OUT_SCHEMA, 'w', encoding='utf-8') as f:

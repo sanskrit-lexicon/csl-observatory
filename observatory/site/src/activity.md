@@ -5,7 +5,7 @@ toc: true
 
 # Activity timeline
 
-Issue, PR, and commit throughput over 12 years across all 77 sanskrit-lexicon repos.
+Issue, PR, and commit throughput over 13 years across all 76 sanskrit-lexicon repos.
 
 ```js
 const monthly = await FileAttachment("data/timeseries_monthly.csv").csv({typed: true});
@@ -31,7 +31,9 @@ const peakAuthors = d3.max(velocity, d => d.active_authors);
   <div class="card"><h2>Most authors in a year</h2><span class="big">${peakAuthors}</span></div>
 </div>
 
-Throughput (commits, issues opened, issues closed) per year. The org runs on direct commits and issues — pull requests barely register until 2026.
+The three throughput metrics — commits, issues opened, and issues closed — tell a consistent story: a decade of growing correction campaigns, peaking around 2020–2022, then stabilising. Commits rise first as maintainers apply batches of fixes directly to the source repos; issue counts follow as the correction work is tracked more rigorously. Pull requests barely exist before 2026: the org has always operated through direct commits and issue threads, a workflow shaped by a tiny, trusted core team with no need for external code review.
+
+> **How to read:** Three lines share the same year (x) and count (y) axes. Each line tracks one metric summed across all repositories for that year. **Example 1:** When the commits line peaks above 2,000 in a given year, the org made over 2,000 code commits across all repos that year — roughly 40 commits per week from a team of fewer than 11 active authors. **Example 2:** When the issues-opened line sits above issues-closed in the same year, the gap between those two lines shows exactly how much the open backlog grew.
 
 ```js
 const flow = velocity.flatMap(d => [
@@ -39,7 +41,9 @@ const flow = velocity.flatMap(d => [
   {year: d.year, metric: "issues opened", n: d.issues_opened},
   {year: d.year, metric: "issues closed", n: d.issues_closed}
 ]);
+```
 
+```js
 Plot.plot({
   width,
   height: 360,
@@ -54,7 +58,11 @@ Plot.plot({
 })
 ```
 
-Open-issue backlog — cumulative (issues opened − closed). It peaks in 2025 on the `csl-orig` correction wave, then falls sharply in 2026 as that wave is closed.
+> **Conclusion:** Commit and issue volume peaked together in 2020–2022, driven by bulk correction campaigns on csl-orig. Pull requests barely register before 2026 — the org operated through direct commits and issue threads for its first decade, a workflow that reflects both the small trusted-core team structure and the high throughput of individually-applied dictionary fixes.
+
+The open-issue backlog is the running count of unresolved issues (cumulative opened minus cumulative closed). It rose steadily as the correction campaigns generated thousands of issues faster than they could be closed, peaked sharply in 2025 at the height of the `csl-orig` correction wave, then fell in 2026 as that wave was systematically resolved. A backlog that peaks and drops rather than growing indefinitely is a sign of organised, finite campaigns rather than chronic accumulation.
+
+> **How to read:** The filled area shows the cumulative open-issue count at each year-end — the total number of issues opened since 2014 minus the total closed. **Example 1:** A rising area in a given year means more issues were opened than closed that year, adding to the unresolved pile. **Example 2:** The sharp drop in 2026 indicates a year where closures outpaced new issues, shrinking the backlog — the correction wave being wound down.
 
 ```js
 Plot.plot({
@@ -70,7 +78,13 @@ Plot.plot({
 })
 ```
 
+> **Conclusion:** The backlog's single large peak-and-drop confirms that the 2025 correction campaign was a coordinated, finite effort rather than chronic accumulation — the project opened thousands of issues deliberately as a tracking mechanism, then resolved them in bulk. This is a sign of good campaign hygiene, not of growing technical debt.
+
 ## Issues opened per month (all repos stacked)
+
+Month-by-month issue creation across all 76 repositories, stacked so that the total height shows org-wide volume while the colour layers reveal which repos drove each spike. Activity is highly clustered in time and in source: most months are quiet, with occasional sharp bursts when a correction campaign launches in a single high-activity repository.
+
+> **How to read:** Each coloured band is one repository; stacking shows the total org-wide count for that month. The x-axis runs from 2014 to present. **Example 1:** A tall spike in a single colour means one repo opened many issues in that month — a bulk correction campaign starting in csl-orig. **Example 2:** Many thin layers all active in the same month indicate broad activity across repos, which is rare; it usually signals a taxonomy-labelling or housekeeping sweep rather than a content campaign.
 
 ```js
 Plot.plot({
@@ -86,7 +100,13 @@ Plot.plot({
 })
 ```
 
+> **Conclusion:** Issue volume is dominated by a handful of high-activity repos (csl-orig, MWS) with sporadic bursts from the rest; the org does not have uniformly distributed activity across its 76 repositories. The stacked chart makes visible what summary statistics hide: the correction campaigns are not continuous background work but discrete, high-intensity episodes.
+
 ## Commits per month (stacked by repo)
+
+Commit volume follows a similar pattern to issue creation but is even more concentrated: a handful of repos account for the large majority of all commits, and individual months of bulk activity stand out sharply against an otherwise low baseline. Unlike issue counts, which can be opened by anyone, commits represent direct write access — reinforcing the bus-factor picture of a small group of trusted contributors doing the bulk of the work.
+
+> **How to read:** Same stacking logic as the issues chart — each coloured layer is one repository's monthly commit count. **Example 1:** A month where a single dominant colour fills most of the bar means one repo drove nearly all commits that month, typically a bulk-correction or reformatting pass. **Example 2:** Months where many thin, distinct colours appear all together indicate a rare period of simultaneous activity across multiple repositories — usually a coordinated tooling release or a housekeeping sprint.
 
 ```js
 Plot.plot({
@@ -102,10 +122,19 @@ Plot.plot({
 })
 ```
 
+> **Conclusion:** Commit volume is more concentrated than issue volume: csl-orig and csl-corrections account for the large majority of all commits by count. This confirms the bus-factor finding — not only is the contributor base tiny, but the work itself is physically concentrated in a small number of repositories whose history is dominated by one or two authors.
+
 ## Activity heatmap: year × repo
+
+The heatmap shows the entire activity matrix — every repository against every year — with cell colour encoding combined issues and commits. This reveals which repos are consistently active across the org's history, which had a single burst of work and then went quiet, and which have never registered meaningful activity. The overall pattern is highly diagonal: most repos are active in only a subset of years, clustering around the year they were created and the correction campaigns that followed.
+
+> **How to read:** Rows are repositories, columns are years; cell colour (darker = more) encodes the sum of issues opened and commits for that repo in that year. **Example 1:** A dark horizontal streak across many years for one repo — such as csl-orig — marks a repo that has been the centre of active work year after year. **Example 2:** A repo with only a single bright cell and grey on either side indicates a burst of work in one year (typically the year of initial upload or a dedicated correction sprint) with little activity before or since.
 
 ```js
 const repoSet = Array.from(new Set(annual.map(d => d.repo))).sort();
+```
+
+```js
 Plot.plot({
   width,
   height: 1200,
@@ -124,7 +153,13 @@ Plot.plot({
 })
 ```
 
+> **Conclusion:** A handful of repos — csl-orig, MWS, and csl-pywork — light up the heatmap across multiple years; the large majority show at most one or two active years. This is a "build-it-once, then maintain-lightly" pattern driven by the dictionary digitisation model: a repo is created for one dictionary, heavily worked during its correction campaign, then settles into low-volume maintenance.
+
 ## Annual distinct commit-authors
+
+The author count is perhaps the most striking statistic in the org's history: despite generating nearly 10,000 commits across 76 repositories over 13 years, the org has never had more than about 15 distinct people committing code in a single year. Volume and team size are completely decoupled. This is the structural backdrop for every bus-factor and concentration finding in the [Community](/community) analysis.
+
+> **How to read:** Each bar is the count of distinct GitHub logins that authored at least one commit to any org repository in that year, computed from the full commits dataset rather than summing per-repo counts (which would double-count people active in multiple repos). **Example 1:** A bar of height 11 in 2021 — the busiest commit year by volume — means only 11 different people contributed any code that year, despite thousands of commits being made. **Example 2:** A bar that is shorter than the previous year means the org's active contributor pool shrank — people left without being replaced.
 
 Organization-wide distinct authors per year, recomputed from `commits.csv` (the per-repo `unique_authors` column cannot be summed — it double-counts people active in several repos). Even at peak, the active base is tiny — the concentration the [Community](/community) bus-factor analysis quantifies.
 
@@ -140,5 +175,7 @@ Plot.plot({
   ]
 })
 ```
+
+> **Conclusion:** The org has never had more than ~15 distinct commit-authors in a year, and the trend is flat rather than growing. Volume-per-person has increased, but the team itself has not. This is the single most important context for reading any other activity metric in the observatory: high throughput does not indicate a large or growing community — it indicates a small group of extremely productive, highly committed individuals.
 
 [← back to overview](/)

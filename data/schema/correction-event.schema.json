@@ -26,6 +26,14 @@
         "batch"
       ]
     },
+    "source_path": {
+      "type": "string",
+      "description": "source file/path for the event"
+    },
+    "commit_sha": {
+      "type": "string",
+      "description": "git commit SHA for git-layer events"
+    },
     "dict": {
       "type": "string"
     },
@@ -56,6 +64,14 @@
     },
     "edit_distance": {
       "type": "integer"
+    },
+    "edit_space": {
+      "enum": [
+        "iast",
+        "slp1_raw",
+        "markup_raw"
+      ],
+      "description": "character space used for edit_ops"
     },
     "script_old": {
       "enum": [
@@ -101,6 +117,57 @@
         "derived",
         "inferred"
       ]
+    },
+    "attribution_route": {
+      "type": "string",
+      "description": "how the LOCATION label was assigned"
+    },
+    "error_component": {
+      "enum": [
+        "headword",
+        "grammar",
+        "citation",
+        "sense",
+        "markup",
+        "crossref",
+        "meta",
+        "unattributed"
+      ],
+      "description": "LOCATION axis (where in the entry); derived labels only, else unattributed"
+    },
+    "edit_type": {
+      "enum": [
+        "spelling",
+        "diacritic",
+        "case",
+        "spacing",
+        "punctuation",
+        "digit",
+        "transposition",
+        "source-raw",
+        "none"
+      ],
+      "description": "EDIT-TYPE axis (what kind of change)"
+    },
+    "errant_type": {
+      "type": "string",
+      "description": "ERRANT op x unit crosswalk"
+    },
+    "ocr_class": {
+      "type": "string",
+      "description": "OCR/digitization crosswalk"
+    },
+    "textcrit_class": {
+      "type": "string",
+      "description": "textual-criticism crosswalk"
+    },
+    "split": {
+      "enum": [
+        "train",
+        "dev",
+        "test"
+      ],
+      "description": "temporal split of the released resource"
     }
   }
 }
