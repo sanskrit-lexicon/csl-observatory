@@ -1,0 +1,35 @@
+{
+  "upload_type": "dataset",
+  "title": "OBS-T: CDSL Correction-Event Corpus — A Twelve-Year Longitudinal Error-Typology Dataset for Sanskrit Historical Dictionaries",
+  "description": "<p>OBS-T (Observatory Typing) is a corpus of 52,498 typed correction events covering 43 Sanskrit historical dictionaries in the Cologne Digital Sanskrit Dictionaries (CDSL), spanning 2014–2026.</p><p><strong>Key statistics:</strong> 52,498 correction events (24,441 form layer + 28,057 git layer); 43 dictionaries; 208 corrector aliases; date range 2014-03-18 to 2026; 9 microstructure location labels (<code>error_component</code>); 9 edit-type labels (<code>edit_type</code>); evidence labels <code>derived</code> (form layer) and <code>inferred</code> (git layer); 64.3% derived by evidence label.</p><p><strong>Contents:</strong></p><ul><li><code>correction_events_release.csv</code> — 52,498 rows × 31 columns. One row = one old→new correction event. Licensed CC-BY-4.0.</li><li><code>observatory/site/src/data/obs_t_*</code> — aggregate tables (component distribution, timelines, corrector summaries, crosswalk labels).</li><li><code>docs/DATASHEET.md</code> — full Gebru et al. (2021) datasheet.</li><li><code>data/schema/correction-event.schema.json</code> — JSON schema for the release file.</li></ul><p>The repository code is GPL-3.0; the data files are CC-BY-4.0 (see <code>DATA_LICENSE.md</code>).</p>",
+  "creators": [
+    {
+      "name": "Gasūns, Mārcis",
+      "affiliation": "Independent scholar",
+      "orcid": "0000-0003-4513-884X"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "version": "1.0.0",
+  "keywords": [
+    "Sanskrit",
+    "lexicography",
+    "CDSL",
+    "Cologne Digital Sanskrit Dictionaries",
+    "correction events",
+    "error typology",
+    "digital humanities",
+    "NLP",
+    "historical lexicography",
+    "language resources"
+  ],
+  "language": "eng",
+  "access_right": "open",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/sanskrit-lexicon/csl-observatory",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

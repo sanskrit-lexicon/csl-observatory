@@ -1,14 +1,29 @@
 cff-version: 1.2.0
 type: software
 title: csl-observatory
-message: If you use this software, please cite it.
+message: >
+  If you use this software or the OBS-T dataset, please cite using the
+  metadata below. For the dataset specifically, cite the Zenodo DOI.
 license: GPL-3.0
 repository-code: https://github.com/sanskrit-lexicon/csl-observatory
+version: 1.1.0
+date-released: "2026-06-27"
 abstract: >
-  Observatory code is GPL-3.0. The OBS-T correction-event data release is
-  licensed separately under CC-BY-4.0; see DATA_LICENSE.md.
+  Observatory code and OBS-T correction-event corpus for the Cologne Digital
+  Sanskrit Dictionaries (CDSL). Code: GPL-3.0. OBS-T data release
+  (correction_events_release.csv and obs_t_* aggregates): CC-BY-4.0;
+  see DATA_LICENSE.md.
+authors:
+  - family-names: "Gasūns"
+    given-names: "Mārcis"
+    orcid: "https://orcid.org/0000-0003-4513-884X"
+    affiliation: "Independent scholar"
+    email: "gasyoun@ya.ru"
 keywords:
   - sanskrit
-  - lexicon
+  - lexicography
   - cdsl
+  - correction events
+  - error typology
+  - digital humanities
   - build-meta
