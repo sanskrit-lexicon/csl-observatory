@@ -5,11 +5,37 @@
 const ORIGIN = "https://sanskrit-lexicon.github.io/csl-observatory";
 
 // One-line default used for <meta name="description"> and og:description on any
-// page that does not set its own `description:` in front matter.
+// page without a PAGE_DESCRIPTIONS entry below.
 const DEFAULT_DESCRIPTION =
   "A living, fully-open measurement of the Cologne Digital Sanskrit Lexicon (CDSL): " +
   "13 years of volunteer dictionary digitisation turned into citable, reproducible data — " +
   "repository health, contributor sustainability, issue taxonomy, and correction metrics.";
+
+// Per-page meta descriptions, keyed by route. Observable Framework drops any
+// non-whitelisted front-matter key (no `description:`), so the description lives
+// here in the config rather than in each page's front matter. Key "/" is the
+// home page; keys for sub-pages match their `path` in the `pages` array below.
+const PAGE_DESCRIPTIONS = {
+  "/": "A living, fully-open measurement of the Cologne Digital Sanskrit Lexicon: 13 years of volunteer dictionary digitisation turned into citable, reproducible data.",
+  "/ops-command": "Maintainer-first operating view across repository health, metadata blockers, issue pressure, and bus-factor risk for sanskrit-lexicon.",
+  "/activity": "Issue, pull request, and commit throughput across all 76 sanskrit-lexicon repositories over 13 years of the Cologne Digital Sanskrit Lexicon.",
+  "/error-typology": "What kinds of errors are corrected in the Cologne Digital Sanskrit Lexicon, where in the entry they occur, and how the profile shifts over time.",
+  "/obs-t-maintenance": "Operational views for keeping the OBS-T correction-typology dataset healthy after infrastructure changes.",
+  "/coverage": "How Sanskrit dictionary digitisation work is represented in GitHub issue and pull-request labels across the sanskrit-lexicon org.",
+  "/taxonomy-triage": "Issue-label quality and triage gaps across the sanskrit-lexicon organization, for maintainer review.",
+  "/community": "Contributors over 13 years: bus-factor risk, retention, and concentration across the Cologne Digital Sanskrit Lexicon repositories.",
+  "/community-continuity": "Maintainer continuity and contributor-concentration views for monthly review of the sanskrit-lexicon organization.",
+  "/tech-stack": "The technologies, languages, and tooling ecosystem behind the Cologne Digital Sanskrit Lexicon repositories.",
+  "/benchmarks": "How the Cologne Digital Sanskrit Lexicon compares to peer open-source projects at the repository and project-governance level.",
+  "/repo-health": "Repository hygiene across the sanskrit-lexicon org: licensing, default-branch naming, descriptions, and staleness.",
+  "/repository-risk": "Deeper repository-hygiene views for license, branch, size, stale-cleanup, and flag interactions across the org.",
+  "/repo-metadata": "Completeness dashboard for repository metadata: descriptions, licenses, branches, README and citation coverage, workflows, and releases.",
+  "/metadata-readiness": "Operational view of repository metadata coverage: documentation, automation, releases, and unresolved live-fetch blockers.",
+  "/workflow-health": "A read-only baseline for CI, scheduled jobs, artifact refresh, Dependabot, CodeQL, and release signals across the organization.",
+  "/reproducibility": "The command path for reviewers to reproduce the CSL Observatory snapshot, with live-data dependencies and human-gated steps documented.",
+  "/data": "Download every public CSV and JSON dataset behind the CSL Observatory, each with its source script, generation date, and caveats.",
+  "/conclusions": "Plain-language summaries of what every chart in the CSL Observatory shows, grouped by page with links to the underlying data."
+};
 
 // Escape a string for safe interpolation into an HTML attribute value.
 const attr = (s) =>
@@ -22,7 +48,7 @@ const head = ({title, data, path}) => {
   const canonicalPath = path === "/index" || path === "/" ? "/" : path;
   const url = ORIGIN + canonicalPath;
   const pageTitle = (data && data.title) || title || "CSL Observatory";
-  const description = (data && data.description) || DEFAULT_DESCRIPTION;
+  const description = PAGE_DESCRIPTIONS[canonicalPath] || DEFAULT_DESCRIPTION;
   const image = ORIGIN + "/observatory-card.png"; // 1200×630, scripts/make_social_card.py
   return `<meta name="description" content="${attr(description)}">
 <link rel="canonical" href="${attr(url)}">
