@@ -23,6 +23,7 @@ const head = ({title, data, path}) => {
   const url = ORIGIN + canonicalPath;
   const pageTitle = (data && data.title) || title || "CSL Observatory";
   const description = (data && data.description) || DEFAULT_DESCRIPTION;
+  const image = ORIGIN + "/observatory-card.png"; // 1200×630, scripts/make_social_card.py
   return `<meta name="description" content="${attr(description)}">
 <link rel="canonical" href="${attr(url)}">
 <meta name="robots" content="index,follow">
@@ -34,10 +35,14 @@ const head = ({title, data, path}) => {
 <meta property="og:title" content="${attr(pageTitle)}">
 <meta property="og:description" content="${attr(description)}">
 <meta property="og:url" content="${attr(url)}">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="${attr(image)}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="CSL Observatory — 13 years of the Cologne Digital Sanskrit Lexicon, measured">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${attr(pageTitle)}">
-<meta name="twitter:description" content="${attr(description)}">`;
-  // TODO(SEO): add og:image / twitter:image once a 1200×630 social card PNG exists.
+<meta name="twitter:description" content="${attr(description)}">
+<meta name="twitter:image" content="${attr(image)}">`;
 };
 
 export default {
