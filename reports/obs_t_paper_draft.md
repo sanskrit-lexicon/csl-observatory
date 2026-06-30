@@ -2,7 +2,7 @@
 
 **Mārcis Gasūns**  
 Independent Researcher  
-ORCID: [pending registration]  
+ORCID: 0000-0003-4513-884X  
 `sanskrit.research.institute@gmail.com`
 
 ---
