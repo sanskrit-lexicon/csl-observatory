@@ -1,6 +1,6 @@
 # Agent Roadmap — Sanskrit Lexicon Issue Automation
 
-_Canonical location: [`csl-observatory/docs/AGENT_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/AGENT_ROADMAP.md). Last compiled: 2026-06-30 (P6: status updates + Tier B sweeps queued). Re-compile when new issues are opened or a skill ships._
+_Canonical location: [`csl-observatory/docs/AGENT_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/AGENT_ROADMAP.md). Last compiled: 2026-06-30 (P7: MWS W1(a)+W1(b) complete). Re-compile when new issues are opened or a skill ships._
 
 **Scope:** 821 open issues across 68 repos in the `sanskrit-lexicon` org, surveyed 2026-06-26.
 **Goal:** Map which issues agents can supply data for (humans close after), which need a new skill first, and in what order.
