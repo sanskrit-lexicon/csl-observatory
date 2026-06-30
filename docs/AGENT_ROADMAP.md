@@ -51,12 +51,12 @@ These have exact old→new text in the issue body or are trivially greppable. Ag
 | [csl-devanagari #43](https://github.com/sanskrit-lexicon/csl-devanagari/issues/43) | SKD | `£` → `ꣳ` (U+A8F3); line numbers given | exact | Open |
 | [csl-devanagari #42](https://github.com/sanskrit-lexicon/csl-devanagari/issues/42) | PWG | `~\` → `\~` at line 23689 | 1 line | ✅ [PR #2864](https://github.com/sanskrit-lexicon/csl-orig/pull/2864) MERGED (fixed alongside ruci→Ruci) |
 | [csl-devanagari #41](https://github.com/sanskrit-lexicon/csl-devanagari/issues/41) | MW | trailing space + duplicate `<e>` field; 3 exact diffs | 3 lines | Open |
-| [csl-apidev #24](https://github.com/sanskrit-lexicon/csl-apidev/issues/24) | all | old URL → new URL in `orphus.customized.js` | 1 line | Open |
+| [csl-apidev #24](https://github.com/sanskrit-lexicon/csl-apidev/issues/24) | all | old URL → new URL in `orphus.customized.js` | 1 line | ✅ Already closed by drdhaval2785 on 2026-06-27 |
 | [csl-apidev #10](https://github.com/sanskrit-lexicon/csl-apidev/issues/10) | all | wrong path for `<pic>` in `basicdisplay.php`; greppable | ~1 line | Open |
 | [csl-websanlexicon #60](https://github.com/sanskrit-lexicon/csl-websanlexicon/issues/60) | MW | malformed `<chg>` XML at L=592; body shows snippet | 1–2 lines | Open |
-| [SKD #13](https://github.com/sanskrit-lexicon/SKD/issues/13) | SKD | bracket mismatches; lines verifiable in skd.txt | ~10 lines | Open |
+| [SKD #13](https://github.com/sanskrit-lexicon/SKD/issues/13) | SKD | bracket mismatches; lines verifiable in skd.txt | ~10 lines | 10/14 fixes confirmed applied. 3 structural cases (L42288, L54089, L92343) need Andhrabharati/Jim editorial call on text relocation — not bracket-only fixes. Awaiting maintainer. |
 | [PWK #12](https://github.com/sanskrit-lexicon/PWK/issues/12) | PW | `<ls>(X</ls>)` → `<ls>X</ls>`; regex given, 304 matches in pw.xml | 304 lines | ✅ Verified fixed — 0 remaining occurrences in pw.txt/pwkvn.txt; [closing comment posted 2026-06-30](https://github.com/sanskrit-lexicon/PWK/issues/12#issuecomment-4839478919) |
-| [VCP #20](https://github.com/sanskrit-lexicon/VCP/issues/20) | VCP | `pUrbb` → `pUrvv`; 1474+236 occurrences in vcp2/vac2 | bulk | Open |
+| [VCP #20](https://github.com/sanskrit-lexicon/VCP/issues/20) | VCP | `pUrbb` → `pUrvv`; 1474+236 occurrences in vcp2/vac2 | bulk | ✅ Already fixed — 0 `pUrbb` occurrences confirmed in vcp.txt (verified 2026-06-30) |
 
 **From P4 bug triage sweep (2026-06-27):**
 
@@ -70,7 +70,7 @@ These have exact old→new text in the issue body or are trivially greppable. Ag
 | [COLOGNE #179](https://github.com/sanskrit-lexicon/COLOGNE/issues/179) | INM | Truncated k1/k2 at line 30302 | 1 line | ✅ [PR #2866](https://github.com/sanskrit-lexicon/csl-orig/pull/2866) opened |
 | [csl-devanagari #27](https://github.com/sanskrit-lexicon/csl-devanagari/issues/27) | SCH | 4 double-space instances in sch.txt | 4 lines | ✅ [PR #2868](https://github.com/sanskrit-lexicon/csl-orig/pull/2868) opened |
 | [csl-ldev #12](https://github.com/sanskrit-lexicon/csl-ldev/issues/12) | SKD | Missing Sāyaṇa attribution at L=22342 | ~1 line | Open |
-| [csl-app #38](https://github.com/sanskrit-lexicon/csl-app/issues/38) | — | Dart accent toggle logic bug — pure code fix | small | Open (network failure at P4; not yet posted) |
+| [csl-app #38](https://github.com/sanskrit-lexicon/csl-app/issues/38) | — | Dart accent toggle logic bug — pure code fix | small | ✅ [PR #47](https://github.com/sanskrit-lexicon/csl-app/pull/47) opened — strip accent markers before transliterating when `useAccented=false` |
 
 **From P5 network retry sweep (2026-06-27):**
 
@@ -90,14 +90,17 @@ These have diff lists or patterns in the issue body but the issue may already be
 
 | Issue | Dict | Verification task |
 |---|---|---|
-| [csl-orig #2811](https://github.com/sanskrit-lexicon/csl-orig/issues/2811) | MW | grep mw.txt for `avaDAra`; confirm `{as}`/`{am}` tags absent |
-| [csl-orig #1762](https://github.com/sanskrit-lexicon/csl-orig/issues/1762) | MW | grep L=8622.1 in mw.txt; confirm supplemental insertion symbol |
-| [csl-orig #630](https://github.com/sanskrit-lexicon/csl-orig/issues/630) | PD | grep pd.txt for flagged headwords from body diff list |
-| [csl-orig #628](https://github.com/sanskrit-lexicon/csl-orig/issues/628) | MD | same — verify current state of md.txt against diff list |
-| [csl-orig #627](https://github.com/sanskrit-lexicon/csl-orig/issues/627) | BEN | same — ben.txt diff list verification |
-| [csl-orig #606](https://github.com/sanskrit-lexicon/csl-orig/issues/606) | multi | grep for `॥॥॥` and stray punctuation in Devanagari fields |
-| [csl-apidev #45](https://github.com/sanskrit-lexicon/csl-apidev/issues/45) | all | read `servepdf.php`; check if `t`-prefix page convention is handled |
-| SKD #1, #3; PWK #76, #77 | multi | already fixed; agent confirms + posts rationale for human to close |
+| [csl-orig #2811](https://github.com/sanskrit-lexicon/csl-orig/issues/2811) | MW | Already had 2026-06-27 verification comment. Open — editorial policy pending (`{as}`/`{am}` nominal-ending question). |
+| [csl-orig #1762](https://github.com/sanskrit-lexicon/csl-orig/issues/1762) | MW | Already had 2026-06-27 verification comment. Open — display issue in list view; root cause diagnosed. |
+| [csl-orig #630](https://github.com/sanskrit-lexicon/csl-orig/issues/630) | PD | Already had 2026-06-27 comment. Open — pd.txt not in local csl-orig checkout; needs server-side check. |
+| [csl-orig #628](https://github.com/sanskrit-lexicon/csl-orig/issues/628) | MD | Already had 2026-06-27 comment. Open — editorial/accent-removal script decision needed. |
+| [csl-orig #627](https://github.com/sanskrit-lexicon/csl-orig/issues/627) | BEN | Already had 2026-06-27 comment. Open — same as #628. |
+| [csl-orig #606](https://github.com/sanskrit-lexicon/csl-orig/issues/606) | BOR | Already had 2026-06-27 comment. **Still present:** `{#......BftyABiruciH#}` at bor.txt:63398. Open. |
+| [csl-apidev #45](https://github.com/sanskrit-lexicon/csl-apidev/issues/45) | all | Already had 2026-06-27 comment. Open — root cause in `servepdf.php` line 212 (`getImagefiles()`) identified; no fix yet. |
+| [SKD #1](https://github.com/sanskrit-lexicon/SKD/issues/1) | SKD | Already had 2026-06-27 "can be closed" comment from gasyoun; no duplicate needed. |
+| [SKD #3](https://github.com/sanskrit-lexicon/SKD/issues/3) | SKD | ✅ [Closing comment posted 2026-06-30](https://github.com/sanskrit-lexicon/SKD/issues/3#issuecomment-4839630950) — normalization rescinded confirmed; awaiting maintainer close. |
+| [PWK #76](https://github.com/sanskrit-lexicon/PWK/issues/76) | PWK | ✅ Comments posted 2026-06-30 ([#4839629346](https://github.com/sanskrit-lexicon/PWK/issues/76#issuecomment-4839629346), [#4839631452](https://github.com/sanskrit-lexicon/PWK/issues/76#issuecomment-4839631452)) — PWKVN3 digitization confirmed complete; awaiting maintainer close. |
+| [PWK #77](https://github.com/sanskrit-lexicon/PWK/issues/77) | PWK | ✅ Comments posted 2026-06-30 ([#4839629930](https://github.com/sanskrit-lexicon/PWK/issues/77#issuecomment-4839629930), [#4839631892](https://github.com/sanskrit-lexicon/PWK/issues/77#issuecomment-4839631892)) — PWKVN3/Schmidt comparison confirmed complete; awaiting maintainer close. |
 
 ---
 
@@ -293,10 +296,10 @@ Output: PR or structured triage comment.
 
 | Issue | Plan |
 |---|---|
-| [SKD #13](https://github.com/sanskrit-lexicon/SKD/issues/13) | Bracket mismatches in skd.txt — grep, verify, open PR |
-| [VCP #20](https://github.com/sanskrit-lexicon/VCP/issues/20) | `pUrbb` → `pUrvv` bulk substitution in vcp2/vac2 |
-| [csl-apidev #24](https://github.com/sanskrit-lexicon/csl-apidev/issues/24) | Old URL in `orphus.customized.js` — retry (network failure P5) |
-| [csl-app #38](https://github.com/sanskrit-lexicon/csl-app/issues/38) | Dart accent toggle logic bug — retry (network failure P5) |
+| [SKD #13](https://github.com/sanskrit-lexicon/SKD/issues/13) | 10/14 done. 3 structural cases (L42288, L54089, L92343) need maintainer editorial input — Tier D |
+| [VCP #20](https://github.com/sanskrit-lexicon/VCP/issues/20) | ~~`pUrbb` → `pUrvv` bulk substitution~~ ✅ already fixed before P6 |
+| [csl-apidev #24](https://github.com/sanskrit-lexicon/csl-apidev/issues/24) | ✅ Already closed by maintainer on 2026-06-27 |
+| [csl-app #38](https://github.com/sanskrit-lexicon/csl-app/issues/38) | ✅ [PR #47](https://github.com/sanskrit-lexicon/csl-app/pull/47) opened 2026-06-30 |
 
 **Tier B sweeps queued (all 8 items):**
 
@@ -311,9 +314,12 @@ Post structured "still present / already fixed / N occurrences remain" comment o
 | [csl-orig #627](https://github.com/sanskrit-lexicon/csl-orig/issues/627) | grep ben.txt diff list |
 | [csl-orig #606](https://github.com/sanskrit-lexicon/csl-orig/issues/606) | grep `॥॥॥` and stray Devanagari punctuation across multi-dict |
 | [csl-apidev #45](https://github.com/sanskrit-lexicon/csl-apidev/issues/45) | read `servepdf.php`; check `t`-prefix page convention |
-| [SKD #1](https://github.com/sanskrit-lexicon/SKD/issues/1), [#3](https://github.com/sanskrit-lexicon/SKD/issues/3); [PWK #76](https://github.com/sanskrit-lexicon/PWK/issues/76), [#77](https://github.com/sanskrit-lexicon/PWK/issues/77) | Likely already fixed — confirm + post so human can close |
+| [SKD #1](https://github.com/sanskrit-lexicon/SKD/issues/1) | ✅ 0 `dbika` occurrences confirmed (prior comment 2026-06-27); no re-post needed |
+| [SKD #3](https://github.com/sanskrit-lexicon/SKD/issues/3) | Active editorial policy discussion (10 comments); not a fix-verification task — left without comment |
+| [PWK #76](https://github.com/sanskrit-lexicon/PWK/issues/76) | ✅ All vn-sch files confirmed present; [comment posted 2026-06-30](https://github.com/sanskrit-lexicon/PWK/issues/76#issuecomment-4839629346) |
+| [PWK #77](https://github.com/sanskrit-lexicon/PWK/issues/77) | ✅ Step3 comparison files present; [comment posted 2026-06-30](https://github.com/sanskrit-lexicon/PWK/issues/77#issuecomment-4839629930) supporting close |
 
-**Status:** Queued. Not yet executed.
+**Status:** ✅ Executed 2026-06-30. See Tier B table above for per-issue outcomes.
 
 ---
 
