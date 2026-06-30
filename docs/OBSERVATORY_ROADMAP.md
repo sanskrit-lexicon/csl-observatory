@@ -1,6 +1,6 @@
 # csl-observatory Implementation Roadmap
 
-Last updated: 2026-06-13
+Last updated: 2026-06-30
 Horizon: 2026-06 to 2027-06
 Primary audience: maintainer. Secondary audiences, added later in the year:
 future contributors and paper/release reviewers.
@@ -88,6 +88,7 @@ contributors and reviewers.
 | E3 | Reviewer reproducibility page. | MG + Codex | done | 2026-06-13 | `docs/REVIEWER_REPRODUCIBILITY.md` and `/reproducibility` document report refresh, credentials, dashboard build, OBS-T checks, human-gated steps, and citation inputs. |
 | E4 | Contributor guide page. | MG + Codex | scheduled | 2027-03-31 | Future contributors see setup, safe issues, taxonomy, AI policy, and boundaries. |
 | E5 | Annual snapshot release. | MG + Codex | scheduled | 2027-04-15 | Tag/release includes generated reports, data snapshot, manifest, and known caveats. |
+| E6 | Site SEO + discoverability foundation. | Codex | active | 2026-07-15 | `observablehq.config.js` injects a per-page `<head>` (canonical, meta description, Open Graph, Twitter card) for the GitHub Pages origin `https://sanskrit-lexicon.github.io/csl-observatory/`; build passes and tags verified in `dist/`. **Remaining:** 1200×630 social-card image (`og:image`/`twitter:image`), per-page front-matter `description:` on the 18 pages, and a `sitemap.xml` + `robots.txt`. |
 
 ## Workstream F: OBS-T Maintenance And Paper Package
 

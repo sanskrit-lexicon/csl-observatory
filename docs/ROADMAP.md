@@ -1,6 +1,6 @@
 # CDSL Observatory: One-Year Maintainer Roadmap
 
-Last updated: 2026-06-13
+Last updated: 2026-06-30
 Horizon: 2026-06 to 2027-06
 Audience: maintainer first. Contributor and reviewer-facing surfaces are planned
 after the maintenance backbone is sturdier.
@@ -98,6 +98,7 @@ the Tooling Roadmap project.
 | PR2 | Make maintainer dashboard pages match the active findings. | Codex | done | 2026-06-13 | Maintainer-first pages now cover operations, repository risk, metadata readiness, taxonomy triage, community continuity, and OBS-T maintenance light; contributor/reviewer polish remains in PR3/PR4. |
 | PR3 | Add a reviewer-facing reproducibility note. | MG + Codex | done | 2026-06-13 | `docs/REVIEWER_REPRODUCIBILITY.md` and `/reproducibility` document report refresh, credentials, dashboard build, OBS-T checks, and human-gated commands. |
 | PR4 | Add a contributor-facing "where to help" page. | MG + Codex | scheduled | 2027-03-31 | Future contributors can see safe entry points: metadata cleanup, issue taxonomy, docs, tests, and dashboards. |
+| PR5 | Make the public site discoverable (SEO foundation). | Codex | active | 2026-07-15 | Per-page `<head>` (canonical, description, Open Graph, Twitter card) ships via `observablehq.config.js`; social-card image, per-page descriptions, and sitemap/robots remain. See `OBSERVATORY_ROADMAP.md` E6. |
 
 ## 2027-Q2: Paper And OBS-T Readiness Last
 
