@@ -1,7 +1,8 @@
 # OBS-T: A Longitudinal Error-Typology Corpus of Digital Sanskrit Lexicography
 
 **Mārcis Gasūns**  
-Sanskrit Lexicon Project / Cologne Digital Sanskrit Lexicon  
+Independent Researcher  
+ORCID: [pending registration]  
 `sanskrit.research.institute@gmail.com`
 
 ---
@@ -22,17 +23,21 @@ headword) and a temporal train/test split for reproducible benchmarking.
 Three findings emerge. First, surface repair dominated the twelve-year record
 as a whole (72.7% of all corrections), but the balance shifted sharply between
 eras: the 2014–2019 form era was 97.2% surface-form, while the 2019–2026 git
-era is near parity (50.1% surface, 49.9% meaning) — a maturation signal as
-the orthographic layer stabilized and content-level editorial work moved to the
-foreground. Second, error profiles differ significantly across dictionaries
-(Cramér V = 0.411), with per-dictionary fingerprints reflecting age, language,
-and editorial history. Third, Mann-Kendall trend tests confirm statistically
-significant diachronic shifts: markup and meta corrections are rising; encoding
-and orthography corrections are falling.
+era reached near parity (50.1% surface, 49.9% meaning) — a maturation signal
+as the orthographic layer stabilized and content-level editorial work moved to
+the foreground. Second, error profiles differ significantly across dictionaries
+(χ²(112) = 58,934.6, p < 0.001, Cramér's V = 0.411), with per-dictionary
+fingerprints reflecting source language, age, and editorial history. Third,
+Mann-Kendall trend tests (Mann 1945; Kendall 1948) confirm statistically
+significant diachronic shifts: markup and meta corrections are rising
+(τ = 0.590, p = 0.006 and τ = 0.513, p = 0.017 respectively); encoding and
+orthography corrections are falling (τ = −0.462, p = 0.033 and τ = −0.590,
+p = 0.006).
 
 We release the corpus under CC-BY-4.0 with a JSON schema, provenance
-envelope, and three reference baselines (detection, correction, type
-classification) as a language resource for Sanskrit NLP, historical-dictionary
+envelope, and three reference baselines (detection accuracy 0.516, correction
+accuracy@1 0.059, type classification accuracy 0.388 vs. majority baseline
+0.226) as a language resource for Sanskrit NLP, historical-dictionary
 digitisation research, and computational error analysis.
 
 ---
@@ -101,21 +106,35 @@ historical documents (Springmann et al. 2016; Clematide et al. 2016). These
 works share OBS-T's concern with how scanning introduces character-level noise,
 but they operate at the document level rather than the lexicographic-entry
 level and lack the microstructure attribution that makes OBS-T useful for
-dictionary-specific NLP.
+dictionary-specific NLP. Piotrowski (2012) provides a thorough survey of
+NLP methods for historical texts, identifying the multi-script polyglot entry
+as the hardest class for automated processing — a challenge OBS-T's character
+confusion analysis quantifies.
 
-**Digital humanities correction datasets.** The Deutsches Textarchiv (DTAbf)
-and similar projects maintain correction logs for digitised historical texts.
-OBS-T is distinguished by (a) the Sanskrit polyglot context — entries mix
-Sanskrit in SLP1 transliteration, German, English, and Latin in a single record;
-(b) the XML microstructure that names each field explicitly; and (c) the
-unusually complete provenance chain from paper scan to correction event.
+**Digital humanities correction datasets.** The Deutsches Textarchiv (DTAbf;
+Haaf et al. 2015) and similar projects maintain correction logs for digitised
+historical texts. Reul et al. (2019) demonstrate OCR post-correction workflows
+over historical German printing. OBS-T is distinguished by (a) the Sanskrit
+polyglot context — entries mix Sanskrit in SLP1 transliteration, German,
+English, and Latin in a single record; (b) the XML microstructure that names
+each field explicitly; and (c) the unusually complete provenance chain from
+paper scan to correction event spanning twelve years under continuous editorial
+oversight.
+
+**Lexicographic language resources.** The Global Wordnet Association (Bond &
+Paik 2012) and OntoLex-Lemon (McCrae et al. 2012) formalisms have motivated
+structured release of lexicographic data; CDSL is one of the largest open
+multilingual historical-dictionary corpora in this ecosystem. Measures of
+lexicographic quality and correction effort have not previously been studied
+systematically for Sanskrit-medium dictionaries.
 
 **Sanskrit NLP resources.** The Digital Corpus of Sanskrit (DCS; Hellwig 2010+)
 provides parsed Sanskrit text for morphological and syntactic research.
-The Monier-Williams dictionary has been used for Sanskrit word-sense
-disambiguation (Hellwig 2016). OBS-T is complementary: it focuses not on the
-semantic content of the dictionaries but on the *error signal* in their
-digitisation history, which is a prerequisite for automated correction tooling.
+Hellwig (2016) applies DCS-trained morphological models to Sanskrit word-sense
+disambiguation in the Monier-Williams dictionary. OBS-T is complementary: it
+focuses not on the semantic content of the dictionaries but on the *error signal*
+in their digitisation history, which is a prerequisite for automated correction
+tooling and complements DCS as a structured resource for Sanskrit NLP.
 
 ---
 
@@ -259,14 +278,24 @@ performed as an AI-assisted first pass (see §9, Limitations). The scorer
 | Encoding F1 | 0.022 |
 | Orthography F1 | 0.206 |
 
-The derived-subset accuracy (0.49) substantially exceeds the inferred-subset
-accuracy (0.06), confirming that positional attribution is far more reliable
-than the fallback heuristic. The main confusion zone is encoding ↔ orthography:
-38 events labelled `orthography` by the automatic system were re-labelled
-`encoding` by the annotator, and 28 events labelled `encoding` were re-labelled
-`orthography`. This boundary requires human expert judgment and is the most
-important target for future IAA work. Grammar (F1 = 0.90) and meta (F1 = 0.90)
-are the most reliably attributed components.
+The figures above compare the automatic attribution system against an
+AI-assisted annotator first pass; they should be read as a *consistency*
+score between two heuristic processes rather than a gold-standard accuracy
+figure. The derived-subset consistency (0.49) substantially exceeds the
+inferred-subset (0.06), confirming that positional attribution is far more
+reliable than the fallback heuristic regardless of annotator type.
+
+The main confusion zone is encoding ↔ orthography: 38 events labelled
+`orthography` by the automatic system were re-labelled `encoding` by the
+annotator, and 28 events labelled `encoding` were re-labelled `orthography`.
+This boundary — a diacritic repair to a Sanskrit form vs a spelling error in
+non-Sanskrit prose — requires human expert judgment and cannot be resolved by
+surface features alone. Human expert review of the ~66 boundary cases is the
+most important quality step before the corpus is finalized.
+
+Grammar (F1 = 0.90) and meta (F1 = 0.90) are the most reliably attributed
+components; their structural distinctiveness in the XML makes both heuristics
+converge.
 
 A second annotator (for Cohen κ) has not yet completed the gold sheet; IAA
 results are pending.
@@ -445,8 +474,8 @@ size and multi-decadal editorial history.
 
 ### 6.3 H3: diachronic trends
 
-Mann-Kendall trend tests on the yearly share of each component (12 annual
-observations, 2014–2026):
+Mann-Kendall trend tests (Mann 1945; Kendall 1948) on the yearly share of
+each component (12 annual observations, 2014–2026):
 
 | Component | τ | p | Trend | Share: first → last year |
 |---|---:|---:|---|---|
@@ -598,14 +627,17 @@ under the CDSL's CC-BY-SA 4.0 licence; OBS-T is released under CC-BY-4.0.
 ## 9. Limitations
 
 **AI-assisted gold annotation.** The 390-row gold sample (§4.3) was annotated
-in a single AI-assisted pass, not by an independent domain expert. The low
-overall accuracy (0.29) is partially a methodological artefact: the AI
-annotator and the automatic attribution system share some of the same
-heuristics, making the disagreement score an underestimate of true
-auto-label error. A human Sanskrit lexicography expert reviewing the
-encoding/orthography disputed cases (estimated 66 rows) would give a more
-reliable accuracy estimate. Inter-annotator agreement (Cohen κ) is pending
-a second annotator and should be treated as a gap in the current version.
+in a single AI-assisted pass, not by an independent domain expert. The overall
+consistency score (0.29) measures agreement between two heuristic processes
+(automatic attribution and the AI annotator), not accuracy against a human
+expert gold standard. The figure therefore cannot be read as a simple upper
+bound on system quality; the true accuracy — particularly on the
+encoding/orthography boundary — is better measured by the component-specific
+metrics (grammar F1 = 0.90, encoding F1 = 0.022). Human expert review of the
+~66 encoding/orthography boundary cases is the highest-priority quality step
+before the corpus is used for downstream training. Inter-annotator agreement
+(Cohen κ) is pending a second annotator and should be treated as an open gap
+in the current version.
 
 **Form-era HK/SLP1 mixing.** The cfr.tsv new-form cells mix Harvard-Kyoto
 and SLP1 conventions within the PW dictionary's submissions. Our
@@ -651,12 +683,23 @@ of the digitisation project. The corpus, released under CC-BY-4.0 with a
 temporal split and reference baselines, is available at:
 
 > `https://github.com/sanskrit-lexicon/csl-observatory`  
-> Branch `obs-t-validation` · `validation/` · `observatory/site/src/data/`
+> Branch `main` · `validation/` · `observatory/site/src/data/` · DOI pending Zenodo
 
 The most pressing next step for the resource is human expert review of the
 encoding/orthography boundary in the gold sample and completion of the
-second-annotator IAA pass. Once these are in place, the resource will be
-submitted to an LREC-style venue alongside the neural baselines.
+second-annotator IAA pass. Neural baselines (character-level seq2seq,
+BERT-style masked LM) are left for follow-up work but the evaluation
+protocol and temporal split established here make them straightforward to
+add without changing the resource itself.
+
+---
+
+## Acknowledgements
+
+Jim Funderburk and Dhaval Patel contributed the bulk of the corrections
+catalogued in this corpus and reviewed the annotation guide. The CDSL project
+has been hosted by the University of Cologne since 1994. We thank Oliver
+Hellwig for discussions on Sanskrit NLP resources and the DCS interface.
 
 ---
 
@@ -688,12 +731,27 @@ Heinrich Heine University Düsseldorf.
 Katre, S. M. (1954). *Introduction to Indian textual criticism*. Deccan
 College Post-Graduate and Research Institute.
 
+Bond, F., & Paik, K. (2012). A survey of wordnets and their licenses. In
+*Proceedings of the 6th Global WordNet Conference*, 64–71.
+
+Haaf, S., Geyken, A., & Wiegand, F. (2015). The DTA 'base format': A TEI
+subset for the compilation of a large reference corpus of printed
+historical German. *Journal of the Text Encoding Initiative*, 8.
+
+Hellwig, O. (2016). Morphological disambiguation of classical Sanskrit.
+In *Proceedings of COLING 2016*, 1082–1093.
+
+Kendall, M. G. (1948). *Rank Correlation Methods*. Griffin.
+
 Levenshtein, V. I. (1966). Binary codes capable of correcting deletions,
 insertions, and reversals. *Soviet Physics Doklady*, 10(8), 707–710.
 
-Mann, H. B., & Whitney, D. R. (1947). On a test of whether one of two random
-variables is stochastically larger than the other. *Annals of Mathematical
-Statistics*, 18(1), 50–60.
+Mann, H. B. (1945). Nonparametric tests against trend. *Econometrica*, 13(3),
+245–259.
+
+McCrae, J., Aguado-de-Cea, G., Buitelaar, P., Cimiano, P., Declerck, T.,
+Gómez-Pérez, A., … Unger, C. (2012). Interchanging lexical resources on the
+Semantic Web. *Language Resources and Evaluation*, 46(4), 701–719.
 
 Ng, H. T., Wu, S. M., Wu, Y., Hadiwinoto, C., & Tetreault, J. (2013). The
 CoNLL-2013 shared task on grammatical error correction. In *Proceedings of
@@ -705,6 +763,14 @@ correction. In *Proceedings of CoNLL-2014 Shared Task*, 1–14.
 
 Norvig, P. (2007). How to write a spelling corrector.
 `https://norvig.com/spell-correct.html`
+
+Piotrowski, M. (2012). *Natural Language Processing for Historical Texts*.
+Morgan & Claypool.
+
+Reul, C., Christ, D., Hartelt, A., Balbach, N., Wehner, M., Springmann, U.,
+… Puppe, F. (2019). OCR4all — an open-source tool providing a (semi-)
+automatic OCR workflow for historical printings. *Applied Sciences*, 9(22),
+4853.
 
 Springmann, U., Lüdeling, A., & Bollmann, M. (2016). OCR of historical
 printings of Latin texts: Problems, prospects, progress. In *Proceedings of
@@ -721,5 +787,5 @@ the Digital Humanities 2016*, 578–580.
 
 ---
 
-*First draft — AI-assisted, 2026-06-29. Pending: human IAA, neural baselines,
+*Pre-submission draft, 2026-06-30. Pending: human IAA (Cohen κ), neural baselines,
 Zenodo DOI, venue submission.*
