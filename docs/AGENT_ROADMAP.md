@@ -95,7 +95,7 @@ These have diff lists or patterns in the issue body but the issue may already be
 | [csl-orig #630](https://github.com/sanskrit-lexicon/csl-orig/issues/630) | PD | Already had 2026-06-27 comment. Open — pd.txt not in local csl-orig checkout; needs server-side check. |
 | [csl-orig #628](https://github.com/sanskrit-lexicon/csl-orig/issues/628) | MD | Already had 2026-06-27 comment. Open — editorial/accent-removal script decision needed. |
 | [csl-orig #627](https://github.com/sanskrit-lexicon/csl-orig/issues/627) | BEN | Already had 2026-06-27 comment. Open — same as #628. |
-| [csl-orig #606](https://github.com/sanskrit-lexicon/csl-orig/issues/606) | BOR | Already had 2026-06-27 comment. **Still present:** `{#......BftyABiruciH#}` at bor.txt:63398. Open. |
+| [csl-orig #606](https://github.com/sanskrit-lexicon/csl-orig/issues/606) | BOR | ✅ [PR #2874](https://github.com/sanskrit-lexicon/csl-orig/pull/2874) opened 2026-06-30 — ellipsis moved outside `{# #}` delimiter at bor.txt:63398. Awaiting merge. |
 | [csl-apidev #45](https://github.com/sanskrit-lexicon/csl-apidev/issues/45) | all | Already had 2026-06-27 comment. Open — root cause in `servepdf.php` line 212 (`getImagefiles()`) identified; no fix yet. |
 | [SKD #1](https://github.com/sanskrit-lexicon/SKD/issues/1) | SKD | Already had 2026-06-27 "can be closed" comment from gasyoun; no duplicate needed. |
 | [SKD #3](https://github.com/sanskrit-lexicon/SKD/issues/3) | SKD | ✅ [Closing comment posted 2026-06-30](https://github.com/sanskrit-lexicon/SKD/issues/3#issuecomment-4839630950) — normalization rescinded confirmed; awaiting maintainer close. |
