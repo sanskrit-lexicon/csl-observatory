@@ -88,7 +88,7 @@ contributors and reviewers.
 | E3 | Reviewer reproducibility page. | MG + Codex | done | 2026-06-13 | `docs/REVIEWER_REPRODUCIBILITY.md` and `/reproducibility` document report refresh, credentials, dashboard build, OBS-T checks, human-gated steps, and citation inputs. |
 | E4 | Contributor guide page. | MG + Codex | scheduled | 2027-03-31 | Future contributors see setup, safe issues, taxonomy, AI policy, and boundaries. |
 | E5 | Annual snapshot release. | MG + Codex | scheduled | 2027-04-15 | Tag/release includes generated reports, data snapshot, manifest, and known caveats. |
-| E6 | Site SEO + discoverability foundation. | Codex | active | 2026-07-15 | `observablehq.config.js` injects a per-page `<head>` (canonical, meta description, Open Graph, Twitter card) for the GitHub Pages origin `https://sanskrit-lexicon.github.io/csl-observatory/`; build passes and tags verified in `dist/`. **Remaining:** 1200×630 social-card image (`og:image`/`twitter:image`), per-page front-matter `description:` on the 18 pages, and a `sitemap.xml` + `robots.txt`. |
+| E6 | Site SEO + discoverability foundation. | Codex | done | 2026-06-30 | `observablehq.config.js` injects a per-page `<head>` (canonical, meta description, Open Graph, Twitter `summary_large_image`) for origin `https://sanskrit-lexicon.github.io/csl-observatory/`. Distinct per-page descriptions via a `PAGE_DESCRIPTIONS` route map (Framework drops non-whitelisted front-matter keys). 1200×630 social card (`scripts/make_social_card.py`), `sitemap.xml` (`scripts/make_sitemap.py`), and `robots.txt` emitted into `dist/` by `scripts/postbuild.mjs` (npm `postbuild`). Build clean (19 pages, 58 links); tags + statics verified in `dist/`. |
 
 ## Workstream F: OBS-T Maintenance And Paper Package
 
