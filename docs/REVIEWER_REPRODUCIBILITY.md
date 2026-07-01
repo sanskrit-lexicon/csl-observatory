@@ -136,10 +136,10 @@ For citation, include:
 
 - repository: `sanskrit-lexicon/csl-observatory`
 - file name and generated date from `data_index.csv`
-- git commit or tagged release, once frozen
-- DOI, once minted
+- git commit or tagged release (frozen: `obs-t-data-v1.0.0`)
+- DOI: [10.5281/zenodo.15834721](https://doi.org/10.5281/zenodo.15834721)
 
-The current Zenodo DOI is pending mint.
+The Zenodo DOI is [10.5281/zenodo.15834721](https://doi.org/10.5281/zenodo.15834721) (concept DOI, CC-BY-4.0).
 
 ## Review Checklist
 

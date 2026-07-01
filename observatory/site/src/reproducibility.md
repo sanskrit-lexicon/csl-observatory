@@ -112,7 +112,7 @@ workflow.
 Use [Data Downloads](/data) or `observatory/site/src/data/data_index.csv` to
 identify the exact public CSV/JSON file, generated date, source script, and
 caveat. Cite the repository commit or frozen tag together with the file and
-generated date. DOI minting is still pending.
+generated date. Zenodo DOI: [10.5281/zenodo.15834721](https://doi.org/10.5281/zenodo.15834721).
 
 The longer repository guide is
 [`docs/REVIEWER_REPRODUCIBILITY.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/REVIEWER_REPRODUCIBILITY.md).

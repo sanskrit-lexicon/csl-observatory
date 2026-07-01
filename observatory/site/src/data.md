@@ -105,7 +105,7 @@ python scripts/data_index.py --check
 
 If you use these data in published work, cite the repository snapshot, the
 specific downloaded file, and the generated date shown in the catalog. The
-Zenodo DOI is pending mint.
+Zenodo DOI is [10.5281/zenodo.15834721](https://doi.org/10.5281/zenodo.15834721).
 
 <style>
 .metric-grid {

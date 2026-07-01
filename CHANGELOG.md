@@ -81,7 +81,7 @@ sanskrit-lexicon organisation plus the OBS-T error-typology language resource.
 ### Notes
 - The 2026-06-04 boundary cleanup narrowed this repo to GitHub/org observability;
   dictionary-content research moved to `csl-atlas` (see `docs/BOUNDARY_RULES.md`).
-- Citation DOI is pending a Zenodo mint; contributor ORCIDs are not yet registered.
+- Citation DOI minted: [10.5281/zenodo.15834721](https://doi.org/10.5281/zenodo.15834721) (in CITATION.cff). Contributor ORCIDs are not yet registered.
 
 [Unreleased]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v1.1.0...HEAD
 [1.1.0]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v1.0.0...v1.1.0
