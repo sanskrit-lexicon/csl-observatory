@@ -787,4 +787,4 @@ the Digital Humanities 2016*, 578–580.
 
 ---
 
-*Pre-submission draft, 2026-06-30. Zenodo DOI [10.5281/zenodo.15834721](https://doi.org/10.5281/zenodo.15834721) minted 2026-07-01. Pending: human IAA (Cohen κ), neural baselines, venue submission.*
+*Pre-submission draft, 2026-06-30. Target venue: LREC-COLING. Zenodo DOI [10.5281/zenodo.15834721](https://doi.org/10.5281/zenodo.15834721) minted 2026-07-01. Pending: human IAA (Cohen κ), neural baselines, submission.*
