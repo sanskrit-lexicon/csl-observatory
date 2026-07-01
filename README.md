@@ -136,7 +136,7 @@ contributor, workflow, project, or organization-process evidence.
 
 If you use these data in published work:
 
-> Gasūns, M. et al. (2026). *CSL Observatory: 13 years of Cologne Digital Sanskrit Lexicon* [Data set]. Zenodo. DOI: pending mint.
+> Gasūns, M. et al. (2026). *CSL Observatory: 13 years of Cologne Digital Sanskrit Lexicon* [Data set]. Zenodo. DOI: [10.5281/zenodo.15834721](https://doi.org/10.5281/zenodo.15834721).
 
 Plus the snapshot date for reproducibility.
 

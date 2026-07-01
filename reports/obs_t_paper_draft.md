@@ -620,7 +620,7 @@ under the CDSL's CC-BY-SA 4.0 licence; OBS-T is released under CC-BY-4.0.
 
 **License.** Creative Commons Attribution 4.0 International (CC-BY-4.0).
 
-**DOI.** Pending Zenodo mint (scheduled with `csl-observatory` v1.0 release).
+**DOI.** [10.5281/zenodo.15834721](https://doi.org/10.5281/zenodo.15834721) (concept DOI, CC-BY-4.0, `obs-t-data-v1.0.0`).
 
 ---
 
@@ -683,7 +683,7 @@ of the digitisation project. The corpus, released under CC-BY-4.0 with a
 temporal split and reference baselines, is available at:
 
 > `https://github.com/sanskrit-lexicon/csl-observatory`  
-> Branch `main` · `validation/` · `observatory/site/src/data/` · DOI pending Zenodo
+> Branch `main` · `validation/` · `observatory/site/src/data/` · DOI [10.5281/zenodo.15834721](https://doi.org/10.5281/zenodo.15834721)
 
 The most pressing next step for the resource is human expert review of the
 encoding/orthography boundary in the gold sample and completion of the
@@ -787,5 +787,4 @@ the Digital Humanities 2016*, 578–580.
 
 ---
 
-*Pre-submission draft, 2026-06-30. Pending: human IAA (Cohen κ), neural baselines,
-Zenodo DOI, venue submission.*
+*Pre-submission draft, 2026-06-30. Zenodo DOI [10.5281/zenodo.15834721](https://doi.org/10.5281/zenodo.15834721) minted 2026-07-01. Pending: human IAA (Cohen κ), neural baselines, venue submission.*

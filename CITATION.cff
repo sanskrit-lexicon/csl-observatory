@@ -6,6 +6,10 @@ message: >
   metadata below. For the dataset specifically, cite the Zenodo DOI.
 license: GPL-3.0
 repository-code: https://github.com/sanskrit-lexicon/csl-observatory
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.15834721
+    description: Concept DOI for the OBS-T dataset (all versions), CC-BY-4.0
 version: 1.1.0
 date-released: "2026-06-27"
 abstract: >
