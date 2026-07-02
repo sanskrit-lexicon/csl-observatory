@@ -27,7 +27,7 @@ slips, not a queue anyone is blocked on.
 | Action | Where | Effect |
 |---|---|---|
 | Deploy images to `web/images/` on the server — the code path is already correct in `basicdisplay.php` | [csl-apidev #10](https://github.com/sanskrit-lexicon/csl-apidev/issues/10) | `<pic>` element display |
-| Trigger `csl-pywork/v02/redo_xampp_selective.sh` (server cron; can be run manually) — merged csl-orig fixes then propagate to Stardict / JSON / homepage | csl-pywork | public-artefact + tracking refresh |
+| Trigger [`csl-pywork/v02/redo_xampp_selective.sh`](https://github.com/sanskrit-lexicon/csl-pywork/blob/main/v02/redo_xampp_selective.sh) (server cron; can be run manually) — merged csl-orig fixes then propagate to Stardict / JSON / homepage | [csl-pywork](https://github.com/sanskrit-lexicon/csl-pywork) | public-artefact + tracking refresh |
 
 ## Decisions / proposals
 
@@ -43,13 +43,13 @@ slips, not a queue anyone is blocked on.
 
 ## Longer-running (csl-apidev)
 
-- Point `init_word_frequency()` (v1.1 `getword_list_1.0_main.php`) at `wf1/wf.txt` — a one-line switch; the surrounding code is frozen, so it is the maintainer's to flip (Fix I, roadmap §12).
+- Point [`init_word_frequency()`](https://github.com/sanskrit-lexicon/csl-apidev/blob/main/v1.1/getword_list_1.0_main.php) (v1.1) at [`wf1/wf.txt`](https://github.com/sanskrit-lexicon/csl-apidev/tree/main/wf1) — a one-line switch; the surrounding code is frozen, so it is the maintainer's to flip (Fix I, roadmap §12).
 - Implement csl-apidev **v1.2 M1→M5** from [`simple-search/roadmap_v1.2.md`](https://github.com/sanskrit-lexicon/csl-apidev/blob/main/simple-search/roadmap_v1.2.md).
-- Adopt cleanurl's dict-code in the Salt `salt_entries.md` §1.7 rewrite.
+- Adopt cleanurl's dict-code in the [`Salt` rewrite](https://github.com/sanskrit-lexicon/Salt/blob/main/salt_entries.md) §1.7.
 
 ## Small cleanups
 
 - Close [PWK #76](https://github.com/sanskrit-lexicon/PWK/issues/76) (typing of `pwk3_vn_page256-265`).
-- Archive the disposable `temp_corrections_ap90` and `temp_corrections_mw` repos (each still has one open scholarly-question issue).
+- Archive the disposable [`temp_corrections_ap90`](https://github.com/sanskrit-lexicon/temp_corrections_ap90) and [`temp_corrections_mw`](https://github.com/sanskrit-lexicon/temp_corrections_mw) repos (each still has one open scholarly-question issue).
 
 _Dr. Mārcis Gasūns_
