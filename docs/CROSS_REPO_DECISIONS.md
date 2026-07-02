@@ -6,6 +6,8 @@ Consolidated list of every item across the Sanskrit Lexicon repos that is
 blocked on a human decision, a credential/access grant, or a scholarly
 review. This is the **org-wide** companion to the observatory-scoped
 [`DECISIONS_NEEDED.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/DECISIONS_NEEDED.md).
+For open PRs / merges / deploys awaiting a maintainer (rather than decisions),
+see [`MAINTAINER_ACTIONS.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/MAINTAINER_ACTIONS.md).
 
 **Edition of 2026-07-02** — full re-adjudication by Fable 5 (`claude-fable-5`),
 verified against live repo state (six read-only sweeps over MWS, csl-atlas,
