@@ -51,6 +51,37 @@ const head = ({title, data, path}) => {
   const pageTitle = (data && data.title) || title || "CSL Observatory";
   const description = PAGE_DESCRIPTIONS[canonicalPath] || DEFAULT_DESCRIPTION;
   const image = ORIGIN + "/observatory-card.png"; // 1200×630, scripts/make_social_card.py
+  // JSON-LD structured data (schema.org). Organization + Person(creator) +
+  // WebSite on every page; a Dataset node on the home + /data pages so the
+  // observatory is discoverable in Google Dataset Search. Data is CC-BY-4.0
+  // (DATA_LICENSE.md); repo code is GPL-3.0.
+  const graph = [
+    {"@type": "Organization", "@id": ORIGIN + "/#org",
+     "name": "Cologne Digital Sanskrit Lexicon project",
+     "url": "https://www.sanskrit-lexicon.uni-koeln.de/",
+     "sameAs": ["https://github.com/sanskrit-lexicon"]},
+    {"@type": "Person", "@id": ORIGIN + "/#creator",
+     "name": "Mārcis Gasūns", "affiliation": "Independent scholar",
+     "sameAs": ["https://orcid.org/0000-0003-4513-884X"]},
+    {"@type": "WebSite", "@id": ORIGIN + "/#website",
+     "name": "CSL Observatory", "url": ORIGIN + "/",
+     "description": DEFAULT_DESCRIPTION, "inLanguage": "en",
+     "publisher": {"@id": ORIGIN + "/#org"}}
+  ];
+  if (canonicalPath === "/" || canonicalPath === "/data") {
+    graph.push({"@type": "Dataset", "@id": ORIGIN + "/#dataset",
+      "name": "CSL Observatory datasets",
+      "description": "Reproducible measurements of the sanskrit-lexicon GitHub organization over 13 years of Cologne Digital Sanskrit Lexicon work: repository health, contributor sustainability, issue taxonomy, and correction metrics — as downloadable CSV/JSON.",
+      "url": ORIGIN + "/data",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "isAccessibleForFree": true, "inLanguage": "en",
+      "creator": {"@id": ORIGIN + "/#creator"},
+      "publisher": {"@id": ORIGIN + "/#org"},
+      "keywords": ["Sanskrit lexicography", "Cologne Digital Sanskrit Lexicon",
+                   "digital humanities", "repository metrics", "open data"]});
+  }
+  // Escape "<" so no value can break out of the <script> element.
+  const jsonld = JSON.stringify({"@context": "https://schema.org", "@graph": graph}).replace(/</g, "\\u003c");
   return `<meta name="description" content="${attr(description)}">
 <link rel="canonical" href="${attr(url)}">
 <meta name="robots" content="index,follow">
@@ -69,7 +100,8 @@ const head = ({title, data, path}) => {
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${attr(pageTitle)}">
 <meta name="twitter:description" content="${attr(description)}">
-<meta name="twitter:image" content="${attr(image)}">`;
+<meta name="twitter:image" content="${attr(image)}">
+<script type="application/ld+json">${jsonld}</script>`;
 };
 
 export default {
