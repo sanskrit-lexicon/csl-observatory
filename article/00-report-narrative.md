@@ -1,4 +1,4 @@
-**Report on Cologne Digital Sanskrit Lexicon Project**
+# Report on the Cologne Digital Sanskrit Lexicon Project
 
 > **Mārcis Gasūns**
 >
@@ -6,19 +6,19 @@
 >
 > gasyoun@gmail.com
 
-**Abstract**
+## Abstract
 
 The Cologne Digital Sanskrit Lexicon Project (CDSL), initiated in 1994,
 represents a groundbreaking effort to create a one-of-a-kind digital
 repository of Sanskrit dictionaries. Over the past three decades, the
 project has evolved from a closed university initiative in 2013 into a
 collaborative, open-source space, hosted on the GitHub repo ecosystem
-with 6400+ issues by 2025, to integrate grammar, vocabulary, and textual
+with over 5,400 issues and pull requests across 76 repositories by 2025, to integrate grammar, vocabulary, and textual
 corpora into a unified digital framework. The project began with the
 digitization of key 19th-century Sanskrit-English and Sanskrit-German
 dictionaries, such as Monier-Williams' Sanskrit-English Dictionary and
 Böhtlingk's Sanskrit-Wörterbuch, and has since expanded to include 42
-dictionaries compiled in the last millennia and some major grammar
+dictionaries compiled over the last two centuries and some major grammar
 reference works.
 
 The CDSL project remains unique in its approach to linking dictionaries
@@ -28,10 +28,16 @@ critical resource for cross-referencing and validating lexical entries.
 This integration of dictionaries and corpora allows for a more dynamic
 and accurate representation of Sanskrit lexicography, moving beyond
 static, printed dictionaries to an evolving digital resource. The total
-number of normalized entries is 392600+ and it still grows similar to
+number of normalized entries is over 390,000 and it still grows similar to
 the Himalayas at around 2 millimeters per year.
 
-**1 Introduction**
+## Keywords
+
+Sanskrit lexicography; digital dictionaries; Cologne Digital Sanskrit
+Lexicon (CDSL); Petersburg Dictionary (Böhtlingk and Roth); retrodigitization;
+text-corpus linking; crowdsourcing.
+
+## Introduction
 
 At the 37th ICANAS, held in 2004 in Moscow, under the aegis of the
 Institute of Oriental Studies (IOS) of the Russian Academy of Sciences,
@@ -87,11 +93,11 @@ Bangalore (Kapp and Malten, 1997) almost 30 years ago:
 > dictionaries by a numeric system which functions as a placeholder for
 > a word sense which can be expanded or changed.
 
-**2 Sanskrit Dictionaries**
+## Sanskrit Dictionaries
 
-**2.1 Sanskrit-German Dictionaries**
+### Sanskrit-German Dictionaries
 
-**2.1.1 Core Sanskrit-German Dictionaries**
+#### Core Sanskrit-German Dictionaries
 
 The initial plan contained the most frequently quoted Sanskrit-English
 Dictionary (Monier-Williams 1899) and three genealogically connected
@@ -135,7 +141,7 @@ Dictionary (Borooah 1877), Student's English-Sanskrit Dictionary (Apte
 1920) thanks for the combined efforts with Peter Scharf from Brown
 University.
 
-**2.1.2 Challenges in Merging Dictionaries**
+#### Challenges in Merging Dictionaries
 
 The merge of the major bilingual Sanskrit dictionaries did not go as
 well as planned. The final merge never happened, if ever should. One of
@@ -151,9 +157,9 @@ never strong in UI, other than the 'simple' search mode. It's the
 ever-updated structured data that remains of value, but we can't ignore
 ordinary users as well.
 
-**2.2 Incomplete Tagging**
+### Incomplete Tagging
 
-**2.2.1 Meaning Tagging**
+#### Meaning Tagging
 
 As for the '(incomplete) tagging of different meanings' not much has
 been done after to fix it. Meaning tagging was never a priority, because
@@ -169,7 +175,7 @@ only for meanings, they are used for both, not only headwords, but
 meanings as well (including etymologies). So there is still plenty to
 explore and research in regards to tagging, including meaning tagging.
 
-**2.2.2 Verb Form Tagging**
+#### Verb Form Tagging
 
 Similarly with 'tagging of verb forms', although a lot of verb markup
 was added, it's still far from perfect, including the unstructured
@@ -177,9 +183,9 @@ representation at the beginning of verb entries. We have some level of
 tag coverage, but it needs to be improved, it's neither complete nor
 accurate.
 
-**2.3 Computer Programs**
+### Computer Programs
 
-**2.3.1 Online Tools and Services**
+#### Online Tools and Services
 
 As per 'allow the creation of a number of computer programs that will
 help to analyze Sanskrit texts', that indeed has surpassed the plan, but
@@ -196,7 +202,7 @@ on Cologne data, never implement the updates going on at Cologne. Even
 the critical ones at the headword level, not to mention the entry-level
 ones.
 
-**2.3.2 Offline Sanskrit Analysis Tool**
+#### Offline Sanskrit Analysis Tool
 
 An offline computer program deserves to be mentioned as well.
 "Saudamani"[^12], developed by Vladimir Leonchenko since 2019 and not
@@ -204,19 +210,19 @@ known outside Russia. It's 90,000 lines of code for Sanskrit
 quantitative analysis, nothing similar was done after Whitney, who
 introduced the approach for the first time in Indology. We have compared
 not only the macrostructure and microstructure of different
-Sanskrit-Russian dictionaries (Kretov and Leonchenko, 2021) but
-researched on totally new level the MW plagiarism question (Kretov and
-Leonchenko, 2022).
+Sanskrit-Russian dictionaries (Kretov, Gasūns and Leonchenko 2021) but
+researched on totally new level the MW plagiarism question (Kretov,
+Gasūns and Leonchenko 2022).
 
 The issue of stealing words and meanings was first raised in the 19^th^
-century by Böhtlingk himself in one of the prefaces (Böhtlingk 2007) to
-the Petersburg Dictionaries. First, he wanted to keep silent, but Max
+century by Böhtlingk himself in one of the prefaces (Brückner and Zeller
+2007) to the Petersburg Dictionaries. First, he wanted to keep silent, but Max
 Müller agitated him to speak out loud and so he did (Stache-Weiske
 2015). Böhtlingk's arguments were then again weighted in the 20^th^
 century, without adding any new data (Zgusta 1988). 35 years after
 Zgusta we have used digital tools not to verify the 40+ old selected
 cases, but to compare all the 168633 MW lemmas to 106169 PWG lemmas
-(Gasūns 2024) as per the 21^th^ century capabilities. Surprisingly only
+(Gasūns 2024) as per the 21^st^ century capabilities. Surprisingly only
 87091 lemmas are in common. The entries in MW, a dictionary treated as a
 substitute for an English translation of PWG, are generally longer than
 entries in PWG, including more meanings.
@@ -227,7 +233,7 @@ large number of *samāsas*, making up half of its volume. The average
 size of a dictionary entry in characters, MW: 110 vs. PWG: 245. 30,000
 entries in both dictionaries differ only by 15% in size, 819 entries are
 identical in size. Out of 485 citation sources in MW, 330 sources are
-identical with PWG. 41,6% of citations link to the same sources. We have
+identical with PWG. 41.6% of citations link to the same sources. We have
 yet to verify the bold statement that "MW has largely followed the order
 of meanings in PWG" (Kapp and Malten, 1997). It remains far from
 obvious.
@@ -235,7 +241,7 @@ obvious.
 The union of grammar, the text corpus, and the dictionary remains a
 dream far away.
 
-**2.3.3 High Priority Dictionaries**
+#### High Priority Dictionaries
 
 After 30 years in business, Cologne remains the origin of Sanskrit
 digital dictionaries, the industry standard. From the 42 Digital
@@ -258,11 +264,11 @@ Lexicons at Cologne, 8 dictionaries are chosen for highest priority:
 
 • SKD 1886 Sabda-kalpadruma
 
-**3 History of Digitization of Sanskrit Dictionaries**
+## History of Digitization of Sanskrit Dictionaries
 
-**3.1 Cologne Digital Sanskrit Dictionaries**
+### Cologne Digital Sanskrit Dictionaries
 
-**3.1.1 Early Digitization Efforts**
+#### Early Digitization Efforts
 
 So before we move forward, it's time for a review of the original
 report, made by the grandfather of Cologne Dictionaries (Kapp and
@@ -279,7 +285,7 @@ also included MW.' (Kapp and Malten, 1997).
 PW2 and Sch).' Yes, and they remain the core dictionaries, although the
 Sanskrit-English dictionaries are the most wanted ones.
 
-**3.1.2 Evolution of Data Formats**
+#### Evolution of Data Formats
 
 3\) 'All these will be structured and unified to allow access to the
 meanings as developed by the different lexicographers.' The movement to
@@ -303,7 +309,7 @@ discussions and analytical research, not for the dictionary files.
 
 The next big move was in 2018, it was moving to a L-based data format.
 
-**3.1.3 Integration of Dictionaries and Corpora**
+#### Integration of Dictionaries and Corpora
 
 4\) 'As a final goal it is hoped that a step can be taken towards an
 integrated Sanskrit word catalogue which codifies the distribution of
@@ -338,9 +344,9 @@ expert on the team is Nāgabhūṣaṇarāvu and we have converted him to
 Sanskrit Dictionaries. In the field of Dravidian lexicography, less work
 is left to be done after Nāgabhūṣaṇarāvu arrived.
 
-**3.2 Copyright Infringement**
+### Copyright Infringement
 
-**3.2.1 Early Copyright Issues**
+#### Early Copyright Issues
 
 Although in 1997 (Kapp and Malten, 1997) it was stated that 'to allow
 free access to the data compiled it is necessary to impose as little as
@@ -366,7 +372,7 @@ is protected under EU law as a database. After finishing the project
 everything will become available free for non-commercial use with all
 proper acknowledgments.'
 
-**3.2.2 Current Copyright Status**
+#### Current Copyright Status
 
 So at that stage in 2005, it was supposed I 'acted rashly and without
 evil intentions', but it was the first time I was treated like a
@@ -379,9 +385,9 @@ data as per Malten's request. And now, after 20 years, we still have to
 fight for the freedom of books on Indology and dictionaries of rare
 languages. Times have changed. The time has come.
 
-**3.3 Computers in Lexicography**
+### Computers in Lexicography
 
-**3.3.1 Evolution of Lexicography Tools**
+#### Evolution of Lexicography Tools
 
 The mind-boggling changes that lexicography (and the computer world at
 large) underwent in just half a century are dramatic. From pre-personal
@@ -392,12 +398,12 @@ future for Indian languages. But one thing we know for sure, is that
 users contribute via crowdsourcing like in the 'The Professor and the
 Madman' movie from 2019. And it is crowdsourcing which we would want to
 attract even wider from the perspective of planning for the next half a
-century in Sanskrit lexicography. AI alove will not make it, even
+century in Sanskrit lexicography. AI alone will not make it, even
 Dharmamitra[^17] will not suffice. Data verified by volunteers and
 multiplied by computer programs, including AI technologies, is where we
 are heading.
 
-**3.3.2 Challenges in Digital Lexicography**
+#### Challenges in Digital Lexicography
 
 In what ways are digital dictionaries already able to serve users better
 than hard-copy dictionaries? The use of large corpora during dictionary
@@ -425,9 +431,9 @@ years to compile and print two of the biggest-ever Sanskrit dictionaries
 almost alone and we have not managed in 30 years to replicate them
 group-wise. But we still try to continue. Even if we fail.
 
-**3.4 Encoding Standard**
+### Encoding Standard
 
-**3.4.1 SLP1 Encoding**
+#### SLP1 Encoding
 
 What looked like kuJjakuTIra from .{kuJjakuTIra}3{kuJja\--kuTIra\\} in
 1997 is in 2025 in SLP1 encoded as: kuYjakuwIra
@@ -443,7 +449,7 @@ initial funding stopped, the same entry initially:
 \<H3\>100{kuJjakuTIra}3{kuJja\--kuTIra}¦ •m. ‹a...bower...,...arbour›
 ‹¯Ma1lati1m.› ‹¯Gi1t.› MW034516
 
-**3.4.2 XML Structure**
+#### XML Structure
 
 Thomas was not interested in XML. XML started with Malcolm, so the
 question was now how to make corrections to MW? XML header files need
@@ -476,7 +482,7 @@ second-tier dictionaries. As the foremost authoritative resource for
 Sanskrit dictionaries, there is a pressing need to expand the team of
 volunteers dedicated to Sanskrit lexicography regularly.
 
-**3.4.3 Data Structure**
+#### Data Structure
 
 Initially, there was no concept of alternate headwords[^23]. If one
 searches for akabara, he will find akabbara and akavara as well. But if
@@ -523,9 +529,9 @@ counted all the words correctly. Sanskrit is growing regularly. Deleting
 or adding supplements or corrections goes on and stable L numbers have a
 bonus of a trustable placeholder.
 
-**3.5 Team Members**
+### Team Members
 
-**3.5.1 Key Contributors**
+#### Key Contributors
 
 What started as a project led by Thomas Malten (originally from Germany,
 now in Cambodia) in Cologne in partnership with Peter Scharf (then USA,
@@ -541,7 +547,7 @@ Usha Sanka, Nāgabhūṣaṇarāvu Kālepu (India), and Anna Rybakova (Russia).
 
 In 2004 Jim went to Brown University to meet Peter Scharf and Malcolm D.
 Hyman. He was interested in Ramopakhyana initially[^25], only then did
-dictionaries took him as a hostage. So Ramopakhyana was the turning
+the dictionaries take him hostage. So Ramopakhyana was the turning
 point not only for Dr. Gasūns, but Funderburk as well, both in 2004. Jim
 realized that things still needed to be corrected. P. Scharf contacted
 Th. Malten, if they could collaborate. It took a year in email mode
@@ -551,7 +557,7 @@ decided[^26].
 
 The switch to SLP1 was made in 2008. Sanskrit Library Phonetic ASCII
 encoding (SLP1) makes it impossible to lose any data (Scharf and Hyman
-2009), which was not so in the era of Hardvard-Kyoto convention because
+2009), which was not so in the era of Harvard-Kyoto convention because
 of the small list of Vedic words with hiatus (hiatus-190-entries.txt).
 
 Almost none of the initial team members are active now. The ship has
@@ -573,7 +579,7 @@ disambiguated it, and extended it. In the good old days corrections were
 evaluated by Malten, Scharf, or Chandrashekar and implemented by
 Funderburk.[^28]
 
-**3.5.2 Major Cologne Contributors 1994-2025**
+#### Major Cologne Contributors 1994-2025
 
 1994-2013 Thomas Malten (Germany)
 
@@ -598,7 +604,7 @@ by Nāgabhūṣaṇarāvu: 'Last but not least connecting Sanskrit with Tamil
 vocabulary is envisaged. To this end, the major Tamil dictionaries have
 already been converted into digital form.'
 
-**3.5.3 Indian Volunteers**
+#### Indian Volunteers
 
 As per Nāgabhūṣaṇarāvu CDSL is changing very slowly. Most of the work
 can be done in no time, is his stand on most of the corrections needed.
@@ -636,9 +642,9 @@ saṃ. vi. ā. strī.
 
 2\. uttamurālu;
 
-**3.6 Digital Dictionaries of South Asia**
+### Digital Dictionaries of South Asia
 
-**3.6.1 Challenges in Maintaining Digital Resources**
+#### Challenges in Maintaining Digital Resources
 
 There were two websites in the early days of the Internet with Sanskrit
 dictionaries. The question is never to make a digitization once and
@@ -646,7 +652,7 @@ forever. That is impossible. The question is who will be able to
 maintain the community of people who will keep the fire burning after
 the major work is over.
 
-**3.6.2 Comparison with Other Projects**
+#### Comparison with Other Projects
 
 Initially, Cologne Digital Sanskrit Dictionaries was not the only
 project dealing with Sanskrit dictionaries, and there still is
@@ -671,15 +677,17 @@ Apte was a Sanskrit genius and the 3rd edition of the dictionary (Apte
 Dictionaries of South Asia had long ago settled copyright with Prasad
 Prakashan. For that reason, AP was available publicly at DDSA, and only
 unofficially at CDSL. Concerning the copyright of Apte 1957 Peter Scharf
-wrote recently since P.K. Gode, the last surviving editor, passed away
-in 2021 and Y.G. Joshi, the publisher, in 1963, after 60 years of the
-decease of the latter, the copyright has ceased. Thomas Malten has
+wrote recently that, since P. K. Gode, an editor of the revised edition,
+passed away in 1961 and Y. G. Joshi, the publisher, in 1963, sixty years
+after the decease of the latter — that is, at the end of 2023 — the
+copyright has ceased under the sixty-year post-mortem term of Indian
+copyright law. Thomas Malten has
 confirmed and we are making that dictionary available at Cologne
 publicly for the first time in 2025.
 
-**4 Resources**
+## Resources
 
-**4.1 Normalizing Headwords**
+### Normalizing Headwords
 
 How headwords are spelled? There are minor differences around
 dictionaries, especially Indian and non-Indian. Normalization of
@@ -694,9 +702,9 @@ find the feminine headword. Feminine forms as search forms could be
 considered as alternative headwords. Quite easy, if we identify them
 with the L-body technique.
 
-**4.2 Correction of Dictionaries**
+### Correction of Dictionaries
 
-**4.2.1 Correction Changelog**
+#### Correction Changelog
 
 As per Th. Malten vision of the 'continuing work of correcting
 typographical errors' never stopped and only got more systematic and
@@ -706,15 +714,15 @@ explicit mission to archive, preserve and make accessible the digital
 resources entrusted. So the Sanskrit dictionaries aren't affected by the
 decline and disappearance of the Indology department in 2013. As Thomas,
 a one-man band, had not perfected the typist error correction regime, he
-did not get rid of all typoes. There are some error-prone places, like
+did not get rid of all typos. There are some error-prone places, like
 5-10% of citations in Apte have errors. It is our task to finish what he
 started, share, and give it to the world, as not everyone can study
-Sanskrit for 10,000 years alone. As our recent prolific typoe-catcher,
+Sanskrit for 10,000 years alone. As our recent prolific typo-catcher,
 Scott Rhodes stated on the yearly Cologne volunteer call: 'A mistake in
 Sanskrit is a placeholder for a correction, the only way to reach true
 knowledge.' Anyway, who would want a book on Sanskrit without mistakes?
 
-Starting from 2014, when moved to github, the first submitted typoe was
+Starting from 2014, when moved to github, the first submitted typo was
 by Dr. Usha Sanka (India), leaving Sanskrit dictionaries afterward.
 These errors are submitted through the 'Correction' link on the internal
 pages of dictionaries, redirecting to 'Sanskrit-Lexicon Correction
@@ -723,7 +731,7 @@ Later in the process, some changes were never documented, as there were
 too many of them at once (when structural changes involving regex were
 implemented in batch mode). So not everything is shown in cfr.tsv[^35].
 
-**4.2.2 Print Changes**
+#### Print Changes
 
 mw_printchange.txt[^36], begun in 2008, documents changes made to the
 digitization of MW in which the digitization is intentionally different
@@ -732,7 +740,7 @@ This list does not include 'scan' errors; only a few are thought to be
 errors of interpretation by Monier-Williams. These 700+ corrections are
 not visible as changes on the web, which might be confusing.
 
-**4.2.3 Types of Corrections**
+#### Types of Corrections
 
 There are three types of changes at CDSL:
 
@@ -779,13 +787,13 @@ a/Yjas ind. quickly, instantly, RV.; BhP.
 Note: \"(#{as})\" missing in the current CDSL, was removed sometime by
 Jim.
 
-**5 Linking Dictionary and Corpus**
+## Linking Dictionary and Corpus
 
 By 2022 the batch headword correction was over and a new era started.
 
-**5.1 Digitization of Links Targets**
+### Digitization of Links Targets
 
-**5.1.1 History of Sanskrit Lexicography**
+#### History of Sanskrit Lexicography
 
 Sanskrit lexicography, as we know it, was founded in Saint-Petersburg,
 Russia. Saint-Petersburg remains the capital of Sanskrit studies until a
@@ -822,7 +830,7 @@ South India as palm leaf manuscripts. Or Aśvaghoṣa\'s Buddhacarita, the
 first chapter of which was printed in 1892 by Sylvain Lévi (Jachertz
 1983).
 
-**5.1.2 Critical Editions**
+#### Critical Editions
 
 Until 1933 no work on the preparation of critical editions for
 Mahābhārata and Rāmāyaṇa even started and only after 1966 were made
@@ -836,7 +844,7 @@ the Bibliography, Critical Apparatus, Cultural Index[^41]) in reality,
 only on paper. Baroda is out of the game. What about Poona outside of
 BORI?
 
-**5.1.3 Digitization from India**
+#### Digitization from India
 
 Poona, the home for several Sanskrit dictionaries, decided to stay off
 the digital world[^42] as a *kūpamaṃḍūka*. An Encyclopaedic Dictionary
@@ -870,7 +878,7 @@ updated regularly, and the project, like most digital Sanskrit projects
 from India, is discontinued. But I'm sure a new day will come and
 India's digital Sanskrit resources have a bright perspective ahead.
 
-**5.1.4 Digitization for Dictionaries**
+#### Digitization for Dictionaries
 
 But none of these mentioned editions of Mahābhārata were quoted in PWG
 in the mid-19^th^ century. The Bombay edition of Mahābhārata, 1863, has
@@ -890,44 +898,36 @@ What if there are other volunteers as productive as Nāgabhūṣaṇarāvu?
 As of now, we suppose there are not more than 2800 literary sources
 scattered around seven volumes of PWG. The list, as with every other
 one, needs cleaning itself. Preparing lists is a great way of finding
-typoes with fuzzy search, referencing to the previous step, that is
+typos with fuzzy search, referencing to the previous step, that is
 error correction in dictionaries, which took around ten years only for
 the list of headwords. 116 of the abbreviations lead us nowhere, they
 are only mentioned in one of the lists but never cited. 128 major books,
 that are quoted 500+ times in PWG sum to 682898 quotations. To name only
 the most widely quoted ones:
 
-67138 MBH. MAHĀBHĀRATA, ed. Calc. (GILD. Bibl. 93).
+The counts and abbreviations below are quoted from the PWG source list;
+the German source descriptions are truncated in that list and are shown
+here abbreviated with an ellipsis.[^45]
 
-56037 ṚV. ṚGVEDA. Es wird nach Maṇḍala, Sūkta und
+```
+67138  MBH.       MAHĀBHĀRATA, ed. Calc. (GILD. Bibl. 93).
+56037  ṚV.        ṚGVEDA. Es wird nach Maṇḍala, Sūkta und …
+37762  R.         RĀMĀYAṆA. Ohne eine nähere Angabe ist be…
+25299  P.         PĀṆINI'S acht Bücher grammatischer Regel…
+25005  KATHĀS.    KATHĀSARITSĀGARA, ed. BROCKHAUS (GILD. B…)
+22563  M.         MANU'S Gesetzbuch in der Ausg. von LOISE…
+22119  BHĀG. P.   BHĀGAVATAPURĀṆA, nach Anführungen im VP.
+20121  ŚKDR.      ŚABDAKALPADRUMA (GILD. Bibl. 371).
+16204  AV.        ATHARVAVEDASAṂHITĀ, herausg. von R. ROTH …
+16151  AK.        AMARAKOṢA nach der Ausgabe von COLEBROOKE …
+16148  H.         HEMACANDRA'S ABHIDHĀNACINTĀMAṆI, ein sys…
+15702  HARIV.     HARIVAṂŚA im 4ten Bande des MBH. …
+15431  ŚAT. BR.   The ŚATAPATHABRĀHMAṆA in the Mādhyandina …
+14738  Verz. d. Oxf.  H. AUFRECHT, Verzeichniss der Oxforder …
+12990  MED.       MEDINĪKOṢA, ed. Calc. (GILD. Bibl. 258).
+```
 
-37762 R. RĀMĀYAṆA. Ohne eine nähere Angabe ist be
-
-25299 P. PĀṆINI\'S acht Bücher grammatischer Regel
-
-25005 KATHĀS. KATHĀSARITSĀGARA, ed. BROCKHAUS (GILD. B
-
-22563 M. MANU\'S Gesetzbuch in der Ausg. von LOISE
-
-22119 BHĀG. P. BHĀGAVATAPURĀṆA, nach Anführungen im VP.
-
-20121 ŚKDR. ŚABDAKALPADRUMA (GILD. Bibl. 371).
-
-16204 AV. ATHARVAVEDASAM̃HITĀ, herausg. von R. ROT
-
-16151 AK. AMARAKOṢA nach der Ausgabe von COLEBROOK
-
-16148 H. HEMACANDRA\'S ABHIDHĀNACINTĀMAṆI, ein sys
-
-15702 HARIV. HARIVAṂŚA im 4ten Bande des MBH.\&#13;&#1
-
-15431 ŚAT. BR. The ŚATAPATHABRĀHMAṆA in the Mādhyandina
-
-14738 Verz. d. Oxf. H. AUFRECHT, Verzeichniss der Oxforder
-
-12990 MED. MEDINĪKOṢA, ed. Calc. (GILD. Bibl. 258).[^45]
-
-**5.1.5 Types of Link Targets**
+#### Types of Link Targets
 
 Link target typology and selected linking target samples:
 
@@ -947,7 +947,7 @@ Link target typology and selected linking target samples:
 
 2\) to external digital corpus collections
 
-2.1) Sanskrit-Russian Parallel Corpus: Rigveda, Atharhaveda
+2.1) Sanskrit-Russian Parallel Corpus: Rigveda, Atharvaveda
 
 1.  <https://gasyoun.github.io> and lately
     <https://samskrtam.ru/parallel-corpus/rigveda.html>,
@@ -981,7 +981,7 @@ Link target typology and selected linking target samples:
 
 3.2) modern bilingual dictionaries, SKD; reference works, Whitney Roots.
 
-**5.1.6 Semi-digitization Index**
+#### Semi-digitization Index
 
 What is an index for semi-digitization?
 
@@ -1008,13 +1008,21 @@ the help of regex.
 
 Why it is important to master the citations starting from PWG? If done,
 it will automatically cover 90% of cases in MW as per Nāgabhūṣaṇarāvu
-intuitive guess. If counted, it's 41,6% of cases (see 2.3.2 Offline
-Sanskrit Analysis Tool). So it is not only 'Grundlage der
+intuitive guess. If counted, it's 41.6% of cases (see the section on the
+offline Sanskrit analysis tool above). So it is not only 'Grundlage der
 Sanskritlexikologie im deutschsprachigen Raum' (Jachertz 1983), but it
 will remain the standard Sanskrit dictionary for the next 200 years and
 not only in German-speaking countries.
 
-**5.2.2 Unique Tags**
+### Importance of Citations
+
+Some link dictionaries have link targets (= ls tags), and some doesn't.
+Dictionaries ready for linking (seven dictionaries have markup
+pertaining to literary sources): AP90, BEN, BHS, GRA, MW, PWK, PWG. For
+example, Apte has many LS, but tags are not implemented. So there is a
+potential, but the work is yet to be done, if ever.
+
+### Unique Tags
 
 Unique tags, 67 enlisted: \<ab\>, \<arab\>, \<bio\>, \<bot\>, \<chg\>,
 \<cl\>, \<div\>, \<ed\>, \<edit\>, \<etym\>, \<fr\>, \<ger\>, \<gk\>,
@@ -1026,15 +1034,7 @@ Unique tags, 67 enlisted: \<ab\>, \<arab\>, \<bio\>, \<bot\>, \<chg\>,
 \<C6\>, \<C7\>, \<C8\>, \<C9\>, \<C10\>, \<C11\>, \<C12\>, \<C\>, \<F\>,
 \<H\>, \<HI1\>, \<HI\>, \<P\>, \<Picture\>, \<Poem\>, \<VN\>[^47].
 
-**5.2.1 Importance of Citations**
-
-Some link dictionaries have link targets (= ls tags), and some doen't.
-Dictionaries ready for linking (seven dictionaries have markup
-pertaining to literary sources): AP90, BEN, BHS, GRA, MW, PWK, PWG. For
-example, Apte has many LS, but tags are not implemented. So there is a
-potential, but the work is yet to be done, if ever.
-
-**6 Future Plans**
+## Future Plans
 
 We are still living by mid-19th century dictionary standards in the
 field of Indian lexicography. The corpus revolution in lexicography has
@@ -1054,7 +1054,7 @@ links and internal inconsistencies, adding new link targets, adding new
 dictionaries, and developing sub-headword research. No one ever comes
 close to Jim Funderburk.
 
-**6.1 Additional Dictionaries**
+### Additional Dictionaries
 
 In 2025 the beginning of addition of 5 Sanskrit-Russian Dictionaries has
 been planned at Cologne, additionally to the already available
@@ -1074,7 +1074,7 @@ dictionary experience, together with Russian and Indian students
 crowdsourcing could become the safe and clean island of a verified
 Sanskrit text dataset, the golden standard.
 
-**6.1.1 Sanskrit-Russian Digital Lexicons**
+#### Sanskrit-Russian Digital Lexicons
 
 • K.A. Kossovich. Sanskritsko-russkiy slovar\' (1854)
 
@@ -1096,7 +1096,7 @@ https://samskrtam.ru/sanskrit-lexicon/small/frish_sm.html
 
 https://samskrtam.ru/sanskrit-lexicon/small/kochergina_sm.html
 
-**6.2 Abbreviation Markup**
+### Abbreviation Markup
 
 Of the more important ones for years ahead will remain the abbreviation
 markup, to literary sources and abbreviations for saving space in
@@ -1105,16 +1105,16 @@ places in the text, we have to change the scope of some of the tags, we
 have to revive the list of tags, and we have to understand what some of
 the abbreviations actually mean.
 
-**6.3 Compilation of New Sanskrit Dictionaries**
+### Compilation of New Sanskrit Dictionaries
 
 Not every single digital library equals to a corpus, so we could raise
 the issues connected with the development of the biggest Sanskrit
-parallel text corpus, the Sanskit-Russian-English-German[^48] Corpus has
+parallel text corpus, the Sanskrit-Russian-English-German[^48] Corpus has
 become the first and remains the main source for cross-reference links
 in the digital dictionaries at Cologne, linking dictionary back to
 corpora.
 
-**6.3.1 Reverse Sanskrit Dictionary**
+#### Reverse Sanskrit Dictionary
 
 There are no new Sanskrit dictionaries planned, other than the Reverse
 Sanskrit Dictionary Gasūns plans as soon as the headword cleaning is
@@ -1127,10 +1127,10 @@ external digital Sanskrit texts, where quotations can then be used in a
 much larger context' (Kapp and Malten, 1997) is ahead of our everyday
 needs.
 
-**6.4 Website Development**
+### Website Development
 
 Lately, we have seen a massive drop in website visitors. Reaching a peak
-of 482,400 visitors in 2019, going down every year ever since. Until
+of 482,400 visitors in 2019,[^visitors] going down every year ever since. Until
 2022 most visitors seem to have bookmarked it, then came searches, then
 links from websites.
 
@@ -1144,7 +1144,7 @@ spokensanskrit.org disappeared years ago and together they were above
 other backlinks: lexilogos.com, learnsanskrit.cc,
 sanskrit-sanscrito.com, en.wikipedia.org.
 
-**6.4.1 Improving User Experience**
+#### Improving User Experience
 
 One thing that would be important is URLs for each dictionary entry,
 which would make it possible to link an entry from say Wikipedia. Link
@@ -1157,7 +1157,7 @@ APIs[^49]. Frontend and backend developers badly wanted. We still
 believe that voluntary crowdsourcing is the only future for Cologne and
 Sanskrit research in the upcoming millennia.
 
-**Acknowledgments**
+## Acknowledgements
 
 Jim Funderburk, the Cologne webmaster since 2004. Dhaval Patel, member
 of the core team since 2014, as of now correction validation.
@@ -1168,126 +1168,83 @@ student of Thomas Malten, supporting the server infrastructure, is our
 only link to the University of Cologne, which is otherwise nowadays
 uninvolved.
 
-**References**
+## References
 
-**7.1 Key References**
+Apte, Vaman Shivaram. 1957–1959. *Revised and Enlarged Edition of Prin.
+V. S. Apte's The Practical Sanskrit-English Dictionary*. 3 vols. Edited by
+P. K. Gode and C. G. Karve. Poona: Prasad Prakashan.
 
-Report on the Cologne Sanskrit Dictionary Project, 1997
+Brückner, Heidrun, and Gabriele Zeller, eds. 2007. *Otto Böhtlingk an
+Rudolf Roth: Briefe zum Petersburger Wörterbuch 1852–1885*. Bearbeitet
+von Agnes Stache. Wiesbaden: Harrassowitz.
 
-<https://www.sanskrit-lexicon.uni-koeln.de/CDSL.pdf>
+Digital South Asia Library. 1999. *The Digital South Asia Library:
+Electronic Access to Seminal South Asian Resources*. Chicago: University
+of Chicago Library.
+<https://www.lib.uchicago.edu/e/su/southasia/dsal2.pdf>.
 
-Normalizing headwords of Cologne digital dictionaries, 2016
+Gasūns, Mārcis. 2006. “Latin Terms in Sanskrit Dictionaries.” In *EURALEX
+Proceedings*.
+<https://euralex.org/publications/latin-terms-in-sanskrit-dictionaries/>.
 
-<https://cse.iitkgp.ac.in/resgrp/cnerg/sclws/papers/patel.pdf>
+Ghatage, Amrit Madhav, gen. ed. 1976–. *An Encyclopaedic Dictionary of
+Sanskrit on Historical Principles*. Poona: Deccan College Postgraduate and
+Research Institute.
 
-Latin Terms in Sanskrit Dictionaries, 2006
+Ingalls, Daniel H. H. 1985. “The Mahābhārata: Stylistic Study, Computer
+Analysis and Concordance.” *Journal of South Asian Literature* 20:
+17–46.
 
-<https://euralex.org/publications/latin-terms-in-sanskrit-dictionaries/>
+Kapp, Dieter B., and Thomas Malten. 1997. *Report on the Cologne Sanskrit
+Dictionary Project*. Presented at the 10th World Sanskrit Conference,
+Bangalore. <https://www.sanskrit-lexicon.uni-koeln.de/CDSL.pdf>.
 
-The Digital South Asia Library: Electronic Access to Seminal South Asian
-Resources, 1999
+Kretov, Alexey, Mārcis Gasūns, and Vladimir Leonchenko. 2021. “Parametric
+Analysis of the ‘Sanskrit-Russian Dictionary’ by V. A. Kochergina.”
+Oriental Studies Readings, Institute of Oriental Studies, Russian Academy
+of Sciences, Moscow.
 
-<https://www.lib.uchicago.edu/e/su/southasia/dsal2.pdf>
+Kretov, Alexey, Mārcis Gasūns, and Vladimir Leonchenko. 2022. “Core
+Sanskrit Lexicon (according to Sanskrit-Russian Dictionaries).” Tronsky
+Readings, St. Petersburg.
 
-Apte, Vaman Shivaram. Revised and enlarged edition of Prin. V. S.
-Apte\'s The practical Sanskrit-English dictionary. Poona: Prasad
-Prakashan, 1957-1959. 3v.
+Macdonell, Arthur Anthony. 1929. *A Practical Sanskrit Dictionary with
+Transliteration, Accentuation, and Etymological Analysis Throughout*.
+London: Oxford University Press.
 
-Macdonell, Arthur Anthony. A practical Sanskrit dictionary with
-transliteration, accentuation, and etymological analysis throughout.
-London: Oxford University Press, 1929. \"The original edition of this
-dictionary was published by Messrs. Longmans, Green & co., and has been
-reproduced photographically with their consent.\"
+Monier-Williams, Monier. 1899. *A Sanskrit-English Dictionary*. New ed.
+Oxford: Clarendon Press.
 
-Otto Böhtlingk an Rudolf Roth: Briefe zum Petersburger Wörterbuch
-1852--1885. Herausgegeben von Heidrun Brückner und Gabriele Zeller.
-Bearbeitet von Agnes Stache. Wiesbaden: Harrassowitz 2007.
+Patel, Dhaval. 2016. “Normalizing Headwords of Cologne Digital
+Dictionaries.” Sanskrit Computational Linguistics Workshop, IIT
+Kharagpur.
+<https://cse.iitkgp.ac.in/resgrp/cnerg/sclws/papers/patel.pdf>.
 
-Ingalls, Daniel H.H. and Daniel H.H. Ingalls 1985: The MahAbhArata:
-Stylistic study, computer analysis and concordance. In: Journal of South
-Asian Literature 20:17-46.
+Scharf, Peter M., and Malcolm D. Hyman. 2009. *Linguistic Issues in
+Encoding Sanskrit*. Delhi: Motilal Banarsidass.
 
-Mārcis Gasūns. Two hundred years of Sanskrit lexicography (1819-2019) /
-Zograf Readings \"Problems of Traditional Indian Text\", St. Petersburg,
-Russia, 2019
+Stache-Weiske, Agnes. 2015. “‘Man muß zuweilen Insekten mit Kanonen
+schießen’: Max Müllers Rolle im Streit zwischen Böhtlingk und
+Monier-Williams.” In *“In ihrer rechten Hand hielt sie ein silbernes
+Messer mit Glöckchen …”: Studien zur indischen Kultur und Literatur*,
+323–336. Wiesbaden: Harrassowitz.
 
-Mārcis Gasūns. Possibilities of understanding and orthography of the
-term "Sanskrit" / Roerich Readings, Institute of Oriental Studies of the
-Russian Academy of Sciences, Oriental Studies Readings, Moscow, 2019
+Winternitz, Moriz. 1900. Review of *A Sanskrit-English Dictionary*, new
+ed., by Monier Monier-Williams (Oxford, 1899). *Wiener Zeitschrift für
+die Kunde des Morgenlandes* 14: 353–360.
 
-Mārcis Gasūns. History of Cologne Digital Lexicons, 6th International
-Sanskrit Computational Linguistics Symposium, IIT Kharagpur, India, 2019
+Zgusta, Ladislav. 1988. “Copying in Lexicography: Monier-Williams's
+Sanskrit Dictionary and Other Cases (Dvaikośyam).” *Lexicographica* 4:
+145–164.
 
-Mārcis Gasūns. Parallel Sanskrit-Russian Corpus / Zograf Readings
-\"Problems of Traditional Indian Text\", St. Petersburg, Russia, 2020
+The author has also presented aspects of this history at a number of
+Sanskrit-studies conferences between 2019 and 2024.[^presentations]
 
-Alexey Kretov, Mārcis Gasūns, Vladimir Leonchenko. Parametric Analysis
-of the "Sanskrit-Russian Dictionary" by V.A. Kochergina / Institute of
-Oriental Studies of the Russian Academy of Sciences, Oriental Studies
-Readings, Moscow, 2021
+## Appendix: Dictionaries at CDSL
 
-Mārcis Gasūns. State of the Art Sanskrit Computational Linguistics.
-Institute of Oriental Studies of the Russian Academy of Sciences,
-Oriental Studies Readings, Moscow, 2021
-
-Mārcis Gasūns. Blue lotuses of Sanskrit lexicography / Zograf Readings
-\"Problems of Traditional Indian Text\", St. Petersburg, Russia, 2021
-
-Mārcis Gasūns. Sanskrit Triptych by V.A. Kochergina: Grammar, Reader,
-Dictionary / Indological Conference "The Dubyanskiy Readings", Institute
-of Oriental and Classical Studies, HSE University, Moscow, 2021
-
-Alexey Kretov, Mārcis Gasūns, Vladimir Leonchenko. Core Sanskrit Lexicon
-(according to Sanskrit-Russian dictionaries) / Tronsky readings, St.
-Petersburg, Russia, 2022
-
-Mārcis Gasūns. Ancient Indian onomastics in the Vishnusahasranama /
-Zograf Readings \"Problems of Traditional Indian Text\", St. Petersburg,
-Russia, 2023
-
-Mārcis Gasūns. The Development of Cologne Digital Sanskrit Lexicons. How
-voluntary crowdsourcing is changing the Sanskrit Internet / University
-of Vienna, Austria, 2024
-
-Mārcis Gasūns. Future of Cologne Digital Lexicons, 7th International
-Sanskrit Computational Linguistics Symposium, Auroville, Puducherry,
-India, 2024
-
-Mārcis Gasūns. Otto von Böhtlingk\'s correspondence about the Petersburg
-Dictionaries and the fate of the lexicographer / Zograf Readings
-\"Problems of Traditional Indian Text\", St. Petersburg, Russia, 2024
-
-Mārcis Gasūns. Computational Linguistics Tools for Russian Sanskrit
-Scholars / \"The Third International Conference Towards a Russian
-Language Buddhist Canon: Text Translation as a Dialogue of Cultures\".
-Institute of Oriental Studies of the Russian Academy of Sciences,
-Oriental Studies Readings, Moscow, 2024
-
-Mārcis Gasūns. Principles of construction of the garlands of ancient
-Indian names in "Vishnusahasranama" (Mahabharata XII.135) / Roerich
-Readings, Institute of Oriental Studies of the Russian Academy of
-Sciences, Oriental Studies Readings, Moscow, 2024
-
-An Encyclopaedic Dictionary of Sanskrit on historical principles /
-general editor, A. M. Ghatage. Date: 1976-\<1982\>.
-
-Peter Scharf and Malcolm Hyman. 2009. Linguistic Issues in Encoding
-Sanskrit. Motilal Banarsidass, Delhi.
-
-Ladislav ZGUSTA, \"Copying in Lexicography: Monier-Williams\'s Sanskrit
-Dictionary and Other Cases (Dvaikośyam)\". Lexicographica 4 (1988):
-145--164.
-
-Agnes Stache-Weiske. 2015. \"In ihrer rechten Hand hielt sie ein
-silbernes Messer mit Glöckchen \...\": Studien zur indischen Kultur und
-Literatur. „Man muß zuweilen Insekten mit Kanonen schießen." Max Müllers
-Rolle im Streit zwischen Böhtlingk und Monier-Williams (pp. 323-336).
-Harrassowitz Verlag, Wiesbaden.
-
-Winternitz, M. 1900: Sir M. Monier-Williams: {A Sanskrit-English
-Dictionary.} New Edition Oxford 1899. In: WZKM 14:353-360.
-
-**7.2 List of Dictionaries**
+Individual dictionaries are cited in the text by their short code and
+year of the edition used; the full catalogue of dictionaries and
+reference works at CDSL follows.
 
 WIL 1832 Wilson Sanskrit-English Dictionary
 
@@ -1519,3 +1476,27 @@ MCI \* 1993 Mahabharata Cultural Index
 
 [^49]: <https://cceh.github.io/c-salt_sanskrit_data/> and
     <https://kosh.uni-koeln.de/cdsd/acc/restful>
+
+[^visitors]: Figure from the Cologne server web-analytics for
+    sanskrit-lexicon.uni-koeln.de (annual unique visitors).
+
+[^presentations]: Zograf Readings "Problems of Traditional Indian Text"
+    (St. Petersburg): "Two Hundred Years of Sanskrit Lexicography
+    (1819–2019)", 2019; "Parallel Sanskrit-Russian Corpus", 2020; "Blue
+    Lotuses of Sanskrit Lexicography", 2021; "Ancient Indian Onomastics
+    in the Viṣṇusahasranāma", 2023; "Otto von Böhtlingk's Correspondence
+    about the Petersburg Dictionaries and the Fate of the Lexicographer",
+    2024. Roerich Readings, Institute of Oriental Studies, RAS (Moscow):
+    "Possibilities of Understanding and Orthography of the Term
+    'Sanskrit'", 2019; "Principles of Construction of the Garlands of
+    Ancient Indian Names in the Viṣṇusahasranāma (Mahābhārata XII.135)",
+    2024. Oriental Studies Readings, Institute of Oriental Studies, RAS
+    (Moscow): "State of the Art Sanskrit Computational Linguistics",
+    2021; "Computational Linguistics Tools for Russian Sanskrit
+    Scholars", 2024. International Sanskrit Computational Linguistics
+    Symposium: "History of Cologne Digital Lexicons", IIT Kharagpur,
+    2019; "Future of Cologne Digital Lexicons", Auroville, 2024. Also:
+    "Sanskrit Triptych by V. A. Kochergina: Grammar, Reader, Dictionary",
+    Dubyanskiy Readings, HSE University, Moscow, 2021; "The Development of
+    Cologne Digital Sanskrit Lexicons: How Voluntary Crowdsourcing Is
+    Changing the Sanskrit Internet", University of Vienna, 2024.
