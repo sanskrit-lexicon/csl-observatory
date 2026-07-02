@@ -46,9 +46,11 @@ pandoc article/00-report-narrative.md \
   -o article/00-report-narrative.pdf
 ```
 
-If the *Brill* font is not installed, drop the `-V mainfont` line or
-substitute another Unicode font with full IAST coverage (e.g.
-`-V mainfont="Noto Serif"`).
+If the *Brill* font is not installed, substitute another Unicode font
+with full IAST coverage — `-V mainfont="Times New Roman"` (used for the
+committed `00-report-narrative.pdf`, 26 pp., all fonts embedded) or
+`-V mainfont="Noto Serif"` both work; or drop the `-V mainfont` line to
+fall back to Latin Modern.
 
 ## Submission target
 
