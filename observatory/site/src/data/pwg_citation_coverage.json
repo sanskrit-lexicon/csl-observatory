@@ -1,0 +1,18 @@
+{
+ "metric": "pwg_citation_link_coverage",
+ "scope": "PWG article subset (~51 roots translated for the RU/EN article site), not the full dictionary",
+ "as_of": "2026-07-02",
+ "distinct_references": 37951,
+ "distinct_resolved": 32786,
+ "distinct_coverage_pct": 86.4,
+ "occurrences_total": 50065,
+ "occurrences_covered": 41642,
+ "occurrences_scan": 34560,
+ "occurrences_html": 7082,
+ "occurrences_uncovered": 6505,
+ "occurrences_noncoordinate_labels": 1883,
+ "occurrence_coverage_pct": 83.2,
+ "uncovered_works": 446,
+ "source": "https://github.com/sanskrit-lexicon/PWG/tree/main/pwg_ls/pwg_ru_coverage",
+ "generator": "https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/src/build_citation_index.py"
+}
