@@ -22,6 +22,7 @@ const PAGE_DESCRIPTIONS = {
   "/error-typology": "What kinds of errors are corrected in the Cologne Digital Sanskrit Lexicon, where in the entry they occur, and how the profile shifts over time.",
   "/obs-t-maintenance": "Operational views for keeping the OBS-T correction-typology dataset healthy after infrastructure changes.",
   "/coverage": "How Sanskrit dictionary digitisation work is represented in GitHub issue and pull-request labels across the sanskrit-lexicon org.",
+  "/citation-coverage": "How much of the Böhtlingk-Roth (PWG) dictionary's literary-source citations link out to a Cologne source — page scans vs digital text — over the translated article subset.",
   "/taxonomy-triage": "Issue-label quality and triage gaps across the sanskrit-lexicon organization, for maintainer review.",
   "/community": "Contributors over 13 years: bus-factor risk, retention, and concentration across the Cologne Digital Sanskrit Lexicon repositories.",
   "/community-continuity": "Maintainer continuity and contributor-concentration views for monthly review of the sanskrit-lexicon organization.",
