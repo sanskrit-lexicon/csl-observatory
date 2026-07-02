@@ -80,6 +80,7 @@ export default {
     {name: "Error Typology", path: "/error-typology"},
     {name: "OBS-T Maintenance", path: "/obs-t-maintenance"},
     {name: "Issue Taxonomy", path: "/coverage"},
+    {name: "Citation Coverage", path: "/citation-coverage"},
     {name: "Taxonomy Triage", path: "/taxonomy-triage"},
     {name: "Community", path: "/community"},
     {name: "Community Continuity", path: "/community-continuity"},
