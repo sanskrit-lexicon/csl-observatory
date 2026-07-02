@@ -29,13 +29,34 @@ pandoc article/01-empirical-companion.md \
   -o article/01-empirical-companion.pdf
 ```
 
-The narrative report is already in publication-ready Pandoc Markdown.
+The narrative report (`00-report-narrative.md`) carries its own
+hand-formatted, IIJ-style author-date reference list, so it builds
+without `--citeproc`. To produce the submission Word file and a
+fonts-embedded PDF:
+
+```sh
+# Word (.docx) for the IIJ email submission
+pandoc article/00-report-narrative.md \
+  -o article/00-report-narrative.docx
+
+# fonts-embedded PDF (xelatex handles the Sanskrit diacritics)
+pandoc article/00-report-narrative.md \
+  --pdf-engine=xelatex \
+  -V mainfont="Brill" \
+  -o article/00-report-narrative.pdf
+```
+
+If the *Brill* font is not installed, drop the `-V mainfont` line or
+substitute another Unicode font with full IAST coverage (e.g.
+`-V mainfont="Noto Serif"`).
 
 ## Submission target
 
 Indo-Iranian Journal (Brill). The paired articles are formatted for the
-journal's house style; the bibliography uses the Brill Indo-Iranian Journal
-CSL stylesheet (to be added).
+journal's house style; the bibliography uses
+[`indo-iranian-journal.csl`](indo-iranian-journal.csl), an author-date
+style based on the Chicago Manual of Style 18th edition (adjust to Brill
+house style as needed).
 
 ## Licence
 
