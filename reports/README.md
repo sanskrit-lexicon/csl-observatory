@@ -24,6 +24,7 @@ page.
 | [`velocity_timeline.md`](velocity_timeline.md) | `velocity_timeline.py` | [Activity](https://sanskrit-lexicon.github.io/csl-observatory/activity) | 9,877 commits over 13 yrs; peak 11 distinct authors/yr; backlog 1,742 (2025) → 913 (2026) |
 | [`contributor_identity.md`](contributor_identity.md) | `contributor_identity.py` | — | 0/16 authors have a registered ORCID; 7 named await registration, 9 to identify |
 | [`obs_q_correction_sustainability.md`](obs_q_correction_sustainability.md) | _(probe; `obs_q_correction.py` is next)_ | — | Content corrections are single-person-burst-driven: ≤4 correctors/yr, lead 51–100%; resolution median 6 d but a tail to 6.4 yr |
+| [`pwg_citation_coverage.md`](pwg_citation_coverage.md) | _(external: [`build_citation_index.py`](https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/src/build_citation_index.py))_ | — | PWG `<ls>` link coverage (translated subset): 83.2% of 50,065 citation occurrences resolve (69% scan / 14% HTML); 446 works un-digitised |
 
 ## OBS-T — error typology (language-resource track, Phases 1–8)
 
