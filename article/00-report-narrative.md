@@ -1195,6 +1195,11 @@ Ingalls, Daniel H. H. 1985. “The Mahābhārata: Stylistic Study, Computer
 Analysis and Concordance.” *Journal of South Asian Literature* 20:
 17–46.
 
+Jachertz, Thomas. 1983. *Beiträge zu einer bibliographischen Übersicht
+über die textliche Basis unserer europäischen Sanskritwörterbücher,
+vorzüglich des grossen Petersburger Wörterbuches (PW) und des kleinen
+Petersburger Wörterbuches (pw)*. Magisterarbeit, University of Cologne.
+
 Kapp, Dieter B., and Thomas Malten. 1997. *Report on the Cologne Sanskrit
 Dictionary Project*. Presented at the 10th World Sanskrit Conference,
 Bangalore. <https://www.sanskrit-lexicon.uni-koeln.de/CDSL.pdf>.
