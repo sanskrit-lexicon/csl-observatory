@@ -1,9 +1,12 @@
 # csl-observatory Implementation Roadmap
 
-Last updated: 2026-06-30
+_Created: 16-05-2026 · Last updated: 03-07-2026_
+
 Horizon: 2026-06 to 2027-06
 Primary audience: maintainer. Secondary audiences, added later in the year:
 future contributors and paper/release reviewers.
+Phase-2 audience decision (MG, 2026-07-03): scholars first, some of whom may
+become future contributors — no funder-facing work. See Workstream G.
 
 This document is the implementation plan for the observatory itself. The
 maintainer-facing priority order lives in [`ROADMAP.md`](ROADMAP.md).
@@ -104,6 +107,23 @@ sustainability work.
 The completed OBS-T post-review implementation tracker is archived at
 [`archive/OBS_T_FIX_PLAN_2026-06-12.md`](archive/OBS_T_FIX_PLAN_2026-06-12.md).
 
+## Workstream G: Phase-2 Research Tracks (2026-07-03 Rethink)
+
+Goal: open genuinely new measurement axes beyond retrospective-descriptive
+audit. MG decisions (2026-07-03): audience = scholars (→ future contributors);
+measurement priority = lifecycle ≈ predictive/risk > external impact > network;
+visual forms = all four (networks, calendar/small-multiples, survival/Sankey,
+narrative story page); mode = **active monitor**, not passive dashboard.
+
+| ID | Deliverable | Owner | Status | Target | Acceptance |
+|---|---|---|---|---|---|
+| G1 | Issue lifecycle & responsiveness track. | Codex | active | 2026-07-31 | `scripts/issue_lifecycle.py` over committed `issues.csv` → cohort survival curves, time-to-close distributions, backlog age pyramid, PR merge latency; `reports/issue_lifecycle.md` + `/lifecycle` site page. Time-to-first-response is API-gated (no comment timestamps offline) — documented as an extension, not a blocker. |
+| G2 | Active delta monitor. | Codex | active | 2026-07-31 | `scripts/monitor_deltas.py` compares the fresh snapshot against the previous committed one and emits `reports/monitor_digest.md` flagging regressions (repo gone stale, backlog spike, conformance drop, new contributor, bus-factor change); wired into `refresh-observatory.yml`. |
+| G3 | Capture–recapture estimate of errors remaining per dictionary. | Codex + MG | scheduled | 2026-09-30 | Mark–recapture over OBS-T corrector overlap (52,498 events, 208 correctors) → per-dictionary estimate of undiscovered errors; report + site section; candidate Axx paper complementing A12. |
+| G4 | Contributor–repo network page. | Codex | scheduled | 2026-08-31 | Force-directed bipartite contributor↔repo graph + cross-repo issue-reference graph on a new site page; thin-thread single points of failure visible. |
+| G5 | Narrative story page. | Codex + MG | scheduled | 2026-09-30 | One scroll-through 13-year org history with annotated turning points (2014 cfr era → 2019 git era → 2021 volume peak → 2025 correction wave → 2026 taxonomy), designed to be sent/cited, not browsed. |
+| G6 | External impact & reach (scholar-framed). | Codex | scheduled | 2026-10-31 | GitHub stars/forks history + Zenodo download stats + downstream dependents; framed as scholarly reach, not funder metrics. Traffic API needs an org-admin token — flagged as MG gate. |
+
 ## Review Cadence
 
 - Weekly: update status in `ROADMAP.md` and this file.
@@ -119,3 +139,5 @@ The completed OBS-T post-review implementation tracker is archived at
 - DCS/corpus/grammar: `VisualDCS` or future grammar repo.
 - Broad publication planning: archived docs unless a new maintainer decision
   assigns a live home.
+
+_Dr. Mārcis Gasūns_

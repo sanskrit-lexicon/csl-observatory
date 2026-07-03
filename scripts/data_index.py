@@ -116,6 +116,36 @@ CATALOG: dict[str, Entry] = {
         "Metadata sidecar for correction_events_typed.csv.",
         "Sidecar includes attribution-route counts and should be read with the matching CSV.",
     ),
+    "pwg_citation_coverage.json": Entry(
+        "citation coverage",
+        "PWG repo pwg_ls/pwg_ru_coverage (imported summary)",
+        "Summary of PWG <ls> citation link coverage: scan vs HTML targets over the translated article subset.",
+        "Derived in the PWG repo, not regenerated here; see reports/pwg_citation_coverage.md for the live sources.",
+    ),
+    "issue_lifecycle_survival.csv": Entry(
+        "issue lifecycle",
+        "scripts/issue_lifecycle.py",
+        "Cohort survival: % of each opening-year cohort still open after 30/90/180/365/730/1460 days.",
+        "Right-censored: a cohort only reports horizons its issues have had time to reach at the snapshot date.",
+    ),
+    "issue_lifecycle_backlog.csv": Entry(
+        "issue lifecycle",
+        "scripts/issue_lifecycle.py",
+        "Backlog age pyramid: currently-open issues bucketed by age, with silent (zero-comment) counts.",
+        "Ages are computed at the snapshot as-of date, not at page-view time.",
+    ),
+    "issue_lifecycle_close.csv": Entry(
+        "issue lifecycle",
+        "scripts/issue_lifecycle.py",
+        "Time-to-close percentiles (median/p25/p75/p90) per closing year, issues and PRs separately.",
+        "Closed-at is GitHub close time; PRs are few (89 total) so annual PR rows are small samples.",
+    ),
+    "issue_lifecycle_repo.csv": Entry(
+        "issue lifecycle",
+        "scripts/issue_lifecycle.py",
+        "Per-repository responsiveness: open/closed counts, close-latency percentiles, open-age median, silent-open count.",
+        "Latency percentiles are blank for repos with fewer than 20 closed issues.",
+    ),
     "issue_typology_annual.csv": Entry(
         "issue taxonomy",
         "observatory/transform.py",

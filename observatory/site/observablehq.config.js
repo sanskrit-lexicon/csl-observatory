@@ -19,6 +19,7 @@ const PAGE_DESCRIPTIONS = {
   "/": "A living, fully-open measurement of the Cologne Digital Sanskrit Lexicon: 13 years of volunteer dictionary digitisation turned into citable, reproducible data.",
   "/ops-command": "Maintainer-first operating view across repository health, metadata blockers, issue pressure, and bus-factor risk for sanskrit-lexicon.",
   "/activity": "Issue, pull request, and commit throughput across all 76 sanskrit-lexicon repositories over 13 years of the Cologne Digital Sanskrit Lexicon.",
+  "/lifecycle": "How long issues live in the sanskrit-lexicon org: cohort survival curves, backlog age pyramid, closing latency, and per-repository responsiveness.",
   "/error-typology": "What kinds of errors are corrected in the Cologne Digital Sanskrit Lexicon, where in the entry they occur, and how the profile shifts over time.",
   "/obs-t-maintenance": "Operational views for keeping the OBS-T correction-typology dataset healthy after infrastructure changes.",
   "/coverage": "How Sanskrit dictionary digitisation work is represented in GitHub issue and pull-request labels across the sanskrit-lexicon org.",
@@ -110,6 +111,7 @@ export default {
   pages: [
     {name: "Ops Command", path: "/ops-command"},
     {name: "Activity", path: "/activity"},
+    {name: "Issue Lifecycle", path: "/lifecycle"},
     {name: "Error Typology", path: "/error-typology"},
     {name: "OBS-T Maintenance", path: "/obs-t-maintenance"},
     {name: "Issue Taxonomy", path: "/coverage"},
