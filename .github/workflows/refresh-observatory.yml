@@ -97,6 +97,15 @@ jobs:
           python scripts/taxonomy_adoption.py
           python scripts/velocity_timeline.py
           python scripts/contributor_identity.py
+          python scripts/issue_lifecycle.py
+
+      - name: Monitor deltas vs previous snapshot
+        run: |
+          # Runs BEFORE the refresh commit, so HEAD is the previous snapshot.
+          # Informational: writes reports/monitor_digest.md (committed below)
+          # and surfaces it in the run summary.
+          python scripts/monitor_deltas.py
+          cat reports/monitor_digest.md >> "$GITHUB_STEP_SUMMARY"
 
       - name: Regenerate data catalog
         run: python scripts/data_index.py
