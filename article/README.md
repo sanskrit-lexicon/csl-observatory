@@ -12,6 +12,8 @@ read either independently.
 | [`00-report-narrative.md`](00-report-narrative.md) | Mārcis Gasūns | First-person scholarly narrative | The thirty-year history of CDSL: founders, disputes, archives, hopes |
 | [`01-empirical-companion.md`](01-empirical-companion.md) | Funderburk, Patel, Rao, Gasūns | Formal third-person | Quantitative survey, runbook, standards alignment, infrastructure |
 | [`refs.bib`](refs.bib) | — | — | BibTeX bibliography for the companion paper |
+| [`A15_github_ecosystem.md`](A15_github_ecosystem.md) | Gasūns | Formal third-person | A15 skeleton: CDSL as a GitHub maintenance ecosystem (analytical findings + `csl-orig` campaign case study; boundary note vs the pair above) |
+| [`A48_error_recapture.md`](A48_error_recapture.md) | Gasūns | Formal third-person | A48 skeleton: capture–recapture estimate of residual errors |
 
 The narrative report (`00-report-narrative.md`) is also mirrored at the
 root of the repository as [`gasuns-cologne-30-report.md`](../gasuns-cologne-30-report.md);
@@ -63,4 +65,5 @@ house style as needed).
 ## Licence
 
 Both articles are licensed CC BY 4.0. The data and figures referenced in
-the companion paper are licensed CC BY-SA 4.0 and live in `../data/`.
+the companion paper are licensed CC BY 4.0 (see `../DATA_LICENSE.md`) and
+live in `../data/`.
