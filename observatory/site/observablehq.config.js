@@ -17,6 +17,7 @@ const DEFAULT_DESCRIPTION =
 // home page; keys for sub-pages match their `path` in the `pages` array below.
 const PAGE_DESCRIPTIONS = {
   "/": "A living, fully-open measurement of the Cologne Digital Sanskrit Lexicon: 13 years of volunteer dictionary digitisation turned into citable, reproducible data.",
+  "/story": "The thirteen-year story of the Cologne Digital Sanskrit Lexicon in one scroll: founding, the correction ledger, the git era, the volume peak, the backlog reckoning, and the taxonomy-and-observatory turn — every number traceable to a committed dataset.",
   "/ops-command": "Maintainer-first operating view across repository health, metadata blockers, issue pressure, and bus-factor risk for sanskrit-lexicon.",
   "/activity": "Issue, pull request, and commit throughput across all 76 sanskrit-lexicon repositories over 13 years of the Cologne Digital Sanskrit Lexicon.",
   "/lifecycle": "How long issues live in the sanskrit-lexicon org: cohort survival curves, backlog age pyramid, closing latency, and per-repository responsiveness.",
@@ -110,6 +111,7 @@ export default {
   head,
   title: "CSL Observatory",
   pages: [
+    {name: "The Story", path: "/story"},
     {name: "Ops Command", path: "/ops-command"},
     {name: "Activity", path: "/activity"},
     {name: "Issue Lifecycle", path: "/lifecycle"},

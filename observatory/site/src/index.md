@@ -7,6 +7,8 @@ toc: false
 
 **A living, fully-open measurement of the [Cologne Digital Sanskrit Lexicon](https://www.sanskrit-lexicon.uni-koeln.de/)** — 13 years of volunteer work digitising and correcting the foundational Sanskrit dictionaries, turned into citable, reproducible data. Every figure below is computed live from datasets you can [download and reuse](/data); nothing here is hand-typed.
 
+> 📖 **New here? Read [**The Story**](/story) first** — the thirteen-year arc of the project in a single five-minute scroll, written to be sent to a colleague or cited, with every number embedded. The dashboards below are for browsing; the story is for understanding.
+
 ```js
 const annual = await FileAttachment("data/timeseries_annual.csv").csv({typed: true});
 const repos = await FileAttachment("data/repos.csv").csv({typed: true});
