@@ -122,6 +122,12 @@ CATALOG: dict[str, Entry] = {
         "Summary of PWG <ls> citation link coverage: scan vs HTML targets over the translated article subset.",
         "Derived in the PWG repo, not regenerated here; see reports/pwg_citation_coverage.md for the live sources.",
     ),
+    "error_recapture.csv": Entry(
+        "obs-t recapture",
+        "scripts/error_recapture.py",
+        "Chapman capture-recapture estimates of error-prone records remaining per dictionary, from two-era overlap.",
+        "Order-of-magnitude only: sequential occasions and heterogeneous catchability violate Chapman assumptions in opposite directions; estimates capped at record counts.",
+    ),
     "issue_lifecycle_survival.csv": Entry(
         "issue lifecycle",
         "scripts/issue_lifecycle.py",
