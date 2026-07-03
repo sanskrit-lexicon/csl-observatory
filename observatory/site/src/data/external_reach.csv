@@ -1,0 +1,50 @@
+signal_type,subject,metric,value,url,tier,fetched_at,note
+stars_forks,sanskrit-lexicon org (76 repos),total_stars,103,https://github.com/sanskrit-lexicon,measured,2026-07-03,49/76 repos have zero stars
+stars_forks,sanskrit-lexicon org (76 repos),total_forks,57,https://github.com/sanskrit-lexicon,measured,2026-07-03,
+traffic,csl-orig,clones_14d,2413,https://github.com/sanskrit-lexicon/csl-orig,measured,2026-07-03,527 unique cloners; 362 views/50 unique (14-day window)
+traffic,cologne-stardict,clones_14d,1148,https://github.com/sanskrit-lexicon/cologne-stardict,measured,2026-07-03,329 unique cloners; 45 views/11 unique (14-day window)
+traffic,csl-observatory,clones_14d,709,https://github.com/sanskrit-lexicon/csl-observatory,measured,2026-07-03,224 unique cloners; 30 views/10 unique (14-day window)
+traffic,MWS,clones_14d,492,https://github.com/sanskrit-lexicon/MWS,measured,2026-07-03,87 unique cloners; 157 views/99 unique (14-day window)
+traffic,csl-pywork,clones_14d,481,https://github.com/sanskrit-lexicon/csl-pywork,measured,2026-07-03,95 unique cloners; 52 views/12 unique (14-day window)
+traffic,csl-atlas,clones_14d,393,https://github.com/sanskrit-lexicon/csl-atlas,measured,2026-07-03,147 unique cloners; 12 views/5 unique (14-day window)
+traffic,csl-apidev,clones_14d,365,https://github.com/sanskrit-lexicon/csl-apidev,measured,2026-07-03,89 unique cloners; 10 views/6 unique (14-day window)
+traffic,ApteES,clones_14d,216,https://github.com/sanskrit-lexicon/ApteES,measured,2026-07-03,68 unique cloners; 6 views/2 unique (14-day window)
+traffic,csl-websanlexicon,clones_14d,181,https://github.com/sanskrit-lexicon/csl-websanlexicon,measured,2026-07-03,55 unique cloners; 9 views/7 unique (14-day window)
+traffic,GRA,clones_14d,171,https://github.com/sanskrit-lexicon/GRA,measured,2026-07-03,54 unique cloners; 2 views/2 unique (14-day window)
+traffic,PWK,clones_14d,154,https://github.com/sanskrit-lexicon/PWK,measured,2026-07-03,44 unique cloners; 21 views/17 unique (14-day window)
+traffic,COLOGNE,clones_14d,113,https://github.com/sanskrit-lexicon/COLOGNE,measured,2026-07-03,50 unique cloners; 46 views/30 unique (14-day window)
+traffic,CORRECTIONS,clones_14d,47,https://github.com/sanskrit-lexicon/CORRECTIONS,measured,2026-07-03,24 unique cloners; 20 views/7 unique (14-day window)
+traffic,csl-inflect,clones_14d,40,https://github.com/sanskrit-lexicon/csl-inflect,measured,2026-07-03,21 unique cloners; 2 views/2 unique (14-day window)
+dependent,PyCDSL,software,,https://pypi.org/project/PyCDSL/,measured,2026-07-03,Python interface to the CDSL — on PyPI
+dependent,Ambuda,software,,https://github.com/ambuda-org/ambuda,measured,2026-07-03,Sanskrit reading platform bundling CDSL dictionaries
+dependent,ambuda-org/dictionaries,data,,https://github.com/ambuda-org/dictionaries,measured,2026-07-03,CDSL dictionaries packaged for Ambuda
+dependent,Digital Pali Dictionary (dpd-db),data,,https://github.com/digitalpalidictionary/dpd-db,measured,2026-07-03,References the Cologne site among its dictionary sources
+dependent,indic-dict/stardict-sanskrit,data,,https://github.com/indic-dict/stardict-sanskrit,measured,2026-07-03,StarDict builds of Sanskrit dictionaries incl. CDSL sources
+dependent,bhaddacak/paliplatform,software,,https://github.com/bhaddacak/paliplatform,measured,2026-07-03,Pali reading platform listing sanskrit-lexicon dictionary URLs
+dependent,ashtadhyayi-com/data,data,,https://github.com/ashtadhyayi-com/data,measured,2026-07-03,"Ashtadhyayi.com ships CDSL-derived dictionary JSON (pd.json, snp.json)"
+dependent,Samskrita-Bharati/zat.am,software,,https://github.com/Samskrita-Bharati/zat.am,measured,2026-07-03,Samskrita Bharati resource referencing the Cologne lexicon
+dependent,koeln-sanskrit-dictionary userstyle,style,,https://github.com/rramphal/browser-customizations,measured,2026-07-03,Community userstyle restyling the Cologne dictionary site
+dependent,Dictionaryphile/All_Dictionaries,data,,https://github.com/Dictionaryphile/All_Dictionaries,measured,2026-07-03,Aggregated dictionary collection referencing the Cologne site
+dependent_codesearch,AshrayShah/Indic-Reader,raw_url_or_site_reference,,https://github.com/AshrayShah/Indic-Reader,measured,2026-07-03,GitHub code-search hit for CDSL raw-URL / site consumption
+dependent_codesearch,Dictionaryphile/All_Dictionaries,raw_url_or_site_reference,,https://github.com/Dictionaryphile/All_Dictionaries,measured,2026-07-03,GitHub code-search hit for CDSL raw-URL / site consumption
+dependent_codesearch,Samskrita-Bharati/zat.am,raw_url_or_site_reference,,https://github.com/Samskrita-Bharati/zat.am,measured,2026-07-03,GitHub code-search hit for CDSL raw-URL / site consumption
+dependent_codesearch,ambuda-org/ambuda,raw_url_or_site_reference,,https://github.com/ambuda-org/ambuda,measured,2026-07-03,GitHub code-search hit for CDSL raw-URL / site consumption
+dependent_codesearch,ambuda-org/dictionaries,raw_url_or_site_reference,,https://github.com/ambuda-org/dictionaries,measured,2026-07-03,GitHub code-search hit for CDSL raw-URL / site consumption
+dependent_codesearch,ashtadhyayi-com/data,raw_url_or_site_reference,,https://github.com/ashtadhyayi-com/data,measured,2026-07-03,GitHub code-search hit for CDSL raw-URL / site consumption
+dependent_codesearch,bhaddacak/paliplatform,raw_url_or_site_reference,,https://github.com/bhaddacak/paliplatform,measured,2026-07-03,GitHub code-search hit for CDSL raw-URL / site consumption
+dependent_codesearch,digitalpalidictionary/dpd-db,raw_url_or_site_reference,,https://github.com/digitalpalidictionary/dpd-db,measured,2026-07-03,GitHub code-search hit for CDSL raw-URL / site consumption
+dependent_codesearch,indic-dict/stardict-sanskrit,raw_url_or_site_reference,,https://github.com/indic-dict/stardict-sanskrit,measured,2026-07-03,GitHub code-search hit for CDSL raw-URL / site consumption
+dependent_codesearch,julowe/st-johns,raw_url_or_site_reference,,https://github.com/julowe/st-johns,measured,2026-07-03,GitHub code-search hit for CDSL raw-URL / site consumption
+dependent_codesearch,kunalpro379/SanskritGPT,raw_url_or_site_reference,,https://github.com/kunalpro379/SanskritGPT,measured,2026-07-03,GitHub code-search hit for CDSL raw-URL / site consumption
+dependent_codesearch,mgasner/reshith,raw_url_or_site_reference,,https://github.com/mgasner/reshith,measured,2026-07-03,GitHub code-search hit for CDSL raw-URL / site consumption
+dependent_codesearch,prashantpandey-creator/purangpt,raw_url_or_site_reference,,https://github.com/prashantpandey-creator/purangpt,measured,2026-07-03,GitHub code-search hit for CDSL raw-URL / site consumption
+dependent_codesearch,rramphal/browser-customizations,raw_url_or_site_reference,,https://github.com/rramphal/browser-customizations,measured,2026-07-03,GitHub code-search hit for CDSL raw-URL / site consumption
+dependent_codesearch,sanskrit-sandhi/sanskrit,raw_url_or_site_reference,,https://github.com/sanskrit-sandhi/sanskrit,measured,2026-07-03,GitHub code-search hit for CDSL raw-URL / site consumption
+dependent_codesearch,techformist/japakosha-content,raw_url_or_site_reference,,https://github.com/techformist/japakosha-content,measured,2026-07-03,GitHub code-search hit for CDSL raw-URL / site consumption
+dependent_codesearch,udai7/dictionary,raw_url_or_site_reference,,https://github.com/udai7/dictionary,measured,2026-07-03,GitHub code-search hit for CDSL raw-URL / site consumption
+citation,Transforming the Cologne Digital Sanskrit Dictionaries into OntoLex-Lemon,scholarly_citation,2020,https://aclanthology.org/2020.ldl-1.2/,estimated,2026-07-03,venue: LDL / ACL Anthology
+citation,PyCDSL: a Python interface to the Cologne Digital Sanskrit Lexicon,scholarly_citation,2021,https://github.com/hrishikeshrt/PyCDSL,estimated,2026-07-03,venue: software / PyPI
+citation,Sanskrit Knowledge-based Systems: Annotation and Computational Tools,scholarly_citation,2024,https://arxiv.org/abs/2406.18276,estimated,2026-07-03,venue: arXiv:2406.18276
+citation,"One Model is All You Need: ByT5-Sanskrit, a Unified Model for Sanskrit NLP",scholarly_citation,2024,https://arxiv.org/abs/2409.13920,estimated,2026-07-03,venue: arXiv:2409.13920
+citation,Cologne Sanskrit Lexicon (managed resource entry),scholarly_citation,ongoing,https://dch.phil-fak.uni-koeln.de/en/ressources/managed-resources/cologne-sanskrit-lexicon,estimated,2026-07-03,venue: Uni Köln CCeH / DCH
+zenodo,record 15834721,status,mismatch,https://doi.org/10.5281/zenodo.15834721,blocked,2026-07-03,"DOI 10.5281/zenodo.15834721 resolves to an UNRELATED record (title='A Non-Surgical and Unconditional Proof of Topological Sphericity via Entropy-Spectral Dynamics (v2.2)', created=2025-07-08T08:37:37.819818+00:00, files=['NonSurgical_S3_Proof_EntropySpectral_v2.2.pdf']) — not the OBS-T dataset"

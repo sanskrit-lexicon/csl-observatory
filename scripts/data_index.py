@@ -128,6 +128,12 @@ CATALOG: dict[str, Entry] = {
         "Chapman capture-recapture estimates of error-prone records remaining per dictionary, from two-era overlap.",
         "Order-of-magnitude only: sequential occasions and heterogeneous catchability violate Chapman assumptions in opposite directions; estimates capped at record counts.",
     ),
+    "external_reach.csv": Entry(
+        "external reach",
+        "scripts/external_reach.py",
+        "Scholar-framed external reach: GitHub stars/forks, 14-day clone/view traffic for core repos, downstream dependents (known consumers + code-search hits), and representative citations, in one tidy long table.",
+        "Mixed measured/estimated: traffic is a sliding 14-day sample of core repos (not all 76); dependents from code search are a floor; citations are representative, not exhaustive. Zenodo tier is blocked pending a DOI correction.",
+    ),
     "issue_lifecycle_survival.csv": Entry(
         "issue lifecycle",
         "scripts/issue_lifecycle.py",

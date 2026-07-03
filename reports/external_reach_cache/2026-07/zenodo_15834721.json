@@ -1,0 +1,23 @@
+{
+  "id": 15834721,
+  "doi": "10.5281/zenodo.15834721",
+  "conceptdoi": "10.5281/zenodo.15813470",
+  "title": "A Non-Surgical and Unconditional Proof of Topological Sphericity via Entropy-Spectral Dynamics (v2.2)",
+  "created": "2025-07-08T08:37:37.819818+00:00",
+  "creators": [
+    "Lee, Byoungwoo"
+  ],
+  "files": [
+    "NonSurgical_S3_Proof_EntropySpectral_v2.2.pdf"
+  ],
+  "stats": {
+    "downloads": 1261,
+    "unique_downloads": 926,
+    "views": 1419,
+    "unique_views": 1281,
+    "version_downloads": 24,
+    "version_unique_downloads": 17,
+    "version_unique_views": 20,
+    "version_views": 22
+  }
+}
