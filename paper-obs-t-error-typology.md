@@ -99,6 +99,31 @@ as our own first design did, is a measurable error. We therefore report the typo
 two axes and crosswalk the edit-type axis to all three external schemes so reviewers from
 any tradition can read it.
 
+**Post-correction lineage for the edit-type axis.** Because Axis B classifies *kind of
+change* rather than *location*, it inherits directly from the OCR/digitisation
+post-correction literature rather than from lexicography — and that literature has
+converged on exactly the error granularity Axis B reports (spelling, diacritic, case,
+spacing, punctuation, digit, transposition). Richter et al. (2018) correct a
+low-resource historical corpus (Faroese) with a character-level HMM decoded by a
+modified Viterbi search, escalating only the harder residual cases to a small set of
+targeted heuristics — a two-tier design (cheap channel model first, human/heuristic
+effort where it counts) that reduced word error rate from 7.6% to 1.3% at roughly 65
+human-hours, directly comparable in spirit to our own edit-op trace plus crosswalk
+fallback. Lyu et al. (2021) instead learn the character-substitution channel end-to-end
+with a recurrent+convolutional network and a correction-aware loss. Both pre-date large
+language models; more recently, Thomas et al. (2024) show an instruction-tuned Llama 2
+correcting historical newspaper OCR at a 54.5% character-error-rate reduction against
+23.3% for a fine-tuned BART baseline on BLN600, and Boros et al. (2024) benchmark
+fourteen foundation LLMs across post-correction tasks spanning languages, periods, and
+document types. We read this lineage specifically as *prior art for what a corrector
+looks like once an error is typed* — the CDSL is not OCR-sourced, but a large share of
+its correction events (the spelling/diacritic/case/spacing/punctuation clusters that
+dominate Axis B, §5.3) are the same class of small, local, channel-model-tractable
+errors these systems target. The released baselines in §6 are deliberately the cheap
+end of this spectrum (trigram LM, Norvig edit-1); the natural next step this typology
+enables is applying a Viterbi- or neural-channel corrector of this kind per edit-type
+cluster, using the location axis to decide where correction effort is worth spending.
+
 **Relation to the lexicographic-structure work.** The *interpretation* of the location
 axis — what it means that a dictionary's errors sit in its citations versus its
 definitions — connects to the microstructure analyses in the sibling `csl-atlas` project
@@ -346,7 +371,10 @@ wrong.
 surface edits, even in the definition and headword fields (§5.4), means the highest-yield
 automated quality tooling for digital Sanskrit lexicography is **not** semantic — it is
 spelling, spacing, punctuation and diacritic normalisation, targeted by the
-character-confusion profile of §5.8. The error mass is where a transducer can reach it.
+character-confusion profile of §5.8. The error mass is where a transducer can reach it —
+which is precisely the class of corrector the OCR/digitisation post-correction lineage
+(§2) was built for, from channel-model HMMs (Richter et al. 2018) through LLM-based
+correctors (Thomas et al. 2024; Boros et al. 2024).
 
 **The two-axis lesson generalises.** The 0.1 % silver agreement (§4.3) is a cautionary
 result for any digitisation-correction study: *where* an edit lands and *what kind* of edit
@@ -392,6 +420,10 @@ different and more human thing than a list of a dictionary's mistakes.
 
 ## References (draft — author to finalise)
 
+Boros, E., Ehrmann, M., Romanello, M., Najem-Meyer, S. and Kaplan, F. (2024).
+Post-Correction of Historical Text Transcripts with Large Language Models: An
+Exploratory Study. *LaTeCH-CLfL 2024.* https://aclanthology.org/2024.latechclfl-1.14/
+
 Bryant, C., Felice, M. and Briscoe, T. (2017). Automatic annotation and evaluation of
 error types for grammatical error correction. *ACL 2017.* — [ERRANT]
 
@@ -404,7 +436,19 @@ Kapp, D. and Malten, T. *Cologne Digital Sanskrit Dictionaries*, University of C
 
 Katre, S. M. (1941). *Introduction to Indian Textual Criticism.* Karnatak Publishing House.
 
+Lyu, L., Koutraki, M., Krickl, M. and Fetahu, B. (2021). Neural OCR Post-Hoc Correction
+of Historical Corpora. *Transactions of the Association for Computational Linguistics*
+9. https://aclanthology.org/2021.tacl-1.29/
+
+Richter, C., Wickes, M., Beser, D. and Marcus, M. (2018). Low-resource Post Processing
+of Noisy OCR Output for Historical Corpus Digitisation. *LREC 2018.*
+https://aclanthology.org/L18-1369/
+
 Svensén, B. (2009). *A Handbook of Lexicography.* Cambridge University Press.
+
+Thomas, A., Gaizauskas, R. and Lu, H. (2024). Leveraging LLMs for Post-OCR Correction
+of Historical Newspapers. *LT4HALA Workshop @ LREC-COLING 2024.*
+https://aclanthology.org/2024.lt4hala-1.14/
 
 Wiegand, H. E. (1998–). *Wörterbuchforschung.* De Gruyter.
 
