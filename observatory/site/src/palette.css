@@ -1,0 +1,50 @@
+/* palette.css — CSL Observatory chart color tokens (Phase-3, spec Part 2).
+ *
+ * CSS custom properties layered over the Observable Framework "air"/"alt"
+ * themes. Charts read these via getComputedStyle rather than hard-coding
+ * hexes; the dark block overrides for prefers-color-scheme: dark.
+ *
+ * Token families:
+ *   --obs-accent          the site accent (matches the theme-color meta)
+ *   --obs-seq-1 … -7      sequential ramp, low → high (heatmap fills)
+ *   --obs-good / -warn / -bad   status colors
+ *   --obs-muted           de-emphasized marks (unselected, "other" bins)
+ */
+
+:root {
+  --obs-accent: #3a5f7d;
+  --obs-muted: #9aa5ad;
+
+  /* sequential ramp: paper → accent-dark (light backgrounds) */
+  --obs-seq-1: #f2f6f9;
+  --obs-seq-2: #d9e4ec;
+  --obs-seq-3: #b3c9d8;
+  --obs-seq-4: #8caec5;
+  --obs-seq-5: #6389a7;
+  --obs-seq-6: #3a5f7d;
+  --obs-seq-7: #223c52;
+
+  --obs-good: #1a7f37;
+  --obs-warn: #bf8700;
+  --obs-bad: #cf222e;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --obs-accent: #7fa8c9;
+    --obs-muted: #6b7680;
+
+    /* sequential ramp: ink → accent-light (dark backgrounds) */
+    --obs-seq-1: #16232e;
+    --obs-seq-2: #223c52;
+    --obs-seq-3: #33546f;
+    --obs-seq-4: #48708f;
+    --obs-seq-5: #628caa;
+    --obs-seq-6: #7fa8c9;
+    --obs-seq-7: #a9c8e0;
+
+    --obs-good: #3fb950;
+    --obs-warn: #d29922;
+    --obs-bad: #f85149;
+  }
+}

@@ -19,6 +19,8 @@ PAGES = [
     "taxonomy-triage",
     "community-continuity",
     "obs-t-maintenance",
+    "correction-anatomy",
+    "org-shape",
 ]
 
 
