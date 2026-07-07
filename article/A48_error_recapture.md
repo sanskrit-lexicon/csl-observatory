@@ -43,6 +43,6 @@ Digital Scholarship in the Humanities, or International Journal of Lexicography 
 
 ## Provenance
 
-Scaffolded 03-07-2026 by Fable 5 (`claude-fable-5`) executing [H089](https://github.com/gasyoun/Uprava/blob/main/handoffs/H089_obs_capture_recapture.md); analysis shipped same session (commit `acd8687`).
+Scaffolded 03-07-2026 by Fable 5 (`claude-fable-5`) executing [H089](https://github.com/gasyoun/Uprava/blob/main/handoffs/H089-Fable_csl-observatory_obs_capture_recapture_03.07.26.md); analysis shipped same session (commit `acd8687`).
 
 _Dr. Mārcis Gasūns_

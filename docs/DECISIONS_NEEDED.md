@@ -62,7 +62,7 @@ automation and project-board audits.
 | A2 | Taxonomy rollout done: 24 dictionary repos (786 issues) plus 4 tooling repos (153 issues), all verified clean. | `SESSION_HANDOFF.md`; `csl-corrections/.ai_state.md` |
 | A1 | KRM license set to CC-BY-SA-4.0; full legalcode replaced the GPL text. | KRM `LICENSE` |
 | A3 | Full CC-BY-SA-4.0 legalcode applied to 21 repos; GitHub now auto-detects the license. | `*/LICENSE` |
-| B3 | `.github/ISSUE_TEMPLATE/*.yml` plus `PULL_REQUEST_TEMPLATE.md` pushed to BOR/BUR/INM/KRM/BOP/MW72, then extended 03-07-2026 to BEN/BHS/CAE/CCS/LRV/MCI/SHS/SKD/STC/VEI/WIL (17 dict repos total). | `csl-corrections/.ai_state.md`; previous handoff; [H126](https://github.com/gasyoun/Uprava/blob/main/handoffs/H126_dict_issue_templates_rollout.md) |
+| B3 | `.github/ISSUE_TEMPLATE/*.yml` plus `PULL_REQUEST_TEMPLATE.md` pushed to BOR/BUR/INM/KRM/BOP/MW72, then extended 03-07-2026 to BEN/BHS/CAE/CCS/LRV/MCI/SHS/SKD/STC/VEI/WIL (17 dict repos total). | `csl-corrections/.ai_state.md`; previous handoff; [H126](https://github.com/gasyoun/Uprava/blob/main/handoffs/H126-Sonnet_Uprava_dict_issue_templates_rollout_03.07.26.md) |
 | B4 | SHS author confirmed as Kulapati Jibananda Vidyasagara. | SHS README/CLAUDE; M3 docs |
 | B5 | ApteES reverse-direction English-to-Sanskrit docs built. | ApteES README/CLAUDE; M3 docs |
 | D2 | Approved M1 refresh-script modernization as a backward-compatible refactor. | `docs/ROADMAP.md`; `csl-pywork#53` |
