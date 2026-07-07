@@ -13,6 +13,7 @@ Outputs (observatory/site/src/data/):
         obs_t_timeline_monthly.csv  YYYY-MM x component  (animated stacked area)
         obs_t_dict.csv              per-dictionary events, entries, density, top component
         obs_t_corrector.csv         per-corrector events, span, top component
+        obs_t_corrector_component.csv  corrector x error component counts (top correctors)
         obs_t_summary.json          headline KPIs
         reports/obs_t_typology.md   the finding
 
@@ -34,6 +35,7 @@ OUT_TL = os.path.join(DATA, 'obs_t_timeline.csv')
 OUT_TLM = os.path.join(DATA, 'obs_t_timeline_monthly.csv')
 OUT_DICT = os.path.join(DATA, 'obs_t_dict.csv')
 OUT_CORR = os.path.join(DATA, 'obs_t_corrector.csv')
+OUT_CORR_COMP = os.path.join(DATA, 'obs_t_corrector_component.csv')
 OUT_SUM = os.path.join(DATA, 'obs_t_summary.json')
 OUT_MD = os.path.join(ROOT, 'reports', 'obs_t_typology.md')
 csv.field_size_limit(10_000_000)
@@ -148,6 +150,14 @@ def main():
                                           'top_component', 'first', 'last'])
         w.writeheader(); w.writerows(corr_rows[:60])
 
+    # ---- corrector x component (V4 heatmap source: top correctors by events) ----
+    with open(OUT_CORR_COMP, 'w', encoding='utf-8', newline='') as f:
+        w = csv.writer(f); w.writerow(['corrector', 'name', 'component', 'count'])
+        for r in corr_rows[:12]:
+            c = by_corr[r['corrector']]
+            for comp, n in c['comp'].most_common():
+                w.writerow([r['corrector'], c['name'], comp, n])
+
     # ---- top form consonant confusions (the clean linguistic artifact) ----
     form_cons = []
     if os.path.exists(CONF_CSV):
@@ -188,7 +198,7 @@ def main():
 
     write_report(summary, dict_rows, corr_rows, form_cons)
 
-    print(f'wrote {OUT_TL}, {OUT_TLM}, {OUT_DICT}, {OUT_CORR}, {OUT_SUM}')
+    print(f'wrote {OUT_TL}, {OUT_TLM}, {OUT_DICT}, {OUT_CORR}, {OUT_CORR_COMP}, {OUT_SUM}')
     print(f'wrote {OUT_MD}')
     print(f'  events {summary["events"]}  derived {summary["derivedPct"]}%  '
           f'dicts {summary["dictionaries"]}  correctors {summary["correctors"]}')
