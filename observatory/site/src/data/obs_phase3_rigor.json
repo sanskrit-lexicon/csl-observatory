@@ -1,0 +1,3062 @@
+{
+  "generatedAt": "2026-07-07T13:36:13.102113+00:00",
+  "h4_specialisation": {
+    "contributors": 15,
+    "families": 11,
+    "chi2": 1517.1,
+    "dof": 140,
+    "cramers_v": 0.131,
+    "permutation_p": 0.0014,
+    "n_perm": 10000,
+    "entropy_median": 0.0,
+    "entropy_median_ci95": [
+      0.0,
+      0.8
+    ],
+    "n_logins_entropy": 17
+  },
+  "h5_edittype_invariance": {
+    "top_correctors": [
+      "dhaval_ejf",
+      "drdhaval2785",
+      "funderburkjim"
+    ],
+    "n_top_correctors": 3,
+    "n_events": 48542,
+    "chi2": 27553.2,
+    "dof": 14,
+    "p_value_descriptive": 0.0,
+    "cramers_v": 0.533,
+    "block_bootstrap_v_ci95": [
+      0.526,
+      0.544
+    ]
+  },
+  "h6_pareto_per_component": {
+    "strata": {
+      "derived": {
+        "headword": {
+          "n": 5823,
+          "top2_share": 0.853,
+          "ci95": [
+            0.84,
+            0.865
+          ],
+          "gini": 0.943,
+          "p_share_lt_080": 0.0,
+          "q_share_lt_080": 0.0
+        },
+        "meta": {
+          "n": 624,
+          "top2_share": 0.966,
+          "ci95": [
+            0.927,
+            0.982
+          ],
+          "gini": 0.865,
+          "p_share_lt_080": 0.0,
+          "q_share_lt_080": 0.0
+        },
+        "sense": {
+          "n": 17778,
+          "top2_share": 0.972,
+          "ci95": [
+            0.963,
+            0.978
+          ],
+          "gini": 0.974,
+          "p_share_lt_080": 0.0,
+          "q_share_lt_080": 0.0
+        },
+        "grammar": {
+          "n": 293,
+          "top2_share": 0.857,
+          "ci95": [
+            0.574,
+            0.945
+          ],
+          "gini": 0.792,
+          "p_share_lt_080": 0.3333,
+          "q_share_lt_080": 0.3333
+        },
+        "citation": {
+          "n": 3335,
+          "top2_share": 0.993,
+          "ci95": [
+            0.987,
+            0.996
+          ],
+          "gini": 0.894,
+          "p_share_lt_080": 0.0,
+          "q_share_lt_080": 0.0
+        },
+        "markup": {
+          "n": 5902,
+          "top2_share": 0.999,
+          "ci95": [
+            0.997,
+            1.0
+          ],
+          "gini": 0.638,
+          "p_share_lt_080": 0.0,
+          "q_share_lt_080": 0.0
+        }
+      },
+      "all": {
+        "unattributed": {
+          "n": 18743,
+          "top2_share": 0.849,
+          "ci95": [
+            0.843,
+            0.854
+          ],
+          "gini": 0.97,
+          "p_share_lt_080": 0.0,
+          "q_share_lt_080": 0.0
+        },
+        "headword": {
+          "n": 5823,
+          "top2_share": 0.853,
+          "ci95": [
+            0.84,
+            0.865
+          ],
+          "gini": 0.943,
+          "p_share_lt_080": 0.0,
+          "q_share_lt_080": 0.0
+        },
+        "meta": {
+          "n": 624,
+          "top2_share": 0.966,
+          "ci95": [
+            0.927,
+            0.982
+          ],
+          "gini": 0.865,
+          "p_share_lt_080": 0.0,
+          "q_share_lt_080": 0.0
+        },
+        "sense": {
+          "n": 17778,
+          "top2_share": 0.972,
+          "ci95": [
+            0.963,
+            0.978
+          ],
+          "gini": 0.974,
+          "p_share_lt_080": 0.0,
+          "q_share_lt_080": 0.0
+        },
+        "grammar": {
+          "n": 293,
+          "top2_share": 0.857,
+          "ci95": [
+            0.574,
+            0.945
+          ],
+          "gini": 0.792,
+          "p_share_lt_080": 0.3333,
+          "q_share_lt_080": 0.3333
+        },
+        "citation": {
+          "n": 3335,
+          "top2_share": 0.993,
+          "ci95": [
+            0.987,
+            0.996
+          ],
+          "gini": 0.894,
+          "p_share_lt_080": 0.0,
+          "q_share_lt_080": 0.0
+        },
+        "markup": {
+          "n": 5902,
+          "top2_share": 0.999,
+          "ci95": [
+            0.997,
+            1.0
+          ],
+          "gini": 0.638,
+          "p_share_lt_080": 0.0,
+          "q_share_lt_080": 0.0
+        }
+      }
+    },
+    "kappa_note": "Cohen's kappa = 0.0 over 4 double-annotated pairs (kappa gate NOT cleared; gold_component_2 needs a second annotator across the full 390-row sample)"
+  },
+  "h7_backlog_stationarity": {
+    "n_snapshots": 5,
+    "snapshot_dates": [
+      "2026-05-07",
+      "2026-05-11",
+      "2026-05-18",
+      "2026-05-25",
+      "2026-06-01"
+    ],
+    "series": {
+      "total_issues": {
+        "tau": 1.0,
+        "p_value": 0.0275,
+        "series": [
+          5172,
+          5180,
+          5204,
+          5256,
+          5365
+        ],
+        "q_value": 0.0413
+      },
+      "total_pull_requests": {
+        "tau": 0.9,
+        "p_value": 0.05,
+        "series": [
+          37,
+          37,
+          40,
+          42,
+          117
+        ],
+        "q_value": 0.05
+      },
+      "total_commits": {
+        "tau": 1.0,
+        "p_value": 0.0275,
+        "series": [
+          3979,
+          4240,
+          4762,
+          5077,
+          5306
+        ],
+        "q_value": 0.0413
+      }
+    },
+    "verdict": "deferred (underpowered: n=5 snapshots, need >= 10)"
+  },
+  "h8_confusion_asymmetry": {
+    "n_pairs_tested": 217,
+    "pairs": {
+      "iast:P->p": {
+        "edit_space": "iast",
+        "from": "P",
+        "to": "p",
+        "total": 3281,
+        "directional_share": 0.898,
+        "ci95": [
+          0.887,
+          0.908
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:.->,": {
+        "edit_space": "iast",
+        "from": ".",
+        "to": ",",
+        "total": 1026,
+        "directional_share": 0.963,
+        "ci95": [
+          0.95,
+          0.973
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:¯->.": {
+        "edit_space": "iast",
+        "from": "¯",
+        "to": ".",
+        "total": 503,
+        "directional_share": 0.97,
+        "ci95": [
+          0.951,
+          0.982
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:v->V": {
+        "edit_space": "iast",
+        "from": "v",
+        "to": "V",
+        "total": 365,
+        "directional_share": 0.948,
+        "ci95": [
+          0.92,
+          0.966
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:b->v": {
+        "edit_space": "iast",
+        "from": "b",
+        "to": "v",
+        "total": 626,
+        "directional_share": 0.792,
+        "ci95": [
+          0.759,
+          0.822
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:2->²": {
+        "edit_space": "iast",
+        "from": "2",
+        "to": "²",
+        "total": 340,
+        "directional_share": 1.0,
+        "ci95": [
+          0.989,
+          1.0
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:g->̇": {
+        "edit_space": "iast",
+        "from": "g",
+        "to": "̇",
+        "total": 379,
+        "directional_share": 0.868,
+        "ci95": [
+          0.83,
+          0.898
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:n->̣": {
+        "edit_space": "iast",
+        "from": "n",
+        "to": "̣",
+        "total": 547,
+        "directional_share": 0.508,
+        "ci95": [
+          0.466,
+          0.55
+        ],
+        "p_value": 0.732344,
+        "q_value": 0.8234
+      },
+      "iast:k->t": {
+        "edit_space": "iast",
+        "from": "k",
+        "to": "t",
+        "total": 272,
+        "directional_share": 0.938,
+        "ci95": [
+          0.902,
+          0.961
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:E->e": {
+        "edit_space": "iast",
+        "from": "E",
+        "to": "e",
+        "total": 341,
+        "directional_share": 0.698,
+        "ci95": [
+          0.647,
+          0.744
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:a->i": {
+        "edit_space": "iast",
+        "from": "a",
+        "to": "i",
+        "total": 369,
+        "directional_share": 0.762,
+        "ci95": [
+          0.715,
+          0.802
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:*->e": {
+        "edit_space": "iast",
+        "from": "*",
+        "to": "e",
+        "total": 227,
+        "directional_share": 1.0,
+        "ci95": [
+          0.983,
+          1.0
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:O->g": {
+        "edit_space": "iast",
+        "from": "O",
+        "to": "g",
+        "total": 227,
+        "directional_share": 0.996,
+        "ci95": [
+          0.975,
+          0.999
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:j->̃": {
+        "edit_space": "iast",
+        "from": "j",
+        "to": "̃",
+        "total": 220,
+        "directional_share": 0.932,
+        "ci95": [
+          0.891,
+          0.958
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:s->m": {
+        "edit_space": "iast",
+        "from": "s",
+        "to": "m",
+        "total": 302,
+        "directional_share": 0.656,
+        "ci95": [
+          0.6,
+          0.707
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:e->o": {
+        "edit_space": "iast",
+        "from": "e",
+        "to": "o",
+        "total": 265,
+        "directional_share": 0.74,
+        "ci95": [
+          0.684,
+          0.789
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:k->K": {
+        "edit_space": "iast",
+        "from": "k",
+        "to": "K",
+        "total": 211,
+        "directional_share": 0.891,
+        "ci95": [
+          0.842,
+          0.926
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:s->a": {
+        "edit_space": "iast",
+        "from": "s",
+        "to": "a",
+        "total": 213,
+        "directional_share": 0.915,
+        "ci95": [
+          0.87,
+          0.946
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:c->C": {
+        "edit_space": "iast",
+        "from": "c",
+        "to": "C",
+        "total": 244,
+        "directional_share": 0.762,
+        "ci95": [
+          0.705,
+          0.811
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:t->a": {
+        "edit_space": "iast",
+        "from": "t",
+        "to": "a",
+        "total": 195,
+        "directional_share": 0.938,
+        "ci95": [
+          0.896,
+          0.964
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:̄->h": {
+        "edit_space": "iast",
+        "from": "̄",
+        "to": "h",
+        "total": 178,
+        "directional_share": 0.994,
+        "ci95": [
+          0.969,
+          0.999
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:u->c": {
+        "edit_space": "iast",
+        "from": "u",
+        "to": "c",
+        "total": 180,
+        "directional_share": 0.972,
+        "ci95": [
+          0.937,
+          0.988
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:r->c": {
+        "edit_space": "iast",
+        "from": "r",
+        "to": "c",
+        "total": 197,
+        "directional_share": 0.878,
+        "ci95": [
+          0.825,
+          0.917
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:i->m": {
+        "edit_space": "iast",
+        "from": "i",
+        "to": "m",
+        "total": 189,
+        "directional_share": 0.947,
+        "ci95": [
+          0.905,
+          0.971
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:b->B": {
+        "edit_space": "iast",
+        "from": "b",
+        "to": "B",
+        "total": 163,
+        "directional_share": 0.871,
+        "ci95": [
+          0.811,
+          0.914
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:́->²": {
+        "edit_space": "iast",
+        "from": "́",
+        "to": "²",
+        "total": 131,
+        "directional_share": 1.0,
+        "ci95": [
+          0.972,
+          1.0
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:a->u": {
+        "edit_space": "iast",
+        "from": "a",
+        "to": "u",
+        "total": 203,
+        "directional_share": 0.704,
+        "ci95": [
+          0.638,
+          0.763
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:̣->.": {
+        "edit_space": "iast",
+        "from": "̣",
+        "to": ".",
+        "total": 145,
+        "directional_share": 0.862,
+        "ci95": [
+          0.797,
+          0.909
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:n->m": {
+        "edit_space": "iast",
+        "from": "n",
+        "to": "m",
+        "total": 205,
+        "directional_share": 0.639,
+        "ci95": [
+          0.571,
+          0.702
+        ],
+        "p_value": 8.3e-05,
+        "q_value": 0.0002
+      },
+      "iast:̣->p": {
+        "edit_space": "iast",
+        "from": "̣",
+        "to": "p",
+        "total": 137,
+        "directional_share": 0.876,
+        "ci95": [
+          0.81,
+          0.921
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:n->d": {
+        "edit_space": "iast",
+        "from": "n",
+        "to": "d",
+        "total": 257,
+        "directional_share": 0.661,
+        "ci95": [
+          0.602,
+          0.717
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:̇->̣": {
+        "edit_space": "iast",
+        "from": "̇",
+        "to": "̣",
+        "total": 255,
+        "directional_share": 0.624,
+        "ci95": [
+          0.563,
+          0.681
+        ],
+        "p_value": 9.6e-05,
+        "q_value": 0.0002
+      },
+      "iast:f->a": {
+        "edit_space": "iast",
+        "from": "f",
+        "to": "a",
+        "total": 180,
+        "directional_share": 0.567,
+        "ci95": [
+          0.494,
+          0.637
+        ],
+        "p_value": 0.086187,
+        "q_value": 0.1214
+      },
+      "iast:a->̄": {
+        "edit_space": "iast",
+        "from": "a",
+        "to": "̄",
+        "total": 181,
+        "directional_share": 0.663,
+        "ci95": [
+          0.591,
+          0.728
+        ],
+        "p_value": 1.4e-05,
+        "q_value": 0.0
+      },
+      "iast:o->̄": {
+        "edit_space": "iast",
+        "from": "o",
+        "to": "̄",
+        "total": 191,
+        "directional_share": 0.513,
+        "ci95": [
+          0.443,
+          0.583
+        ],
+        "p_value": 0.772342,
+        "q_value": 0.8508
+      },
+      "iast:w->d": {
+        "edit_space": "iast",
+        "from": "w",
+        "to": "d",
+        "total": 104,
+        "directional_share": 0.846,
+        "ci95": [
+          0.765,
+          0.903
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:)->e": {
+        "edit_space": "iast",
+        "from": ")",
+        "to": "e",
+        "total": 88,
+        "directional_share": 1.0,
+        "ci95": [
+          0.958,
+          1.0
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:a->e": {
+        "edit_space": "iast",
+        "from": "a",
+        "to": "e",
+        "total": 139,
+        "directional_share": 0.691,
+        "ci95": [
+          0.61,
+          0.761
+        ],
+        "p_value": 8e-06,
+        "q_value": 0.0
+      },
+      "iast:w->W": {
+        "edit_space": "iast",
+        "from": "w",
+        "to": "W",
+        "total": 140,
+        "directional_share": 0.6,
+        "ci95": [
+          0.517,
+          0.677
+        ],
+        "p_value": 0.022155,
+        "q_value": 0.0359
+      },
+      "iast:r->n": {
+        "edit_space": "iast",
+        "from": "r",
+        "to": "n",
+        "total": 195,
+        "directional_share": 0.523,
+        "ci95": [
+          0.453,
+          0.592
+        ],
+        "p_value": 0.566831,
+        "q_value": 0.6543
+      },
+      "iast:.->e": {
+        "edit_space": "iast",
+        "from": ".",
+        "to": "e",
+        "total": 81,
+        "directional_share": 0.963,
+        "ci95": [
+          0.897,
+          0.987
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:B->m": {
+        "edit_space": "iast",
+        "from": "B",
+        "to": "m",
+        "total": 98,
+        "directional_share": 0.786,
+        "ci95": [
+          0.695,
+          0.855
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:̣->S": {
+        "edit_space": "iast",
+        "from": "̣",
+        "to": "S",
+        "total": 121,
+        "directional_share": 0.636,
+        "ci95": [
+          0.548,
+          0.717
+        ],
+        "p_value": 0.003451,
+        "q_value": 0.0063
+      },
+      "iast:B->̣": {
+        "edit_space": "iast",
+        "from": "B",
+        "to": "̣",
+        "total": 128,
+        "directional_share": 0.602,
+        "ci95": [
+          0.515,
+          0.682
+        ],
+        "p_value": 0.026735,
+        "q_value": 0.0423
+      },
+      "iast:o->O": {
+        "edit_space": "iast",
+        "from": "o",
+        "to": "O",
+        "total": 99,
+        "directional_share": 0.707,
+        "ci95": [
+          0.611,
+          0.788
+        ],
+        "p_value": 4.6e-05,
+        "q_value": 0.0001
+      },
+      "iast:)->n": {
+        "edit_space": "iast",
+        "from": ")",
+        "to": "n",
+        "total": 68,
+        "directional_share": 1.0,
+        "ci95": [
+          0.947,
+          1.0
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:,->n": {
+        "edit_space": "iast",
+        "from": ",",
+        "to": "n",
+        "total": 67,
+        "directional_share": 1.0,
+        "ci95": [
+          0.946,
+          1.0
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:̄->̣": {
+        "edit_space": "iast",
+        "from": "̄",
+        "to": "̣",
+        "total": 135,
+        "directional_share": 0.578,
+        "ci95": [
+          0.493,
+          0.658
+        ],
+        "p_value": 0.084813,
+        "q_value": 0.1203
+      },
+      "iast:̣->e": {
+        "edit_space": "iast",
+        "from": "̣",
+        "to": "e",
+        "total": 75,
+        "directional_share": 0.827,
+        "ci95": [
+          0.726,
+          0.896
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:.->n": {
+        "edit_space": "iast",
+        "from": ".",
+        "to": "n",
+        "total": 67,
+        "directional_share": 0.896,
+        "ci95": [
+          0.8,
+          0.948
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:O->u": {
+        "edit_space": "iast",
+        "from": "O",
+        "to": "u",
+        "total": 60,
+        "directional_share": 0.95,
+        "ci95": [
+          0.863,
+          0.983
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:p->.": {
+        "edit_space": "iast",
+        "from": "p",
+        "to": ".",
+        "total": 62,
+        "directional_share": 0.903,
+        "ci95": [
+          0.805,
+          0.955
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast: ->n": {
+        "edit_space": "iast",
+        "from": " ",
+        "to": "n",
+        "total": 75,
+        "directional_share": 0.707,
+        "ci95": [
+          0.596,
+          0.798
+        ],
+        "p_value": 0.00045,
+        "q_value": 0.0009
+      },
+      "iast:l->t": {
+        "edit_space": "iast",
+        "from": "l",
+        "to": "t",
+        "total": 85,
+        "directional_share": 0.635,
+        "ci95": [
+          0.529,
+          0.73
+        ],
+        "p_value": 0.016509,
+        "q_value": 0.0271
+      },
+      "iast:¯->†": {
+        "edit_space": "iast",
+        "from": "¯",
+        "to": "†",
+        "total": 59,
+        "directional_share": 0.864,
+        "ci95": [
+          0.755,
+          0.93
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:¦->.": {
+        "edit_space": "iast",
+        "from": "¦",
+        "to": ".",
+        "total": 51,
+        "directional_share": 1.0,
+        "ci95": [
+          0.93,
+          1.0
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:a->r": {
+        "edit_space": "iast",
+        "from": "a",
+        "to": "r",
+        "total": 72,
+        "directional_share": 0.681,
+        "ci95": [
+          0.566,
+          0.777
+        ],
+        "p_value": 0.002943,
+        "q_value": 0.0055
+      },
+      "iast:2->̐": {
+        "edit_space": "iast",
+        "from": "2",
+        "to": "̐",
+        "total": 47,
+        "directional_share": 1.0,
+        "ci95": [
+          0.924,
+          1.0
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:v->n": {
+        "edit_space": "iast",
+        "from": "v",
+        "to": "n",
+        "total": 58,
+        "directional_share": 0.828,
+        "ci95": [
+          0.711,
+          0.904
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:t->w": {
+        "edit_space": "iast",
+        "from": "t",
+        "to": "w",
+        "total": 64,
+        "directional_share": 0.703,
+        "ci95": [
+          0.582,
+          0.801
+        ],
+        "p_value": 0.001563,
+        "q_value": 0.003
+      },
+      "iast:.-> ": {
+        "edit_space": "iast",
+        "from": ".",
+        "to": " ",
+        "total": 51,
+        "directional_share": 0.882,
+        "ci95": [
+          0.766,
+          0.945
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:v->K": {
+        "edit_space": "iast",
+        "from": "v",
+        "to": "K",
+        "total": 59,
+        "directional_share": 0.746,
+        "ci95": [
+          0.622,
+          0.839
+        ],
+        "p_value": 0.000204,
+        "q_value": 0.0004
+      },
+      "iast:q->d": {
+        "edit_space": "iast",
+        "from": "q",
+        "to": "d",
+        "total": 85,
+        "directional_share": 0.518,
+        "ci95": [
+          0.413,
+          0.621
+        ],
+        "p_value": 0.828423,
+        "q_value": 0.9034
+      },
+      "iast:̣->c": {
+        "edit_space": "iast",
+        "from": "̣",
+        "to": "c",
+        "total": 54,
+        "directional_share": 0.796,
+        "ci95": [
+          0.671,
+          0.882
+        ],
+        "p_value": 1.4e-05,
+        "q_value": 0.0
+      },
+      "iast: ->̣": {
+        "edit_space": "iast",
+        "from": " ",
+        "to": "̣",
+        "total": 82,
+        "directional_share": 0.524,
+        "ci95": [
+          0.418,
+          0.629
+        ],
+        "p_value": 0.740653,
+        "q_value": 0.8266
+      },
+      "iast:¯->,": {
+        "edit_space": "iast",
+        "from": "¯",
+        "to": ",",
+        "total": 44,
+        "directional_share": 0.955,
+        "ci95": [
+          0.849,
+          0.987
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:r->t": {
+        "edit_space": "iast",
+        "from": "r",
+        "to": "t",
+        "total": 81,
+        "directional_share": 0.543,
+        "ci95": [
+          0.435,
+          0.647
+        ],
+        "p_value": 0.505236,
+        "q_value": 0.5926
+      },
+      "iast:,->a": {
+        "edit_space": "iast",
+        "from": ",",
+        "to": "a",
+        "total": 42,
+        "directional_share": 0.976,
+        "ci95": [
+          0.877,
+          0.996
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:.->›": {
+        "edit_space": "iast",
+        "from": ".",
+        "to": "›",
+        "total": 48,
+        "directional_share": 0.854,
+        "ci95": [
+          0.728,
+          0.928
+        ],
+        "p_value": 1e-06,
+        "q_value": 0.0
+      },
+      "iast:C->̇": {
+        "edit_space": "iast",
+        "from": "C",
+        "to": "̇",
+        "total": 44,
+        "directional_share": 0.932,
+        "ci95": [
+          0.818,
+          0.977
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:t->n": {
+        "edit_space": "iast",
+        "from": "t",
+        "to": "n",
+        "total": 89,
+        "directional_share": 0.528,
+        "ci95": [
+          0.425,
+          0.628
+        ],
+        "p_value": 0.671809,
+        "q_value": 0.7673
+      },
+      "iast:̣->K": {
+        "edit_space": "iast",
+        "from": "̣",
+        "to": "K",
+        "total": 68,
+        "directional_share": 0.588,
+        "ci95": [
+          0.47,
+          0.697
+        ],
+        "p_value": 0.18181,
+        "q_value": 0.2406
+      },
+      "iast:g->d": {
+        "edit_space": "iast",
+        "from": "g",
+        "to": "d",
+        "total": 76,
+        "directional_share": 0.632,
+        "ci95": [
+          0.519,
+          0.731
+        ],
+        "p_value": 0.028627,
+        "q_value": 0.045
+      },
+      "iast:s->t": {
+        "edit_space": "iast",
+        "from": "s",
+        "to": "t",
+        "total": 69,
+        "directional_share": 0.609,
+        "ci95": [
+          0.491,
+          0.715
+        ],
+        "p_value": 0.091186,
+        "q_value": 0.1268
+      },
+      "iast:s->n": {
+        "edit_space": "iast",
+        "from": "s",
+        "to": "n",
+        "total": 66,
+        "directional_share": 0.606,
+        "ci95": [
+          0.485,
+          0.715
+        ],
+        "p_value": 0.108857,
+        "q_value": 0.1504
+      },
+      "iast:̣->a": {
+        "edit_space": "iast",
+        "from": "̣",
+        "to": "a",
+        "total": 84,
+        "directional_share": 0.512,
+        "ci95": [
+          0.407,
+          0.616
+        ],
+        "p_value": 0.913202,
+        "q_value": 0.9527
+      },
+      "iast:̄->r": {
+        "edit_space": "iast",
+        "from": "̄",
+        "to": "r",
+        "total": 50,
+        "directional_share": 0.74,
+        "ci95": [
+          0.604,
+          0.841
+        ],
+        "p_value": 0.000936,
+        "q_value": 0.0018
+      },
+      "iast:d->a": {
+        "edit_space": "iast",
+        "from": "d",
+        "to": "a",
+        "total": 52,
+        "directional_share": 0.692,
+        "ci95": [
+          0.557,
+          0.801
+        ],
+        "p_value": 0.007787,
+        "q_value": 0.0133
+      },
+      "iast:A->̄": {
+        "edit_space": "iast",
+        "from": "A",
+        "to": "̄",
+        "total": 51,
+        "directional_share": 0.706,
+        "ci95": [
+          0.57,
+          0.813
+        ],
+        "p_value": 0.004601,
+        "q_value": 0.0081
+      },
+      "iast:t->d": {
+        "edit_space": "iast",
+        "from": "t",
+        "to": "d",
+        "total": 76,
+        "directional_share": 0.566,
+        "ci95": [
+          0.454,
+          0.671
+        ],
+        "p_value": 0.301872,
+        "q_value": 0.381
+      },
+      "iast:c->j": {
+        "edit_space": "iast",
+        "from": "c",
+        "to": "j",
+        "total": 53,
+        "directional_share": 0.717,
+        "ci95": [
+          0.584,
+          0.82
+        ],
+        "p_value": 0.00219,
+        "q_value": 0.0041
+      },
+      "iast:a-> ": {
+        "edit_space": "iast",
+        "from": "a",
+        "to": " ",
+        "total": 58,
+        "directional_share": 0.603,
+        "ci95": [
+          0.475,
+          0.719
+        ],
+        "p_value": 0.148006,
+        "q_value": 0.1983
+      },
+      "iast:̣->h": {
+        "edit_space": "iast",
+        "from": "̣",
+        "to": "h",
+        "total": 58,
+        "directional_share": 0.586,
+        "ci95": [
+          0.458,
+          0.704
+        ],
+        "p_value": 0.237047,
+        "q_value": 0.3044
+      },
+      "iast:N->̣": {
+        "edit_space": "iast",
+        "from": "N",
+        "to": "̣",
+        "total": 34,
+        "directional_share": 1.0,
+        "ci95": [
+          0.898,
+          1.0
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:O->h": {
+        "edit_space": "iast",
+        "from": "O",
+        "to": "h",
+        "total": 33,
+        "directional_share": 1.0,
+        "ci95": [
+          0.896,
+          1.0
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:4->7": {
+        "edit_space": "iast",
+        "from": "4",
+        "to": "7",
+        "total": 35,
+        "directional_share": 0.943,
+        "ci95": [
+          0.814,
+          0.984
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:̄->7": {
+        "edit_space": "iast",
+        "from": "̄",
+        "to": "7",
+        "total": 36,
+        "directional_share": 0.917,
+        "ci95": [
+          0.782,
+          0.971
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:h->r": {
+        "edit_space": "iast",
+        "from": "h",
+        "to": "r",
+        "total": 56,
+        "directional_share": 0.571,
+        "ci95": [
+          0.441,
+          0.692
+        ],
+        "p_value": 0.349682,
+        "q_value": 0.4361
+      },
+      "iast:̄->U": {
+        "edit_space": "iast",
+        "from": "̄",
+        "to": "U",
+        "total": 33,
+        "directional_share": 0.97,
+        "ci95": [
+          0.847,
+          0.995
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:n->h": {
+        "edit_space": "iast",
+        "from": "n",
+        "to": "h",
+        "total": 62,
+        "directional_share": 0.645,
+        "ci95": [
+          0.521,
+          0.753
+        ],
+        "p_value": 0.030016,
+        "q_value": 0.0462
+      },
+      "iast:l->̣": {
+        "edit_space": "iast",
+        "from": "l",
+        "to": "̣",
+        "total": 41,
+        "directional_share": 0.756,
+        "ci95": [
+          0.607,
+          0.862
+        ],
+        "p_value": 0.00145,
+        "q_value": 0.0028
+      },
+      "iast:v->c": {
+        "edit_space": "iast",
+        "from": "v",
+        "to": "c",
+        "total": 46,
+        "directional_share": 0.717,
+        "ci95": [
+          0.575,
+          0.827
+        ],
+        "p_value": 0.004534,
+        "q_value": 0.0081
+      },
+      "iast:o->a": {
+        "edit_space": "iast",
+        "from": "o",
+        "to": "a",
+        "total": 95,
+        "directional_share": 0.537,
+        "ci95": [
+          0.437,
+          0.634
+        ],
+        "p_value": 0.538394,
+        "q_value": 0.6281
+      },
+      "iast:m->g": {
+        "edit_space": "iast",
+        "from": "m",
+        "to": "g",
+        "total": 48,
+        "directional_share": 0.625,
+        "ci95": [
+          0.484,
+          0.748
+        ],
+        "p_value": 0.111403,
+        "q_value": 0.1511
+      },
+      "iast: ->d": {
+        "edit_space": "iast",
+        "from": " ",
+        "to": "d",
+        "total": 39,
+        "directional_share": 0.744,
+        "ci95": [
+          0.589,
+          0.854
+        ],
+        "p_value": 0.003378,
+        "q_value": 0.0063
+      },
+      "iast:u->U": {
+        "edit_space": "iast",
+        "from": "u",
+        "to": "U",
+        "total": 30,
+        "directional_share": 0.967,
+        "ci95": [
+          0.833,
+          0.994
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "iast:i->f": {
+        "edit_space": "iast",
+        "from": "i",
+        "to": "f",
+        "total": 35,
+        "directional_share": 0.8,
+        "ci95": [
+          0.641,
+          0.9
+        ],
+        "p_value": 0.000508,
+        "q_value": 0.001
+      },
+      "iast:u->f": {
+        "edit_space": "iast",
+        "from": "u",
+        "to": "f",
+        "total": 38,
+        "directional_share": 0.737,
+        "ci95": [
+          0.58,
+          0.85
+        ],
+        "p_value": 0.005098,
+        "q_value": 0.0089
+      },
+      "iast:̣->r": {
+        "edit_space": "iast",
+        "from": "̣",
+        "to": "r",
+        "total": 39,
+        "directional_share": 0.692,
+        "ci95": [
+          0.536,
+          0.814
+        ],
+        "p_value": 0.023703,
+        "q_value": 0.0381
+      },
+      "iast:a->E": {
+        "edit_space": "iast",
+        "from": "a",
+        "to": "E",
+        "total": 36,
+        "directional_share": 0.75,
+        "ci95": [
+          0.589,
+          0.862
+        ],
+        "p_value": 0.003933,
+        "q_value": 0.0071
+      },
+      "iast:f->r": {
+        "edit_space": "iast",
+        "from": "f",
+        "to": "r",
+        "total": 50,
+        "directional_share": 0.52,
+        "ci95": [
+          0.385,
+          0.652
+        ],
+        "p_value": 0.887725,
+        "q_value": 0.9306
+      },
+      "iast:u->v": {
+        "edit_space": "iast",
+        "from": "u",
+        "to": "v",
+        "total": 45,
+        "directional_share": 0.6,
+        "ci95": [
+          0.455,
+          0.73
+        ],
+        "p_value": 0.232693,
+        "q_value": 0.3006
+      },
+      "iast:n->l": {
+        "edit_space": "iast",
+        "from": "n",
+        "to": "l",
+        "total": 40,
+        "directional_share": 0.675,
+        "ci95": [
+          0.52,
+          0.799
+        ],
+        "p_value": 0.038477,
+        "q_value": 0.0572
+      },
+      "iast:e->i": {
+        "edit_space": "iast",
+        "from": "e",
+        "to": "i",
+        "total": 58,
+        "directional_share": 0.621,
+        "ci95": [
+          0.492,
+          0.734
+        ],
+        "p_value": 0.086949,
+        "q_value": 0.1217
+      },
+      "iast:¯->‹": {
+        "edit_space": "iast",
+        "from": "¯",
+        "to": "‹",
+        "total": 52,
+        "directional_share": 0.5,
+        "ci95": [
+          0.369,
+          0.631
+        ],
+        "p_value": 1.0,
+        "q_value": 1.0
+      },
+      "iast:y->p": {
+        "edit_space": "iast",
+        "from": "y",
+        "to": "p",
+        "total": 53,
+        "directional_share": 0.509,
+        "ci95": [
+          0.379,
+          0.639
+        ],
+        "p_value": 1.0,
+        "q_value": 1.0
+      },
+      "iast:i->o": {
+        "edit_space": "iast",
+        "from": "i",
+        "to": "o",
+        "total": 36,
+        "directional_share": 0.75,
+        "ci95": [
+          0.589,
+          0.862
+        ],
+        "p_value": 0.003933,
+        "q_value": 0.0071
+      },
+      "iast:s->e": {
+        "edit_space": "iast",
+        "from": "s",
+        "to": "e",
+        "total": 37,
+        "directional_share": 0.73,
+        "ci95": [
+          0.57,
+          0.846
+        ],
+        "p_value": 0.007632,
+        "q_value": 0.0131
+      },
+      "iast:̣->q": {
+        "edit_space": "iast",
+        "from": "̣",
+        "to": "q",
+        "total": 42,
+        "directional_share": 0.595,
+        "ci95": [
+          0.445,
+          0.73
+        ],
+        "p_value": 0.279956,
+        "q_value": 0.3574
+      },
+      "iast:4->5": {
+        "edit_space": "iast",
+        "from": "4",
+        "to": "5",
+        "total": 38,
+        "directional_share": 0.658,
+        "ci95": [
+          0.499,
+          0.788
+        ],
+        "p_value": 0.072951,
+        "q_value": 0.1062
+      },
+      "iast:s-> ": {
+        "edit_space": "iast",
+        "from": "s",
+        "to": " ",
+        "total": 40,
+        "directional_share": 0.625,
+        "ci95": [
+          0.47,
+          0.758
+        ],
+        "p_value": 0.15386,
+        "q_value": 0.2048
+      },
+      "iast:n->g": {
+        "edit_space": "iast",
+        "from": "n",
+        "to": "g",
+        "total": 34,
+        "directional_share": 0.706,
+        "ci95": [
+          0.538,
+          0.832
+        ],
+        "p_value": 0.024307,
+        "q_value": 0.0388
+      },
+      "iast:v->y": {
+        "edit_space": "iast",
+        "from": "v",
+        "to": "y",
+        "total": 40,
+        "directional_share": 0.65,
+        "ci95": [
+          0.495,
+          0.779
+        ],
+        "p_value": 0.08069,
+        "q_value": 0.1152
+      },
+      "iast:i->u": {
+        "edit_space": "iast",
+        "from": "i",
+        "to": "u",
+        "total": 46,
+        "directional_share": 0.587,
+        "ci95": [
+          0.443,
+          0.717
+        ],
+        "p_value": 0.301996,
+        "q_value": 0.381
+      },
+      "iast:̣->y": {
+        "edit_space": "iast",
+        "from": "̣",
+        "to": "y",
+        "total": 37,
+        "directional_share": 0.595,
+        "ci95": [
+          0.435,
+          0.737
+        ],
+        "p_value": 0.324009,
+        "q_value": 0.4064
+      },
+      "iast:v->k": {
+        "edit_space": "iast",
+        "from": "v",
+        "to": "k",
+        "total": 40,
+        "directional_share": 0.575,
+        "ci95": [
+          0.422,
+          0.715
+        ],
+        "p_value": 0.429591,
+        "q_value": 0.5179
+      },
+      "iast:o->n": {
+        "edit_space": "iast",
+        "from": "o",
+        "to": "n",
+        "total": 31,
+        "directional_share": 0.71,
+        "ci95": [
+          0.534,
+          0.839
+        ],
+        "p_value": 0.029449,
+        "q_value": 0.0456
+      },
+      "iast: ->̄": {
+        "edit_space": "iast",
+        "from": " ",
+        "to": "̄",
+        "total": 33,
+        "directional_share": 0.667,
+        "ci95": [
+          0.496,
+          0.802
+        ],
+        "p_value": 0.080143,
+        "q_value": 0.1152
+      },
+      "iast:i->̣": {
+        "edit_space": "iast",
+        "from": "i",
+        "to": "̣",
+        "total": 40,
+        "directional_share": 0.8,
+        "ci95": [
+          0.652,
+          0.895
+        ],
+        "p_value": 0.000182,
+        "q_value": 0.0004
+      },
+      "iast:h->d": {
+        "edit_space": "iast",
+        "from": "h",
+        "to": "d",
+        "total": 31,
+        "directional_share": 0.71,
+        "ci95": [
+          0.534,
+          0.839
+        ],
+        "p_value": 0.029449,
+        "q_value": 0.0456
+      },
+      "iast:O->E": {
+        "edit_space": "iast",
+        "from": "O",
+        "to": "E",
+        "total": 32,
+        "directional_share": 0.656,
+        "ci95": [
+          0.483,
+          0.796
+        ],
+        "p_value": 0.110184,
+        "q_value": 0.1504
+      },
+      "iast:̣->E": {
+        "edit_space": "iast",
+        "from": "̣",
+        "to": "E",
+        "total": 30,
+        "directional_share": 0.7,
+        "ci95": [
+          0.521,
+          0.833
+        ],
+        "p_value": 0.042774,
+        "q_value": 0.0627
+      },
+      "iast:̄->e": {
+        "edit_space": "iast",
+        "from": "̄",
+        "to": "e",
+        "total": 34,
+        "directional_share": 0.618,
+        "ci95": [
+          0.45,
+          0.761
+        ],
+        "p_value": 0.229481,
+        "q_value": 0.2982
+      },
+      "iast:n->u": {
+        "edit_space": "iast",
+        "from": "n",
+        "to": "u",
+        "total": 46,
+        "directional_share": 0.565,
+        "ci95": [
+          0.422,
+          0.698
+        ],
+        "p_value": 0.461391,
+        "q_value": 0.5471
+      },
+      "iast:c->e": {
+        "edit_space": "iast",
+        "from": "c",
+        "to": "e",
+        "total": 32,
+        "directional_share": 0.656,
+        "ci95": [
+          0.483,
+          0.796
+        ],
+        "p_value": 0.110184,
+        "q_value": 0.1504
+      },
+      "iast:r->v": {
+        "edit_space": "iast",
+        "from": "r",
+        "to": "v",
+        "total": 37,
+        "directional_share": 0.622,
+        "ci95": [
+          0.461,
+          0.759
+        ],
+        "p_value": 0.187742,
+        "q_value": 0.2469
+      },
+      "iast:r->e": {
+        "edit_space": "iast",
+        "from": "r",
+        "to": "e",
+        "total": 35,
+        "directional_share": 0.514,
+        "ci95": [
+          0.356,
+          0.67
+        ],
+        "p_value": 1.0,
+        "q_value": 1.0
+      },
+      "iast:k->h": {
+        "edit_space": "iast",
+        "from": "k",
+        "to": "h",
+        "total": 36,
+        "directional_share": 0.639,
+        "ci95": [
+          0.476,
+          0.775
+        ],
+        "p_value": 0.132498,
+        "q_value": 0.1786
+      },
+      "iast:s->r": {
+        "edit_space": "iast",
+        "from": "s",
+        "to": "r",
+        "total": 39,
+        "directional_share": 0.538,
+        "ci95": [
+          0.386,
+          0.684
+        ],
+        "p_value": 0.749259,
+        "q_value": 0.8295
+      },
+      "iast:m->h": {
+        "edit_space": "iast",
+        "from": "m",
+        "to": "h",
+        "total": 43,
+        "directional_share": 0.581,
+        "ci95": [
+          0.433,
+          0.716
+        ],
+        "p_value": 0.360378,
+        "q_value": 0.4469
+      },
+      "iast:́->̣": {
+        "edit_space": "iast",
+        "from": "́",
+        "to": "̣",
+        "total": 34,
+        "directional_share": 0.529,
+        "ci95": [
+          0.367,
+          0.685
+        ],
+        "p_value": 0.864166,
+        "q_value": 0.9306
+      },
+      "iast:̄->O": {
+        "edit_space": "iast",
+        "from": "̄",
+        "to": "O",
+        "total": 31,
+        "directional_share": 0.516,
+        "ci95": [
+          0.348,
+          0.68
+        ],
+        "p_value": 1.0,
+        "q_value": 1.0
+      },
+      "iast:a->n": {
+        "edit_space": "iast",
+        "from": "a",
+        "to": "n",
+        "total": 37,
+        "directional_share": 0.541,
+        "ci95": [
+          0.384,
+          0.69
+        ],
+        "p_value": 0.742829,
+        "q_value": 0.8266
+      },
+      "iast:̣->v": {
+        "edit_space": "iast",
+        "from": "̣",
+        "to": "v",
+        "total": 30,
+        "directional_share": 0.533,
+        "ci95": [
+          0.361,
+          0.698
+        ],
+        "p_value": 0.855536,
+        "q_value": 0.9283
+      },
+      "iast:t->́": {
+        "edit_space": "iast",
+        "from": "t",
+        "to": "́",
+        "total": 30,
+        "directional_share": 0.7,
+        "ci95": [
+          0.521,
+          0.833
+        ],
+        "p_value": 0.042774,
+        "q_value": 0.0627
+      },
+      "iast:i->l": {
+        "edit_space": "iast",
+        "from": "i",
+        "to": "l",
+        "total": 38,
+        "directional_share": 0.526,
+        "ci95": [
+          0.373,
+          0.675
+        ],
+        "p_value": 0.871415,
+        "q_value": 0.9306
+      },
+      "iast:u->o": {
+        "edit_space": "iast",
+        "from": "u",
+        "to": "o",
+        "total": 33,
+        "directional_share": 0.515,
+        "ci95": [
+          0.352,
+          0.675
+        ],
+        "p_value": 1.0,
+        "q_value": 1.0
+      },
+      "markup_raw:b->v": {
+        "edit_space": "markup_raw",
+        "from": "b",
+        "to": "v",
+        "total": 401,
+        "directional_share": 0.998,
+        "ci95": [
+          0.986,
+          1.0
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw:.->,": {
+        "edit_space": "markup_raw",
+        "from": ".",
+        "to": ",",
+        "total": 280,
+        "directional_share": 0.9,
+        "ci95": [
+          0.859,
+          0.93
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw: ->-": {
+        "edit_space": "markup_raw",
+        "from": " ",
+        "to": "-",
+        "total": 237,
+        "directional_share": 0.831,
+        "ci95": [
+          0.778,
+          0.874
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw:h->̣": {
+        "edit_space": "markup_raw",
+        "from": "h",
+        "to": "̣",
+        "total": 205,
+        "directional_share": 0.854,
+        "ci95": [
+          0.799,
+          0.896
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw:e->c": {
+        "edit_space": "markup_raw",
+        "from": "e",
+        "to": "c",
+        "total": 264,
+        "directional_share": 0.591,
+        "ci95": [
+          0.531,
+          0.649
+        ],
+        "p_value": 0.003738,
+        "q_value": 0.0068
+      },
+      "markup_raw:2->3": {
+        "edit_space": "markup_raw",
+        "from": "2",
+        "to": "3",
+        "total": 222,
+        "directional_share": 0.689,
+        "ci95": [
+          0.626,
+          0.746
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw:̄->̂": {
+        "edit_space": "markup_raw",
+        "from": "̄",
+        "to": "̂",
+        "total": 143,
+        "directional_share": 0.972,
+        "ci95": [
+          0.93,
+          0.989
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw:l->a": {
+        "edit_space": "markup_raw",
+        "from": "l",
+        "to": "a",
+        "total": 156,
+        "directional_share": 0.859,
+        "ci95": [
+          0.796,
+          0.905
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw:s->b": {
+        "edit_space": "markup_raw",
+        "from": "s",
+        "to": "b",
+        "total": 147,
+        "directional_share": 0.891,
+        "ci95": [
+          0.831,
+          0.932
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw:1->2": {
+        "edit_space": "markup_raw",
+        "from": "1",
+        "to": "2",
+        "total": 169,
+        "directional_share": 0.704,
+        "ci95": [
+          0.631,
+          0.768
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw: ->,": {
+        "edit_space": "markup_raw",
+        "from": " ",
+        "to": ",",
+        "total": 130,
+        "directional_share": 0.908,
+        "ci95": [
+          0.846,
+          0.946
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw:s->i": {
+        "edit_space": "markup_raw",
+        "from": "s",
+        "to": "i",
+        "total": 121,
+        "directional_share": 0.967,
+        "ci95": [
+          0.918,
+          0.987
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw:;->}": {
+        "edit_space": "markup_raw",
+        "from": ";",
+        "to": "}",
+        "total": 224,
+        "directional_share": 0.5,
+        "ci95": [
+          0.435,
+          0.565
+        ],
+        "p_value": 1.0,
+        "q_value": 1.0
+      },
+      "markup_raw:)->#": {
+        "edit_space": "markup_raw",
+        "from": ")",
+        "to": "#",
+        "total": 222,
+        "directional_share": 0.5,
+        "ci95": [
+          0.435,
+          0.565
+        ],
+        "p_value": 1.0,
+        "q_value": 1.0
+      },
+      "markup_raw:H->̣": {
+        "edit_space": "markup_raw",
+        "from": "H",
+        "to": "̣",
+        "total": 111,
+        "directional_share": 1.0,
+        "ci95": [
+          0.967,
+          1.0
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw:s->̣": {
+        "edit_space": "markup_raw",
+        "from": "s",
+        "to": "̣",
+        "total": 103,
+        "directional_share": 1.0,
+        "ci95": [
+          0.964,
+          1.0
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw:I->̣": {
+        "edit_space": "markup_raw",
+        "from": "I",
+        "to": "̣",
+        "total": 101,
+        "directional_share": 1.0,
+        "ci95": [
+          0.963,
+          1.0
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw:4->́": {
+        "edit_space": "markup_raw",
+        "from": "4",
+        "to": "́",
+        "total": 101,
+        "directional_share": 1.0,
+        "ci95": [
+          0.963,
+          1.0
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw:e->o": {
+        "edit_space": "markup_raw",
+        "from": "e",
+        "to": "o",
+        "total": 143,
+        "directional_share": 0.678,
+        "ci95": [
+          0.598,
+          0.749
+        ],
+        "p_value": 2.4e-05,
+        "q_value": 0.0001
+      },
+      "markup_raw:̣->2": {
+        "edit_space": "markup_raw",
+        "from": "̣",
+        "to": "2",
+        "total": 93,
+        "directional_share": 1.0,
+        "ci95": [
+          0.96,
+          1.0
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw:̂->́": {
+        "edit_space": "markup_raw",
+        "from": "̂",
+        "to": "́",
+        "total": 80,
+        "directional_share": 0.988,
+        "ci95": [
+          0.933,
+          0.998
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw:s->m": {
+        "edit_space": "markup_raw",
+        "from": "s",
+        "to": "m",
+        "total": 111,
+        "directional_share": 0.703,
+        "ci95": [
+          0.612,
+          0.78
+        ],
+        "p_value": 2.3e-05,
+        "q_value": 0.0
+      },
+      "markup_raw:́->̀": {
+        "edit_space": "markup_raw",
+        "from": "́",
+        "to": "̀",
+        "total": 80,
+        "directional_share": 0.963,
+        "ci95": [
+          0.895,
+          0.987
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw:k->c": {
+        "edit_space": "markup_raw",
+        "from": "k",
+        "to": "c",
+        "total": 81,
+        "directional_share": 0.938,
+        "ci95": [
+          0.864,
+          0.973
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw:a->e": {
+        "edit_space": "markup_raw",
+        "from": "a",
+        "to": "e",
+        "total": 136,
+        "directional_share": 0.537,
+        "ci95": [
+          0.453,
+          0.618
+        ],
+        "p_value": 0.440383,
+        "q_value": 0.5251
+      },
+      "markup_raw:b->a": {
+        "edit_space": "markup_raw",
+        "from": "b",
+        "to": "a",
+        "total": 120,
+        "directional_share": 0.6,
+        "ci95": [
+          0.511,
+          0.683
+        ],
+        "p_value": 0.035324,
+        "q_value": 0.0529
+      },
+      "markup_raw:7->8": {
+        "edit_space": "markup_raw",
+        "from": "7",
+        "to": "8",
+        "total": 72,
+        "directional_share": 0.986,
+        "ci95": [
+          0.925,
+          0.998
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw:1->3": {
+        "edit_space": "markup_raw",
+        "from": "1",
+        "to": "3",
+        "total": 111,
+        "directional_share": 0.631,
+        "ci95": [
+          0.538,
+          0.715
+        ],
+        "p_value": 0.007585,
+        "q_value": 0.0131
+      },
+      "markup_raw:>-> ": {
+        "edit_space": "markup_raw",
+        "from": ">",
+        "to": " ",
+        "total": 114,
+        "directional_share": 0.605,
+        "ci95": [
+          0.514,
+          0.69
+        ],
+        "p_value": 0.030776,
+        "q_value": 0.047
+      },
+      "markup_raw:}->́": {
+        "edit_space": "markup_raw",
+        "from": "}",
+        "to": "́",
+        "total": 68,
+        "directional_share": 0.985,
+        "ci95": [
+          0.921,
+          0.997
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw:S->h": {
+        "edit_space": "markup_raw",
+        "from": "S",
+        "to": "h",
+        "total": 66,
+        "directional_share": 1.0,
+        "ci95": [
+          0.945,
+          1.0
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw:S->s": {
+        "edit_space": "markup_raw",
+        "from": "S",
+        "to": "s",
+        "total": 74,
+        "directional_share": 0.878,
+        "ci95": [
+          0.785,
+          0.935
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw:0->˚": {
+        "edit_space": "markup_raw",
+        "from": "0",
+        "to": "˚",
+        "total": 60,
+        "directional_share": 1.0,
+        "ci95": [
+          0.94,
+          1.0
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw:m->n": {
+        "edit_space": "markup_raw",
+        "from": "m",
+        "to": "n",
+        "total": 87,
+        "directional_share": 0.621,
+        "ci95": [
+          0.516,
+          0.715
+        ],
+        "p_value": 0.031418,
+        "q_value": 0.0475
+      },
+      "markup_raw:1->)": {
+        "edit_space": "markup_raw",
+        "from": "1",
+        "to": ")",
+        "total": 54,
+        "directional_share": 0.981,
+        "ci95": [
+          0.902,
+          0.997
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw:i->>": {
+        "edit_space": "markup_raw",
+        "from": "i",
+        "to": ">",
+        "total": 54,
+        "directional_share": 0.963,
+        "ci95": [
+          0.875,
+          0.99
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw:/->F": {
+        "edit_space": "markup_raw",
+        "from": "/",
+        "to": "F",
+        "total": 52,
+        "directional_share": 1.0,
+        "ci95": [
+          0.931,
+          1.0
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw:^->1": {
+        "edit_space": "markup_raw",
+        "from": "^",
+        "to": "1",
+        "total": 52,
+        "directional_share": 1.0,
+        "ci95": [
+          0.931,
+          1.0
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw:2->4": {
+        "edit_space": "markup_raw",
+        "from": "2",
+        "to": "4",
+        "total": 63,
+        "directional_share": 0.794,
+        "ci95": [
+          0.678,
+          0.875
+        ],
+        "p_value": 3e-06,
+        "q_value": 0.0
+      },
+      "markup_raw:i->\"": {
+        "edit_space": "markup_raw",
+        "from": "i",
+        "to": "\"",
+        "total": 50,
+        "directional_share": 0.98,
+        "ci95": [
+          0.895,
+          0.996
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw:a->u": {
+        "edit_space": "markup_raw",
+        "from": "a",
+        "to": "u",
+        "total": 59,
+        "directional_share": 0.746,
+        "ci95": [
+          0.622,
+          0.839
+        ],
+        "p_value": 0.000204,
+        "q_value": 0.0004
+      },
+      "markup_raw:n->u": {
+        "edit_space": "markup_raw",
+        "from": "n",
+        "to": "u",
+        "total": 80,
+        "directional_share": 0.55,
+        "ci95": [
+          0.441,
+          0.654
+        ],
+        "p_value": 0.434042,
+        "q_value": 0.5204
+      },
+      "markup_raw:l->t": {
+        "edit_space": "markup_raw",
+        "from": "l",
+        "to": "t",
+        "total": 59,
+        "directional_share": 0.678,
+        "ci95": [
+          0.551,
+          0.783
+        ],
+        "p_value": 0.008641,
+        "q_value": 0.0146
+      },
+      "markup_raw:>->.": {
+        "edit_space": "markup_raw",
+        "from": ">",
+        "to": ".",
+        "total": 78,
+        "directional_share": 0.5,
+        "ci95": [
+          0.392,
+          0.608
+        ],
+        "p_value": 1.0,
+        "q_value": 1.0
+      },
+      "markup_raw:}->>": {
+        "edit_space": "markup_raw",
+        "from": "}",
+        "to": ">",
+        "total": 59,
+        "directional_share": 0.661,
+        "ci95": [
+          0.534,
+          0.769
+        ],
+        "p_value": 0.018337,
+        "q_value": 0.0299
+      },
+      "markup_raw:)->.": {
+        "edit_space": "markup_raw",
+        "from": ")",
+        "to": ".",
+        "total": 39,
+        "directional_share": 1.0,
+        "ci95": [
+          0.91,
+          1.0
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw:i->l": {
+        "edit_space": "markup_raw",
+        "from": "i",
+        "to": "l",
+        "total": 72,
+        "directional_share": 0.528,
+        "ci95": [
+          0.414,
+          0.639
+        ],
+        "p_value": 0.723948,
+        "q_value": 0.8182
+      },
+      "markup_raw:}->̣": {
+        "edit_space": "markup_raw",
+        "from": "}",
+        "to": "̣",
+        "total": 39,
+        "directional_share": 0.974,
+        "ci95": [
+          0.868,
+          0.995
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw:w->l": {
+        "edit_space": "markup_raw",
+        "from": "w",
+        "to": "l",
+        "total": 37,
+        "directional_share": 0.973,
+        "ci95": [
+          0.862,
+          0.995
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw:t-><": {
+        "edit_space": "markup_raw",
+        "from": "t",
+        "to": "<",
+        "total": 37,
+        "directional_share": 0.946,
+        "ci95": [
+          0.823,
+          0.985
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw:h->/": {
+        "edit_space": "markup_raw",
+        "from": "h",
+        "to": "/",
+        "total": 38,
+        "directional_share": 0.921,
+        "ci95": [
+          0.792,
+          0.973
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw:t->/": {
+        "edit_space": "markup_raw",
+        "from": "t",
+        "to": "/",
+        "total": 39,
+        "directional_share": 0.897,
+        "ci95": [
+          0.764,
+          0.959
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw:n->a": {
+        "edit_space": "markup_raw",
+        "from": "n",
+        "to": "a",
+        "total": 60,
+        "directional_share": 0.567,
+        "ci95": [
+          0.441,
+          0.684
+        ],
+        "p_value": 0.366294,
+        "q_value": 0.4516
+      },
+      "markup_raw:s->t": {
+        "edit_space": "markup_raw",
+        "from": "s",
+        "to": "t",
+        "total": 39,
+        "directional_share": 0.846,
+        "ci95": [
+          0.703,
+          0.928
+        ],
+        "p_value": 1.4e-05,
+        "q_value": 0.0
+      },
+      "markup_raw:h->n": {
+        "edit_space": "markup_raw",
+        "from": "h",
+        "to": "n",
+        "total": 48,
+        "directional_share": 0.688,
+        "ci95": [
+          0.547,
+          0.801
+        ],
+        "p_value": 0.013283,
+        "q_value": 0.0222
+      },
+      "markup_raw:o->a": {
+        "edit_space": "markup_raw",
+        "from": "o",
+        "to": "a",
+        "total": 62,
+        "directional_share": 0.532,
+        "ci95": [
+          0.41,
+          0.651
+        ],
+        "p_value": 0.703537,
+        "q_value": 0.7993
+      },
+      "markup_raw:0->1": {
+        "edit_space": "markup_raw",
+        "from": "0",
+        "to": "1",
+        "total": 42,
+        "directional_share": 0.762,
+        "ci95": [
+          0.615,
+          0.865
+        ],
+        "p_value": 0.000941,
+        "q_value": 0.0018
+      },
+      "markup_raw:a->c": {
+        "edit_space": "markup_raw",
+        "from": "a",
+        "to": "c",
+        "total": 36,
+        "directional_share": 0.889,
+        "ci95": [
+          0.747,
+          0.956
+        ],
+        "p_value": 2e-06,
+        "q_value": 0.0
+      },
+      "markup_raw:l-><": {
+        "edit_space": "markup_raw",
+        "from": "l",
+        "to": "<",
+        "total": 35,
+        "directional_share": 0.914,
+        "ci95": [
+          0.776,
+          0.97
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "markup_raw:%->́": {
+        "edit_space": "markup_raw",
+        "from": "%",
+        "to": "́",
+        "total": 61,
+        "directional_share": 0.525,
+        "ci95": [
+          0.402,
+          0.645
+        ],
+        "p_value": 0.798153,
+        "q_value": 0.8747
+      },
+      "markup_raw:s->,": {
+        "edit_space": "markup_raw",
+        "from": "s",
+        "to": ",",
+        "total": 56,
+        "directional_share": 0.554,
+        "ci95": [
+          0.424,
+          0.676
+        ],
+        "p_value": 0.504404,
+        "q_value": 0.5926
+      },
+      "markup_raw:3->4": {
+        "edit_space": "markup_raw",
+        "from": "3",
+        "to": "4",
+        "total": 53,
+        "directional_share": 0.566,
+        "ci95": [
+          0.433,
+          0.69
+        ],
+        "p_value": 0.410103,
+        "q_value": 0.5
+      },
+      "markup_raw:A->a": {
+        "edit_space": "markup_raw",
+        "from": "A",
+        "to": "a",
+        "total": 51,
+        "directional_share": 0.569,
+        "ci95": [
+          0.433,
+          0.695
+        ],
+        "p_value": 0.401062,
+        "q_value": 0.4917
+      },
+      "markup_raw:i->e": {
+        "edit_space": "markup_raw",
+        "from": "i",
+        "to": "e",
+        "total": 43,
+        "directional_share": 0.674,
+        "ci95": [
+          0.525,
+          0.795
+        ],
+        "p_value": 0.031539,
+        "q_value": 0.0475
+      },
+      "markup_raw:S->{": {
+        "edit_space": "markup_raw",
+        "from": "S",
+        "to": "{",
+        "total": 58,
+        "directional_share": 0.5,
+        "ci95": [
+          0.375,
+          0.625
+        ],
+        "p_value": 1.0,
+        "q_value": 1.0
+      },
+      "markup_raw:e->h": {
+        "edit_space": "markup_raw",
+        "from": "e",
+        "to": "h",
+        "total": 30,
+        "directional_share": 0.9,
+        "ci95": [
+          0.744,
+          0.965
+        ],
+        "p_value": 8e-06,
+        "q_value": 0.0
+      },
+      "markup_raw:>->\"": {
+        "edit_space": "markup_raw",
+        "from": ">",
+        "to": "\"",
+        "total": 36,
+        "directional_share": 0.722,
+        "ci95": [
+          0.56,
+          0.842
+        ],
+        "p_value": 0.011331,
+        "q_value": 0.0191
+      },
+      "markup_raw:<-> ": {
+        "edit_space": "markup_raw",
+        "from": "<",
+        "to": " ",
+        "total": 50,
+        "directional_share": 0.52,
+        "ci95": [
+          0.385,
+          0.652
+        ],
+        "p_value": 0.887725,
+        "q_value": 0.9306
+      },
+      "markup_raw:a->i": {
+        "edit_space": "markup_raw",
+        "from": "a",
+        "to": "i",
+        "total": 45,
+        "directional_share": 0.556,
+        "ci95": [
+          0.412,
+          0.691
+        ],
+        "p_value": 0.551484,
+        "q_value": 0.64
+      },
+      "markup_raw:>->,": {
+        "edit_space": "markup_raw",
+        "from": ">",
+        "to": ",",
+        "total": 48,
+        "directional_share": 0.521,
+        "ci95": [
+          0.383,
+          0.655
+        ],
+        "p_value": 0.885433,
+        "q_value": 0.9306
+      },
+      "markup_raw:n->r": {
+        "edit_space": "markup_raw",
+        "from": "n",
+        "to": "r",
+        "total": 46,
+        "directional_share": 0.522,
+        "ci95": [
+          0.381,
+          0.659
+        ],
+        "p_value": 0.882996,
+        "q_value": 0.9306
+      },
+      "markup_raw:4->5": {
+        "edit_space": "markup_raw",
+        "from": "4",
+        "to": "5",
+        "total": 42,
+        "directional_share": 0.548,
+        "ci95": [
+          0.399,
+          0.688
+        ],
+        "p_value": 0.643969,
+        "q_value": 0.7394
+      },
+      "markup_raw:a->s": {
+        "edit_space": "markup_raw",
+        "from": "a",
+        "to": "s",
+        "total": 33,
+        "directional_share": 0.667,
+        "ci95": [
+          0.496,
+          0.802
+        ],
+        "p_value": 0.080143,
+        "q_value": 0.1152
+      },
+      "markup_raw:%->r": {
+        "edit_space": "markup_raw",
+        "from": "%",
+        "to": "r",
+        "total": 38,
+        "directional_share": 0.579,
+        "ci95": [
+          0.422,
+          0.721
+        ],
+        "p_value": 0.417692,
+        "q_value": 0.5064
+      },
+      "markup_raw:9->0": {
+        "edit_space": "markup_raw",
+        "from": "9",
+        "to": "0",
+        "total": 30,
+        "directional_share": 0.733,
+        "ci95": [
+          0.556,
+          0.858
+        ],
+        "p_value": 0.016125,
+        "q_value": 0.0267
+      },
+      "markup_raw:s->e": {
+        "edit_space": "markup_raw",
+        "from": "s",
+        "to": "e",
+        "total": 38,
+        "directional_share": 0.526,
+        "ci95": [
+          0.373,
+          0.675
+        ],
+        "p_value": 0.871415,
+        "q_value": 0.9306
+      },
+      "markup_raw:4->1": {
+        "edit_space": "markup_raw",
+        "from": "4",
+        "to": "1",
+        "total": 30,
+        "directional_share": 0.633,
+        "ci95": [
+          0.455,
+          0.781
+        ],
+        "p_value": 0.200488,
+        "q_value": 0.2621
+      },
+      "slp1_raw:o->I": {
+        "edit_space": "slp1_raw",
+        "from": "o",
+        "to": "I",
+        "total": 63,
+        "directional_share": 0.984,
+        "ci95": [
+          0.915,
+          0.997
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "slp1_raw:h->̣": {
+        "edit_space": "slp1_raw",
+        "from": "h",
+        "to": "̣",
+        "total": 40,
+        "directional_share": 1.0,
+        "ci95": [
+          0.912,
+          1.0
+        ],
+        "p_value": 0.0,
+        "q_value": 0.0
+      },
+      "slp1_raw:b->v": {
+        "edit_space": "slp1_raw",
+        "from": "b",
+        "to": "v",
+        "total": 35,
+        "directional_share": 0.857,
+        "ci95": [
+          0.706,
+          0.937
+        ],
+        "p_value": 2.2e-05,
+        "q_value": 0.0
+      }
+    }
+  }
+}
