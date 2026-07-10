@@ -89,7 +89,7 @@ when you need exotic schemes the package doesn't cover.
    is NOT a WhitneyRoots copy: it was rewritten to Russian-only helpers (`stemRussian`,
    `normalizeHeadForMatch`, `compareHeadsRu`, Leipzig-gloss parse, page clamps) with **zero Sanskrit
    transcode**. The one near-analog (`normalizeHeadForMatch`) is 35% divergent from `norm`/`normalize_sanskrit`
-   over 2047 real strings (it folds Cyrillic punctuation + ё, not IAST) — a swap would break Russian search.
+   over 2047 real strings (it folds Cyrillic punctuation + е, not IAST) — a swap would break Russian search.
    The census name-match was a false positive.
 2. **SanskritSpellCheck** `detectors/slp1util.py` — **BLOCKED** (verified 2026-06-15). It is **SLP1-centric**:
    SLP1 `ALPHABET`/`VOWELS`/`CONSONANTS`/`MARKS` sets, an OCR Devanāgarī→SLP1 reader, a confusion model, a
