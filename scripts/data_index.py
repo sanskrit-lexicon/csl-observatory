@@ -194,6 +194,12 @@ CATALOG: dict[str, Entry] = {
         "Per-dictionary correction-sustainability aggregates.",
         "Dictionary-level process signal; small dictionaries and burst campaigns can dominate rates.",
     ),
+    "obs_phase3_rigor.json": Entry(
+        "obs-t analysis",
+        "scripts/obs_hypotheses_phase3.py",
+        "Phase-3 hypothesis rigor metrics (H4-H8): specialisation, edit-type invariance, and related tests with permutation p-values.",
+        "Descriptive rigor statistics over the current release split; permutation p-values shift when the release or feature set changes.",
+    ),
     "obs_t_baselines.json": Entry(
         "obs-t analysis",
         "scripts/obs_t_baselines.py",
@@ -222,6 +228,12 @@ CATALOG: dict[str, Entry] = {
         "obs-t analysis",
         "scripts/obs_t_typology.py",
         "OBS-T release-safe corrector summary by alias/name, event count, component, and date span.",
+        "Identity display follows the release identity policy and should not be used to deanonymize contributors.",
+    ),
+    "obs_t_corrector_component.csv": Entry(
+        "obs-t analysis",
+        "scripts/obs_t_typology.py",
+        "OBS-T corrector-by-component event counts for release-safe contributor/component analysis.",
         "Identity display follows the release identity policy and should not be used to deanonymize contributors.",
     ),
     "obs_t_crosswalk.csv": Entry(
