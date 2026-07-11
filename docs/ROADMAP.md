@@ -1,5 +1,7 @@
 # CDSL Observatory: One-Year Maintainer Roadmap
 
+_Created: 30-05-2026 · Last updated: 30-06-2026_
+
 Last updated: 2026-06-30
 Horizon: 2026-06 to 2027-06
 Audience: maintainer first. Contributor and reviewer-facing surfaces are planned
@@ -135,3 +137,5 @@ decisions into implementation packets:
    `/community-continuity` as the maintainer review control surface.
 4. Prepare the first approved license or cleanup implementation batch; if no
    decision is made, continue with refresh-script implementation prep.
+
+_Dr. Mārcis Gasūns_
