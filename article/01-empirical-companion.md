@@ -586,7 +586,8 @@ machine-readable plain-text formats. Specifically:
   `docs/RH1_LICENSE_ROLLOUT_LOG.md` and measured in `reports/repo_health.md`,
   subsequently brought recognised SPDX licences to 70 of the 76 canonical
   repositories (code and tooling under GPL-3.0, dictionary data under
-  CC BY-SA 4.0), with only six disposable `temp_*`/legacy repositories left
+  CC BY-SA 4.0), with only six disposable `temp_*`/`test_*`/legacy
+  repositories left
   unlicensed pending archival.
 
 The principal gaps at the snapshot were F1 (no DOIs), I1/I2 (no
