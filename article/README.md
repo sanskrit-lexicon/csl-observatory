@@ -12,7 +12,7 @@ read either independently.
 | [`00-report-narrative.md`](00-report-narrative.md) | Mārcis Gasūns | First-person scholarly narrative | The thirty-year history of CDSL: founders, disputes, archives, hopes |
 | [`01-empirical-companion.md`](01-empirical-companion.md) | Funderburk, Patel, Rao, Gasūns | Formal third-person | Quantitative survey, runbook, standards alignment, infrastructure |
 | [`refs.bib`](refs.bib) | — | — | BibTeX bibliography for the companion paper |
-| [`A15_github_ecosystem.md`](A15_github_ecosystem.md) | Gasūns | Formal third-person | A15 skeleton: CDSL as a GitHub maintenance ecosystem (analytical findings + `csl-orig` campaign case study; boundary note vs the pair above) |
+| [`A15_github_ecosystem.md`](A15_github_ecosystem.md) | Gasūns | Formal third-person | A15 full draft: CDSL as a GitHub maintenance ecosystem (seven analytical findings incl. the data-layer bus factor, the correction-loop anatomy + 52,498-event ledger, the `csl-orig` campaign case study, claim→artifact inventory; boundary note vs the pair above) |
 | [`A48_error_recapture.md`](A48_error_recapture.md) | Gasūns | Formal third-person | A48 skeleton: capture–recapture estimate of residual errors |
 
 The narrative report (`00-report-narrative.md`) is also mirrored at the
