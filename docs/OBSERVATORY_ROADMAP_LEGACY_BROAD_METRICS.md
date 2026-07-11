@@ -1,5 +1,7 @@
 # Legacy Broad Metrics Roadmap
 
+_Created: 16-05-2026 · Last updated: 04-06-2026_
+
 Status: legacy reference only. This file predates the 2026-06-04 boundary
 cleanup and includes source mining, Matomo usage analytics, backlinks, citation
 tracking, and broad paper planning that no longer belongs in active
@@ -350,3 +352,5 @@ This is conservative; faster pace possible.
 2. **Matomo URL**: which exact Cologne instance? `https://matomo.uni-koeln.de`?
 3. **Cross-org partner repos** to fetch for §5.3.6: confirm list (Pandanus, DCS, Heritage, others?)
 4. **Time-per-commit defaults**: are my heuristics in §3 plausible to you, or do you want to override the medians?
+
+_Dr. Mārcis Gasūns_
