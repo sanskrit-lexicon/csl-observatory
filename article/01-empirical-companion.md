@@ -13,9 +13,9 @@ author:
     orcid: PLACEHOLDER-RAO
   - name: Mārcis Gasūns
     affiliation: Sanskrit Zealots's Society / Russia, Obninsk
-    orcid: PLACEHOLDER-GASUNS
+    orcid: 0000-0003-4513-884X
     email: gasyoun@gmail.com
-date: 2026-05-07
+date: 2026-07-11
 abstract: |
   This article is a quantitative and methodological companion to Gasūns
   (*Report on Cologne Digital Sanskrit Lexicon Project*, forthcoming),
@@ -25,14 +25,15 @@ abstract: |
   its disputes, its lost archives, its hopes for the next half-century —
   this companion documents the present state of the project as a digital
   infrastructure, in numbers and standards. We describe the unified
-  issue-taxonomy and ten-phase runbook applied across eight active
+  issue-taxonomy and triage runbook applied across eight active
   dictionary repositories in 2026; we present a complete data snapshot of
-  the ecosystem (78 repositories, 5,172 issues, 3,979 captured commits, 49 distinct
+  the ecosystem (78 repositories, 5,172 issues and pull requests, 3,979
+  captured commits, 49 distinct
   contributors after alias merge); we demonstrate the path from CDSL's
   plain-text source format to TEI Lex-0 and OntoLex-Lemon RDF; and we
   evaluate the project against the FAIR data principles and ELEXIS
   infrastructure recommendations. The data behind every figure and table
-  is publicly archived in the `csl-observatory` repository under CC BY-SA
+  is publicly archived in the `csl-observatory` repository under CC BY
   4.0 and is regenerable by running a single Python pipeline.
 keywords:
   - Sanskrit lexicography
@@ -75,20 +76,21 @@ We focus on four contributions.
 
 1. **The 2026 issue-taxonomy runbook** (§3): we describe the unified
    labelling, milestone, and project taxonomy applied across eight active
-   dictionary repositories in 2026, together with the ten-phase autonomous
-   runbook that produces it.
+   dictionary repositories in 2026, together with the seventeen-phase
+   autonomous runbook (numbered 0–16) whose triage core produces it.
 
 2. **An ecosystem-wide data snapshot** (§4): we present the first complete
-   quantitative survey of the CDSL ecosystem — 78 repositories, 5,172 issues,
-   3,979 captured commits, 49 distinct contributors — and analyse the distribution of
-   issue types, contributor labour, and activity over the project's twelve-year
-   GitHub history.
+   quantitative survey of the CDSL ecosystem — 78 repositories, 5,172 issues
+   and pull requests, 3,979 captured commits, 49 distinct contributors — and
+   analyse the distribution of
+   issue types, contributor labour, and activity over the project's
+   thirteen-year GitHub history (2014–2026).
 
 3. **A standards alignment** (§5): we evaluate the project against TEI Lex-0
    [@romary2019teilex0], OntoLex-Lemon [@cimiano2016ontolex], the FAIR
    principles [@wilkinson2016fair], and the European Lexicographic
    Infrastructure (ELEXIS) recommendations [@krek2018elexis]. We demonstrate,
-   through a worked example, the round-trip from CDSL's `<L>...<LEND>`
+   through a worked example, the conversion path from CDSL's `<L>...<LEND>`
    plain-text format to TEI-conformant XML.
 
 4. **The `csl-observatory` infrastructure** (§6): we describe the reproducible
@@ -100,35 +102,44 @@ follows from both this paper and the report (§8).
 
 # 2. Relationship to the narrative report
 
-The report (§3.4) recounts the evolution of the source format from Malten's
+The report (in its "Evolution of Data Formats" and "Encoding Standard"
+sections) recounts the evolution of the source format from Malten's
 original `MONIER.ALL` numerical-marker encoding, through Hyman's XML
 intervention, to the present `<L>...<LEND>` line-oriented format. It also
 reproduces a side-by-side example of the entry *kuJjakuTIra* in 1997 and 2025
 encodings. We accept these technical findings as given and use them as the
 starting point for the data dictionary in §3.5 below.
 
-The report (§3.5.1, §3.5.2) lists the major contributors with role notes:
+The report (in "Team Members", subsection "Major Cologne Contributors
+1994-2025") lists the major contributors with year spans:
 Thomas Malten (1994–2013), Peter Scharf (2004–2013), Malcolm D. Hyman
-(2004–2009), Jim Funderburk (2004–present), Sampada Savardekar (2014–2023),
-Mārcis Gasūns (2014–present), Dhaval Patel (2014–present), Nagabhushana Rao
-Kālepu (2021–present), and Scott Rhodes (2024–present). Our data (§4.5)
-extends this list with empirical commit and issue counts and exposes several
+(2004–2009), Jim Funderburk (2004–2025), Sampada Savardekar (2014–2023),
+Mārcis Gasūns (2014–2025), Dhaval Patel (2014–2021), Nagabhushana Rao
+Kālepu (2021–2025), and Scott Rhodes (2024–2025). Our data (§4.5)
+extends this list with empirical commit and issue counts, exposes several
 aliases — chiefly Cologne SSH dialog hostnames — that have to be merged for
-accurate attribution.
+accurate attribution, and corrects one span empirically: Patel's commit
+record runs from November 2015 through 2026, past the report's 2014–2021
+window.
 
-The report's headline figures — "6,400+ issues by 2025", "392,600+ normalised
-entries", "168,633 MW lemmas", "106,169 PWG lemmas", "67,138 MBH references"
-— are reproduced and contextualised below where relevant. Our own snapshot
-(2026-05-07) records 5,172 issues across the organisation, a count that
-excludes pull requests but includes both open and closed issues. The
-discrepancy with the report's "6,400+" figure is partly attributable to issue
-comments being counted separately in our schema and partly to the report's
-inclusive count across discussion threads in deprecated repositories. Where
-exact reconciliation is needed for an individual claim, we indicate it.
+The report's headline figures — "over 5,400 issues and pull requests across
+76 repositories" by 2025 (abstract), "over 390,000" normalised entries
+(abstract), and the lemma and citation counts quoted in §4.8 below (168633
+MW lemmas, 106169 PWG lemmas, 67138 Mahābhārata references) — are
+reproduced and
+contextualised where relevant. Our own snapshot (2026-05-07) records 5,172
+issue records across the organisation, of which 37 are pull requests, both
+open and closed states included. The report's slightly larger figure rests
+on a later census — the June 2026 transformation pass (`data/manifest.json`)
+counts 5,413 issue-and-pull-request records across the 76 canonical
+(non-fork) repositories — and the gap between the two is ordinary June-2026
+growth plus the differing repository census (our 78 includes two forks).
+Where exact reconciliation is needed for an individual claim, we indicate it.
 
 # 3. The 2026 issue-taxonomy runbook
 
-The report observes (§3.4.2, §6) that issues "quickly piled up between 2014
+The report observes (in its "Encoding Standard" section) that issues
+"quickly piled up between 2014
 and 2024 not so quickly to be solved", that "csl-orig, CORRECTIONS,
 cologne-stardict, csl-apidev, csl-corrections, csl-pywork, csl-websanlexicon,
 MWS, PWK, hwnorm1 [are the] most active [repositories]", and that "some of
@@ -141,8 +152,8 @@ to a long-lived programme of work.
 The triage applies a consistent vocabulary to every issue in eight active
 dictionary repositories — AP, AP90, FRI, GRA, MD, MWS, PWG, PWK — and
 deposits the result in a four-quadrant kanban board mirrored as four GitHub
-Projects (V2). The vocabulary, the assignment rules, and the ten-phase
-runbook that automates the application are described below.
+Projects (V2). The vocabulary, the assignment rules, and the runbook that
+automates the application are described below.
 
 ## 3.1 Type labels (nine)
 
@@ -191,7 +202,8 @@ what the print contains (SD), and substantive content extension (ME).
 
 ## 3.4 The runbook
 
-Application of the taxonomy is codified as a sixteen-phase runbook executed
+Application of the taxonomy is codified as a seventeen-phase runbook
+(numbered 0–16) executed
 by a large language model agent (Claude Code) operating against the GitHub
 REST and GraphQL APIs, the local file system, and `git`. The phases are:
 
@@ -215,37 +227,42 @@ REST and GraphQL APIs, the local file system, and `git`. The phases are:
 | 15 | Generate a Mermaid pipeline diagram of the actual data flow from source to display. |
 | 16 | Drop community files: `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `.github/ISSUE_TEMPLATE/`, pull-request template. |
 
-Phase 7 is enforced as a hard gate: all five integrity checks — missing type
+Phases 0–10 — the triage core — were executed across the eight repositories
+in 2026; Phases 11–16 are specified but not yet propagated (§8). Phase 7 is
+enforced as a hard gate: all five integrity checks — missing type
 label, missing severity, missing milestone, multi-type, and type/milestone
 mismatch — must reach zero before the runbook proceeds to documentation. The
 autonomy rules, encoding requirements, and pre-existing GitHub-default-label
-collision protocol are documented separately in the runbook source.
+collision protocol are documented separately in the runbook source, mirrored
+publicly at `runbook/cologne-issue-runbook.md` in the `csl-observatory`
+repository [@runbook2026].
 
 ## 3.5 Data dictionary
 
-The CDSL plain-text record format described in the report (§3.4.1) is here
+The CDSL plain-text record format described in the report's "Data
+Structure" section is here
 codified into the following data dictionary, which is reproduced in every
 triaged repository's `CLAUDE.md` per Phase 13.
 
 | Tag | Semantic role | Example |
 |---|---|---|
-| `<L>NNNN` | Entry begin, with print-line reference | `<L>51478<pc>288,1` |
+| `<L>NNNN` | Entry begin; `<pc>` carries the print page,column reference | `<L>51478<pc>288,1` |
 | `<LEND>` | Entry end | |
 | `<k1>` | Primary headword in SLP1 | `<k1>kuYjakuwIra` |
-| `<k2>` | Secondary spelling, hyphenated form | `<k2>kuYja---kuwIra` |
+| `<k2>` | Secondary spelling, with compound-seam separator | `<k2>kuYja—kuwIra` |
 | `<e>N` | Etymology marker / homonym index | `<e>3` |
 | `<lex>` | Lexical category (part of speech) | `<lex>m.</lex>` |
 | `<ls>` | Literary source citation | `<ls>Mālatīm.</ls>` |
 | `<ab>` | Italicised abbreviation | `<ab>m.</ab>` |
-| `<s>` | Sanskrit text in display layer | `<s>kuYja---kuwIra</s>` |
+| `<s>` | Sanskrit text in display layer | `<s>kuYja—kuwIra</s>` |
 | `<info>` | Structured metadata | `<info lex="m"/>` |
 | `{#…#}` | Sanskrit text in SLP1 inline | `{#rAmaH#}` |
 | `{%…%}` | Italicised display text | `{%abc%}` |
 | `{{Lbody=NNN}}` | Cross-reference to parent entry | `{{Lbody=159.1}}` |
 
 The full set of 67 unique tags observed across all repositories is recorded
-in the `COLOGNE` repository's `xmltag/all_xmltags.txt` and reproduced in the
-report (§5.2.2).
+in the `COLOGNE` repository's `xmltag/all_xmltags.txt` [@all_xmltags] and
+reproduced in the report's "Unique Tags" section.
 
 # 4. The CDSL ecosystem in numbers (2026 snapshot)
 
@@ -266,29 +283,33 @@ definition used here.
 
 | Metric | Value |
 |---|---:|
-| Repositories in `sanskrit-lexicon` | 78 |
+| Repositories in `sanskrit-lexicon` (including 2 forks) | 78 |
 | Repositories with issues enabled | 78 |
-| Issues across the ecosystem (open + closed) | 5,172 |
+| Issue records across the ecosystem (open + closed) | 5,172 |
 | Pull requests (subset of above) | 37 |
+| Issues proper (excluding pull requests) | 5,135 |
 | Commits captured in default branches | 3,979 |
 | Distinct contributors (commit + issue authors, post-alias-merge) | 49 |
 | Repositories triaged with the 2026 taxonomy | 8 |
-| Typed issues across the eight triaged repositories | 608 |
+| Issues carrying a type label across the eight triaged repositories | 578 |
+| Type-label assignments (30 issues carried two labels) | 608 |
 
 The 78 repositories include both active dictionary repos (PWG, MWS, AP, …),
 tooling repos (`csl-app`, `csl-pywork`, `csl-corrections`, …), and deprecated
 experiments (`temp_corrections_*`, `Wil-YAT`). Of these, 8 have completed the
 2026 taxonomy runbook at the time of writing: AP, AP90, FRI, GRA, MD, MWS,
-PWG, PWK. The remaining 14 dictionary repositories with significant issue
-volume (ACC, AMAR, ApteES, BEN, BHS, BOP, BOR, BUR, CAE, CCS, INM, KOW, KRM,
+PWG, PWK. A further 22 dictionary repositories with open issue records
+(ACC, AMAR, ApteES, BEN, BHS, BOP, BOR, BUR, CAE, CCS, INM, KOW, KRM,
 LRV, MCI, PUI, SHS, SKD, STC, VCP, VEI, WIL) are queued for triage in
 2026–2027.
 
-The discrepancy with the report's "6,400+ issues by 2025" figure (§3.4.2) is
-partly explained by three factors: the report's count includes archived
-discussion threads not surfaced by the issues API; it includes issue comments
-as separate units; and it dates from late 2025, since which a small number of
-issues have been closed and the distribution has shifted as triage progressed.
+The report's abstract counts "over 5,400 issues and pull requests across 76
+repositories" by 2025. Our snapshot's 5,172 records (37 of them pull
+requests) is the same population measured a few weeks earlier and over a
+slightly wider census: the report's figure follows the June 2026
+transformation pass (5,413 records, `data/manifest.json`), which excludes
+the two forks our 78-repository count retains, and the intervening weeks of
+the 2026 correction campaign account for the growth.
 
 ## 4.2 Activity timeline
 
@@ -297,22 +318,26 @@ aggregates commits and issue activity per calendar year.
 
 | Year | Commits | Issues opened | Issues closed |
 |---|---:|---:|---:|
-| 2014 | 65 | 190 | 65 |
+| 2014 | 75 | 190 | 65 |
 | 2015 | 123 | 270 | 170 |
-| 2016 | 151 | 175 | 140 |
+| 2016 | 160 | 175 | 140 |
 | 2017 | 85 | 268 | 130 |
 | 2018 | 63 | 98 | 30 |
 | 2019 | 234 | 246 | 144 |
-| 2020 | 244 | 470 | 485 |
-| 2021 | 554 | 637 | 484 |
-| 2022 | 318 | 451 | 382 |
-| 2023 | 319 | 534 | 542 |
-| 2024 | 306 | 372 | 381 |
-| 2025 | 605 | 1,169 | 213 |
-| 2026 | 639 | 255 | 1,122 |
+| 2020 | 255 | 470 | 485 |
+| 2021 | 610 | 637 | 484 |
+| 2022 | 337 | 451 | 382 |
+| 2023 | 357 | 534 | 542 |
+| 2024 | 309 | 372 | 381 |
+| 2025 | 612 | 1,169 | 213 |
+| 2026 | 759 | 255 | 1,122 |
 
-Two phenomena are visible. First, a sharp acceleration in 2021 (554 commits,
-twice the 2020 count) coincides with the report's account (§3.5.2) of
+The commits column sums to the 3,979 captured commits of §4.1; the issue
+columns count issues proper (pull requests excluded).
+
+Two phenomena are visible. First, a sharp acceleration in 2021 (610 commits,
+2.4 times the 2020 count) coincides with the report's account (in "Major
+Cologne Contributors 1994-2025") of
 Nagabhushana Rao's accession to the team and with the batch headword-cleaning
 campaigns. Second, the 2026 row records the mass closure of 1,122 issues
 against only 255 newly opened — the runbook's verification gates accept
@@ -321,8 +346,11 @@ which mechanically advances closure rates.
 
 ## 4.3 Issue type distribution (triaged repositories)
 
-The 608 typed issues across the eight triaged repositories distribute as
-follows. Percentages are of typed issues only; non-type GitHub-default labels
+The 578 typed issues across the eight triaged repositories carry 608
+type-label assignments (30 issues held two type labels at the snapshot date;
+the Phase 7 single-type gate had not yet been enforced everywhere), which
+distribute as follows. Percentages are of type-label assignments; non-type
+GitHub-default labels
 (`invalid`, `duplicate`, `wontfix`, `help wanted`) are excluded.
 
 | Type | Count | % |
@@ -340,20 +368,23 @@ follows. Percentages are of typed issues only; non-type GitHub-default labels
 
 Three observations are warranted. First, `markup` and `content-enhancement`
 together account for 47.2 percent of typed work, confirming the report's
-claim (§4.2) that "the corpus revolution in lexicography has not yet reached
+claim (in "Future Plans") that "the corpus revolution in lexicography has
+not yet reached
 the field of Sanskrit" — most active work in the project is structural
 enrichment of historical print, not new lexicographic compilation. Second,
 `link-target` work represents a substantial fraction (15.5 percent) and is
 concentrated in two repositories (PWG with 72 issues, MWS with 11),
-consistent with the report's account (§5.1) of the link-target programme
-begun in 2022. Third, `scan-quality` and `link-splitting` are the smallest
+consistent with the report's account (in "Linking Dictionary and Corpus")
+of the link-target era that opened once batch headword correction ended in
+2022. Third, `scan-quality` and `link-splitting` are the smallest
 categories, indicating that most of the imaging and citation-decomposition
 work either is complete or is performed outside the issue tracker.
 
 ## 4.4 Type by repository
 
 The following heatmap shows the distribution of types across the eight
-triaged repositories. The PWG row totals 195 typed issues, the largest of any
+triaged repositories (cells count type-label assignments, as in §4.3). The
+PWG column totals 197 assignments, the largest of any
 repository; this is consistent with the report's identification of PWG as
 the canonical Sanskrit-German dictionary on which most recent Cologne work
 has been concentrated.
@@ -371,10 +402,12 @@ has been concentrated.
 | `question` | 0 | 2 | 0 | 1 | 0 | 20 | 14 | 9 | 46 |
 | **total** | 25 | 27 | 10 | 36 | 13 | 189 | 197 | 111 | 608 |
 
-PWK and PWG together account for 308 (50.7 percent) of typed issues across
+PWK and PWG together account for 308 (50.7 percent) of type-label
+assignments across
 the triaged set; MWS adds another 189. The Sanskrit-German dictionaries thus
 dominate the active correction effort, which mirrors the report's claim
-(§2.1.1) that PWG, PWK, CCS, and SCH form the genealogical core of the
+(in "Core Sanskrit-German Dictionaries") that PWG, PWK, CCS, and SCH form
+the genealogical core of the
 project.
 
 ## 4.5 Contributor labour
@@ -384,33 +417,40 @@ After alias merging — by which Cologne SSH dialog hostnames
 (`funderburk1@Jim-Funderburks-iMac.local`, `root@Jims-Mac-mini.local`), and
 email-typo variants (`drdhaval2785#gmail.com`) are folded into their
 canonical GitHub identities — the project shows 49 distinct contributors
-over thirteen years. The top contributors by commit count are listed below.
+over thirteen years. The top human contributors by captured commit count
+are listed below (three bot identities — `github-actions[bot]` with 37
+commits, `actions-user` with 21, and an automated updater with 3 — are
+excluded from the table).
 
 | Real name | GitHub | Role | Commits | Repos | Span |
 |---|---|---|---:|---:|---|
-| Jim Funderburk | `funderburkjim` | maintainer | 2,314 | 50 | 2014–2026 |
-| Dhaval Patel | `drdhaval2785` | core | 1,088 | 26 | 2015–2026 |
-| Mārcis Gasūns | `gasyoun` | lead | 119 | 19 | 2014–2026 |
+| Jim Funderburk | `funderburkjim` | maintainer | 2,415 | 53 | 2014–2026 |
+| Dhaval Patel | `drdhaval2785` | core | 1,232 | 29 | 2015–2026 |
+| Mārcis Gasūns | `gasyoun` | lead | 129 | 21 | 2014–2026 |
 | Anna Rybakova | `AnnaRybakovaT` | occasional | 70 | 10 | 2020–2023 |
-| Nagabhushana Rao | `Andhrabharati` | core | 12 | 2 | 2021–2022 |
+| Nagabhushana Rao | `Andhrabharati` | core | 30 | 3 | 2021–2023 |
 | (misconfigured client) | `you@example.com` | occasional | 30 | 5 | 2021 |
 | DmitriSKT | `DmitriSKT` | occasional | 3 | 1 | 2017 |
 | Haqob | `Haqob` | occasional | 2 | 1 | 2020 |
-| Thomas Malten | `maltenth` | core | 1 | 1 | 2014 |
+| Thomas Malten | `maltenth` | core | 1 | 1 | 2021 |
 
 The picture is striking: a single contributor (Funderburk) has authored
-two-thirds of the project's commits over its entire GitHub history; a second
-contributor (Patel) has authored a further quarter. The remaining 47
-contributors share the residual eight percent. This concentration of labour
-is consistent with the report's observation (§3.5.2, §6) that "Almost none
+60.7 percent of the project's captured commits over its entire GitHub
+history; a second
+contributor (Patel) has authored a further 31.0 percent. The remaining 47
+identities share the residual 8.3 percent. This concentration of labour
+is consistent with the report's observation (in "Key Contributors" and
+"Future Plans") that "Almost none
 of the initial team members are active now. The ship has lost its captain",
-and with the report's stated need to plan for "transition to the orphan
+and with the report's stated need to plan for the "transition to the orphan
 no-Jim mode".
 
 We note one caveat: the very low commit count attributed to Thomas Malten
-(1) reflects only commits made under the GitHub login `maltenth` on the
+(a single 2021 commit) reflects only commits made under the GitHub login
+`maltenth` on the
 project's *current* GitHub branches; the foundational digitisation work
-attributed to Malten in the report (§3.5.2) was deposited in pre-GitHub
+attributed to Malten in the report (in "Major Cologne Contributors
+1994-2025") was deposited in pre-GitHub
 formats (`MONIER.ALL`, raw `.txt`) and was imported into the repository
 ecosystem by Funderburk and others. Empirical commit counts are therefore
 not a measure of foundational contribution.
@@ -423,9 +463,13 @@ pattern visible in many long-lived infrastructure projects.
 
 ## 4.6 Activity span
 
-Figure 1, rendered separately as `figures/contributor-gantt.png`, shows each
-contributor's first-to-last commit interval. The horizontal axis spans
-2014–2026; bars are coloured by role. Three regimes are visible:
+Figure 1 (`figures/contributor-gantt.png`, generated from the archived
+snapshot by `scripts/article_figures.py`; source
+`data/snapshots/2026-05-07`, n = 16 commit-author identities after alias
+merge, regenerated 2026-07-11) shows each
+identity's first-to-last commit interval. The horizontal axis spans
+2014–2026; bars are coloured by role and labelled with captured commit
+counts. Three regimes are visible:
 
 - A founding cohort active continuously since 2014 (Funderburk, Gasūns,
   Patel — though Patel's GitHub account dates from 2015).
@@ -437,13 +481,15 @@ contributor's first-to-last commit interval. The horizontal axis spans
 ## 4.7 Dictionary corpus by entry count
 
 We counted `<L>` markers in the canonical text file of every dictionary in
-`csl-orig/v02/`. The headword integrity is excellent: in all 43 counted
+`csl-orig/v02/` (committed as `reports/coverage.md` in the observatory
+repository; counts as of its 2026-06-01 refresh). The headword integrity is
+excellent: in all 43 counted
 dictionaries the number of `<L>` markers equals the number of `<LEND>`
 markers exactly, confirming that no entry was left unclosed by the
 correction pipeline. The total count is **1,495,422 entries** across 43
 dictionaries.
 
-The ten largest dictionaries account for 1,103,896 entries (73.8 percent
+The ten largest dictionaries account for 972,411 entries (65.0 percent
 of the corpus). Their distribution is shown in Table 4.7.
 
 | Dictionary | `<L>` count | Source bytes |
@@ -459,16 +505,16 @@ of the corpus). Their distribution is shown in Table 4.7.
 | SHS (Shabda-Sagara 1900) | 47,326 | 9.2 MB |
 | YAT (Yates 1846) | 45,206 | 5.2 MB |
 
-The report (abstract) reports a total of "392,600+ normalised entries"
+The report (abstract) counts "over 390,000" normalised entries
 across the project. Our `<L>`-marker count is approximately 3.8× larger.
 The discrepancy is explained by three factors. First, the alternate-headword
-expansion introduced in 2024 (report §3.4.3) splits a single printed entry
+expansion (report, "Data Structure" section) splits a single printed entry
 with multiple headword spellings (e.g. *akabara / akabbara / akavara*) into
 N separate `<L>` records, each carrying a `{{Lbody=…}}` pointer to the
 parent entry; these N − 1 alternate headwords are *expansions*, not new
 *lemmas*. Second, the headword-normalisation work [@patel2016hwnorm]
 collapses spelling variants to a single canonical form for cross-dictionary
-search; the count behind the "392,600+" figure is presumably this
+search; the count behind the "over 390,000" figure is presumably this
 normalised, deduplicated set. Third, our count includes *every* dictionary
 in `csl-orig/v02/`, including English-Sanskrit and Sanskrit-French
 volumes which were not in the original CDSL plan.
@@ -482,14 +528,18 @@ follow-up; see `csl-observatory` issue queue.
 The report cites several specific numerical claims that can now be
 checked against the empirical snapshot.
 
+The report's section names below abbreviate: "Analysis Tool" = "Offline
+Sanskrit Analysis Tool" (under "Computer Programs"); "Digitization" =
+"Digitization for Dictionaries" (under "Linking Dictionary and Corpus").
+
 | Claim (report) | Empirical observation | Reconciliation |
 |---|---|---|
-| "168,633 MW lemmas" (§2.3.2) | 286,558 `<L>` markers in MW | The 168,633 figure is the lemma count *after* alternate-headword separation and deduplication; MW's `<L>` count is inflated by the 2024 expansion. |
-| "106,169 PWG lemmas" (§2.3.2) | 123,366 `<L>` markers in PWG | Same explanation; ratio 1.16× is consistent with PWG having fewer alternate-headword expansions than MW. |
-| "87,091 lemmas in common" (§2.3.2) | not yet recomputed | An empirical re-derivation is straightforward from the two `.txt` files plus `hwnorm1`; we defer it to a separate publication. |
-| "67,138 MBH references" (§5.1.4) | not yet recomputed in observatory | A grep over `<ls>Mbh.</ls>` in PWG would confirm; we anticipate doing so when the link-target programme stabilises. |
-| "MW: 110 chars vs PWG: 245 chars average" (§2.3.2) | derivable from source bytes ÷ entry count: MW = 175, PWG = 419 | Our character-per-entry ratio (175/419) is larger than the report's (110/245) by an identical factor (~1.6×); the report measures a different unit (likely character count of definition text, excluding tags). |
-| "2,800 literary sources" in PWG (§5.1.4) | not yet recomputed | A `grep -oE '<ls>[^<]+</ls>'` over PWG, deduplicated, would yield this count. |
+| "168633 MW lemmas" (Analysis Tool) | 286,558 `<L>` markers in MW | The 168,633 figure is the lemma count *after* alternate-headword separation and deduplication; MW's `<L>` count is inflated by the alternate-headword expansion. |
+| "106169 PWG lemmas" (Analysis Tool) | 123,366 `<L>` markers in PWG | Same explanation; ratio 1.16× is consistent with PWG having fewer alternate-headword expansions than MW. |
+| "87091 lemmas in common" (Analysis Tool) | not yet recomputed | An empirical re-derivation is straightforward from the two `.txt` files plus `hwnorm1`; we defer it to a separate publication. |
+| "67138 MBH." references in PWG (Digitization) | not yet recomputed in observatory | The report quotes the PWG source list itself; a deduplicating scan over `<ls>` in PWG would confirm. We anticipate doing so when the link-target programme stabilises. |
+| "MW: 110 vs. PWG: 245" chars per entry (Analysis Tool) | derivable from source bytes ÷ entry count: MW = 175, PWG = 419 | Our character-per-entry values are larger than the report's by similar factors (1.6× and 1.7×); the report measures a different unit (likely character count of definition text, excluding tags). |
+| "not more than 2800 literary sources" in PWG (Digitization) | not yet recomputed | A deduplicating scan over `<ls>` values in PWG would yield this count. |
 
 The general pattern is that the report's figures and our empirical
 counts are mutually consistent once the relevant unit is identified
@@ -498,7 +548,7 @@ not errors; they are different valid measures of the same underlying
 corpus. A **figure of merit for cross-dictionary work**, in our view,
 should standardise on the lemma rather than the `<L>` record, because
 the `<L>` count is sensitive to internal markup choices (such as the
-2024 alternate-headword expansion) that are not visible to the end
+alternate-headword expansion) that are not visible to the end
 user. The observatory will report both counts going forward.
 
 # 5. Standards alignment
@@ -528,29 +578,42 @@ machine-readable plain-text formats. Specifically:
   CDSL tag vocabulary is project-specific.
 - **I3** (qualified references): partially satisfied; cross-dictionary links
   exist as `<ls>` and `{{Lbody=…}}` references but lack resolvable URIs.
-- **R1.1** (clear and accessible data usage license): not satisfied at the
-  time of the snapshot; only 2 of 78 repositories declare a license. Phase
-  11 of the runbook addresses this.
+- **R1.1** (clear and accessible data usage license): largely unsatisfied at
+  the time of the snapshot: 62 of 78 repositories exposed no machine-readable
+  licence at all, and only 13 carried a recognised SPDX identifier (a further
+  3 were unclassifiable `NOASSERTION` bundles). A June 2026 remediation
+  campaign, documented in the observatory's
+  `docs/RH1_LICENSE_ROLLOUT_LOG.md` and measured in `reports/repo_health.md`,
+  subsequently brought recognised SPDX licences to 70 of the 76 canonical
+  repositories (code and tooling under GPL-3.0, dictionary data under
+  CC BY-SA 4.0), with only six disposable `temp_*`/`test_*`/legacy
+  repositories left
+  unlicensed pending archival.
 
-The principal gaps are F1 (no DOIs), I1/I2 (no community-standard schema),
-and R1.1 (no licence in most repositories).
+The principal gaps at the snapshot were F1 (no DOIs), I1/I2 (no
+community-standard schema),
+and R1.1 (no licence in most repositories — since remediated, see above).
 
-## 5.2 TEI Lex-0 round-trip
+## 5.2 TEI Lex-0 conversion
 
 We demonstrate the path from CDSL's plain-text format to TEI Lex-0
-[@romary2019teilex0] using a single representative entry. The CDSL source is
-the entry for *kuJjakuTIra* in PWG (line 51478):
+[@romary2019teilex0] using a single representative entry — the same
+*kuJjakuTIra* entry whose 1997 and 2025 encodings the report reproduces in
+its "SLP1 Encoding" section. The entry is record `<L>51478` of the
+Monier-Williams dictionary (MW; `csl-orig/v02/mw/mw.txt`, retrieved
+2026-07-04 — the report's 2025-state quotation writes the compound seam as
+`---`, which the source has since normalised to an em dash):
 
 ```
-<L>51478<pc>288,1<k1>kuYjakuwIra<k2>kuYja---kuwIra<e>3
-<s>kuYja---kuwIra</s> ¦ <lex>m.</lex> a bower, arbour,
-<ls>Mālatīm.</ls>; <ls>Gīt.</ls><info lex="m"/><LEND>
+<L>51478<pc>288,1<k1>kuYjakuwIra<k2>kuYja—kuwIra<e>3
+<s>kuYja—kuwIra</s> ¦ <lex>m.</lex> a bower, arbour, <ls>Mālatīm.</ls>; <ls>Gīt.</ls><info lex="m"/>
+<LEND>
 ```
 
 The corresponding TEI Lex-0 encoding is:
 
 ```xml
-<entry xml:id="pwg-51478">
+<entry xml:id="mw-51478">
   <form type="lemma">
     <orth xml:lang="sa-Latn-x-iast">kuñjakuṭīra</orth>
     <orth xml:lang="sa-Latn-x-slp1">kuYjakuwIra</orth>
@@ -558,7 +621,7 @@ The corresponding TEI Lex-0 encoding is:
       <gram type="pos">m.</gram>
     </gramGrp>
   </form>
-  <sense xml:id="pwg-51478-1">
+  <sense xml:id="mw-51478-1">
     <def xml:lang="en">a bower, arbour</def>
     <cit type="example">
       <bibl><title type="abbrev">Mālatīm.</title></bibl>
@@ -568,7 +631,7 @@ The corresponding TEI Lex-0 encoding is:
     </cit>
   </sense>
   <note type="provenance">
-    <ref target="pwg.txt#L51478">PWG print page 288, column 1</ref>
+    <ref target="mw.txt#L51478">MW print page 288, column 1</ref>
   </note>
 </entry>
 ```
@@ -579,7 +642,7 @@ becomes `xml:id`; `<k1>` becomes the SLP1 `<orth>`; `<k2>` informs the IAST
 `<ls>` becomes `<def>`; each `<ls>` becomes a `<cit type="example">` with a
 `<bibl>`. Compound entries, secondary headwords introduced via
 `{{Lbody=…}}`, and entries with multiple senses separated by semicolons
-require additional rules that we discuss in §7.
+require additional rules; a full conversion programme is sketched in §8.
 
 ## 5.3 OntoLex-Lemon RDF
 
@@ -591,9 +654,9 @@ Turtle:
 @prefix lexinfo: <http://www.lexinfo.net/ontology/3.0/lexinfo#> .
 @prefix dct:     <http://purl.org/dc/terms/> .
 @prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
-@prefix pwg:     <https://sanskrit-lexicon.uni-koeln.de/scans/PWGScan/iast/> .
+@prefix mw:      <https://sanskrit-lexicon.uni-koeln.de/scans/MWScan/iast/> .
 
-pwg:kunjakutira-51478 a ontolex:LexicalEntry ;
+mw:kunjakutira-51478 a ontolex:LexicalEntry ;
     lexinfo:partOfSpeech lexinfo:noun ;
     lexinfo:gender lexinfo:masculine ;
     ontolex:canonicalForm [
@@ -604,7 +667,7 @@ pwg:kunjakutira-51478 a ontolex:LexicalEntry ;
     ontolex:sense [
         a ontolex:LexicalSense ;
         skos:definition "a bower, arbour"@en ;
-        dct:source pwg:source-malatim , pwg:source-git
+        dct:source mw:source-malatim , mw:source-git
     ] .
 ```
 
@@ -627,13 +690,14 @@ repository metadata. ORCIDs are placeholders pending registration.
 The data underlying every figure and table in this paper is produced by the
 `csl-observatory` repository, hosted at
 `github.com/sanskrit-lexicon/csl-observatory`. The repository is licensed
-GPL-3.0 (code) and CC BY-SA 4.0 (data); the article itself is licensed CC
-BY 4.0.
+GPL-3.0 (code) and CC BY 4.0 (data; see the repository's
+`DATA_LICENSE.md`); the article itself is licensed CC BY 4.0.
 
 The aggregator pipeline consists of three Python scripts:
 
 - **`pull_data.py`** fetches from the GitHub REST and GraphQL APIs and writes
-  immutable snapshots to `data/snapshots/<date>/`.
+  immutable snapshots to `data/snapshots/<date>/`; the archive underlying
+  this paper holds weekly snapshots from 2026-05-07 through 2026-06-01.
 - **`compute_metrics.py`** loads a snapshot, applies the contributor
   alias-merge rules, and derives `contributors.json`, `repo_metrics.json`,
   `timeline.json`, and `cross_repo.json`.
@@ -641,8 +705,14 @@ The aggregator pipeline consists of three Python scripts:
   `contributors.md`, `timeline.md`, `coverage.md`) with embedded Mermaid
   charts.
 
-A weekly cron workflow (`.github/workflows/refresh.yml`) re-runs the pipeline
-on Monday mornings UTC and commits any changes.
+Figure 1 is generated by `scripts/article_figures.py` directly from the
+archived 2026-05-07 snapshot.
+
+A weekly scheduled workflow
+(`.github/workflows/refresh-observatory.yml`) re-runs the pipeline on
+Monday mornings (03:00 UTC) and commits any changes; the original
+`refresh.yml` workflow is retained for manually dispatched runs of the
+legacy report tables.
 
 The complete data dictionary, contributor map, and reproduction instructions
 are in the repository's `README.md` and `CONTRIBUTING.md`.
@@ -657,19 +727,30 @@ The archived 2026-05-07 snapshot records a retry-recovery pass for twelve
 repositories, raising the captured default-branch commit count to 3,979, but
 `csl-orig` remains reported with zero commits despite having a much larger
 history. The commit totals in §4 are therefore conservative captured counts,
-not a complete all-time commit census.
+not a complete all-time commit census. A subsequent clone-based recount
+(June 2026, committed as `data/commits.csv`) captured 9,877 commits,
+including 1,985 for `csl-orig` alone — quantifying how conservative the
+GraphQL capture is. We retain the 3,979 basis in §4 because the archived
+snapshot, unlike the moving clone recount, is the frozen artifact this
+paper's tables are derived from.
 
-**Headword counts not yet implemented.** The `coverage.md` report is a
-placeholder; entry counts per dictionary are not yet derived from the source
-`.txt` files. We expect to produce them by counting `<L>` markers in each
-`csl-orig/v02/<repo>/<dict>.txt`. The headline figure "392,600+ normalised
-entries" reported by Gasūns (forthcoming, abstract) should be reconciled
-with this empirical count.
+**Measurement dates are mixed.** The issue and commit statistics (§4.1–§4.6)
+are frozen at the 2026-05-07 snapshot; the dictionary entry counts (§4.7)
+follow the committed `reports/coverage.md` as of its 2026-06-01 refresh; the
+worked source example (§5.2) quotes `csl-orig` as of 2026-07-04; and the
+source corpus itself receives corrections continuously. Every figure in this
+paper therefore names its measurement date, and small drifts between bases
+(for example, the report's later June-2026 issue census, §2) are expected
+rather than anomalous. The `<L>`-marker unit itself is sensitive to internal
+markup choices (§4.8) and should not be read as a lemma count.
 
 **Contributor identification incomplete.** Nine GitHub identities with
-non-trivial commit or issue activity (DmitriSKT, Haqob, YevgenJohn,
-sanskritisampada, you@example.com, root@*) are not yet identified. A
-tracking issue on `csl-observatory` invites them to self-identify.
+commit activity (shenyileirob, DmitriSKT, vvasuki, YevgenJohn, Haqob,
+sanskritisampada, sumanthegde, adminlip, vlastavesely) have no confirmed
+real name, and no human contributor has an ORCID registered in the
+contributor map yet (`reports/contributor_identity.md`). A
+tracking issue on `csl-observatory` (issue #20) invites them to
+self-identify.
 
 # 8. Future work
 
@@ -678,16 +759,17 @@ encoding declaration, pipeline diagram, community files) are specified but
 have not yet been propagated to the eight triaged repositories. We intend to
 apply them in 2026 Q3.
 
-The remaining 14 dictionary repositories with significant issue volume are
+The 22 dictionary repositories with open issue records listed in §4.1 are
 queued for triage in 2026–2027.
 
 A TEI Lex-0 conversion programme covering the eight triaged dictionaries is
-feasible on the basis of the round-trip demonstrated in §5.2 and would
+feasible on the basis of the conversion demonstrated in §5.2 and would
 constitute a substantive contribution to the ELEXIS infrastructure. A
 first-pass automatic conversion of MWS, the best-structured of the
 dictionaries, is the natural starting point.
 
-The report (§6) outlines a much broader programme of future work — five
+The report (in "Future Plans") outlines a much broader programme of future
+work — five
 Sanskrit-Russian dictionaries to be added, a reverse Sanskrit dictionary,
 normalised cross-dictionary headwords, abbreviation markup, and the
 long-deferred unification of meaning tagging. The infrastructure described
@@ -701,8 +783,8 @@ All data, scripts, and intermediate artefacts are available in the
 
 - **Source dictionaries** (CC BY-SA 4.0): `github.com/sanskrit-lexicon/csl-orig`
 - **Web display** (GPL-3.0): `github.com/sanskrit-lexicon/csl-app`
-- **Observatory and analytics** (GPL-3.0; data CC BY-SA 4.0): `github.com/sanskrit-lexicon/csl-observatory`
-- **Per-dictionary correction workflows**: see Table 3.4 of the report
+- **Observatory and analytics** (GPL-3.0; data CC BY 4.0): `github.com/sanskrit-lexicon/csl-observatory`
+- **Per-dictionary correction workflows**: see the report's "Correction of Dictionaries" section
 
 This article and its figures are licensed CC BY 4.0.
 
