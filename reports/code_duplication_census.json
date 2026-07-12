@@ -1,0 +1,3447 @@
+{
+ "date": "2026-07-12",
+ "root": "C:\\Users\\user\\Documents\\GitHub",
+ "repos_in_census": 129,
+ "repo_names": [
+  "ACC",
+  "AfanasiyNikitin",
+  "alternateheadwords",
+  "AMAR",
+  "AP",
+  "AP90",
+  "ApteES",
+  "ArabicInSanskrit",
+  "avlinks",
+  "BEN",
+  "BHS",
+  "BookIndex",
+  "BOP",
+  "BOR",
+  "buhler-sanskrit-book",
+  "BUR",
+  "CAE",
+  "CCS",
+  "ChatExport",
+  "claude-config",
+  "claude-memory-store",
+  "ClickToQuote",
+  "codex-config",
+  "COLOGNE",
+  "cologne-hugo",
+  "cologne-skills",
+  "cologne-stardict",
+  "CommentaryStrategies",
+  "CORRECTIONS",
+  "CourseDump2022",
+  "csl-apidev",
+  "csl-app",
+  "csl-atlas",
+  "csl-corrections",
+  "csl-devanagari",
+  "csl-doc",
+  "csl-guides",
+  "csl-homepage",
+  "csl-inflect",
+  "csl-json",
+  "csl-kale",
+  "csl-ldev",
+  "csl-lnum",
+  "csl-lslink",
+  "csl-newsletter",
+  "csl-observatory",
+  "csl-orig",
+  "csl-pywork",
+  "csl-santam",
+  "csl-santam-wave1",
+  "csl-sqlite",
+  "csl-standards",
+  "csl-websanlexicon",
+  "csl-westergaard",
+  "csl-whitroot",
+  "DCS",
+  "dcs-conllu",
+  "DeepPavlov",
+  "free-claude-code",
+  "FRI",
+  "gasyoun.github.io",
+  "github-spine",
+  "GRA",
+  "GreekInSanskrit",
+  "HindiLexicography",
+  "hwnorm1",
+  "hwnorm2",
+  "IEG",
+  "IndologyScholars",
+  "INM",
+  "KNA",
+  "kosha",
+  "KOW",
+  "KRM",
+  "literarysource",
+  "LRV",
+  "MCI",
+  "MD",
+  "mw-dev",
+  "MW72",
+  "MWderivations",
+  "MWinflect",
+  "MWS",
+  "Nagari",
+  "Nalopakhyanam",
+  "ORS-FAQ",
+  "Parallel-Sanskrit-Corpora",
+  "prefaces_ieg",
+  "PUI",
+  "PWG",
+  "PWK",
+  "RussianRamayana",
+  "RuWritingStyles",
+  "RuWritingStyles-corpus",
+  "rvlinks",
+  "SamasaChakram",
+  "SamudraManthanam",
+  "sanskrit",
+  "sanskrit-fonts",
+  "sanskrit-lexicon.github.io",
+  "sanskrit-util",
+  "SanskritCorpora",
+  "SanskritGrammar",
+  "SanskritKaraoke",
+  "SanskritLexicography",
+  "SanskritMacros",
+  "SanskritRussian",
+  "SanskritSorting",
+  "SanskritSpellCheck",
+  "SCH",
+  "ScharfSandhi",
+  "SHS",
+  "SKD",
+  "spoken-sanskrit-corpus",
+  "STC",
+  "Sundara-commentaries",
+  "Systema-Sanscriticum",
+  "telegram-sanskrit-corpus",
+  "temp_corrections_ap90",
+  "temp_corrections_mw",
+  "Uprava",
+  "VCP",
+  "VEI",
+  "VisualDCS",
+  "WhitneyRoots",
+  "WIL",
+  "Wil-YAT",
+  "ZaliznjakVideo",
+  "ZettelkastenWiki"
+ ],
+ "loc": {
+  "ACC": {
+   "HTML": {
+    "files": 1,
+    "lines": 104
+   },
+   "Python": {
+    "files": 2,
+    "lines": 297
+   }
+  },
+  "AfanasiyNikitin": {
+   "JavaScript": {
+    "files": 41,
+    "lines": 6589
+   },
+   "Python": {
+    "files": 36,
+    "lines": 3488
+   },
+   "HTML": {
+    "files": 66,
+    "lines": 35148
+   },
+   "CSS": {
+    "files": 10,
+    "lines": 2590
+   }
+  },
+  "alternateheadwords": {
+   "Shell": {
+    "files": 5,
+    "lines": 34
+   },
+   "Python": {
+    "files": 32,
+    "lines": 8308
+   }
+  },
+  "AMAR": {
+   "Python": {
+    "files": 4,
+    "lines": 763
+   },
+   "HTML": {
+    "files": 1,
+    "lines": 104
+   },
+   "Shell": {
+    "files": 1,
+    "lines": 14
+   }
+  },
+  "AP": {
+   "HTML": {
+    "files": 1,
+    "lines": 104
+   },
+   "Python": {
+    "files": 125,
+    "lines": 22900
+   },
+   "Shell": {
+    "files": 14,
+    "lines": 362
+   },
+   "PHP": {
+    "files": 3,
+    "lines": 12191
+   }
+  },
+  "AP90": {
+   "HTML": {
+    "files": 1,
+    "lines": 104
+   },
+   "Python": {
+    "files": 76,
+    "lines": 14587
+   },
+   "Shell": {
+    "files": 7,
+    "lines": 118
+   },
+   "PHP": {
+    "files": 1,
+    "lines": 4449
+   }
+  },
+  "ApteES": {
+   "HTML": {
+    "files": 1,
+    "lines": 104
+   },
+   "Python": {
+    "files": 67,
+    "lines": 13565
+   },
+   "Shell": {
+    "files": 7,
+    "lines": 149
+   }
+  },
+  "avlinks": {
+   "CSS": {
+    "files": 2,
+    "lines": 167
+   },
+   "HTML": {
+    "files": 732,
+    "lines": 76952
+   },
+   "Python": {
+    "files": 3,
+    "lines": 447
+   },
+   "Shell": {
+    "files": 1,
+    "lines": 7
+   }
+  },
+  "BEN": {
+   "HTML": {
+    "files": 1,
+    "lines": 104
+   },
+   "Python": {
+    "files": 72,
+    "lines": 10997
+   },
+   "Shell": {
+    "files": 7,
+    "lines": 143
+   }
+  },
+  "BHS": {
+   "HTML": {
+    "files": 1,
+    "lines": 104
+   },
+   "Python": {
+    "files": 48,
+    "lines": 5351
+   },
+   "Shell": {
+    "files": 2,
+    "lines": 37
+   }
+  },
+  "BookIndex": {
+   "HTML": {
+    "files": 1414,
+    "lines": 28492593
+   },
+   "JavaScript": {
+    "files": 161,
+    "lines": 108176
+   },
+   "Python": {
+    "files": 97,
+    "lines": 15785
+   },
+   "TypeScript": {
+    "files": 2,
+    "lines": 222
+   },
+   "CSS": {
+    "files": 2,
+    "lines": 398
+   }
+  },
+  "BOP": {
+   "HTML": {
+    "files": 1,
+    "lines": 104
+   },
+   "Python": {
+    "files": 40,
+    "lines": 6705
+   },
+   "Shell": {
+    "files": 2,
+    "lines": 34
+   }
+  },
+  "BOR": {
+   "HTML": {
+    "files": 1,
+    "lines": 104
+   },
+   "Python": {
+    "files": 2,
+    "lines": 86
+   },
+   "Shell": {
+    "files": 1,
+    "lines": 2
+   }
+  },
+  "buhler-sanskrit-book": {
+   "TypeScript": {
+    "files": 42,
+    "lines": 2644
+   },
+   "CSS": {
+    "files": 8,
+    "lines": 232
+   },
+   "JavaScript": {
+    "files": 14,
+    "lines": 1510
+   }
+  },
+  "BUR": {
+   "HTML": {
+    "files": 1,
+    "lines": 104
+   },
+   "Python": {
+    "files": 50,
+    "lines": 9229
+   },
+   "Shell": {
+    "files": 3,
+    "lines": 34
+   }
+  },
+  "CAE": {
+   "HTML": {
+    "files": 1,
+    "lines": 104
+   },
+   "Python": {
+    "files": 12,
+    "lines": 2542
+   },
+   "Shell": {
+    "files": 1,
+    "lines": 14
+   }
+  },
+  "CCS": {
+   "HTML": {
+    "files": 1,
+    "lines": 104
+   },
+   "Python": {
+    "files": 13,
+    "lines": 3159
+   },
+   "Shell": {
+    "files": 1,
+    "lines": 16
+   }
+  },
+  "claude-config": {
+   "Python": {
+    "files": 31,
+    "lines": 3944
+   }
+  },
+  "ClickToQuote": {
+   "HTML": {
+    "files": 1,
+    "lines": 13541
+   },
+   "CSS": {
+    "files": 1,
+    "lines": 93
+   },
+   "JavaScript": {
+    "files": 1,
+    "lines": 51
+   }
+  },
+  "codex-config": {
+   "Shell": {
+    "files": 2,
+    "lines": 355
+   },
+   "Python": {
+    "files": 22,
+    "lines": 7563
+   },
+   "JavaScript": {
+    "files": 2,
+    "lines": 745
+   }
+  },
+  "COLOGNE": {
+   "Shell": {
+    "files": 17,
+    "lines": 340
+   },
+   "Python": {
+    "files": 128,
+    "lines": 21946
+   },
+   "HTML": {
+    "files": 4,
+    "lines": 11115
+   },
+   "JavaScript": {
+    "files": 1,
+    "lines": 164
+   }
+  },
+  "cologne-skills": {
+   "Python": {
+    "files": 1,
+    "lines": 68
+   }
+  },
+  "cologne-stardict": {
+   "Python": {
+    "files": 9,
+    "lines": 1317
+   },
+   "Shell": {
+    "files": 3,
+    "lines": 79
+   }
+  },
+  "CommentaryStrategies": {
+   "HTML": {
+    "files": 412,
+    "lines": 597387
+   },
+   "Python": {
+    "files": 276,
+    "lines": 60848
+   },
+   "JavaScript": {
+    "files": 3,
+    "lines": 183
+   },
+   "CSS": {
+    "files": 54,
+    "lines": 11520
+   }
+  },
+  "CORRECTIONS": {
+   "HTML": {
+    "files": 145,
+    "lines": 294812
+   },
+   "Python": {
+    "files": 93,
+    "lines": 14133
+   },
+   "Shell": {
+    "files": 21,
+    "lines": 311
+   },
+   "CSS": {
+    "files": 3,
+    "lines": 579
+   },
+   "PHP": {
+    "files": 5,
+    "lines": 427
+   }
+  },
+  "CourseDump2022": {
+   "JavaScript": {
+    "files": 4,
+    "lines": 1478
+   },
+   "CSS": {
+    "files": 2,
+    "lines": 321
+   },
+   "HTML": {
+    "files": 1,
+    "lines": 75
+   }
+  },
+  "csl-apidev": {
+   "PHP": {
+    "files": 103,
+    "lines": 26852
+   },
+   "Python": {
+    "files": 32,
+    "lines": 4008
+   },
+   "Shell": {
+    "files": 6,
+    "lines": 69
+   },
+   "JavaScript": {
+    "files": 50,
+    "lines": 10920
+   },
+   "HTML": {
+    "files": 42,
+    "lines": 9872
+   },
+   "CSS": {
+    "files": 160,
+    "lines": 26754
+   }
+  },
+  "csl-app": {
+   "HTML": {
+    "files": 1,
+    "lines": 75
+   },
+   "JavaScript": {
+    "files": 2,
+    "lines": 9350
+   },
+   "Dart": {
+    "files": 58,
+    "lines": 12716
+   },
+   "Python": {
+    "files": 1,
+    "lines": 1068
+   }
+  },
+  "csl-atlas": {
+   "JavaScript": {
+    "files": 224,
+    "lines": 50464
+   },
+   "CSS": {
+    "files": 4,
+    "lines": 480
+   },
+   "Python": {
+    "files": 124,
+    "lines": 25225
+   },
+   "HTML": {
+    "files": 5,
+    "lines": 2905
+   }
+  },
+  "csl-corrections": {
+   "Python": {
+    "files": 186,
+    "lines": 20126
+   },
+   "Shell": {
+    "files": 13,
+    "lines": 222
+   },
+   "CSS": {
+    "files": 6,
+    "lines": 1158
+   },
+   "PHP": {
+    "files": 8,
+    "lines": 698
+   },
+   "HTML": {
+    "files": 2,
+    "lines": 396
+   }
+  },
+  "csl-devanagari": {
+   "Shell": {
+    "files": 3,
+    "lines": 32
+   },
+   "Python": {
+    "files": 6,
+    "lines": 499
+   }
+  },
+  "csl-doc": {
+   "Python": {
+    "files": 3,
+    "lines": 362
+   },
+   "HTML": {
+    "files": 2,
+    "lines": 1178
+   }
+  },
+  "csl-guides": {
+   "JavaScript": {
+    "files": 78,
+    "lines": 13453
+   },
+   "CSS": {
+    "files": 22,
+    "lines": 3342
+   },
+   "Python": {
+    "files": 2,
+    "lines": 424
+   }
+  },
+  "csl-homepage": {
+   "CSS": {
+    "files": 1,
+    "lines": 121
+   },
+   "Python": {
+    "files": 4,
+    "lines": 1947
+   },
+   "HTML": {
+    "files": 1,
+    "lines": 921
+   },
+   "Shell": {
+    "files": 5,
+    "lines": 34
+   },
+   "PHP": {
+    "files": 4,
+    "lines": 434
+   }
+  },
+  "csl-inflect": {
+   "Shell": {
+    "files": 33,
+    "lines": 410
+   },
+   "PHP": {
+    "files": 5,
+    "lines": 1500
+   },
+   "HTML": {
+    "files": 2,
+    "lines": 833
+   },
+   "CSS": {
+    "files": 1,
+    "lines": 167
+   },
+   "JavaScript": {
+    "files": 1,
+    "lines": 166
+   },
+   "Python": {
+    "files": 87,
+    "lines": 52943
+   }
+  },
+  "csl-kale": {
+   "JavaScript": {
+    "files": 8,
+    "lines": 1887
+   },
+   "HTML": {
+    "files": 1,
+    "lines": 37
+   },
+   "CSS": {
+    "files": 4,
+    "lines": 331
+   },
+   "PHP": {
+    "files": 5,
+    "lines": 350
+   },
+   "Python": {
+    "files": 3,
+    "lines": 326
+   }
+  },
+  "csl-ldev": {
+   "Python": {
+    "files": 2,
+    "lines": 101
+   },
+   "Shell": {
+    "files": 1,
+    "lines": 16
+   }
+  },
+  "csl-lslink": {
+   "PHP": {
+    "files": 1,
+    "lines": 84
+   },
+   "Python": {
+    "files": 1,
+    "lines": 116
+   },
+   "Shell": {
+    "files": 1,
+    "lines": 18
+   }
+  },
+  "csl-newsletter": {
+   "Python": {
+    "files": 1,
+    "lines": 212
+   }
+  },
+  "csl-observatory": {
+   "Python": {
+    "files": 138,
+    "lines": 29522
+   },
+   "HTML": {
+    "files": 2,
+    "lines": 972
+   },
+   "JavaScript": {
+    "files": 4,
+    "lines": 340
+   },
+   "CSS": {
+    "files": 2,
+    "lines": 100
+   }
+  },
+  "csl-orig": {
+   "Python": {
+    "files": 41,
+    "lines": 6768
+   },
+   "Shell": {
+    "files": 12,
+    "lines": 222
+   },
+   "HTML": {
+    "files": 1,
+    "lines": 220
+   }
+  },
+  "csl-pywork": {
+   "Shell": {
+    "files": 51,
+    "lines": 2143
+   },
+   "Python": {
+    "files": 122,
+    "lines": 26880
+   },
+   "PHP": {
+    "files": 32,
+    "lines": 10303
+   },
+   "HTML": {
+    "files": 17,
+    "lines": 1714
+   },
+   "CSS": {
+    "files": 8,
+    "lines": 823
+   },
+   "JavaScript": {
+    "files": 11,
+    "lines": 5727
+   }
+  },
+  "csl-santam": {
+   "HTML": {
+    "files": 2,
+    "lines": 252
+   },
+   "PHP": {
+    "files": 1,
+    "lines": 303
+   },
+   "Perl": {
+    "files": 3,
+    "lines": 512
+   },
+   "JavaScript": {
+    "files": 1,
+    "lines": 63
+   }
+  },
+  "csl-santam-wave1": {
+   "HTML": {
+    "files": 2,
+    "lines": 226
+   },
+   "PHP": {
+    "files": 1,
+    "lines": 271
+   },
+   "Perl": {
+    "files": 3,
+    "lines": 512
+   }
+  },
+  "csl-standards": {
+   "JavaScript": {
+    "files": 47,
+    "lines": 7170
+   },
+   "CSS": {
+    "files": 55,
+    "lines": 34175
+   },
+   "HTML": {
+    "files": 600,
+    "lines": 1883663
+   },
+   "Python": {
+    "files": 2,
+    "lines": 358
+   }
+  },
+  "csl-websanlexicon": {
+   "Python": {
+    "files": 18,
+    "lines": 2767
+   },
+   "PHP": {
+    "files": 801,
+    "lines": 134347
+   },
+   "HTML": {
+    "files": 648,
+    "lines": 68169
+   },
+   "Shell": {
+    "files": 84,
+    "lines": 451
+   },
+   "CSS": {
+    "files": 311,
+    "lines": 40919
+   },
+   "JavaScript": {
+    "files": 429,
+    "lines": 212347
+   }
+  },
+  "csl-westergaard": {
+   "JavaScript": {
+    "files": 4,
+    "lines": 199
+   },
+   "CSS": {
+    "files": 5,
+    "lines": 560
+   },
+   "HTML": {
+    "files": 1,
+    "lines": 18
+   },
+   "PHP": {
+    "files": 12,
+    "lines": 2768
+   },
+   "Perl": {
+    "files": 1,
+    "lines": 81
+   }
+  },
+  "csl-whitroot": {
+   "JavaScript": {
+    "files": 2,
+    "lines": 43
+   },
+   "HTML": {
+    "files": 1,
+    "lines": 80
+   },
+   "PHP": {
+    "files": 2,
+    "lines": 596
+   },
+   "CSS": {
+    "files": 2,
+    "lines": 265
+   }
+  },
+  "DeepPavlov": {
+   "Python": {
+    "files": 313,
+    "lines": 41471
+   },
+   "HTML": {
+    "files": 2,
+    "lines": 154
+   },
+   "CSS": {
+    "files": 1,
+    "lines": 11
+   }
+  },
+  "free-claude-code": {
+   "Python": {
+    "files": 126,
+    "lines": 26210
+   }
+  },
+  "FRI": {
+   "HTML": {
+    "files": 1,
+    "lines": 104
+   },
+   "Python": {
+    "files": 7,
+    "lines": 978
+   }
+  },
+  "gasyoun.github.io": {
+   "HTML": {
+    "files": 14,
+    "lines": 237797
+   },
+   "CSS": {
+    "files": 8,
+    "lines": 1499
+   },
+   "JavaScript": {
+    "files": 3,
+    "lines": 6
+   }
+  },
+  "GRA": {
+   "HTML": {
+    "files": 18,
+    "lines": 1818
+   },
+   "Python": {
+    "files": 101,
+    "lines": 13324
+   },
+   "Shell": {
+    "files": 18,
+    "lines": 173
+   },
+   "PHP": {
+    "files": 29,
+    "lines": 6258
+   },
+   "CSS": {
+    "files": 8,
+    "lines": 787
+   },
+   "JavaScript": {
+    "files": 10,
+    "lines": 5246
+   }
+  },
+  "hwnorm1": {
+   "Python": {
+    "files": 28,
+    "lines": 4988
+   },
+   "Shell": {
+    "files": 14,
+    "lines": 106
+   },
+   "PHP": {
+    "files": 1,
+    "lines": 69
+   },
+   "HTML": {
+    "files": 12,
+    "lines": 26691
+   }
+  },
+  "hwnorm2": {
+   "Shell": {
+    "files": 19,
+    "lines": 347
+   },
+   "Python": {
+    "files": 33,
+    "lines": 4211
+   },
+   "PHP": {
+    "files": 1,
+    "lines": 119
+   }
+  },
+  "IEG": {
+   "HTML": {
+    "files": 1,
+    "lines": 104
+   },
+   "Shell": {
+    "files": 1,
+    "lines": 10
+   },
+   "Python": {
+    "files": 4,
+    "lines": 646
+   }
+  },
+  "IndologyScholars": {
+   "HTML": {
+    "files": 10620,
+    "lines": 2675849
+   },
+   "Python": {
+    "files": 694,
+    "lines": 200027
+   },
+   "JavaScript": {
+    "files": 32,
+    "lines": 14253
+   },
+   "CSS": {
+    "files": 9,
+    "lines": 4617
+   }
+  },
+  "INM": {
+   "HTML": {
+    "files": 1,
+    "lines": 104
+   },
+   "Python": {
+    "files": 26,
+    "lines": 4576
+   }
+  },
+  "KNA": {
+   "HTML": {
+    "files": 1,
+    "lines": 105
+   }
+  },
+  "kosha": {
+   "HTML": {
+    "files": 112,
+    "lines": 17144
+   },
+   "JavaScript": {
+    "files": 88,
+    "lines": 2468
+   },
+   "Python": {
+    "files": 119,
+    "lines": 20183
+   },
+   "CSS": {
+    "files": 2,
+    "lines": 2
+   }
+  },
+  "KOW": {
+   "HTML": {
+    "files": 1,
+    "lines": 104
+   }
+  },
+  "KRM": {
+   "HTML": {
+    "files": 1,
+    "lines": 104
+   },
+   "Python": {
+    "files": 15,
+    "lines": 2956
+   },
+   "Shell": {
+    "files": 1,
+    "lines": 16
+   }
+  },
+  "LRV": {
+   "HTML": {
+    "files": 1,
+    "lines": 104
+   },
+   "Python": {
+    "files": 27,
+    "lines": 1723
+   },
+   "Shell": {
+    "files": 3,
+    "lines": 49
+   }
+  },
+  "MCI": {
+   "HTML": {
+    "files": 1,
+    "lines": 104
+   },
+   "Python": {
+    "files": 3,
+    "lines": 187
+   }
+  },
+  "MD": {
+   "HTML": {
+    "files": 1,
+    "lines": 104
+   },
+   "Python": {
+    "files": 86,
+    "lines": 15313
+   },
+   "Shell": {
+    "files": 4,
+    "lines": 80
+   }
+  },
+  "mw-dev": {
+   "PHP": {
+    "files": 62,
+    "lines": 12526
+   },
+   "HTML": {
+    "files": 34,
+    "lines": 3434
+   },
+   "CSS": {
+    "files": 16,
+    "lines": 1574
+   },
+   "JavaScript": {
+    "files": 20,
+    "lines": 10492
+   },
+   "Python": {
+    "files": 29,
+    "lines": 3313
+   },
+   "Shell": {
+    "files": 36,
+    "lines": 318
+   }
+  },
+  "MW72": {
+   "HTML": {
+    "files": 1,
+    "lines": 104
+   },
+   "Python": {
+    "files": 28,
+    "lines": 3347
+   },
+   "Shell": {
+    "files": 1,
+    "lines": 51
+   }
+  },
+  "MWderivations": {
+   "Shell": {
+    "files": 12,
+    "lines": 177
+   },
+   "Python": {
+    "files": 42,
+    "lines": 21421
+   },
+   "HTML": {
+    "files": 1,
+    "lines": 63099
+   }
+  },
+  "MWinflect": {
+   "Shell": {
+    "files": 36,
+    "lines": 304
+   },
+   "PHP": {
+    "files": 10,
+    "lines": 2872
+   },
+   "HTML": {
+    "files": 4,
+    "lines": 1614
+   },
+   "CSS": {
+    "files": 2,
+    "lines": 244
+   },
+   "JavaScript": {
+    "files": 2,
+    "lines": 212
+   },
+   "Python": {
+    "files": 104,
+    "lines": 94026
+   }
+  },
+  "MWS": {
+   "HTML": {
+    "files": 35,
+    "lines": 30412
+   },
+   "Shell": {
+    "files": 22,
+    "lines": 2996
+   },
+   "Python": {
+    "files": 752,
+    "lines": 116798
+   },
+   "PHP": {
+    "files": 6,
+    "lines": 1516
+   },
+   "CSS": {
+    "files": 2,
+    "lines": 136
+   },
+   "JavaScript": {
+    "files": 10,
+    "lines": 3592
+   }
+  },
+  "ORS-FAQ": {
+   "Python": {
+    "files": 152,
+    "lines": 27262
+   },
+   "HTML": {
+    "files": 181,
+    "lines": 116491
+   }
+  },
+  "prefaces_ieg": {
+   "HTML": {
+    "files": 12,
+    "lines": 1301
+   },
+   "Python": {
+    "files": 1,
+    "lines": 40
+   }
+  },
+  "PUI": {
+   "HTML": {
+    "files": 1,
+    "lines": 104
+   },
+   "Python": {
+    "files": 2,
+    "lines": 149
+   }
+  },
+  "PWG": {
+   "Python": {
+    "files": 796,
+    "lines": 139840
+   },
+   "Shell": {
+    "files": 33,
+    "lines": 7376
+   },
+   "JavaScript": {
+    "files": 61,
+    "lines": 217447
+   },
+   "HTML": {
+    "files": 4,
+    "lines": 2364
+   }
+  },
+  "PWK": {
+   "HTML": {
+    "files": 17,
+    "lines": 4814
+   },
+   "Python": {
+    "files": 415,
+    "lines": 63107
+   },
+   "Shell": {
+    "files": 28,
+    "lines": 441
+   },
+   "PHP": {
+    "files": 1,
+    "lines": 106
+   },
+   "JavaScript": {
+    "files": 3,
+    "lines": 137051
+   },
+   "CSS": {
+    "files": 1,
+    "lines": 2
+   }
+  },
+  "RussianRamayana": {
+   "HTML": {
+    "files": 20,
+    "lines": 27269
+   },
+   "Python": {
+    "files": 18,
+    "lines": 3670
+   },
+   "CSS": {
+    "files": 2,
+    "lines": 1296
+   },
+   "JavaScript": {
+    "files": 1,
+    "lines": 26
+   }
+  },
+  "RuWritingStyles": {
+   "HTML": {
+    "files": 1169,
+    "lines": 507248
+   },
+   "JavaScript": {
+    "files": 5,
+    "lines": 1702
+   },
+   "CSS": {
+    "files": 3,
+    "lines": 648
+   },
+   "Python": {
+    "files": 115,
+    "lines": 22090
+   },
+   "TypeScript": {
+    "files": 17,
+    "lines": 2633
+   }
+  },
+  "RuWritingStyles-corpus": {
+   "Python": {
+    "files": 1,
+    "lines": 123
+   }
+  },
+  "rvlinks": {
+   "Shell": {
+    "files": 2,
+    "lines": 17
+   },
+   "Python": {
+    "files": 3,
+    "lines": 668
+   },
+   "CSS": {
+    "files": 2,
+    "lines": 174
+   },
+   "HTML": {
+    "files": 1029,
+    "lines": 267169
+   }
+  },
+  "SamudraManthanam": {
+   "Shell": {
+    "files": 3,
+    "lines": 159
+   },
+   "Python": {
+    "files": 346,
+    "lines": 63405
+   },
+   "HTML": {
+    "files": 655,
+    "lines": 717984
+   },
+   "JavaScript": {
+    "files": 164,
+    "lines": 64077
+   },
+   "CSS": {
+    "files": 33,
+    "lines": 8550
+   }
+  },
+  "sanskrit": {
+   "Shell": {
+    "files": 2,
+    "lines": 41
+   },
+   "Python": {
+    "files": 41,
+    "lines": 4255
+   },
+   "HTML": {
+    "files": 9,
+    "lines": 3281
+   },
+   "CSS": {
+    "files": 1,
+    "lines": 7
+   },
+   "JavaScript": {
+    "files": 3,
+    "lines": 14
+   }
+  },
+  "sanskrit-lexicon.github.io": {
+   "HTML": {
+    "files": 97,
+    "lines": 224059
+   },
+   "Python": {
+    "files": 5,
+    "lines": 705
+   },
+   "JavaScript": {
+    "files": 7,
+    "lines": 950
+   },
+   "CSS": {
+    "files": 1,
+    "lines": 259
+   }
+  },
+  "sanskrit-util": {
+   "Python": {
+    "files": 14,
+    "lines": 2180
+   },
+   "JavaScript": {
+    "files": 7,
+    "lines": 867
+   }
+  },
+  "SanskritGrammar": {
+   "JavaScript": {
+    "files": 18,
+    "lines": 1560
+   },
+   "Python": {
+    "files": 63,
+    "lines": 10630
+   },
+   "HTML": {
+    "files": 24,
+    "lines": 70098
+   },
+   "CSS": {
+    "files": 2,
+    "lines": 528
+   }
+  },
+  "SanskritKaraoke": {
+   "HTML": {
+    "files": 18,
+    "lines": 11946
+   },
+   "JavaScript": {
+    "files": 36,
+    "lines": 20944
+   },
+   "Python": {
+    "files": 64,
+    "lines": 8670
+   },
+   "CSS": {
+    "files": 2,
+    "lines": 479
+   }
+  },
+  "SanskritLexicography": {
+   "HTML": {
+    "files": 459,
+    "lines": 9048565
+   },
+   "Shell": {
+    "files": 3,
+    "lines": 144
+   },
+   "Python": {
+    "files": 810,
+    "lines": 187987
+   },
+   "JavaScript": {
+    "files": 240,
+    "lines": 29689
+   },
+   "CSS": {
+    "files": 5,
+    "lines": 1100
+   }
+  },
+  "SanskritMacros": {
+   "R": {
+    "files": 3,
+    "lines": 124
+   }
+  },
+  "SanskritRussian": {
+   "HTML": {
+    "files": 1,
+    "lines": 129
+   }
+  },
+  "SanskritSorting": {
+   "PHP": {
+    "files": 217,
+    "lines": 137336
+   },
+   "HTML": {
+    "files": 4,
+    "lines": 3122
+   },
+   "JavaScript": {
+    "files": 1,
+    "lines": 292
+   },
+   "CSS": {
+    "files": 7,
+    "lines": 713
+   }
+  },
+  "SanskritSpellCheck": {
+   "Python": {
+    "files": 112,
+    "lines": 14400
+   },
+   "PHP": {
+    "files": 68,
+    "lines": 30792
+   },
+   "Shell": {
+    "files": 6,
+    "lines": 46
+   },
+   "HTML": {
+    "files": 255,
+    "lines": 349033
+   },
+   "JavaScript": {
+    "files": 2,
+    "lines": 388
+   }
+  },
+  "SCH": {
+   "HTML": {
+    "files": 2,
+    "lines": 690
+   },
+   "Python": {
+    "files": 21,
+    "lines": 3542
+   },
+   "Shell": {
+    "files": 1,
+    "lines": 10
+   }
+  },
+  "ScharfSandhi": {
+   "Python": {
+    "files": 28,
+    "lines": 12897
+   },
+   "Shell": {
+    "files": 7,
+    "lines": 48
+   },
+   "HTML": {
+    "files": 1,
+    "lines": 346
+   },
+   "Perl": {
+    "files": 1,
+    "lines": 67
+   }
+  },
+  "SHS": {
+   "HTML": {
+    "files": 1,
+    "lines": 104
+   },
+   "Python": {
+    "files": 3,
+    "lines": 399
+   },
+   "Shell": {
+    "files": 1,
+    "lines": 33
+   }
+  },
+  "SKD": {
+   "HTML": {
+    "files": 10,
+    "lines": 174608
+   },
+   "Python": {
+    "files": 31,
+    "lines": 7008
+   },
+   "Shell": {
+    "files": 3,
+    "lines": 74
+   }
+  },
+  "spoken-sanskrit-corpus": {
+   "Python": {
+    "files": 6,
+    "lines": 677
+   }
+  },
+  "STC": {
+   "HTML": {
+    "files": 1,
+    "lines": 104
+   },
+   "Python": {
+    "files": 14,
+    "lines": 2405
+   },
+   "Shell": {
+    "files": 2,
+    "lines": 25
+   }
+  },
+  "Systema-Sanscriticum": {
+   "HTML": {
+    "files": 150,
+    "lines": 290862
+   },
+   "Shell": {
+    "files": 4,
+    "lines": 508
+   },
+   "JavaScript": {
+    "files": 111,
+    "lines": 6744
+   },
+   "PHP": {
+    "files": 6074,
+    "lines": 632309
+   },
+   "CSS": {
+    "files": 48,
+    "lines": 10578
+   },
+   "Python": {
+    "files": 68,
+    "lines": 18520
+   }
+  },
+  "telegram-sanskrit-corpus": {
+   "Python": {
+    "files": 19,
+    "lines": 1918
+   }
+  },
+  "temp_corrections_ap90": {
+   "Python": {
+    "files": 1,
+    "lines": 30
+   }
+  },
+  "Uprava": {
+   "HTML": {
+    "files": 997,
+    "lines": 1700897
+   },
+   "Python": {
+    "files": 127,
+    "lines": 27499
+   },
+   "Shell": {
+    "files": 2,
+    "lines": 200
+   },
+   "JavaScript": {
+    "files": 34,
+    "lines": 20777
+   },
+   "CSS": {
+    "files": 5,
+    "lines": 497
+   }
+  },
+  "VCP": {
+   "HTML": {
+    "files": 3,
+    "lines": 52370
+   },
+   "Python": {
+    "files": 68,
+    "lines": 9791
+   },
+   "Shell": {
+    "files": 6,
+    "lines": 78
+   }
+  },
+  "VEI": {
+   "HTML": {
+    "files": 1,
+    "lines": 104
+   },
+   "Python": {
+    "files": 4,
+    "lines": 374
+   },
+   "Shell": {
+    "files": 1,
+    "lines": 1
+   }
+  },
+  "VisualDCS": {
+   "HTML": {
+    "files": 62,
+    "lines": 255918
+   },
+   "Python": {
+    "files": 42,
+    "lines": 10025
+   },
+   "JavaScript": {
+    "files": 2,
+    "lines": 290
+   }
+  },
+  "WhitneyRoots": {
+   "CSS": {
+    "files": 5,
+    "lines": 1725
+   },
+   "HTML": {
+    "files": 1491,
+    "lines": 326775
+   },
+   "JavaScript": {
+    "files": 44,
+    "lines": 5890
+   },
+   "Python": {
+    "files": 80,
+    "lines": 14820
+   }
+  },
+  "Wil-YAT": {
+   "Python": {
+    "files": 8,
+    "lines": 1107
+   }
+  },
+  "ZettelkastenWiki": {
+   "Python": {
+    "files": 24,
+    "lines": 3699
+   }
+  }
+ },
+ "families": {
+  "transcoder.py": {
+   "copies": 83,
+   "versions": 9,
+   "cluster_sizes": [
+    53,
+    13,
+    4,
+    4,
+    3,
+    2,
+    2,
+    1,
+    1
+   ],
+   "baseline_copies": 62,
+   "baseline_versions": 7,
+   "canonical_prefix": "csl-pywork/",
+   "expected_vendored": true,
+   "no_canonical_on_disk": false,
+   "canonical_is_modal": false,
+   "canonical": 1,
+   "template_instance": 53,
+   "drifted": 29,
+   "drifted_paths": [
+    "COLOGNE/stardict/transcoder.py",
+    "CORRECTIONS/dhaval/descriptionerrors/transcoder.py",
+    "CORRECTIONS/dictionaries/BEN/issue-287prep/transcoder.py",
+    "CORRECTIONS/dictionaries/BHS/verbs/transcoder.py",
+    "CORRECTIONS/dictionaries/BUR/issue-296prep/transcoder.py",
+    "CORRECTIONS/dictionaries/BUR/verbs/transcoder.py",
+    "CORRECTIONS/dictionaries/CAE/issue-289prep/transcoder.py",
+    "CORRECTIONS/dictionaries/CAE/issue-290prep/transcoder.py",
+    "CORRECTIONS/dictionaries/CCS/issue-261/transcoder.py",
+    "CORRECTIONS/dictionaries/CCS/issue-264/transcoder.py",
+    "CORRECTIONS/dictionaries/CCS/issue-265prep/transcoder.py",
+    "CORRECTIONS/dictionaries/IEG/foreignwords/transcoder.py",
+    "CORRECTIONS/dictionaries/PD/issue-108/prep/transcoder.py",
+    "CORRECTIONS/dictionaries/SKD/issue-291prep/transcoder.py",
+    "CORRECTIONS/ngram/transcoder.py",
+    "MWinflect/.claude/worktrees/nice-tesla-23d4e5/transcode/transcoder.py",
+    "MWinflect/transcode/transcoder.py",
+    "PWG/pwg_ls/pwg_dhaval/abbrvwork_v0/transcoder/transcoder.py",
+    "PWG/pwg_ls/pwgbib/digitization/transcoder.py",
+    "PWK/pw_ls/pw_dhaval/abbrvwork/transcoder/transcoder.py",
+    "PWK/pw_ls/pwbib/transcoder.py",
+    "VCP/vcpte-vcp-cmp/transcoder.py",
+    "alternateheadwords/scripts/transcoder.py",
+    "csl-apidev/simple-search/simpleslp/transcoder.py",
+    "csl-apidev/simple-search/v1.0/transcoder.py",
+    "csl-apidev/simple-search/v1.0d/transcoder.py",
+    "csl-orig/v02/abch/prep/transcoder.py",
+    "csl-orig/v02/pwkvn/update/transcoder.py",
+    "hwnorm1/ejf/hwnorm1c/whitelist/auxiliary/pdgram/transcoder.py"
+   ],
+   "drifted_repos": [
+    "COLOGNE",
+    "CORRECTIONS",
+    "MWinflect",
+    "PWG",
+    "PWK",
+    "VCP",
+    "alternateheadwords",
+    "csl-apidev",
+    "csl-orig",
+    "hwnorm1"
+   ],
+   "repos": [
+    "AMAR",
+    "AP",
+    "AP90",
+    "ApteES",
+    "BEN",
+    "BOP",
+    "BUR",
+    "CAE",
+    "CCS",
+    "COLOGNE",
+    "CORRECTIONS",
+    "GRA",
+    "INM",
+    "KRM",
+    "MD",
+    "MWS",
+    "MWderivations",
+    "MWinflect",
+    "PWG",
+    "PWK",
+    "SKD",
+    "STC",
+    "VCP",
+    "alternateheadwords",
+    "csl-apidev",
+    "csl-corrections",
+    "csl-orig",
+    "csl-pywork",
+    "hwnorm1",
+    "mw-dev"
+   ]
+  },
+  "digentry.py": {
+   "copies": 193,
+   "versions": 5,
+   "cluster_sizes": [
+    183,
+    4,
+    4,
+    1,
+    1
+   ],
+   "baseline_copies": 170,
+   "baseline_versions": 5,
+   "canonical_prefix": "csl-pywork/",
+   "expected_vendored": true,
+   "no_canonical_on_disk": true,
+   "canonical_is_modal": null,
+   "canonical": 0,
+   "template_instance": 183,
+   "drifted": 10,
+   "drifted_paths": [
+    "BUR/burissues/issue3/digentry.py",
+    "MD/deva_iast_comp/step2/digentry.py",
+    "MD/deva_iast_comp/step2a/digentry.py",
+    "MD/deva_iast_comp/step2b/digentry.py",
+    "PWK/pwkvn/step0/meta/digentry.py",
+    "SKD/corrections/issue15/digentry.py",
+    "csl-orig/v02/gra/althws/digentry.py",
+    "csl-orig/v02/pw/althws/digentry.py",
+    "csl-orig/v02/pwkvn/althws/digentry.py",
+    "csl-orig/v02/pwkvn/update/digentry.py"
+   ],
+   "drifted_repos": [
+    "BUR",
+    "MD",
+    "PWK",
+    "SKD",
+    "csl-orig"
+   ],
+   "repos": [
+    "AP90",
+    "BEN",
+    "BHS",
+    "BOP",
+    "BUR",
+    "COLOGNE",
+    "GRA",
+    "MD",
+    "MWS",
+    "PWG",
+    "PWK",
+    "SCH",
+    "SKD",
+    "csl-corrections",
+    "csl-orig"
+   ]
+  },
+  "updateByLine.py": {
+   "copies": 144,
+   "versions": 9,
+   "cluster_sizes": [
+    75,
+    57,
+    3,
+    2,
+    2,
+    2,
+    1,
+    1,
+    1
+   ],
+   "baseline_copies": 84,
+   "baseline_versions": 5,
+   "canonical_prefix": "csl-pywork/",
+   "expected_vendored": true,
+   "no_canonical_on_disk": false,
+   "canonical_is_modal": false,
+   "canonical": 3,
+   "template_instance": 75,
+   "drifted": 66,
+   "drifted_paths": [
+    "AP/issues/issue10/updateByLine.py",
+    "AP/issues/issue3/updateByLine.py",
+    "AP/issues/issue5/updateByLine.py",
+    "AP90/markup/abls/updateByLine.py",
+    "AP90/markup/abls1/updateByLine.py",
+    "AP90/markup/hyphen_deva/updateByLine.py",
+    "AP90/markup/hyphen_eng/updateByLine.py",
+    "ApteES/issues/issue13/updateByLine.py",
+    "BEN/2021-10-02/updateByLine.py",
+    "BEN/abbrev/updateByLine.py",
+    "BEN/greek/updateByLine.py",
+    "BOP/greek/updateByLine.py",
+    "BUR/burissues/issue3/updateByLine.py",
+    "BUR/greek/updateByLine.py",
+    "COLOGNE/eascii/eachanges-degree/updateByLine.py",
+    "COLOGNE/enhancements/code/updateByLine.py",
+    "GRA/vn/gra-dev/pywork/updateByLine.py",
+    "INM/greek/updateByLine.py",
+    "MD/deva_iast_comp/step2/updateByLine.py",
+    "MD/deva_iast_comp/step2a/updateByLine.py",
+    "MD/deva_iast_comp/step2b/updateByLine.py",
+    "MWS/.claude/worktrees/loving-snyder-6be6f8/mwsissues/issue182/updateByLine.py",
+    "MWS/.claude/worktrees/loving-snyder-6be6f8/mwtranscode/revdoc/updateByLine.py",
+    "MWS/mwsissues/issue182/updateByLine.py",
+    "MWS/mwtranscode/revdoc/updateByLine.py",
+    "PWG/misc/greek/updateByLine.py",
+    "PWG/pwg_ls2/01/updateByLine.py",
+    "PWG/pwgissues/issue170/issue84pw/updateByLine.py",
+    "PWG/pwgissues/issue170/issue84pwg/updateByLine.py",
+    "PWG/pwgissues/issue67/updateByLine.py",
+    "PWG/pwgissues/issue71/updateByLine.py",
+    "PWG/pwgissues/issue74/updateByLine.py",
+    "PWG/pwgissues/issue77/updateByLine.py",
+    "PWG/pwgissues/issue81/updateByLine.py",
+    "PWG/pwgissues/issue87/lsmarkup/updateByLine.py",
+    "PWK/abbrev/updateByLine.py",
+    "PWK/pw_ls/pw_ls_AB/updateByLine.py",
+    "PWK/pwkissues/issue101/german/updateByLine.py",
+    "PWK/pwkissues/issue102/updateByLine.py",
+    "PWK/pwkissues/issue103/updateByLine.py",
+    "PWK/pwkissues/issue106/updateByLine.py",
+    "PWK/pwkissues/issue109/updateByLine.py",
+    "PWK/pwkissues/issue110/updateByLine.py",
+    "PWK/pwkissues/issue88/updateByLine.py",
+    "PWK/pwkvn/step0/updateByLine.py",
+    "PWK/pwkvn/step1/althws/updateByLine.py",
+    "PWK/vn-sch/step1/updateByLine.py",
+    "PWK/vn-sch/step3/updateByLine.py",
+    "SCH/greek/updateByLine.py",
+    "SCH/ls/updateByLine.py",
+    "SCH/schissues/issue10/updateByLine.py",
+    "SKD/corrections/issue15/updateByLine.py",
+    "VCP/vac-vcp-cmp1a/updateByLine.py",
+    "VCP/verbs01/updateByLine.py",
+    "alternateheadwords/data/VCP/updateByLine.py",
+    "csl-corrections/.claude/worktrees/exciting-jang-2d113e/app/correction_response/issue91/updateByLine.py",
+    "csl-corrections/.claude/worktrees/exciting-jang-2d113e/batch_20240623/updateByLine.py",
+    "csl-corrections/.claude/worktrees/exciting-jang-2d113e/batch_20250114/updateByLine.py",
+    "csl-corrections/app/correction_response/issue91/updateByLine.py",
+    "csl-corrections/batch_20240623/updateByLine.py",
+    "csl-corrections/batch_20250114/updateByLine.py",
+    "csl-orig/v02/gra/greek/updateByLine.py",
+    "csl-orig/v02/stc/abbrev/updateByLine.py",
+    "hwnorm2/keydoc/work/01-pwverbs/updateByLine.py",
+    "mw-dev/abcode/pywork/updateByLine.py",
+    "mw-dev/pywork/updateByLine.py"
+   ],
+   "drifted_repos": [
+    "AP",
+    "AP90",
+    "ApteES",
+    "BEN",
+    "BOP",
+    "BUR",
+    "COLOGNE",
+    "GRA",
+    "INM",
+    "MD",
+    "MWS",
+    "PWG",
+    "PWK",
+    "SCH",
+    "SKD",
+    "VCP",
+    "alternateheadwords",
+    "csl-corrections",
+    "csl-orig",
+    "hwnorm2",
+    "mw-dev"
+   ],
+   "repos": [
+    "AP",
+    "AP90",
+    "ApteES",
+    "BEN",
+    "BHS",
+    "BOP",
+    "BUR",
+    "COLOGNE",
+    "GRA",
+    "INM",
+    "MD",
+    "MWS",
+    "PWG",
+    "PWK",
+    "SCH",
+    "SKD",
+    "VCP",
+    "alternateheadwords",
+    "csl-corrections",
+    "csl-orig",
+    "csl-pywork",
+    "hwnorm2",
+    "mw-dev"
+   ]
+  },
+  "parseheadline.py": {
+   "copies": 75,
+   "versions": 6,
+   "cluster_sizes": [
+    67,
+    3,
+    2,
+    1,
+    1,
+    1
+   ],
+   "baseline_copies": 47,
+   "baseline_versions": 3,
+   "canonical_prefix": "csl-pywork/",
+   "expected_vendored": true,
+   "no_canonical_on_disk": false,
+   "canonical_is_modal": false,
+   "canonical": 3,
+   "template_instance": 67,
+   "drifted": 5,
+   "drifted_paths": [
+    "BEN/issues/issue28/parseheadline.py",
+    "cologne-stardict/parseheadline.py",
+    "hwnorm2/keydoc/distincthws/parseheadline.py",
+    "hwnorm2/keydoc/parseheadline.py",
+    "hwnorm2/keydoc/work/01-pwverbs/parseheadline.py"
+   ],
+   "drifted_repos": [
+    "BEN",
+    "cologne-stardict",
+    "hwnorm2"
+   ],
+   "repos": [
+    "AP",
+    "AP90",
+    "BEN",
+    "BUR",
+    "CAE",
+    "CCS",
+    "GRA",
+    "INM",
+    "KRM",
+    "LRV",
+    "MD",
+    "MWS",
+    "PWG",
+    "PWK",
+    "SKD",
+    "STC",
+    "VCP",
+    "cologne-stardict",
+    "csl-devanagari",
+    "csl-pywork",
+    "hwnorm2",
+    "mw-dev"
+   ]
+  },
+  "make_xml.py": {
+   "copies": 48,
+   "versions": 41,
+   "cluster_sizes": [
+    3,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "baseline_copies": 44,
+   "baseline_versions": 38,
+   "canonical_prefix": "csl-pywork/",
+   "expected_vendored": true,
+   "no_canonical_on_disk": false,
+   "canonical_is_modal": true,
+   "canonical": 38,
+   "template_instance": 0,
+   "drifted": 10,
+   "drifted_paths": [
+    "AP/issues/issue8b/make_xml.py",
+    "AP/issues/issue8c/make_xml.py",
+    "ApteES/issues/issue9/0a/make_xml.py",
+    "ApteES/issues/issue9/1/make_xml.py",
+    "GRA/issues/issue34/althws0/make_xml.py",
+    "GRA/issues/issue34/althws1/make_xml.py",
+    "GRA/vn/gra-dev/pywork/make_xml.py",
+    "VEI/make_xml.py",
+    "mw-dev/abcode/pywork/make_xml.py",
+    "mw-dev/pywork/make_xml.py"
+   ],
+   "drifted_repos": [
+    "AP",
+    "ApteES",
+    "GRA",
+    "VEI",
+    "mw-dev"
+   ],
+   "repos": [
+    "AP",
+    "ApteES",
+    "GRA",
+    "VEI",
+    "csl-pywork",
+    "mw-dev"
+   ]
+  },
+  "redo.sh": {
+   "copies": 204,
+   "versions": 174,
+   "cluster_sizes": [
+    4,
+    4,
+    3,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "baseline_copies": 101,
+   "baseline_versions": 97,
+   "canonical_prefix": "csl-pywork/",
+   "expected_vendored": true,
+   "no_canonical_on_disk": false,
+   "canonical_is_modal": false,
+   "canonical": 11,
+   "template_instance": 4,
+   "drifted": 189,
+   "drifted_paths": [
+    "AMAR/redo.sh",
+    "AP/issues/issue25/redo.sh",
+    "AP90/ap57_verbs01/redo.sh",
+    "AP90/markup/abls/redo.sh",
+    "AP90/markup/hyphen_deva/redo.sh",
+    "AP90/verbs01/redo.sh",
+    "BEN/abbrev/redo.sh",
+    "BEN/greek/transcode/redo.sh",
+    "BEN/issues/issue14/redo.sh",
+    "BEN/issues/issue15/redo.sh",
+    "BEN/issues/issue28/redo.sh",
+    "BEN/issues/issue5/redo.sh",
+    "BEN/verbs01/redo.sh",
+    "BHS/issues/issue1/redo.sh",
+    "BOP/greek/transcode/redo.sh",
+    "BUR/verbs01/conjdata/redo.sh",
+    "BUR/verbs01/redo.sh",
+    "CAE/verbs01/redo.sh",
+    "CCS/verbs01/redo.sh",
+    "COLOGNE/issues/issue438/redo.sh",
+    "COLOGNE/stardict/redo.sh",
+    "CORRECTIONS/dictionaries/BHS/verbs/redo.sh",
+    "CORRECTIONS/dictionaries/BUR/verbs/redo.sh",
+    "CORRECTIONS/dictionaries/IEG/foreignwords/redo.sh",
+    "CORRECTIONS/dictionaries/PD/issue-108/prep/redo.sh",
+    "GRA/graab/redo.sh",
+    "GRA/issues/issue34/althws/redo.sh",
+    "GRA/issues/issue34/althws0/redo.sh",
+    "GRA/verbs01/redo.sh",
+    "GRA/vn/gra-dev/pywork/graab/redo.sh",
+    "GRA/vn/gra-dev/pywork/sqlite/redo.sh",
+    "GRA/vn/gra-dev/pywork/webtc2/redo.sh",
+    "GRA/vn/gra-dev/redo.sh",
+    "IEG/issues/issue1/redo.sh",
+    "KRM/verbs01/redo.sh",
+    "LRV/scripts/redo.sh",
+    "MD/verbs01/redo.sh",
+    "MW72/20161107/redo.sh",
+    "MWS/.claude/worktrees/loving-snyder-6be6f8/mwabbreviations/work/redo.sh",
+    "MWS/.claude/worktrees/loving-snyder-6be6f8/mwverbs/redo.sh",
+    "MWS/.claude/worktrees/loving-snyder-6be6f8/verbs01/redo.sh",
+    "MWS/mwabbreviations/work/redo.sh",
+    "MWS/mwverbs/redo.sh",
+    "MWS/verbs01/redo.sh",
+    "MWderivations/step2/redo.sh",
+    "MWderivations/step3/redo.sh",
+    "MWderivations/step4/redo.sh",
+    "MWinflect/.claude/worktrees/nice-tesla-23d4e5/nominals/pysanskritv2/redo.sh",
+    "MWinflect/.claude/worktrees/nice-tesla-23d4e5/nominals/pysanskritv2/stems/redo.sh",
+    "MWinflect/.claude/worktrees/nice-tesla-23d4e5/nominals/pysanskritv2/tables/redo.sh",
+    "MWinflect/.claude/worktrees/nice-tesla-23d4e5/nominals/redo.sh",
+    "MWinflect/.claude/worktrees/nice-tesla-23d4e5/redo.sh",
+    "MWinflect/.claude/worktrees/nice-tesla-23d4e5/sqlite/redo.sh",
+    "MWinflect/.claude/worktrees/nice-tesla-23d4e5/verbs/pysanskritv2/bases/redo.sh",
+    "MWinflect/.claude/worktrees/nice-tesla-23d4e5/verbs/pysanskritv2/inputs/redo.sh",
+    "MWinflect/.claude/worktrees/nice-tesla-23d4e5/verbs/pysanskritv2/models/redo.sh",
+    "MWinflect/.claude/worktrees/nice-tesla-23d4e5/verbs/pysanskritv2/redo.sh",
+    "MWinflect/.claude/worktrees/nice-tesla-23d4e5/verbs/pysanskritv2/tables/redo.sh",
+    "MWinflect/.claude/worktrees/nice-tesla-23d4e5/verbs/redo.sh",
+    "MWinflect/nominals/pysanskritv2/redo.sh",
+    "MWinflect/nominals/pysanskritv2/stems/redo.sh",
+    "MWinflect/nominals/pysanskritv2/tables/redo.sh",
+    "MWinflect/nominals/redo.sh",
+    "MWinflect/redo.sh",
+    "MWinflect/sqlite/redo.sh",
+    "MWinflect/verbs/pysanskritv2/bases/redo.sh",
+    "MWinflect/verbs/pysanskritv2/inputs/redo.sh",
+    "MWinflect/verbs/pysanskritv2/models/redo.sh",
+    "MWinflect/verbs/pysanskritv2/redo.sh",
+    "MWinflect/verbs/pysanskritv2/tables/redo.sh",
+    "MWinflect/verbs/redo.sh",
+    "PWG/pwg_ls1/pwgauth/redo.sh",
+    "PWG/verbs01/redo.sh",
+    "PWG/verbs01a/redo.sh",
+    "PWK/pw_ls/pwbib/fuzzymatch1/redo.sh",
+    "PWK/pw_ls/pwbib/fuzzywork/redo.sh",
+    "PWK/pw_ls/pwbib/pwbib_new_work/redo.sh",
+    "PWK/pw_ls/pwbib/redo.sh",
+    "PWK/pwkissues/issue95/redo.sh",
+    "PWK/verbs01/redo.sh",
+    "PWK/vn-sch/step1/redo.sh",
+    "PWK/vn-sch/step2/redo.sh",
+    "PWK/vn-sch/step3/redo.sh",
+    "SHS/issues/issue1/redo.sh",
+    "SKD/verbs01/redo.sh",
+    "SKD/verbs01/vcp_skd/redo.sh",
+    "SKD/verbs01/vcp_skd1/redo.sh",
+    "STC/verbs01/redo.sh",
+    "VCP/abbrevprep/redo.sh",
+    "VCP/vac-vcp-cmp2/redo.sh",
+    "VCP/verbs01/redo.sh",
+    "alternateheadwords/data/PWGpreverb/redo.sh",
+    "alternateheadwords/data/PWpreverb/redo.sh",
+    "alternateheadwords/redo.sh",
+    "avlinks/redo.sh",
+    "cologne-stardict/redo.sh",
+    "csl-apidev/pwkvn/mergehw/redo.sh",
+    "csl-devanagari/scripts/redo.sh",
+    "csl-inflect/huetdata/redo.sh",
+    "csl-inflect/nominals/pysanskritv2/redo.sh",
+    "csl-inflect/nominals/pysanskritv2/stems/redo.sh",
+    "csl-inflect/nominals/pysanskritv2/tables/redo.sh",
+    "csl-inflect/nominals/redo.sh",
+    "csl-inflect/redo.sh",
+    "csl-inflect/sqlite/redo.sh",
+    "csl-inflect/verbs/pysanskritv2/bases/redo.sh",
+    "csl-inflect/verbs/pysanskritv2/inputs/redo.sh",
+    "csl-inflect/verbs/pysanskritv2/manual/aor/redo.sh",
+    "csl-inflect/verbs/pysanskritv2/manual/ben/redo.sh",
+    "csl-inflect/verbs/pysanskritv2/manual/conditional/redo.sh",
+    "csl-inflect/verbs/pysanskritv2/manual/fut/redo.sh",
+    "csl-inflect/verbs/pysanskritv2/manual/inj/redo.sh",
+    "csl-inflect/verbs/pysanskritv2/manual/pft/redo.sh",
+    "csl-inflect/verbs/pysanskritv2/manual/prf/redo.sh",
+    "csl-inflect/verbs/pysanskritv2/manual/prs/redo.sh",
+    "csl-inflect/verbs/pysanskritv2/manual/redo.sh",
+    "csl-inflect/verbs/pysanskritv2/models/redo.sh",
+    "csl-inflect/verbs/pysanskritv2/redo.sh",
+    "csl-inflect/verbs/pysanskritv2/tables/redo.sh",
+    "csl-inflect/verbs/redo.sh",
+    "csl-orig/v02/abch/prep/redo.sh",
+    "csl-orig/v02/gra/althws/redo.sh",
+    "csl-orig/v02/gra/greek/redo.sh",
+    "csl-orig/v02/pw/althws/redo.sh",
+    "csl-orig/v02/pwkvn/althws/redo.sh",
+    "csl-orig/v02/pwkvn/update/redo.sh",
+    "csl-orig/v02/stc/abbrev/redo.sh",
+    "csl-websanlexicon/v00/grav00/sqlite/redo.sh",
+    "csl-websanlexicon/v00/makotemplates/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/acc/00/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/ae/00/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/ap/00/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/ap90/00/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/ben/00/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/bhs/00/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/bop/00/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/bor/00/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/bur/00/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/cae/00/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/ccs/00/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/gra/00/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/gst/00/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/ieg/00/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/inm/00/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/krm/00/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/mci/00/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/md/00/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/mw/00/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/mw72/00/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/mwe/00/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/pd/00/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/pe/00/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/pgn/00/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/pui/00/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/pw/00/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/pwg/00/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/sch/00/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/shs/00/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/skd/00/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/snp/00/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/stc/00/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/vcp/00/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/vei/00/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/wil/00/sqlite/redo.sh",
+    "csl-websanlexicon/webbackup/yat/00/sqlite/redo.sh",
+    "hwnorm1/dhaval/redo.sh",
+    "hwnorm1/ejf/hwnorm1c/redo.sh",
+    "hwnorm1/ejf/hwnorm1c/whitelist/auxiliary/redo.sh",
+    "hwnorm1/ejf/hwnorm1c/whitelist/redo.sh",
+    "hwnorm1/ejf/ngram/redo.sh",
+    "hwnorm1/sanhw1/redo.sh",
+    "hwnorm2/keydoc/distincthws/redo.sh",
+    "hwnorm2/redo.sh",
+    "mw-dev/abcode/pywork/mwab/redo.sh",
+    "mw-dev/abcode/pywork/mwauth/redo.sh",
+    "mw-dev/abcode/pywork/mwkeys/redo.sh",
+    "mw-dev/abcode/pywork/sqlite/redo.sh",
+    "mw-dev/abcode/pywork/webtc2/redo.sh",
+    "mw-dev/abcode/pywork/westmwtab/redo.sh",
+    "mw-dev/abcode/pywork/whitmwtab/redo.sh",
+    "mw-dev/orig/mwtranscode/redo.sh",
+    "mw-dev/pywork/mwab/redo.sh",
+    "mw-dev/pywork/mwauth/redo.sh",
+    "mw-dev/pywork/mwkeys/redo.sh",
+    "mw-dev/pywork/sqlite/redo.sh",
+    "mw-dev/pywork/webtc2/redo.sh",
+    "mw-dev/pywork/westmwtab/redo.sh",
+    "mw-dev/pywork/whitmwtab/redo.sh",
+    "rvlinks/redo.sh"
+   ],
+   "drifted_repos": [
+    "AMAR",
+    "AP",
+    "AP90",
+    "BEN",
+    "BHS",
+    "BOP",
+    "BUR",
+    "CAE",
+    "CCS",
+    "COLOGNE",
+    "CORRECTIONS",
+    "GRA",
+    "IEG",
+    "KRM",
+    "LRV",
+    "MD",
+    "MW72",
+    "MWS",
+    "MWderivations",
+    "MWinflect",
+    "PWG",
+    "PWK",
+    "SHS",
+    "SKD",
+    "STC",
+    "VCP",
+    "alternateheadwords",
+    "avlinks",
+    "cologne-stardict",
+    "csl-apidev",
+    "csl-devanagari",
+    "csl-inflect",
+    "csl-orig",
+    "csl-websanlexicon",
+    "hwnorm1",
+    "hwnorm2",
+    "mw-dev",
+    "rvlinks"
+   ],
+   "repos": [
+    "AMAR",
+    "AP",
+    "AP90",
+    "BEN",
+    "BHS",
+    "BOP",
+    "BUR",
+    "CAE",
+    "CCS",
+    "COLOGNE",
+    "CORRECTIONS",
+    "GRA",
+    "IEG",
+    "KRM",
+    "LRV",
+    "MD",
+    "MW72",
+    "MWS",
+    "MWderivations",
+    "MWinflect",
+    "PWG",
+    "PWK",
+    "SHS",
+    "SKD",
+    "STC",
+    "VCP",
+    "alternateheadwords",
+    "avlinks",
+    "cologne-stardict",
+    "csl-apidev",
+    "csl-devanagari",
+    "csl-inflect",
+    "csl-orig",
+    "csl-pywork",
+    "csl-websanlexicon",
+    "hwnorm1",
+    "hwnorm2",
+    "mw-dev",
+    "rvlinks"
+   ]
+  },
+  "generate_dict.sh": {
+   "copies": 1,
+   "versions": 1,
+   "cluster_sizes": [
+    1
+   ],
+   "baseline_copies": null,
+   "baseline_versions": null,
+   "canonical_prefix": "csl-pywork/",
+   "expected_vendored": true,
+   "no_canonical_on_disk": false,
+   "canonical_is_modal": true,
+   "canonical": 1,
+   "template_instance": 0,
+   "drifted": 0,
+   "drifted_paths": [],
+   "drifted_repos": [],
+   "repos": [
+    "csl-pywork"
+   ]
+  },
+  "php endpoints": {
+   "copies": 101,
+   "versions": 72,
+   "cluster_sizes": [
+    13,
+    8,
+    5,
+    3,
+    2,
+    2,
+    2,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "baseline_copies": null,
+   "baseline_versions": null,
+   "canonical_prefix": "csl-websanlexicon/v02/makotemplates/",
+   "expected_vendored": true,
+   "no_canonical_on_disk": false,
+   "canonical_is_modal": false,
+   "canonical": 3,
+   "template_instance": 18,
+   "drifted": 80,
+   "drifted_paths": [
+    "GRA/vn/gra-dev/web/webtc/getword.php",
+    "GRA/vn/gra-dev/web/webtc/getwordClass.php",
+    "csl-apidev/api0/servepdf.php",
+    "csl-apidev/getword.php",
+    "csl-apidev/getwordClass.php",
+    "csl-apidev/servepdf.php",
+    "csl-kale/disp/serveimg.php",
+    "csl-kale/disp1/serveimg.php",
+    "csl-pywork/v02/tempparent/ap90/web/webtc/getword.php",
+    "csl-websanlexicon/v00/grav00/webtc/getword.php",
+    "csl-websanlexicon/v00/grav00/webtc/servepdf.php",
+    "csl-websanlexicon/v00/makotemplates/webtc/getword.php",
+    "csl-websanlexicon/v00/makotemplates/webtc/servepdf.php",
+    "csl-websanlexicon/webbackup/acc/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/acc/00/webtc/servepdf.php",
+    "csl-websanlexicon/webbackup/ae/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/ap/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/ap/00/webtc/servepdf.php",
+    "csl-websanlexicon/webbackup/ap90/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/ap90/00/webtc/servepdf.php",
+    "csl-websanlexicon/webbackup/ben/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/ben/00/webtc/servepdf.php",
+    "csl-websanlexicon/webbackup/bhs/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/bop/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/bor/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/bur/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/bur/00/webtc/servepdf.php",
+    "csl-websanlexicon/webbackup/bur/00/webtc1/serveimg.php",
+    "csl-websanlexicon/webbackup/cae/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/cae/00/webtc/servepdf.php",
+    "csl-websanlexicon/webbackup/ccs/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/ccs/00/webtc/servepdf.php",
+    "csl-websanlexicon/webbackup/gra/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/gra/00/webtc/servepdf.php",
+    "csl-websanlexicon/webbackup/gst/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/ieg/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/ieg/00/webtc/servepdf.php",
+    "csl-websanlexicon/webbackup/inm/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/inm/00/webtc/servepdf.php",
+    "csl-websanlexicon/webbackup/krm/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/mci/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/md/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/md/00/webtc/servepdf.php",
+    "csl-websanlexicon/webbackup/mw/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/mw/00/webtc/servepdf.php",
+    "csl-websanlexicon/webbackup/mw72/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/mwe/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/mwe/00/webtc/servepdf.php",
+    "csl-websanlexicon/webbackup/pd/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/pe/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/pgn/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/pgn/00/webtc/servepdf.php",
+    "csl-websanlexicon/webbackup/pui/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/pw/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/pw/00/webtc/servepdf.php",
+    "csl-websanlexicon/webbackup/pwg/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/pwg/00/webtc/servepdf.php",
+    "csl-websanlexicon/webbackup/sch/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/sch/00/webtc/servepdf.php",
+    "csl-websanlexicon/webbackup/shs/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/shs/00/webtc/servepdf.php",
+    "csl-websanlexicon/webbackup/skd/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/skd/00/webtc/servepdf.php",
+    "csl-websanlexicon/webbackup/snp/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/stc/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/stc/00/webtc/servepdf.php",
+    "csl-websanlexicon/webbackup/stc/00/webtc1/serveimg.php",
+    "csl-websanlexicon/webbackup/vcp/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/vcp/00/webtc/servepdf.php",
+    "csl-websanlexicon/webbackup/vei/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/wil/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/wil/00/webtc/servepdf.php",
+    "csl-websanlexicon/webbackup/yat/00/webtc/getword.php",
+    "csl-websanlexicon/webbackup/yat/00/webtc/servepdf.php",
+    "csl-westergaard/disp/serveimg.php",
+    "csl-whitroot/disp/serveimg.php",
+    "mw-dev/abcode/web/webtc/getword.php",
+    "mw-dev/abcode/web/webtc/getwordClass.php",
+    "mw-dev/web/webtc/getword.php",
+    "mw-dev/web/webtc/getwordClass.php"
+   ],
+   "drifted_repos": [
+    "GRA",
+    "csl-apidev",
+    "csl-kale",
+    "csl-pywork",
+    "csl-websanlexicon",
+    "csl-westergaard",
+    "csl-whitroot",
+    "mw-dev"
+   ],
+   "repos": [
+    "GRA",
+    "csl-apidev",
+    "csl-kale",
+    "csl-pywork",
+    "csl-websanlexicon",
+    "csl-westergaard",
+    "csl-whitroot",
+    "mw-dev"
+   ]
+  },
+  "levenshtein.py": {
+   "copies": 12,
+   "versions": 4,
+   "cluster_sizes": [
+    6,
+    4,
+    1,
+    1
+   ],
+   "baseline_copies": 6,
+   "baseline_versions": null,
+   "canonical_prefix": null,
+   "expected_vendored": false,
+   "no_canonical_on_disk": false,
+   "canonical_is_modal": null,
+   "canonical": 0,
+   "template_instance": 6,
+   "drifted": 6,
+   "drifted_paths": [
+    "VCP/vac-vcp-cmp1/levenshtein.py",
+    "VCP/vac-vcp-cmp1a/levenshtein.py",
+    "VCP/vcpte-vac/levenshtein.py",
+    "VCP/vcpte-vcp-cmp/levenshtein.py",
+    "Wil-YAT/levenshtein.py",
+    "alternateheadwords/scripts/levenshtein.py"
+   ],
+   "drifted_repos": [
+    "VCP",
+    "Wil-YAT",
+    "alternateheadwords"
+   ],
+   "repos": [
+    "COLOGNE",
+    "PWG",
+    "PWK",
+    "VCP",
+    "Wil-YAT",
+    "alternateheadwords"
+   ]
+  },
+  "util_mw.py": {
+   "copies": 11,
+   "versions": 2,
+   "cluster_sizes": [
+    7,
+    4
+   ],
+   "baseline_copies": 7,
+   "baseline_versions": null,
+   "canonical_prefix": null,
+   "expected_vendored": false,
+   "no_canonical_on_disk": false,
+   "canonical_is_modal": null,
+   "canonical": 0,
+   "template_instance": 7,
+   "drifted": 4,
+   "drifted_paths": [
+    "AP90/ap57_verbs01/util_mw.py",
+    "AP90/verbs01/util_mw.py",
+    "BUR/verbs01/util_mw.py",
+    "STC/verbs01/util_mw.py"
+   ],
+   "drifted_repos": [
+    "AP90",
+    "BUR",
+    "STC"
+   ],
+   "repos": [
+    "AP90",
+    "BEN",
+    "BUR",
+    "CAE",
+    "CCS",
+    "GRA",
+    "MD",
+    "PWG",
+    "PWK",
+    "STC"
+   ]
+  },
+  "util_dump_lines.py": {
+   "copies": 11,
+   "versions": 5,
+   "cluster_sizes": [
+    5,
+    3,
+    1,
+    1,
+    1
+   ],
+   "baseline_copies": 7,
+   "baseline_versions": null,
+   "canonical_prefix": null,
+   "expected_vendored": false,
+   "no_canonical_on_disk": false,
+   "canonical_is_modal": null,
+   "canonical": 0,
+   "template_instance": 5,
+   "drifted": 6,
+   "drifted_paths": [
+    "AP90/ap57_verbs01/util_dump_lines.py",
+    "AP90/verbs01/util_dump_lines.py",
+    "BUR/verbs01/util_dump_lines.py",
+    "PWG/verbs01a/util_dump_lines.py",
+    "PWK/verbs01/util_dump_lines.py",
+    "STC/verbs01/util_dump_lines.py"
+   ],
+   "drifted_repos": [
+    "AP90",
+    "BUR",
+    "PWG",
+    "PWK",
+    "STC"
+   ],
+   "repos": [
+    "AP90",
+    "BEN",
+    "BUR",
+    "CAE",
+    "CCS",
+    "GRA",
+    "MD",
+    "PWG",
+    "PWK",
+    "STC"
+   ]
+  },
+  "unixify.py": {
+   "copies": 5,
+   "versions": 2,
+   "cluster_sizes": [
+    3,
+    2
+   ],
+   "baseline_copies": 2,
+   "baseline_versions": null,
+   "canonical_prefix": null,
+   "expected_vendored": false,
+   "no_canonical_on_disk": false,
+   "canonical_is_modal": null,
+   "canonical": 0,
+   "template_instance": 3,
+   "drifted": 2,
+   "drifted_paths": [
+    "PWK/pwkvn/step0/german/thomas/unixify.py",
+    "avlinks/unixify.py"
+   ],
+   "drifted_repos": [
+    "PWK",
+    "avlinks"
+   ],
+   "repos": [
+    "AP",
+    "FRI",
+    "PWG",
+    "PWK",
+    "avlinks"
+   ]
+  },
+  "compare.py": {
+   "copies": 11,
+   "versions": 8,
+   "cluster_sizes": [
+    2,
+    2,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "baseline_copies": 3,
+   "baseline_versions": null,
+   "canonical_prefix": null,
+   "expected_vendored": false,
+   "no_canonical_on_disk": false,
+   "canonical_is_modal": null,
+   "canonical": 0,
+   "template_instance": 2,
+   "drifted": 9,
+   "drifted_paths": [
+    "GRA/vn/compare.py",
+    "MWS/.claude/worktrees/loving-snyder-6be6f8/mwabbreviations/work/compare.py",
+    "MWS/mwabbreviations/work/compare.py",
+    "PWK/pwkvn/step0/lsprep3/compare.py",
+    "PWK/pwkvn/step0/lsprep4/compare.py",
+    "SamudraManthanam/.claude/worktrees/intelligent-nightingale-117af2/web/app/routers/compare.py",
+    "SamudraManthanam/.claude/worktrees/vigilant-swirles-07eb86/web/app/routers/compare.py",
+    "SamudraManthanam/web/app/routers/compare.py",
+    "csl-apidev/css/csswork/compare.py"
+   ],
+   "drifted_repos": [
+    "GRA",
+    "MWS",
+    "PWK",
+    "SamudraManthanam",
+    "csl-apidev"
+   ],
+   "repos": [
+    "GRA",
+    "MWS",
+    "PWK",
+    "SamudraManthanam",
+    "alternateheadwords",
+    "csl-apidev"
+   ]
+  }
+ },
+ "top_duplicated_basenames": [
+  {
+   "basename": "redo.sh",
+   "copies": 204,
+   "versions": 174,
+   "repos": 39
+  },
+  {
+   "basename": "digentry.py",
+   "copies": 193,
+   "versions": 5,
+   "repos": 15
+  },
+  {
+   "basename": "index.php",
+   "copies": 187,
+   "versions": 175,
+   "repos": 13
+  },
+  {
+   "basename": "diff_to_changes_dict.py",
+   "copies": 182,
+   "versions": 3,
+   "repos": 17
+  },
+  {
+   "basename": "updateByLine.py",
+   "copies": 144,
+   "versions": 9,
+   "repos": 23
+  },
+  {
+   "basename": "__init__.py",
+   "copies": 123,
+   "versions": 56,
+   "repos": 11
+  },
+  {
+   "basename": "transcoder.py",
+   "copies": 83,
+   "versions": 9,
+   "repos": 30
+  },
+  {
+   "basename": "parseheadline.py",
+   "copies": 75,
+   "versions": 6,
+   "repos": 22
+  },
+  {
+   "basename": "transcoder.php",
+   "copies": 50,
+   "versions": 9,
+   "repos": 9
+  },
+  {
+   "basename": "make_xml.py",
+   "copies": 48,
+   "versions": 41,
+   "repos": 6
+  },
+  {
+   "basename": "servepdf.php",
+   "copies": 45,
+   "versions": 22,
+   "repos": 5
+  },
+  {
+   "basename": "getword.php",
+   "copies": 44,
+   "versions": 42,
+   "repos": 5
+  },
+  {
+   "basename": "listhier.php",
+   "copies": 44,
+   "versions": 39,
+   "repos": 5
+  },
+  {
+   "basename": "query.php",
+   "copies": 43,
+   "versions": 24,
+   "repos": 4
+  },
+  {
+   "basename": "indexcaller.php",
+   "copies": 43,
+   "versions": 42,
+   "repos": 4
+  },
+  {
+   "basename": "disphier.php",
+   "copies": 41,
+   "versions": 37,
+   "repos": 4
+  },
+  {
+   "basename": "diff_to_changes.py",
+   "copies": 25,
+   "versions": 2,
+   "repos": 8
+  },
+  {
+   "basename": "build_combined.py",
+   "copies": 24,
+   "versions": 23,
+   "repos": 23
+  },
+  {
+   "basename": "lsextract_all.py",
+   "copies": 20,
+   "versions": 12,
+   "repos": 5
+  },
+  {
+   "basename": "make_change.py",
+   "copies": 20,
+   "versions": 13,
+   "repos": 5
+  },
+  {
+   "basename": "08_markup_fix.py",
+   "copies": 19,
+   "versions": 18,
+   "repos": 18
+  },
+  {
+   "basename": "test_markup_fix.py",
+   "copies": 18,
+   "versions": 17,
+   "repos": 17
+  },
+  {
+   "basename": "preverb1.py",
+   "copies": 17,
+   "versions": 16,
+   "repos": 14
+  },
+  {
+   "basename": "prep1.py",
+   "copies": 15,
+   "versions": 11,
+   "repos": 8
+  },
+  {
+   "basename": "dbgprint.php",
+   "copies": 13,
+   "versions": 2,
+   "repos": 7
+  },
+  {
+   "basename": "levenshtein.py",
+   "copies": 12,
+   "versions": 4,
+   "repos": 6
+  },
+  {
+   "basename": "scharfsandhi.py",
+   "copies": 12,
+   "versions": 6,
+   "repos": 5
+  },
+  {
+   "basename": "mwverb.py",
+   "copies": 12,
+   "versions": 2,
+   "repos": 11
+  },
+  {
+   "basename": "mwverbs1.py",
+   "copies": 12,
+   "versions": 3,
+   "repos": 11
+  },
+  {
+   "basename": "utils.py",
+   "copies": 12,
+   "versions": 12,
+   "repos": 5
+  },
+  {
+   "basename": "dal.php",
+   "copies": 12,
+   "versions": 8,
+   "repos": 7
+  },
+  {
+   "basename": "compare.py",
+   "copies": 11,
+   "versions": 8,
+   "repos": 6
+  },
+  {
+   "basename": "basicadjust.php",
+   "copies": 11,
+   "versions": 6,
+   "repos": 6
+  },
+  {
+   "basename": "util_dump_lines.py",
+   "copies": 11,
+   "versions": 5,
+   "repos": 10
+  },
+  {
+   "basename": "util_mw.py",
+   "copies": 11,
+   "versions": 2,
+   "repos": 10
+  },
+  {
+   "basename": "validate.py",
+   "copies": 11,
+   "versions": 6,
+   "repos": 4
+  },
+  {
+   "basename": "check_ea1.py",
+   "copies": 10,
+   "versions": 2,
+   "repos": 6
+  },
+  {
+   "basename": "extract.py",
+   "copies": 10,
+   "versions": 5,
+   "repos": 4
+  },
+  {
+   "basename": "dictinfowhich.php",
+   "copies": 10,
+   "versions": 2,
+   "repos": 5
+  },
+  {
+   "basename": "step2.py",
+   "copies": 9,
+   "versions": 9,
+   "repos": 5
+  }
+ ],
+ "sanskrit_util_sites": [
+  {
+   "path": "WhitneyRoots/scripts/sanskrit_util.py",
+   "note": "Python donor",
+   "status": "delegates"
+  },
+  {
+   "path": "WhitneyRoots/reader/reader.js",
+   "note": "inline deva2iast/norm",
+   "status": "hand-rolled (mentions only)"
+  },
+  {
+   "path": "WhitneyRoots/src/utils/linguistics.js",
+   "note": "normalizeSanskrit",
+   "status": "hand-rolled"
+  },
+  {
+   "path": "BookIndex/src/utils/linguistics.js",
+   "note": "census false positive (Russian-only)",
+   "status": "hand-rolled"
+  },
+  {
+   "path": "csl-atlas/src/lib/lookup-normalize.js",
+   "note": "JS normalizer",
+   "status": "delegates"
+  },
+  {
+   "path": "csl-atlas/scripts/lib/dict-normalize.mjs",
+   "note": "stays local by design",
+   "status": "delegates"
+  },
+  {
+   "path": "GRA/vn/gra-dev/web/webtc1/transcoderjs/transcoder3.js",
+   "note": "JS FSM transcoder",
+   "status": "hand-rolled"
+  },
+  {
+   "path": "SanskritSpellCheck/detectors/slp1util.py",
+   "note": "SLP1 alphabet/confusion",
+   "status": "delegates"
+  },
+  {
+   "path": "SamudraManthanam/web/app/services/morph_service.py",
+   "note": "Dockerized runtime",
+   "status": "hand-rolled"
+  },
+  {
+   "path": "SamudraManthanam/web/app/services/slug.py",
+   "note": "Cyrillic->Latin, out of scope",
+   "status": "hand-rolled"
+  },
+  {
+   "path": "SamudraManthanam/web/corpus_builder/html_to_canonical.py",
+   "note": "own translit",
+   "status": "hand-rolled"
+  },
+  {
+   "path": "RussianRamayana/web/transliterate_filenames.py",
+   "note": "own translit",
+   "status": "hand-rolled"
+  },
+  {
+   "path": "VCP/meld_regex/convert_transliteration.py",
+   "note": "own translit",
+   "status": "hand-rolled"
+  },
+  {
+   "path": "csl-observatory/scripts/obs_t_translit_check.py",
+   "note": "own translit",
+   "status": "hand-rolled"
+  },
+  {
+   "path": "RWS-plugin/src/ruwritingstyles/translit_lint.py",
+   "note": "own translit",
+   "status": "missing"
+  },
+  {
+   "path": "ApteES/ae_saninvert/hwnorm1/hwnorm1.py",
+   "note": "headword normalizer",
+   "status": "hand-rolled"
+  },
+  {
+   "path": "CORRECTIONS/dictionaries/PD/issue-108/prep/hwchk_iast.py",
+   "note": "headword check",
+   "status": "hand-rolled"
+  },
+  {
+   "path": "csl-apidev/simple-search/wf0/word_frequency_norm.py",
+   "note": "key normalizer",
+   "status": "hand-rolled"
+  },
+  {
+   "path": "IndologyScholars/keyword_filtering.py",
+   "note": "key normalizer",
+   "status": "hand-rolled"
+  }
+ ],
+ "sanskrit_util_vendored": [
+  {
+   "path": "csl-apidev/app/vendor/sanskrit-util.global.js",
+   "present": true
+  },
+  {
+   "path": "csl-guides/src/vendor/sanskrit-util.js",
+   "present": true
+  },
+  {
+   "path": "csl-atlas/src/lib/sanskrit-util.js",
+   "present": true
+  },
+  {
+   "path": "SanskritSpellCheck/detectors/sanskrit_util.py",
+   "present": true
+  },
+  {
+   "path": "WhitneyRoots/scripts/sanskrit_util.py",
+   "present": true
+  }
+ ]
+}
