@@ -314,6 +314,18 @@ CATALOG: dict[str, Entry] = {
         "Repository inventory with description, language, size, dates, branch, license, and archive state.",
         "Snapshot excludes external facts not exposed by GitHub repository metadata.",
     ),
+    "stats_census_register.csv": Entry(
+        "stats-census",
+        "hand-curated (H817 WS1.3)",
+        "Org-wide statistics census register (H817/ROADMAP_STATISTICS_ORG_CENSUS): "
+        "one row per Part-0 headline statistic across the 7 data layers (lexicon "
+        "text, morphology, corpus, translation, roots, repo-meta, product), each "
+        "with its computed value, done/partial/not_started status, owning repo, "
+        "and source link.",
+        "Values are aggregated from ~15 sibling repos, not computed in this repo; "
+        "re-verify against the linked source before citing a specific count. "
+        "as_of_date is per-row, not a single snapshot date.",
+    ),
     "taxonomy_adoption.csv": Entry(
         "issue taxonomy",
         "scripts/taxonomy_adoption.py",

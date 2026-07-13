@@ -1,0 +1,60 @@
+layer,layer_name,statistic,value_display,value_numeric,status,source_repo,source_url,as_of_date
+L1,Lexicon text,Dictionaries digitized,44,44,done,SanskritLexicography,https://github.com/gasyoun/SanskritLexicography/blob/master/FEATURES_INDEX.md,2026-07-12
+L1,Lexicon text,Union headwords (15-dict),323425,323425,done,SanskritLexicography,https://github.com/gasyoun/SanskritLexicography/blob/master/HeadwordLists/union/union_headwords.tsv,2026-07-12
+L1,Lexicon text,Pairwise overlap matrix + Jaccard,105 pairs,105,done,SanskritLexicography,https://github.com/gasyoun/SanskritLexicography/blob/master/data/headword_overlap_matrix.tsv,2026-07-12
+L1,Lexicon text,Markup-tag frequency census,96 tags / 17.5M hits,17500000,done,SanskritLexicography,https://github.com/gasyoun/SanskritLexicography/blob/master/data/markup_tag_census.tsv,2026-07-12
+L1,Lexicon text,<ls> citation-frequency graph,828505 citations -> 912 texts,828505,done,csl-atlas,https://github.com/sanskrit-lexicon/csl-atlas/tree/main/data/citations,2026-07-12
+L1,Lexicon text,Correction-event log,52498 events / 43 dicts / 210 correctors,52498,done,csl-observatory,https://github.com/sanskrit-lexicon/csl-observatory,2026-07-12
+L1,Lexicon text,n-gram membership oracle,6656616 n-grams,6656616,done,CORRECTIONS,https://github.com/sanskrit-lexicon/CORRECTIONS/tree/master/ngram,2026-07-12
+L1,Lexicon text,Sense-count / polysemy distribution per dict,11/44 dicts (rest structurally blocked),11,partial,SanskritLexicography,https://github.com/gasyoun/Uprava/blob/main/handoffs/H817-Sonnet_SanskritLexicography_stats-roadmap-q1-census-dashboard_12.07.26.md,2026-07-13
+L1,Lexicon text,Diachronic first-attestation (which dict coins a headword),partial - A40 growth curve only,,partial,SanskritLexicography,https://github.com/gasyoun/Uprava/blob/main/ARTICLES.md,2026-07-12
+L1,Lexicon text,Definition typology (synonym vs equivalent vs encyclopedic),not started,,not_started,SanskritLexicography,https://github.com/gasyoun/SanskritLexicography/blob/master/ROADMAP_STATISTICS_ORG_CENSUS_2026_2027.md,2026-07-12
+L1,Lexicon text,Per-dict editorial fingerprint (citation x markup x error),not started,,not_started,SanskritLexicography,https://github.com/gasyoun/SanskritLexicography/blob/master/ROADMAP_STATISTICS_ORG_CENSUS_2026_2027.md,2026-07-12
+L2,Morphology & forms,kosha.db entries,444773,444773,done,kosha,https://github.com/gasyoun/kosha/blob/main/docs/KOSHA_DB_COMPLETENESS_AUDIT.md,2026-07-12
+L2,Morphology & forms,kosha.db senses,692403,692403,done,kosha,https://github.com/gasyoun/kosha/blob/main/docs/KOSHA_DB_COMPLETENESS_AUDIT.md,2026-07-12
+L2,Morphology & forms,kosha.db forms,1378401,1378401,done,kosha,https://github.com/gasyoun/kosha/blob/main/docs/KOSHA_DB_COMPLETENESS_AUDIT.md,2026-07-12
+L2,Morphology & forms,kosha.db inflections,6916522,6916522,done,kosha,https://github.com/gasyoun/kosha/blob/main/docs/KOSHA_DB_COMPLETENESS_AUDIT.md,2026-07-12
+L2,Morphology & forms,DCS lemmas,180176,180176,done,SanskritRussian,https://github.com/gasyoun/SanskritRussian,2026-07-12
+L2,Morphology & forms,DCS form->lemma rows,408000,408000,done,SanskritRussian,https://github.com/gasyoun/SanskritRussian,2026-07-12
+L2,Morphology & forms,Heritage form oracle (DICO lemmas),24500,24500,done,SanskritLexicography,https://github.com/gasyoun/SanskritLexicography/tree/master/HeadwordLists,2026-07-12
+L2,Morphology & forms,vidyut FST fallback forms,28500,28500,done,SanskritRussian,https://github.com/gasyoun/SanskritRussian,2026-07-12
+L2,Morphology & forms,Paradigm-cell coverage (which cells attested per root),quantified org-wide (H817 WS1.2),,partial,VisualDCS,https://github.com/gasyoun/VisualDCS,2026-07-13
+L2,Morphology & forms,Form->lemma ambiguity rate,not started,,not_started,SanskritLexicography,https://github.com/gasyoun/SanskritLexicography/blob/master/ROADMAP_STATISTICS_ORG_CENSUS_2026_2027.md,2026-07-12
+L3,Corpus & usage,DCS full corpus tokens,5688416,5688416,done,VisualDCS,https://github.com/gasyoun/VisualDCS,2026-07-12
+L3,Corpus & usage,DCS full corpus sentences,754726,754726,done,VisualDCS,https://github.com/gasyoun/VisualDCS,2026-07-12
+L3,Corpus & usage,DCS full corpus MWT,1024841,1024841,done,VisualDCS,https://github.com/gasyoun/VisualDCS,2026-07-12
+L3,Corpus & usage,DCS full corpus texts,270,270,done,VisualDCS,https://github.com/gasyoun/VisualDCS,2026-07-12
+L3,Corpus & usage,SamudraManthanam Sa<->Ru corpus lines,580552,580552,done,SamudraManthanam,https://github.com/gasyoun/SamudraManthanam,2026-07-12
+L3,Corpus & usage,SamudraManthanam sources,152,152,done,SamudraManthanam,https://github.com/gasyoun/SamudraManthanam,2026-07-12
+L3,Corpus & usage,Stop-word parallels,40573260,40573260,done,VisualDCS,https://github.com/gasyoun/VisualDCS/blob/main/src/DCS-data-2026/reports/m9_archive_ingest.md,2026-07-12
+L3,Corpus & usage,Frequency layer lemmas (per-period vectors),83277,83277,done,kosha,https://github.com/gasyoun/kosha/blob/main/data/frequency/lemma_frequency.tsv,2026-07-12
+L3,Corpus & usage,2021->2026 corpus delta,report shipped,,done,VisualDCS,https://github.com/gasyoun/VisualDCS/blob/main/derived-data/Corpus-Delta-2021-2026/REPORT.md,2026-07-12
+L3,Corpus & usage,POS distribution per text,closed (H817 WS1.2),,partial,SanskritLexicography,https://github.com/gasyoun/Uprava/blob/main/handoffs/H817-Sonnet_SanskritLexicography_stats-roadmap-q1-census-dashboard_12.07.26.md,2026-07-13
+L3,Corpus & usage,Lemma/root frequency bands per text,whole-corpus only (E26),,partial,kosha,https://github.com/gasyoun/kosha/blob/main/data/frequency/lemma_frequency.tsv,2026-07-12
+L3,Corpus & usage,Meter / prosody statistics,not started,,not_started,SanskritKaraoke,https://github.com/gasyoun/SanskritKaraoke,2026-07-12
+L3,Corpus & usage,Vedic accent coverage,not started - VedaWeb reuse pending,,not_started,VedaWeb,https://github.com/gasyoun/SanskritLexicography/blob/master/ROADMAP_STATISTICS_ORG_CENSUS_2026_2027.md,2026-07-12
+L4,Translation,corpus_lexicon Sa->Ru alignment rows,1093391,1093391,done,SanskritLexicography,https://github.com/gasyoun/SanskritLexicography/tree/master/RussianTranslation/src,2026-07-12
+L4,Translation,3-layer glossary entries,233000,233000,done,SanskritRussian,https://github.com/gasyoun/SanskritRussian,2026-07-12
+L4,Translation,3-layer glossary coverage %,87,87,done,SanskritRussian,https://github.com/gasyoun/SanskritRussian,2026-07-12
+L4,Translation,RU-gloss gap-list keys,242726,242726,done,SanskritLexicography,https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/glossary/README.md,2026-07-12
+L4,Translation,mw_ru cards,287358,287358,done,SanskritLexicography,https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/mw_ru.md,2026-07-12
+L4,Translation,Per-dict RU coverage %,GRA 76.8% ... SKD 16.5%,76.8,done,SanskritLexicography,https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/glossary/README.md,2026-07-12
+L4,Translation,Coverage trajectory over time (translation velocity),not started,,not_started,SanskritLexicography,https://github.com/gasyoun/SanskritLexicography/blob/master/ROADMAP_STATISTICS_ORG_CENSUS_2026_2027.md,2026-07-12
+L4,Translation,QA-judge inter-rater agreement (kappa),design exists; kappa not reported,,partial,SanskritLexicography,https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/LANG_PARITY.md,2026-07-12
+L5,Roots & etymology,MW verbal-root inventory,2113,2113,done,csl-orig,https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/mw/mw_roots.tsv,2026-07-12
+L5,Roots & etymology,Etymology derivation tables (dicts covered),10 dicts / ~9-11k rows each,10,done,csl-orig,https://github.com/sanskrit-lexicon/csl-orig/tree/main/v02,2026-07-12
+L5,Roots & etymology,Root-oracle agreement matrix,41-pair 95% CI,41,done,csl-orig,https://github.com/sanskrit-lexicon/csl-orig/tree/main/v02,2026-07-12
+L5,Roots & etymology,Whitney x DCS root audit,935-root hub audited,935,done,WhitneyRoots,https://github.com/gasyoun/WhitneyRoots,2026-07-12
+L5,Roots & etymology,Corpus root-class verdicts,capped - unaccented DCS can't split class I/VI,,done,WhitneyRoots,https://github.com/gasyoun/WhitneyRoots,2026-07-12
+L5,Roots & etymology,Affix entropy / frequency,computed,,done,csl-orig,https://github.com/sanskrit-lexicon/csl-orig/tree/main/v02,2026-07-12
+L6,Repo-meta & process,Correction typology,empirical error taxonomy,,done,csl-observatory,https://github.com/sanskrit-lexicon/csl-observatory,2026-07-12
+L6,Repo-meta & process,Bus-factor census (bus-factor-1 repos),65 of 76,65,done,csl-observatory,https://github.com/sanskrit-lexicon/csl-observatory,2026-07-12
+L6,Repo-meta & process,Data footprint,27.5 GB / 1343 large files / 70% local-only,27500,done,Uprava,https://github.com/gasyoun/Uprava/blob/main/DATA_LAYERS_CENSUS.md,2026-07-12
+L6,Repo-meta & process,Code-duplication census (transcoder x62 digentry x170),closed - re-run confirms baseline (H688),,done,csl-observatory,https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports,2026-07-13
+L6,Repo-meta & process,Publication-pipeline health (readiness/handoff aging),dashboard exists not time-series,,partial,Uprava,https://github.com/gasyoun/Uprava/blob/main/ARTICLES.md,2026-07-12
+L6,Repo-meta & process,LOC & language mix per repo,closed - already computed pre-roadmap (H688),,done,csl-observatory,https://github.com/sanskrit-lexicon/csl-observatory,2026-07-13
+L7,Product & funnel,ORS-FAQ Telegram export messages,170017,170017,done,ORS-FAQ,https://github.com/gasyoun/ORS-FAQ/blob/main/docs/telegram_export_result_json_provenance.md,2026-07-12
+L7,Product & funnel,telegram-sanskrit-corpus grade stats,tooling ready data 0 - no harvest run,0,partial,telegram-sanskrit-corpus,https://github.com/gasyoun/telegram-sanskrit-corpus/blob/main/docs/CORPUS_STATS.md,2026-07-12
+L7,Product & funnel,Systema LMS enrollment / funnel,not started - gated on host DB creds,,not_started,Systema-Sanscriticum,https://github.com/gasyoun/SanskritLexicography/blob/master/ROADMAP_STATISTICS_ORG_CENSUS_2026_2027.md,2026-07-12
+L7,Product & funnel,samskrte.ru marketing funnel,not started,,not_started,SanskritLexicography,https://github.com/gasyoun/SanskritLexicography/blob/master/ROADMAP_STATISTICS_ORG_CENSUS_2026_2027.md,2026-07-12
+L7,Product & funnel,Course engagement / retention,not started,,not_started,SanskritLexicography,https://github.com/gasyoun/SanskritLexicography/blob/master/ROADMAP_STATISTICS_ORG_CENSUS_2026_2027.md,2026-07-12

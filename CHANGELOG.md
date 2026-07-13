@@ -4,6 +4,15 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+### Added
+- **Statistics census dashboard skeleton (H817 WS1.3)** — 6 new Observable
+  pages (`census-overview`, `census-l1-lexicon` … `census-l5-roots`) seeding
+  the org-wide [statistics census roadmap](https://github.com/gasyoun/SanskritLexicography/blob/master/ROADMAP_STATISTICS_ORG_CENSUS_2026_2027.md)'s
+  Part-0 register (~60 headline statistics across 7 data layers, done/partial/
+  not-started status) with a house trust block, log-scale magnitude charts,
+  status breakdown, filterable full-register table, and CSV download. New
+  feed: `observatory/site/src/data/stats_census_register.csv`.
+
 ## [1.1.1] - 2026-07-03
 
 ## [1.1.0] - 2026-06-27
