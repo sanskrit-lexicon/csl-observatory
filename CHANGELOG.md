@@ -4,6 +4,8 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-07-14
+
 ### Added
 - **H817 WS1.2 — 3 new statistics census artifacts**: `scripts/pos_distribution_per_text.py`
   (UD-POS frequency per DCS text, all 270 texts) + `reports/pos_distribution_per_text.md`;
@@ -22,8 +24,96 @@ All notable changes to this repository are documented here, following [Keep a Ch
   not-started status) with a house trust block, log-scale magnitude charts,
   status breakdown, filterable full-register table, and CSV download. New
   feed: `observatory/site/src/data/stats_census_register.csv`.
+- **H787 — per-family verdict table for the 5 census-flagged pipeline template
+  families** (follow-up to H688): diffs each `csl-pywork` canonical against
+  the census's modal deployed representative and rules direction. For
+  `transcoder.py`/`updateByLine.py`/`parseheadline.py`/php, the `csl-pywork`
+  template actually LEADS deployment — the census's "template lags
+  deployment" flag was inverted for them (hash mismatch, not staleness
+  direction). Only genuine defect was the headless `digentry.py`, fixed by a
+  one-file `csl-pywork` PR. The "bimodal 75/57" `updateByLine` split resolves
+  to a single stdout-reconfigure line, not a real fork.
+- **H688 — code-duplication census re-run: the sanskrit-util dedup payoff,
+  measured.** Committed, reproducible successor of the throwaway 2026-06-14
+  SHARED_CODE census (basename + MD5 grouping, 129 canonical repos).
+  Headline: `transcoder.py` 83 copies (was 62), `digentry.py` 193/5 (was
+  170/5, zero new drift) — vendored counts grew by design; the payoff is in
+  the app-code lane (4/19 donor sites now delegate + 5 vendored
+  package copies/shims). Two defects found: `digentry.py` is headless (no
+  canonical copy in `csl-pywork`); 5 families' template copy is not the modal
+  deployed version.
+- **A15 — skeleton to full draft**: data-layer bus factor (§3.7),
+  correction-loop anatomy + the 52,498-event ledger (§4), claim→artifact
+  inventory. Every number recomputed from committed artifacts; 9 fact-check
+  findings fixed pre-commit. Venue stays `@DECIDE`.
+- **A14 — referee pass**: every claim re-verified against committed data,
+  Figure 1 generated (`scripts/article_figures.py` →
+  `article/figures/contributor-gantt.png`). Corrected several headline
+  numbers against their source snapshots/reports (contributor timeline,
+  issue-label counts, top-10 coverage share), fixed an MW/PWG worked-example
+  misattribution, repaired dangling `report (SSX.Y)` cross-refs after A13's
+  IIJ pass de-numbered the report's headings, rewrote §7 limitations, and
+  relicensed the data CC BY-SA → CC BY 4.0.
+- **HYPOTHESIS_VIZ_STANDARDS_SPEC Phase 3** (H269 design spec → H303/H293
+  builds): H4–H9 falsifiable hypotheses in the existing rigor idiom (Wilson
+  CI, χ²+Cramér's V with commit-block bootstrap, Mann-Kendall+BH,
+  contributor-level permutation tests, exact binomial per confusion pair);
+  two new dashboard pages — `correction-anatomy.md` (confusion heatmap, H8
+  asymmetry, corrector Pareto/component matrix, tenure spans) and
+  `org-shape.md` (contributor×repo heatmap, specialisation entropy, family
+  capture, snapshot drift); `palette.css` light/dark tokens; H9 routed to
+  csl-atlas per the spec's Part 3. Build green (26 pages, 81 links).
+- **A12** — OCR-post-correction literature (Faroese HMM+Viterbi, neural
+  RNN+ConvNet, LLM-based post-correction benchmarks) wired into the paper's
+  error-typology framing.
+- **A15 skeleton** — "CDSL as a GitHub maintenance ecosystem" (~2,900-word
+  draft, readiness 2/5 → 3/5): six manifest-anchored maintenance findings +
+  the csl-orig 2025–2026 correction-campaign case study, with an explicit
+  anti-salami boundary note vs A12–A14. Fact-checked by two independent
+  agents (5 mismatches found and fixed).
+
+### Fixed
+- `obs_phase3_rigor.json` + `obs_t_corrector_component.csv` registered in the
+  `data_index` CATALOG — they'd landed via the H303/H293 PRs above but were
+  never cataloged, so `refresh_observatory.py --check-only` failed at the
+  data-index-check phase (caught by GOALS_MANUAL.md G17).
 
 ## [1.1.1] - 2026-07-03
+
+### Added
+- **OBS-T paper** — target venue set to LREC-COLING, Zenodo DOI
+  `10.5281/zenodo.15834721` minted and wired in across status/reviewer/site
+  docs (draft itself shipped in the `obs-t-data-v1.0.0` slice below).
+- **G1 — issue lifecycle and responsiveness track**: survival cohorts,
+  backlog age pyramid, latency metrics, new `/lifecycle` page.
+- **G2 — active delta monitor**: snapshot-vs-HEAD digest wired into the
+  weekly refresh.
+- **G3 — capture-recapture estimate of correction work remaining** (H089);
+  scaffolds **A48** (capture-recapture paper skeleton).
+- **G4 — contributor-repo network page** (H090): force map + adjacency
+  matrix.
+- **G5 — narrative story page**: "13 years in one scroll" (`/story`).
+- **G6 — external reach (scholar-framed) page + OBS-T Zenodo DOI mismatch
+  flag** (H092); Workstream G (G1–G6) now fully shipped.
+- **Citation Coverage dashboard** (`/citation-coverage`) — PWG `<ls>` citation
+  link-coverage metric (data + report), with SEO JSON-LD (Organization/
+  Person/WebSite/Dataset), per-page meta descriptions, sitemap + robots.txt.
+- **A13 — IIJ narrative-report fix pass** (sections A–E) + a verified
+  Jachertz 1983 reference and fonts-embedded PDF; `CROSS_REPO_DECISIONS`
+  re-adjudicated (12 closed, tiers re-ranked) alongside an A13 go/no-go
+  review.
+- **`MAINTAINER_ACTIONS.md`** — public pending-maintainer worklist; a
+  Cologne page-speed audit (2026-07) with maintainer-action rows; a
+  2026-06-27 maintainers-call talking-points card.
+- Full org dictionary-page SEO coverage (31 pages: social cards, sitemap,
+  per-page meta descriptions, canonical/OG/Twitter head tags, CDN warming
+  notes).
+- `verify-first OBS-T DOI sweep script` (H104 prep); Zenodo/DOI thread
+  formally deferred to 17-07-2026 per MG ruling.
+
+### Fixed
+- Mixed `const`+`Plot.plot` cells split so all charts render (error-typology
+  + repo-size log-scale barX `x1=1` fix).
 
 ## [obs-t-data-v1.0.0] - 2026-06-30
 
@@ -36,6 +126,8 @@ All notable changes to this repository are documented here, following [Keep a Ch
   sample), and `validation/gold_metrics.json`. Zenodo metadata + `CITATION.cff`
   completed for the deposit; separate tag from the software `v*` releases so
   the dataset citation stays pinned to this exact commit.
+- Maintainer-dashboard pages gain description paragraphs, "how-to-read"
+  callouts, and per-chart conclusions across the board.
 
 ## [1.1.0] - 2026-06-27
 
