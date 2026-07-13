@@ -41,7 +41,13 @@ const PAGE_DESCRIPTIONS = {
   "/workflow-health": "A read-only baseline for CI, scheduled jobs, artifact refresh, Dependabot, CodeQL, and release signals across the organization.",
   "/reproducibility": "The command path for reviewers to reproduce the CSL Observatory snapshot, with live-data dependencies and human-gated steps documented.",
   "/data": "Download every public CSV and JSON dataset behind the CSL Observatory, each with its source script, generation date, and caveats.",
-  "/conclusions": "Plain-language summaries of what every chart in the CSL Observatory shows, grouped by page with links to the underlying data."
+  "/conclusions": "Plain-language summaries of what every chart in the CSL Observatory shows, grouped by page with links to the underlying data.",
+  "/census-overview": "The org-wide statistics census (H817): every headline statistic across 7 data layers of the Sanskrit Lexicon ecosystem, each with its computed value and done/partial/not-started status.",
+  "/census-l1-lexicon": "L1 census: headwords, overlap, markup, citations, and correction statistics over the 44 digitized Sanskrit dictionaries.",
+  "/census-l2-morphology": "L2 census: kosha.db, DCS lemma/form tables, the Heritage form oracle, and vidyut FST fallback coverage.",
+  "/census-l3-corpus": "L3 census: DCS full-corpus tokens/sentences, SamudraManthanam parallel corpus, and frequency-layer statistics.",
+  "/census-l4-translation": "L4 census: the Sa-Ru alignment corpus, 3-layer glossary, mw_ru translation cards, and per-dict RU coverage.",
+  "/census-l5-roots": "L5 census: the MW verbal-root inventory, etymology derivation tables, root-oracle agreement, and the Whitney x DCS audit."
 };
 
 // Escape a string for safe interpolation into an HTML attribute value.
@@ -138,7 +144,13 @@ export default {
     {name: "Workflow Health", path: "/workflow-health"},
     {name: "Reproducibility", path: "/reproducibility"},
     {name: "Data", path: "/data"},
-    {name: "Conclusions", path: "/conclusions"}
+    {name: "Conclusions", path: "/conclusions"},
+    {name: "Stats Census — Overview", path: "/census-overview"},
+    {name: "Stats Census — L1 Lexicon", path: "/census-l1-lexicon"},
+    {name: "Stats Census — L2 Morphology", path: "/census-l2-morphology"},
+    {name: "Stats Census — L3 Corpus", path: "/census-l3-corpus"},
+    {name: "Stats Census — L4 Translation", path: "/census-l4-translation"},
+    {name: "Stats Census — L5 Roots", path: "/census-l5-roots"}
   ],
   theme: ["air", "alt", "wide"],
   header: `<a href="/" style="display: flex; align-items: center; gap: 0.5rem; color: inherit; text-decoration: none;">
