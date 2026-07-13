@@ -4,6 +4,18 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+### Added
+- **H817 WS1.2 — 3 new statistics census artifacts**: `scripts/pos_distribution_per_text.py`
+  (UD-POS frequency per DCS text, all 270 texts) + `reports/pos_distribution_per_text.md`;
+  `scripts/paradigm_cell_coverage.py` (attested finite verb cells per root, 8,054/11,096
+  lemmas, 171 distinct cells) + `reports/paradigm_cell_coverage.md`; and
+  `data/sense_polysemy_per_dict.tsv` + `reports/sense_polysemy_per_dict.md` (mirrors the
+  csl-atlas A02 paper's per-dict senses/entry table for the 11/44 dicts where a
+  sense-marking convention exists; the `<L>` decimal-suffix shortcut for the other 33 was
+  tried and confirmed invalid — recorded so it isn't re-attempted). Closes 3 of 5
+  descriptive rows in `ROADMAP_STATISTICS_ORG_CENSUS_2026_2027.md` Part 0; registered as
+  FEATURES_INDEX E44/E45/E46.
+
 ## [1.1.1] - 2026-07-03
 
 ## [1.1.0] - 2026-06-27
