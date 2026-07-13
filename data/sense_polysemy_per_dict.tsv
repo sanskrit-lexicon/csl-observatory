@@ -1,0 +1,12 @@
+dict	year	family	sense_units_per_entry	entries	source
+skd	1822	indigenous	1.002	42531	csl-atlas/data/lexico/r2_h1.json
+wil	1832	Wilson	1.706	44577	csl-atlas/data/lexico/r2_h1.json
+pwg	1855	Petersburg	1.129	123366	csl-atlas/data/lexico/r2_h1.json
+ben	1866	Benfey	2.42	17310	csl-atlas/data/lexico/r2_h1.json
+mw72	1872	Monier-Williams	2.852	55390	csl-atlas/data/lexico/r2_h1.json
+vcp	1873	indigenous	1	50135	csl-atlas/data/lexico/r2_h1.json
+ap90	1890	Apte	2.517	34882	csl-atlas/data/lexico/r2_h1.json
+cae	1891	Cappeller	1.355	40069	csl-atlas/data/lexico/r2_h1.json
+mw	1899	Monier-Williams	1.15	286525	csl-atlas/data/lexico/r2_h1.json
+sch	1928	Petersburg	1.139	29125	csl-atlas/data/lexico/r2_h1.json
+ap	1957	Apte	1.724	90843	csl-atlas/data/lexico/r2_h1.json
