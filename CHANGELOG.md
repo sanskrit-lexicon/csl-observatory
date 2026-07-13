@@ -25,6 +25,18 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [1.1.1] - 2026-07-03
 
+## [obs-t-data-v1.0.0] - 2026-06-30
+
+### Added
+- **OBS-T data deposit** — Zenodo dataset snapshot of the OBS-T (observatory
+  bot-triage) validation study: `reports/obs_t_paper_draft.md` (first full
+  draft, ~6000 words), `reports/obs_t_validation.md` and
+  `reports/obs_t_errorbench.md`, plus the underlying `validation/gold_sample.csv`
+  (390-row gold annotation), `validation/error_sample.csv` (120-row error-type
+  sample), and `validation/gold_metrics.json`. Zenodo metadata + `CITATION.cff`
+  completed for the deposit; separate tag from the software `v*` releases so
+  the dataset citation stays pinned to this exact commit.
+
 ## [1.1.0] - 2026-06-27
 
 ### Added
