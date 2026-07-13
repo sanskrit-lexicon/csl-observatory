@@ -10,8 +10,8 @@ identifiers:
   - type: doi
     value: 10.5281/zenodo.15834721
     description: Concept DOI for the OBS-T dataset (all versions), CC-BY-4.0
-version: 1.1.0
-date-released: "2026-06-27"
+version: 1.2.0
+date-released: "2026-07-14"
 abstract: >
   Observatory code and OBS-T correction-event corpus for the Cologne Digital
   Sanskrit Dictionaries (CDSL). Code: GPL-3.0. OBS-T data release
