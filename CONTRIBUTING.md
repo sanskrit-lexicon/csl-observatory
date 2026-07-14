@@ -1,7 +1,7 @@
 # Contributing to csl-observatory
 
 
-> Inherits the [Sanskrit Lexicon org-wide contribution standard](https://github.com/sanskrit-lexicon/COLOGNE/blob/master/CONTRIBUTING.md). This file documents anything **repo-specific** on top of it.
+> Inherits the [Sanskrit Lexicon org-wide contribution standard](https://github.com/sanskrit-lexicon/COLOGNE/blob/main/CONTRIBUTING.md). This file documents anything **repo-specific** on top of it.
 
 The csl-observatory is the **GitHub/org measurement layer** for the Cologne Digital Sanskrit Lexicon (CDSL) project. We welcome contributions from Sanskritists, software engineers, lexicographers, digital humanists, and historians of linguistics when the work starts from repositories, issues, pull requests, commits, contributors, workflows, or organization-level maintenance evidence.
 

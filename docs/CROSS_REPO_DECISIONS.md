@@ -93,11 +93,11 @@ stated. Standing rule: any new review artifact must be an interactive
    item 1.
 2. **MWS — Packets A / B / C** (all sheets delivered, all verdict columns
    blank): A = 50 `ib.` resolvability checks
-   ([`PACKET_A_ib.csv`](https://github.com/sanskrit-lexicon/MWS/blob/main/review_packets/PACKET_A_ib.csv),
+   ([`PACKET_A_ib.csv`](https://github.com/sanskrit-lexicon/MWS/blob/master/review_packets/PACKET_A_ib.csv),
    backs the 74.7 % resolvability claim), B = 167 DCS-sentence checks
-   ([`PACKET_B_band3.csv`](https://github.com/sanskrit-lexicon/MWS/blob/main/review_packets/PACKET_B_band3.csv),
+   ([`PACKET_B_band3.csv`](https://github.com/sanskrit-lexicon/MWS/blob/master/review_packets/PACKET_B_band3.csv),
    P3 core), C = class conflicts (deduped 32→26,
-   [`PACKET_C_classconflicts.csv`](https://github.com/sanskrit-lexicon/MWS/blob/main/review_packets/PACKET_C_classconflicts.csv),
+   [`PACKET_C_classconflicts.csv`](https://github.com/sanskrit-lexicon/MWS/blob/master/review_packets/PACKET_C_classconflicts.csv),
    P4). **Recommend:** convert the three CSVs into one combined `/review-sheet`
    HTML session (~2 h of M.G. time total) — the CSV format is itself friction.
 3. **csl-atlas — H4 (89 rows) + Xref (40 rows).** Reshaped since 14-06: H4
