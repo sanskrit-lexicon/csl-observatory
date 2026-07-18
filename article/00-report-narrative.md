@@ -1,41 +1,43 @@
-# Report on the Cologne Digital Sanskrit Lexicon Project
+# What Repositories Forget: Reconstructing CDSL's Transition from Institutional Project to Distributed Infrastructure
 
 > **Mārcis Gasūns**
 >
-> Sanskrit Zealots's Society / Russia, Obninsk
+> Sanskrit Zealots' Society / Russia, Obninsk
 >
 > gasyoun@gmail.com
 
 ## Abstract
 
-The Cologne Digital Sanskrit Lexicon Project (CDSL), initiated in 1994,
-represents a groundbreaking effort to create a one-of-a-kind digital
-repository of Sanskrit dictionaries. Over the past three decades, the
-project has evolved from a closed university initiative in 2013 into a
-collaborative, open-source space, hosted on the GitHub repo ecosystem
-with over 5,400 issues and pull requests across 76 repositories by 2025, to integrate grammar, vocabulary, and textual
-corpora into a unified digital framework. The project began with the
-digitization of key 19th-century Sanskrit-English and Sanskrit-German
-dictionaries, such as Monier-Williams' Sanskrit-English Dictionary and
-Böhtlingk's Sanskrit-Wörterbuch, and has since expanded to include 42
-dictionaries compiled over the last two centuries and some major grammar
-reference works.
+The Cologne Digital Sanskrit Lexicon (CDSL), initiated at the University
+of Cologne in 1994, left two very unequal historical records. Its first
+twenty years survive chiefly in published reports, files, correspondence,
+and participant memory; its public GitHub record begins only in 2014.
+This article examines what is gained and lost when the history of a
+scholarly infrastructure is reconstructed from repositories.
 
-The CDSL project remains unique in its approach to linking dictionaries
-with a parallel text corpus and semi-digitized PDF scans, particularly
-the Sanskrit-Russian-English-German corpus of Vedas, which serves as a
-critical resource for cross-referencing and validating lexical entries.
-This integration of dictionaries and corpora allows for a more dynamic
-and accurate representation of Sanskrit lexicography, moving beyond
-static, printed dictionaries to an evolving digital resource. The total
-number of normalized entries is over 390,000 and it still grows similar to
-the Himalayas at around 2 millimeters per year.
+Repository evidence is excellent for tracing public workflow—versions,
+corrections, issue coordination, and the distribution of implementation—
+but poor at recovering negotiation, tacit maintenance, failed experiments,
+and informal scholarly credit. Exact quantitative claims therefore belong
+to the companion synthesis A61 and its frozen `a61-history-v1.0` evidence
+release. Here the differing totals are themselves a methodological result:
+78 repositories in the June 2026 API inventory are not the same population
+as 76 repositories in transformed activity tables; 208 OBS-T corrector
+labels are not 208 known people; and the sixteen non-bot Git identities do
+not enumerate everyone who helped CDSL historically.
+
+Using the transition from founder-led institutional production to
+distributed infrastructure as its case, the article shows that public
+versioning made work more recoverable without making authority or labour
+fully distributed. The repository is thus both an archive of collaboration
+and a biased instrument: it illuminates the period after 2014 precisely
+where it casts the earlier project into shadow.
 
 ## Keywords
 
 Sanskrit lexicography; digital dictionaries; Cologne Digital Sanskrit
-Lexicon (CDSL); Petersburg Dictionary (Böhtlingk and Roth); retrodigitization;
-text-corpus linking; crowdsourcing.
+Lexicon (CDSL); repository history; digital scholarly infrastructure;
+archival silence; maintenance; crowdsourcing.
 
 ## Introduction
 
@@ -60,7 +62,7 @@ changed the very way I think about Sanskrit studies. Changed once and
 forever.
 
 The Cologne Digital Sanskrit Dictionaries project is a long-term project
-(1994-2025) with one major aim: to be the ultimate place for validated
+(1994–) with one major aim: to be the ultimate place for validated
 Sanskrit dictionaries. In contrast to the derived projects, it's updated
 regularly. None of the websites that are based on Cologne data maintain
 a connection to Cologne, not all of them even give full credit. It's a
@@ -92,6 +94,31 @@ Bangalore (Kapp and Malten, 1997) almost 30 years ago:
 > Sanskrit text corpora by linking them to the existing descriptions in
 > dictionaries by a numeric system which functions as a placeholder for
 > a word sense which can be expanded or changed.
+
+## Method and relation to A61
+
+This article and A61 share facts but not jobs. A61 is the canonical
+historical synthesis: it audits the 1997 programme, carries exact measures,
+and argues that CDSL endured through serial conversions of private labour
+into recoverable infrastructure. This article asks how securely that
+history can be known and gives greater depth to one transition—the move
+from founder-led institutional production to a distributed,
+repository-mediated project.
+
+Three evidence classes are kept separate. First, committed data and code
+support exact claims about the surviving record. Second, published reports,
+correspondence, and attributed oral testimony support claims about motives
+and decisions. Third, interpretation joins the first two. The third class
+cannot borrow the certainty of the first merely because a number appears
+nearby. Historical email that will be provided later is represented in the
+shared milestone layer as `evidence_pending`; it is not used here as proof.
+
+This separation also changes the use of first-person evidence. Recollection
+has value when it identifies a decision, conflict, or missing archive that a
+repository cannot contain. It has little value as a second, unsourced route
+to facts already measurable from committed data. First-person passages below
+are therefore retained as situated evidence and argument, not as a substitute
+for the A61 audit.
 
 ## Sanskrit Dictionaries
 
@@ -1034,6 +1061,66 @@ Unique tags, 67 enlisted: \<ab\>, \<arab\>, \<bio\>, \<bot\>, \<chg\>,
 \<C6\>, \<C7\>, \<C8\>, \<C9\>, \<C10\>, \<C11\>, \<C12\>, \<C\>, \<F\>,
 \<H\>, \<HI1\>, \<HI\>, \<P\>, \<Picture\>, \<Poem\>, \<VN\>[^47].
 
+## What the repository record cannot show
+
+### Selective visibility
+
+A repository is not a neutral transcript of a project. It records work that
+reached a commit, issue, or release in a form the platform retained. It does
+not record the correction noticed but never reported, the experiment abandoned
+before commit, the server repair performed without an issue, or the months of
+correspondence required to make a data model intelligible to a new
+collaborator. For CDSL this bias is chronological as well as procedural: the
+project began in 1994, but its public versioned record begins in 2014.
+
+This is why the GitHub series cannot be used to narrate “the founding years.”
+Its 2014–2016 peak describes the earliest *public correction ledger*, not the
+relative importance of transcription, programming, or institutional work in
+1994–2013. Likewise, 2019 marks the first pull requests in the snapshot, not
+the arrival of Git and not the birth of collaboration. Platform milestones
+must be named at the granularity the evidence supports.
+
+### Identity is a join, not a count
+
+The project leaves several contributor-like populations. OBS-T has 208
+release-safe corrector labels; some are pseudonymised, unresolved, or inherited
+from form-era text. The June repository snapshot has sixteen normalized
+non-bot Git identities after `actions-user` is correctly classified as
+automation. OBS-Q sees an even narrower population: the people who implemented
+dictionary corrections in `csl-orig`, never more than four in one year from
+2019 to 2026. The historical roster includes people whose essential work
+predates Git entirely.
+
+None of these totals is wrong once its population is named. The error is to
+join them rhetorically and call the result “contributors.” A defensible social
+history requires an identity crosswalk, evidence for each join, and room for
+people whose labour left no account. Until that adjudication exists, A61 uses
+exact counts only for exact populations, while this article treats the total
+historical community as a range whose edges depend on what kinds of labour are
+counted.
+
+### From founder-led to distributed does not mean ownerless
+
+The transition is often described as a movement from a closed university
+project to an open community. That binary is too neat. Cologne institutional
+production depended on typists and collaborators outside Cologne; the GitHub
+period still depends on University of Cologne server custody and a very small
+implementation group. What changed was not the disappearance of centres but
+the number of ways work could survive a centre's failure.
+
+Three changes mattered. Shared structure allowed collaborators to interpret
+the same files. Transfer to the DCH separated preservation from the founding
+department. Public versioning made a growing share of decisions and corrections
+searchable and replayable. Together they reduced the cost of succession. They
+did not distribute adjudication equally: the wide submitter record still
+funnels through a handful of implementers. CDSL became distributed first as an
+archive and only partially as an editorial institution.
+
+This distinction is the article's main complement to A61. Infrastructure can
+externalise memory without externalising authority. The history of CDSL should
+therefore be evaluated not by whether it became “open” in one moment, but by
+which forms of dependency each transition removed, retained, or created.
+
 ## Future Plans
 
 We are still living by mid-19th century dictionary standards in the
@@ -1156,6 +1243,28 @@ not support Elastic search, so we should consider implementing C-SALT
 APIs[^49]. Frontend and backend developers badly wanted. We still
 believe that voluntary crowdsourcing is the only future for Cologne and
 Sanskrit research in the upcoming millennia.
+
+## Conclusion
+
+Repository history makes one part of CDSL unusually legible: after 2014 we can
+reconstruct documented correction traffic, public coordination, and the
+concentration of implementation. It makes another part easy to forget: the
+institutional negotiation, private correspondence, tacit server work, and
+uncommitted experiments from which that public record emerged.
+
+The resulting history is neither a memoir nor a dashboard. A61 supplies the
+canonical synthesis and frozen measures. This article shows why those measures
+need archival boundaries and why first-person evidence matters only where it
+identifies decisions or silences the repository cannot recover. Taken together,
+the two papers describe a project that moved from founder-led production toward
+distributed infrastructure without becoming ownerless or labour-independent.
+
+CDSL's decisive achievement is recoverability: a future group can obtain the
+sources, inspect the decisions, and continue correction without rebuilding the
+entire intellectual object from private archives. Its decisive historical
+warning is that recoverable data can coexist with concentrated authority. The
+next stage is not merely to preserve more records, but to widen the group able
+to interpret and act on them.
 
 ## Acknowledgements
 
