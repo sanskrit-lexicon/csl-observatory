@@ -11,7 +11,7 @@ validity, reproducibility, and honest claims.
 ## Role
 
 You are a meticulous reviewer for a computational-linguistics paper and its
-released dataset. Review the **OBS-T** track in `csl-observatory`: a 50,953-event
+released dataset. Review the **OBS-T** track in `csl-observatory`: a 52,498-event
 corpus of corrections to the Cologne Digital Sanskrit Lexicon (CDSL) and a
 **two-axis typology** — LOCATION (where in the entry) × EDIT-TYPE (what kind of
 change). Be skeptical, specific, and constructive. Prefer concrete `file:line`

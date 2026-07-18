@@ -432,6 +432,17 @@ def generated_date(path: Path) -> str:
     return datetime.fromtimestamp(path.stat().st_mtime, timezone.utc).date().isoformat()
 
 
+def canonical_text_size(path: Path) -> int:
+    """Return the repository-canonical byte size for a text data artifact.
+
+    Git may materialize tracked text files with CRLF in a Windows working tree
+    even though the committed blob and Linux CI use LF.  Catalog byte counts are
+    provenance metadata, so they must describe the canonical LF content rather
+    than the checkout platform.
+    """
+    return len(path.read_bytes().replace(b"\r\n", b"\n"))
+
+
 def row_for(path: Path, entry: Entry, *, rows: str | None = None, size: int | None = None) -> dict[str, str]:
     if path.suffix.lower() == ".csv":
         row_count = csv_rows(path) if rows is None else rows
@@ -443,7 +454,7 @@ def row_for(path: Path, entry: Entry, *, rows: str | None = None, size: int | No
         "file": path.name,
         "format": fmt,
         "category": entry.category,
-        "bytes": str(path.stat().st_size if size is None else size),
+        "bytes": str(canonical_text_size(path) if size is None else size),
         "rows": row_count,
         "generated_date": generated_date(path),
         "source_script": entry.source_script,

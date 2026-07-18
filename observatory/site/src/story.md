@@ -5,7 +5,7 @@ toc: false
 
 # Thirteen years, one scroll
 
-_The Cologne Digital Sanskrit Lexicon (CDSL) was not built in a grant cycle. It was built in the open, one correction at a time, by a handful of volunteers over thirteen years. This page tells that story from the record the work itself left behind — every dictionary edit, every issue, every commit — with the numbers embedded rather than filed away in a dashboard. Read it start to finish; it takes about five minutes._
+_The Cologne Digital Sanskrit Lexicon (CDSL) began in 1994, two decades before its public GitHub record. This page tells the narrower story that the committed 2014–2026 correction and repository snapshots can support: documented dictionary edits, issues, and commits. Earlier institutional and email history requires different evidence. Read it start to finish; it takes about five minutes._
 
 ```js
 const velocity = await FileAttachment("data/velocity_timeline.csv").csv({typed: true});
@@ -105,9 +105,9 @@ Plot.plot({
 
 > **What this proves:** the project has always generated far more work than any small team could close, and the backlog is the accumulated evidence. What changed in 2026 is not that the work got smaller — it is that the org finally began measuring and draining it.
 
-## 2014–2016 · Founding, and the correction ledger
+## 2014–2016 · The public correction ledger expands
 
-The project's first act was pure text repair. Before there was a git workflow, there was `cfr.tsv` — a flat form-correction file into which volunteers poured fixes to OCR and transcription errors in the scanned dictionary text: a `ṭ` read as `द`, a dropped conjunct, a mis-segmented compound. These are the **form-layer** corrections, and they dominate the early years: the correction ledger peaks in **2015–2016**, before the project had any of the machinery it later built.
+The GitHub-era record opens with text repair, but this is not the project's founding: CDSL had already existed for twenty years. The inherited `cfr.tsv` form-correction file records fixes to transcription errors in the dictionary text: a `ṭ` read as `द`, a dropped conjunct, a mis-segmented compound. These are the **form-layer** corrections, and they dominate the early public ledger: the series peaks in **2015–2016**, before the later git-derived layer begins.
 
 ```js
 Plot.plot({
@@ -123,11 +123,11 @@ Plot.plot({
 })
 ```
 
-> **What this proves:** the founding era was not about infrastructure or display — it was about getting the text right. The gold-brown bars (2014–2016) are the `cfr.tsv` form-correction era; everything after is the project working through the same dictionaries again with better tools.
+> **What this proves:** the earliest period represented by this dataset is dominated by form corrections. It does not prove what dominated the unmeasured 1994–2013 project history.
 
-## 2019 · Git arrives
+## 2019 · Pull requests arrive
 
-For its first five years the project's corrections lived in flat files and hand-edited text. **2019 is the year the pull request appears** — the first PRs in the org's history are recorded here, and the number of distinct people active in a year jumps to **${row2019.active_authors}**. This is the quiet inflection: the moment a personal correction practice became a reviewable, git-native workflow that a newcomer could join.
+The organisation and its public issue history date from 2014. **2019 is the narrower milestone when pull requests first appear in the committed snapshot.** The number of distinct Git author identities active that year is **${row2019.active_authors}**. This marks adoption of an additional review mechanism, not the arrival of Git itself and not the beginning of public correction work.
 
 ## 2021 · The volume peak
 
@@ -211,7 +211,7 @@ Thirteen years of one small circle's careful work are now legible, citable, and 
 
 ---
 
-*Every figure on this page is computed live from the committed datasets — snapshot **${manifest.snapshot_date}**, refreshed monthly from the GitHub API and the public correction record. Nothing is hand-typed; download the underlying CSV/JSON from the [Data](/data) page to check any number here.*
+*Every figure on this page is computed from the committed datasets — snapshot **${manifest.snapshot_date}**. The scheduled refresh is intended to be monthly but may lag; the snapshot date, not the page-view date, is authoritative. Download the underlying CSV/JSON from the [Data](/data) page to check any number here.*
 
 <style>
 .card .big { font-size: 2.1rem; font-weight: 600; display: block; line-height: 1.1; }

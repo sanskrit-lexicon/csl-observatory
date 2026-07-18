@@ -1,5 +1,12 @@
 # OBS-T: A Longitudinal Error-Typology Corpus of Digital Sanskrit Lexicography
 
+> **Superseded quantitative snapshot.** This draft preserves the earlier
+> 50,953-event analysis for revision history. The canonical released ledger now
+> contains 52,498 events and 208 release-safe corrector labels; use
+> `observatory/site/src/data/obs_t_summary.json` and the current generated OBS-T
+> reports for new claims. The figures below must not be cited without a full
+> manuscript regeneration.
+
 **Mārcis Gasūns**  
 Independent Researcher  
 ORCID: 0000-0003-4513-884X  
