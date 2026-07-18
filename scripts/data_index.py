@@ -15,6 +15,20 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "observatory" / "site" / "src" / "data"
 OUT = DATA_DIR / "data_index.csv"
+SOURCE_DATA_DIR = ROOT / "data"
+
+# Hand-curated files whose canonical committed home is data/; the refresh
+# workflow's "Copy data into site" step mirrors them into DATA_DIR on each run.
+# They are resolved from data/ here so the catalog (and --check) does not
+# depend on whether that copy step has run in the current checkout.
+WORKFLOW_COPIED = frozenset(
+    {
+        "contributor_repo_heatmap.csv",
+        "contributor_specialisation.csv",
+        "etymology_marker_preliminary.csv",
+        "wil_nirukta_tokens.csv",
+    }
+)
 
 
 @dataclass(frozen=True)
@@ -403,11 +417,27 @@ FIELDNAMES = [
 
 
 def public_data_files() -> list[Path]:
-    return sorted(
-        path
+    listed = {
+        path.name: path
         for path in DATA_DIR.iterdir()
         if path.is_file() and path.suffix.lower() in {".csv", ".json"}
-    )
+    }
+    for name in WORKFLOW_COPIED:
+        source = SOURCE_DATA_DIR / name
+        if source.exists():
+            # The canonical copy always wins over a possibly stale site copy.
+            listed[name] = source
+    return [listed[name] for name in sorted(listed)]
+
+
+def measured_bytes(path: Path) -> int:
+    # Byte size of the LF-normalized content — what git stores under the
+    # repo-wide `eol=lf` attribute — not st_size. The generator scripts write
+    # CRLF (csv.writer's default lineterminator), so st_size taken right after
+    # a regeneration is one byte per row larger than the blob git commits;
+    # every fresh checkout then measures smaller than recorded (G17:
+    # commits.csv 1,330,401 recorded vs 1,320,523 on disk = its 9,878 rows).
+    return len(path.read_bytes().replace(b"\r\n", b"\n"))
 
 
 def csv_rows(path: Path) -> str:
@@ -443,7 +473,7 @@ def row_for(path: Path, entry: Entry, *, rows: str | None = None, size: int | No
         "file": path.name,
         "format": fmt,
         "category": entry.category,
-        "bytes": str(path.stat().st_size if size is None else size),
+        "bytes": str(measured_bytes(path) if size is None else size),
         "rows": row_count,
         "generated_date": generated_date(path),
         "source_script": entry.source_script,
@@ -549,7 +579,7 @@ def main() -> int:
         check_existing(rows)
         print(f"OK: {len(rows)} public data files cataloged")
         return 0
-    OUT.write_text(serialize(rows), encoding="utf-8")
+    OUT.write_text(serialize(rows), encoding="utf-8", newline="\n")
     print(f"wrote {OUT.relative_to(ROOT)} ({len(rows)} rows)")
     return 0
 

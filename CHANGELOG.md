@@ -4,6 +4,19 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+### Fixed
+- **`data_index.py` measures committed content, not environment state (G17/H1223)** — recorded
+  bytes are now the LF-normalized content size (what git stores under the repo-wide `eol=lf`
+  policy) instead of `st_size`, killing the recurring `data-index-check` drift where a
+  regeneration recorded CRLF-inflated sizes (`csv.writer`'s default `\r\n` lineterminator) that
+  every fresh checkout then measured under by exactly one byte per line — confirmed 43/43
+  `crlf-exact` at the poisoned `6f573f1` baseline, see
+  `reports/data_index_crlf_drift_audit.md`. The 4 hand-curated `data/` files registered by #92
+  are now resolved from their canonical committed home whether or not the workflow's
+  "Copy data into site" step has run, so `--check` passes on a fresh clone; `data_index.csv`
+  itself is written `newline="\n"`. Baseline regenerated (59 files catalogued); diagnostic
+  scripts `g17_delta_audit.py` + `g17_historical_check.py` added.
+
 ## [1.2.0] - 2026-07-14
 
 ### Added
