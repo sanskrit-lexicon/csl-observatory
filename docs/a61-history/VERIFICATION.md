@@ -30,6 +30,29 @@ For every historical milestone:
 - distinguish published record, attributed archive/oral history, and inference;
 - reject any `evidence_pending` row as current support.
 
+The v1.1 generator additionally asserts that the only pending milestone IDs are
+`HIST-EMAIL-TECH` and `HIST-EMAIL-RIGHTS`, all claim evidence IDs resolve, the
+stale four-implementer form is absent, the chapter number inventory is present,
+and the A13 SHA-256 remains
+`05fbe656224d93e46921614b2a609631c6769f761c8832e84ac84a3c991c9f00`.
+
+## Legal and venue verification
+
+- Apte 1957: no public-domain assertion without a documented determination of
+  relevant authorship/work and term; observed 2025 availability can be reported
+  independently.
+- Database rights: historical attribution only, not a current legal conclusion.
+- WSC official page, checked 18 July 2026: abstract deadline 1 February 2027;
+  headline/table 10–14 December; footer 10–15 December (contradiction logged);
+  no published word limit: <https://www.hss.iitb.ac.in/wsc2027/>.
+
+## Build ruling
+
+The data and regression gates are required. Run `npm run build` from
+`observatory/site` up to three times. If every attempt fails only while fetching
+external `npm:d3*` modules, record the CDN blocker; any deterministic local
+failure remains a release blocker.
+
 ## Hostile-referee tests
 
 The review must try to falsify:
@@ -55,4 +78,3 @@ The first packet passes when all automated gates are green, all Major findings
 are either applied or explicitly open, and the FABLE handoff points to the
 snapshot and referee memo. Readiness can move from 3/5 to 4/5 only after no
 unresolved Major evidence or argument finding remains.
-

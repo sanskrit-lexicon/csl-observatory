@@ -29,12 +29,13 @@ Do not build another observatory or correction corpus. Reuse:
 The missing artifact is narrower: one frozen article snapshot with explicit
 populations, a claim registry, a contradiction ledger, and a sourced milestone
 layer. This plan supplies that layer at
-`data/publication/a61-history-v1.0/`.
+`data/publication/a61-history-v1.1/`; the preceding v1.0 release remains
+immutable.
 
 ## Work order
 
 1. Resolve contradictions and provenance defects.
-2. Freeze the versioned evidence snapshot (`a61-history-v1.0`, alias
+2. Freeze the versioned evidence snapshot (`a61-history-v1.1`, alias
    `2026-07`).
 3. Rewrite A61 around the causal argument and evidence limits.
 4. Run a hostile referee pass and route the verified packet to FABLE.
@@ -53,10 +54,27 @@ layer. This plan supplies that layer at
 - Private quotations, byline choices, permissions, and strong personal
   judgments remain human decisions.
 
+## v1.1 evidence, legal, venue, and build rulings
+
+- Evidence: every retained empirical/project number in A61 through the
+  conclusion (excluding references) is inventoried in `claim_registry.csv`.
+  Retained M10 figures are hash-locked; removed stale figures are labelled
+  removed/superseded. The two email milestones remain `evidence_pending`.
+- Legal: do not infer Apte 1957 public-domain status from editor/publisher death
+  dates. State only observed 2025 availability until a documented rights
+  determination exists. Treat the 2004 database-right language as attributed
+  history, not present legal advice.
+- Venue: the official IIT Bombay page (checked 18 July 2026) sets the abstract
+  deadline at 1 February 2027 and headline/Important Dates at 10–14 December
+  2027; its footer says 10–15 December. Plan on 10–14 pending clarification.
+  No word limit is currently published.
+- Build: snapshot generation/check, data index, workspace, OBS-T and
+  repository-health regressions are mandatory. The Observable build is best
+  effort with three attempts for external `npm:d3*` CDN timeouts.
+
 ## Linked execution documents
 
 - [Roadmap](ROADMAP.md)
 - [Architecture](ARCHITECTURE.md)
 - [Implementation](IMPLEMENTATION.md)
 - [Verification](VERIFICATION.md)
-

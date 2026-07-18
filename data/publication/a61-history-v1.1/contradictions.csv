@@ -1,0 +1,16 @@
+contradiction_id,forms,resolution,status,article_action
+C-REPOS,76 repositories vs 78 repositories,Keep both with named populations: transformed activity tables (76) and API inventory (78).,resolved,Define the denominator at every use.
+C-CORRECTORS,208 correctors vs 210 contributors,The canonical OBS-T summary has 208 release-safe corrector labels. 210 is stale/unsupported and must not be described as people.,resolved,Use 208 corrector identities/labels with an identity caveat.
+C-GIT-HUMANS,17 human Git contributors vs 16,actions-user is automation despite GitHub API type=User; curated bot override gives 16.,resolved,Use 16 only for the June Git contributor snapshot.
+C-BUS-FACTOR,65 of 76 vs 67 of 76 bus-factor-1 repositories,"After the bot override is applied consistently, the regenerated value is 67 of 76.",resolved,Regenerate reports and stats census.
+C-PERIOD,2014–2016 founding vs project founded 1994,1994 is founding; 2014–2016 is the public correction-ledger/GitHub phase.,resolved,Rename the story-page period.
+C-GIT-ARRIVES,2019 Git arrives vs organisation active since 2014,"2019 is the first pull-request year in the snapshot, not the arrival of Git.",resolved,Rename the story-page milestone.
+C-COMPLETENESS,every edit/issue/commit vs documented snapshot,The ledger is reconstructable within its source layers but incomplete before 2014 and for unlogged batches.,resolved,Remove universal completeness language.
+C-OLD-OBST,"50,953 vs 52,498 correction events","52,498 is the current release total; older generated prose must be refreshed or labelled as a superseded snapshot.",resolved,Update cited reports and prompts.
+C-IMPLEMENTERS,at most four vs computed maximum five implementers per year,The locked OBS-Q annual table has a maximum of five.,resolved,Use five in A61/A15 and the registry.
+C-M10-HEADWORDS,"MW 168,633 / PWG 106,169 vs current matrix 193,852 / 106,054","The unexplained totals were removed; the reproducible 94,753 intersection remains.",resolved-removed,No further manuscript action.
+C-M10-ETYMOLOGY,"62,558 records vs current etymology-oracle 67,172",The stale exact total was removed and the current discussion is qualitative.,resolved-removed,No further manuscript action.
+C-M10-HERITAGE,"185,803 aligned at 97.6% vs 185,803 total MW rows / 25,140 covered / 24,549 anchors",The insufficiently framed exact alignment totals were removed.,resolved-removed,No further manuscript action.
+C-M10-WHITNEY,939 root records vs current 935-row crosswalk,The stale exact crosswalk total was removed.,resolved-removed,No further manuscript action.
+C-APTE-RIGHTS,public-domain conclusion from editor/publisher death dates,The legal conclusion was deleted; the manuscript reports access history only.,resolved-removed,A documented rights determination is still required before any future public-domain assertion.
+C-MW-PRINTCHANGE,over 700 entries vs 137 top-level numbered items,The unsupported count was removed; the registry preserves the 137-item audit result without presenting it as a retained manuscript claim.,resolved-removed,No further manuscript action.

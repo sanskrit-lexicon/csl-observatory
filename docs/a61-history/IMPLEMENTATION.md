@@ -12,6 +12,9 @@
    language.
 5. The statistics census and all A61 uses adopt the snapshot's metric IDs and
    definitions.
+6. The v1.1 builder validates claim evidence IDs, preserves exactly two
+   `evidence_pending` email milestones, rejects the stale four-implementer form,
+   and enforces the protected A13 SHA-256.
 
 ## Manuscript changes
 
@@ -45,3 +48,19 @@ lane. Therefore the compliant route is:
 No remote push or PR is performed in this pass; the user selected isolated
 local branches and commits without pushing.
 
+## v1.1 rulings implemented
+
+- **Evidence:** the frozen A61 manuscript uses 208 OBS-T labels and five annual
+  implementers. Each M10 disposition is applied in the registry: retained
+  values are verified, while unsupported or stale exact figures are explicitly
+  removed/superseded. The canonical MW print-change and hiatus audits remain
+  hash-locked as audit evidence, not retained manuscript claims.
+- **Legal:** remove the causal public-domain conclusion for Apte 1957 unless a
+  rights determination identifies relevant authorship and term. Keep the
+  database-right episode only as attributed historical evidence.
+- **Venue:** official deadline 1 February 2027; headline/table dates 10–14
+  December 2027; official footer contradiction 10–15 December; no published
+  word limit as of 18 July 2026.
+- **Build:** run snapshot write/check, data-index check, workspace, OBS-T and
+  repository-health regressions. Attempt the site build three times; repeated
+  external CDN failure is reported separately from deterministic regressions.
