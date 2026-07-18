@@ -4,6 +4,8 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+## [1.2.1] - 2026-07-18
+
 ### Fixed
 - **`data_index.py` measures committed content, not environment state (G17/H1223)** — recorded
   bytes are now the LF-normalized content size (what git stores under the repo-wide `eol=lf`
