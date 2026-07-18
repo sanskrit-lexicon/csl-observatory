@@ -26,7 +26,7 @@ archived docs instead.
 | Finding | Current signal | Source |
 |---|---|---|
 | Repository health | 41/76 repos have no license; 21 have unrecognized license files; 46 default to `master`; 6 cleanup candidates remain live. | `reports/repo_health.md` |
-| Sustainability | 65/76 repos have bus factor 1; core trio accounts for 97.6% of contributions; SC3 has an action plan. | `reports/bus_factor.md`, `docs/BUS_FACTOR_ACTION_PLAN.md` |
+| Sustainability | 67/76 repos have bus factor 1; core trio accounts for 98.0% of contributions; SC3 has an action plan. | `reports/bus_factor.md`, `docs/BUS_FACTOR_ACTION_PLAN.md` |
 | Contributor identity | 0 registered ORCIDs in the contributor map; 7 confirmed names need ORCIDs; 9 identities need triage. | `reports/contributor_identity.md` |
 | Issue taxonomy | Taxonomy is useful but still needs rollout/maintenance across repos and Org Project #9. | `reports/taxonomy_adoption.md`, `docs/RUNBOOK_NOTES.md` |
 | Workflow reliability | 28/76 active repos have workflows; 11 have scheduled workflows; 13 have artifact/deploy/refresh workflows; 18 have Dependabot; 8 have CodeQL; 1 has releases. | `reports/workflow_health.md`, `/workflow-health` |

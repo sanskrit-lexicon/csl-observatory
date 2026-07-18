@@ -1,0 +1,7 @@
+claim_id,article,section,claim,evidence_tier,evidence_ids,status
+A61-ARG-01,A61,abstract;1;3;9,CDSL endured by repeatedly converting fragile personal scholarship into maintainable shared infrastructure.,synthesis,HIST-1994-FOUNDING;HIST-2004-COLLAB;HIST-2013-DCH;HIST-2014-GITHUB;HIST-2026-SUCCESSION,argument-to-develop
+A61-DATA-01,A61,abstract;3.4,The June snapshot has two legitimate repository populations: 78 API inventory records and 76 transformed activity-table records.,computed,ORG-REPOS-API;ORG-REPOS-TRANSFORMED,verified
+A61-DATA-02,A61,abstract;5.3,"OBS-T contains 52,498 documented events across 43 dictionaries and 208 corrector labels.",computed,OBST-EVENTS;OBST-DICTIONARIES;OBST-CORRECTOR-IDS,verified-with-identity-caveat
+A61-DATA-03,A61,8.1;9.7,Correction implementation is highly concentrated: at most four implementers per year and a 64–100% annual lead share.,computed,OBSQ-MAX-ANNUAL-CORRECTORS;OBSQ-LEAD-SHARE-RANGE,verified
+A61-HIST-01,A61,3,1994 is the founding milestone; 2014 is the public-GitHub governance milestone; 2019 is only the first-PR milestone.,published-and-computed,HIST-1994-FOUNDING;HIST-2014-GITHUB;HIST-2019-FIRST-PRS,verified
+A13-METHOD-01,A13,proposed,"Repository records reveal public workflow but systematically under-record pre-2014 correspondence, informal labour, and identity.",methodological,HIST-EMAIL-TECH;HIST-EMAIL-RIGHTS;OBST-CORRECTOR-IDS;ORG-HUMAN-COMMIT-IDS,argument-to-develop

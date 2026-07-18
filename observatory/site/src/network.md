@@ -94,7 +94,7 @@ const grand = d3.sum(shown, d => d.contributions);
   <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#57606a;"></span> person (size = org share)</span>
 </div>
 
-> **Conclusion:** The picture is a hub-and-spoke system, not a mesh: three large circles hold nearly every repository, 65 of 76 squares are red (single-majority ownership), the remaining 11 amber, and **not one repository reaches bus factor 3**. There is no path between most repositories except through funderburkjim, drdhaval2785, or gasyoun; recruiting even one contributor into the rim would visibly re-wire this graph — precisely the bus-factor mitigation the [Community page](community) quantifies.
+> **Conclusion:** The picture is a hub-and-spoke system, not a mesh: three large circles hold nearly every repository, 67 of 76 squares are red (single-majority ownership), the remaining 9 amber, and **not one repository reaches bus factor 3**. There is no path between most repositories except through funderburkjim, drdhaval2785, or gasyoun; recruiting even one contributor into the rim would visibly re-wire this graph — precisely the bus-factor mitigation the [Community page](community) quantifies.
 
 ## Adjacency matrix (accessible view)
 

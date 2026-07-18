@@ -10,10 +10,10 @@ This complements the org-wide [`bus_factor.md`](bus_factor.md) (code contributio
 
 | Metric | Value |
 |---|---:|
-| Dictionary-correction commits analysed (`csl-orig/v02`) | 1,849 (2019–2026) |
-| Distinct content correctors in any single year | **≤ 4** |
+| Dictionary-correction commits analysed (`csl-orig/v02`) | 2,067 (2019–2026) |
+| Distinct content correctors in any single year | **≤ 5** |
 | Lead corrector annual share | **64–100%** |
-| Dictionaries that are single-maintainer-dominated (≥10 commits) | **4 / 37** |
+| Dictionaries that are single-maintainer-dominated (≥10 commits) | **4 / 38** |
 | `csl-corrections` issues (closed / open) | 244 (229 / 15) |
 | Resolution latency — median | **6 days** |
 | Resolution latency — mean / p90 / max | 155.7 d / 457 d / 2337 d |
@@ -32,7 +32,7 @@ Distinct correctors per year and the lead corrector's share of dictionary-correc
 | 2023 | 161 | 3 | funderburkjim | 81% |
 | 2024 | 207 | 4 | funderburkjim | 81% |
 | 2025 | 253 | 3 | funderburkjim | 64% |
-| 2026 | 411 | 4 | drdhaval2785 | 85% |
+| 2026 | 629 | 5 | drdhaval2785 | 85% |
 
 A single-corrector year (2020: 269 commits) shows that throughput tracks the lead corrector's burst activity, not crew size.
 
@@ -42,43 +42,44 @@ Every dictionary is dominated by one corrector. Flagged (⚠) when a single corr
 
 | Dict | Commits | Correctors | Lead | Lead share | SPOF |
 |---|---:|---:|---|---:|:--:|
-| mw | 516 | 6 | funderburkjim | 69% |  |
-| pwg | 211 | 3 | funderburkjim | 76% |  |
-| ap | 157 | 3 | drdhaval2785 | 75% |  |
-| pw | 143 | 3 | funderburkjim | 83% | ⚠ |
-| ap90 | 142 | 4 | funderburkjim | 72% |  |
-| shs | 102 | 2 | drdhaval2785 | 79% |  |
-| bur | 78 | 3 | funderburkjim | 71% |  |
-| vcp | 75 | 2 | funderburkjim | 51% |  |
+| mw | 545 | 7 | funderburkjim | 66% |  |
+| pwg | 253 | 3 | funderburkjim | 64% |  |
+| ap | 209 | 3 | drdhaval2785 | 79% |  |
+| ap90 | 151 | 4 | funderburkjim | 68% |  |
+| pw | 150 | 3 | funderburkjim | 79% |  |
+| shs | 130 | 3 | drdhaval2785 | 78% |  |
+| ben | 99 | 3 | drdhaval2785 | 66% |  |
+| vcp | 88 | 3 | drdhaval2785 | 49% |  |
+| bur | 80 | 3 | funderburkjim | 69% |  |
+| skd | 70 | 4 | funderburkjim | 50% |  |
+| lrv | 59 | 2 | drdhaval2785 | 85% | ⚠ |
 | gra | 59 | 3 | funderburkjim | 78% |  |
-| skd | 55 | 4 | funderburkjim | 64% |  |
-| sch | 55 | 2 | funderburkjim | 93% | ⚠ |
+| sch | 57 | 3 | funderburkjim | 89% | ⚠ |
 | stc | 51 | 2 | funderburkjim | 63% |  |
-| lrv | 48 | 2 | drdhaval2785 | 81% | ⚠ |
-| ben | 43 | 3 | funderburkjim | 77% |  |
+| wil | 49 | 3 | drdhaval2785 | 47% |  |
 | md | 39 | 2 | funderburkjim | 90% | ⚠ |
-| wil | 36 | 3 | funderburkjim | 58% |  |
-| inm | 33 | 3 | funderburkjim | 73% |  |
+| inm | 34 | 3 | funderburkjim | 71% |  |
+| mwe | 34 | 2 | drdhaval2785 | 50% |  |
+| pwkvn | 33 | 2 | funderburkjim | 76% |  |
 | ccs | 33 | 2 | funderburkjim | 64% |  |
-| mwe | 32 | 2 | funderburkjim | 53% |  |
-| pwkvn | 32 | 2 | funderburkjim | 78% |  |
+| mw72 | 32 | 4 | drdhaval2785 | 72% |  |
 | ae | 32 | 2 | funderburkjim | 59% |  |
-| mw72 | 31 | 4 | drdhaval2785 | 71% |  |
-| yat | 23 | 2 | drdhaval2785 | 61% |  |
-| bor | 21 | 3 | drdhaval2785 | 57% |  |
+| yat | 27 | 2 | drdhaval2785 | 67% |  |
+| krm | 22 | 3 | drdhaval2785 | 36% |  |
+| ieg | 22 | 2 | drdhaval2785 | 77% |  |
+| bor | 22 | 3 | drdhaval2785 | 59% |  |
+| pui | 21 | 3 | funderburkjim | 52% |  |
+| acc | 20 | 2 | drdhaval2785 | 65% |  |
 | lan | 20 | 2 | funderburkjim | 65% |  |
 | gst | 20 | 2 | drdhaval2785 | 60% |  |
-| pui | 20 | 3 | funderburkjim | 55% |  |
+| etymology_stats | 19 | 1 | gasyoun | 100% | ⚠ |
+| pe | 19 | 3 | drdhaval2785 | 47% |  |
+| bop | 19 | 3 | funderburkjim | 74% |  |
 | bhs | 19 | 2 | funderburkjim | 68% |  |
-| bop | 18 | 3 | funderburkjim | 78% |  |
-| pe | 18 | 3 | drdhaval2785 | 44% |  |
 | cae | 18 | 2 | funderburkjim | 56% |  |
-| acc | 18 | 2 | drdhaval2785 | 61% |  |
-| ieg | 17 | 2 | drdhaval2785 | 71% |  |
-| krm | 15 | 3 | funderburkjim | 53% |  |
 | vei | 15 | 2 | funderburkjim | 60% |  |
+| pgn | 13 | 2 | drdhaval2785 | 69% |  |
 | mci | 13 | 2 | funderburkjim | 62% |  |
-| pgn | 12 | 2 | drdhaval2785 | 67% |  |
 
 ## 3. Throughput unit — count corrections, not raw commits or lines
 
@@ -93,7 +94,7 @@ Subject classification separates genuine corrections from bulk imports/reformats
 | 2023 | 161 | 138 | 0 | 23 |
 | 2024 | 207 | 175 | 0 | 32 |
 | 2025 | 253 | 212 | 0 | 41 |
-| 2026 | 411 | 221 | 0 | 190 |
+| 2026 | 629 | 391 | 1 | 237 |
 
 ## 4. Resolution latency is bimodal
 
@@ -124,6 +125,6 @@ The tail is dominated by deprioritised low-severity questions and enhancements, 
 
 ## Draft abstract
 
-> Digital lexicography projects are routinely assessed for code sustainability, but the sustainability of the **data** — the ongoing correction of dictionary text — is rarely measured. Using the version history of the Cologne Digital Sanskrit Lexicon (43 dictionaries, 1.49M entries), we show that content correction is highly concentrated: in no year do more than 4 people correct dictionary text, and a single editor accounts for 64–100% of corrections annually. Throughput is driven by individual bursts rather than crew size. Correction responsiveness is high (median issue resolution 6 days) but bimodal: a long tail of low-severity work remains unresolved for up to 6.4 years, where single-maintainer capacity is exhausted. We argue that the curatorial layer of a mature digital dictionary carries a measurable, currently unmanaged bus-factor risk, and propose correction-classified commit counts as the appropriate throughput unit.
+> Digital lexicography projects are routinely assessed for code sustainability, but the sustainability of the **data** — the ongoing correction of dictionary text — is rarely measured. Using the version history of the Cologne Digital Sanskrit Lexicon (43 dictionaries, 1.49M entries), we show that content correction is highly concentrated: in no year do more than 5 people correct dictionary text, and a single editor accounts for 64–100% of corrections annually. Throughput is driven by individual bursts rather than crew size. Correction responsiveness is high (median issue resolution 6 days) but bimodal: a long tail of low-severity work remains unresolved for up to 6.4 years, where single-maintainer capacity is exhausted. We argue that the curatorial layer of a mature digital dictionary carries a measurable, currently unmanaged bus-factor risk, and propose correction-classified commit counts as the appropriate throughput unit.
 
 *Object of analysis: GitHub commits/issues over dictionary source text — in scope per `docs/BOUNDARY_RULES.md`.*
