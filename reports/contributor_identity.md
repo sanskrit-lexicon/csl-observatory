@@ -21,9 +21,9 @@ Fill `Real name` and `ORCID` where blank. `—` in ORCID means none on file (or 
 
 | GitHub login | Contributions | Repos | Role | Real name | Affiliation | ORCID |
 |---|---:|---:|---|---|---|---|
-| `funderburkjim` | 4,866 | 58 | maintainer | Jim Funderburk | Cologne Digital Sanskrit Dictionaries | — |
-| `drdhaval2785` | 3,254 | 40 | core | Dhaval Patel | Cologne Digital Sanskrit Dictionaries | — |
-| `gasyoun` | 1,037 | 76 | lead | Mārcis Gasūns | Cologne Digital Sanskrit Dictionaries | — |
+| `funderburkjim` | 4,890 | 59 | maintainer | Jim Funderburk | Cologne Digital Sanskrit Dictionaries | — |
+| `drdhaval2785` | 3,780 | 41 | core | Dhaval Patel | Cologne Digital Sanskrit Dictionaries | — |
+| `gasyoun` | 2,556 | 77 | lead | Mārcis Gasūns | Cologne Digital Sanskrit Dictionaries | — |
 | `AnnaRybakovaT` | 82 | 11 | occasional | Anna Rybakova | — | — |
 | `Andhrabharati` | 63 | 3 | core | Nagabhushana Rao | Andhrabharati | — |
 | `aumsanskrit` | 17 | 1 | contributor | Scott Rhodes | — | — |
@@ -44,9 +44,9 @@ These contributors are identified — they only need to register (or supply) an 
 
 | Real name | GitHub login | Role | Contributions |
 |---|---|---|---:|
-| Jim Funderburk | `funderburkjim` | maintainer | 4,866 |
-| Dhaval Patel | `drdhaval2785` | core | 3,254 |
-| Mārcis Gasūns | `gasyoun` | lead | 1,037 |
+| Jim Funderburk | `funderburkjim` | maintainer | 4,890 |
+| Dhaval Patel | `drdhaval2785` | core | 3,780 |
+| Mārcis Gasūns | `gasyoun` | lead | 2,556 |
 | Anna Rybakova | `AnnaRybakovaT` | occasional | 82 |
 | Nagabhushana Rao | `Andhrabharati` | core | 63 |
 | Scott Rhodes | `aumsanskrit` | contributor | 17 |
