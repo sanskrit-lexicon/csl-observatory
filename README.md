@@ -138,9 +138,9 @@ contributor, workflow, project, or organization-process evidence.
 
 If you use these data in published work:
 
-> Gasūns, M. et al. (2026). *CSL Observatory: 13 years of Cologne Digital Sanskrit Lexicon* [Data set]. Zenodo. DOI: [10.5281/zenodo.15834721](https://doi.org/10.5281/zenodo.15834721).
+> Gasūns, M. et al. (2026). *CSL Observatory: 13 years of Cologne Digital Sanskrit Lexicon* [Data set]. `sanskrit-lexicon/csl-observatory` (no Zenodo DOI minted yet).
 
-Plus the snapshot date for reproducibility.
+Plus the snapshot date for reproducibility. `10.5281/zenodo.15834721`, previously cited here, was a false DOI — it resolves to an unrelated topology preprint, confirmed by a live check 20-07-2026 (H1364; see [SanskritLexicography CONTRADICTIONS §8](https://github.com/gasyoun/SanskritLexicography/blob/master/CONTRADICTIONS.md)).
 
 ## Tech Stack
 

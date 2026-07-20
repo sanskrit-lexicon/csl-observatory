@@ -2,14 +2,14 @@ cff-version: 1.2.0
 type: software
 title: csl-observatory
 message: >
-  If you use this software or the OBS-T dataset, please cite using the
-  metadata below. For the dataset specifically, cite the Zenodo DOI.
+  If you use this software, please cite using the metadata below. The OBS-T
+  dataset does not yet have its own minted Zenodo DOI (a prior identifiers
+  entry here, 10.5281/zenodo.15834721, was a false DOI — it resolves to an
+  unrelated topology preprint, not this dataset; removed 20-07-2026, H1364,
+  confirmed by a live Zenodo check). Cite the repository until a real DOI is
+  minted.
 license: GPL-3.0
 repository-code: https://github.com/sanskrit-lexicon/csl-observatory
-identifiers:
-  - type: doi
-    value: 10.5281/zenodo.15834721
-    description: Concept DOI for the OBS-T dataset (all versions), CC-BY-4.0
 version: 1.2.1
 date-released: "2026-07-18"
 abstract: >

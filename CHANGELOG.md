@@ -4,6 +4,9 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+### Fixed
+- **False OBS-T Zenodo DOI citation removed everywhere it was still asserted as genuine (H1364).** `10.5281/zenodo.15834721` resolves to an unrelated topology preprint (confirmed by the 03-07-2026 G6 finding, re-confirmed by a live check 20-07-2026). Corrected in `CITATION.cff`, `README.md`, `reports/obs_t_paper_draft.md`, `docs/REVIEWER_REPRODUCIBILITY.md`, `observatory/site/src/data.md`, `observatory/site/src/reproducibility.md` — all now state no DOI is minted yet instead of citing the false one. Re-minting remains an MG action; see [SanskritLexicography CONTRADICTIONS §8](https://github.com/gasyoun/SanskritLexicography/blob/master/CONTRADICTIONS.md).
+
 ## [1.2.1] - 2026-07-18
 
 ### Fixed
