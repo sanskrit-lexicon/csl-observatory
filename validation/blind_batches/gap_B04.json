@@ -1,0 +1,35 @@
+[
+ {
+  "row_id": "166",
+  "source_layer": "form",
+  "dict": "pw",
+  "headword_iast": "susrotas",
+  "old_iast": "¯Pāṭ. ‹śu› ¯P.",
+  "new_iast": "¯Pāṭ.śuP.",
+  "old_raw": "¯PAT. ‹zu› ¯P.",
+  "new_raw": "¯PAT.zuP.",
+  "comment_raw": "typo   Markup consistent with pw bibliography"
+ },
+ {
+  "row_id": "387",
+  "source_layer": "form",
+  "dict": "stc",
+  "headword_iast": "yadā",
+  "old_iast": "quand, au moment. où;",
+  "new_iast": "quand, au moment où ;",
+  "old_raw": "quand, au moment. où;",
+  "new_raw": "quand, au moment où ;",
+  "comment_raw": "an extra dot and a blank lacking"
+ },
+ {
+  "row_id": "245",
+  "source_layer": "form",
+  "dict": "cae",
+  "headword_iast": "ṣāsanavāhārin",
+  "old_iast": "{ṣāsanavāhārin}1{ṣāsanavā°hārin}",
+  "new_iast": "{ṣāsanahārin}1{ṣāsana°hārin}",
+  "old_raw": "{SAsanavAhArin}1{SAsanavA°hArin}",
+  "new_raw": "{SAsanahArin}1{SAsana°hArin}",
+  "comment_raw": "typo   error in variant expansion"
+ }
+]

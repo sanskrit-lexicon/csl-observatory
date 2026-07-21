@@ -1,0 +1,145 @@
+[
+ {
+  "row_id": "327",
+  "source_layer": "git",
+  "dict": "mw72",
+  "headword_iast": "raṃsu",
+  "old_iast": "{#rasu#}¦ {%raṃsu, us, us, u%} (said by some to be",
+  "new_iast": "{#raMsu#}¦ {%raṃsu, us, us, u%} (said by some to be",
+  "old_raw": "{#rasu#}¦ {%raṃsu, us, us, u%} (said by some to be",
+  "new_raw": "{#raMsu#}¦ {%raṃsu, us, us, u%} (said by some to be",
+  "comment_raw": "close #629"
+ },
+ {
+  "row_id": "268",
+  "source_layer": "git",
+  "dict": "md",
+  "headword_iast": "ṇyanta",
+  "old_iast": "<L>8284<pc>104-a3<k1>Ryanta<k2>Ryanta",
+  "new_iast": "<L>8284<pc>104-e3<k1>Ryanta<k2>Ryanta",
+  "old_raw": "<L>8284<pc>104-a3<k1>Ryanta<k2>Ryanta",
+  "new_raw": "<L>8284<pc>104-e3<k1>Ryanta<k2>Ryanta",
+  "comment_raw": "md:  page column corrections. Ref: https://github.com/sanskrit-lexicon/MD/issues/7"
+ },
+ {
+  "row_id": "67",
+  "source_layer": "form",
+  "dict": "pw",
+  "headword_iast": "sṭala",
+  "old_iast": "¯ḥEṃ.¯Pāṛ.",
+  "new_iast": "¯ḥEṃ.Pāṛ.",
+  "old_raw": "¯HEM.¯PAR.",
+  "new_raw": "¯HEM.PAR.",
+  "comment_raw": "typo one reference"
+ },
+ {
+  "row_id": "292",
+  "source_layer": "form",
+  "dict": "gra",
+  "headword_iast": "eśu",
+  "old_iast": "eśu",
+  "new_iast": "eśu -> ṇOṭ A ḥEāḍWOṛḍ ūṇḍEṛ 1st 'idam'",
+  "old_raw": "ezu",
+  "new_raw": "ezu -> NOT A HEADWORD UNDER 1st 'idam'",
+  "comment_raw": "Markup"
+ },
+ {
+  "row_id": "68",
+  "source_layer": "git",
+  "dict": "pwg",
+  "headword_iast": "nṛpativallabha",
+  "old_iast": "<ls>VID. 195. 198.</ls>",
+  "new_iast": "<ls>VID. 195.</ls> <ls n=\"VID.\">198.</ls>",
+  "old_raw": "<ls>VID. 195. 198.</ls>",
+  "new_raw": "<ls>VID. 195.</ls> <ls n=\"VID.\">198.</ls>",
+  "comment_raw": "issue93fix/vid  'VID N' Ref: https://github.com/sanskrit-lexicon/pwg/issues/160"
+ },
+ {
+  "row_id": "169",
+  "source_layer": "form",
+  "dict": "cae",
+  "headword_iast": "ṣilpakārikārī",
+  "old_iast": "{ṣilpakārikārī}1{ṣilpakāri°kārī}",
+  "new_iast": "{ṣilpakārī}1{ṣilpa°kārī}",
+  "old_raw": "{SilpakArikArI}1{SilpakAri°kArI}",
+  "new_raw": "{SilpakArI}1{Silpa°kArI}",
+  "comment_raw": "typo   variant expansion error"
+ },
+ {
+  "row_id": "34",
+  "source_layer": "form",
+  "dict": "pd",
+  "headword_iast": "atiriktasambanḍa",
+  "old_iast": "atirikta-sambhandha",
+  "new_iast": "atirikta-sambandha",
+  "old_raw": "atirikta-sambhandha",
+  "new_raw": "atirikta-sambandha",
+  "comment_raw": "typo IAST error"
+ },
+ {
+  "row_id": "289",
+  "source_layer": "git",
+  "dict": "ap",
+  "headword_iast": "kāñcīpadam",
+  "old_iast": "{#kAYciH#} + {#-padam#}¦ the hips and loins.",
+  "new_iast": "{#kAYciH, -cI#} + {#-padam#}¦ the hips and loins.",
+  "old_raw": "{#kAYciH#} + {#-padam#}¦ the hips and loins.",
+  "new_raw": "{#kAYciH, -cI#} + {#-padam#}¦ the hips and loins.",
+  "comment_raw": "DC date 16 Apr 2026. See https://github.com/sanskrit-lexicon/csl-corrections/issues/154"
+ },
+ {
+  "row_id": "85",
+  "source_layer": "form",
+  "dict": "mw",
+  "headword_iast": "vinaya",
+  "old_iast": "<vlex type=\"nhw\">ṇom.</vlex>",
+  "new_iast": "<vlex>ṇom.</vlex>",
+  "old_raw": "<vlex type=\"nhw\">Nom.</vlex>",
+  "new_raw": "<vlex>Nom.</vlex>",
+  "comment_raw": "markup"
+ },
+ {
+  "row_id": "106",
+  "source_layer": "form",
+  "dict": "mw",
+  "headword_iast": "māyā",
+  "old_iast": "Convolvulus Turpethum",
+  "new_iast": "<bot>Convolvulus Turpethum</bot>",
+  "old_raw": "Convolvulus Turpethum",
+  "new_raw": "<bot>Convolvulus Turpethum</bot>",
+  "comment_raw": "markup"
+ },
+ {
+  "row_id": "318",
+  "source_layer": "form",
+  "dict": "pw",
+  "headword_iast": "āroḍa",
+  "old_iast": "¯ṣPṛ.1284.",
+  "new_iast": "¯ṣpr.1284.",
+  "old_raw": "¯SPR.1284.",
+  "new_raw": "¯Spr.1284.",
+  "comment_raw": "typo"
+ },
+ {
+  "row_id": "156",
+  "source_layer": "form",
+  "dict": "pw",
+  "headword_iast": "samudradatta",
+  "old_iast": "¯ḥEṃ.¯Pāṛ.",
+  "new_iast": "¯ḥEṃ.Pāṛ.",
+  "old_raw": "¯HEM.¯PAR.",
+  "new_raw": "¯HEM.PAR.",
+  "comment_raw": "typo one reference"
+ },
+ {
+  "row_id": "127",
+  "source_layer": "git",
+  "dict": "mw",
+  "headword_iast": "ilādadha",
+  "old_iast": "(<s>iLA—daQa</s> <s>iqA—daQa</s>, and <s>ilA—daQa</s>), ¦ <lex>n.</lex> <ab>N.</ab> of a particular <s1 slp1=\"izwy-ayana\">Iṣṭy-ayana</s1> or sacrificial observance, <ls>AitBr.</ls>; <ls>ĀśvŚr.</ls> <info and=\"28698,iqAdaQa;28698.1,iLAdaQa;28698.2,ilAdaQa\"/><info n=\"rev\" pc=\"1320,3\"/><info lex=\"n\"/>",
+  "new_iast": "(<s>iLA—daDa</s> <s>iqA—daDa</s>, and <s>ilA—daDa</s>), ¦ <lex>n.</lex> <ab>N.</ab> of a particular <s1 slp1=\"izwy-ayana\">Iṣṭy-ayana</s1> or sacrificial observance, <ls>AitBr.</ls>; <ls>ĀśvŚr.</ls> <info and=\"28698,iqAdaDa;28698.1,iLAdaDa;28698.2,ilAdaDa\"/><info n=\"rev\" pc=\"1320,3\"/><info lex=\"n\"/>",
+  "old_raw": "(<s>iLA—daQa</s> <s>iqA—daQa</s>, and <s>ilA—daQa</s>), ¦ <lex>n.</lex> <ab>N.</ab> of a particular <s1 slp1=\"izwy-ayana\">Iṣṭy-ayana</s1> or sacrificial observance, <ls>AitBr.</ls>; <ls>ĀśvŚr.</ls> <info and=\"28698,iqAdaQa;28698.1,iLAdaQa;28698.2,ilAdaQa\"/><info n=\"rev\" pc=\"1320,3\"/><info lex=\"n\"/>",
+  "new_raw": "(<s>iLA—daDa</s> <s>iqA—daDa</s>, and <s>ilA—daDa</s>), ¦ <lex>n.</lex> <ab>N.</ab> of a particular <s1 slp1=\"izwy-ayana\">Iṣṭy-ayana</s1> or sacrificial observance, <ls>AitBr.</ls>; <ls>ĀśvŚr.</ls> <info and=\"28698,iqAdaDa;28698.1,iLAdaDa;28698.2,ilAdaDa\"/><info n=\"rev\" pc=\"1320,3\"/><info lex=\"n\"/>",
+  "comment_raw": "MW: revisions re supplement. Ref: https://github.com/sanskrit-lexicon/MWS/issues/171 (legacy1)"
+ }
+]
