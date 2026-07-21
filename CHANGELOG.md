@@ -4,6 +4,8 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+## [1.3.0] - 2026-07-21
+
 ### Added
 - **Blind cross-model IAA for the OBS-T location axis (H1385): κ = 0.906 [95 % CI 0.872–0.938], n = 390.**
   Two fresh, mutually blind LLM annotation passes — Opus 4.8 (`claude-opus-4-8`) and Sonnet 5
