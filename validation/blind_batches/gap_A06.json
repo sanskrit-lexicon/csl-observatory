@@ -1,0 +1,46 @@
+[
+ {
+  "row_id": "273",
+  "source_layer": "form",
+  "dict": "cae",
+  "headword_iast": "kākiṛīnī",
+  "old_iast": "{kākiṛīnī}1{kākiṛī++°nī}",
+  "new_iast": "{kākinī}1{kāki°nī}",
+  "old_raw": "{kAkiRInI}1{kAkiRI++°nI}",
+  "new_raw": "{kAkinI}1{kAki°nI}",
+  "comment_raw": "typo  variant expansion error"
+ },
+ {
+  "row_id": "276",
+  "source_layer": "git",
+  "dict": "shs",
+  "headword_iast": "govinda",
+  "old_iast": "{#govinda#}¦ m. ({#-ndaH#}) 1. One of the most usual appellations of KRISHNA or",
+  "new_iast": "{#govinda#}¦ m. ({#-ndaH#}) 1. One of the most usual appellations of KṚṢṆA or",
+  "old_raw": "{#govinda#}¦ m. ({#-ndaH#}) 1. One of the most usual appellations of KRISHNA or",
+  "new_raw": "{#govinda#}¦ m. ({#-ndaH#}) 1. One of the most usual appellations of KṚṢṆA or",
+  "comment_raw": "SHS: see shs_corrections.txt in Ref: https://github.com/sanskrit-lexicon/csl-corrections/issues/91"
+ },
+ {
+  "row_id": "214",
+  "source_layer": "git",
+  "dict": "mw",
+  "headword_iast": "aparapara",
+  "old_iast": "<s>apara—para</s> ¦ <lex>m. (<s>As</s> or <s>e</s>) fn. <ab>pl.</ab></lex> one and the other, various, <ls>Pāṇ. vi, 1, 144</ls>, <ab>Sch.</ab><info lex=\"m:f:n\"/>",
+  "new_iast": "<s>apara—para</s> ¦ <lex>m.</lex> (<s>As</s> or <s>e</s>) <lex>fn.</lex> <ab>pl.</ab> one and the other, various, <ls>Pāṇ. vi, 1, 144</ls>, <ab>Sch.</ab><info lex=\"m:f:n\"/>",
+  "old_raw": "<s>apara—para</s> ¦ <lex>m. (<s>As</s> or <s>e</s>) fn. <ab>pl.</ab></lex> one and the other, various, <ls>Pāṇ. vi, 1, 144</ls>, <ab>Sch.</ab><info lex=\"m:f:n\"/>",
+  "new_raw": "<s>apara—para</s> ¦ <lex>m.</lex> (<s>As</s> or <s>e</s>) <lex>fn.</lex> <ab>pl.</ab> one and the other, various, <ls>Pāṇ. vi, 1, 144</ls>, <ab>Sch.</ab><info lex=\"m:f:n\"/>",
+  "comment_raw": "MW: non-english word corrections. Ref: https://github.com/sanskrit-lexicon/MWS/issues/127"
+ },
+ {
+  "row_id": "376",
+  "source_layer": "git",
+  "dict": "pw",
+  "headword_iast": "amṛtaprāśana",
+  "old_iast": "<div n=\"1\">— 2) <lex>m.</lex> {%ein Gott%} <ls>R. 1,16,4. 6,4,7.</ls>",
+  "new_iast": "<div n=\"1\">— 2) <lex>m.</lex> {%ein Gott%} <ls>R. 1,16,4.</ls> <ls n=\"R.\">6,4,7.</ls>",
+  "old_raw": "<div n=\"1\">— 2) <lex>m.</lex> {%ein Gott%} <ls>R. 1,16,4. 6,4,7.</ls>",
+  "new_raw": "<div n=\"1\">— 2) <lex>m.</lex> {%ein Gott%} <ls>R. 1,16,4.</ls> <ls n=\"R.\">6,4,7.</ls>",
+  "comment_raw": "pw: R. markup, multiple links. Ref: https://github.com/sanskrit-lexicon/PWK/issues/90"
+ }
+]

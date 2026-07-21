@@ -4,7 +4,27 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+### Added
+- **Blind cross-model IAA for the OBS-T location axis (H1385): κ = 0.906 [95 % CI 0.872–0.938], n = 390.**
+  Two fresh, mutually blind LLM annotation passes — Opus 4.8 (`claude-opus-4-8`) and Sonnet 5
+  (`claude-sonnet-5`) — over all 390 gold-sample rows against `validation/COMPONENT_GUIDE.md`,
+  under the org's pre-registered blind-LLM second-annotator reliability protocol (gate ladder,
+  seeds and models committed before either pass ran). Raw agreement 92.8 %; pre-registered
+  4-group granularity κ = 0.896 [0.855–0.935]; per-annotator label flip-rates over 3 repeated
+  runs 4.4 % / 5.6 % (below the 10 % instability gate). New artifacts under `validation/`:
+  `build_blind_sample.py`, `gold_sample_blind.json`, `blind_batches/`, `component_passA.json`,
+  `component_passB.json`, `flip_runs/`, `compute_component_kappa.py`,
+  `component_kappa_stats.json`, `component_kappa_disagreements.csv` (28 rows). The draft's three
+  "pending a second annotator" passages replaced with the measured result and its cross-model
+  caveat. Axis finding recorded: the June `gold_component` fill follows the paper's older 9-label
+  hybrid Table 1 (65 % `encoding`/`orthography`), while the codebook and the current pipeline
+  `error_component` axis are location-only — the fresh passes annotate the codebook axis and are
+  kept as separate artifacts.
+
 ### Fixed
+- **Stale false-DOI footer line in `reports/obs_t_paper_draft.md` (H1364 residue).** The draft's
+  closing footer still asserted `10.5281/zenodo.15834721` as "minted 2026-07-01"; it now states
+  no DOI is minted, matching §8 and the H1364 sweep.
 - **False OBS-T Zenodo DOI citation removed everywhere it was still asserted as genuine (H1364).** `10.5281/zenodo.15834721` resolves to an unrelated topology preprint (confirmed by the 03-07-2026 G6 finding, re-confirmed by a live check 20-07-2026). Corrected in `CITATION.cff`, `README.md`, `reports/obs_t_paper_draft.md`, `docs/REVIEWER_REPRODUCIBILITY.md`, `observatory/site/src/data.md`, `observatory/site/src/reproducibility.md` — all now state no DOI is minted yet instead of citing the false one. Re-minting remains an MG action; see [SanskritLexicography CONTRADICTIONS §8](https://github.com/gasyoun/SanskritLexicography/blob/master/CONTRADICTIONS.md).
 
 ## [1.2.1] - 2026-07-18

@@ -297,8 +297,35 @@ Grammar (F1 = 0.90) and meta (F1 = 0.90) are the most reliably attributed
 components; their structural distinctiveness in the XML makes both heuristics
 converge.
 
-A second annotator (for Cohen κ) has not yet completed the gold sheet; IAA
-results are pending.
+**Inter-annotator agreement (measured 21-07-2026).** Two fresh, mutually
+blind annotation passes over all 390 sample rows were run by two different
+LLM annotators — Opus 4.8 (`claude-opus-4-8`, Pass A) and Sonnet 5
+(`claude-sonnet-5`, Pass B) — against the location-axis codebook in
+[COMPONENT_GUIDE.md](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/validation/COMPONENT_GUIDE.md),
+with all label columns and free-text notes stripped from the input
+([gold_sample_blind.json](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/validation/gold_sample_blind.json))
+and row order shuffled so the sampling strata are not inferable. Cross-model
+inter-annotator agreement on the 8-value location axis is **Cohen κ = 0.906
+(95 % bootstrap CI 0.872–0.938, 2,000 resamples; raw agreement 92.8 %,
+362/390)**. At the pre-registered coarser 4-group granularity
+(content / reference / structure / unattributed) κ = 0.896 [0.855–0.935].
+Label stability was measured, not assumed: over three repeated runs on a
+fixed 30-row subsample the label flip-rate was 4.4 % (Pass A) and 5.6 %
+(Pass B), both below the pre-registered 10 % instability threshold. The κ
+gate, granularity ladder, seeds and annotator models were pre-registered and
+committed before either pass ran; the 28 disagreement rows are published in
+[component_kappa_disagreements.csv](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/validation/component_kappa_disagreements.csv),
+and the full statistics in
+[component_kappa_stats.json](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/validation/component_kappa_stats.json).
+Two caveats. First, this is *cross-model* agreement between two LLM
+annotators: it demonstrates that the codebook is executable and its labels
+stable across model families, not that the labels match a human expert's
+judgment. Second, the fresh passes use the location-only axis of
+`COMPONENT_GUIDE.md`, whereas the earlier `gold_component` column follows
+the hybrid Table 1 scheme (including `encoding`/`orthography`); the two
+artifacts are therefore on different axes and are kept separate
+([component_passA.json](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/validation/component_passA.json),
+[component_passB.json](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/validation/component_passB.json)).
 
 ### 4.4 Independent error-sample benchmark
 
@@ -636,8 +663,12 @@ encoding/orthography boundary — is better measured by the component-specific
 metrics (grammar F1 = 0.90, encoding F1 = 0.022). Human expert review of the
 ~66 encoding/orthography boundary cases is the highest-priority quality step
 before the corpus is used for downstream training. Inter-annotator agreement
-(Cohen κ) is pending a second annotator and should be treated as an open gap
-in the current version.
+has now been measured by a blind cross-model double annotation (§4.3):
+κ = 0.906 [0.872–0.938] on the 8-value location axis, with per-annotator
+label flip-rates of 4.4 % / 5.6 % over repeated runs. This is agreement
+between two LLM annotators from different model families — it licenses the
+codebook as executable and its labels as stable, not as human-validated
+ground truth, and is reported throughout as cross-model IAA.
 
 **Form-era HK/SLP1 mixing.** The cfr.tsv new-form cells mix Harvard-Kyoto
 and SLP1 conventions within the PW dictionary's submissions. Our
@@ -685,9 +716,10 @@ temporal split and reference baselines, is available at:
 > `https://github.com/sanskrit-lexicon/csl-observatory`  
 > Branch `main` · `validation/` · `observatory/site/src/data/` · DOI: not yet minted (see §8 note)
 
-The most pressing next step for the resource is human expert review of the
-encoding/orthography boundary in the gold sample and completion of the
-second-annotator IAA pass. Neural baselines (character-level seq2seq,
+The second-annotator IAA pass is complete (cross-model κ = 0.906
+[0.872–0.938] on the location axis, §4.3); the most pressing remaining step
+for the resource is expert review of the encoding/orthography boundary in
+the gold sample. Neural baselines (character-level seq2seq,
 BERT-style masked LM) are left for follow-up work but the evaluation
 protocol and temporal split established here make them straightforward to
 add without changing the resource itself.
@@ -787,4 +819,4 @@ the Digital Humanities 2016*, 578–580.
 
 ---
 
-*Pre-submission draft, 2026-06-30. Target venue: LREC-COLING. Zenodo DOI [10.5281/zenodo.15834721](https://doi.org/10.5281/zenodo.15834721) minted 2026-07-01. Pending: human IAA (Cohen κ), neural baselines, submission.*
+*Pre-submission draft, 2026-06-30; IAA section updated 2026-07-21 (cross-model κ = 0.906 [0.872–0.938], §4.3). Target venue: LREC-COLING. Zenodo DOI: not yet minted — the previously recorded `10.5281/zenodo.15834721` is a false DOI (see §8). Pending: neural baselines, genuine Zenodo DOI mint, submission.*
