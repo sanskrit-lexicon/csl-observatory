@@ -4,6 +4,16 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+### Added
+
+- **Three analytical idle-stats dashboards (H1524).** POS-by-text, paradigm-cell coverage,
+  and sense polysemy were already computed (H817 TSVs + reports) but only thin census
+  magnitude bars. New Observable pages at `/pos-by-text`, `/paradigm-cell-coverage`, and
+  `/sense-polysemy` (each ≥5 `Plot.plot` calls, Trust Block, table + CSV download), with
+  read-only TSV→CSV loaders under `observatory/site/src/data/`, nav + `PAGE_DESCRIPTIONS`,
+  smoke registration, and sitemap. Executed by Grok 4.5 (`grok-4.5`) on user override of the
+  Sonnet 5 intended executor.
+
 ## [1.3.0] - 2026-07-21
 
 ### Added
