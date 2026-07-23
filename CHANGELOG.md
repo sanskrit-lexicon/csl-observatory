@@ -4,6 +4,8 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+## [1.4.0] - 2026-07-23
+
 ### Added
 
 - **Three analytical idle-stats dashboards (H1524).** POS-by-text, paradigm-cell coverage,
@@ -258,7 +260,8 @@ sanskrit-lexicon organisation plus the OBS-T error-typology language resource.
   dictionary-content research moved to `csl-atlas` (see `docs/BOUNDARY_RULES.md`).
 - Citation DOI minted: [10.5281/zenodo.15834721](https://doi.org/10.5281/zenodo.15834721) (in CITATION.cff). Contributor ORCIDs are not yet registered.
 
-[Unreleased]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v1.4.0...HEAD
+[1.4.0]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v1.3.0...v1.4.0
 [1.1.0]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v0.1.0...v1.0.0
 [0.1.0]: https://github.com/sanskrit-lexicon/csl-observatory/releases/tag/v0.1.0
