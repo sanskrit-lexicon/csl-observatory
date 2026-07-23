@@ -47,7 +47,10 @@ const PAGE_DESCRIPTIONS = {
   "/census-l2-morphology": "L2 census: kosha.db, DCS lemma/form tables, the Heritage form oracle, and vidyut FST fallback coverage.",
   "/census-l3-corpus": "L3 census: DCS full-corpus tokens/sentences, SamudraManthanam parallel corpus, and frequency-layer statistics.",
   "/census-l4-translation": "L4 census: the Sa-Ru alignment corpus, 3-layer glossary, mw_ru translation cards, and per-dict RU coverage.",
-  "/census-l5-roots": "L5 census: the MW verbal-root inventory, etymology derivation tables, root-oracle agreement, and the Whitney x DCS audit."
+  "/census-l5-roots": "L5 census: the MW verbal-root inventory, etymology derivation tables, root-oracle agreement, and the Whitney x DCS audit.",
+  "/pos-by-text": "UD part-of-speech shares across 270 DCS texts: stacked profiles, text×UPOS heatmap, outlier ranks for NOUN% and VERB% — genre/register skew beyond the corpus mean.",
+  "/paradigm-cell-coverage": "Finite-verb paradigm-cell coverage for 8,054 DCS roots: cell-count histogram, tokens×cells scatter, top roots, and the most frequent cell labels — with the unaccented-DCS class I/VI caveat.",
+  "/sense-polysemy": "Mean sense units per entry for the 11 CDSL dictionaries with structural sense marking (year, family, entry volume) — n=11/44 ceiling stated honestly."
 };
 
 // Escape a string for safe interpolation into an HTML attribute value.
@@ -150,7 +153,10 @@ export default {
     {name: "Stats Census — L2 Morphology", path: "/census-l2-morphology"},
     {name: "Stats Census — L3 Corpus", path: "/census-l3-corpus"},
     {name: "Stats Census — L4 Translation", path: "/census-l4-translation"},
-    {name: "Stats Census — L5 Roots", path: "/census-l5-roots"}
+    {name: "Stats Census — L5 Roots", path: "/census-l5-roots"},
+    {name: "POS by text", path: "/pos-by-text"},
+    {name: "Paradigm-cell coverage", path: "/paradigm-cell-coverage"},
+    {name: "Sense polysemy", path: "/sense-polysemy"}
   ],
   theme: ["air", "alt", "wide"],
   header: `<a href="/" style="display: flex; align-items: center; gap: 0.5rem; color: inherit; text-decoration: none;">
