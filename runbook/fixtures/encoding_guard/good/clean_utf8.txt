@@ -1,0 +1,1 @@
+A clean ASCII-safe UTF-8 line with an accent: áéí.

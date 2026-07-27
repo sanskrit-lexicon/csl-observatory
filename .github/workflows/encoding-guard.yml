@@ -1,0 +1,60 @@
+name: Encoding/XML guard (RH5 pilot)
+
+# Pilot of the no-BOM/UTF-8/NFC/XML-parse guard for dictionary-source change
+# paths (2026-Q3 roadmap RH5). Piloted here in csl-observatory -- the owning
+# tooling repo for this CI template -- per the org rule that agents never
+# commit to csl-orig directly (../CLAUDE.md). Fan-out template for other
+# dictionary/tooling repos: runbook/templates/encoding-xml-guard.yml.
+# Design note: docs/ENCODING_GUARD.md.
+
+on:
+  push:
+    paths:
+      - 'scripts/encoding_xml_guard.py'
+      - 'runbook/fixtures/encoding_guard/**'
+      - 'runbook/templates/encoding-xml-guard.yml'
+      - '.github/workflows/encoding-guard.yml'
+  pull_request:
+    paths:
+      - 'scripts/encoding_xml_guard.py'
+      - 'runbook/fixtures/encoding_guard/**'
+      - 'runbook/templates/encoding-xml-guard.yml'
+      - '.github/workflows/encoding-guard.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - name: Self-test against bundled BOM/NFC/XML-parse fixtures
+        run: |
+          python scripts/encoding_xml_guard.py self-test | tee self_test.txt
+
+      - name: Post summary
+        if: always()
+        run: |
+          {
+            echo "# Encoding/XML guard self-test"
+            echo
+            echo '```'
+            cat self_test.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Guard this repo's own template + fixture files
+        run: |
+          python scripts/encoding_xml_guard.py check \
+            scripts/encoding_xml_guard.py \
+            runbook/templates/encoding-xml-guard.yml \
+            runbook/fixtures/encoding_guard/good/*
