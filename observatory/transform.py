@@ -332,6 +332,18 @@ def main():
     # ────────────────────────────────────────────────────────────────
     # 8. Manifest of all generated files
     # ────────────────────────────────────────────────────────────────
+    manifest_path = DATA_DIR / "manifest.json"
+    # dataset_ids (csl-obs/<dataset>@<semver> registrations, H1494) is owned by other
+    # pipelines (e.g. OBS-T's migrate_event_ids_v1.py), not this script -- carry it
+    # forward instead of letting this unconditional overwrite silently erase it.
+    existing_dataset_ids = {}
+    if manifest_path.exists():
+        try:
+            with open(manifest_path, encoding="utf-8") as f:
+                existing_dataset_ids = json.load(f).get("dataset_ids", {})
+        except (json.JSONDecodeError, OSError):
+            existing_dataset_ids = {}
+
     manifest = {
         "snapshot_date": SNAPSHOT_DATE,
         "transformed_at": datetime.now().isoformat(),
@@ -345,7 +357,9 @@ def main():
             "issue_typology_annual.csv": len(typo_rows)
         }
     }
-    with open(DATA_DIR / "manifest.json", "w", encoding="utf-8") as f:
+    if existing_dataset_ids:
+        manifest["dataset_ids"] = existing_dataset_ids
+    with open(manifest_path, "w", encoding="utf-8") as f:
         json.dump(manifest, f, indent=2)
 
     print(f"\n{'='*60}")
