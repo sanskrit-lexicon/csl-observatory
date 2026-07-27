@@ -148,6 +148,18 @@ CATALOG: dict[str, Entry] = {
         "Summary of PWG <ls> citation link coverage: scan vs HTML targets over the translated article subset.",
         "Derived in the PWG repo, not regenerated here; see reports/pwg_citation_coverage.md for the live sources.",
     ),
+    "pwg_scan_index.csv": Entry(
+        "citation coverage",
+        "scripts/pwg_scan_index.py",
+        "One row per PWG/PWK literary source in the 2025-2026 volunteer scan-indexing campaign: status, citation count, pages, volunteer, dates, scan directory.",
+        "Transcribed from a maintainer-kept Google Sheet, not derived from the dictionary; the citation-count column's own provenance is unresolved and is used for ranking only, never as a share of a dictionary-wide total (reports/pwg_scan_index.md section 6.2).",
+    ),
+    "pwg_scan_index_summary.json": Entry(
+        "citation coverage",
+        "scripts/pwg_scan_index.py",
+        "Campaign aggregates behind the Scan-Index Campaign page: status distribution, per-volunteer throughput, monthly velocity, and the ranked unclaimed backlog.",
+        "Percentages are coverage of the tracked set, not of the dictionary; per-volunteer citation mass under-credits volunteers whose works are multi-volume, since the sheet records the count once on volume 1.",
+    ),
     "error_recapture.csv": Entry(
         "obs-t recapture",
         "scripts/error_recapture.py",

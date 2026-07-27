@@ -4,6 +4,29 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+### Added
+
+- **The PWG literary-source scan-index campaign, committed as data (H1706).** The
+  2025–2026 volunteer effort that page-indexed the printed editions PWG cites existed
+  only as a live Google Sheet; nothing survived it being edited or unshared. Now snapshotted
+  and derived under `data/pwg_scan_index_tracker/`: all four sheet tabs verbatim, an 82-row
+  cross-validated registry (TSV + JSON), a ranked e-text candidate queue, and a dated audit
+  of all 37 scan directories. Generator `scripts/pwg_scan_index.py` (stdlib-only offline;
+  `--fetch` re-snapshots). Analysis in `reports/pwg_scan_index.md`, dashboard page at
+  `/scan-index`, campaign history in `docs/PWG_SCAN_INDEX_CAMPAIGN_HISTORY_2025_2026.md`
+  reconstructed from 40 PWG/PWK coordinating issues.
+  **Headline:** 55 of 82 works indexed, carrying 73.7 % of the tracked citation mass across
+  28,963 pages by 8 volunteers; 7 works unclaimed, 5 of them Vedic; median 12 days from
+  index posted to scan public.
+  **Three findings the data forced.** (1) The sheet's `Citation count` column has
+  unresolved provenance — it reproduces neither the bare-string counts nor a rollup of the
+  full-dictionary `<ls>` extraction, so it is used for ranking only and never as a share of
+  a dictionary-wide denominator. (2) `rvps` (Ṛgveda-Prātiśākhya) is indexed but unwired, and
+  worse than unwired: a Prātiśākhya citation currently resolves to an Ṛgveda *hymn* anchor.
+  (3) The tracker spells one scan directory `rAjatar` where the canonical name is `rajatar`;
+  GitHub Pages paths are case-sensitive, so links built from the tracker spelling 404.
+  Executed by Opus 5 (`claude-opus-5`).
+
 ## [1.4.0] - 2026-07-23
 
 ### Added
