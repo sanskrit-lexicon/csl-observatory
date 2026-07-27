@@ -4,6 +4,8 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+## [1.5.0] - 2026-07-27
+
 ### Added
 
 - **The PWG literary-source scan-index campaign, committed as data (H1706).** The
@@ -26,6 +28,15 @@ All notable changes to this repository are documented here, following [Keep a Ch
   (3) The tracker spells one scan directory `rAjatar` where the canonical name is `rajatar`;
   GitHub Pages paths are case-sensitive, so links built from the tracker spelling 404.
   Executed by Opus 5 (`claude-opus-5`).
+
+### Changed
+
+- **E-text queue: `ramayanabom` re-annotated from "claimed" to "assessed and
+  REJECTED".** H1705 closed the same day with a measured negative result — the
+  Bombay uttarakāṇḍa has 111 sargas + 13 interpolated against the corpus's 100, and
+  the corpus file carries 2,690 sa / 0 ru critical-edition text, so a Bombay
+  concordance would have no consumer. The queue now says so, to stop a future
+  session re-deriving a refuted conclusion.
 
 ## [1.4.0] - 2026-07-23
 

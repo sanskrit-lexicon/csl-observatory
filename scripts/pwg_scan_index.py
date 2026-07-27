@@ -603,11 +603,16 @@ def main():
     # Every done row is a candidate for text extraction. Rank by citation mass; the
     # RU-reuse column says whether the translated-subset pipeline would feel it too.
     queue_path = tracker_dir / "pwg_etext_candidate_queue.tsv"
-    # Scan directories already claimed by an open handoff, so the queue does not
-    # hand out work a session is holding. Keyed by scan directory, not LS code,
-    # because a handoff takes a volume of a book, not an abbreviation.
+    # Scan directories whose extraction question has already been settled elsewhere,
+    # so the queue does not hand out work that is spoken for or already refuted.
+    # Keyed by scan directory, not LS code, because a handoff takes a volume of a
+    # book, not an abbreviation.
     ALREADY_QUEUED = {
-        "ramayanabom": "H1705 (Rāmāyaṇa Bombay, book 7 e-text)",
+        "ramayanabom": "assessed and REJECTED by H1705 (27-07-2026): the Bombay "
+                       "uttarakāṇḍa has 111 sargas + 13 interpolated against the "
+                       "corpus's 100, and the corpus file is 2,690 sa / 0 ru "
+                       "critical-edition text — a Bombay concordance would have no "
+                       "consumer. Do not re-derive.",
     }
     # Rank on the sheet's own count only, so the number that orders the queue is the
     # number the queue displays. Volumes of a multi-volume work carry no count of
@@ -940,8 +945,10 @@ def main():
              if r["scan_dir_canonical"] else "—")
           + f" | {'; '.join(notes_q) or '—'} |")
     A("")
-    A("Already claimed elsewhere, so **not** available to a new handoff: "
-      + ", ".join(f"`{k}` — {v}" for k, v in ALREADY_QUEUED.items()) + ".\n")
+    A("Settled elsewhere, so **not** available to a new handoff:\n")
+    for k, v in ALREADY_QUEUED.items():
+        A(f"- `{k}` — {v}")
+    A("")
 
     A("## 8 · Data-quality notes on the sheet itself\n")
     notes = []
