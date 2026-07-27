@@ -142,12 +142,14 @@ An index pays off only after three gates, and they are not the same count: the i
 | index finished (`done`) | 55 works |
 | scan directory public (dated `Public Link`) | 55 works |
 | scan repository exists and serves GitHub Pages | 37 / 37 directories |
-| resolver fully wired | 32 directories |
-| resolver partially wired (some citation arities return nothing) | 3 |
+| resolver fully wired | 35 directories |
+| resolver partially wired (some citation arities return nothing) | 1 |
 | resolver mis-keyed (target exists, unreachable from the tracked code) | 1 |
-| resolver not wired at all | 1 |
+| resolver not wired at all | 0 |
 
 Verified by a dated static audit of the resolver source and the live GitHub org — see [`scan_target_audit.tsv`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/data/pwg_scan_index_tracker/scan_target_audit.tsv). All 37 directories are real public repositories under [sanskrit-lexicon-scans](https://github.com/sanskrit-lexicon-scans), each serving a page-lookup app at `https://sanskrit-lexicon-scans.github.io/<dir>/`; together they hold about 11.2 GB of page images.
+
+**Updated 27-07-2026 (H1714, gasyoun/SanskritLexicography#840).** `rvps` (was `not wired at all` — a Rgveda-Pratisakhya citation silently mislinked to an unrelated Rgveda hymn anchor) and `taittiriyas`/`taittiriyabr` (were `partially wired` — 3-parameter citations returned `None`) are now fully wired. `pancar` remains partially wired (2-parameter citations have no natural viewer target; the canonical `csl-app` Dart source has the same limitation, so this is not treated as a live gap). `amara_col` remains mis-keyed but is now confirmed by-design: the tracker shows 16,151 citations under bare `AK.` for the paired `amara_dlc` edition and zero for Colebrooke under that key, so there is no evidence PWG ever cites Colebrooke via a bare `AK.` form. **Open, unresolved:** the canonical `csl-app` Dart source (`ls_patterns.dart` / `ls_service.dart`) shares both the `rvps` mislink and the `TS.` dispatch bug — only the Python port (`ls_resolver.py`) was fixed; whether to port the fix to the Flutter app is a call a human should make.
 
 ### Defects this audit found
 
