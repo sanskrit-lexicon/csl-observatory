@@ -160,11 +160,41 @@ CATALOG: dict[str, Entry] = {
         "Campaign aggregates behind the Scan-Index Campaign page: status distribution, per-volunteer throughput, monthly velocity, and the ranked unclaimed backlog.",
         "Percentages are coverage of the tracked set, not of the dictionary; per-volunteer citation mass under-credits volunteers whose works are multi-volume, since the sheet records the count once on volume 1.",
     ),
+    "event_id_crosswalk_v1.csv": Entry(
+        "obs-t corpus",
+        "scripts/migrate_event_ids_v1.py",
+        "Crosswalk from the pre-v1 opaque event ids to the persistent obst:v1:<layer>:<dict>:<hash> scheme, one row per migrated correction event.",
+        "A one-time migration artifact kept so older citations still resolve; it is not regenerated on refresh and must not be used as an event corpus.",
+    ),
+    "corrector_recapture.csv": Entry(
+        "obs-t recapture",
+        "scripts/corrector_recapture.py",
+        "Within-era corrector-pair recapture: Chapman over corrector pairs and Chao2 over all correctors of a dictionary-era, against the two-era estimate.",
+        "Correctors are resolved people, not raw cells; joint cells are excluded as non-independent. Rows with chao2_stable = 0 (Q2 < 10) are not reportable estimates.",
+    ),
+    "dict_record_counts.csv": Entry(
+        "dictionary inventory",
+        "scripts/headword_linkage.py",
+        "<L> record count and distinct-<k1> headword count for every csl-orig v02 dictionary — the physical denominator and cap for population estimates.",
+        "Counted from the sibling csl-orig checkout at refresh time; four dictionaries carrying correction events (pd, abch, apes, pwg2013) have no v02 entry file and so no row.",
+    ),
     "error_recapture.csv": Entry(
         "obs-t recapture",
         "scripts/error_recapture.py",
         "Chapman capture-recapture estimates of error-prone records remaining per dictionary, from two-era overlap.",
         "Order-of-magnitude only: sequential occasions and heterogeneous catchability violate Chapman assumptions in opposite directions; estimates capped at record counts.",
+    ),
+    "headword_key_collisions.csv": Entry(
+        "dictionary inventory",
+        "scripts/headword_linkage.py",
+        "Per dictionary x linkage level: how often the record-linkage key merges two distinct records of that dictionary — the ambiguity cost of each level.",
+        "A property of the key and the dictionary, not of the correction corpus: it bounds ambiguity, it does not count the false matches actually made (see linkage_ladder.csv).",
+    ),
+    "linkage_ladder.csv": Entry(
+        "obs-t recapture",
+        "scripts/error_recapture.py",
+        "Recaptures won and false matches measured at each two-era linkage level, per dictionary — the evidence behind the operating level.",
+        "False matches are counted by the attestation test against csl-orig; rows with audited = 0 had no inventory available and carry no verdict.",
     ),
     "etymology_marker_preliminary.csv": Entry(
         "dictionary etymology",
