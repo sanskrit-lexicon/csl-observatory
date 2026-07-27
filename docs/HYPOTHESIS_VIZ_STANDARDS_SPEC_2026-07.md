@@ -402,8 +402,8 @@ Observatory owns the **org** citation/reference surface; the dictionary `<ls>` c
 - [ ] `docs/DATASHEET_TEMPLATE.md` created; `/data-release` discipline references it; Zenodo DOI
       fix executed **only after 17-07-2026** via `scripts/fix_obs_t_doi.py --record … --apply`.
 - [ ] MWSA lineage subsection added to `docs/DATASHEET.md` + paper draft, with citations.
-- [ ] `docs/ONTOLEX_TEI_ROUTING_CONTRACT.md` committed and handed to csl-standards via issue;
-      no RDF/TEI code in this repo.
+- [x] `docs/ONTOLEX_TEI_ROUTING_CONTRACT.md` committed and handed to csl-standards via issue;
+      no RDF/TEI code in this repo. (H1495, 27-07-2026, Sonnet 5 `claude-sonnet-5`)
 - [ ] Org reference-graph node/edge CSVs specified in `data/manifest.json`; extractor reads only
       GitHub-evidence files; `<ls>`-shaped content explicitly skipped.
 
