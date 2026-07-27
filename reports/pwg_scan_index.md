@@ -184,7 +184,9 @@ Every finished index is a candidate for full-text extraction: the per-page index
 | 14 | `MĀRK. P.` | MĀRKĀṆḌEYAPURĀṆA | 5,436 | 693 | [`markandeyapurana`](https://github.com/sanskrit-lexicon-scans/markandeyapurana) | — |
 | 15 | `TS.` | TAITTIRĪYASAM̃HITĀ | 5,387 | 846 | [`taittiriyas`](https://github.com/sanskrit-lexicon-scans/taittiriyas) | resolver partial |
 
-Already claimed elsewhere, so **not** available to a new handoff: `ramayanabom` — H1705 (Rāmāyaṇa Bombay, book 7 e-text).
+Settled elsewhere, so **not** available to a new handoff:
+
+- `ramayanabom` — assessed and REJECTED by H1705 (27-07-2026): the Bombay uttarakāṇḍa has 111 sargas + 13 interpolated against the corpus's 100, and the corpus file is 2,690 sa / 0 ru critical-edition text — a Bombay concordance would have no consumer. Do not re-derive.
 
 ## 8 · Data-quality notes on the sheet itself
 
