@@ -4,6 +4,22 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+### Added
+
+- **Persistent OBS-T event-ID scheme (H1494, roadmap Part 4.1).** `event_id` in
+  `data/schema/correction-event.schema.json` now carries a `pattern`
+  (`^obst:v1:(form|git|printchange|batch):[a-z0-9]+:[0-9a-f]{12}$`) plus a `$comment`
+  documenting the SHA-256 recipe (`event_id_v1()` in `scripts/build_correction_events.py`,
+  reused by `scripts/reconstruct_git_events.py` so freshly generated rows already comply).
+  One-off `scripts/migrate_event_ids_v1.py` rewrote all 52,498 rows across every
+  `correction_events*.csv` to the new scheme (idempotent, schema-validated 0 errors) and
+  wrote `observatory/site/src/data/event_id_crosswalk_v1.csv` so any `event_id` already
+  cited in a report stays resolvable. **Known property, not a bug:** the tuple deliberately
+  excludes `headword_iast`, so 7,948 of the 52,498 rows share an id with at least one other
+  row (identical evidence). `data/manifest.json` gained a `dataset_ids.correction-events`
+  row (`csl-obs/correction-events@1.0.0`); `observatory/transform.py` now preserves that
+  key across its own regenerations instead of silently overwriting it.
+
 ## [1.5.0] - 2026-07-27
 
 ### Added

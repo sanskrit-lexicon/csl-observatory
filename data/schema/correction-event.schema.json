@@ -13,7 +13,9 @@
   ],
   "properties": {
     "event_id": {
-      "type": "string"
+      "type": "string",
+      "pattern": "^obst:v1:(form|git|printchange|batch):[a-z0-9]+:[0-9a-f]{12}$",
+      "$comment": "v1 recipe: obst:v1:<source_layer>:<dict>:<h12>, where <h12> = first 12 hex chars of SHA-256 over the tuple (source_layer, dict, source_path, commit_sha, date, old_iast, new_iast) joined with U+001F (unit separator). Deterministic and invariant across re-runs (same evidence -> same id); the v1 segment versions the recipe. NOT guaranteed globally unique: rows that share every tuple field collapse to the same id by design (in the 27-07-2026 migration, 9,883 of 52,498 rows shared an id with at least one other row -- headword_iast is deliberately excluded from the tuple). See scripts/migrate_event_ids_v1.py and observatory/site/src/data/event_id_crosswalk_v1.csv for the old->new mapping."
     },
     "date": {
       "type": "string"

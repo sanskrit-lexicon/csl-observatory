@@ -49,7 +49,7 @@ csv.field_size_limit(10_000_000)
 
 # reuse Phase-1 helpers and OBS-Q git classifier/resolver
 sys.path.insert(0, HERE)
-from build_correction_events import edit_ops, detect_script, empirical_cluster, public_identity  # noqa: E402
+from build_correction_events import edit_ops, detect_script, empirical_cluster, public_identity, event_id_v1  # noqa: E402
 from obs_q_correction import classify, load_resolver as load_git_resolver        # noqa: E402
 
 FIELDS = ['event_id', 'date', 'source_layer', 'dict', 'lcode', 'headword_iast',
@@ -303,10 +303,7 @@ def main():
                 pass  # keep pure ins/del-of-blank? skip whitespace-only noise
             old_iast, new_iast, ops, dist, edit_space = git_edit_payload(old_line, new_line)
             ops_json = json.dumps(ops, ensure_ascii=False)
-            eid = hashlib.sha1(
-                ('git|' + sha[:12] + '|' + source_path + '|' + cur_dict + '|'
-                 + lcode + '|' + change_kind + '|' + old_line + '|'
-                 + new_line).encode('utf-8')).hexdigest()[:16]
+            eid = event_id_v1('git', cur_dict, source_path, sha, date, old_iast, new_iast)
             events_by_kind[change_kind] += 1
             rows.append({
                 'event_id': eid, 'date': date, 'source_layer': 'git',
