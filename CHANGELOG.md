@@ -5,6 +5,11 @@ All notable changes to this repository are documented here, following [Keep a Ch
 ## [Unreleased]
 
 ### Fixed
+- **`event_id_crosswalk_v1.csv` was never registered in `scripts/data_index.py`** (it arrived
+  with the persistent-event-ID migration in [#109](https://github.com/sanskrit-lexicon/csl-observatory/pull/109)),
+  so `python scripts/data_index.py --check` — which `refresh-observatory.yml` runs on every
+  refresh — failed on `main` with `missing catalog entries`. Found while registering the H1477
+  data files; catalog now 66 files, check green.
 - **`scan_target_audit.tsv` / §7 of `reports/pwg_scan_index.md` re-verified after the `rvps` mislink + TS./TBR. arity-gap fix (H1714).** `rvps` flips from `not wired at all` to `yes` (was silently mislinking Rgveda-Pratisakhya citations to an unrelated Rgveda hymn anchor); `taittiriyas`/`taittiriyabr` flip from `partial` to `yes` (3-parameter citations now resolve). `pancar` stays `partial` (2-param has no natural viewer target, confirmed not a gap) and `amara_col` stays `mis-keyed` but is now recorded as by-design (16,151 citations under bare `AK.` for the paired Deslongchamps edition, zero measured for Colebrooke under that key). Fixed in [gasyoun/SanskritLexicography#840](https://github.com/gasyoun/SanskritLexicography/pull/840); tracker counts now 35 wired / 1 partial / 1 mis-keyed / 0 unwired (was 32/3/1/1).
 
 ### Added
@@ -42,6 +47,29 @@ All notable changes to this repository are documented here, following [Keep a Ch
   `csl-observatory` keeping only the process metrics. Reference added to the paper's
   bibliography; Part 4 acceptance checklist item 3 flipped to done in
   `docs/HYPOTHESIS_VIZ_STANDARDS_SPEC_2026-07.md`.
+- **Measured record linkage + a second recapture design for G3/A48 (H1477).** The two-era
+  capture-recapture estimate was joining the eras by exact headword string, which loses real
+  recaptures (the form era carries ASCII fallbacks, homonym digits and 3,905 cells of raw SLP1
+  residue; the git era carries clean `<k1>`) and so inflates N̂. New
+  [`scripts/headword_linkage.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/headword_linkage.py)
+  supplies a **ladder of linkage keys with a measured false-match rate for each** — two offline
+  measurements against the dictionaries' own `<k1>` inventories: key-collision rate
+  (`headword_key_collisions.csv`) and an attestation test on the pairs actually matched
+  (`linkage_ladder.csv`). Result: the operating key (`form_key`, length- and
+  retroflexion-preserving, over an SLP1-residue repair, plus a headword-component alias) lifts
+  recaptures pw 169 → 196, mw 105 → 131, bur 23 → 44, cae 1 → 13 — **cae becomes estimable
+  (4 dictionaries, was 3)** and **bur comes off the record-count cap** (~17,247 against 19,776
+  records), showing the old ceiling was an artefact of the join. The naive edit-distance-1 port
+  is **measured and rejected**: 606 of 863 pw links and 474 of 616 mw links join real, distinct
+  lemmas. Normalization comes from the shared `sanskrit-util` package, not a re-roll. Also new:
+  [`scripts/corrector_recapture.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/corrector_recapture.py)
+  — the **within-era corrector-pair design** (correctors as occasions; pairwise Chapman + Chao2
+  incidence with log-normal CI; identity resolution, joint cells excluded as non-independent) →
+  [`reports/corrector_recapture.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/corrector_recapture.md),
+  which cross-checks the two-era numbers at the same order of magnitude and gives **pwg its
+  first population estimate** (~26,515), a dictionary the two-era design cannot reach.
+  `dict_record_counts.csv` extends the record-count cap from 3 hand-counted dictionaries to all
+  44 csl-orig v02 ones. A48 readiness 2/5 → 3/5.
 - **Encoding/XML guard for dictionary-source change paths (H1496, roadmap RH5).**
   `scripts/encoding_xml_guard.py` checks no-BOM, UTF-8 validity, NFC normalization, and
   (for `.xml`) `ElementTree` parseability, CI-friendly (`violations: N` line, nonzero exit
