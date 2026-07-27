@@ -9,6 +9,17 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ### Added
 
+- **Encoding/XML guard for dictionary-source change paths (H1496, roadmap RH5).**
+  `scripts/encoding_xml_guard.py` checks no-BOM, UTF-8 validity, NFC normalization, and
+  (for `.xml`) `ElementTree` parseability, CI-friendly (`violations: N` line, nonzero exit
+  on any). Piloted live in this repo (`.github/workflows/encoding-guard.yml`) against
+  bundled good/bad fixtures (`runbook/fixtures/encoding_guard/`) — satisfies RH5's
+  "piloted on `csl-orig` or the owning tooling repo" acceptance via the owning-tooling-repo
+  branch, since agents never commit to `csl-orig` directly. Fan-out template for other
+  dictionary/tooling repos' actual change paths:
+  `runbook/templates/encoding-xml-guard.yml` (draft, mirrors `taxonomy-drift.yml`'s
+  sparse-checkout shape). Design: `docs/ENCODING_GUARD.md`. RH5 flipped `scheduled` →
+  `done` in `docs/ROADMAP.md`.
 - **Persistent OBS-T event-ID scheme (H1494, roadmap Part 4.1).** `event_id` in
   `data/schema/correction-event.schema.json` now carries a `pattern`
   (`^obst:v1:(form|git|printchange|batch):[a-z0-9]+:[0-9a-f]{12}$`) plus a `$comment`
