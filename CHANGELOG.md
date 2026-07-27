@@ -16,6 +16,15 @@ All notable changes to this repository are documented here, following [Keep a Ch
   process, known gaps & label-quality state, license, intended use, maintenance). The global
   `/data-release` command now points at this template in its Phase 2 FAIR pack and states the
   release gate explicitly. Zenodo DOI half of §4.2 excluded (credential-gated, deferred).
+- **`scripts/pull_data.py` project-board fields + explicit rate-limit handling (H1540, roadmap A2).**
+  `issues.json` entries now carry a `project_fields` object (Tooling Roadmap project #9 board
+  values — `Title`/`Status`/`Category`/etc., keyed by repo+issue/PR number) fetched via the
+  batched/aliased `ProjectV2` GraphQL pattern already documented in `.ai_state.md`; `summary.json`
+  gained `total_project_board_items`. `gh()` now detects GitHub's primary and secondary rate-limit
+  responses explicitly (separate retry budget from the existing 5xx/backoff path), reads the reset
+  time off `gh api rate_limit`, sleeps (capped at 120s), and logs the wait — closing A2's full
+  acceptance sentence ("One command refreshes issues, PRs, labels, milestones, and project-board
+  fields with rate-limit notes"); A2 flipped to done in `docs/OBSERVATORY_ROADMAP.md`.
 - **MWSA evaluation-lineage subsection (H1539, roadmap Part 4.3).** `docs/DATASHEET.md`
   gained an "Evaluation lineage" section and `paper-obs-t-error-typology.md` gained
   §4.5, both naming OBS-T label validation as an instance of the ELEXIS/GlobaLex
