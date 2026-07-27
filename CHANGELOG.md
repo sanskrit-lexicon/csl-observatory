@@ -14,6 +14,25 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ### Added
 
+- **`reports/record_linkage_rejected_alternatives.md` — the negative results behind the G3/A48
+  linkage key, including a measurement that only existed on an unmerged branch (H1477).**
+  Handoff H1477 was implemented twice concurrently; the second implementation was left
+  uncommitted when its session ended and is now preserved unmerged on branch
+  [`h1477-recapture-fuzzy-linkage`](https://github.com/sanskrit-lexicon/csl-observatory/tree/h1477-recapture-fuzzy-linkage).
+  Its linkage proposal lost on measurement (328 recaptures against `form_key`'s 396; the union
+  of both encoding repairs is worth **+1**), but three of its results are independent of that
+  and are now on `main`: **64% of resolvable form-era `<L>` codes (14,403 of 22,466) no longer
+  resolve to a record carrying that event's headword** — with a per-dictionary table, pw 53.9%
+  valid down to cae 0.2% — so *any* join of 2014 form-era OBS-T data onto csl-orig by `<L>`
+  number is unsafe outside pw and mw; the `anchored` key is documented as a change of
+  population (drops 40–97% of form-era events), not a linkage choice; and edit-distance-1 is
+  recorded as rejected by **two independent implementations** (63.4% false matches / 606-of-863
+  pw links joining distinct lemmas), which settles the handoff's headline request. Also records,
+  so it is not later mistaken for a data-integrity bug, that the SLP1 `repair` rewrites the
+  occasional English cell in `headword_iast` (`work` → `ṭork`): 14 of 4,176 firings (0.3%),
+  zero counted recaptures affected. `reports/README.md` now indexes all three recapture reports
+  (the two from [#120](https://github.com/sanskrit-lexicon/csl-observatory/pull/120) were never
+  registered).
 - **`docs/DATASHEET_TEMPLATE.md` + `/data-release` wiring (H1541, roadmap Part 4.2 template
   half).** Generalized the filled OBS-T `docs/DATASHEET.md` into a blank, reusable Gebru-style
   template covering every mandatory section named in the spec (motivation, composition,

@@ -46,6 +46,9 @@ released resource, NLP baselines, and a validation suite. Design:
 | [`obs_t_translit_validation.md`](obs_t_translit_validation.md) | `obs_t_translit_check.py` | SLP1→IAST 100%, Devanagari 98.5%, HK 95.6% vs `indic_transliteration`; found HK/SLP1 convention mixing |
 | [`obs_t_silver.md`](obs_t_silver.md) | `obs_t_silver.py` | Silver validation that surfaced the location/edit-type axis confound (resolved in Phase 8) |
 | [`obs_t_issuelabel.md`](obs_t_issuelabel.md) | `obs_t_issuelabel.py` | Independent issue-typing corroborates: surface/text 65.6% vs content 17.1% |
+| [`error_recapture.md`](error_recapture.md) | `error_recapture.py` · `headword_linkage.py` | Two-era Chapman capture–recapture on a measured linkage ladder (`form_key`): recaptures pw 196 · mw 131 · bur 44 · cae 13; caps from all 44 csl-orig v02 record counts |
+| [`corrector_recapture.md`](corrector_recapture.md) | `corrector_recapture.py` | Within-era design — correctors as capture occasions, pairwise Chapman + Chao2; gives `pwg` its first population estimate (~26,515) |
+| [`record_linkage_rejected_alternatives.md`](record_linkage_rejected_alternatives.md) | — (documentation) | The keys that were tried and rejected: edit-distance-1 (rejected twice, independently), full diacritic folding, and the `<L>` join — **64% of form-era `<L>` codes have drifted**, so an L-number join is unsafe outside pw/mw |
 
 Human-gated (awaiting annotation): `python scripts/obs_t_gold.py --make`,
 `python scripts/obs_t_gold.py --score`, `python scripts/obs_t_errorsample.py --make`,
