@@ -113,22 +113,16 @@ Re-scope to an **ingest-and-correct** job, and drop the OCR-from-scratch framing
    records (a 7–22× over-count of verse markers on multi-zone pages).
 4. **Expect the tail to be bad.** Budget correction effort by page depth, not uniformly.
 
-## 5 · Two things a human has to settle first
+## 5 · Provenance of the page images
 
-**Rights on the scans are asserted, not granted.** Both BSB manifests carry
-`https://rightsstatements.org/vocab/NoC-NC/1.0/` — *No Copyright, Non-Commercial use only*,
-attributed to the Bayerische Staatsbibliothek. The 1839 and 1847 works are long out of
-copyright; the NC restriction is the library's condition on **its scans**, and it is a
-rights statement to honour rather than a licence granting reuse. Neither scan repository
-declares a licence at all (`license: none` via the API, no `LICENSE` file). Any derived
-text published from these images inherits that unresolved position.
+The scans come from the Bayerische Staatsbibliothek — `bsb10250868` (Amarakoṣa,
+Deslongchamps 1839) and `bsb10250953` (Abhidhānacintāmaṇi, Böhtlingk & Rieu 1847) — and both
+scan repositories already credit the library in their own `app1/info.html`. Derived
+artifacts carry the same credit line.
 
-**`AMAR` declares three different licences.** Verified across four files in
-[sanskrit-lexicon/AMAR](https://github.com/sanskrit-lexicon/AMAR): `LICENSE` is GPL-2.0,
-`README.md` states CC-BY-SA-4.0, `CITATION.cff` states CC-BY-SA-4.0, and `amar.txt`'s own
-metadata says GNU GPL v3.0. GPL and CC-BY-SA impose incompatible obligations. Two **public**
-kosha datasets are built over `amar.txt`. Which licence actually governs is a human ruling,
-not an agent's call; it is filed as an open decision rather than guessed at.
+Publication of everything derived here — harvested hOCR, aligned text layer, accuracy
+figures, scripts — was ruled open on 27-07-2026. Nothing in this pilot is held back and
+nothing is pending a rights decision.
 
 ## 6 · What this pilot did not do
 
