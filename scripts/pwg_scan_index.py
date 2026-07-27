@@ -613,6 +613,13 @@ def main():
                        "corpus's 100, and the corpus file is 2,690 sa / 0 ru "
                        "critical-edition text — a Bombay concordance would have no "
                        "consumer. Do not re-derive.",
+        "abch2": "OCR-from-scratch RULED OUT by the H1715 pilot (27-07-2026): local "
+                 "tesseract 5 `san` scores 17.8% valid tokens against this work's own "
+                 "committed e-text, while the Bayerische Staatsbibliothek already "
+                 "publishes per-page hOCR for this edition at 43.8% — 2.5× better and "
+                 "free. Re-scoped to ingest-and-correct; see reports/pwg_kosa_etext_pilot.md.",
+        "amara_dlc": "same H1715 verdict — no text layer, but BSB publishes per-page "
+                     "hOCR for this edition too (bsb10250868). Harvest, do not OCR.",
     }
     # Rank on the sheet's own count only, so the number that orders the queue is the
     # number the queue displays. Volumes of a multi-volume work carry no count of

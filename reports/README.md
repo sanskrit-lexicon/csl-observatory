@@ -26,6 +26,7 @@ page.
 | [`obs_q_correction_sustainability.md`](obs_q_correction_sustainability.md) | _(probe; `obs_q_correction.py` is next)_ | — | Content corrections are single-person-burst-driven: ≤4 correctors/yr, lead 51–100%; resolution median 6 d but a tail to 6.4 yr |
 | [`pwg_citation_coverage.md`](pwg_citation_coverage.md) | _(external: [`build_citation_index.py`](https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/src/build_citation_index.py))_ | — | PWG `<ls>` link coverage (translated subset): 83.2% of 50,065 citation occurrences resolve (69% scan / 14% HTML); 446 works un-digitised |
 | [`pwg_scan_index.md`](pwg_scan_index.md) | `pwg_scan_index.py` | [Scan-Index Campaign](https://sanskrit-lexicon.github.io/csl-observatory/scan-index) | The 2025–26 volunteer indexing campaign that built those scan targets: 55/82 works done, 73.7% of tracked citation mass, 28,963 pages, 8 volunteers; 7 works unclaimed, 5 of them Vedic |
+| [`pwg_kosa_etext_pilot.md`](pwg_kosa_etext_pilot.md) | `pwg_kosa_ocr_probe.py` | — | Measured NO-GO on OCR-from-scratch for the two heaviest PWG kośa scans: local tesseract 5 `san` 17.8% valid tokens vs 43.8% for the hOCR the Bayerische Staatsbibliothek already publishes — 2.5×, free. Re-scoped to ingest-and-correct |
 
 ## OBS-T — error typology (language-resource track, Phases 1–8)
 
@@ -102,6 +103,7 @@ python scripts/contributor_identity.py
 python scripts/workflow_health.py
 python scripts/data_index.py
 python scripts/pwg_scan_index.py          # add --fetch to re-snapshot the upstream sheet
+python scripts/pwg_kosa_ocr_probe.py      # OCR engine comparison; --sweep for the parameter sweep
 ```
 
 Each finding script writes its `reports/<name>.md` and refreshes the matching

@@ -1,0 +1,15 @@
+repo_page	bsb_page	tesseract_tokens	tesseract_valid	tesseract_rate_pct	bsb_hocr_tokens	bsb_hocr_valid	bsb_hocr_rate_pct	error
+abch2-060	59	46	13	28.3	50	28	56.0	
+abch2-090	89	52	8	15.4	64	35	54.7	
+abch2-110	109	57	12	21.1	71	51	71.8	
+abch2-140	139	50	14	28.0	51	23	45.1	
+abch2-170	169	56	14	25.0	55	29	52.7	
+abch2-200	199	42	12	28.6	61	29	47.5	
+abch2-230	229	41	7	17.1	42	23	54.8	
+abch2-260	259	47	8	17.0	56	23	41.1	
+abch2-290	289	50	14	28.0	67	36	53.7	
+abch2-320	319	81	9	11.1	83	22	26.5	
+abch2-350	349	59	3	5.1	60	10	16.7	
+abch2-380	379	77	3	3.9	62	7	11.3	
+# TOTAL		658	117	17.8	722	316	43.8	
+# measured 2026-07-27; reference vocab 25399 SLP1 tokens; control 100.0%
