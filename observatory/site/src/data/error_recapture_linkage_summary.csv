@@ -1,0 +1,8 @@
+rule,key,total_m,dicts_estimable,estimable,links_true,links_false,false_match_rate,basis
+exact,raw `headword_iast` (published),316,3,bur mw pw,0,0,,vocabulary attestation of non-identical links
+normalised,NFC + casefold + punctuation,326,3,bur mw pw,3,3,0.5,vocabulary attestation of non-identical links
+scheme_repair,+ Harvard-Kyoto decode of ASCII cells,328,3,bur mw pw,0,0,,vocabulary attestation of non-identical links
+fold,+ diacritic folding,479,5,ben bur cae mw pw,136,71,0.343,vocabulary attestation of non-identical links
+fold_ed1,+ edit distance 1,1694,11,ap ap90 ben bur cae gra mw pui pw pwg stc,2166,3745,0.6336,vocabulary attestation of non-identical links
+lcode,csl-orig `<L>` number,613,6,ap90 ben bur cae mw pw,8063,14403,0.6411,"L-code drift, events-weighted over all dictionaries"
+anchored,resolved current csl-orig record,401,3,bur mw pw,1403,233,0.1424,"L-code corroboration of the fuzzy increment, stable-L stratum (mw, pw)"

@@ -1,0 +1,12 @@
+dict,era,corrector_1,corrector_2,n1,n2,m_overlap,s_observed,n_hat,ci_low,ci_high,capped,record_count,independence
+bur,git,funderburkjim,drdhaval2785,830,63,10,883,4834,2361,7307,0,19776,distinct handles
+mw,git,funderburkjim,drdhaval2785,5151,472,84,5539,28668,23226,34111,0,286525,distinct handles
+pw,form,dhaval_ejf,funderburkjim,5194,4420,489,9125,46871,43150,50591,0,170556,unverified — composite-looking handle: dhaval_ejf
+pw,form,funderburkjim,drdhaval2785,4420,253,113,4560,9849,8530,11169,0,170556,distinct handles
+pw,form,funderburkjim,dhavel_ejf,4420,323,66,4677,21378,16887,25869,0,170556,unverified — composite-looking handle: dhavel_ejf
+pw,form,dhaval_ejf,Frank Ziesing 2011,5194,56,23,5227,12337,8666,16009,0,170556,unverified — composite-looking handle: dhaval_ejf
+pw,form,dhaval_ejf,drdhaval2785,5194,253,22,5425,57370,35529,79211,0,170556,unverified — composite-looking handle: dhaval_ejf
+pw,form,dhaval_ejf,form_corrector_2ade35a3a8,5194,77,21,5250,18418,12053,24782,0,170556,unverified — composite-looking handle: dhaval_ejf
+pw,form,funderburkjim,Frank Ziesing 2011,4420,56,17,4459,13999,8802,19195,0,170556,distinct handles
+pw,form,funderburkjim,form_corrector_2ade35a3a8,4420,77,15,4482,21551,12434,30669,0,170556,distinct handles
+pwg,git,funderburkjim,drdhaval2785,1676,278,36,1918,12644,8941,16348,0,123366,distinct handles

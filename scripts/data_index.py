@@ -166,6 +166,30 @@ CATALOG: dict[str, Entry] = {
         "Chapman capture-recapture estimates of error-prone records remaining per dictionary, from two-era overlap.",
         "Order-of-magnitude only: sequential occasions and heterogeneous catchability violate Chapman assumptions in opposite directions; estimates capped at record counts.",
     ),
+    "error_recapture_corrector.csv": Entry(
+        "obs-t recapture",
+        "scripts/error_recapture.py",
+        "Within-era corrector-pair capture-recapture estimates: two correctors working one dictionary in one era treated as two capture occasions.",
+        "A cross-check on the two-era design, not a replacement: correctors do not choose entries independently, and rows flagged in the independence column pair a handle that reads as a joint tag.",
+    ),
+    "error_recapture_linkage.csv": Entry(
+        "obs-t recapture",
+        "scripts/error_recapture_linkage.py",
+        "Per dictionary and per candidate two-era linkage rule: overlap achieved and false matches adjudicated against the csl-orig headword vocabulary.",
+        "False-match rates are lower bounds: a linked string unattested in the dictionary is scored a true match rather than counted against the rule.",
+    ),
+    "error_recapture_linkage_summary.csv": Entry(
+        "obs-t recapture",
+        "scripts/error_recapture_linkage.py",
+        "One row per candidate linkage rule: total overlap, measured false-match rate, and the evidence channel that rate rests on.",
+        "Read, never recomputed, by scripts/error_recapture.py, so the two reports cannot disagree about a rate.",
+    ),
+    "obs_t_dict_records.csv": Entry(
+        "obs-t recapture",
+        "scripts/error_recapture_linkage.py",
+        "Record (<L>) and distinct-headword (<k1>) counts per dictionary from csl-orig v02 — the denominator and physical cap for the recapture estimates.",
+        "Requires a local csl-orig checkout to regenerate; counts reflect the checkout at generation time, and three form-era-only dictionaries have no v02 source.",
+    ),
     "etymology_marker_preliminary.csv": Entry(
         "dictionary etymology",
         "hand-curated (commit 582f533, 16-05-2026)",
