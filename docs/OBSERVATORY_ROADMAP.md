@@ -1,6 +1,6 @@
 # csl-observatory Implementation Roadmap
 
-_Created: 16-05-2026 · Last updated: 03-07-2026_
+_Created: 16-05-2026 · Last updated: 27-07-2026_
 
 Horizon: 2026-06 to 2027-06
 Primary audience: maintainer. Secondary audiences, added later in the year:
@@ -40,7 +40,7 @@ Goal: make every observatory report refresh from reproducible, dated snapshots.
 | ID | Deliverable | Owner | Status | Target | Acceptance |
 |---|---|---|---|---|---|
 | A1 | Repository inventory with type, archival state, default branch, license, metadata, and cleanup flags. | Codex | active | 2026-07-15 | `repos.csv` and `repo_health.md` regenerate without manual edits; cleanup candidates are explicit. |
-| A2 | Issue/PR/project snapshot refresh command. | Codex | scheduled | 2026-08-15 | One command refreshes issues, PRs, labels, milestones, and project-board fields with rate-limit notes. |
+| A2 | Issue/PR/project snapshot refresh command. | Codex | done | 2026-08-15 | One command refreshes issues, PRs, labels, milestones, and project-board fields with rate-limit notes. |
 | A3 | Contributor and identity snapshot refresh. | Codex | scheduled | 2026-09-15 | Contributor reports regenerate from `contributors_map.json` and flag missing consent/ORCID fields. |
 | A4 | Workflow/release metadata snapshot. | Codex | done | 2026-06-13 | `repo_metadata.csv` and `workflow_health.csv` expose workflow/release/dependabot/codeql status for active repos. |
 | A5 | Snapshot manifest. | Codex | active | 2026-12-15 | `scripts/refresh_observatory.py` writes JSON and Markdown refresh summaries; extend coverage as live snapshot automation expands. |
