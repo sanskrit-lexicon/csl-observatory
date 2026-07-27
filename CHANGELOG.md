@@ -19,6 +19,24 @@ All notable changes to this repository are documented here, following [Keep a Ch
   row (identical evidence). `data/manifest.json` gained a `dataset_ids.correction-events`
   row (`csl-obs/correction-events@1.0.0`); `observatory/transform.py` now preserves that
   key across its own regenerations instead of silently overwriting it.
+- **PWG kośa e-text pilot — a measured NO-GO, and a cheaper route (H1715).** The H1706
+  e-text queue ranked `amara_dlc` (Amarakoṣa, Deslongchamps 1839) and `abch2`
+  (Abhidhānacintāmaṇi, Böhtlingk & Rieu 1847) at the top; H1715 proposed OCR-ing them with
+  tesseract 5 `san`. Measured instead: **local tesseract scores 17.8 % valid Sanskrit tokens
+  where the Bayerische Staatsbibliothek's already-published per-page hOCR scores 43.8 %** on
+  the identical 12 pages — 2.5× better, word-boxed, free, and reachable from the IIIF
+  manifest's `seeAlso`. An 18-configuration sweep (dpi × psm × preprocessing) tops out at
+  30.5 %, and only by reading half as many tokens, so the low rate is the material and not
+  the settings. The job is therefore an **ingest-and-correct**, not an OCR.
+  New: `scripts/pwg_kosa_ocr_probe.py`, `reports/pwg_kosa_etext_pilot.md`,
+  `data/pwg_scan_index_tracker/kosa_ocr_pilot.tsv`; the e-text queue's two top rows now carry
+  the verdict so it is not re-derived.
+  **Two rights questions a human must settle**, both recorded rather than guessed: the BSB
+  scans are `NoC-NC` (non-commercial, asserted by the library, not a licence grant) and
+  neither scan repo declares a licence at all; and `sanskrit-lexicon/AMAR` declares three
+  different licences across four files (LICENSE GPL-2.0, README CC-BY-SA-4.0, CITATION.cff
+  CC-BY-SA-4.0, `amar.txt` GPL-3.0) while two public kosha datasets are built over it.
+  Executed by Opus 5 1M (`claude-opus-5[1m]`).
 
 ## [1.5.0] - 2026-07-27
 

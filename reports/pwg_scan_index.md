@@ -168,8 +168,8 @@ Every finished index is a candidate for full-text extraction: the per-page index
 
 | # | LS code | work | citations | pages | scan directory | note |
 |--:|---|---|--:|--:|---|---|
-| 1 | `AK. Deslongchamps ed.` | AMARAKOṢA 1839 Deslongchamps ed. | 16,151 | 818 | [`amara_dlc`](https://github.com/sanskrit-lexicon-scans/amara_dlc) | — |
-| 2 | `H.` | HEMACANDRA'S ABHIDHĀNACINTĀMAṆI : Bohtlingk | 16,148 | 465 | [`abch2`](https://github.com/sanskrit-lexicon-scans/abch2) | — |
+| 1 | `AK. Deslongchamps ed.` | AMARAKOṢA 1839 Deslongchamps ed. | 16,151 | 818 | [`amara_dlc`](https://github.com/sanskrit-lexicon-scans/amara_dlc) | same H1715 verdict — no text layer, but BSB publishes per-page hOCR for this edition too (bsb10250868). Harvest, do not OCR. |
+| 2 | `H.` | HEMACANDRA'S ABHIDHĀNACINTĀMAṆI : Bohtlingk | 16,148 | 465 | [`abch2`](https://github.com/sanskrit-lexicon-scans/abch2) | OCR-from-scratch RULED OUT by the H1715 pilot (27-07-2026): local tesseract 5 `san` scores 17.8% valid tokens against this work's own committed e-text, while the Bayerische Staatsbibliothek already publishes per-page hOCR for this edition at 43.8% — 2.5× better and free. Re-scoped to ingest-and-correct; see reports/pwg_kosa_etext_pilot.md. |
 | 3 | `MED.` | MEDINĪKOṢA 1807 Calc. ed. | 12,990 | 601 | [`medini`](https://github.com/sanskrit-lexicon-scans/medini) | — |
 | 4 | `Spr. vol.1 (1st ed.)` | Indische Sprüche V.1 | 10,494 | 345 | [`boesp1`](https://github.com/sanskrit-lexicon-scans/boesp1) | — |
 | 5 | `H. an.` | HEMACANDRA'S ANEKĀRTHASAM̃GRAHA 1807 Calc. ed. | 9,781 | 377 | [`anekarthasamgraha`](https://github.com/sanskrit-lexicon-scans/anekarthasamgraha) | — |
@@ -187,6 +187,8 @@ Every finished index is a candidate for full-text extraction: the per-page index
 Settled elsewhere, so **not** available to a new handoff:
 
 - `ramayanabom` — assessed and REJECTED by H1705 (27-07-2026): the Bombay uttarakāṇḍa has 111 sargas + 13 interpolated against the corpus's 100, and the corpus file is 2,690 sa / 0 ru critical-edition text — a Bombay concordance would have no consumer. Do not re-derive.
+- `abch2` — OCR-from-scratch RULED OUT by the H1715 pilot (27-07-2026): local tesseract 5 `san` scores 17.8% valid tokens against this work's own committed e-text, while the Bayerische Staatsbibliothek already publishes per-page hOCR for this edition at 43.8% — 2.5× better and free. Re-scoped to ingest-and-correct; see reports/pwg_kosa_etext_pilot.md.
+- `amara_dlc` — same H1715 verdict — no text layer, but BSB publishes per-page hOCR for this edition too (bsb10250868). Harvest, do not OCR.
 
 ## 8 · Data-quality notes on the sheet itself
 
