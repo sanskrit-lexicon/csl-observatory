@@ -25,6 +25,7 @@ page.
 | [`contributor_identity.md`](contributor_identity.md) | `contributor_identity.py` | — | 0/16 authors have a registered ORCID; 7 named await registration, 9 to identify |
 | [`obs_q_correction_sustainability.md`](obs_q_correction_sustainability.md) | _(probe; `obs_q_correction.py` is next)_ | — | Content corrections are single-person-burst-driven: ≤4 correctors/yr, lead 51–100%; resolution median 6 d but a tail to 6.4 yr |
 | [`pwg_citation_coverage.md`](pwg_citation_coverage.md) | _(external: [`build_citation_index.py`](https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/src/build_citation_index.py))_ | — | PWG `<ls>` link coverage (translated subset): 83.2% of 50,065 citation occurrences resolve (69% scan / 14% HTML); 446 works un-digitised |
+| [`pwg_scan_index.md`](pwg_scan_index.md) | `pwg_scan_index.py` | [Scan-Index Campaign](https://sanskrit-lexicon.github.io/csl-observatory/scan-index) | The 2025–26 volunteer indexing campaign that built those scan targets: 55/82 works done, 73.7% of tracked citation mass, 28,963 pages, 8 volunteers; 7 works unclaimed, 5 of them Vedic |
 
 ## OBS-T — error typology (language-resource track, Phases 1–8)
 
@@ -100,6 +101,7 @@ python scripts/velocity_timeline.py
 python scripts/contributor_identity.py
 python scripts/workflow_health.py
 python scripts/data_index.py
+python scripts/pwg_scan_index.py          # add --fetch to re-snapshot the upstream sheet
 ```
 
 Each finding script writes its `reports/<name>.md` and refreshes the matching
