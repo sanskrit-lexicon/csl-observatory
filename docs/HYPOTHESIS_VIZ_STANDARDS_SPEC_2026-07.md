@@ -1,6 +1,6 @@
 # Hypotheses, Visualizations & Standards Spec — 2026-07 (Phase-3 layer)
 
-_Created: 07-07-2026 · Last updated: 07-07-2026_
+_Created: 07-07-2026 · Last updated: 27-07-2026_
 
 > **What this is.** The design/spec deliverable of handoff **H269** (Fable 5, `claude-fable-5`,
 > 07-07-2026). One planning document, four parts: (1) new falsifiable hypotheses over data already
@@ -399,8 +399,10 @@ Observatory owns the **org** citation/reference surface; the dictionary `<ls>` c
 - [ ] `event_id` pattern + `$comment` recipe added to `data/schema/correction-event.schema.json`;
       old→new ID crosswalk committed; `data/manifest.json` rows carry `csl-obs/<dataset>@<semver>`
       IDs.
-- [ ] `docs/DATASHEET_TEMPLATE.md` created; `/data-release` discipline references it; Zenodo DOI
-      fix executed **only after 17-07-2026** via `scripts/fix_obs_t_doi.py --record … --apply`.
+- [x] `docs/DATASHEET_TEMPLATE.md` created; `/data-release` discipline references it.
+      (H1541, 27-07-2026, Sonnet 5 `claude-sonnet-5`)
+- [ ] Zenodo DOI fix executed **only after 17-07-2026** via
+      `scripts/fix_obs_t_doi.py --record … --apply`.
 - [x] MWSA lineage subsection added to `docs/DATASHEET.md` + paper draft, with citations.
       (H1539, 27-07-2026, Sonnet 5 `claude-sonnet-5`)
 - [x] `docs/ONTOLEX_TEI_ROUTING_CONTRACT.md` committed and handed to csl-standards via issue;

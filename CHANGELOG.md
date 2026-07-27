@@ -9,6 +9,13 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ### Added
 
+- **`docs/DATASHEET_TEMPLATE.md` + `/data-release` wiring (H1541, roadmap Part 4.2 template
+  half).** Generalized the filled OBS-T `docs/DATASHEET.md` into a blank, reusable Gebru-style
+  template covering every mandatory section named in the spec (motivation, composition,
+  source edition/page range where applicable, encoding + transliteration regime, collection
+  process, known gaps & label-quality state, license, intended use, maintenance). The global
+  `/data-release` command now points at this template in its Phase 2 FAIR pack and states the
+  release gate explicitly. Zenodo DOI half of §4.2 excluded (credential-gated, deferred).
 - **`scripts/pull_data.py` project-board fields + explicit rate-limit handling (H1540, roadmap A2).**
   `issues.json` entries now carry a `project_fields` object (Tooling Roadmap project #9 board
   values — `Title`/`Status`/`Category`/etc., keyed by repo+issue/PR number) fetched via the
