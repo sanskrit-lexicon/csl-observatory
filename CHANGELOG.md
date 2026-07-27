@@ -4,6 +4,9 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+### Added
+- **`reports/pwg_kosa_hocr_cer.md` — first CER measurement for BSB's published per-page hOCR against a print e-text (H1720).** All 374 indexed pages of the `amara_dlc` (Amarakoṣa, Deslongchamps 1839, `bsb10250868`) campaign harvested via [`scripts/pwg_kosa_hocr_ingest.py`](scripts/pwg_kosa_hocr_ingest.py), page offset (`-3`) derived empirically rather than assumed, and aligned to [`AMAR/amar.txt`](https://github.com/sanskrit-lexicon/AMAR) by content (token-overlap window search per kāṇḍa, never by in-page digits — the FINDINGS §480 trap). Mean CER over a 39-page depth-stratified sample: **0.719**, reported as a ceiling, not a floor — a gender-tag format mismatch between AMAR's per-word gloss list and the printed verse text inflates the figure independently of true OCR error, on top of the expected edition-variance caveat. `abch2` (Hemacandra) harvest/CER remains open follow-on work; the handoff's DoD is met by one edition.
+
 ### Fixed
 - **`event_id_crosswalk_v1.csv` was never registered in `scripts/data_index.py`** (it arrived
   with the persistent-event-ID migration in [#109](https://github.com/sanskrit-lexicon/csl-observatory/pull/109)),
