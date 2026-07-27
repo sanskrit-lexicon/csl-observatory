@@ -357,3 +357,10 @@ All four skills are independent of each other except P4→P1.
 | `cologne-markup-batch` | `~/.claude/commands/cologne-markup-fix.md`; per-dict `<ls>` abbreviation lists in `csl-lslink` |
 | `cologne-question-research` | `WhitneyRoots/` crosswalk; `csl-lslink`; `SanskritLexicography/FINDINGS.md`; `MWinflect` readme |
 | `cologne-bug-triage` | `csl-orig` XML schema; `csl-websanlexicon` issue taxonomy |
+
+## Related documents (awareness weave H1728)
+
+- Product/research observatory roadmap: [OBSERVATORY_ROADMAP.md](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/OBSERVATORY_ROADMAP.md)
+
+
+_Dr. Mārcis Gasūns_

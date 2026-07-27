@@ -140,4 +140,9 @@ narrative story page); mode = **active monitor**, not passive dashboard.
 - Broad publication planning: archived docs unless a new maintainer decision
   assigns a live home.
 
+## Related documents (awareness weave H1728)
+
+- Agent/ops roadmap (same repo, different job): [AGENT_ROADMAP.md](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/AGENT_ROADMAP.md)
+
+
 _Dr. Mārcis Gasūns_
