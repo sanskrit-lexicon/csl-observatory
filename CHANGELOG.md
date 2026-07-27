@@ -9,6 +9,13 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ### Added
 
+- **`docs/DATASHEET_TEMPLATE.md` + `/data-release` wiring (H1541, roadmap Part 4.2 template
+  half).** Generalized the filled OBS-T `docs/DATASHEET.md` into a blank, reusable Gebru-style
+  template covering every mandatory section named in the spec (motivation, composition,
+  source edition/page range where applicable, encoding + transliteration regime, collection
+  process, known gaps & label-quality state, license, intended use, maintenance). The global
+  `/data-release` command now points at this template in its Phase 2 FAIR pack and states the
+  release gate explicitly. Zenodo DOI half of §4.2 excluded (credential-gated, deferred).
 - **MWSA evaluation-lineage subsection (H1539, roadmap Part 4.3).** `docs/DATASHEET.md`
   gained an "Evaluation lineage" section and `paper-obs-t-error-typology.md` gained
   §4.5, both naming OBS-T label validation as an instance of the ELEXIS/GlobaLex
