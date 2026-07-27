@@ -9,6 +9,16 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ### Added
 
+- **MWSA evaluation-lineage subsection (H1539, roadmap Part 4.3).** `docs/DATASHEET.md`
+  gained an "Evaluation lineage" section and `paper-obs-t-error-typology.md` gained
+  §4.5, both naming OBS-T label validation as an instance of the ELEXIS/GlobaLex
+  Monolingual Word Sense Alignment (MWSA) shared-task family (Ahmadi et al. 2020) —
+  adopting its evaluation contract (frozen gold sample, two annotators, Cohen's κ,
+  per-class P/R/F1) rather than a bespoke method, and noting that any future
+  cross-dictionary sense-alignment dataset routes its content to `csl-atlas`, with
+  `csl-observatory` keeping only the process metrics. Reference added to the paper's
+  bibliography; Part 4 acceptance checklist item 3 flipped to done in
+  `docs/HYPOTHESIS_VIZ_STANDARDS_SPEC_2026-07.md`.
 - **Encoding/XML guard for dictionary-source change paths (H1496, roadmap RH5).**
   `scripts/encoding_xml_guard.py` checks no-BOM, UTF-8 validity, NFC normalization, and
   (for `.xml`) `ElementTree` parseability, CI-friendly (`violations: N` line, nonzero exit

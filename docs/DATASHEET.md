@@ -83,6 +83,20 @@ derivation. Snapshot: 2026-06-12. Regenerate with the OBS-T pipeline below.
   locations as ground truth; joining form-era L-codes directly to current
   `csl-orig` records without accounting for drift.
 
+## Evaluation lineage
+
+- **Statement.** OBS-T label validation, its confusion/alignment analysis, and any future
+  cross-dictionary sense/headword mapping are instances of the ELEXIS/GlobaLex
+  **Monolingual Word Sense Alignment (MWSA)** shared-task family. Observatory adopts the
+  MWSA evaluation contract — **frozen gold sample, two annotators, Cohen's κ, per-class
+  P/R/F1** — rather than a bespoke method. The harness (`scripts/obs_t_gold.py`) implements
+  stratified sampling, blind sheets, κ, and per-class P/R/F1 accordingly.
+- **Scope.** Naming this lineage does not change what is released here: if a cross-dict
+  sense-alignment dataset is ever emitted, the alignment content itself routes to
+  `csl-atlas`, with `csl-observatory` keeping only the process metrics (κ, P/R/F1).
+- **Sources.** ELEXIS MWSA shared task: <https://elex.is/mwsa2020/> · data/format:
+  <https://github.com/elexis-eu/MWSA>.
+
 ## Distribution
 
 - **Where.** In `csl-observatory`, with intended archival deposit for paper use.
