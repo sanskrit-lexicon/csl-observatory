@@ -4,6 +4,9 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+### Fixed
+- **`scan_target_audit.tsv` / §7 of `reports/pwg_scan_index.md` re-verified after the `rvps` mislink + TS./TBR. arity-gap fix (H1714).** `rvps` flips from `not wired at all` to `yes` (was silently mislinking Rgveda-Pratisakhya citations to an unrelated Rgveda hymn anchor); `taittiriyas`/`taittiriyabr` flip from `partial` to `yes` (3-parameter citations now resolve). `pancar` stays `partial` (2-param has no natural viewer target, confirmed not a gap) and `amara_col` stays `mis-keyed` but is now recorded as by-design (16,151 citations under bare `AK.` for the paired Deslongchamps edition, zero measured for Colebrooke under that key). Fixed in [gasyoun/SanskritLexicography#840](https://github.com/gasyoun/SanskritLexicography/pull/840); tracker counts now 35 wired / 1 partial / 1 mis-keyed / 0 unwired (was 32/3/1/1).
+
 ### Added
 
 - **Persistent OBS-T event-ID scheme (H1494, roadmap Part 4.1).** `event_id` in
