@@ -31,11 +31,9 @@ All notable changes to this repository are documented here, following [Keep a Ch
   New: `scripts/pwg_kosa_ocr_probe.py`, `reports/pwg_kosa_etext_pilot.md`,
   `data/pwg_scan_index_tracker/kosa_ocr_pilot.tsv`; the e-text queue's two top rows now carry
   the verdict so it is not re-derived.
-  **Two rights questions a human must settle**, both recorded rather than guessed: the BSB
-  scans are `NoC-NC` (non-commercial, asserted by the library, not a licence grant) and
-  neither scan repo declares a licence at all; and `sanskrit-lexicon/AMAR` declares three
-  different licences across four files (LICENSE GPL-2.0, README CC-BY-SA-4.0, CITATION.cff
-  CC-BY-SA-4.0, `amar.txt` GPL-3.0) while two public kosha datasets are built over it.
+  Page images are from the Bayerische Staatsbibliothek (`bsb10250868`, `bsb10250953`) and
+  derived artifacts carry the library credit the scan repos already give. Publication of
+  everything derived here was ruled open on 27-07-2026.
   Executed by Opus 5 1M (`claude-opus-5[1m]`).
 
 ## [1.5.0] - 2026-07-27
