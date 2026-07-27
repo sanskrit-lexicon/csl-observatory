@@ -16,6 +16,13 @@ All notable changes to this repository are documented here, following [Keep a Ch
   process, known gaps & label-quality state, license, intended use, maintenance). The global
   `/data-release` command now points at this template in its Phase 2 FAIR pack and states the
   release gate explicitly. Zenodo DOI half of §4.2 excluded (credential-gated, deferred).
+- **RH4 `.gitattributes` (`eol=lf`) line-ending policy rolled out org-wide (H1542, roadmap RH4).**
+  All 34 repos in `.github/workflows/tooling-audit.yml` REPOS now carry the LF-normalization
+  policy piloted in this repo (RH4-pilot): 12 already had it, 22 rolled out and merged via a new
+  `gitattributes` deploy entry in [`Uprava/tools/cologne_batch_deploy.py`](https://github.com/gasyoun/Uprava/blob/main/tools/cologne_batch_deploy.py)
+  (which also gained a `--repos` comma-list scope flag and transport-error retry-with-backoff on
+  `gh()`, both reusable for future org-wide rollouts). `docs/DECISIONS_NEEDED.md` RH4 flipped to
+  resolved; `docs/ROADMAP.md` RH4 flipped to done.
 - **`scripts/pull_data.py` project-board fields + explicit rate-limit handling (H1540, roadmap A2).**
   `issues.json` entries now carry a `project_fields` object (Tooling Roadmap project #9 board
   values — `Title`/`Status`/`Category`/etc., keyed by repo+issue/PR number) fetched via the
