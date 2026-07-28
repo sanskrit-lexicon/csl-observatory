@@ -4,6 +4,22 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+### Fixed
+- **Repaired all four red default-branch workflows found by the org CI-health sweep (H1736).**
+  `pages build and deployment` was red 72.6 days on a Liquid syntax error in
+  `article/01-empirical-companion.md` (`{%…%}`/`{{…}}` used repo-wide as literal CDSL tag
+  notation, not templating) — added a repo-root `_config.yml` disabling Liquid rendering
+  site-wide. `Refresh observatory` was already fixed on `main` by an unrelated commit
+  (#120) that added `event_id_crosswalk_v1.csv`'s catalog entry after that morning's failed
+  scheduled run; verified `python scripts/data_index.py --check` now passes. The two audits
+  (`Dictionary taxonomy audit`, `Tooling Roadmap audit`) were working as designed — they had
+  found real drift, not a code bug: added AMAR#8, BEN#34 (a newly-opened untriaged issue),
+  PWG#210, MWS#242, and 8 tooling-repo issues to their missing org-project columns; and
+  taught `scripts/dict_runbook.py` that a bare `handoff` label (with no taxonomy labels) marks
+  an auto-created execution-tracking stub, not triageable dictionary work — MWS
+  #243/#250/#254/#256 were false-flagged as drift for exactly that reason. `TOOLING_AUDIT_TOKEN`
+  is set and working; the handoff's note about it being unset did not reproduce.
+
 ### Added
 - **`reports/pwg_kosa_hocr_cer.md` — first CER measurement for BSB's published per-page hOCR against a print e-text (H1720).** All 374 indexed pages of the `amara_dlc` (Amarakoṣa, Deslongchamps 1839, `bsb10250868`) campaign harvested via [`scripts/pwg_kosa_hocr_ingest.py`](scripts/pwg_kosa_hocr_ingest.py), page offset (`-3`) derived empirically rather than assumed, and aligned to [`AMAR/amar.txt`](https://github.com/sanskrit-lexicon/AMAR) by content (token-overlap window search per kāṇḍa, never by in-page digits — the FINDINGS §480 trap). Mean CER over a 39-page depth-stratified sample: **0.719**, reported as a ceiling, not a floor — a gender-tag format mismatch between AMAR's per-word gloss list and the printed verse text inflates the figure independently of true OCR error, on top of the expected edition-variance caveat. `abch2` (Hemacandra) harvest/CER remains open follow-on work; the handoff's DoD is met by one edition.
 
