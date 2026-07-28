@@ -1,6 +1,6 @@
 # Measuring the Cologne Digital Sanskrit Dictionaries as a GitHub Maintenance Ecosystem
 
-_Created: 03-07-2026 · Last updated: 11-07-2026_
+_Created: 03-07-2026 · Last updated: 28-07-2026_
 
 **Status (11-07-2026):** full draft (H672 pass, Fable 5 `claude-fable-5`), paper A15;
 advanced from the 03-07 skeleton by folding in the correction-event ledger
@@ -587,6 +587,6 @@ Education Press.
 and the empirical companion (A14,
 [`article/01-empirical-companion.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/article/01-empirical-companion.md)),
 both in preparation; the error-typology resource paper (A12,
-[`reports/obs_t_paper_draft.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_t_paper_draft.md)).
+[`paper-obs-t-error-typology.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/paper-obs-t-error-typology.md)).
 
 _Dr. Mārcis Gasūns_

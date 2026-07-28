@@ -1,6 +1,6 @@
 # Error typology of digital Sanskrit dictionaries — design spec
 
-Date: 2026-06-11 · **Updated 2026-06-12 (Phases 1–8 shipped; two-axis typology)**
+Date: 2026-06-11 · **Updated 2026-07-28 (H1759 manuscript reconciliation; κ gate note)**
 Status: implemented. Authoritative spec for the error-typology / correction-event
 track (working code **OBS-T**). Owner: Mārcis Gasūns.
 
@@ -58,15 +58,23 @@ validation-only: [`obs_t_translit_check`](https://github.com/sanskrit-lexicon/cs
 [`obs_t_issuelabel`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/obs_t_issuelabel.py),
 [`obs_t_silver`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/obs_t_silver.py).
 
-Open: human gold/error annotation ([`validation/gold_sample.csv`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/validation/gold_sample.csv),
-[`validation/error_sample.csv`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/validation/error_sample.csv)) + a second annotator for κ.
+Open: human expert review of the encoding ↔ orthography boundary rows
+([`validation/gold_sample.csv`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/validation/gold_sample.csv),
+[`validation/error_sample.csv`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/validation/error_sample.csv));
+the second-annotator κ gate was cleared 21-07-2026 by a blind cross-model double
+annotation (κ = 0.906 [0.872–0.938] on the location axis — cross-model, not
+human-validated; see
+[`validation/component_kappa_stats.json`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/validation/component_kappa_stats.json)).
 
-**Manuscript (2026-06-13).** The paper drafted from this spec lives at the repo root:
+**Manuscript (2026-06-13; reconciled 28-07-2026, H1759).** The single canonical A12
+paper drafted from this spec lives at the repo root:
 [`paper-obs-t-error-typology.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/paper-obs-t-error-typology.md)
 — *Surface, Not Substance* — carrying the two-axis typology, H1–H3 with their statistics,
-the three crosswalks, the released-resource baselines, and the corrected-≠-error-rate
-caveat. Targets an NLP/language-resource venue (LREC-COLING; IJL alternate). No κ is
-asserted; the gold annotation above remains the open validation gate.
+the three crosswalks, the released-resource baselines, the cross-model IAA section, and
+the corrected-≠-error-rate caveat. Targets an NLP/language-resource venue (LREC-COLING;
+IJL alternate). The earlier one-axis draft (`reports/obs_t_paper_draft.md`) is retired —
+ruling in
+[`docs/A12_OBS_T_MANUSCRIPT_RECONCILIATION_RULING.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/A12_OBS_T_MANUSCRIPT_RECONCILIATION_RULING.md).
 
 The sections below are retained for provenance and the parts still accurate (data
 layers, normalization, NLP resource). Where they say "component = canonical

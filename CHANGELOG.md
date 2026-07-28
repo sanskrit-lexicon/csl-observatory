@@ -4,6 +4,22 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+### Changed
+- **The two rival A12 (OBS-T) manuscripts are reconciled into one canonical draft (H1759).**
+  [`paper-obs-t-error-typology.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/paper-obs-t-error-typology.md)
+  (two-axis framing, released 52,498-event snapshot) is the single surviving A12
+  manuscript; the one-axis 50,953-event `reports/obs_t_paper_draft.md` is retired to a
+  tombstone stub. Carried across in the merge: the byline block, the cross-model IAA
+  section (κ = 0.906 [0.872–0.938], stated as cross-model — not human-validated), accurate
+  gold-sample provenance wording (machine first pass, no human annotation; the final
+  submission wording stays an open human decision, H1272), the 0/120 error-sample
+  benchmark, the related-work survey, the false-DOI warning, and 16 references. Every
+  headline number was re-verified against the released snapshot and generated reports
+  (verification table + full editorial ruling in
+  [`docs/A12_OBS_T_MANUSCRIPT_RECONCILIATION_RULING.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/A12_OBS_T_MANUSCRIPT_RECONCILIATION_RULING.md)).
+  `STATUS.md`, `docs/ERROR_TYPOLOGY_DESIGN.md` and `article/A15_github_ecosystem.md`
+  repointed at the survivor.
+
 ### Fixed
 - **Repaired all four red default-branch workflows found by the org CI-health sweep (H1736).**
   `pages build and deployment` was red 72.6 days on a Liquid syntax error in
