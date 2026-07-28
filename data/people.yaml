@@ -17,7 +17,7 @@ people:
     name: null
     orcid: null
     affiliation: null
-    repos_authored: ["PWG", "PWK", "MWS", "MD", "AP", "AP90", "GRA", "FRI", "SCH", "DCS", "VCP", "ApteES", "SKD", "MCI", "CORRECTIONS", "WIL", "BHS", "VEI", "ACC", "KRM", "BUR", "CAE", "CCS", "STC", "BEN", "BOR", "INM", "BOP", "LRV", "AMAR", "SHS", "KNA", "KOW"]
+    repos_authored: ["ACC", "AMAR", "AP", "AP90", "ApteES", "BEN", "BHS", "BOP", "BOR", "BUR", "CAE", "CCS", "CORRECTIONS", "DCS", "FRI", "GRA", "INM", "KNA", "KOW", "KRM", "LRV", "MCI", "MD", "MW72", "MWS", "PUI", "PWG", "PWK", "SCH", "SHS", "SKD", "STC", "VCP", "VEI", "WIL"]
     repos_contributed: []
     enrichment_status: needs_name_and_orcid
   - login: actions-user
@@ -25,7 +25,7 @@ people:
     orcid: null
     affiliation: null
     repos_authored: []
-    repos_contributed: ["csl-observatory", "hwnorm1", "csl-apidev", "hwnorm2"]
+    repos_contributed: ["csl-apidev", "csl-observatory", "hwnorm1", "hwnorm2"]
     enrichment_status: needs_name_and_orcid
   - login: adminlip
     name: null
@@ -39,14 +39,14 @@ people:
     orcid: null
     affiliation: null
     repos_authored: []
-    repos_contributed: ["MWS", "AP90", "mw-dev"]
+    repos_contributed: ["AP90", "MWS", "mw-dev"]
     enrichment_status: needs_name_and_orcid
   - login: AnnaRybakovaT
     name: null
     orcid: null
     affiliation: null
     repos_authored: []
-    repos_contributed: ["PWK", "MWS", "MD", "SKD", "CORRECTIONS", "BUR", "CAE", "BEN", "BOP", "csl-orig"]
+    repos_contributed: ["BEN", "BOP", "BUR", "CAE", "CORRECTIONS", "MD", "MWS", "PWK", "SKD", "csl-orig", "temp_corrections_ap90"]
     enrichment_status: needs_name_and_orcid
   - login: aumsanskrit
     name: null
@@ -55,6 +55,13 @@ people:
     repos_authored: []
     repos_contributed: ["csl-orig"]
     enrichment_status: needs_name_and_orcid
+  - login: null
+    name: "Dhaval Patel"
+    orcid: null
+    affiliation: null
+    repos_authored: ["csl-websanlexicon"]
+    repos_contributed: []
+    enrichment_status: needs_orcid
   - login: DmitriSKT
     name: null
     orcid: null
@@ -67,21 +74,21 @@ people:
     orcid: null
     affiliation: null
     repos_authored: []
-    repos_contributed: ["PWG", "PWK", "MWS", "AP", "VCP", "CORRECTIONS", "WIL", "BHS", "VEI", "ACC", "BEN", "BOR", "BOP", "LRV", "AMAR", "SHS", "COLOGNE", "hwnorm1", "alternateheadwords", "cologne-stardict", "csl-doc", "csl-apidev", "csl-homepage", "csl-websanlexicon", "csl-pywork", "csl-orig", "csl-corrections", "hwnorm2", "csl-devanagari", "csl-newsletter", "csl-lnum", "csl-ldev", "literarysource", "mw-dev", "csl-app", "csl-lslink"]
+    repos_contributed: ["ACC", "AMAR", "AP", "BEN", "BHS", "BOP", "BOR", "COLOGNE", "CORRECTIONS", "LRV", "MWS", "PUI", "PWG", "PWK", "SHS", "VCP", "VEI", "WIL", "alternateheadwords", "cologne-hugo", "cologne-stardict", "csl-apidev", "csl-app", "csl-corrections", "csl-devanagari", "csl-doc", "csl-homepage", "csl-json", "csl-ldev", "csl-lnum", "csl-lslink", "csl-newsletter", "csl-orig", "csl-pywork", "csl-sqlite", "csl-websanlexicon", "hwnorm1", "hwnorm2", "literarysource", "mw-dev", "sanskrit-lexicon.github.io"]
     enrichment_status: needs_name_and_orcid
   - login: funderburkjim
     name: null
     orcid: null
     affiliation: null
     repos_authored: []
-    repos_contributed: ["PWG", "PWK", "MWS", "MD", "AP", "AP90", "GRA", "FRI", "SCH", "VCP", "ApteES", "SKD", "CORRECTIONS", "WIL", "BHS", "VEI", "KRM", "BUR", "CAE", "CCS", "STC", "BEN", "INM", "BOP", "LRV", "SHS", "COLOGNE", "GreekInSanskrit", "hwnorm1", "alternateheadwords", "rvlinks", "MWinflect", "csl-doc", "csl-apidev", "csl-homepage", "csl-websanlexicon", "csl-pywork", "csl-orig", "csl-westergaard", "csl-kale", "csl-inflect", "csl-corrections", "hwnorm2", "avlinks", "csl-newsletter", "mw-dev", "csl-lslink"]
+    repos_contributed: ["AP", "AP90", "ApteES", "ArabicInSanskrit", "BEN", "BHS", "BOP", "BUR", "CAE", "CCS", "COLOGNE", "CORRECTIONS", "FRI", "GRA", "GreekInSanskrit", "INM", "KRM", "LRV", "MD", "MW72", "MWS", "MWinflect", "PWG", "PWK", "SCH", "SHS", "SKD", "STC", "VCP", "VEI", "WIL", "Wil-YAT", "alternateheadwords", "avlinks", "csl-apidev", "csl-corrections", "csl-devanagari", "csl-doc", "csl-homepage", "csl-inflect", "csl-kale", "csl-lslink", "csl-newsletter", "csl-orig", "csl-pywork", "csl-websanlexicon", "csl-westergaard", "csl-whitroot", "hwnorm1", "hwnorm2", "mw-dev", "rvlinks", "sanskrit-fonts", "sanskrit-lexicon.github.io", "temp_corrections_acc", "temp_corrections_ae", "temp_corrections_ap90", "temp_corrections_mw", "test_cologne_push"]
     enrichment_status: needs_name_and_orcid
   - login: gasyoun
     name: null
     orcid: null
     affiliation: null
     repos_authored: []
-    repos_contributed: ["PWG", "PWK", "MWS", "MD", "AP", "AP90", "GRA", "FRI", "SCH", "DCS", "VCP", "ApteES", "SKD", "MCI", "CORRECTIONS", "WIL", "BHS", "VEI", "ACC", "KRM", "BUR", "CAE", "CCS", "STC", "BEN", "BOR", "INM", "BOP", "LRV", "AMAR", "SHS", "KNA", "KOW", "csl-observatory", "COLOGNE", "GreekInSanskrit", "hwnorm1", "alternateheadwords", "cologne-stardict", "rvlinks", "MWinflect", "csl-doc", "csl-apidev", "csl-homepage", "csl-websanlexicon", "csl-pywork", "csl-orig", "csl-westergaard", "csl-kale", "csl-inflect", "csl-corrections", "hwnorm2", "avlinks", "csl-devanagari", "csl-newsletter", "csl-lnum", "csl-ldev", "literarysource", "mw-dev", "csl-app", "csl-lslink"]
+    repos_contributed: ["ACC", "AMAR", "AP", "AP90", "ApteES", "ArabicInSanskrit", "BEN", "BHS", "BOP", "BOR", "BUR", "CAE", "CCS", "COLOGNE", "CORRECTIONS", "DCS", "FRI", "GRA", "GreekInSanskrit", "INM", "KNA", "KOW", "KRM", "LRV", "MCI", "MD", "MW72", "MWS", "MWinflect", "PUI", "PWG", "PWK", "SCH", "SHS", "SKD", "STC", "VCP", "VEI", "WIL", "Wil-YAT", "alternateheadwords", "avlinks", "cologne-hugo", "cologne-stardict", "csl-apidev", "csl-app", "csl-corrections", "csl-devanagari", "csl-doc", "csl-homepage", "csl-inflect", "csl-json", "csl-kale", "csl-ldev", "csl-lnum", "csl-lslink", "csl-newsletter", "csl-observatory", "csl-orig", "csl-pywork", "csl-sqlite", "csl-websanlexicon", "csl-westergaard", "csl-whitroot", "hwnorm1", "hwnorm2", "literarysource", "mw-dev", "rvlinks", "sanskrit-fonts", "sanskrit-lexicon.github.io", "santamlegacy", "temp_corrections_acc", "temp_corrections_ae", "temp_corrections_ap90", "temp_corrections_mw", "test_cologne_push"]
     enrichment_status: needs_name_and_orcid
   - login: Haqob
     name: null
@@ -90,6 +97,13 @@ people:
     repos_authored: []
     repos_contributed: ["rvlinks"]
     enrichment_status: needs_name_and_orcid
+  - login: null
+    name: "Jim Funderburk"
+    orcid: null
+    affiliation: null
+    repos_authored: ["csl-websanlexicon"]
+    repos_contributed: []
+    enrichment_status: needs_orcid
   - login: maltenth
     name: null
     orcid: null
@@ -97,6 +111,13 @@ people:
     repos_authored: []
     repos_contributed: ["PWK"]
     enrichment_status: needs_name_and_orcid
+  - login: null
+    name: "M\u0101rcis Gas\u016bns"
+    orcid: "https://orcid.org/0000-0003-4513-884X"
+    affiliation: null
+    repos_authored: ["csl-inflect", "csl-observatory", "csl-websanlexicon"]
+    repos_contributed: []
+    enrichment_status: needs_affiliation
   - login: sanskritisampada
     name: null
     orcid: null
@@ -130,12 +151,12 @@ people:
     orcid: null
     affiliation: null
     repos_authored: []
-    repos_contributed: ["csl-lnum", "csl-ldev"]
+    repos_contributed: ["csl-ldev", "csl-lnum"]
     enrichment_status: needs_name_and_orcid
   - login: YevgenJohn
     name: null
     orcid: null
     affiliation: null
     repos_authored: []
-    repos_contributed: ["csl-pywork", "csl-orig"]
+    repos_contributed: ["csl-orig", "csl-pywork"]
     enrichment_status: needs_name_and_orcid

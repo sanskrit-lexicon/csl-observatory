@@ -15,6 +15,20 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "observatory" / "site" / "src" / "data"
 OUT = DATA_DIR / "data_index.csv"
+SOURCE_DATA_DIR = ROOT / "data"
+
+# Hand-curated files whose canonical committed home is data/; the refresh
+# workflow's "Copy data into site" step mirrors them into DATA_DIR on each run.
+# They are resolved from data/ here so the catalog (and --check) does not
+# depend on whether that copy step has run in the current checkout.
+WORKFLOW_COPIED = frozenset(
+    {
+        "contributor_repo_heatmap.csv",
+        "contributor_specialisation.csv",
+        "etymology_marker_preliminary.csv",
+        "wil_nirukta_tokens.csv",
+    }
+)
 
 
 @dataclass(frozen=True)
@@ -134,11 +148,53 @@ CATALOG: dict[str, Entry] = {
         "Summary of PWG <ls> citation link coverage: scan vs HTML targets over the translated article subset.",
         "Derived in the PWG repo, not regenerated here; see reports/pwg_citation_coverage.md for the live sources.",
     ),
+    "pwg_scan_index.csv": Entry(
+        "citation coverage",
+        "scripts/pwg_scan_index.py",
+        "One row per PWG/PWK literary source in the 2025-2026 volunteer scan-indexing campaign: status, citation count, pages, volunteer, dates, scan directory.",
+        "Transcribed from a maintainer-kept Google Sheet, not derived from the dictionary; the citation-count column's own provenance is unresolved and is used for ranking only, never as a share of a dictionary-wide total (reports/pwg_scan_index.md section 6.2).",
+    ),
+    "pwg_scan_index_summary.json": Entry(
+        "citation coverage",
+        "scripts/pwg_scan_index.py",
+        "Campaign aggregates behind the Scan-Index Campaign page: status distribution, per-volunteer throughput, monthly velocity, and the ranked unclaimed backlog.",
+        "Percentages are coverage of the tracked set, not of the dictionary; per-volunteer citation mass under-credits volunteers whose works are multi-volume, since the sheet records the count once on volume 1.",
+    ),
+    "event_id_crosswalk_v1.csv": Entry(
+        "obs-t corpus",
+        "scripts/migrate_event_ids_v1.py",
+        "Crosswalk from the pre-v1 opaque event ids to the persistent obst:v1:<layer>:<dict>:<hash> scheme, one row per migrated correction event.",
+        "A one-time migration artifact kept so older citations still resolve; it is not regenerated on refresh and must not be used as an event corpus.",
+    ),
+    "corrector_recapture.csv": Entry(
+        "obs-t recapture",
+        "scripts/corrector_recapture.py",
+        "Within-era corrector-pair recapture: Chapman over corrector pairs and Chao2 over all correctors of a dictionary-era, against the two-era estimate.",
+        "Correctors are resolved people, not raw cells; joint cells are excluded as non-independent. Rows with chao2_stable = 0 (Q2 < 10) are not reportable estimates.",
+    ),
+    "dict_record_counts.csv": Entry(
+        "dictionary inventory",
+        "scripts/headword_linkage.py",
+        "<L> record count and distinct-<k1> headword count for every csl-orig v02 dictionary — the physical denominator and cap for population estimates.",
+        "Counted from the sibling csl-orig checkout at refresh time; four dictionaries carrying correction events (pd, abch, apes, pwg2013) have no v02 entry file and so no row.",
+    ),
     "error_recapture.csv": Entry(
         "obs-t recapture",
         "scripts/error_recapture.py",
         "Chapman capture-recapture estimates of error-prone records remaining per dictionary, from two-era overlap.",
         "Order-of-magnitude only: sequential occasions and heterogeneous catchability violate Chapman assumptions in opposite directions; estimates capped at record counts.",
+    ),
+    "headword_key_collisions.csv": Entry(
+        "dictionary inventory",
+        "scripts/headword_linkage.py",
+        "Per dictionary x linkage level: how often the record-linkage key merges two distinct records of that dictionary — the ambiguity cost of each level.",
+        "A property of the key and the dictionary, not of the correction corpus: it bounds ambiguity, it does not count the false matches actually made (see linkage_ladder.csv).",
+    ),
+    "linkage_ladder.csv": Entry(
+        "obs-t recapture",
+        "scripts/error_recapture.py",
+        "Recaptures won and false matches measured at each two-era linkage level, per dictionary — the evidence behind the operating level.",
+        "False matches are counted by the attestation test against csl-orig; rows with audited = 0 had no inventory available and carry no verdict.",
     ),
     "etymology_marker_preliminary.csv": Entry(
         "dictionary etymology",
@@ -403,11 +459,27 @@ FIELDNAMES = [
 
 
 def public_data_files() -> list[Path]:
-    return sorted(
-        path
+    listed = {
+        path.name: path
         for path in DATA_DIR.iterdir()
         if path.is_file() and path.suffix.lower() in {".csv", ".json"}
-    )
+    }
+    for name in WORKFLOW_COPIED:
+        source = SOURCE_DATA_DIR / name
+        if source.exists():
+            # The canonical copy always wins over a possibly stale site copy.
+            listed[name] = source
+    return [listed[name] for name in sorted(listed)]
+
+
+def measured_bytes(path: Path) -> int:
+    # Byte size of the LF-normalized content — what git stores under the
+    # repo-wide `eol=lf` attribute — not st_size. The generator scripts write
+    # CRLF (csv.writer's default lineterminator), so st_size taken right after
+    # a regeneration is one byte per row larger than the blob git commits;
+    # every fresh checkout then measures smaller than recorded (G17:
+    # commits.csv 1,330,401 recorded vs 1,320,523 on disk = its 9,878 rows).
+    return len(path.read_bytes().replace(b"\r\n", b"\n"))
 
 
 def csv_rows(path: Path) -> str:
@@ -432,17 +504,6 @@ def generated_date(path: Path) -> str:
     return datetime.fromtimestamp(path.stat().st_mtime, timezone.utc).date().isoformat()
 
 
-def canonical_text_size(path: Path) -> int:
-    """Return the repository-canonical byte size for a text data artifact.
-
-    Git may materialize tracked text files with CRLF in a Windows working tree
-    even though the committed blob and Linux CI use LF.  Catalog byte counts are
-    provenance metadata, so they must describe the canonical LF content rather
-    than the checkout platform.
-    """
-    return len(path.read_bytes().replace(b"\r\n", b"\n"))
-
-
 def row_for(path: Path, entry: Entry, *, rows: str | None = None, size: int | None = None) -> dict[str, str]:
     if path.suffix.lower() == ".csv":
         row_count = csv_rows(path) if rows is None else rows
@@ -454,7 +515,7 @@ def row_for(path: Path, entry: Entry, *, rows: str | None = None, size: int | No
         "file": path.name,
         "format": fmt,
         "category": entry.category,
-        "bytes": str(canonical_text_size(path) if size is None else size),
+        "bytes": str(measured_bytes(path) if size is None else size),
         "rows": row_count,
         "generated_date": generated_date(path),
         "source_script": entry.source_script,
@@ -560,7 +621,7 @@ def main() -> int:
         check_existing(rows)
         print(f"OK: {len(rows)} public data files cataloged")
         return 0
-    OUT.write_text(serialize(rows), encoding="utf-8")
+    OUT.write_text(serialize(rows), encoding="utf-8", newline="\n")
     print(f"wrote {OUT.relative_to(ROOT)} ({len(rows)} rows)")
     return 0
 

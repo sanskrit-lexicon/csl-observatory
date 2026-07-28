@@ -1,16 +1,19 @@
 login,name,orcid,affiliation,n_repos_authored,n_repos_contributed,status
-,"","","",33,0,needs_name_and_orcid
+,"","","",35,0,needs_name_and_orcid
 actions-user,"","","",0,4,needs_name_and_orcid
 adminlip,"","","",0,1,needs_name_and_orcid
 Andhrabharati,"","","",0,3,needs_name_and_orcid
-AnnaRybakovaT,"","","",0,10,needs_name_and_orcid
+AnnaRybakovaT,"","","",0,11,needs_name_and_orcid
 aumsanskrit,"","","",0,1,needs_name_and_orcid
+,"Dhaval Patel","","",1,0,needs_orcid
 DmitriSKT,"","","",0,1,needs_name_and_orcid
-drdhaval2785,"","","",0,36,needs_name_and_orcid
-funderburkjim,"","","",0,47,needs_name_and_orcid
-gasyoun,"","","",0,61,needs_name_and_orcid
+drdhaval2785,"","","",0,41,needs_name_and_orcid
+funderburkjim,"","","",0,59,needs_name_and_orcid
+gasyoun,"","","",0,77,needs_name_and_orcid
 Haqob,"","","",0,1,needs_name_and_orcid
+,"Jim Funderburk","","",1,0,needs_orcid
 maltenth,"","","",0,1,needs_name_and_orcid
+,"Mārcis Gasūns","https://orcid.org/0000-0003-4513-884X","",3,0,needs_affiliation
 sanskritisampada,"","","",0,1,needs_name_and_orcid
 shenyileirob,"","","",0,1,needs_name_and_orcid
 sumanthegde,"","","",0,1,needs_name_and_orcid

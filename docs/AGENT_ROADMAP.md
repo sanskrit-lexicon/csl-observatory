@@ -1,6 +1,8 @@
 # Agent Roadmap — Sanskrit Lexicon Issue Automation
 
-_Canonical location: [`csl-observatory/docs/AGENT_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/AGENT_ROADMAP.md). Last compiled: 2026-06-30 (P7: MWS W1(a)+W1(b) complete). Re-compile when new issues are opened or a skill ships._
+_Created: 26-06-2026 · Last updated: 19-07-2026_
+
+_**Canonical copy — the only editable one.** Last compiled: 2026-06-30 (P7: MWS W1(a)+W1(b) complete). Re-compile when new issues are opened or a skill ships. The [Uprava copy](https://github.com/gasyoun/Uprava/blob/main/AGENT_ROADMAP.md) is a pointer stub, not a mirror — canonicity ruled 19-07-2026 per the [H699 reconciliation](https://github.com/gasyoun/Uprava/blob/main/docs/AGENT_ROADMAP_RECONCILIATION_07.2026.md)._
 
 **Scope:** 821 open issues across 68 repos in the `sanskrit-lexicon` org, surveyed 2026-06-26.
 **Goal:** Map which issues agents can supply data for (humans close after), which need a new skill first, and in what order.
@@ -355,3 +357,10 @@ All four skills are independent of each other except P4→P1.
 | `cologne-markup-batch` | `~/.claude/commands/cologne-markup-fix.md`; per-dict `<ls>` abbreviation lists in `csl-lslink` |
 | `cologne-question-research` | `WhitneyRoots/` crosswalk; `csl-lslink`; `SanskritLexicography/FINDINGS.md`; `MWinflect` readme |
 | `cologne-bug-triage` | `csl-orig` XML schema; `csl-websanlexicon` issue taxonomy |
+
+## Related documents (awareness weave H1728)
+
+- Product/research observatory roadmap: [OBSERVATORY_ROADMAP.md](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/OBSERVATORY_ROADMAP.md)
+
+
+_Dr. Mārcis Gasūns_

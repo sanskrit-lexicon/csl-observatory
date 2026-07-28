@@ -1,0 +1,177 @@
+{
+ "as_of": "2026-07-27",
+ "source_sheet": "https://docs.google.com/spreadsheets/d/1rcYfQE0D26RNdWSmRQzhFnV3Gf248wSuldTj-wt8_O0/edit?gid=0",
+ "tracked_works": 82,
+ "done": 55,
+ "on_going": 3,
+ "to_do": 7,
+ "page_wise": 14,
+ "not_required": 3,
+ "volunteers": 8,
+ "tracked_citation_mass": 268425,
+ "indexed_citation_mass": 197876,
+ "indexed_mass_pct_of_tracked": 73.7,
+ "dictionary_ls_occurrences_for_scale": 344229,
+ "pages_indexed": 28963,
+ "scans_published": 55,
+ "scan_dirs_observed_wired": 32,
+ "median_index_to_public_days": 12,
+ "months": [
+  {
+   "month": "2025-01",
+   "indexes_finished": 2,
+   "scans_published": 0
+  },
+  {
+   "month": "2025-02",
+   "indexes_finished": 17,
+   "scans_published": 5
+  },
+  {
+   "month": "2025-03",
+   "indexes_finished": 15,
+   "scans_published": 18
+  },
+  {
+   "month": "2025-04",
+   "indexes_finished": 8,
+   "scans_published": 9
+  },
+  {
+   "month": "2025-05",
+   "indexes_finished": 7,
+   "scans_published": 8
+  },
+  {
+   "month": "2025-06",
+   "indexes_finished": 3,
+   "scans_published": 10
+  },
+  {
+   "month": "2025-07",
+   "indexes_finished": 0,
+   "scans_published": 1
+  },
+  {
+   "month": "2025-08",
+   "indexes_finished": 1,
+   "scans_published": 2
+  },
+  {
+   "month": "2025-09",
+   "indexes_finished": 2,
+   "scans_published": 2
+  },
+  {
+   "month": "2026-01",
+   "indexes_finished": 1,
+   "scans_published": 0
+  },
+  {
+   "month": "2026-07",
+   "indexes_finished": 0,
+   "scans_published": 1
+  }
+ ],
+ "per_volunteer": [
+  {
+   "handle": "@IrinaKonstant",
+   "works": 13,
+   "citation_mass": 61664,
+   "pages": 5439
+  },
+  {
+   "handle": "@OFar0101",
+   "works": 15,
+   "citation_mass": 58955,
+   "pages": 7005
+  },
+  {
+   "handle": "@grigoriyt1",
+   "works": 8,
+   "citation_mass": 35099,
+   "pages": 5147
+  },
+  {
+   "handle": "@angalinde",
+   "works": 11,
+   "citation_mass": 18225,
+   "pages": 5352
+  },
+  {
+   "handle": "@Azanuka2412",
+   "works": 5,
+   "citation_mass": 14354,
+   "pages": 3520
+  },
+  {
+   "handle": "@AnnaRybakovaT",
+   "works": 2,
+   "citation_mass": 9490,
+   "pages": 1168
+  },
+  {
+   "handle": "@sofia28000",
+   "works": 2,
+   "citation_mass": 7784,
+   "pages": 976
+  },
+  {
+   "handle": "@ramray",
+   "works": 3,
+   "citation_mass": 0,
+   "pages": 2203
+  }
+ ],
+ "backlog": [
+  {
+   "ls_code": "ĀŚV. ŚR.",
+   "title": "ĀŚVALĀYANA'S ŚRAUTASŪTRĀṆI",
+   "citations": 1835,
+   "pages": 1058,
+   "vedic": true
+  },
+  {
+   "ls_code": "PAÑCAV. BR.",
+   "title": "PAÑCAVIṂŚABRĀHMAṆA",
+   "citations": 1729,
+   "pages": 1876,
+   "vedic": true
+  },
+  {
+   "ls_code": "CHĀND. UP.",
+   "title": "CHĀNDOGYOPANIṢAD",
+   "citations": 1696,
+   "pages": 646,
+   "vedic": true
+  },
+  {
+   "ls_code": "VYUTP.",
+   "title": "VYUTPATTI oder MAHĀVYUTPATTI",
+   "citations": 1670,
+   "pages": 290,
+   "vedic": false
+  },
+  {
+   "ls_code": "ĀŚV. GṚHY.",
+   "title": "ĀŚVALĀYANA'S GṚHYASŪTRĀṆI",
+   "citations": 1453,
+   "pages": 452,
+   "vedic": true
+  },
+  {
+   "ls_code": "KĀṬH.",
+   "title": "KĀṬHAKA-Recension des YĀJ. V.",
+   "citations": 1316,
+   "pages": 935,
+   "vedic": true
+  },
+  {
+   "ls_code": "ŚIŚ.",
+   "title": "ŚIŚUPĀLAVADHA",
+   "citations": 1299,
+   "pages": 776,
+   "vedic": false
+  }
+ ]
+}

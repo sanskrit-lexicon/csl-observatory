@@ -50,16 +50,17 @@ belong in sibling projects or archived planning docs.
 | RH1 | Decide license policy for code/data/dictionary repos. | MG + Org | blocked | 2026-06-28 | Written decision in `docs/DECISIONS_NEEDED.md`; policy distinguishes code, dictionary data, OBS-T data, and legacy repos. |
 | RH2 | Resolve the license backlog from `reports/repo_health.md`: 41 no-license repos and 21 `NOASSERTION` repos. | MG + Codex | scheduled | 2026-08-31 | Each repo has a recognized license or an explicit issue explaining why not. |
 | RH3 | Archive or justify the six cleanup candidates: `santamlegacy`, `temp_corrections_*`, `test_cologne_push`. | MG + Org | blocked | 2026-07-15 | Each candidate is archived or has a short retention note linked from the org project. |
-| RH4 | Add a standard `.gitattributes` / line-ending policy to active tooling repos. | Codex | active | 2026-07-31 | `csl-observatory` now has explicit LF policy; remaining active tooling repos still need rollout. |
-| RH5 | Add no-BOM, UTF-8, NFC, and XML parse guards for dictionary-source change paths. | Codex | scheduled | 2026-08-15 | CI template exists and is piloted on `csl-orig` or the owning tooling repo. |
+| RH4 | Add a standard `.gitattributes` / line-ending policy to active tooling repos. | Codex | done | 2026-07-31 | All 34 repos in `.github/workflows/tooling-audit.yml` REPOS carry `eol=lf` `.gitattributes` — verified and rolled out 2026-07-27 via [H1542](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1542-Sonnet_csl-observatory_rh4-gitattributes-lf-rollout_23.07.26.md). |
+| RH5 | Add no-BOM, UTF-8, NFC, and XML parse guards for dictionary-source change paths. | Codex | done | 2026-08-15 | CI template exists and is piloted on `csl-orig` or the owning tooling repo. |
 | RH6 | Finish issue-taxonomy rollout across remaining repos. | MG + Codex | done | 2026-08-31 | Rollout is verified complete; ongoing taxonomy/project drift is handled by the monthly maintainer review checklist. |
 | RH7 | Normalize missing descriptions and basic metadata for the top flagged repos. | MG | scheduled | 2026-07-31 | `reports/repo_health.md` missing-description list is empty or justified. |
 
 Evidence to keep current: `reports/repo_health.md`,
-`docs/hygiene_issues_draft.md`, `docs/RUNBOOK_NOTES.md`, and
-`docs/REPOSITORY_HEALTH_DECISION_PACKET.md`, and
-`docs/METADATA_COMPLETENESS_DASHBOARD_PLAN.md`. Maintainer dashboard entry
-points: `/ops-command`, `/repository-risk`, and `/metadata-readiness`.
+`docs/hygiene_issues_draft.md`, `docs/RUNBOOK_NOTES.md`,
+`docs/REPOSITORY_HEALTH_DECISION_PACKET.md`,
+`docs/METADATA_COMPLETENESS_DASHBOARD_PLAN.md`, and (RH5)
+`docs/ENCODING_GUARD.md`. Maintainer dashboard entry points:
+`/ops-command`, `/repository-risk`, and `/metadata-readiness`.
 
 ## 2026-Q3/Q4: Sustainability And Community Continuity
 

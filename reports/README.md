@@ -25,6 +25,8 @@ page.
 | [`contributor_identity.md`](contributor_identity.md) | `contributor_identity.py` | — | 0/16 authors have a registered ORCID; 7 named await registration, 9 to identify |
 | [`obs_q_correction_sustainability.md`](obs_q_correction_sustainability.md) | _(probe; `obs_q_correction.py` is next)_ | — | Content corrections are single-person-burst-driven: ≤4 correctors/yr, lead 51–100%; resolution median 6 d but a tail to 6.4 yr |
 | [`pwg_citation_coverage.md`](pwg_citation_coverage.md) | _(external: [`build_citation_index.py`](https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/src/build_citation_index.py))_ | — | PWG `<ls>` link coverage (translated subset): 83.2% of 50,065 citation occurrences resolve (69% scan / 14% HTML); 446 works un-digitised |
+| [`pwg_scan_index.md`](pwg_scan_index.md) | `pwg_scan_index.py` | [Scan-Index Campaign](https://sanskrit-lexicon.github.io/csl-observatory/scan-index) | The 2025–26 volunteer indexing campaign that built those scan targets: 55/82 works done, 73.7% of tracked citation mass, 28,963 pages, 8 volunteers; 7 works unclaimed, 5 of them Vedic |
+| [`pwg_kosa_etext_pilot.md`](pwg_kosa_etext_pilot.md) | `pwg_kosa_ocr_probe.py` | — | Measured NO-GO on OCR-from-scratch for the two heaviest PWG kośa scans: local tesseract 5 `san` 17.8% valid tokens vs 43.8% for the hOCR the Bayerische Staatsbibliothek already publishes — 2.5×, free. Re-scoped to ingest-and-correct |
 
 ## OBS-T — error typology (language-resource track, Phases 1–8)
 
@@ -44,6 +46,9 @@ released resource, NLP baselines, and a validation suite. Design:
 | [`obs_t_translit_validation.md`](obs_t_translit_validation.md) | `obs_t_translit_check.py` | SLP1→IAST 100%, Devanagari 98.5%, HK 95.6% vs `indic_transliteration`; found HK/SLP1 convention mixing |
 | [`obs_t_silver.md`](obs_t_silver.md) | `obs_t_silver.py` | Silver validation that surfaced the location/edit-type axis confound (resolved in Phase 8) |
 | [`obs_t_issuelabel.md`](obs_t_issuelabel.md) | `obs_t_issuelabel.py` | Independent issue-typing corroborates: surface/text 65.6% vs content 17.1% |
+| [`error_recapture.md`](error_recapture.md) | `error_recapture.py` · `headword_linkage.py` | Two-era Chapman capture–recapture on a measured linkage ladder (`form_key`): recaptures pw 196 · mw 131 · bur 44 · cae 13; caps from all 44 csl-orig v02 record counts |
+| [`corrector_recapture.md`](corrector_recapture.md) | `corrector_recapture.py` | Within-era design — correctors as capture occasions, pairwise Chapman + Chao2; gives `pwg` its first population estimate (~26,515) |
+| [`record_linkage_rejected_alternatives.md`](record_linkage_rejected_alternatives.md) | — (documentation) | The keys that were tried and rejected: edit-distance-1 (rejected twice, independently), full diacritic folding, and the `<L>` join — **64% of form-era `<L>` codes have drifted**, so an L-number join is unsafe outside pw/mw |
 
 Human-gated (awaiting annotation): `python scripts/obs_t_gold.py --make`,
 `python scripts/obs_t_gold.py --score`, `python scripts/obs_t_errorsample.py --make`,
@@ -100,6 +105,8 @@ python scripts/velocity_timeline.py
 python scripts/contributor_identity.py
 python scripts/workflow_health.py
 python scripts/data_index.py
+python scripts/pwg_scan_index.py          # add --fetch to re-snapshot the upstream sheet
+python scripts/pwg_kosa_ocr_probe.py      # OCR engine comparison; --sweep for the parameter sweep
 ```
 
 Each finding script writes its `reports/<name>.md` and refreshes the matching

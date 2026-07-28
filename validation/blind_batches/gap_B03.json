@@ -1,0 +1,13 @@
+[
+ {
+  "row_id": "110",
+  "source_layer": "git",
+  "dict": "sch",
+  "headword_iast": "kapiñjala",
+  "old_iast": "{%kapiñjala%}¦ 1. a) {%°nyāyena%} (<ls>Sāy.</ls> zu <ls>ṚV. 3, 56, 5;</ls> <ls>Sud.</ls> zu <ls>Āpast. Gṛhy.</ls> 10, 2, 3; <ls>Kull.</ls> zu <ls>M.</ls> 8, 105) nach Art der kapiñjala und kapiñjalādhikaraṇanyāyena (<ls>Ṣaḍguruś.</ls> in <ls>Vedārthad.</ls> 72, 10) nach Art des <ls>Kap.</ls>- Abschnittes (in der Pūrvamīmāṃsā) bedeuten so v.a. da schon drei eine Mehrzahl bilden. {part=,seq=9873,type=,n=9}",
+  "new_iast": "{%kapiñjala%}¦ 1. a) {%°nyāyena%} (<ls>Sāy.</ls> zu <ls>ṚV. 3, 56, 5;</ls> <ls>Sud.</ls> zu <ls>Āpast. Gṛhy.</ls> 10, 2, 3; <ls>Kull.</ls> zu <ls>M. 8, 105</ls>) nach Art der kapiñjala und kapiñjalādhikaraṇanyāyena (<ls>Ṣaḍguruś.</ls> in <ls>Vedārthad.</ls> 72, 10) nach Art des <ls>Kap.</ls>- Abschnittes (in der Pūrvamīmāṃsā) bedeuten so v.a. da schon drei eine Mehrzahl bilden. {part=,seq=9873,type=,n=9}",
+  "old_raw": "{%kapiñjala%}¦ 1. a) {%°nyāyena%} (<ls>Sāy.</ls> zu <ls>ṚV. 3, 56, 5;</ls> <ls>Sud.</ls> zu <ls>Āpast. Gṛhy.</ls> 10, 2, 3; <ls>Kull.</ls> zu <ls>M.</ls> 8, 105) nach Art der kapiñjala und kapiñjalādhikaraṇanyāyena (<ls>Ṣaḍguruś.</ls> in <ls>Vedārthad.</ls> 72, 10) nach Art des <ls>Kap.</ls>- Abschnittes (in der Pūrvamīmāṃsā) bedeuten so v.a. da schon drei eine Mehrzahl bilden. {part=,seq=9873,type=,n=9}",
+  "new_raw": "{%kapiñjala%}¦ 1. a) {%°nyāyena%} (<ls>Sāy.</ls> zu <ls>ṚV. 3, 56, 5;</ls> <ls>Sud.</ls> zu <ls>Āpast. Gṛhy.</ls> 10, 2, 3; <ls>Kull.</ls> zu <ls>M. 8, 105</ls>) nach Art der kapiñjala und kapiñjalādhikaraṇanyāyena (<ls>Ṣaḍguruś.</ls> in <ls>Vedārthad.</ls> 72, 10) nach Art des <ls>Kap.</ls>- Abschnittes (in der Pūrvamīmāṃsā) bedeuten so v.a. da schon drei eine Mehrzahl bilden. {part=,seq=9873,type=,n=9}",
+  "comment_raw": "sch: link target standardization for 'M.' (manu-smfti).  Ref: https://github.com/sanskrit-lexicon/PWG/issues/73"
+ }
+]

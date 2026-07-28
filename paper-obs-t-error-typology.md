@@ -213,6 +213,20 @@ insertion / deletion / transposition), and **textual criticism** (Katre 1941:
 substitution / omission / addition / transposition, plus haplography / dittography /
 metathesis). One corpus, four readings.
 
+### 4.5 Evaluation lineage
+
+OBS-T label validation, its confusion/alignment analysis (§4.3), and any future
+cross-dictionary sense/headword mapping are instances of the ELEXIS/GlobaLex
+**Monolingual Word Sense Alignment (MWSA)** shared-task family (Ahmadi et al. 2020). Rather
+than invent a bespoke validation method, we adopt the MWSA evaluation contract — a **frozen
+gold sample, two annotators, Cohen's κ, and per-class precision/recall/F1** — for the
+gold-annotation gate described in §8. The harness
+([`scripts/obs_t_gold.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/obs_t_gold.py))
+implements the stratified sampling, blind annotation sheets, κ, and per-class P/R/F1 this
+lineage prescribes. Naming the lineage here does not itself change what OBS-T releases: if a
+cross-dictionary sense-alignment dataset is ever emitted from this corpus, the alignment
+content routes to *csl-atlas*, with OBS-T keeping only the process metrics.
+
 ## 5. Results
 
 ### 5.1 Headline
@@ -419,6 +433,11 @@ different and more human thing than a list of a dictionary's mistakes.
 ---
 
 ## References (draft — author to finalise)
+
+Ahmadi, S., McCrae, J. P., Nimb, S., Khan, F., Monachini, M., Pedersen, B. S. et al. (2020).
+A Multilingual Evaluation Dataset for Monolingual Word Sense Alignment. *LREC 2020*,
+3232–3242. https://aclanthology.org/2020.lrec-1.395/ — [MWSA shared task; data/format:
+https://github.com/elexis-eu/MWSA]
 
 Boros, E., Ehrmann, M., Romanello, M., Najem-Meyer, S. and Kaplan, F. (2024).
 Post-Correction of Historical Text Transcripts with Large Language Models: An

@@ -363,6 +363,23 @@ def parse_corrector(raw, submit_dt, resolve, realname):
     return login, name, latency
 
 
+# ------------------------------------------------------------------ event_id
+_EVENT_ID_SEP = '\x1f'  # unit separator; keep in sync with migrate_event_ids_v1.py
+
+
+def event_id_v1(source_layer, dict_code, source_path, commit_sha, date, old_iast, new_iast):
+    """obst:v1:<source_layer>:<dict>:<h12> per roadmap Part 4.1 / H1494.
+
+    <h12> = first 12 hex chars of SHA-256 over the canonical tuple, joined with
+    U+001F. Must stay byte-for-byte identical to scripts/migrate_event_ids_v1.py's
+    recipe, or freshly generated rows will disagree with re-migrated legacy rows.
+    """
+    key = _EVENT_ID_SEP.join((source_layer, dict_code, source_path, commit_sha, date,
+                              old_iast, new_iast))
+    h12 = hashlib.sha256(key.encode('utf-8')).hexdigest()[:12]
+    return f'obst:v1:{source_layer}:{dict_code}:{h12}'
+
+
 # ----------------------------------------------------------------------- main
 def parse_time(s):
     """cfr timestamp is 'M/D/YYYY H:MM:SS'."""
@@ -405,16 +422,17 @@ def main():
             ops, dist = edit_ops(old_iast, new_iast)
             login, cname, latency = parse_corrector(corr, dt, resolve, realname)
             lc = '' if (not lcode or lcode.strip().startswith('0(')) else lcode.strip()
-            eid = hashlib.sha1(
-                ('form|' + dct + '|' + lc + '|' + old_raw + '|' + new_raw + '|'
-                 + (dt.isoformat() if dt else ts)).encode('utf-8')).hexdigest()[:16]
+            date_str = dt.date().isoformat() if dt else ''
+            dict_code = dct.strip().lower()
+            eid = event_id_v1('form', dict_code, '../CORRECTIONS/cfr.tsv', '',
+                               date_str, old_iast, new_iast)
             rows.append({
                 'event_id': eid,
-                'date': dt.date().isoformat() if dt else '',
+                'date': date_str,
                 'source_layer': 'form',
                 'source_path': '../CORRECTIONS/cfr.tsv',
                 'commit_sha': '',
-                'dict': dct.strip().lower(),
+                'dict': dict_code,
                 'lcode': lc,
                 'headword_iast': normalize_to_iast(hw.strip()),
                 'old_iast': old_iast,
@@ -489,7 +507,21 @@ def main():
         'type': 'object',
         'required': ['event_id', 'date', 'source_layer', 'dict', 'old_iast', 'new_iast'],
         'properties': {
-            'event_id': {'type': 'string'},
+            'event_id': {
+                'type': 'string',
+                'pattern': '^obst:v1:(form|git|printchange|batch):[a-z0-9]+:[0-9a-f]{12}$',
+                '$comment': 'v1 recipe: obst:v1:<source_layer>:<dict>:<h12>, where <h12> = '
+                            'first 12 hex chars of SHA-256 over the tuple (source_layer, dict, '
+                            'source_path, commit_sha, date, old_iast, new_iast) joined with '
+                            'U+001F (unit separator). Deterministic and invariant across '
+                            're-runs (same evidence -> same id); the v1 segment versions the '
+                            'recipe. NOT guaranteed globally unique: rows that share every '
+                            'tuple field collapse to the same id by design (headword_iast is '
+                            'deliberately excluded from the tuple). See '
+                            'scripts/migrate_event_ids_v1.py and '
+                            'observatory/site/src/data/event_id_crosswalk_v1.csv for the '
+                            'old->new mapping.',
+            },
             'date': {'type': 'string'},
             'source_layer': {'enum': ['form', 'git', 'printchange', 'batch']},
             'source_path': {'type': 'string',

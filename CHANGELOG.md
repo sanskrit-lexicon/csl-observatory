@@ -4,6 +4,221 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+### Added
+- **`reports/pwg_kosa_hocr_cer.md` — first CER measurement for BSB's published per-page hOCR against a print e-text (H1720).** All 374 indexed pages of the `amara_dlc` (Amarakoṣa, Deslongchamps 1839, `bsb10250868`) campaign harvested via [`scripts/pwg_kosa_hocr_ingest.py`](scripts/pwg_kosa_hocr_ingest.py), page offset (`-3`) derived empirically rather than assumed, and aligned to [`AMAR/amar.txt`](https://github.com/sanskrit-lexicon/AMAR) by content (token-overlap window search per kāṇḍa, never by in-page digits — the FINDINGS §480 trap). Mean CER over a 39-page depth-stratified sample: **0.719**, reported as a ceiling, not a floor — a gender-tag format mismatch between AMAR's per-word gloss list and the printed verse text inflates the figure independently of true OCR error, on top of the expected edition-variance caveat. `abch2` (Hemacandra) harvest/CER remains open follow-on work; the handoff's DoD is met by one edition.
+
+### Fixed
+- **`event_id_crosswalk_v1.csv` was never registered in `scripts/data_index.py`** (it arrived
+  with the persistent-event-ID migration in [#109](https://github.com/sanskrit-lexicon/csl-observatory/pull/109)),
+  so `python scripts/data_index.py --check` — which `refresh-observatory.yml` runs on every
+  refresh — failed on `main` with `missing catalog entries`. Found while registering the H1477
+  data files; catalog now 66 files, check green.
+- **`scan_target_audit.tsv` / §7 of `reports/pwg_scan_index.md` re-verified after the `rvps` mislink + TS./TBR. arity-gap fix (H1714).** `rvps` flips from `not wired at all` to `yes` (was silently mislinking Rgveda-Pratisakhya citations to an unrelated Rgveda hymn anchor); `taittiriyas`/`taittiriyabr` flip from `partial` to `yes` (3-parameter citations now resolve). `pancar` stays `partial` (2-param has no natural viewer target, confirmed not a gap) and `amara_col` stays `mis-keyed` but is now recorded as by-design (16,151 citations under bare `AK.` for the paired Deslongchamps edition, zero measured for Colebrooke under that key). Fixed in [gasyoun/SanskritLexicography#840](https://github.com/gasyoun/SanskritLexicography/pull/840); tracker counts now 35 wired / 1 partial / 1 mis-keyed / 0 unwired (was 32/3/1/1).
+
+### Added
+
+- **`reports/record_linkage_rejected_alternatives.md` — the negative results behind the G3/A48
+  linkage key, including a measurement that only existed on an unmerged branch (H1477).**
+  Handoff H1477 was implemented twice concurrently; the second implementation was left
+  uncommitted when its session ended and is now preserved unmerged on branch
+  [`h1477-recapture-fuzzy-linkage`](https://github.com/sanskrit-lexicon/csl-observatory/tree/h1477-recapture-fuzzy-linkage).
+  Its linkage proposal lost on measurement (328 recaptures against `form_key`'s 396; the union
+  of both encoding repairs is worth **+1**), but three of its results are independent of that
+  and are now on `main`: **64% of resolvable form-era `<L>` codes (14,403 of 22,466) no longer
+  resolve to a record carrying that event's headword** — with a per-dictionary table, pw 53.9%
+  valid down to cae 0.2% — so *any* join of 2014 form-era OBS-T data onto csl-orig by `<L>`
+  number is unsafe outside pw and mw; the `anchored` key is documented as a change of
+  population (drops 40–97% of form-era events), not a linkage choice; and edit-distance-1 is
+  recorded as rejected by **two independent implementations** (63.4% false matches / 606-of-863
+  pw links joining distinct lemmas), which settles the handoff's headline request. Also records,
+  so it is not later mistaken for a data-integrity bug, that the SLP1 `repair` rewrites the
+  occasional English cell in `headword_iast` (`work` → `ṭork`): 14 of 4,176 firings (0.3%),
+  zero counted recaptures affected. `reports/README.md` now indexes all three recapture reports
+  (the two from [#120](https://github.com/sanskrit-lexicon/csl-observatory/pull/120) were never
+  registered).
+- **`docs/DATASHEET_TEMPLATE.md` + `/data-release` wiring (H1541, roadmap Part 4.2 template
+  half).** Generalized the filled OBS-T `docs/DATASHEET.md` into a blank, reusable Gebru-style
+  template covering every mandatory section named in the spec (motivation, composition,
+  source edition/page range where applicable, encoding + transliteration regime, collection
+  process, known gaps & label-quality state, license, intended use, maintenance). The global
+  `/data-release` command now points at this template in its Phase 2 FAIR pack and states the
+  release gate explicitly. Zenodo DOI half of §4.2 excluded (credential-gated, deferred).
+- **RH4 `.gitattributes` (`eol=lf`) line-ending policy rolled out org-wide (H1542, roadmap RH4).**
+  All 34 repos in `.github/workflows/tooling-audit.yml` REPOS now carry the LF-normalization
+  policy piloted in this repo (RH4-pilot): 12 already had it, 22 rolled out and merged via a new
+  `gitattributes` deploy entry in [`Uprava/tools/cologne_batch_deploy.py`](https://github.com/gasyoun/Uprava/blob/main/tools/cologne_batch_deploy.py)
+  (which also gained a `--repos` comma-list scope flag and transport-error retry-with-backoff on
+  `gh()`, both reusable for future org-wide rollouts). `docs/DECISIONS_NEEDED.md` RH4 flipped to
+  resolved; `docs/ROADMAP.md` RH4 flipped to done.
+- **`scripts/pull_data.py` project-board fields + explicit rate-limit handling (H1540, roadmap A2).**
+  `issues.json` entries now carry a `project_fields` object (Tooling Roadmap project #9 board
+  values — `Title`/`Status`/`Category`/etc., keyed by repo+issue/PR number) fetched via the
+  batched/aliased `ProjectV2` GraphQL pattern already documented in `.ai_state.md`; `summary.json`
+  gained `total_project_board_items`. `gh()` now detects GitHub's primary and secondary rate-limit
+  responses explicitly (separate retry budget from the existing 5xx/backoff path), reads the reset
+  time off `gh api rate_limit`, sleeps (capped at 120s), and logs the wait — closing A2's full
+  acceptance sentence ("One command refreshes issues, PRs, labels, milestones, and project-board
+  fields with rate-limit notes"); A2 flipped to done in `docs/OBSERVATORY_ROADMAP.md`.
+- **MWSA evaluation-lineage subsection (H1539, roadmap Part 4.3).** `docs/DATASHEET.md`
+  gained an "Evaluation lineage" section and `paper-obs-t-error-typology.md` gained
+  §4.5, both naming OBS-T label validation as an instance of the ELEXIS/GlobaLex
+  Monolingual Word Sense Alignment (MWSA) shared-task family (Ahmadi et al. 2020) —
+  adopting its evaluation contract (frozen gold sample, two annotators, Cohen's κ,
+  per-class P/R/F1) rather than a bespoke method, and noting that any future
+  cross-dictionary sense-alignment dataset routes its content to `csl-atlas`, with
+  `csl-observatory` keeping only the process metrics. Reference added to the paper's
+  bibliography; Part 4 acceptance checklist item 3 flipped to done in
+  `docs/HYPOTHESIS_VIZ_STANDARDS_SPEC_2026-07.md`.
+- **Measured record linkage + a second recapture design for G3/A48 (H1477).** The two-era
+  capture-recapture estimate was joining the eras by exact headword string, which loses real
+  recaptures (the form era carries ASCII fallbacks, homonym digits and 3,905 cells of raw SLP1
+  residue; the git era carries clean `<k1>`) and so inflates N̂. New
+  [`scripts/headword_linkage.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/headword_linkage.py)
+  supplies a **ladder of linkage keys with a measured false-match rate for each** — two offline
+  measurements against the dictionaries' own `<k1>` inventories: key-collision rate
+  (`headword_key_collisions.csv`) and an attestation test on the pairs actually matched
+  (`linkage_ladder.csv`). Result: the operating key (`form_key`, length- and
+  retroflexion-preserving, over an SLP1-residue repair, plus a headword-component alias) lifts
+  recaptures pw 169 → 196, mw 105 → 131, bur 23 → 44, cae 1 → 13 — **cae becomes estimable
+  (4 dictionaries, was 3)** and **bur comes off the record-count cap** (~17,247 against 19,776
+  records), showing the old ceiling was an artefact of the join. The naive edit-distance-1 port
+  is **measured and rejected**: 606 of 863 pw links and 474 of 616 mw links join real, distinct
+  lemmas. Normalization comes from the shared `sanskrit-util` package, not a re-roll. Also new:
+  [`scripts/corrector_recapture.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/corrector_recapture.py)
+  — the **within-era corrector-pair design** (correctors as occasions; pairwise Chapman + Chao2
+  incidence with log-normal CI; identity resolution, joint cells excluded as non-independent) →
+  [`reports/corrector_recapture.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/corrector_recapture.md),
+  which cross-checks the two-era numbers at the same order of magnitude and gives **pwg its
+  first population estimate** (~26,515), a dictionary the two-era design cannot reach.
+  `dict_record_counts.csv` extends the record-count cap from 3 hand-counted dictionaries to all
+  44 csl-orig v02 ones. A48 readiness 2/5 → 3/5.
+- **Encoding/XML guard for dictionary-source change paths (H1496, roadmap RH5).**
+  `scripts/encoding_xml_guard.py` checks no-BOM, UTF-8 validity, NFC normalization, and
+  (for `.xml`) `ElementTree` parseability, CI-friendly (`violations: N` line, nonzero exit
+  on any). Piloted live in this repo (`.github/workflows/encoding-guard.yml`) against
+  bundled good/bad fixtures (`runbook/fixtures/encoding_guard/`) — satisfies RH5's
+  "piloted on `csl-orig` or the owning tooling repo" acceptance via the owning-tooling-repo
+  branch, since agents never commit to `csl-orig` directly. Fan-out template for other
+  dictionary/tooling repos' actual change paths:
+  `runbook/templates/encoding-xml-guard.yml` (draft, mirrors `taxonomy-drift.yml`'s
+  sparse-checkout shape). Design: `docs/ENCODING_GUARD.md`. RH5 flipped `scheduled` →
+  `done` in `docs/ROADMAP.md`.
+- **Persistent OBS-T event-ID scheme (H1494, roadmap Part 4.1).** `event_id` in
+  `data/schema/correction-event.schema.json` now carries a `pattern`
+  (`^obst:v1:(form|git|printchange|batch):[a-z0-9]+:[0-9a-f]{12}$`) plus a `$comment`
+  documenting the SHA-256 recipe (`event_id_v1()` in `scripts/build_correction_events.py`,
+  reused by `scripts/reconstruct_git_events.py` so freshly generated rows already comply).
+  One-off `scripts/migrate_event_ids_v1.py` rewrote all 52,498 rows across every
+  `correction_events*.csv` to the new scheme (idempotent, schema-validated 0 errors) and
+  wrote `observatory/site/src/data/event_id_crosswalk_v1.csv` so any `event_id` already
+  cited in a report stays resolvable. **Known property, not a bug:** the tuple deliberately
+  excludes `headword_iast`, so 7,948 of the 52,498 rows share an id with at least one other
+  row (identical evidence). `data/manifest.json` gained a `dataset_ids.correction-events`
+  row (`csl-obs/correction-events@1.0.0`); `observatory/transform.py` now preserves that
+  key across its own regenerations instead of silently overwriting it.
+- **PWG kośa e-text pilot — a measured NO-GO, and a cheaper route (H1715).** The H1706
+  e-text queue ranked `amara_dlc` (Amarakoṣa, Deslongchamps 1839) and `abch2`
+  (Abhidhānacintāmaṇi, Böhtlingk & Rieu 1847) at the top; H1715 proposed OCR-ing them with
+  tesseract 5 `san`. Measured instead: **local tesseract scores 17.8 % valid Sanskrit tokens
+  where the Bayerische Staatsbibliothek's already-published per-page hOCR scores 43.8 %** on
+  the identical 12 pages — 2.5× better, word-boxed, free, and reachable from the IIIF
+  manifest's `seeAlso`. An 18-configuration sweep (dpi × psm × preprocessing) tops out at
+  30.5 %, and only by reading half as many tokens, so the low rate is the material and not
+  the settings. The job is therefore an **ingest-and-correct**, not an OCR.
+  New: `scripts/pwg_kosa_ocr_probe.py`, `reports/pwg_kosa_etext_pilot.md`,
+  `data/pwg_scan_index_tracker/kosa_ocr_pilot.tsv`; the e-text queue's two top rows now carry
+  the verdict so it is not re-derived.
+  Page images are from the Bayerische Staatsbibliothek (`bsb10250868`, `bsb10250953`) and
+  derived artifacts carry the library credit the scan repos already give. Publication of
+  everything derived here was ruled open on 27-07-2026.
+  Executed by Opus 5 1M (`claude-opus-5[1m]`).
+
+## [1.5.0] - 2026-07-27
+
+### Added
+
+- **The PWG literary-source scan-index campaign, committed as data (H1706).** The
+  2025–2026 volunteer effort that page-indexed the printed editions PWG cites existed
+  only as a live Google Sheet; nothing survived it being edited or unshared. Now snapshotted
+  and derived under `data/pwg_scan_index_tracker/`: all four sheet tabs verbatim, an 82-row
+  cross-validated registry (TSV + JSON), a ranked e-text candidate queue, and a dated audit
+  of all 37 scan directories. Generator `scripts/pwg_scan_index.py` (stdlib-only offline;
+  `--fetch` re-snapshots). Analysis in `reports/pwg_scan_index.md`, dashboard page at
+  `/scan-index`, campaign history in `docs/PWG_SCAN_INDEX_CAMPAIGN_HISTORY_2025_2026.md`
+  reconstructed from 40 PWG/PWK coordinating issues.
+  **Headline:** 55 of 82 works indexed, carrying 73.7 % of the tracked citation mass across
+  28,963 pages by 8 volunteers; 7 works unclaimed, 5 of them Vedic; median 12 days from
+  index posted to scan public.
+  **Three findings the data forced.** (1) The sheet's `Citation count` column has
+  unresolved provenance — it reproduces neither the bare-string counts nor a rollup of the
+  full-dictionary `<ls>` extraction, so it is used for ranking only and never as a share of
+  a dictionary-wide denominator. (2) `rvps` (Ṛgveda-Prātiśākhya) is indexed but unwired, and
+  worse than unwired: a Prātiśākhya citation currently resolves to an Ṛgveda *hymn* anchor.
+  (3) The tracker spells one scan directory `rAjatar` where the canonical name is `rajatar`;
+  GitHub Pages paths are case-sensitive, so links built from the tracker spelling 404.
+  Executed by Opus 5 (`claude-opus-5`).
+
+### Changed
+
+- **E-text queue: `ramayanabom` re-annotated from "claimed" to "assessed and
+  REJECTED".** H1705 closed the same day with a measured negative result — the
+  Bombay uttarakāṇḍa has 111 sargas + 13 interpolated against the corpus's 100, and
+  the corpus file carries 2,690 sa / 0 ru critical-edition text, so a Bombay
+  concordance would have no consumer. The queue now says so, to stop a future
+  session re-deriving a refuted conclusion.
+
+## [1.4.0] - 2026-07-23
+
+### Added
+
+- **Three analytical idle-stats dashboards (H1524).** POS-by-text, paradigm-cell coverage,
+  and sense polysemy were already computed (H817 TSVs + reports) but only thin census
+  magnitude bars. New Observable pages at `/pos-by-text`, `/paradigm-cell-coverage`, and
+  `/sense-polysemy` (each ≥5 `Plot.plot` calls, Trust Block, table + CSV download), with
+  read-only TSV→CSV loaders under `observatory/site/src/data/`, nav + `PAGE_DESCRIPTIONS`,
+  smoke registration, and sitemap. Executed by Grok 4.5 (`grok-4.5`) on user override of the
+  Sonnet 5 intended executor.
+
+## [1.3.0] - 2026-07-21
+
+### Added
+- **Blind cross-model IAA for the OBS-T location axis (H1385): κ = 0.906 [95 % CI 0.872–0.938], n = 390.**
+  Two fresh, mutually blind LLM annotation passes — Opus 4.8 (`claude-opus-4-8`) and Sonnet 5
+  (`claude-sonnet-5`) — over all 390 gold-sample rows against `validation/COMPONENT_GUIDE.md`,
+  under the org's pre-registered blind-LLM second-annotator reliability protocol (gate ladder,
+  seeds and models committed before either pass ran). Raw agreement 92.8 %; pre-registered
+  4-group granularity κ = 0.896 [0.855–0.935]; per-annotator label flip-rates over 3 repeated
+  runs 4.4 % / 5.6 % (below the 10 % instability gate). New artifacts under `validation/`:
+  `build_blind_sample.py`, `gold_sample_blind.json`, `blind_batches/`, `component_passA.json`,
+  `component_passB.json`, `flip_runs/`, `compute_component_kappa.py`,
+  `component_kappa_stats.json`, `component_kappa_disagreements.csv` (28 rows). The draft's three
+  "pending a second annotator" passages replaced with the measured result and its cross-model
+  caveat. Axis finding recorded: the June `gold_component` fill follows the paper's older 9-label
+  hybrid Table 1 (65 % `encoding`/`orthography`), while the codebook and the current pipeline
+  `error_component` axis are location-only — the fresh passes annotate the codebook axis and are
+  kept as separate artifacts.
+
+### Fixed
+- **Stale false-DOI footer line in `reports/obs_t_paper_draft.md` (H1364 residue).** The draft's
+  closing footer still asserted `10.5281/zenodo.15834721` as "minted 2026-07-01"; it now states
+  no DOI is minted, matching §8 and the H1364 sweep.
+- **False OBS-T Zenodo DOI citation removed everywhere it was still asserted as genuine (H1364).** `10.5281/zenodo.15834721` resolves to an unrelated topology preprint (confirmed by the 03-07-2026 G6 finding, re-confirmed by a live check 20-07-2026). Corrected in `CITATION.cff`, `README.md`, `reports/obs_t_paper_draft.md`, `docs/REVIEWER_REPRODUCIBILITY.md`, `observatory/site/src/data.md`, `observatory/site/src/reproducibility.md` — all now state no DOI is minted yet instead of citing the false one. Re-minting remains an MG action; see [SanskritLexicography CONTRADICTIONS §8](https://github.com/gasyoun/SanskritLexicography/blob/master/CONTRADICTIONS.md).
+
+## [1.2.1] - 2026-07-18
+
+### Fixed
+- **`data_index.py` measures committed content, not environment state (G17/H1223)** — recorded
+  bytes are now the LF-normalized content size (what git stores under the repo-wide `eol=lf`
+  policy) instead of `st_size`, killing the recurring `data-index-check` drift where a
+  regeneration recorded CRLF-inflated sizes (`csv.writer`'s default `\r\n` lineterminator) that
+  every fresh checkout then measured under by exactly one byte per line — confirmed 43/43
+  `crlf-exact` at the poisoned `6f573f1` baseline, see
+  `reports/data_index_crlf_drift_audit.md`. The 4 hand-curated `data/` files registered by #92
+  are now resolved from their canonical committed home whether or not the workflow's
+  "Copy data into site" step has run, so `--check` passes on a fresh clone; `data_index.csv`
+  itself is written `newline="\n"`. Baseline regenerated (59 files catalogued); diagnostic
+  scripts `g17_delta_audit.py` + `g17_historical_check.py` added.
+
 ## [1.2.0] - 2026-07-14
 
 ### Added
@@ -208,7 +423,8 @@ sanskrit-lexicon organisation plus the OBS-T error-typology language resource.
   dictionary-content research moved to `csl-atlas` (see `docs/BOUNDARY_RULES.md`).
 - Citation DOI minted: [10.5281/zenodo.15834721](https://doi.org/10.5281/zenodo.15834721) (in CITATION.cff). Contributor ORCIDs are not yet registered.
 
-[Unreleased]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v1.4.0...HEAD
+[1.4.0]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v1.3.0...v1.4.0
 [1.1.0]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v0.1.0...v1.0.0
 [0.1.0]: https://github.com/sanskrit-lexicon/csl-observatory/releases/tag/v0.1.0

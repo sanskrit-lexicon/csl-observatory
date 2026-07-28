@@ -1,0 +1,77 @@
+# DRAFT TEMPLATE — no-BOM/UTF-8/NFC/XML-parse guard for dictionary-source
+# change paths (RH5).
+#
+# Not active anywhere yet. This file is a TEMPLATE under runbook/templates/,
+# not a live workflow, mirroring taxonomy-drift.yml's pattern. It is fanned
+# out into each watched repo's .github/workflows/ by a future
+# `cologne-encoding-guard-all` batch skill, after the pilot decision
+# (see ../../docs/ENCODING_GUARD.md). The pilot itself runs in this repo:
+# ../../.github/workflows/encoding-guard.yml.
+#
+# What it does: on a PR that touches dictionary-source change paths, fetches
+# the checker script from csl-observatory (sparse checkout, same trick as
+# taxonomy-drift.yml) and runs it against every changed file in those paths.
+# It never modifies files -- a violation blocks the PR via a red check; the
+# author fixes it (or the deploying repo widens --allow-bom for a known
+# legitimate BOM-carrying export, per CLAUDE.md's "BOM is inconsistent" note).
+#
+# Deploy notes:
+#   - Set CHANGE_PATHS below to this repo's actual dictionary-source change
+#     paths (e.g. a csl-corrections `batch_pending/**`, or a dictionary
+#     repo's XML source tree). Never point this at csl-orig directly.
+#   - `github.event.pull_request.base.sha`/`head.sha` diff gives the changed
+#     file list; this avoids scanning the whole repo on every PR.
+#   - Uses the default GITHUB_TOKEN (contents: read is enough; no PAT needed,
+#     unlike dict-audit.yml/tooling-audit.yml which need org-project reads).
+
+name: Encoding/XML guard
+
+on:
+  pull_request:
+    paths:
+      # EDIT before deploying: this repo's dictionary-source change paths.
+      - 'CHANGE_PATHS_PLACEHOLDER/**'
+
+permissions:
+  contents: read
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout PR head
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Fetch the checker from csl-observatory
+        uses: actions/checkout@v7
+        with:
+          repository: sanskrit-lexicon/csl-observatory
+          sparse-checkout: scripts/encoding_xml_guard.py
+          sparse-checkout-cone-mode: false
+          path: _obs
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - name: List changed files in the guarded paths
+        id: changed
+        run: |
+          git diff --name-only --diff-filter=ACMR \
+            "${{ github.event.pull_request.base.sha }}" \
+            "${{ github.event.pull_request.head.sha }}" \
+            > changed_files.txt
+          cat changed_files.txt
+
+      - name: Run guard on changed files
+        run: |
+          if [ ! -s changed_files.txt ]; then
+            echo "no changed files in the guarded paths"
+            exit 0
+          fi
+          # --allow-bom entries: add filenames/paths this repo legitimately
+          # ships with a BOM (CLAUDE.md's per-file BOM-state rule).
+          xargs -a changed_files.txt python _obs/scripts/encoding_xml_guard.py check

@@ -1,0 +1,171 @@
+{
+ "instrument": "OBS-T component location axis (validation/gold_sample.csv, csl-observatory pinned 259544be0e0f8f5b8dfa5e2804a3fc90c888d469)",
+ "protocol": "Uprava docs/PROTOCOL_BLIND_LLM_SECOND_ANNOTATOR_RELIABILITY_2026.md",
+ "preregistration_commit": "ddd1d0b4608d918d399634fdb87b1947a2996d36 (Uprava main, 21-07-2026)",
+ "annotators": {
+  "A": "Opus 4.8 (claude-opus-4-8), blind batches, 21-07-2026",
+  "B": "Sonnet 5 (claude-sonnet-5), blind batches, 21-07-2026"
+ },
+ "L0_8label": {
+  "n": 390,
+  "kappa": 0.906,
+  "kappa_ci95": [
+   0.872,
+   0.938
+  ],
+  "raw_agreement": 0.928
+ },
+ "L1_4group": {
+  "n": 390,
+  "kappa": 0.896,
+  "kappa_ci95": [
+   0.855,
+   0.935
+  ],
+  "raw_agreement": 0.938
+ },
+ "bootstrap": {
+  "resamples": 2000,
+  "seed": 20260721
+ },
+ "label_distribution": {
+  "A": {
+   "citation": 133,
+   "headword": 109,
+   "sense": 52,
+   "grammar": 35,
+   "markup": 27,
+   "meta": 24,
+   "crossref": 5,
+   "unattributed": 5
+  },
+  "B": {
+   "citation": 136,
+   "headword": 112,
+   "sense": 58,
+   "grammar": 37,
+   "meta": 23,
+   "markup": 16,
+   "crossref": 5,
+   "unattributed": 3
+  }
+ },
+ "per_label_A_base": {
+  "headword": {
+   "n_A": 109,
+   "B_agrees": 0.972
+  },
+  "grammar": {
+   "n_A": 35,
+   "B_agrees": 1.0
+  },
+  "citation": {
+   "n_A": 133,
+   "B_agrees": 0.985
+  },
+  "sense": {
+   "n_A": 52,
+   "B_agrees": 0.923
+  },
+  "crossref": {
+   "n_A": 5,
+   "B_agrees": 0.8
+  },
+  "meta": {
+   "n_A": 24,
+   "B_agrees": 0.958
+  },
+  "markup": {
+   "n_A": 27,
+   "B_agrees": 0.481
+  },
+  "unattributed": {
+   "n_A": 5,
+   "B_agrees": 0.4
+  }
+ },
+ "confusion_A_rows_B_cols": {
+  "headword": {
+   "headword": 106,
+   "grammar": 0,
+   "citation": 0,
+   "sense": 2,
+   "crossref": 1,
+   "meta": 0,
+   "markup": 0,
+   "unattributed": 0
+  },
+  "grammar": {
+   "headword": 0,
+   "grammar": 35,
+   "citation": 0,
+   "sense": 0,
+   "crossref": 0,
+   "meta": 0,
+   "markup": 0,
+   "unattributed": 0
+  },
+  "citation": {
+   "headword": 0,
+   "grammar": 0,
+   "citation": 131,
+   "sense": 0,
+   "crossref": 0,
+   "meta": 0,
+   "markup": 2,
+   "unattributed": 0
+  },
+  "sense": {
+   "headword": 2,
+   "grammar": 0,
+   "citation": 2,
+   "sense": 48,
+   "crossref": 0,
+   "meta": 0,
+   "markup": 0,
+   "unattributed": 0
+  },
+  "crossref": {
+   "headword": 0,
+   "grammar": 0,
+   "citation": 0,
+   "sense": 0,
+   "crossref": 4,
+   "meta": 0,
+   "markup": 0,
+   "unattributed": 1
+  },
+  "meta": {
+   "headword": 1,
+   "grammar": 0,
+   "citation": 0,
+   "sense": 0,
+   "crossref": 0,
+   "meta": 23,
+   "markup": 0,
+   "unattributed": 0
+  },
+  "markup": {
+   "headword": 3,
+   "grammar": 2,
+   "citation": 2,
+   "sense": 7,
+   "crossref": 0,
+   "meta": 0,
+   "markup": 13,
+   "unattributed": 0
+  },
+  "unattributed": {
+   "headword": 0,
+   "grammar": 0,
+   "citation": 1,
+   "sense": 1,
+   "crossref": 0,
+   "meta": 0,
+   "markup": 1,
+   "unattributed": 2
+  }
+ },
+ "flip_rate_A": 0.044,
+ "flip_rate_B": 0.056
+}

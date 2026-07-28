@@ -2,122 +2,177 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sanskrit-lexicon.github.io/csl-observatory/</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://sanskrit-lexicon.github.io/csl-observatory/story</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sanskrit-lexicon.github.io/csl-observatory/ops-command</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sanskrit-lexicon.github.io/csl-observatory/activity</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sanskrit-lexicon.github.io/csl-observatory/lifecycle</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sanskrit-lexicon.github.io/csl-observatory/error-typology</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sanskrit-lexicon.github.io/csl-observatory/obs-t-maintenance</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sanskrit-lexicon.github.io/csl-observatory/correction-anatomy</loc>
+    <lastmod>2026-07-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sanskrit-lexicon.github.io/csl-observatory/org-shape</loc>
+    <lastmod>2026-07-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sanskrit-lexicon.github.io/csl-observatory/coverage</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sanskrit-lexicon.github.io/csl-observatory/citation-coverage</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sanskrit-lexicon.github.io/csl-observatory/taxonomy-triage</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sanskrit-lexicon.github.io/csl-observatory/community</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sanskrit-lexicon.github.io/csl-observatory/network</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sanskrit-lexicon.github.io/csl-observatory/community-continuity</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sanskrit-lexicon.github.io/csl-observatory/tech-stack</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sanskrit-lexicon.github.io/csl-observatory/reach</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sanskrit-lexicon.github.io/csl-observatory/benchmarks</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sanskrit-lexicon.github.io/csl-observatory/repo-health</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sanskrit-lexicon.github.io/csl-observatory/repository-risk</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sanskrit-lexicon.github.io/csl-observatory/repo-metadata</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sanskrit-lexicon.github.io/csl-observatory/metadata-readiness</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sanskrit-lexicon.github.io/csl-observatory/workflow-health</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sanskrit-lexicon.github.io/csl-observatory/reproducibility</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sanskrit-lexicon.github.io/csl-observatory/data</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sanskrit-lexicon.github.io/csl-observatory/conclusions</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sanskrit-lexicon.github.io/csl-observatory/census-overview</loc>
+    <lastmod>2026-07-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sanskrit-lexicon.github.io/csl-observatory/census-l1-lexicon</loc>
+    <lastmod>2026-07-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sanskrit-lexicon.github.io/csl-observatory/census-l2-morphology</loc>
+    <lastmod>2026-07-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sanskrit-lexicon.github.io/csl-observatory/census-l3-corpus</loc>
+    <lastmod>2026-07-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sanskrit-lexicon.github.io/csl-observatory/census-l4-translation</loc>
+    <lastmod>2026-07-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sanskrit-lexicon.github.io/csl-observatory/census-l5-roots</loc>
+    <lastmod>2026-07-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sanskrit-lexicon.github.io/csl-observatory/pos-by-text</loc>
+    <lastmod>2026-07-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sanskrit-lexicon.github.io/csl-observatory/paradigm-cell-coverage</loc>
+    <lastmod>2026-07-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sanskrit-lexicon.github.io/csl-observatory/sense-polysemy</loc>
+    <lastmod>2026-07-23</lastmod>
     <priority>0.7</priority>
   </url>
 </urlset>
