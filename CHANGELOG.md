@@ -4,51 +4,10 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
-### Changed
-- **The two rival A12 (OBS-T) manuscripts are reconciled into one canonical draft (H1759).**
-  [`paper-obs-t-error-typology.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/paper-obs-t-error-typology.md)
-  (two-axis framing, released 52,498-event snapshot) is the single surviving A12
-  manuscript; the one-axis 50,953-event `reports/obs_t_paper_draft.md` is retired to a
-  tombstone stub. Carried across in the merge: the byline block, the cross-model IAA
-  section (κ = 0.906 [0.872–0.938], stated as cross-model — not human-validated), accurate
-  gold-sample provenance wording (machine first pass, no human annotation; the final
-  submission wording stays an open human decision, H1272), the 0/120 error-sample
-  benchmark, the related-work survey, the false-DOI warning, and 16 references. Every
-  headline number was re-verified against the released snapshot and generated reports
-  (verification table + full editorial ruling in
-  [`docs/A12_OBS_T_MANUSCRIPT_RECONCILIATION_RULING.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/A12_OBS_T_MANUSCRIPT_RECONCILIATION_RULING.md)).
-  `STATUS.md`, `docs/ERROR_TYPOLOGY_DESIGN.md` and `article/A15_github_ecosystem.md`
-  repointed at the survivor.
-
-### Fixed
-- **Repaired all four red default-branch workflows found by the org CI-health sweep (H1736).**
-  `pages build and deployment` was red 72.6 days on a Liquid syntax error in
-  `article/01-empirical-companion.md` (`{%…%}`/`{{…}}` used repo-wide as literal CDSL tag
-  notation, not templating) — added a repo-root `_config.yml` disabling Liquid rendering
-  site-wide. `Refresh observatory` was already fixed on `main` by an unrelated commit
-  (#120) that added `event_id_crosswalk_v1.csv`'s catalog entry after that morning's failed
-  scheduled run; verified `python scripts/data_index.py --check` now passes. The two audits
-  (`Dictionary taxonomy audit`, `Tooling Roadmap audit`) were working as designed — they had
-  found real drift, not a code bug: added AMAR#8, BEN#34 (a newly-opened untriaged issue),
-  PWG#210, MWS#242, and 8 tooling-repo issues to their missing org-project columns; and
-  taught `scripts/dict_runbook.py` that a bare `handoff` label (with no taxonomy labels) marks
-  an auto-created execution-tracking stub, not triageable dictionary work — MWS
-  #243/#250/#254/#256 were false-flagged as drift for exactly that reason. `TOOLING_AUDIT_TOKEN`
-  is set and working; the handoff's note about it being unset did not reproduce.
+## [1.6.0] - 2026-07-28
 
 ### Added
 - **`reports/pwg_kosa_hocr_cer.md` — first CER measurement for BSB's published per-page hOCR against a print e-text (H1720).** All 374 indexed pages of the `amara_dlc` (Amarakoṣa, Deslongchamps 1839, `bsb10250868`) campaign harvested via [`scripts/pwg_kosa_hocr_ingest.py`](scripts/pwg_kosa_hocr_ingest.py), page offset (`-3`) derived empirically rather than assumed, and aligned to [`AMAR/amar.txt`](https://github.com/sanskrit-lexicon/AMAR) by content (token-overlap window search per kāṇḍa, never by in-page digits — the FINDINGS §480 trap). Mean CER over a 39-page depth-stratified sample: **0.719**, reported as a ceiling, not a floor — a gender-tag format mismatch between AMAR's per-word gloss list and the printed verse text inflates the figure independently of true OCR error, on top of the expected edition-variance caveat. `abch2` (Hemacandra) harvest/CER remains open follow-on work; the handoff's DoD is met by one edition.
-
-### Fixed
-- **`event_id_crosswalk_v1.csv` was never registered in `scripts/data_index.py`** (it arrived
-  with the persistent-event-ID migration in [#109](https://github.com/sanskrit-lexicon/csl-observatory/pull/109)),
-  so `python scripts/data_index.py --check` — which `refresh-observatory.yml` runs on every
-  refresh — failed on `main` with `missing catalog entries`. Found while registering the H1477
-  data files; catalog now 66 files, check green.
-- **`scan_target_audit.tsv` / §7 of `reports/pwg_scan_index.md` re-verified after the `rvps` mislink + TS./TBR. arity-gap fix (H1714).** `rvps` flips from `not wired at all` to `yes` (was silently mislinking Rgveda-Pratisakhya citations to an unrelated Rgveda hymn anchor); `taittiriyas`/`taittiriyabr` flip from `partial` to `yes` (3-parameter citations now resolve). `pancar` stays `partial` (2-param has no natural viewer target, confirmed not a gap) and `amara_col` stays `mis-keyed` but is now recorded as by-design (16,151 citations under bare `AK.` for the paired Deslongchamps edition, zero measured for Colebrooke under that key). Fixed in [gasyoun/SanskritLexicography#840](https://github.com/gasyoun/SanskritLexicography/pull/840); tracker counts now 35 wired / 1 partial / 1 mis-keyed / 0 unwired (was 32/3/1/1).
-
-### Added
-
 - **`reports/record_linkage_rejected_alternatives.md` — the negative results behind the G3/A48
   linkage key, including a measurement that only existed on an unmerged branch (H1477).**
   Handoff H1477 was implemented twice concurrently; the second implementation was left
@@ -165,6 +124,43 @@ All notable changes to this repository are documented here, following [Keep a Ch
   everything derived here was ruled open on 27-07-2026.
   Executed by Opus 5 1M (`claude-opus-5[1m]`).
 
+### Changed
+- **The two rival A12 (OBS-T) manuscripts are reconciled into one canonical draft (H1759).**
+  [`paper-obs-t-error-typology.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/paper-obs-t-error-typology.md)
+  (two-axis framing, released 52,498-event snapshot) is the single surviving A12
+  manuscript; the one-axis 50,953-event `reports/obs_t_paper_draft.md` is retired to a
+  tombstone stub. Carried across in the merge: the byline block, the cross-model IAA
+  section (κ = 0.906 [0.872–0.938], stated as cross-model — not human-validated), accurate
+  gold-sample provenance wording (machine first pass, no human annotation; the final
+  submission wording stays an open human decision, H1272), the 0/120 error-sample
+  benchmark, the related-work survey, the false-DOI warning, and 16 references. Every
+  headline number was re-verified against the released snapshot and generated reports
+  (verification table + full editorial ruling in
+  [`docs/A12_OBS_T_MANUSCRIPT_RECONCILIATION_RULING.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/A12_OBS_T_MANUSCRIPT_RECONCILIATION_RULING.md)).
+  `STATUS.md`, `docs/ERROR_TYPOLOGY_DESIGN.md` and `article/A15_github_ecosystem.md`
+  repointed at the survivor.
+
+### Fixed
+- **Repaired all four red default-branch workflows found by the org CI-health sweep (H1736).**
+  `pages build and deployment` was red 72.6 days on a Liquid syntax error in
+  `article/01-empirical-companion.md` (`{%…%}`/`{{…}}` used repo-wide as literal CDSL tag
+  notation, not templating) — added a repo-root `_config.yml` disabling Liquid rendering
+  site-wide. `Refresh observatory` was already fixed on `main` by an unrelated commit
+  (#120) that added `event_id_crosswalk_v1.csv`'s catalog entry after that morning's failed
+  scheduled run; verified `python scripts/data_index.py --check` now passes. The two audits
+  (`Dictionary taxonomy audit`, `Tooling Roadmap audit`) were working as designed — they had
+  found real drift, not a code bug: added AMAR#8, BEN#34 (a newly-opened untriaged issue),
+  PWG#210, MWS#242, and 8 tooling-repo issues to their missing org-project columns; and
+  taught `scripts/dict_runbook.py` that a bare `handoff` label (with no taxonomy labels) marks
+  an auto-created execution-tracking stub, not triageable dictionary work — MWS
+  #243/#250/#254/#256 were false-flagged as drift for exactly that reason. `TOOLING_AUDIT_TOKEN`
+  is set and working; the handoff's note about it being unset did not reproduce.
+- **`event_id_crosswalk_v1.csv` was never registered in `scripts/data_index.py`** (it arrived
+  with the persistent-event-ID migration in [#109](https://github.com/sanskrit-lexicon/csl-observatory/pull/109)),
+  so `python scripts/data_index.py --check` — which `refresh-observatory.yml` runs on every
+  refresh — failed on `main` with `missing catalog entries`. Found while registering the H1477
+  data files; catalog now 66 files, check green.
+- **`scan_target_audit.tsv` / §7 of `reports/pwg_scan_index.md` re-verified after the `rvps` mislink + TS./TBR. arity-gap fix (H1714).** `rvps` flips from `not wired at all` to `yes` (was silently mislinking Rgveda-Pratisakhya citations to an unrelated Rgveda hymn anchor); `taittiriyas`/`taittiriyabr` flip from `partial` to `yes` (3-parameter citations now resolve). `pancar` stays `partial` (2-param has no natural viewer target, confirmed not a gap) and `amara_col` stays `mis-keyed` but is now recorded as by-design (16,151 citations under bare `AK.` for the paired Deslongchamps edition, zero measured for Colebrooke under that key). Fixed in [gasyoun/SanskritLexicography#840](https://github.com/gasyoun/SanskritLexicography/pull/840); tracker counts now 35 wired / 1 partial / 1 mis-keyed / 0 unwired (was 32/3/1/1).
 ## [1.5.0] - 2026-07-27
 
 ### Added
@@ -455,7 +451,8 @@ sanskrit-lexicon organisation plus the OBS-T error-typology language resource.
   dictionary-content research moved to `csl-atlas` (see `docs/BOUNDARY_RULES.md`).
 - Citation DOI minted: [10.5281/zenodo.15834721](https://doi.org/10.5281/zenodo.15834721) (in CITATION.cff). Contributor ORCIDs are not yet registered.
 
-[Unreleased]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v1.4.0...HEAD
+[Unreleased]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v1.6.0...HEAD
+[1.6.0]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v1.5.0...v1.6.0
 [1.4.0]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v1.3.0...v1.4.0
 [1.1.0]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v0.1.0...v1.0.0
