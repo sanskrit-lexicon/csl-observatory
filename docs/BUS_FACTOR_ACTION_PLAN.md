@@ -11,9 +11,9 @@ MG or the sanskrit-lexicon organization confirms it.
 
 ## Source Evidence
 
-- `reports/bus_factor.md`: 65 of 76 repositories have bus factor 1; one
-  contributor accounts for 51.8% of all recorded work; the core trio accounts
-  for 97.6%.
+- `reports/bus_factor.md`: 67 of 76 repositories have bus factor 1; one
+  contributor accounts for 52.1% of all recorded work; the core trio accounts
+  for 98.0%.
 - `reports/contributor_identity.md`: 0 of 16 human contributors have a
   registered ORCID in the contributor map; 7 named contributors need ORCID
   entries; 9 logins still need identification.

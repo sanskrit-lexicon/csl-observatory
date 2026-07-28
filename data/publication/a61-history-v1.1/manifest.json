@@ -1,0 +1,35 @@
+{
+  "release_id": "a61-history-v1.1",
+  "calendar_alias": "2026-07",
+  "status": "verified-frozen",
+  "built_from_csl_observatory_commit": "79afa9ae8e8caa714055c5a4c7617df7c76d3ef1",
+  "github_snapshot_cutoff": "2026-06-01",
+  "obs_t_cutoff": "2026-05-30",
+  "a61_manuscript_base_commit": "94a2de46a31891621cc7ec009850670d8e5ebdd7",
+  "a61_manuscript_revision": "frozen-working-tree-2026-07-18",
+  "a61_numeric_inventory_scope": "00-front-matter.mdx through 11-conclusion.mdx, excluding references; empirical/project numbers retained; headings, section references, illustrative source identifiers, bibliography and edition years excluded unless historically load-bearing",
+  "wsc_venue_checked": "2026-07-18",
+  "policy": "Per-metric cutoffs and population definitions are authoritative; no generic contributor total is defined.",
+  "files": {
+    "metrics.csv": {
+      "sha256": "2cdc18886de36b4a07d840ba7d9c07bf67b461003240db27165f9b07a42ae1b9",
+      "bytes": 7945
+    },
+    "milestones.csv": {
+      "sha256": "8e1fbd5a757917ce50cc9d8ae75ea1646799fb151b5cec951e0a1e44c7f8a350",
+      "bytes": 3510
+    },
+    "claim_registry.csv": {
+      "sha256": "91bbf4afe0fb05f3f580e83f4a1e5377325e144f32f631a44d1d3f9f97b99244",
+      "bytes": 6098
+    },
+    "contradictions.csv": {
+      "sha256": "f975b37aa34d52244436e55f03fcee3575fb1b84516d36ea4866d7ae0b370816",
+      "bytes": 3104
+    },
+    "source_artifacts.csv": {
+      "sha256": "1aea4ca203c103e482952951624b66d41751b4dbc3b629736b155256fe5dcb50",
+      "bytes": 4608
+    }
+  }
+}

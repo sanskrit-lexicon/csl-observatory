@@ -17,7 +17,7 @@ page.
 
 | Report | Script | Site page | Headline |
 |---|---|---|---|
-| [`bus_factor.md`](bus_factor.md) | `bus_factor.py` | [Community](https://sanskrit-lexicon.github.io/csl-observatory/community) | Core trio = 97.6% of contributions; 65/76 repos have bus factor 1; Gini 0.86 |
+| [`bus_factor.md`](bus_factor.md) | `bus_factor.py` | [Community](https://sanskrit-lexicon.github.io/csl-observatory/community) | Core trio = 98.0% of contributions; 67/76 repos have bus factor 1; Gini 0.856 |
 | [`repo_health.md`](repo_health.md) | `repo_health.py` | [Repo Health](https://sanskrit-lexicon.github.io/csl-observatory/repo-health) | 41/76 repos unlicensed; 46/76 default to `master`; only 5 fully clean |
 | [`workflow_health.md`](workflow_health.md) | `workflow_health.py` | [Workflow Health](https://sanskrit-lexicon.github.io/csl-observatory/workflow-health) | 28/76 active repos have workflows; 11 scheduled; 13 artifact/refresh; 18 Dependabot; 8 CodeQL; 1 release |
 | [`taxonomy_adoption.md`](taxonomy_adoption.md) | `taxonomy_adoption.py` | [Issue Taxonomy](https://sanskrit-lexicon.github.io/csl-observatory/coverage) | 89% of issues typed, 63% fully conformant; 92% peak in 2025; 54 stray labels |

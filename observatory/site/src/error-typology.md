@@ -7,7 +7,7 @@ toc: true
 
 What kinds of errors are corrected in the Cologne Digital Sanskrit Lexicon, where
 in the entry they occur, and how the profile changes over twelve years. Each of
-the **50,953** correction events (2014–2026, 43 dictionaries) is normalized to IAST
+the **52,498** released correction events (2014–2026, 43 dictionaries) is normalized to IAST
 and attributed to the dictionary *microstructure component* it repairs. See the
 finding [`reports/obs_t_typology.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_t_typology.md)
 and the [design spec](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/ERROR_TYPOLOGY_DESIGN.md).

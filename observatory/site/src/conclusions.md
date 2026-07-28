@@ -83,7 +83,7 @@ One-paragraph summaries of what each visualisation in the observatory tells us, 
 
 Three findings recur across every page and reinforce each other:
 
-1. **Concentration** — one person carries more than half of all contributions; 65 of 76 repos have a bus factor of 1; the annual author count has never exceeded 15. The project's output is extraordinary for its team size, but its continuity depends on a tiny core.
+1. **Concentration** — one person carries more than half of all contributions; 67 of 76 repos have a bus factor of 1; the annual author count has never exceeded 15. The project's output is extraordinary for its team size, but its continuity depends on a tiny core.
 
 2. **Campaign structure** — activity is not continuous background work but a series of discrete, intensive correction campaigns. Issue spikes and backlogs follow the campaigns precisely; the stacked charts on every activity page make this visible.
 

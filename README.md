@@ -43,7 +43,7 @@ The headline picture is in **[`reports/synthesis.md`](https://github.com/sanskri
 
 | Finding | Report | Headline |
 |---|---|---|
-| Contributor concentration | [`bus_factor.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/bus_factor.md) | Core trio = 97.6%; 65/76 repos have bus factor 1; Gini 0.86 |
+| Contributor concentration | [`bus_factor.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/bus_factor.md) | Core trio = 98.0%; 67/76 repos have bus factor 1; Gini 0.856 |
 | Repository health | [`repo_health.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/repo_health.md) | 41/76 repos unlicensed; 46/76 default to `master`; 5 fully clean |
 | Issue-taxonomy adoption | [`taxonomy_adoption.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/taxonomy_adoption.md) | 89% typed, 63% conformant; 92% peak in 2025; 54 stray labels |
 | Velocity & health timeline | [`velocity_timeline.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/velocity_timeline.md) | 9,877 commits; peak 11 authors/yr; backlog 1,742 (2025) → 913 (2026) |
@@ -108,7 +108,7 @@ Install: `git clone` that repo, then `cp .claude/commands/*.md ~/.claude/command
 | Issues + PRs (lifetime) | 5,413 |
 | Commits since 2014 | 9,877 |
 | Distinct human contributors | 16 |
-| Contribution concentration | core trio = 97.6%; 65/76 repos bus factor 1 |
+| Contribution concentration | core trio = 98.0%; 67/76 repos bus factor 1 |
 | Most active repo | `csl-orig` (the git-based correction workflow) |
 | Peak commit year | 2026 (2,519 commits) |
 | Peak issue year | 2025 (1,178 opened) |

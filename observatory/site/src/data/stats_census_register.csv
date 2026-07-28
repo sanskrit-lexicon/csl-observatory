@@ -4,7 +4,7 @@ L1,Lexicon text,Union headwords (15-dict),323425,323425,done,SanskritLexicograph
 L1,Lexicon text,Pairwise overlap matrix + Jaccard,105 pairs,105,done,SanskritLexicography,https://github.com/gasyoun/SanskritLexicography/blob/master/data/headword_overlap_matrix.tsv,2026-07-12
 L1,Lexicon text,Markup-tag frequency census,96 tags / 17.5M hits,17500000,done,SanskritLexicography,https://github.com/gasyoun/SanskritLexicography/blob/master/data/markup_tag_census.tsv,2026-07-12
 L1,Lexicon text,<ls> citation-frequency graph,828505 citations -> 912 texts,828505,done,csl-atlas,https://github.com/sanskrit-lexicon/csl-atlas/tree/main/data/citations,2026-07-12
-L1,Lexicon text,Correction-event log,52498 events / 43 dicts / 210 correctors,52498,done,csl-observatory,https://github.com/sanskrit-lexicon/csl-observatory,2026-07-12
+L1,Lexicon text,Correction-event log,52498 events / 43 dicts / 208 corrector labels,52498,done,csl-observatory,https://github.com/sanskrit-lexicon/csl-observatory/blob/main/data/publication/a61-history-v1.0/metrics.csv,2026-07-18
 L1,Lexicon text,n-gram membership oracle,6656616 n-grams,6656616,done,CORRECTIONS,https://github.com/sanskrit-lexicon/CORRECTIONS/tree/master/ngram,2026-07-12
 L1,Lexicon text,Sense-count / polysemy distribution per dict,11/44 dicts (rest structurally blocked),11,partial,SanskritLexicography,https://github.com/gasyoun/Uprava/blob/main/handoffs/H817-Sonnet_SanskritLexicography_stats-roadmap-q1-census-dashboard_12.07.26.md,2026-07-13
 L1,Lexicon text,Diachronic first-attestation (which dict coins a headword),partial - A40 growth curve only,,partial,SanskritLexicography,https://github.com/gasyoun/Uprava/blob/main/ARTICLES.md,2026-07-12
@@ -48,7 +48,7 @@ L5,Roots & etymology,Whitney x DCS root audit,935-root hub audited,935,done,Whit
 L5,Roots & etymology,Corpus root-class verdicts,capped - unaccented DCS can't split class I/VI,,done,WhitneyRoots,https://github.com/gasyoun/WhitneyRoots,2026-07-12
 L5,Roots & etymology,Affix entropy / frequency,computed,,done,csl-orig,https://github.com/sanskrit-lexicon/csl-orig/tree/main/v02,2026-07-12
 L6,Repo-meta & process,Correction typology,empirical error taxonomy,,done,csl-observatory,https://github.com/sanskrit-lexicon/csl-observatory,2026-07-12
-L6,Repo-meta & process,Bus-factor census (bus-factor-1 repos),65 of 76,65,done,csl-observatory,https://github.com/sanskrit-lexicon/csl-observatory,2026-07-12
+L6,Repo-meta & process,Bus-factor census (bus-factor-1 repos),67 of 76,67,done,csl-observatory,https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/bus_factor.md,2026-07-18
 L6,Repo-meta & process,Data footprint,27.5 GB / 1343 large files / 70% local-only,27500,done,Uprava,https://github.com/gasyoun/Uprava/blob/main/DATA_LAYERS_CENSUS.md,2026-07-12
 L6,Repo-meta & process,Code-duplication census (transcoder x62 digentry x170),closed - re-run confirms baseline (H688),,done,csl-observatory,https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports,2026-07-13
 L6,Repo-meta & process,Publication-pipeline health (readiness/handoff aging),dashboard exists not time-series,,partial,Uprava,https://github.com/gasyoun/Uprava/blob/main/ARTICLES.md,2026-07-12
