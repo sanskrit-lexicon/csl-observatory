@@ -1,4 +1,6 @@
 repo,sha,date,author_login,author_name,author_email,subject
+ACC,cd704db13971,2026-07-23T17:44:31Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #25 from sanskrit-lexicon/feat/prefaces-ocr
+ACC,a49e37f7eab8,2026-07-23T16:07:30Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,feat(prefaces): ACC front matter from csldoc HTML + RU
 ACC,2b57591f27c0,2026-07-11T10:19:52Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): reconcile H548 refresh with #23 best-standard rewrite (#24)
 ACC,e97fe4180200,2026-07-05T18:29:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: upgrade README to best-standard with usage example (#23)
 ACC,be5e60035486,2026-07-01T09:34:30Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #22 from sanskrit-lexicon/codex/landing-page
@@ -366,6 +368,17 @@ ArabicInSanskrit,cea540cb49e9,2026-05-15T07:38:41Z,gasyoun,Mārcis Gasūns,gasyo
 ArabicInSanskrit,c5fa9d890639,2015-01-18T20:52:01Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Update README.md
 ArabicInSanskrit,c70b152f25c1,2015-01-18T20:44:50Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Update README.md
 ArabicInSanskrit,307099937e86,2015-01-18T20:43:43Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+BEN,6c135b699a44,2026-07-27T05:58:15Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,log4 for checking headword correctness in #28
+BEN,1c489c38118c,2026-07-26T14:00:20Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,minor typo in #28 for xml validation
+BEN,61fd98122fd1,2026-07-26T12:23:39Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,manual changes in temp_ben_3.txt completed. See #29
+BEN,c9ce17c9f35a,2026-07-26T12:16:05Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,manual changes in temp_ben_3.txt till L 17000. See #29
+BEN,97ab14e17fb4,2026-07-25T08:20:53Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Merge remote-tracking branch 'refs/remotes/origin/main'
+BEN,5c20c73f2203,2026-07-25T08:20:43Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,manual changes in temp_ben_3.txt till L 16000. See #29
+BEN,c8be2ff9c762,2026-07-24T06:05:30Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(prefaces): align abbr keys to body .txt naming (H1571) (#33)
+BEN,f7a13266f07f,2026-07-23T17:41:28Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #32 from sanskrit-lexicon/feat/prefaces-ocr
+BEN,7df1b72cd06c,2026-07-23T16:07:01Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,feat(prefaces): BEN front matter from csldoc HTML + RU
+BEN,73b87e8296b6,2026-07-22T16:09:50Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Merge remote-tracking branch 'refs/remotes/origin/main'
+BEN,384bcde50375,2026-07-22T16:09:36Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,manual changes in temp_ben_3.txt till L 15000. See #29
 BEN,5dde22b1f254,2026-07-19T18:44:01Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,Merge remote-tracking branch 'origin/main'
 BEN,f91a236e50d6,2026-07-18T16:09:07Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Merge remote-tracking branch 'refs/remotes/origin/main'
 BEN,51ad10ecb763,2026-07-18T16:08:57Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,manual changes in temp_ben_3.txt till L 14000. See #29
@@ -514,6 +527,7 @@ BEN,ba4ba612ad05,2021-09-04T17:28:09Z,funderburkjim,funderburkjim,funderburkjim@
 BEN,f6149480654b,2021-08-16T03:12:28Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,eng_error_lang work on identifying possible english word errors
 BEN,32ec22cc2fe5,2020-04-30T21:33:21Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,verbs01. Initial commit
 BEN,021299f459d6,2020-04-30T21:22:17Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+BHS,2cb2327b28f1,2026-07-24T06:06:17Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(prefaces): align abbr keys to body .txt naming (H1571) (#16)
 BHS,342c85251367,2026-07-14T09:21:28Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,Merge remote-tracking branch 'origin/main'
 BHS,387c0e371d05,2026-07-14T04:10:55Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 5 broken link(s) (org-wide link audit, auto-fix pass)"
 BHS,2d76c40437c8,2026-07-14T04:10:55Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 5 broken link(s) (org-wide link audit, auto-fix pass)"
@@ -816,6 +830,7 @@ CCS,d3ab8313ad13,2026-05-15T07:38:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.nore
 CCS,07eb4dad8829,2020-04-18T00:44:52Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Update README.md
 CCS,9d2f4fb5556d,2020-04-15T02:25:26Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,verbs01 inital commit
 CCS,44b9187e01cf,2020-04-15T01:40:12Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+COLOGNE,facb43fe5b18,2026-07-23T09:40:32Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): CodeQL triggers on main (H1522 / H1245) (#473)
 COLOGNE,63a59f4f1f3a,2026-07-20T05:12:27Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,Bump actions/setup-python from 6 to 7 (#472)
 COLOGNE,36a97fa5e26d,2026-07-18T11:45:24Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs: TOOLING_MANUAL estate refresh — fact-check recounts, executed worked examples, LAST_VERIFIED metadoc block (H1245) (#471)"
 COLOGNE,5222acbbebc5,2026-07-12T16:18:15Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (1 links, 1 files)"
@@ -1822,6 +1837,9 @@ FRI,596f26b84c3b,2025-02-02T03:24:29Z,funderburkjim,funderburkjim,funderburkjim@
 FRI,c0d6bf299037,2024-01-26T20:49:53Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,"Initial version of fri.txt, named as fri_00.txt. #1"
 FRI,b82479ccb71e,2024-01-26T20:40:17Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Add .gitignore
 FRI,56219ea8adbb,2024-01-26T12:33:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Initial commit
+GRA,fa7dbd2e5eb3,2026-07-24T03:11:27Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #57 from sanskrit-lexicon/h1523-gra-jquery-18104
+GRA,6ea605b29cf6,2026-07-24T03:09:10Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,chore: drop accidental .tmp copies from gra-dev js bump
+GRA,b510d7f0ec03,2026-07-24T03:07:40Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(security): gra-dev jQuery 1.4.3 → 3.7.1 + js-cookie (H1523)
 GRA,38838620c7e2,2026-07-20T05:13:50Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/setup-python from 6 to 7 (#56)
 GRA,9cc34e785470,2026-07-14T09:22:16Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,Merge remote-tracking branch 'origin/main'
 GRA,310dec78610a,2026-07-14T04:16:36Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 4 broken link(s) (org-wide link audit, auto-fix pass)"
@@ -2355,6 +2373,16 @@ MW72,5cf4de93d91c,2016-11-19T03:15:45Z,funderburkjim,funderburkjim,funderburkjim
 MW72,6152839e897d,2016-11-18T20:02:16Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,revise for corrections to mw72
 MW72,407551355822,2016-11-16T00:18:12Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,20161107 initial commit
 MW72,1f9d6101296f,2014-08-24T21:07:18Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+MWS,90d7db994102,2026-07-27T21:20:25Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,chore(release): 1.0.6
+MWS,c805ff0efd95,2026-07-27T21:16:35Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #262 from sanskrit-lexicon/h1763-ru-register-13167
+MWS,8261e06f4b12,2026-07-27T21:15:14Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"H1763: RU preface register pass — RU_STYLE.md, scan-verified footnote repair, terminology unification"
+MWS,ff5e9f626caf,2026-07-27T11:50:06Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,ai-wip: log H1500 completion in .ai_state.md
+MWS,bc8442e57465,2026-07-27T11:43:02Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(markup): resolve 31 broken phw cross-reference links (H1500) (#261)
+MWS,087fc6d6abb3,2026-07-24T02:43:20Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #260 from sanskrit-lexicon/h1523-mws-jscookie-17036
+MWS,6022d5e19075,2026-07-24T02:40:31Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(cookies): migrate demos from jquery.cookie to js-cookie (H1523)
+MWS,981044eaaf1f,2026-07-24T01:45:24Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #259 from sanskrit-lexicon/h1523-jquery-mws-9748
+MWS,8910eef66d04,2026-07-24T01:42:53Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(security): bump demo jQuery 2.1.4 → 3.7.1 (H1523)
+MWS,a86a88187894,2026-07-21T14:56:21Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,A39: skeleton -> full prose draft (readiness 2/5 -> 3/5) (H1383) (#257)
 MWS,b01f3c33bea4,2026-07-20T05:14:19Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/setup-python from 6 to 7 (#253)
 MWS,a26fd176dff4,2026-07-18T09:41:48Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,chore(release): 1.0.4
 MWS,cf506664f6a8,2026-07-18T09:39:13Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #252 from sanskrit-lexicon/h966-changelog-v2
@@ -2888,6 +2916,7 @@ MWS,5192ab9002b9,2014-10-04T21:45:21Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Unique
 MWS,3ae269a730d5,2014-09-23T01:37:51Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,"Transcoder example, re issue #5"
 MWS,fcb6185f7723,2014-01-22T21:41:25Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,missing1.html
 MWS,8798269ddbf9,2014-01-16T19:34:16Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Initial commit
+MWinflect,c47b15a0376f,2026-07-27T17:55:51Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#57)
 MWinflect,bacd4df61dc5,2026-07-12T03:33:23Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: metadoc template v2 backfill (H663) (#55)
 MWinflect,b8c51fc46248,2026-07-11T18:44:05Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs: document calc_tables.txt provenance, verified reproducible (H695) (#56)"
 MWinflect,b2d4a61b28f8,2026-07-11T09:35:15Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #54 from sanskrit-lexicon/h511-unify-main-master
@@ -3093,6 +3122,14 @@ PUI,3899675e4762,2026-04-05T04:28:18Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785
 PUI,28ae8d0bc1a9,2026-04-05T03:54:10Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,started issue #1
 PUI,b6bcff376a5d,2026-04-05T03:29:33Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,init
 PUI,18f13c5a4a72,2026-04-05T03:28:50Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,first commit
+PWG,4801fc578a10,2026-07-28T05:08:51Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(prefaces): legend-store join note + 12-key spot-check (H1596) (#218)
+PWG,bc66c185bcbd,2026-07-27T23:29:47Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(prefaces): page-boundary OCR omissions (H1721) (#217)
+PWG,773f76a9e54b,2026-07-24T11:52:22Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: thin PLAN for preface enrichment support (#216)
+PWG,866c4f65821f,2026-07-24T08:16:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(prefaces): body-naming boost wave (H1580) (#215)
+PWG,2a5777a58f0f,2026-07-24T06:05:26Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(prefaces): body-naming align wave-2 (H1571) (#214)
+PWG,ca99e1d75f62,2026-07-24T04:37:15Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(prefaces): align abbr keys to body .txt naming (H1569) (#213)
+PWG,bbed68804968,2026-07-24T03:50:54Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(prefaces): Andhrabharati review packet for EN front matter (H1561) (#212)
+PWG,051b00d62c64,2026-07-24T03:41:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(prefaces): methods note + cite path for front-matter OCR (H1558) (#211)
 PWG,295e03b0b490,2026-07-20T05:13:29Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/setup-python from 6 to 7 (#209)
 PWG,38fb2535d227,2026-07-19T00:00:44Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,pwg_ru_coverage: scheduled refresh 2026-07-19 (#208)
 PWG,c968fd49cadc,2026-07-14T06:19:35Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair broken link (org-wide link audit, re-land)"
@@ -3548,6 +3585,13 @@ PWG,087a677e9362,2014-11-06T21:09:00Z,funderburkjim,funderburkjim,funderburkjim@
 PWG,5221d87ec45e,2014-10-05T10:49:24Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Stat added
 PWG,200cd2073f4f,2014-10-04T21:29:49Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Update to Jim's PWG Accents
 PWG,a6b29a2159b7,2014-09-25T09:57:25Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,3/52 Russian etymologies fixed
+PWK,546392202be7,2026-07-27T23:29:51Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(prefaces): pwpref03 page-boundary OCR omission (H1721) (#140)
+PWK,742d0363fe71,2026-07-27T17:07:10Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(prefaces): legend store join note + spot-check (H1597) (#139)
+PWK,9c6e6a151504,2026-07-24T11:54:13Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: thin PLAN for preface enrichment support (#138)
+PWK,5228e755cf56,2026-07-24T08:16:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(prefaces): body-naming boost wave (H1580) (#137)
+PWK,fbe5654c6d0f,2026-07-24T06:06:57Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(prefaces): body-naming align wave-2 (H1571) (#136)
+PWK,83a0514e1945,2026-07-24T04:37:17Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(prefaces): align abbr keys to body .txt naming (H1569) (#135)
+PWK,2a4b8b32f37c,2026-07-24T03:41:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(prefaces): methods note + cite path for front-matter OCR (H1558) (#134)
 PWK,cbdb864a3623,2026-07-20T05:13:51Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/setup-python from 6 to 7 (#133)
 PWK,e62d0ce4a782,2026-07-14T09:22:41Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,Merge remote-tracking branch 'origin/main'
 PWK,95fa664d8000,2026-07-14T04:28:57Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 8 broken link(s) (org-wide link audit, auto-fix pass)"
@@ -3952,6 +3996,8 @@ SHS,db5eaca3dc75,2026-05-16T04:09:36Z,gasyoun,Mārcis Gasūns,gasyoun@users.nore
 SHS,197503cc1479,2026-05-15T07:20:17Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 SHS,accd301e25b0,2025-12-22T02:01:13Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,"init .gitignore, README.md"
 SHS,ade8c77eabcb,2025-12-22T01:57:08Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+SKD,a333bb95c27a,2026-07-24T02:11:07Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #25 from sanskrit-lexicon/h1523-jquery-skd-23904
+SKD,c2a722556051,2026-07-24T02:09:41Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(security): bump verbs01 jQuery 1.12.4 → 3.7.1 (H1523)
 SKD,7db51d749eda,2026-07-10T22:30:21Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): refresh status claims to live counts (H548) (#24)
 SKD,66035995e6db,2026-07-03T13:37:29Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: add standard issue templates + PR template (B3 rollout)
 SKD,fec5dc09a201,2026-07-03T13:37:27Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: add standard issue templates + PR template (B3 rollout)
@@ -4361,6 +4407,7 @@ Wil-YAT,8a821a454d24,2015-03-13T18:28:53Z,funderburkjim,funderburkjim,funderburk
 Wil-YAT,fe66e9b76e57,2015-03-10T20:00:44Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Create LICENSE.md
 Wil-YAT,c63a5c154fc4,2015-03-10T19:21:22Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Create README.md
 Wil-YAT,d4495c4d93ac,2015-03-10T19:18:05Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initial commit
+alternateheadwords,72898643dae6,2026-07-27T17:56:48Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#31)
 alternateheadwords,c4710d3e8b6d,2026-07-15T00:08:12Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"fix: repair 2 broken link(s) (org-wide link audit, auto-fix pass) (#30)"
 alternateheadwords,e16f43498bb5,2026-07-13T17:42:51Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): refresh to current facts + org MD conventions (H548) (#29)
 alternateheadwords,91b53ace0518,2026-07-12T12:24:19Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): refresh to current facts + org MD conventions (H548) (#28)
@@ -4487,6 +4534,7 @@ alternateheadwords,27de5532a2a9,2016-10-01T08:54:37Z,drdhaval2785,drdhaval2785,d
 alternateheadwords,7d37062c78f0,2016-10-01T08:49:42Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,vcpahw1.txt added
 alternateheadwords,78a712e38bbc,2016-10-01T08:48:58Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,edit-distance method added
 alternateheadwords,3ab62a8f4ca0,2016-10-01T08:25:27Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,initial commit
+avlinks,75ac9cbacd00,2026-07-27T18:00:51Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#6)
 avlinks,8fff7ba2a0e1,2026-07-13T17:42:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): rewrite to describe the AV linking pipeline accurately (H548) (#5)
 avlinks,41ddc1847e9d,2026-07-12T12:24:27Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): rewrite to describe the AV linking pipeline accurately (H548) (#4)
 avlinks,cc074987ccc6,2026-07-10T22:30:13Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): rewrite to describe the AV linking pipeline accurately (H548) (#3)
@@ -4508,6 +4556,7 @@ avlinks,915e66495009,2021-04-09T01:28:23Z,funderburkjim,funderburkjim,funderburk
 avlinks,a3f97d5397ef,2021-04-08T20:24:32Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Change tab character to space
 avlinks,35a653d0e33b,2021-04-08T20:08:42Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,newline at end.  unix line endings
 avlinks,743350606e39,2021-04-08T19:46:14Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initial commit -- Atharva veda html file
+cologne-hugo,c024b3a680f0,2026-07-27T18:01:25Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#5)
 cologne-hugo,dadf3610bdb8,2026-07-13T17:43:19Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): refresh to currently-true build-meta scaffold state (H549) (#4)
 cologne-hugo,9c1470c12698,2026-07-12T12:24:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): refresh to currently-true build-meta scaffold state (H549) (#3)
 cologne-hugo,d2d87ca97cf8,2026-07-11T06:14:00Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): refresh to currently-true build-meta scaffold state (H549) (#2)
@@ -4517,6 +4566,7 @@ cologne-hugo,bc9c9f8041ce,2026-06-14T04:48:44Z,gasyoun,Mārcis Gasūns,gasyoun@u
 cologne-hugo,33e04b625b7e,2026-05-29T05:11:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): refresh tooling-repo README with live counts (2026-05-29)
 cologne-hugo,27567866a9e7,2026-05-15T07:39:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 cologne-hugo,17af959d4467,2021-01-20T04:59:40Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+cologne-stardict,17d3b722099f,2026-07-26T14:05:52Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 3512762645e606c3411d4713b79a1b0dac7716ca
 cologne-stardict,039812587b8b,2026-07-11T07:27:36Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 3f85552051e4bc7496e35bb514b58d2167ee2179
 cologne-stardict,900535ca7ba9,2026-07-11T07:04:58Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit d649aee872cfc16f3e7829f29b21c342005d1f28
 cologne-stardict,e1b8c6b0a5df,2026-07-11T06:57:09Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 0140e456eafbcf5d1ba51f6770914a45503f296e
@@ -5375,6 +5425,73 @@ cologne-stardict,5d3eac3f589c,2017-04-04T16:05:41Z,drdhaval2785,drdhaval2785,drd
 cologne-stardict,82cf5cf8ca13,2017-04-04T15:39:46Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,GST added
 cologne-stardict,d7f4222e9a19,2017-04-04T10:51:20Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,CCS GRA added
 cologne-stardict,9e7133046729,2017-04-04T06:45:28Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,added CAE
+csl-apidev,1bc35f56e812,2026-07-27T10:32:36Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,feat(transcoder): add Bengali script -> SLP1 table (H1497) (#128)
+csl-apidev,d8525b4b4199,2026-07-26T11:55:48Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"fix(app): rowSlp1() case-folds IAST before to_slp1 (H1695, SanskritLexicography#779) (#127)"
+csl-apidev,5abeacd9742e,2026-07-24T17:41:28Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(js): encodeURIComponent for listview/simple-search; monier key bound (H1523) (#126)
+csl-apidev,67bc6a4672e1,2026-07-24T17:13:17Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"fix(api): null-safe json_decode on simple-search, api0 pretty, trial (H1523) (#125)"
+csl-apidev,2582e19ea260,2026-07-24T16:44:06Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(api1): harden salt GraphQL body/variables against bad JSON (H1523) (#124)
+csl-apidev,a3ebe3d75cca,2026-07-24T15:09:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(security): escape not-found headwords + frontend one.js (H1523) (#123)
+csl-apidev,55e8bf1285c0,2026-07-24T13:43:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(security): security_headers on sample + pwkvn getsuggest (H1523) (#122)
+csl-apidev,b6d7b3744bf1,2026-07-24T13:15:52Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(security): security_headers on api0 + monier1list; escape monier miss (H1523) (#121)
+csl-apidev,884607580088,2026-07-24T11:54:29Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(security): escape api0 pretty-mode HTML + servepdf error page (H1523) (#120)
+csl-apidev,a54e27adb496,2026-07-24T11:15:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(security): monierlisthier key escape + sample dalglob HTML (H1523) (#119)
+csl-apidev,b62fa4ca2294,2026-07-24T10:42:08Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(security): escape simple-search result list HTML/JS + dispitem lnum (H1523) (#118)
+csl-apidev,897928491aea,2026-07-24T10:13:36Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(security): escape listhier key2 for all onclick handlers (H1523) (#117)
+csl-apidev,6a168cc4d1a8,2026-07-24T09:48:41Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(security): validate listhier lnum to numeric form (H1523) (#116)
+csl-apidev,3556e1433fba,2026-07-24T09:12:47Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(security): bound getword key and getsuggest term lengths (H1523) (#115)
+csl-apidev,7e8ae57ce478,2026-07-24T08:40:07Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(security): escape chg markup reference hrefs (H1523) (#114)
+csl-apidev,53b93c00bffb,2026-07-24T08:12:23Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(security): escape dispitem and servepdf HTML attrs (H1523) (#113)
+csl-apidev,d016513f7eae,2026-07-24T07:39:13Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(security): escape Whitney/Westergaard and scan-page href attrs (H1523) (#112)
+csl-apidev,ea5a861654fa,2026-07-24T07:10:50Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"fix(security): security_headers on app, lookup, simple-search UIs (H1523) (#111)"
+csl-apidev,fb08cfd28d04,2026-07-24T06:44:10Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(security): add security_headers.php to live apidev entry points (H1523) (#110)
+csl-apidev,1de84f28150e,2026-07-24T06:14:59Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(security): json_encode key/dict for orphus JS in listview (H1523) (#109)
+csl-apidev,6584191c3b14,2026-07-24T05:40:33Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #108 from sanskrit-lexicon/h1523-href-key-escape-22220
+csl-apidev,41986ffad2ff,2026-07-24T05:38:49Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(security): escape key + href attrs in basicdisplay (H1523)
+csl-apidev,0ad813b45b0c,2026-07-24T05:09:35Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #107 from sanskrit-lexicon/h1523-elt-attr-escape-416
+csl-apidev,db9a00f5555f,2026-07-24T05:08:46Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(security): escape XML elt attrs in sthndl_elt_attribs (H1523)
+csl-apidev,2a9e48f7dcf3,2026-07-24T04:38:54Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #106 from sanskrit-lexicon/h1523-font-display-14624
+csl-apidev,e4a685d79f5f,2026-07-24T04:38:05Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(perf): font-display:swap on live webfont CSS (H1523 / COLOGNE#379)
+csl-apidev,dc15ee1e688a,2026-07-24T03:53:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #105 from sanskrit-lexicon/feat/fix-i-dcs-wf1-frequencies
+csl-apidev,b6d4fc597f18,2026-07-24T03:52:50Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,feat(simple-search): Fix I — default ranking to DCS-2026 wf1 (H1562)
+csl-apidev,d97e3a7ceb1e,2026-07-24T03:46:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #104 from sanskrit-lexicon/h1523-rm-jquery-prev-29940
+csl-apidev,ee95cfcf0679,2026-07-24T03:46:44Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #103 from sanskrit-lexicon/h1523-title-escape-15092
+csl-apidev,66ab3babb0fe,2026-07-24T03:45:26Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,chore(js): remove unused jquery.min.prev.js (H1523)
+csl-apidev,9cb611055cc1,2026-07-24T03:45:24Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(security): escape dynamic title attrs in basicdisplay (H1523)
+csl-apidev,6b381e486d8a,2026-07-24T02:42:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #102 from sanskrit-lexicon/h1523-cookies-set-typo-3232
+csl-apidev,63e333fe5c3c,2026-07-24T02:41:04Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(sample): Cookies.set typo after js-cookie migration (H1523)
+csl-apidev,4a7459bb5657,2026-07-24T01:45:12Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #101 from sanskrit-lexicon/h1523-jquery-readme-9748
+csl-apidev,852001e9ea49,2026-07-24T01:42:52Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,docs(js): readme_jquery — local jquery.min.js is 3.7.1 (H1523)
+csl-apidev,1990637778b6,2026-07-24T01:10:03Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(security): escape shell args in simpleslp query3 (H1523)
+csl-apidev,a7b9d7472c4d,2026-07-24T01:07:40Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(security): escape shell args in simpleslp query3 (H1523)
+csl-apidev,2f7af69ced4c,2026-07-23T23:09:16Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #99 from sanskrit-lexicon/h1523-defusedxml-sitemap-14160
+csl-apidev,60d7a8969d1a,2026-07-23T23:07:44Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix(security): use html.escape in build_sitemap (CodeQL #79, H1523)"
+csl-apidev,dba86d5311bf,2026-07-23T22:45:51Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #98 from sanskrit-lexicon/h1523-ap90-bare-comp-14160
+csl-apidev,f26f3e5d3eeb,2026-07-23T22:43:42Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix(ap90): promote leftover -Comp. text to Comp. header (parity, H1523)"
+csl-apidev,db3873754a09,2026-07-23T21:13:43Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #97 from sanskrit-lexicon/h1523-mw-key2-list-14160
+csl-apidev,5c3ae742c11a,2026-07-23T21:10:53Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix(listhier): show MW XML key2 in list pane (#46 parity, H1523)"
+csl-apidev,1f712b64bbf5,2026-07-23T20:49:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #96 from sanskrit-lexicon/h1523-samesite-cookies-27784
+csl-apidev,d019d6c268b1,2026-07-23T20:46:42Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(listview): set SameSite=Lax on preference cookies (H1523)
+csl-apidev,126e08d507cb,2026-07-23T20:25:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #95 from sanskrit-lexicon/h1523-jquery-bump-70720
+csl-apidev,55c34466b2d1,2026-07-23T20:23:16Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(security): also bump local js/jquery.min.js to 3.7.1
+csl-apidev,5e90f90f890d,2026-07-23T20:11:31Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(security): bump jQuery CDN 2.1.4 to 3.7.1 (csl-apidev#33)
+csl-apidev,669ec05e436f,2026-07-23T19:56:15Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #94 from sanskrit-lexicon/h1523-js-cookie-45126
+csl-apidev,c7cce2fb6e78,2026-07-23T19:53:34Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(cookies): migrate jquery.cookie to js-cookie (#23)
+csl-apidev,ff2409171244,2026-07-23T18:19:50Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #93 from sanskrit-lexicon/h1523-servepdf-always-link-10630
+csl-apidev,e60c6c9293fc,2026-07-23T18:17:09Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix(servepdf): always-visible open-PDF link (COLOGNE#153, MWS#61)"
+csl-apidev,7dff69d36e4a,2026-07-23T17:46:41Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #92 from sanskrit-lexicon/h1523-mw-n-href-35137
+csl-apidev,52a5a4994f67,2026-07-23T17:43:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #89 from sanskrit-lexicon/h1523-med-bare-99384b
+csl-apidev,4a74ef3f106c,2026-07-23T17:42:20Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(basicadjust): MW n= continuations for Hariv./Megh./Hit. (\#23)
+csl-apidev,1440df31d6de,2026-07-23T17:41:18Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #91 from sanskrit-lexicon/h1523-stc-sv-10858
+csl-apidev,92a2d3fcb28e,2026-07-23T17:41:14Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #90 from sanskrit-lexicon/h1523-ap90-indent-60303
+csl-apidev,341fb75e8086,2026-07-23T17:40:58Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #88 from sanskrit-lexicon/h1523-servepdf-label-25596
+csl-apidev,cbcd3d1e0d2b,2026-07-23T17:11:09Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(stc): rejoin split s. + v. abbreviation (csl-orig#2821)
+csl-apidev,4710d62c7eb0,2026-07-23T16:41:51Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(simple-search): clarify page title (csl-websanlexicon#15)
+csl-apidev,4e7563147831,2026-07-23T16:41:51Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(ap90): indent parenthetical compound continuations (COLOGNE#254)
+csl-apidev,4900bed89817,2026-07-23T16:13:48Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(basicadjust): link bare MED. to medini app4 by headword (#52)
+csl-apidev,fe20b66902ba,2026-07-23T15:55:35Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"fix(basicadjust): tooltip bare &c. as et cetera (MWS#86, H1523) (#87)"
+csl-apidev,025b402f2501,2026-07-23T15:44:41Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(servepdf): clarify PDF fallback link wording (COLOGNE#300)
+csl-apidev,5ce7593e02cc,2026-07-23T14:26:24Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(basicadjust): never emit rv00.* RV links (COLOGNE#370) (#86)
+csl-apidev,f65c13f80162,2026-07-23T09:39:26Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"fix(servepdf): preserve tNN title-page ids (csl-apidev#45, H1522) (#85)"
 csl-apidev,44aca740b444,2026-07-20T05:16:25Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,chore(deps): bump actions/setup-python from 6 to 7 (#84)
 csl-apidev,c308baf7040e,2026-07-14T09:21:56Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,Merge remote-tracking branch 'origin/main'
 csl-apidev,935272c491f2,2026-07-14T04:38:03Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 4 broken link(s) (org-wide link audit, auto-fix pass)"
@@ -6211,6 +6328,18 @@ csl-app,3f5f02ce0114,2026-03-18T19:13:28Z,drdhaval2785,Dr. Dhaval Patel,drdhaval
 csl-app,41a87dfe9b1a,2026-03-18T17:59:44Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,v0.1.0
 csl-app,601df1e6d0c8,2026-03-18T17:25:31Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,app working
 csl-app,3827040885b1,2026-03-18T16:14:06Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,initial commit
+csl-corrections,3238635766ef,2026-07-28T01:50:00Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-07-27
+csl-corrections,c5d7971c867f,2026-07-27T02:09:34Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-07-26
+csl-corrections,03ab95f0295d,2026-07-26T02:02:20Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-07-25
+csl-corrections,2b5377acf73f,2026-07-25T01:57:19Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-07-24
+csl-corrections,1d5bca6af04a,2026-07-24T20:00:28Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: tidy sweep — commit uncommitted working-tree changes (#317)
+csl-corrections,e6ae67cb05a0,2026-07-24T02:11:05Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #316 from sanskrit-lexicon/h1523-testgit-cli-3960
+csl-corrections,cd4addeb9d3f,2026-07-24T02:07:32Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(security): CLI-only gate for app/testgit.php (H1523)
+csl-corrections,ae410a10ff6f,2026-07-24T01:58:12Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-07-23
+csl-corrections,2d6c5ef42b1b,2026-07-23T02:03:13Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-07-22
+csl-corrections,1715777edc0f,2026-07-22T01:55:04Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-07-21
+csl-corrections,9a11c04e1dd7,2026-07-21T01:56:06Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-07-20
+csl-corrections,d95555a7788a,2026-07-20T13:45:10Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H1393: AGENTS.md org-context block + operational-hazard pointer (#311)
 csl-corrections,602bff429a33,2026-07-20T03:20:55Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-07-19
 csl-corrections,eea74df40660,2026-07-19T01:57:10Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-07-18
 csl-corrections,8828ef073923,2026-07-18T02:56:22Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,census: bump build_correction_loci.py EXPECTED to match legitimate batch growth (#307)
@@ -7215,6 +7344,8 @@ csl-corrections,03c38c194339,2019-12-16T23:50:54Z,,James Funderburk,jfunderb@dia
 csl-corrections,e23efa275d19,2019-12-16T22:28:35Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,initialization from Cologne /php
 csl-corrections,6fa5aa987701,2019-12-16T21:49:45Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initialize material from sanskrit-lexicon/CORRECTIONS repository
 csl-corrections,e854ffd2f3cc,2019-12-16T20:34:56Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+csl-devanagari,82fc00e4666a,2026-07-27T17:55:26Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#50)
+csl-devanagari,2673ffc18b9d,2026-07-20T13:45:17Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H1393: AGENTS.md org-context block + operational-hazard pointer (#49)
 csl-devanagari,c470d4525f93,2026-07-14T17:24:47Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Add 'temp*'  to .gitignore
 csl-devanagari,5d7de0354285,2026-07-11T18:46:14Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,guard: block direct commits in the shared main tree (force worktrees)
 csl-devanagari,0c8aa42580ec,2026-07-11T06:15:12Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: correct README creation date to actual repo inception (H549) (#48)
@@ -7357,6 +7488,7 @@ csl-devanagari,2f1bb70e7788,2021-09-02T17:59:29Z,drdhaval2785,drdhaval2785,drdha
 csl-devanagari,d668287f4920,2021-09-02T17:55:59Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,VCP first commit
 csl-devanagari,fc84eb497570,2021-09-02T17:55:46Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,to_devanagari first commit
 csl-devanagari,2bfdf12026e3,2021-09-02T17:37:27Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,ignore slp1 folder
+csl-doc,4c9d6d872f47,2026-07-27T17:56:31Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#15)
 csl-doc,6bf4508861f7,2026-07-12T12:24:51Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: rewrite README so every claim is currently true (H549) (#14)
 csl-doc,c56adcbbccad,2026-07-11T07:24:33Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ci: fix readme-guard zero-count abort (grep -c exit 1 under set -e) (#13)
 csl-doc,34bae9a1fa27,2026-07-11T06:27:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: rewrite README so every claim is currently true (H549) (#12)
@@ -7409,6 +7541,9 @@ csl-doc,8ff154efb810,2018-10-24T21:17:56Z,funderburkjim,funderburkjim,funderburk
 csl-doc,bd14b74b4772,2018-10-24T20:14:08Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,build with just bhs
 csl-doc,765253c73da1,2018-10-24T20:08:17Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,bhs dictionary front matter
 csl-doc,ddedf4c08457,2018-10-23T02:06:19Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initial commit
+csl-homepage,c7ba8925a2f1,2026-07-27T18:03:19Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#26)
+csl-homepage,70974807c145,2026-07-23T17:41:22Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #25 from sanskrit-lexicon/h1523-wil-depremove-25596
+csl-homepage,b657866c3727,2026-07-23T15:44:41Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(homepage): drop broken WIL semi-digitized 2008 link (WIL#14)
 csl-homepage,a6ac37323f37,2026-07-13T17:09:58Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: refresh README to current facts (H549) (#24)
 csl-homepage,a0a5a905dfee,2026-07-11T06:14:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: refresh README to current facts (H549) (#23)
 csl-homepage,68a1fa4faf18,2026-06-26T03:41:43Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,notice disabled
@@ -7502,6 +7637,7 @@ csl-homepage,39824ee261fc,2019-01-17T21:00:54Z,,James Funderburk,jfunderb@dialog
 csl-homepage,1e2e3cdfff5e,2018-08-30T22:22:34Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,Changes. See https://github.com/sanskrit-lexicon/Cologne/issues/232
 csl-homepage,58b48fdb7833,2018-08-08T20:13:43Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Create readme.md
 csl-homepage,4fe451a1680a,2018-08-08T20:06:14Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,initial commit from Cologne /scans/awork/homepage
+csl-inflect,14cd8021e6f0,2026-07-27T18:00:12Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#28)
 csl-inflect,20a77aff710d,2026-07-15T05:18:44Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,chore(release): 0.1.0
 csl-inflect,82d9f6c8c581,2026-07-14T09:22:05Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,Merge remote-tracking branch 'origin/main'
 csl-inflect,a118033646fb,2026-07-14T04:34:30Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 1 broken link(s) (org-wide link audit, auto-fix pass)"
@@ -7588,6 +7724,7 @@ csl-inflect,874fa8b88f06,2019-11-27T19:15:06Z,,James Funderburk,jfunderb@dialog6
 csl-inflect,1a46abf2c5e2,2019-11-27T02:28:35Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,remove python transcode directory. It is not used.
 csl-inflect,3945e534a655,2019-11-27T02:23:40Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Create LICENSE
 csl-inflect,d49fe31a06bb,2019-11-27T02:19:14Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,"Initial commit, based upon zipped download of MWinflect repository"
+csl-json,de8b2d4f392c,2026-07-27T17:55:35Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#12)
 csl-json,e17f9eeb271e,2026-07-11T06:14:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): rewrite to describe actual repo (H549) (#11)
 csl-json,bbbd30a47d0f,2026-06-18T20:21:47Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"Fix code-license link (RH1 dual-license, approved 2026-06-18)"
 csl-json,d6543d58d512,2026-06-18T20:21:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"Add GPL-3.0 for source code (RH1 dual-license, approved 2026-06-18)"
@@ -7692,6 +7829,7 @@ csl-json,68bcaa26e92b,2021-08-16T04:56:19Z,drdhaval2785,drdhaval2785,drdhaval278
 csl-json,f9ee45a8f8a0,2021-08-16T04:38:38Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,yat json
 csl-json,1a666aac8ecd,2021-08-16T04:36:00Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,first generation of yat in ashtadhyayi.com format
 csl-json,7f8e85f197b5,2021-08-16T03:40:49Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,initial commit
+csl-kale,c7757452b650,2026-07-27T17:56:20Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#8)
 csl-kale,ff72b90fe51c,2026-07-12T12:24:59Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): refresh to reflect actual scanned-book contents (H549) (#7)
 csl-kale,90bc65517a1e,2026-07-11T06:14:23Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): refresh to reflect actual scanned-book contents (H549) (#6)
 csl-kale,afc153ca7d4f,2026-06-14T09:09:56Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,security: remove dead disp1/unused_index1.php (LFI + reflected XSS) (#5)
@@ -7711,6 +7849,7 @@ csl-kale,092a0a38616b,2022-05-05T21:54:45Z,funderburkjim,funderburkjim,funderbur
 csl-kale,4e9d835691b6,2019-11-09T02:47:27Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,display code
 csl-kale,06ef1a0c5158,2019-11-09T02:45:27Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,scanned images
 csl-kale,523cfe5b651e,2019-11-09T00:43:46Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+csl-ldev,54133fab09f9,2026-07-27T17:59:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#24)
 csl-ldev,006dbc6bb34e,2026-07-14T04:33:09Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 1 broken link(s) (org-wide link audit, auto-fix pass)"
 csl-ldev,4abe67bd3429,2026-07-12T14:01:12Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix: resolve README.md/readme.md case collision — drop legacy lowercase duplicate
 csl-ldev,17cb6a822ca5,2026-07-11T06:14:16Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: refresh README to current state (H549) (#23)
@@ -7789,6 +7928,7 @@ csl-ldev,d7cc88430dc8,2021-10-05T03:08:02Z,drdhaval2785,drdhaval2785,drdhaval278
 csl-ldev,b16fb7da9012,2021-10-05T03:06:26Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,print progress only after 10000 headwords
 csl-ldev,faf4d49dc2dd,2021-10-05T02:15:30Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,redo and txt_to_ldev init
 csl-ldev,71b35f176b4a,2021-10-05T02:14:54Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,readme init
+csl-lnum,b00b64329e75,2026-07-27T18:01:19Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#7)
 csl-lnum,65cf5b67a4a3,2026-07-11T06:14:13Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): rewrite to accurate canonical doc (H549) (#6)
 csl-lnum,3cd2a974535c,2026-06-18T15:13:59Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"Add CC-BY-SA-4.0 license (RH1 license policy, approved 2026-06-17)"
 csl-lnum,84a4bcaf277b,2026-06-14T05:36:52Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,Bump dependabot/fetch-metadata from 2 to 3 (#5)
@@ -7883,6 +8023,7 @@ csl-lslink,2842b0274af8,2026-03-31T18:03:03Z,funderburkjim,funderburkjim,funderb
 csl-lslink,3de81a0a1a4f,2026-03-31T02:24:40Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,"created link files for gra, mw, pw, pwg"
 csl-lslink,077ec47bd51d,2026-03-31T02:12:42Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,"Initial commit, sch"
 csl-lslink,e36bec73e813,2026-03-31T01:43:07Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+csl-newsletter,64f9672a84e4,2026-07-27T17:56:03Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#7)
 csl-newsletter,a53bc8dc7b6e,2026-07-14T09:22:07Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,Merge remote-tracking branch 'origin/main'
 csl-newsletter,b09058ca14ec,2026-07-14T04:33:54Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 1 broken link(s) (org-wide link audit, auto-fix pass)"
 csl-newsletter,414e0c376057,2026-07-12T16:24:23Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (1 links, 1 files)"
@@ -7944,9 +8085,45 @@ csl-newsletter,bced52b7f19f,2021-09-14T04:37:04Z,drdhaval2785,Dhaval Patel,drdha
 csl-newsletter,53c6fa85e014,2021-09-13T14:34:31Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,csl-orig commits taken into consideration
 csl-newsletter,b04b08d7e699,2021-09-13T13:28:15Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,addition
 csl-newsletter,5ab58ee2cd64,2021-09-13T12:33:30Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,september started
+csl-observatory,1c34cfe5d90d,2026-07-28T05:46:07Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(H1736): repair the pages-build Liquid error + dictionary/tooling audit drift (#124)
+csl-observatory,961b574bb67f,2026-07-28T04:49:40Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #93 from sanskrit-lexicon/codex/a61-sol-evidence
+csl-observatory,175d80c62d19,2026-07-28T04:45:49Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,Merge remote-tracking branch 'origin/main' into codex/a61-sol-evidence
+csl-observatory,84523b4040c4,2026-07-27T23:43:59Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"feat(H1720): harvest + align BSB hOCR for amara_dlc, first CER against AMAR e-text (#123)"
+csl-observatory,72c6702994ff,2026-07-27T20:46:10Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(G3/A48): record the rejected linkage keys + the L-code drift measurement (H1477) (#122)
+csl-observatory,7980a9b194c8,2026-07-27T18:24:33Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,feat(G3/A48): measured record linkage + within-era corrector recapture (H1477) (#120)
+csl-observatory,a8b13007e5aa,2026-07-27T18:15:06Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(RH4): flip org-wide .gitattributes rollout to done (H1542) (#119)
+csl-observatory,d46d4c613058,2026-07-27T16:42:25Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(H1541): generalize DATASHEET.md into reusable DATASHEET_TEMPLATE.md (roadmap Part 4.2) (#118)
+csl-observatory,7de403e5d016,2026-07-27T16:35:40Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,feat(A2): pull_data.py project-board fields + explicit rate-limit handling (H1540) (#117)
+csl-observatory,06e71d8f5dbb,2026-07-27T16:20:52Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(H1539): MWSA evaluation-lineage subsection (roadmap Part 4.3) (#116)
+csl-observatory,84de9dbd6d1f,2026-07-27T10:01:37Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,feat(RH5): no-BOM/UTF-8/NFC/XML-parse guard for dictionary-source change paths (#115)
+csl-observatory,bb0b60ec0162,2026-07-27T09:43:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(pwg-scan-index-tracker): re-verify rvps/TS./TBR. wiring after H1714 (#113)
+csl-observatory,89b131557466,2026-07-27T09:43:16Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #114 from sanskrit-lexicon/h1728-awareness-weave-8168
+csl-observatory,f674b1898068,2026-07-27T09:41:12Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,docs(H1728): Related blocks for document-awareness reverse links
+csl-observatory,12377536d1a0,2026-07-27T09:19:06Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(H1495): OntoLex-Lemon/TEI Lex-0 routing contract to csl-standards (#112)
+csl-observatory,834484a171f0,2026-07-27T07:41:44Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs: rights framing closed — everything publishes, no gate (H1715/H1720) (#111)"
+csl-observatory,20f896f58d61,2026-07-27T05:39:10Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,feat(pwg): kosa e-text pilot — measured NO-GO on OCR-from-scratch (H1715) (#110)
+csl-observatory,8f87b92df507,2026-07-27T05:12:24Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"feat(obs-t): persistent event-ID scheme (H1494, roadmap Part 4.1) (#109)"
+csl-observatory,76d6e0a1cd1d,2026-07-27T04:29:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"chore(release): v1.5.0 — H1706 PWG scan-index campaign, journal, ramayanabom re-annotation (#108)"
+csl-observatory,2f8f24f6279a,2026-07-27T03:23:10Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"feat(pwg): commit the scan-index campaign as data — registry, coverage, e-text queue, history (H1706) (#107)"
+csl-observatory,2e84705074f6,2026-07-24T05:44:00Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,chore(deps): bump actions/setup-python from 6 to 7 (#97)
+csl-observatory,dcc64c456e28,2026-07-24T05:43:04Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,chore(deps): bump actions/setup-node from 6 to 7 (#98)
+csl-observatory,855a939e3fee,2026-07-23T15:15:12Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: note atlas etymology-style consumer (H1525 / csl-atlas #293) (#106)
+csl-observatory,d3f6c5bb5136,2026-07-23T15:03:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore(release): v1.4.0 — H1524 analytical idle-stats pages (#105)
+csl-observatory,3a8e03983f2c,2026-07-23T14:58:50Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"H1524: analytical idle-stats pages (POS, paradigm, polysemy) (#104)"
+csl-observatory,bfe6859fa4ea,2026-07-23T14:52:15Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"H1524: analytical idle-stats pages (POS, paradigm, polysemy) (#103)"
+csl-observatory,7d569965df18,2026-07-21T16:59:25Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"ai-wip: .ai_state — A12 IAA gate cleared by H1385 (kappa 0.906, PR #102)"
+csl-observatory,6053858503e4,2026-07-21T16:56:35Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,chore(release): v1.3.0 — H1385 cross-model IAA + H1364 false-DOI cleanup
+csl-observatory,ad862bd23a37,2026-07-21T16:54:47Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H1385: blind cross-model IAA on the OBS-T location axis — kappa 0.906 [0.872-0.938] (#102)
+csl-observatory,259544be0e0f,2026-07-20T18:58:00Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H1392 lane1 (1.6-1.7): consumed-by baseline + Wave-3 capture (#101)
+csl-observatory,28190d63a677,2026-07-20T13:44:22Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H1393: AGENTS.md org-context block + operational-hazard pointer (#100)
+csl-observatory,f15cf6d16749,2026-07-20T09:19:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H1364: correct the false OBS-T Zenodo DOI citation everywhere it was still asserted as genuine (#99)
+csl-observatory,e0f237f95fa8,2026-07-20T06:17:43Z,actions-user,csl-observatory-bot,actions@github.com,data: monthly refresh (2026-07-20)
 csl-observatory,afcc173cb222,2026-07-19T11:01:27Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(roadmap): AGENT_ROADMAP.md confirmed canonical + dated header (#96)
 csl-observatory,f47ac29a5b50,2026-07-18T08:11:00Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore(release): v1.2.1 — promote the G17 data-index determinism fix (#95)
 csl-observatory,f68222e4e981,2026-07-18T08:06:14Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"fix(catalog): measure committed content, not environment state (G17/H1223) (#94)"
+csl-observatory,f300b68813e2,2026-07-18T05:01:06Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,ai-wip: publish A61 evidence snapshot v1.1
+csl-observatory,6b49f3137e23,2026-07-18T03:24:37Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,ai-wip: reframe A13 around repository evidence
+csl-observatory,dd3eaab28bbc,2026-07-18T03:23:43Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,ai-wip: freeze A61 evidence and repair observatory metrics
 csl-observatory,79afa9ae8e8c,2026-07-18T03:30:40Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"fix: register 4 uncatalogued data files, unblocking the weekly refresh (#92)"
 csl-observatory,3a518e57b40e,2026-07-14T04:39:39Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair broken links (org-wide link audit, auto-fix pass)"
 csl-observatory,9efd04a7dbdd,2026-07-14T05:28:54Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,docs(roadmap): AR1 code-side refactor landed (csl-pywork#68)
@@ -8399,6 +8576,7 @@ csl-observatory,eec8dc712aed,2026-05-07T19:29:28Z,gasyoun,Mārcis Gasūns,gasyou
 csl-observatory,c236fb5ac130,2026-05-07T19:28:08Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"feat: companion paper, headword counter, retry logic, templates"
 csl-observatory,1947ea3757ed,2026-05-07T17:04:56Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Create gasuns-cologne-30-report.md
 csl-observatory,e24574b2785a,2026-05-07T15:58:23Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"chore: bootstrap observatory — scripts, first data snapshot, dashboards, article scaffold"
+csl-orig,3512762645e6,2026-07-26T14:00:54Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,BEN added sub-headwords. See https://github.com/sanskrit-lexicon/BEN/issues/28
 csl-orig,93eecc278f43,2026-07-20T05:13:49Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,Bump actions/setup-python from 6 to 7 (#2880)
 csl-orig,8e9d7bc93538,2026-07-11T08:16:38Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: add self-contained correction operator manual + metadoc (H515) (#2878)
 csl-orig,3f85552051e4,2026-07-11T07:11:35Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 10 July 2026. See https://github.com/sanskrit-lexicon/csl-corrections/issues/298
@@ -11183,6 +11361,7 @@ csl-pywork,85ce663e2269,2019-07-22T06:48:04Z,drdhaval2785,drdhaval2785,drdhaval2
 csl-pywork,39208cc59d43,2019-07-20T15:54:34Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,compare.sh compares between generated and cologne versions
 csl-pywork,68da950d5517,2019-07-20T05:54:26Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,make_xml of 2013 added
 csl-pywork,a0ca4a27bdb0,2019-07-20T04:08:01Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,first commit
+csl-sqlite,0c3eeab7e7b7,2026-07-27T18:00:44Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#5)
 csl-sqlite,21ed5c3874e7,2026-07-12T12:25:24Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): rewrite to describe actual dual-channel SQLite distribution (H549) (#4)
 csl-sqlite,43a90c335761,2026-07-11T06:14:20Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): rewrite to describe actual dual-channel SQLite distribution (H549) (#3)
 csl-sqlite,868a90c6f16e,2026-06-14T04:52:02Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump dependabot/fetch-metadata from 2 to 3 (#2)
@@ -11192,6 +11371,77 @@ csl-sqlite,a6a257a9a836,2026-05-29T05:10:13Z,gasyoun,Mārcis Gasūns,gasyoun@use
 csl-sqlite,299157791231,2026-05-15T06:00:57Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 csl-sqlite,fc82dcdff2e1,2026-04-11T06:00:27Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,README update
 csl-sqlite,fca7cdc9f757,2026-04-08T11:48:40Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+csl-websanlexicon,7e2b94208779,2026-07-27T13:39:07Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(security): audit vendored JS deps; bump js-cookie 3.0.5 -> 3.0.8 (#137)
+csl-websanlexicon,a880fe99e76c,2026-07-24T17:41:25Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(js): replace deprecated escape() with encodeURIComponent (H1523) (#136)
+csl-websanlexicon,0358c344f989,2026-07-24T17:13:19Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(webtc2): Queryparm must call zero-arg Parm constructor (H1523) (#135)
+csl-websanlexicon,49272e6c100d,2026-07-24T16:44:02Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(webtc2): harden query_gather1 against bad JSON POST (H1523) (#134)
+csl-websanlexicon,6a3f1c05dd25,2026-07-24T16:43:59Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(webtc2): correct dict property access in query_multi (H1523) (#133)
+csl-websanlexicon,01699aae6bd7,2026-07-24T16:18:16Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(webtc2): query_gather no-data path used undefined key1 (H1523) (#132)
+csl-websanlexicon,37e1f2b409a6,2026-07-24T16:02:17Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(security): ship security_headers for v00 entry points + v02 inventory (H1523) (#131)
+csl-websanlexicon,bbf5d3eb3e71,2026-07-24T15:09:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(security): escape not-found headword HTML (H1523) (#130)
+csl-websanlexicon,4905ccecc30e,2026-07-24T14:42:10Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(security): v00 querymodel preg_quote + soft-hyphen match (H1523) (#129)
+csl-websanlexicon,75bc063be7fc,2026-07-24T14:08:59Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(security): v00 Advanced Search bounds + key length (H1523) (#128)
+csl-websanlexicon,fa816c857683,2026-07-24T13:43:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(webtc1): restore v00 list UP/DOWN direction (H1523) (#127)
+csl-websanlexicon,001ee1b9b30f,2026-07-24T12:44:53Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(security): escape v00 servepdf/Whitney/Westergaard hrefs (H1523) (#126)
+csl-websanlexicon,fbec60ab4fe1,2026-07-24T12:15:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(security): port H1523 HTML escapes to v00 templates (parity) (#125)
+csl-websanlexicon,a63ba65ad799,2026-07-24T11:15:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(security): escape Advanced Search getNext_html headwords (H1523) (#124)
+csl-websanlexicon,5cad1a648d0d,2026-07-24T10:42:08Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(security): escape querylist keys and dispitem lnum onclick (H1523) (#123)
+csl-websanlexicon,6ad1b2f4352d,2026-07-24T10:13:36Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(webtc1): escape list key2 for JS onclick + standardize filters (H1523) (#122)
+csl-websanlexicon,5be8a5a85cad,2026-07-24T09:48:25Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(webtc1): restore list direction UP/DOWN + whitelist outopt (H1523) (#121)
+csl-websanlexicon,3272e138d84a,2026-07-24T09:13:15Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"fix(security): whitelist sregexp, quote exact sword, cap key length (H1523) (#120)"
+csl-websanlexicon,0ef874f9e1c9,2026-07-24T08:42:08Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(security): escape chg markup hrefs + bound Advanced Search words (H1523) (#119)
+csl-websanlexicon,9b7a99ed0d50,2026-07-24T08:12:41Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(security): escape dispitem and servepdf HTML attrs (H1523) (#118)
+csl-websanlexicon,324c53c6c7fe,2026-07-24T07:39:10Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(security): escape Whitney/Westergaard and scan-page href attrs (H1523) (#117)
+csl-websanlexicon,e5b22245246b,2026-07-24T07:10:52Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(security): clamp webtc2 Advanced Search ?max= page size (H1523) (#116)
+csl-websanlexicon,14d25a78221c,2026-07-24T06:44:07Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(security): require security_headers on remaining web entrypoints (H1523) (#115)
+csl-websanlexicon,e96ac1e18d70,2026-07-24T06:14:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(security): json_encode key/dict for orphus JS (webtc1/2) (H1523) (#114)
+csl-websanlexicon,63826b94ea1e,2026-07-24T05:55:29Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(security): htmlspecialchars indexcaller word input value (H1523) (#113)
+csl-websanlexicon,5218f3712c04,2026-07-24T05:48:51Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(security): allowlist webtc2 ?dictionary= dump filename (H1523) (#112)
+csl-websanlexicon,7d618b843507,2026-07-24T05:40:31Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #111 from sanskrit-lexicon/h1523-href-key-escape-22220
+csl-websanlexicon,f0e6f560849c,2026-07-24T05:38:49Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(security): escape key + href attrs in basicdisplay (H1523)
+csl-websanlexicon,034fc7912f1d,2026-07-24T05:09:32Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #110 from sanskrit-lexicon/h1523-elt-attr-escape-416
+csl-websanlexicon,3f9ac29bb780,2026-07-24T05:08:46Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(security): escape XML elt attrs + JSONP callback (H1523)
+csl-websanlexicon,8010f190b2be,2026-07-24T04:11:48Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #109 from sanskrit-lexicon/h1523-font-display-7780
+csl-websanlexicon,372854ac0bb7,2026-07-24T04:09:08Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix(perf,security): font-display swap + grav00 title escape (H1523)"
+csl-websanlexicon,aeb9b37e62ce,2026-07-24T03:46:40Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #108 from sanskrit-lexicon/h1523-title-escape-12756
+csl-websanlexicon,51007763c03c,2026-07-24T03:43:15Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(security): escape title attrs in v00 basicdisplay too (H1523)
+csl-websanlexicon,eefd3101a6ad,2026-07-24T03:41:42Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(security): escape dynamic title attrs in basicdisplay (H1523)
+csl-websanlexicon,ad7a8884819d,2026-07-24T00:12:41Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #107 from sanskrit-lexicon/h1523-rm-jquery-cookie-14160
+csl-websanlexicon,542907d2d852,2026-07-24T00:10:20Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,chore(js): remove unused jquery.cookie.js after js-cookie migration (H1523)
+csl-websanlexicon,d4398673eb8d,2026-07-23T22:45:47Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #106 from sanskrit-lexicon/h1523-ap90-bare-comp-14160
+csl-websanlexicon,2fa64bcadfac,2026-07-23T22:43:39Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix(ap90): promote leftover -Comp. text to Comp. header (#434, H1523)"
+csl-websanlexicon,4adeb93c7ade,2026-07-23T22:15:58Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #105 from sanskrit-lexicon/h1523-v00-jscookie-14160
+csl-websanlexicon,930cfad73b26,2026-07-23T22:13:46Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(v00): ship js.cookie for GRA path + migrate grav00 (H1523)
+csl-websanlexicon,8a65416331ba,2026-07-23T21:41:17Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #104 from sanskrit-lexicon/h1523-kb-grav00-14160
+csl-websanlexicon,1ca75ad0930c,2026-07-23T21:40:15Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(grav00): use local keyboard.png in help (H1523)
+csl-websanlexicon,e4b0d4d9949c,2026-07-23T21:13:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #103 from sanskrit-lexicon/h1523-mw-key2-list-14160
+csl-websanlexicon,e21f8dac9d4f,2026-07-23T21:10:50Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix(webtc1): always show MW key2 in list pane (#46, H1523)"
+csl-websanlexicon,e9c9f5f0e669,2026-07-23T20:49:06Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #102 from sanskrit-lexicon/h1523-jscookie-inventory-27784
+csl-websanlexicon,6d0bdac5672b,2026-07-23T20:46:19Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(inventory): ship js.cookie.min.js after jquery.cookie migration (H1523)
+csl-websanlexicon,b45c84ab3488,2026-07-23T20:25:25Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #101 from sanskrit-lexicon/h1523-jquery-371-21488
+csl-websanlexicon,778c5b9233e1,2026-07-23T20:21:18Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(security): bump local jQuery 3.5.0 to 3.7.1
+csl-websanlexicon,91151796dfa9,2026-07-23T19:56:10Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #100 from sanskrit-lexicon/h1523-js-cookie-45126
+csl-websanlexicon,c5c620b87335,2026-07-23T19:53:39Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(cookies): migrate jquery.cookie to js-cookie (csl-apidev#23)
+csl-websanlexicon,ed31355a0598,2026-07-23T19:15:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #99 from sanskrit-lexicon/h1523-highlight-nfc-10394
+csl-websanlexicon,bc73b4d2b8fe,2026-07-23T19:13:22Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(webtc2): safer advanced-search highlight for Unicode (#35)
+csl-websanlexicon,314628b8c5aa,2026-07-23T18:19:44Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #98 from sanskrit-lexicon/h1523-servepdf-always-link-10630
+csl-websanlexicon,f510b7aede5c,2026-07-23T18:17:03Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix(servepdf): always-visible open-PDF link (COLOGNE#153, MWS#61)"
+csl-websanlexicon,d4d64eff9ebd,2026-07-23T18:08:22Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #97 from sanskrit-lexicon/h1523-keyboard-local-img
+csl-websanlexicon,a01ffaff38d1,2026-07-23T18:06:21Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(webtc1/help): use local keyboard.png instead of dead brown.edu host (H1523)
+csl-websanlexicon,d2866af35bfe,2026-07-23T17:45:37Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #96 from sanskrit-lexicon/h1523-mw-n-href-35137
+csl-websanlexicon,091ea69b5dbe,2026-07-23T17:42:16Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(basicadjust): MW n= continuations for Hariv./Megh./Hit. (\#23)
+csl-websanlexicon,d37546f71a77,2026-07-23T17:40:54Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #95 from sanskrit-lexicon/h1523-webtc2-hyphen-10858
+csl-websanlexicon,990665922c3e,2026-07-23T17:40:50Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #94 from sanskrit-lexicon/h1523-ap90-indent-60303
+csl-websanlexicon,d844dc57e0fb,2026-07-23T17:40:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #93 from sanskrit-lexicon/h1523-med-bare-99384
+csl-websanlexicon,62d73ab26363,2026-07-23T17:40:40Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #92 from sanskrit-lexicon/h1523-servepdf-label-25596
+csl-websanlexicon,c82fcb208bc4,2026-07-23T17:11:03Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix(webtc2,stc): hyphen-insensitive English search + s.v. rejoin"
+csl-websanlexicon,878ef94cf49d,2026-07-23T16:41:29Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(ap90): indent parenthetical compound continuations (COLOGNE#254)
+csl-websanlexicon,1b6a945315ba,2026-07-23T16:13:45Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(basicadjust): link bare MED. to medini app4 by headword (#52)
+csl-websanlexicon,36dca7e4e46f,2026-07-23T15:55:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"fix(basicadjust): tooltip bare &c. as et cetera (MWS#86, H1523) (#91)"
+csl-websanlexicon,898455a7f885,2026-07-23T15:44:41Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(servepdf): clarify PDF fallback link wording (COLOGNE#300)
+csl-websanlexicon,553479a312b5,2026-07-23T14:27:51Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(basicadjust): never emit rv00.* RV links (COLOGNE#370) (#90)
+csl-websanlexicon,830f5c9a2652,2026-07-23T10:49:30Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(webtc1): HK L/Lh = ळ/ळ्ह; skip phonetic input for AE/MWE/BOR (#89)
+csl-websanlexicon,6c3dd137fea3,2026-07-23T09:40:28Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"fix(servepdf): preserve tNN title-page ids (csl-apidev#45 twin, H1522) (#88)"
 csl-websanlexicon,ff7374f43797,2026-07-17T00:04:17Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore(.github): adopt org structured PR template (data/build/docs/navigation) (#87)
 csl-websanlexicon,e2a83bae7daa,2026-07-14T11:09:00Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Wave 3: security headers + Report-Only CSP in generated apps (#86)
 csl-websanlexicon,b4d72c643aff,2026-07-14T04:45:15Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 4 broken link(s) (org-wide link audit, auto-fix pass)"
@@ -11715,6 +11965,7 @@ csl-websanlexicon,9dd72c0e9df0,2018-07-05T20:32:17Z,funderburkjim,funderburkjim,
 csl-websanlexicon,b66f40fb4704,2018-07-05T20:12:16Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,version 00 of installation python script
 csl-websanlexicon,01aa411e8151,2018-07-05T02:43:59Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initial template driven version v00
 csl-websanlexicon,70d100e4cf79,2018-07-02T22:07:39Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initial webinstall commit -- gra backup
+csl-westergaard,f6740ec5610d,2026-07-27T18:00:32Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#6)
 csl-westergaard,0901fa5d8b2a,2026-07-12T12:25:31Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): rewrite so every claim is currently true (H549) (#5)
 csl-westergaard,f90adac9b496,2026-07-11T06:14:05Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): rewrite so every claim is currently true (H549) (#4)
 csl-westergaard,1d914e71ec9d,2026-06-14T09:02:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,security: prevent reflected XSS via page parameter in disp/index.php (#3)
@@ -11731,6 +11982,7 @@ csl-westergaard,b76ddd4bde96,2026-05-15T07:20:29Z,gasyoun,Mārcis Gasūns,gasyou
 csl-westergaard,1bbb460f5387,2022-11-11T01:59:02Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Minor corrections re php 8.1.
 csl-westergaard,10ce6fd814c3,2019-11-08T20:42:07Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,Initial commit
 csl-westergaard,725181b85f8c,2019-11-08T20:38:09Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+csl-whitroot,b0efe544343b,2026-07-27T18:01:02Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#6)
 csl-whitroot,225cbc3c7b53,2026-07-13T17:43:22Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: refresh README to reflect actual repo state (H549) (#5)
 csl-whitroot,fe2665eb6503,2026-07-12T12:25:38Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: refresh README to reflect actual repo state (H549) (#4)
 csl-whitroot,fdfe3bbcabb5,2026-07-11T06:14:09Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: refresh README to reflect actual repo state (H549) (#3)
@@ -11745,6 +11997,7 @@ csl-whitroot,8cc498b236a4,2020-03-10T00:40:41Z,funderburkjim,funderburkjim,funde
 csl-whitroot,1ad3839f7ae5,2019-11-08T22:16:37Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Avoid PHP 'notice undefined index'
 csl-whitroot,50b959a5b934,2019-11-08T21:59:14Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,Initial commit
 csl-whitroot,0dcec9223ad0,2019-11-08T21:19:28Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+hwnorm1,d52f08df4386,2026-07-26T14:04:44Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,regen after BEN subheadword addition
 hwnorm1,7fbf08ad819c,2026-07-14T09:22:19Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,Merge remote-tracking branch 'origin/main'
 hwnorm1,b45783500944,2026-07-14T04:39:29Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 1 broken link(s) (org-wide link audit, auto-fix pass)"
 hwnorm1,00d76819d8c0,2026-07-14T04:39:29Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 1 broken link(s) (org-wide link audit, auto-fix pass)"
@@ -12005,6 +12258,7 @@ hwnorm2,c414caee7610,2020-02-06T22:19:57Z,funderburkjim,funderburkjim,funderburk
 hwnorm2,f91a4f37bf9f,2020-02-02T23:11:34Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,improve by removing some duplicates
 hwnorm2,201db9a32025,2020-02-02T00:36:35Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,minor correction
 hwnorm2,f03c95b8acd6,2020-02-01T22:00:20Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,initial commit
+literarysource,925ebce7945b,2026-07-27T17:55:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#6)
 literarysource,1a168e633db8,2026-07-10T22:29:26Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): refresh to reflect current state; resolve case-collision (H548) (#5)
 literarysource,03027a24c69b,2026-06-19T06:45:48Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"Add CC-BY-SA-4.0 license (RH1 license policy, approved 2026-06-17)"
 literarysource,7c57d748700a,2026-06-14T04:50:14Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,Bump dependabot/fetch-metadata from 2 to 3 (#4)
@@ -12042,6 +12296,9 @@ literarysource,4b9f48e61e36,2022-02-15T02:14:19Z,drdhaval2785,drdhaval2785,drdha
 literarysource,645fc9a2cbb7,2022-02-14T16:30:53Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,mw72 init
 literarysource,ffb14d9add68,2022-02-14T16:30:34Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,PWG ls statistics as on 14 Feb 2022
 literarysource,29780111536b,2022-02-12T05:50:27Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,initial commit based on csl-pywork
+mw-dev,24e576a9c2fe,2026-07-27T17:56:25Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#32)
+mw-dev,39f6964e3ea0,2026-07-24T03:11:18Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #31 from sanskrit-lexicon/h1523-mwdev-jquery-28060
+mw-dev,42b767719228,2026-07-24T03:10:27Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(security): jQuery 1.4.3 → 3.7.1 + js-cookie (H1523)
 mw-dev,009b0c671af9,2026-07-11T06:53:06Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): refresh mw-dev README (H548) (#30)
 mw-dev,e4ef25c3d098,2026-07-03T03:50:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #28 from sanskrit-lexicon/security/jsonp-callback-isstring-guard
 mw-dev,4ed2fa1a5be1,2026-06-22T05:14:52Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,Bump actions/checkout from 6 to 7 (#29)
@@ -12103,6 +12360,7 @@ mw-dev,9013f68f18c8,2023-02-09T04:48:13Z,Andhrabharati,Andhrabharati,knbrao@gmai
 mw-dev,f7d9c0881b29,2023-02-08T17:18:35Z,Andhrabharati,Andhrabharati,knbrao@gmail.com,Create mw_AB.txt
 mw-dev,547bc0de0da5,2023-01-19T13:15:57Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,initial commit on 19 Jan 2023
 mw-dev,46c56bb52cfa,2023-01-19T13:10:48Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+rvlinks,1f17616ea5de,2026-07-27T17:57:10Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#6)
 rvlinks,1e82bf90c7fd,2026-07-10T22:29:35Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): rewrite with accurate repo description + current issue snapshot (H548) (#5)
 rvlinks,f7c29ce2a2cc,2026-06-14T04:49:06Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump dependabot/fetch-metadata from 2 to 3 (#4)
 rvlinks,d496eda055af,2026-06-14T04:47:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ci: add Dependabot config
@@ -12127,6 +12385,7 @@ rvlinks,427cb46fba9b,2018-08-29T22:48:19Z,funderburkjim,funderburkjim,funderburk
 rvlinks,f7ee4aeb4e49,2018-08-29T22:36:00Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,"The initial version, with rvhymns constructed"
 rvlinks,e4ebf1ead069,2018-08-29T22:30:53Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,begin populating with files
 rvlinks,4e17c11d5348,2018-08-29T22:21:10Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,first commit
+sanskrit-fonts,394e118b29b3,2026-07-27T18:01:09Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#3)
 sanskrit-fonts,0af7e2dd2fcf,2026-07-11T06:17:23Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(README): rewrite to true facts — Siddhanta font, dual licensing, gh-pages hosting (H549) (#2)"
 sanskrit-fonts,e46c878f76a9,2026-06-19T12:21:19Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add third-party NOTICE: siddhanta.ttf is Bayaryn's font under its own terms (RH1)
 sanskrit-fonts,70795d4944fc,2026-06-19T12:15:43Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"Add CC-BY-SA-4.0 license (RH1 license policy, approved 2026-06-17)"
@@ -12137,6 +12396,9 @@ sanskrit-fonts,f79bfe4c48d1,2026-05-29T05:11:29Z,gasyoun,Mārcis Gasūns,gasyoun
 sanskrit-fonts,4a86c5b9f39d,2026-05-15T07:39:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 sanskrit-fonts,fee5ad4e5a29,2018-09-05T03:50:42Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,siddhanta font
 sanskrit-fonts,9432607282a6,2018-09-05T03:39:54Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+sanskrit-lexicon.github.io,2d2bdc88633e,2026-07-27T17:58:58Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#9)
+sanskrit-lexicon.github.io,5560fccd41ae,2026-07-24T02:11:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #8 from sanskrit-lexicon/h1523-jquery-verbs-5372
+sanskrit-lexicon.github.io,0c1e6d1a3fa1,2026-07-24T02:10:23Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(security): bump verbs vcp_skd jQuery 1.12.4 → 3.7.1 (H1523)
 sanskrit-lexicon.github.io,b3bb7a4c6c30,2026-07-11T06:53:10Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): reflect org-root landing hub role (H548) (#7)
 sanskrit-lexicon.github.io,f8e9f425dc9a,2026-07-05T18:23:10Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,docs: add .ai_state.md and CHANGELOG.md
 sanskrit-lexicon.github.io,fef3bd7b5bab,2026-07-05T18:30:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: upgrade README to best-standard with usage example (#6)

@@ -112,6 +112,13 @@ people:
     repos_contributed: ["PWK"]
     enrichment_status: needs_name_and_orcid
   - login: null
+    name: "Marcis Gasuns"
+    orcid: "https://orcid.org/0000-0003-4513-884X"
+    affiliation: null
+    repos_authored: ["PWG", "PWK"]
+    repos_contributed: []
+    enrichment_status: needs_affiliation
+  - login: null
     name: "M\u0101rcis Gas\u016bns"
     orcid: "https://orcid.org/0000-0003-4513-884X"
     affiliation: null
