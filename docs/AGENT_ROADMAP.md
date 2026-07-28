@@ -1,11 +1,46 @@
 # Agent Roadmap — Sanskrit Lexicon Issue Automation
 
-_Created: 26-06-2026 · Last updated: 19-07-2026_
+_Created: 26-06-2026 · Last updated: 28-07-2026_
 
-_**Canonical copy — the only editable one.** Last compiled: 2026-06-30 (P7: MWS W1(a)+W1(b) complete). Re-compile when new issues are opened or a skill ships. The [Uprava copy](https://github.com/gasyoun/Uprava/blob/main/AGENT_ROADMAP.md) is a pointer stub, not a mirror — canonicity ruled 19-07-2026 per the [H699 reconciliation](https://github.com/gasyoun/Uprava/blob/main/docs/AGENT_ROADMAP_RECONCILIATION_07.2026.md)._
+_**Canonical copy — the only editable one.** Last compiled: **2026-07-28** (live re-check of Tier A/B + PR babysit; prior body: 2026-06-30 P7). Re-compile when new issues are opened or a skill ships. The [Uprava copy](https://github.com/gasyoun/Uprava/blob/main/AGENT_ROADMAP.md) is a pointer stub, not a mirror — canonicity ruled 19-07-2026 per the [H699 reconciliation](https://github.com/gasyoun/Uprava/blob/main/docs/AGENT_ROADMAP_RECONCILIATION_07.2026.md)._
 
-**Scope:** 821 open issues across 68 repos in the `sanskrit-lexicon` org, surveyed 2026-06-26.
+**Scope:** 821 open issues across 68 repos in the `sanskrit-lexicon` org, surveyed 2026-06-26 (label tallies below are that snapshot; **Tier A/B rows re-verified live 2026-07-28**).
 **Goal:** Map which issues agents can supply data for (humans close after), which need a new skill first, and in what order.
+
+---
+
+## Live re-compile — 2026-07-28 (Grok 4.5)
+
+**Policy reminder:** agents supply fixes and comments; **maintainers merge and close**. `/pr-babysit` marks **`csl-orig` UNTOUCHABLE** for agent merge (batched monthly delivery only). Agents never close issues.
+
+### (a) Open Tier A PRs — babysit only, no agent merge
+
+| PR | Issue(s) | CI / mergeable | Defect still on tip? | Action 2026-07-28 |
+|---|---|---|---|---|
+| [csl-orig #2865](https://github.com/sanskrit-lexicon/csl-orig/pull/2865) | [#2821](https://github.com/sanskrit-lexicon/csl-orig/issues/2821) CLOSED | encoding green | Yes — STC `s.`/`v.` split residual | Babysit comment posted; maintainer merge (or supersede) |
+| [csl-orig #2867](https://github.com/sanskrit-lexicon/csl-orig/pull/2867) | [#2824](https://github.com/sanskrit-lexicon/csl-orig/issues/2824) OPEN | encoding green, MERGEABLE | Yes — LRV `fjvI` lines 26971/26980 lack `<h>` | Babysit + issue merge-readiness comment |
+| [csl-orig #2872](https://github.com/sanskrit-lexicon/csl-orig/pull/2872) | [websanlexicon #60](https://github.com/sanskrit-lexicon/csl-websanlexicon/issues/60) OPEN | encoding green, MERGEABLE | Yes — MW L=592 del markup missing parens | Babysit + issue merge-readiness comment |
+| [csl-orig #2874](https://github.com/sanskrit-lexicon/csl-orig/pull/2874) | [#606](https://github.com/sanskrit-lexicon/csl-orig/issues/606) OPEN | encoding green, MERGEABLE | Yes — BOR line 63398 ellipsis inside `{#…#}` | Babysit + issue merge-readiness comment |
+
+Non–`csl-orig` agent PRs from the same wave already terminal: [websanlexicon #74](https://github.com/sanskrit-lexicon/csl-websanlexicon/pull/74) CLOSED unmerged (`enterkeyhint` already on `main` in 3 templates); [csl-app #47](https://github.com/sanskrit-lexicon/csl-app/pull/47) CLOSED unmerged (issue [#38](https://github.com/sanskrit-lexicon/csl-app/issues/38) CLOSED).
+
+### (b) Tier B / close-ready re-check (2026-07-28)
+
+| Issue | Verdict | Evidence |
+|---|---|---|
+| [csl-orig #1537](https://github.com/sanskrit-lexicon/csl-orig/issues/1537) | **Close-ready** (human close) | Tip has `Ruci-ruce` at L=179760 (line 599642); PR #2864 merged. Comment posted. |
+| [csl-devanagari #42](https://github.com/sanskrit-lexicon/csl-devanagari/issues/42) | **Not close-ready** as bulk rewrite | Tip line 13639 already `{#\~#}`; residual `~\` = 0; intentional `\~` ≈ 97. Andhrabharati: do not bulk-edit. Comment posted. |
+| [SKD #1](https://github.com/sanskrit-lexicon/SKD/issues/1) | Close-ready (prior) | 2026-06-27 verified-resolved comment; **no duplicate** posted. |
+| [PWK #76](https://github.com/sanskrit-lexicon/PWK/issues/76) | Close-ready (prior) | 2026-06-30 verification comments; **no duplicate** posted. |
+| [csl-orig #1788](https://github.com/sanskrit-lexicon/csl-orig/issues/1788) | **Tier D** (re-tiered) | Andhrabharati NO on `sup`→`rev`; re-tier comment posted. |
+| [SKD #13](https://github.com/sanskrit-lexicon/SKD/issues/13) | Partial — 3 lines editorial | Prior 10/14 comment stands; no duplicate. |
+| [csl-orig #2824](https://github.com/sanskrit-lexicon/csl-orig/issues/2824) / [websanlexicon #60](https://github.com/sanskrit-lexicon/csl-websanlexicon/issues/60) / [#606](https://github.com/sanskrit-lexicon/csl-orig/issues/606) | Await PR merge | Merge-readiness comments posted (not close-ready until merge). |
+
+### Still open Tier A after 2026-07-28 (actionable residual)
+
+1. Maintainer merges of [PR #2867](https://github.com/sanskrit-lexicon/csl-orig/pull/2867), [#2872](https://github.com/sanskrit-lexicon/csl-orig/pull/2872), [#2874](https://github.com/sanskrit-lexicon/csl-orig/pull/2874) (+ optional [#2865](https://github.com/sanskrit-lexicon/csl-orig/pull/2865)).
+2. Human close of [#1537](https://github.com/sanskrit-lexicon/csl-orig/issues/1537), [SKD #1](https://github.com/sanskrit-lexicon/SKD/issues/1), [PWK #76](https://github.com/sanskrit-lexicon/PWK/issues/76) (and #42 only if scoped to the one-line order typo).
+3. Editorial residual: [SKD #13](https://github.com/sanskrit-lexicon/SKD/issues/13) three structural lines; [#1788](https://github.com/sanskrit-lexicon/csl-orig/issues/1788) blocked.
 
 ---
 
@@ -47,42 +82,42 @@ These have exact old→new text in the issue body or are trivially greppable. Ag
 
 | Issue | Dict | Fix type | Size | Status |
 |---|---|---|---|---|
-| [csl-orig #1537](https://github.com/sanskrit-lexicon/csl-orig/issues/1537) | MW | `ruci` → `Ruci` at L=179760 | 1 line | ✅ [PR #2864](https://github.com/sanskrit-lexicon/csl-orig/pull/2864) MERGED |
-| [csl-orig #1788](https://github.com/sanskrit-lexicon/csl-orig/issues/1788) | MW | erase plant name, change `sup`→`rev` at line 592 | 1 line | Awaiting maintainer (Andhrabharati) |
-| [csl-orig #2821](https://github.com/sanskrit-lexicon/csl-orig/issues/2821) | STC | broken line-break in `s.v.` ref; grep stc.txt | ~2 lines | ✅ [PR #2865](https://github.com/sanskrit-lexicon/csl-orig/pull/2865) open — awaiting merge |
+| [csl-orig #1537](https://github.com/sanskrit-lexicon/csl-orig/issues/1537) | MW | `ruci` → `Ruci` at L=179760 | 1 line | ✅ Fix on tip (`Ruci-ruce` line 599642); [PR #2864](https://github.com/sanskrit-lexicon/csl-orig/pull/2864) MERGED. Issue still OPEN — **close-ready comment 2026-07-28** |
+| [csl-orig #1788](https://github.com/sanskrit-lexicon/csl-orig/issues/1788) | MW | erase plant name, change `sup`→`rev` at line 592 | 1 line | ➡️ **Tier D** — Andhrabharati rejected `sup`→`rev`; plant del already in `<chg>`; re-tier comment 2026-07-28 |
+| [csl-orig #2821](https://github.com/sanskrit-lexicon/csl-orig/issues/2821) | STC | broken line-break in `s.v.` ref; grep stc.txt | ~2 lines | ✅ Issue CLOSED; [PR #2865](https://github.com/sanskrit-lexicon/csl-orig/pull/2865) still OPEN (babysit 2026-07-28) |
 | [csl-devanagari #43](https://github.com/sanskrit-lexicon/csl-devanagari/issues/43) | SKD | `£` → `ꣳ` (U+A8F3); line numbers given | exact | ✅ Already closed — 0 `£` occurrences confirmed in skd.txt |
-| [csl-devanagari #42](https://github.com/sanskrit-lexicon/csl-devanagari/issues/42) | PWG | `~\` → `\~` at line 23689 | 1 line | ✅ [PR #2864](https://github.com/sanskrit-lexicon/csl-orig/pull/2864) MERGED (fixed alongside ruci→Ruci) |
+| [csl-devanagari #42](https://github.com/sanskrit-lexicon/csl-devanagari/issues/42) | PWG | `~\` → `\~` at line 23689 | 1 line | ⚠️ OPEN — tip line 13639 already `{#\~#}`; residual `~\`=0; **not** a bulk `\~` rewrite (Andhrabharati). Re-check comment 2026-07-28 |
 | [csl-devanagari #41](https://github.com/sanskrit-lexicon/csl-devanagari/issues/41) | MW | trailing space + duplicate `<e>` field; 3 exact diffs | 3 lines | ✅ Already closed by maintainer |
 | [csl-apidev #24](https://github.com/sanskrit-lexicon/csl-apidev/issues/24) | all | old URL → new URL in `orphus.customized.js` | 1 line | ✅ Already closed by drdhaval2785 on 2026-06-27 |
-| [csl-apidev #10](https://github.com/sanskrit-lexicon/csl-apidev/issues/10) | all | wrong path for `<pic>` in `basicdisplay.php`; greppable | ~1 line | ➡️ Tier D — code already correct (`../../web/images/$filename`); server admin must populate `web/images/` on deployment server |
-| [csl-websanlexicon #60](https://github.com/sanskrit-lexicon/csl-websanlexicon/issues/60) | MW | malformed `<chg>` XML at L=592; body shows snippet | 1–2 lines | ✅ [PR #2872](https://github.com/sanskrit-lexicon/csl-orig/pull/2872) open — awaiting merge |
-| [SKD #13](https://github.com/sanskrit-lexicon/SKD/issues/13) | SKD | bracket mismatches; lines verifiable in skd.txt | ~10 lines | 10/14 fixes confirmed applied. 3 structural cases (L42288, L54089, L92343) need Andhrabharati/Jim editorial call on text relocation — not bracket-only fixes. Awaiting maintainer. |
-| [PWK #12](https://github.com/sanskrit-lexicon/PWK/issues/12) | PW | `<ls>(X</ls>)` → `<ls>X</ls>`; regex given, 304 matches in pw.xml | 304 lines | ✅ Verified fixed — 0 remaining occurrences in pw.txt/pwkvn.txt; [closing comment posted 2026-06-30](https://github.com/sanskrit-lexicon/PWK/issues/12#issuecomment-4839478919) |
-| [VCP #20](https://github.com/sanskrit-lexicon/VCP/issues/20) | VCP | `pUrbb` → `pUrvv`; 1474+236 occurrences in vcp2/vac2 | bulk | ✅ Already fixed — 0 `pUrbb` occurrences confirmed in vcp.txt (verified 2026-06-30) |
+| [csl-apidev #10](https://github.com/sanskrit-lexicon/csl-apidev/issues/10) | all | wrong path for `<pic>` in `basicdisplay.php`; greppable | ~1 line | ✅ CLOSED (was Tier D — code path correct; server images) |
+| [csl-websanlexicon #60](https://github.com/sanskrit-lexicon/csl-websanlexicon/issues/60) | MW | malformed `<chg>` XML at L=592; body shows snippet | 1–2 lines | 🟡 OPEN — [PR #2872](https://github.com/sanskrit-lexicon/csl-orig/pull/2872) green/MERGEABLE; defect still on tip; babysit 2026-07-28 |
+| [SKD #13](https://github.com/sanskrit-lexicon/SKD/issues/13) | SKD | bracket mismatches; lines verifiable in skd.txt | ~10 lines | 🟡 OPEN — 10/14 applied; 3 structural lines need Andhrabharati/Jim editorial call |
+| [PWK #12](https://github.com/sanskrit-lexicon/PWK/issues/12) | PW | `<ls>(X</ls>)` → `<ls>X</ls>`; regex given, 304 matches in pw.xml | 304 lines | ✅ CLOSED — verified fixed 2026-06-30 |
+| [VCP #20](https://github.com/sanskrit-lexicon/VCP/issues/20) | VCP | `pUrbb` → `pUrvv`; 1474+236 occurrences in vcp2/vac2 | bulk | ✅ CLOSED — 0 `pUrbb` on tip |
 
 **From P4 bug triage sweep (2026-06-27):**
 
 | Issue | Dict | Fix type | Size | Status |
 |---|---|---|---|---|
-| [csl-orig #2824](https://github.com/sanskrit-lexicon/csl-orig/issues/2824) | LRV | Add `<h>` homonymy discriminators at lines 26971+26980 | 2 lines | ✅ [PR #2867](https://github.com/sanskrit-lexicon/csl-orig/pull/2867) opened |
-| [csl-orig #1060](https://github.com/sanskrit-lexicon/csl-orig/issues/1060) | MW | Merge stub L>1308 with L>1309; lines 4777–4782 | ~6 lines | ✅ [PR #2869](https://github.com/sanskrit-lexicon/csl-orig/pull/2869) opened |
-| [COLOGNE #430](https://github.com/sanskrit-lexicon/COLOGNE/issues/430) | SHS | k1/k2 metaline truncation at `(` — deterministic strip rule | 844 lines | ✅ [PR #2870](https://github.com/sanskrit-lexicon/csl-orig/pull/2870) opened (10 metalines in practice) |
-| [COLOGNE #181](https://github.com/sanskrit-lexicon/COLOGNE/issues/181) | SHS | Same bracket-closure pattern (subset of #430) | 840 lines | ✅ [PR #2870](https://github.com/sanskrit-lexicon/csl-orig/pull/2870) opened (combined with #430) |
-| [COLOGNE #331](https://github.com/sanskrit-lexicon/COLOGNE/issues/331) | CAE | Add `v.` expansion to caeab_input.txt | 1 entry | ✅ [csl-pywork PR #62](https://github.com/sanskrit-lexicon/csl-pywork/pull/62) opened |
-| [COLOGNE #179](https://github.com/sanskrit-lexicon/COLOGNE/issues/179) | INM | Truncated k1/k2 at line 30302 | 1 line | ✅ [PR #2866](https://github.com/sanskrit-lexicon/csl-orig/pull/2866) opened |
-| [csl-devanagari #27](https://github.com/sanskrit-lexicon/csl-devanagari/issues/27) | SCH | 4 double-space instances in sch.txt | 4 lines | ✅ [PR #2868](https://github.com/sanskrit-lexicon/csl-orig/pull/2868) opened |
-| [csl-ldev #12](https://github.com/sanskrit-lexicon/csl-ldev/issues/12) | SKD | Missing Sāyaṇa attribution at L=22342 | ~1 line | Open |
-| [csl-app #38](https://github.com/sanskrit-lexicon/csl-app/issues/38) | — | Dart accent toggle logic bug — pure code fix | small | ✅ [PR #47](https://github.com/sanskrit-lexicon/csl-app/pull/47) opened — strip accent markers before transliterating when `useAccented=false` |
+| [csl-orig #2824](https://github.com/sanskrit-lexicon/csl-orig/issues/2824) | LRV | Add `<h>` homonymy discriminators at lines 26971+26980 | 2 lines | 🟡 OPEN — [PR #2867](https://github.com/sanskrit-lexicon/csl-orig/pull/2867) green; defect still on tip (2026-07-28) |
+| [csl-orig #1060](https://github.com/sanskrit-lexicon/csl-orig/issues/1060) | MW | Merge stub L>1308 with L>1309; lines 4777–4782 | ~6 lines | ✅ Issue CLOSED — [PR #2869](https://github.com/sanskrit-lexicon/csl-orig/pull/2869) MERGED |
+| [COLOGNE #430](https://github.com/sanskrit-lexicon/COLOGNE/issues/430) | SHS | k1/k2 metaline truncation at `(` — deterministic strip rule | 844 lines | ✅ CLOSED — [PR #2870](https://github.com/sanskrit-lexicon/csl-orig/pull/2870) MERGED |
+| [COLOGNE #181](https://github.com/sanskrit-lexicon/COLOGNE/issues/181) | SHS | Same bracket-closure pattern (subset of #430) | 840 lines | ✅ CLOSED — [PR #2870](https://github.com/sanskrit-lexicon/csl-orig/pull/2870) MERGED |
+| [COLOGNE #331](https://github.com/sanskrit-lexicon/COLOGNE/issues/331) | CAE | Add `v.` expansion to caeab_input.txt | 1 entry | ✅ CLOSED — [csl-pywork PR #62](https://github.com/sanskrit-lexicon/csl-pywork/pull/62) MERGED |
+| [COLOGNE #179](https://github.com/sanskrit-lexicon/COLOGNE/issues/179) | INM | Truncated k1/k2 at line 30302 | 1 line | ✅ CLOSED — [PR #2866](https://github.com/sanskrit-lexicon/csl-orig/pull/2866) MERGED |
+| [csl-devanagari #27](https://github.com/sanskrit-lexicon/csl-devanagari/issues/27) | SCH | 4 double-space instances in sch.txt | 4 lines | ✅ CLOSED — [PR #2868](https://github.com/sanskrit-lexicon/csl-orig/pull/2868) MERGED |
+| [csl-ldev #12](https://github.com/sanskrit-lexicon/csl-ldev/issues/12) | SKD | Missing Sāyaṇa attribution at L=22342 | ~1 line | ✅ CLOSED |
+| [csl-app #38](https://github.com/sanskrit-lexicon/csl-app/issues/38) | — | Dart accent toggle logic bug — pure code fix | small | ✅ CLOSED (PR #47 closed unmerged; fix landed on tip by other path) |
 
 **From P5 network retry sweep (2026-06-27):**
 
 | Issue | Dict | Fix type | Size | Status |
 |---|---|---|---|---|
-| [csl-websanlexicon #25](https://github.com/sanskrit-lexicon/csl-websanlexicon/issues/25) | all | Missing `enterkeyhint="search"` on iOS — 3 search-form templates | 3 files | ✅ [PR #74](https://github.com/sanskrit-lexicon/csl-websanlexicon/pull/74) opened |
+| [csl-websanlexicon #25](https://github.com/sanskrit-lexicon/csl-websanlexicon/issues/25) | all | Missing `enterkeyhint="search"` on iOS — 3 search-form templates | 3 files | ✅ CLOSED — `enterkeyhint` present on tip in 3 Mako templates; PR #74 closed unmerged |
 | [csl-apidev #21](https://github.com/sanskrit-lexicon/csl-apidev/issues/21) | all | Missing `history.pushState` in `listDisplay()` | small | ✅ [PR #61](https://github.com/sanskrit-lexicon/csl-apidev/pull/61) MERGED |
-| [csl-devanagari #38](https://github.com/sanskrit-lexicon/csl-devanagari/issues/38) | VCP/SKD/MW/ARMH | `to_devanagari.py` applies `slp1_accented` to whole lines, corrupting XML tags (VCP 2,321; MW 32,981; SKD 5 instances) | code bug in script | Open — code fix in `to_devanagari.py`; regeneration server-side |
+| [csl-devanagari #38](https://github.com/sanskrit-lexicon/csl-devanagari/issues/38) | VCP/SKD/MW/ARMH | `to_devanagari.py` applies `slp1_accented` to whole lines, corrupting XML tags (VCP 2,321; MW 32,981; SKD 5 instances) | code bug in script | ✅ CLOSED |
 
-**Status (updated 2026-06-30):** P5 complete. 11 PRs opened; confirmed merged: csl-orig #2864 (ruci+devanagari #42), csl-apidev #61 (#21). PWK #12 verified fixed (0 occurrences), closing comment posted. Remaining open Tier A items: csl-devanagari #41/#43, csl-apidev #24/#10, csl-websanlexicon #60, **SKD #13** (queued P6), **VCP #20** (queued P6), csl-ldev #12, csl-orig #1788 (awaiting maintainer), csl-devanagari #38 (code fix needed), **csl-apidev #24** (retry queued P6), **csl-app #38** (retry queued P6).
+**Status (updated 2026-07-28):** P5/P6 wave mostly drained. **Still OPEN agent-tracked residual:** csl-orig PRs **#2865 / #2867 / #2872 / #2874** (maintainer merge only); issues **#2824, websanlexicon #60, #606, SKD #13** (partial), **#1537** (close-ready), **devanagari #42** (scope dispute), **#1788** (Tier D). Closed since 2026-06-30 snapshot: #1060, COLOGNE #430/#181/#331/#179, devanagari #27/#38, ldev #12, app #38, apidev #10/#24, VCP #20, PWK #12, websanlexicon #25, orig #2821.
 
 ---
 
@@ -97,12 +132,12 @@ These have diff lists or patterns in the issue body but the issue may already be
 | [csl-orig #630](https://github.com/sanskrit-lexicon/csl-orig/issues/630) | PD | Already had 2026-06-27 comment. Open — pd.txt not in local csl-orig checkout; needs server-side check. |
 | [csl-orig #628](https://github.com/sanskrit-lexicon/csl-orig/issues/628) | MD | Already had 2026-06-27 comment. Open — editorial/accent-removal script decision needed. |
 | [csl-orig #627](https://github.com/sanskrit-lexicon/csl-orig/issues/627) | BEN | Already had 2026-06-27 comment. Open — same as #628. |
-| [csl-orig #606](https://github.com/sanskrit-lexicon/csl-orig/issues/606) | BOR | ✅ [PR #2874](https://github.com/sanskrit-lexicon/csl-orig/pull/2874) opened 2026-06-30 — ellipsis moved outside `{# #}` delimiter at bor.txt:63398. Awaiting merge. |
+| [csl-orig #606](https://github.com/sanskrit-lexicon/csl-orig/issues/606) | BOR | 🟡 OPEN — [PR #2874](https://github.com/sanskrit-lexicon/csl-orig/pull/2874) green; tip line 63398 still has ellipsis inside `{#…#}` (2026-07-28). |
 | [csl-apidev #45](https://github.com/sanskrit-lexicon/csl-apidev/issues/45) | all | Already had 2026-06-27 comment. Open — root cause in `servepdf.php` line 212 (`getImagefiles()`) identified; no fix yet. |
-| [SKD #1](https://github.com/sanskrit-lexicon/SKD/issues/1) | SKD | Already had 2026-06-27 "can be closed" comment from gasyoun; no duplicate needed. |
-| [SKD #3](https://github.com/sanskrit-lexicon/SKD/issues/3) | SKD | ✅ [Closing comment posted 2026-06-30](https://github.com/sanskrit-lexicon/SKD/issues/3#issuecomment-4839630950) — normalization rescinded confirmed; awaiting maintainer close. |
-| [PWK #76](https://github.com/sanskrit-lexicon/PWK/issues/76) | PWK | ✅ Comments posted 2026-06-30 ([#4839629346](https://github.com/sanskrit-lexicon/PWK/issues/76#issuecomment-4839629346), [#4839631452](https://github.com/sanskrit-lexicon/PWK/issues/76#issuecomment-4839631452)) — PWKVN3 digitization confirmed complete; awaiting maintainer close. |
-| [PWK #77](https://github.com/sanskrit-lexicon/PWK/issues/77) | PWK | ✅ Comments posted 2026-06-30 ([#4839629930](https://github.com/sanskrit-lexicon/PWK/issues/77#issuecomment-4839629930), [#4839631892](https://github.com/sanskrit-lexicon/PWK/issues/77#issuecomment-4839631892)) — PWKVN3/Schmidt comparison confirmed complete; awaiting maintainer close. |
+| [SKD #1](https://github.com/sanskrit-lexicon/SKD/issues/1) | SKD | 🟡 OPEN — close-ready since 2026-06-27 (`dbika`=0); no duplicate comment 2026-07-28. |
+| [SKD #3](https://github.com/sanskrit-lexicon/SKD/issues/3) | SKD | ✅ CLOSED — [closing comment 2026-06-30](https://github.com/sanskrit-lexicon/SKD/issues/3#issuecomment-4839630950). |
+| [PWK #76](https://github.com/sanskrit-lexicon/PWK/issues/76) | PWK | 🟡 OPEN — close-ready since 2026-06-30; no duplicate comment 2026-07-28. |
+| [PWK #77](https://github.com/sanskrit-lexicon/PWK/issues/77) | PWK | ✅ CLOSED — verification comments 2026-06-30. |
 
 ---
 

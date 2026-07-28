@@ -4,6 +4,9 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+### Changed
+- **docs/AGENT_ROADMAP.md live re-compile 2026-07-28 (H1787)** — Tier A/B rows re-verified against open issues + local csl-orig tip; open agent PRs #2865/#2867/#2872/#2874 babysit-only (csl-orig never agent-merged); close-ready / re-tier comments posted on #1537, devanagari#42, #1788, #2824, websanlexicon#60, #606. Label tallies still 2026-06-26 snapshot.
+
 ## [1.6.0] - 2026-07-28
 
 ### Added
