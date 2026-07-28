@@ -3,9 +3,10 @@
 > **Current status (2026-06).** The observatory is live and reproducible.
 > Five org-process findings + a synthesis are on the
 > [dashboard](https://sanskrit-lexicon.github.io/csl-observatory/), and the
-> standalone **OBS-T error-typology** track (a 50,953-event correction corpus,
-> two-axis typology, datasheet, and baselines) has a draft paper in
-> [`paper-obs-t-error-typology.md`](paper-obs-t-error-typology.md).
+> standalone **OBS-T error-typology** track (a 52,498-event correction corpus,
+> two-axis typology, datasheet, and baselines) has its single canonical paper in
+> [`paper-obs-t-error-typology.md`](paper-obs-t-error-typology.md)
+> (reconciled 28-07-2026, H1759 — the earlier one-axis draft is retired).
 
 ## Where to start
 

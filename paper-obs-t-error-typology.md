@@ -17,7 +17,15 @@ Process companion to the correction-sustainability finding OBS-Q
 ([`reports/obs_q_correction_sustainability.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_q_correction_sustainability.md));
 lexicographic-structure companion to the* csl-atlas *microstructure papers. All counts
 are the released 52,498-event snapshot and reproducible from committed data and stdlib-only
-scripts. Author: M. Gasūns and the CDSL community (byline to finalise).*
+scripts. Since 28-07-2026 (H1759) this is the single canonical A12 manuscript; the earlier
+one-axis draft at*
+[`reports/obs_t_paper_draft.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_t_paper_draft.md)
+*is retired.*
+
+**Mārcis Gasūns**  
+Independent Researcher  
+ORCID: 0000-0003-4513-884X  
+`sanskrit.research.institute@gmail.com`
 
 ---
 
@@ -41,7 +49,11 @@ the median edit distance is 2, but minor-edit rates vary sharply by location (he
 dictionary (χ² = 26,192.5, Cramér's V = 0.432). **(H3)** The yearly profile shows
 directional shifts — headword corrections fall (0.88 → 0.10), markup rises (0.00 → 0.17) —
 while the corrected trend table reports BH-adjusted q-values. A stable character-confusion
-signal led by *b*/*v* emerges. We release the
+signal led by *b*/*v* emerges. The location codebook is validated by a blind
+cross-model double annotation of a frozen 390-event sample: Cohen κ = 0.906
+(95 % CI 0.872–0.938) between two LLM annotators from different model families —
+agreement that licenses the codebook as executable and its labels as stable, not as
+human-validated ground truth. We release the
 corpus with per-event evidence labels, three crosswalk typologies (ERRANT, OCR, Katre
 textual-criticism), a temporal train/test split, and reference baselines for error
 detection, correction and type classification. The central interpretive caveat is stated
@@ -98,6 +110,25 @@ the entry* was repaired — and we show (§4.3) that collapsing the two into one
 as our own first design did, is a measurable error. We therefore report the typology as
 two axes and crosswalk the edit-type axis to all three external schemes so reviewers from
 any tradition can read it.
+
+**Adjacent correction corpora.** The nearest NLP resources are the English
+grammatical-error corpora — the Cambridge Learner Corpus (Yannakoudakis et al. 2011),
+the CoNLL-2014 shared task (Ng et al. 2014), and BEA-2019 (Bryant et al. 2019) — whose
+parallel old/new pairs OBS-T's event schema mirrors, though our errors arise from OCR
+artifacts, transliteration inconsistency and a multi-script transcription history rather
+than from learner grammar. OCR gold standards for historical documents (Springmann et
+al. 2016; Clematide et al. 2016) share the concern with character-level noise but
+operate at document level, without the entry-microstructure attribution that makes a
+correction record readable as lexicography; Piotrowski (2012) identifies the
+multi-script polyglot entry as the hardest class for automated processing — exactly the
+CDSL record type. Digital-humanities correction logs (the DTA base format, Haaf et al.
+2015; OCR4all, Reul et al. 2019) maintain comparable provenance chains for historical
+German printing. On the lexicographic side, the structured-release formalisms of the
+wordnet and OntoLex-Lemon communities (Bond and Paik 2012; McCrae et al. 2012) frame
+CDSL as one of the largest open historical-dictionary corpora in that ecosystem; for
+Sanskrit NLP the Digital Corpus of Sanskrit (Hellwig 2010–; Hellwig 2016) provides the
+parsed-text complement — OBS-T contributes not the dictionaries' semantic content but
+the *error signal* in their digitisation history.
 
 **Post-correction lineage for the edit-type axis.** Because Axis B classifies *kind of
 change* rather than *location*, it inherits directly from the OCR/digitisation
@@ -156,6 +187,17 @@ dictionary, headword, normalised old/new strings, a verbatim audit copy, an edit
 trace, both typology axes, three crosswalk columns, the resolved corrector, and an
 **evidence label** — `observed` (present in the source cell), `derived` (a deterministic
 rule succeeded), or `inferred` (a heuristic). No figure in this paper hides that label.
+
+Two constructions deserve note. **Deduplication:** L1 and L2 overlap in the 2019
+transition period; events are deduplicated on a stable hash of (layer, dictionary,
+record, old, new, date), keeping the git-derived record — higher positional evidence —
+where both layers carry the same edit. Bulk reformatting commits (a clear cliff of
+>400,000 changed lines above normal correction throughput) are excluded with a warning:
+they are encoding re-normalisations, not individual corrections. **Identity
+resolution:** the form archive records correctors by email or username, the git history
+by committer; a manually curated alias map merges attested alias variants onto
+canonical identities, leaving 208 release-safe corrector labels; historical aliases
+whose identity is not attested remain separate labels rather than being guessed.
 
 ### 3.2 The encoding problem
 
@@ -226,6 +268,53 @@ implements the stratified sampling, blind annotation sheets, κ, and per-class P
 lineage prescribes. Naming the lineage here does not itself change what OBS-T releases: if a
 cross-dictionary sense-alignment dataset is ever emitted from this corpus, the alignment
 content routes to *csl-atlas*, with OBS-T keeping only the process metrics.
+
+### 4.6 Validation: the gold sample and cross-model agreement
+
+The validation instrument is a frozen, stratified 390-event sample
+([`validation/gold_sample.csv`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/validation/gold_sample.csv)),
+drawn by `source_layer` × `evidence_level` under the MWSA-style contract of §4.5. Its
+provenance is stated plainly: the sample's original `gold_component` column was filled
+in a single machine first pass (a rule-based classifier, LLM-assisted) — no human
+annotated it at any point. Its 0.29 agreement with the automatic attribution is
+therefore a *consistency* figure between two heuristic processes on the historical
+hybrid (one-axis) scheme, not an accuracy against human ground truth; within it, the
+structurally distinctive components agree well (grammar and meta F1 = 0.90) while the
+encoding ↔ orthography boundary of the old scheme was the dominant confusion —
+roughly 66 boundary rows still await human expert review.
+
+**Cross-model inter-annotator agreement (measured 21-07-2026).** Two fresh, mutually
+blind annotation passes over all 390 rows were run by two LLM annotators from
+different model families — Opus 4.8 (`claude-opus-4-8`) and Sonnet 5
+(`claude-sonnet-5`) — against the location-axis codebook in
+[`validation/COMPONENT_GUIDE.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/validation/COMPONENT_GUIDE.md),
+with all label columns and notes stripped from the input and row order shuffled.
+Cross-model agreement on the 8-value location axis is **Cohen κ = 0.906 (95 %
+bootstrap CI 0.872–0.938, 2,000 resamples; raw agreement 92.8 %, 362/390)**; at the
+pre-registered coarser 4-group granularity κ = 0.896 [0.855–0.935]. Label stability
+was measured, not assumed: over three repeated runs on a fixed 30-row subsample the
+flip-rate was 4.4 % and 5.6 % per annotator, below the pre-registered 10 % threshold.
+The κ gate, granularity ladder, seeds and annotator models were pre-registered and
+committed before either pass ran; the 28 disagreement rows and full statistics are
+published
+([`component_kappa_disagreements.csv`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/validation/component_kappa_disagreements.csv),
+[`component_kappa_stats.json`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/validation/component_kappa_stats.json)).
+Two caveats. First, this is *cross-model* agreement between two LLM annotators: it
+demonstrates that the codebook is executable and its labels stable across model
+families, not that the labels match a human expert's judgment. Second, the fresh
+passes use the location-only axis, whereas the original `gold_component` column
+follows the hybrid scheme; the two artifacts are on different axes and are kept
+separate.
+
+**Independent error-sample benchmark.** A complementary check asks whether OBS-T
+corrections track real errors: 120 random entries (20 per dictionary across six
+dictionaries) were independently scanned for detectable digitisation errors, finding
+**0/120** — a 0.0 % entry-level error rate
+([`reports/obs_t_errorbench.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_t_errorbench.md)).
+Either the correction campaigns have already removed the obvious errors from random
+entries, or the residue is subtle enough to need human expert reading; both readings
+are consistent with the corpus recording real historical errors rather than
+systematic over-correction.
 
 ## 5. Results
 
@@ -371,6 +460,12 @@ give stdlib-only **reference baselines** that define the task rather than tune a
 These low numbers are the point of a baseline: they establish headroom for the neural
 sequence models the resource is meant to enable.
 
+**DOI.** ⚠️ Not yet minted. The DOI previously recorded for this dataset
+(`10.5281/zenodo.15834721`) is **false** — it resolves to an unrelated preprint
+(confirmed by a live Zenodo check, 20-07-2026). A genuine Zenodo deposit must be
+minted before any version of this paper cites a DOI; do not submit with a
+placeholder.
+
 ## 7. Discussion
 
 **Corrected ≠ wrong.** The single most important reading rule for this corpus is that it
@@ -402,12 +497,16 @@ the location axis leans on the git layer; raising the form link rate (fuzzy head
 matching, per-dictionary encoding profiles, id-drift reconciliation) is the main avenue to
 extend location coverage backward in time.
 
-**Validation is silver, not yet gold.** The typology is machine-derived and checked
-against a human-free silver standard; a human **gold sample** is staged
+**Validation is cross-model, not human-adjudicated.** The typology is
+machine-derived; its checks are the human-free silver standard (§4.3) and the blind
+cross-model double annotation of §4.6 (κ = 0.906 [0.872–0.938] on the location
+axis). No label in this corpus has yet been adjudicated by a human domain expert:
+the κ licenses the codebook as executable and its labels as stable across model
+families, nothing more. The outstanding human steps are expert review of the ~66
+encoding ↔ orthography boundary rows of the historical hybrid sample and, ideally, a
+human expert pass over the location-axis sample
 ([`validation/gold_sample.csv`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/validation/gold_sample.csv),
-[`validation/error_sample.csv`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/validation/error_sample.csv))
-but **awaits a second annotator** for an inter-annotator agreement (κ) figure. We report no
-κ here and treat the location/edit-type labels as derived, not adjudicated.
+[`validation/error_sample.csv`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/validation/error_sample.csv)).
 
 **Surface ops cannot see intent.** Edit-type is computed from character operations, so a
 meaning-changing correction that happens to be one character (a wrong vowel that flips the
@@ -425,19 +524,23 @@ slightly surprising picture: the corrections cluster exactly where meaning lives
 definitions and headwords — yet are almost entirely small surface repairs, they form a
 per-dictionary fingerprint rather than a uniform noise floor, and that fingerprint has
 visibly shifted as the project's curatorial priorities moved from headwords to structure.
-We release the corpus, its two-axis typology, three crosswalk readings and reference
+We release the corpus, its two-axis typology (location codebook validated at
+cross-model κ = 0.906), three crosswalk readings and reference
 baselines as a language resource for Sanskrit error detection and correction — with the
 standing caveat that it measures the repairs a community chose to make, which is a
 different and more human thing than a list of a dictionary's mistakes.
 
 ---
 
-## References (draft — author to finalise)
+## References
 
 Ahmadi, S., McCrae, J. P., Nimb, S., Khan, F., Monachini, M., Pedersen, B. S. et al. (2020).
 A Multilingual Evaluation Dataset for Monolingual Word Sense Alignment. *LREC 2020*,
 3232–3242. https://aclanthology.org/2020.lrec-1.395/ — [MWSA shared task; data/format:
 https://github.com/elexis-eu/MWSA]
+
+Bond, F. and Paik, K. (2012). A survey of wordnets and their licenses. In *Proceedings
+of the 6th Global WordNet Conference*, 64–71.
 
 Boros, E., Ehrmann, M., Romanello, M., Najem-Meyer, S. and Kaplan, F. (2024).
 Post-Correction of Historical Text Transcripts with Large Language Models: An
@@ -446,7 +549,24 @@ Exploratory Study. *LaTeCH-CLfL 2024.* https://aclanthology.org/2024.latechclfl-
 Bryant, C., Felice, M. and Briscoe, T. (2017). Automatic annotation and evaluation of
 error types for grammatical error correction. *ACL 2017.* — [ERRANT]
 
+Bryant, C., Felice, M., Andersen, Ø. E. and Briscoe, T. (2019). The BEA-2019 shared
+task on grammatical error correction. In *Proceedings of the 14th Workshop on
+Innovative Use of NLP for Building Educational Applications*, 52–75.
+
+Clematide, S., Furrer, L. and Volk, M. (2016). Crowdsourcing an OCR gold standard for
+a German and French heritage corpus. In *Proceedings of LREC 2016*, 975–980.
+
 Gebru, T. et al. (2021). Datasheets for Datasets. *Communications of the ACM* 64(12).
+
+Haaf, S., Geyken, A. and Wiegand, F. (2015). The DTA 'base format': A TEI subset for
+the compilation of a large reference corpus of printed historical German. *Journal
+of the Text Encoding Initiative*, 8.
+
+Hellwig, O. (2010–). Digital Corpus of Sanskrit. Department of Indology, Heinrich
+Heine University Düsseldorf.
+
+Hellwig, O. (2016). Morphological disambiguation of classical Sanskrit. In
+*Proceedings of COLING 2016*, 1082–1093.
 
 Hartmann, R. R. K. and James, G. (1998). *Dictionary of Lexicography.* Routledge.
 
@@ -455,13 +575,42 @@ Kapp, D. and Malten, T. *Cologne Digital Sanskrit Dictionaries*, University of C
 
 Katre, S. M. (1941). *Introduction to Indian Textual Criticism.* Karnatak Publishing House.
 
+Kendall, M. G. (1948). *Rank Correlation Methods.* Griffin.
+
+Levenshtein, V. I. (1966). Binary codes capable of correcting deletions, insertions,
+and reversals. *Soviet Physics Doklady*, 10(8), 707–710.
+
 Lyu, L., Koutraki, M., Krickl, M. and Fetahu, B. (2021). Neural OCR Post-Hoc Correction
 of Historical Corpora. *Transactions of the Association for Computational Linguistics*
 9. https://aclanthology.org/2021.tacl-1.29/
 
+Mann, H. B. (1945). Nonparametric tests against trend. *Econometrica*, 13(3), 245–259.
+
+McCrae, J., Aguado-de-Cea, G., Buitelaar, P., Cimiano, P., Declerck, T., Gómez-Pérez,
+A., … Unger, C. (2012). Interchanging lexical resources on the Semantic Web.
+*Language Resources and Evaluation*, 46(4), 701–719.
+
+Ng, H. T., Wu, S. M., Briscoe, T., Hadiwinoto, C., Susanto, R. H. and Bryant, C.
+(2014). The CoNLL-2014 shared task on grammatical error correction. In *Proceedings
+of the CoNLL-2014 Shared Task*, 1–14.
+
+Norvig, P. (2007). How to write a spelling corrector.
+https://norvig.com/spell-correct.html
+
+Piotrowski, M. (2012). *Natural Language Processing for Historical Texts.* Morgan &
+Claypool.
+
+Reul, C., Christ, D., Hartelt, A., Balbach, N., Wehner, M., Springmann, U., … Puppe, F.
+(2019). OCR4all — an open-source tool providing a (semi-)automatic OCR workflow for
+historical printings. *Applied Sciences*, 9(22), 4853.
+
 Richter, C., Wickes, M., Beser, D. and Marcus, M. (2018). Low-resource Post Processing
 of Noisy OCR Output for Historical Corpus Digitisation. *LREC 2018.*
 https://aclanthology.org/L18-1369/
+
+Springmann, U., Lüdeling, A. and Bollmann, M. (2016). OCR of historical printings of
+Latin texts: Problems, prospects, progress. In *Proceedings of Digital Humanities
+2016*, 578–580.
 
 Svensén, B. (2009). *A Handbook of Lexicography.* Cambridge University Press.
 
@@ -471,6 +620,20 @@ https://aclanthology.org/2024.lt4hala-1.14/
 
 Wiegand, H. E. (1998–). *Wörterbuchforschung.* De Gruyter.
 
+Yannakoudakis, H., Briscoe, T. and Medlock, B. (2011). A new dataset and method for
+automatically grading ESOL texts. In *Proceedings of ACL 2011*, 180–189.
+
 *Plus the OBS-Q correction-sustainability companion and the* csl-atlas *microstructure
 papers (citation registers; sense inheritance; indigenous microstructure), cross-linked
-above. [TODO: author to insert remaining specific citations.]*
+above.*
+
+---
+
+*Canonical A12 pre-submission draft, reconciled 28-07-2026 (H1759): the two-axis
+manuscript absorbed the validation, IAA, related-work and data-statement material of
+the retired one-axis draft
+([`reports/obs_t_paper_draft.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_t_paper_draft.md)),
+with every count restated to the released 52,498-event snapshot. Target venue:
+LREC-COLING (IJL alternate). Pending human steps: byline confirmation, genuine Zenodo
+DOI mint (§6), expert review of the encoding ↔ orthography boundary rows (§8),
+read-and-sign.*
