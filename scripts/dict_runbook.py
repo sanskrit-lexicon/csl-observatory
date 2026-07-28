@@ -45,6 +45,21 @@ PROJ_MWS = {"Dictionary to Book": 5, "Digitization Quality": 6,
 # triageable work — exclude them from the checks (parity with tooling_runbook.py).
 EXEMPT_LABELS = {"daily-corrections"}
 
+# Auto-created handoff execution-tracking issues (org-wide H### convention,
+# e.g. "H1380 — execution started") carry only the "handoff" label and no
+# editorial content — they are process stubs, not triageable dictionary
+# work, so they never get a type/severity/milestone (H1736 finding: MWS
+# #243/#250/#254/#256). Unlike EXEMPT_LABELS this only applies when
+# "handoff" is the issue's *sole* label — an issue combining "handoff" with
+# real taxonomy labels (e.g. MWS #242) is genuine triaged work and still
+# gets audited.
+BARE_TRACKING_LABELS = {"handoff"}
+
+
+def is_exempt(labels):
+    lbls = set(labels)
+    return bool(lbls & EXEMPT_LABELS) or (bool(lbls) and lbls <= BARE_TRACKING_LABELS)
+
 
 def gh(args):
     for _ in range(3):
@@ -123,7 +138,7 @@ def gaps(issue, repo, check_project=True):
 def verify(repo):
     issues = fetch_issues(repo)
     bad = {i["number"]: gaps(i, repo) for i in issues
-           if not (set(i["labels"]) & EXEMPT_LABELS)}
+           if not is_exempt(i["labels"])}
     bad = {n: g for n, g in bad.items() if g}
     if bad:
         print(f"{repo}: {len(issues)} issues, {len(bad)} incomplete")
@@ -142,7 +157,7 @@ def audit(repos):
     for repo in repos:
         issues = fetch_issues(repo)
         n_bad = sum(1 for i in issues
-                    if not (set(i["labels"]) & EXEMPT_LABELS) and gaps(i, repo))
+                    if not is_exempt(i["labels"]) and gaps(i, repo))
         status = "empty" if not issues else ("OK" if n_bad == 0 else "GAPS")
         if n_bad:
             mismatches += 1

@@ -1,0 +1,15 @@
+# Minimal Jekyll config for GitHub Pages' legacy "pages build and deployment"
+# workflow. This repo's real Pages site is built/deployed by the separate
+# "Deploy dashboard" Actions workflow (.github/workflows/deploy.yml); this
+# file exists only so the legacy Jekyll build (triggered automatically by
+# GitHub on pushes to the default branch) does not fail.
+#
+# Markdown across this repo uses `{%…%}` / `{{…}}` as literal CDSL tag
+# notation (Sanskrit dictionary markup), not Liquid templating — disable
+# Liquid rendering everywhere so those literal tags are not parsed as
+# template syntax.
+defaults:
+  - scope:
+      path: ""
+    values:
+      render_with_liquid: false
