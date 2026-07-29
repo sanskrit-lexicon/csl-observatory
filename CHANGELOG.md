@@ -4,6 +4,8 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+## [1.7.1] - 2026-07-29
+
 ### Fixed
 - **The public data catalog published Git LFS *pointer* sizes as dataset sizes — the citable
   OBS-T release table was listed as "2 rows / 133 bytes" when it is 52,498 rows / ~62 MB
@@ -542,6 +544,7 @@ sanskrit-lexicon organisation plus the OBS-T error-typology language resource.
 - Citation DOI minted: [10.5281/zenodo.15834721](https://doi.org/10.5281/zenodo.15834721) (in CITATION.cff). Contributor ORCIDs are not yet registered.
 
 [Unreleased]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v1.6.0...HEAD
+[1.7.1]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v1.7.0...v1.7.1
 [1.7.0]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v1.6.0...v1.7.0
 [1.6.0]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v1.5.0...v1.6.0
 [1.4.0]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v1.3.0...v1.4.0
