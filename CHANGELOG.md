@@ -4,6 +4,23 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+### Changed
+- **All seven workflows now check out with `lfs: true`, not just the one that needed it
+  (follow-on to [#127](https://github.com/sanskrit-lexicon/csl-observatory/issues/127)).**
+  v1.7.1 fixed the workflow that demonstrably read LFS-backed data; the other six were
+  correct only *by coincidence of what those jobs run today*, not by construction — a step
+  added later that touched `correction_events*.csv` would have hit the same silent-stub class,
+  and outside `data_index.py` there is no guard to catch it. **The honest trade-off, stated so
+  nobody has to re-derive it:** a smudged checkout pulls **301 MB** (6 files, 12–62 MB each),
+  and none of these six jobs reads them today — verified, not assumed: the 18 scripts that
+  read `correction_events*` all run in `refresh-observatory.yml`, no site page
+  `FileAttachment`s them, and `npm run build` therefore never copies them into `dist/`. So
+  this buys future-proofing at real bandwidth cost, worst on
+  `dependabot-auto-merge.yml`, which fires on every Dependabot PR. If LFS bandwidth quota
+  becomes a problem, **revert these six rather than `refresh-observatory.yml`** — that one is
+  load-bearing, and exhausting the quota would break it, which would be the worse outcome by
+  far.
+
 ## [1.7.1] - 2026-07-29
 
 ### Fixed

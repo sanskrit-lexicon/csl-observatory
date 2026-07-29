@@ -32,7 +32,11 @@ jobs:
         KNA,KOW,KRM,LRV,MCI,MD,MWS,PUI,PWG,PWK,SCH,SHS,SKD,STC,VCP,VEI,WIL,
         Wil-YAT
     steps:
+      # lfs: true so no job can ever read an un-smudged pointer stub as data
+      # (issue #127 — the data catalog published 133-byte pointers as dataset sizes).
       - uses: actions/checkout@v7
+        with:
+          lfs: true
 
       - name: Set up Python
         uses: actions/setup-python@v7
