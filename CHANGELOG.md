@@ -4,6 +4,8 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+## [1.7.0] - 2026-07-29
+
 ### Added
 - **`reports/citation_sweep.md` + `scripts/citation_sweep.py` — the systematic OpenAlex
   citation sweep that replaces Tier 4's five hand-picked citations (H1478, roadmap G6
@@ -516,6 +518,7 @@ sanskrit-lexicon organisation plus the OBS-T error-typology language resource.
 - Citation DOI minted: [10.5281/zenodo.15834721](https://doi.org/10.5281/zenodo.15834721) (in CITATION.cff). Contributor ORCIDs are not yet registered.
 
 [Unreleased]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v1.6.0...HEAD
+[1.7.0]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v1.6.0...v1.7.0
 [1.6.0]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v1.5.0...v1.6.0
 [1.4.0]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v1.3.0...v1.4.0
 [1.1.0]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v1.0.0...v1.1.0

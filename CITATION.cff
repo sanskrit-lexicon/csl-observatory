@@ -10,8 +10,8 @@ message: >
   minted.
 license: GPL-3.0
 repository-code: https://github.com/sanskrit-lexicon/csl-observatory
-version: 1.6.0
-date-released: "2026-07-28"
+version: 1.7.0
+date-released: "2026-07-29"
 abstract: >
   Observatory code and OBS-T correction-event corpus for the Cologne Digital
   Sanskrit Dictionaries (CDSL). Code: GPL-3.0. OBS-T data release
