@@ -4,6 +4,17 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+## [1.7.3] - 2026-07-29
+
+### Changed
+- **Fixed stale roadmap status drift (H1877 sweep).** `docs/ROADMAP.md` RH2 (license backlog)
+  flipped scheduled → done: RH1 rollout (PR #54/#55, merged 2026-06-19/20) already resolved it
+  to 0/77 `NOASSERTION` and 6/77 no-license (all six are the RH3 archive candidates). In
+  `docs/OBSERVATORY_ROADMAP.md`, A1 (repository inventory) flipped active → done, past its
+  2026-07-15 target, since `repo_health.md` already regenerates cleanly with explicit cleanup
+  flags; A3 (contributor/identity snapshot) reworded scheduled → mostly done — the script
+  already flags missing name/ORCID, only the `consent` field and human ORCID-filling remain.
+
 ## [1.7.2] - 2026-07-29
 
 ### Changed

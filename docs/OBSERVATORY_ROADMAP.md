@@ -1,6 +1,6 @@
 # csl-observatory Implementation Roadmap
 
-_Created: 16-05-2026 · Last updated: 27-07-2026_
+_Created: 16-05-2026 · Last updated: 29-07-2026_
 
 Horizon: 2026-06 to 2027-06
 Primary audience: maintainer. Secondary audiences, added later in the year:
@@ -39,9 +39,9 @@ Goal: make every observatory report refresh from reproducible, dated snapshots.
 
 | ID | Deliverable | Owner | Status | Target | Acceptance |
 |---|---|---|---|---|---|
-| A1 | Repository inventory with type, archival state, default branch, license, metadata, and cleanup flags. | Codex | active | 2026-07-15 | `repos.csv` and `repo_health.md` regenerate without manual edits; cleanup candidates are explicit. |
+| A1 | Repository inventory with type, archival state, default branch, license, metadata, and cleanup flags. | Codex | done | 2026-07-15 | `repos.csv` and `repo_health.md` regenerate without manual edits; cleanup candidates are explicit. Confirmed against `reports/repo_health.md` (script-generated, 2026-07-28): headline table exposes an explicit "Live cleanup candidates" count (2) and full license/branch/description flags; no manual edits involved. |
 | A2 | Issue/PR/project snapshot refresh command. | Codex | done | 2026-08-15 | One command refreshes issues, PRs, labels, milestones, and project-board fields with rate-limit notes. |
-| A3 | Contributor and identity snapshot refresh. | Codex | scheduled | 2026-09-15 | Contributor reports regenerate from `contributors_map.json` and flag missing consent/ORCID fields. |
+| A3 | Contributor and identity snapshot refresh. | Codex | mostly done | 2026-09-15 | Contributor reports regenerate from `contributors_map.json` and flag missing consent/ORCID fields. `scripts/contributor_identity.py` already regenerates `reports/contributor_identity.md` + `contributor_identity.csv` from `contributors_map.json`, flagging `needs-orcid`/`needs-name-and-orcid` per contributor. Remaining gap: no `consent` field exists yet in the map/script, and filling real ORCIDs is a human-gated step (only Gasūns' ORCID is registered so far) — not fully done until those two land. |
 | A4 | Workflow/release metadata snapshot. | Codex | done | 2026-06-13 | `repo_metadata.csv` and `workflow_health.csv` expose workflow/release/dependabot/codeql status for active repos. |
 | A5 | Snapshot manifest. | Codex | active | 2026-12-15 | `scripts/refresh_observatory.py` writes JSON and Markdown refresh summaries; extend coverage as live snapshot automation expands. |
 
