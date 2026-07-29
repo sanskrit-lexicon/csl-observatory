@@ -30,7 +30,17 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:
+      # lfs: true is load-bearing, not a convenience. This job runs
+      # scripts/data_index.py, which sizes and row-counts every public data
+      # file. observatory/site/src/data/correction_events*.csv are LFS-backed;
+      # without smudging, the runner sees ~133-byte pointer stubs and the
+      # published catalog described the citable 52,498-row OBS-T release table
+      # as "2 rows / 133 bytes" (issue #127). data_index.py now refuses to run
+      # against pointers, so dropping this line fails the job loudly instead of
+      # silently republishing stub metadata.
       - uses: actions/checkout@v7
+        with:
+          lfs: true
 
       - name: Set up Python
         uses: actions/setup-python@v7

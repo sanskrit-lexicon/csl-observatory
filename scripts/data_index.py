@@ -510,7 +510,54 @@ def generated_date(path: Path) -> str:
     return datetime.fromtimestamp(path.stat().st_mtime, timezone.utc).date().isoformat()
 
 
+LFS_POINTER_MAGIC = b"version https://git-lfs.github.com/spec/v1"
+
+
+def lfs_pointer_size(path: Path) -> int | None:
+    """Return the real byte size recorded in a Git LFS pointer, else None.
+
+    A checkout without ``lfs: true`` leaves a ~133-byte text stub in place of
+    the data. Nothing about it looks broken: it is a valid, readable, 2-line
+    file, so a naive cataloguer happily reports the *stub's* size and row count
+    as the dataset's. That is how the citable OBS-T release table came to be
+    published in this catalog as "2 rows / 133 bytes" when it is 52,498 rows
+    (issue #127) — and because CI regenerated it that way every week while any
+    normal LFS clone regenerated it correctly, the two kept overwriting each
+    other with no signal that either was wrong.
+    """
+    try:
+        with path.open("rb") as handle:
+            head = handle.read(200)
+    except OSError:
+        return None
+    if not head.startswith(LFS_POINTER_MAGIC):
+        return None
+    for line in head.decode("utf-8", "replace").splitlines():
+        if line.startswith("size "):
+            try:
+                return int(line.split(" ", 1)[1].strip())
+            except (IndexError, ValueError):
+                return None
+    return None
+
+
 def row_for(path: Path, entry: Entry, *, rows: str | None = None, size: int | None = None) -> dict[str, str]:
+    pointer_size = lfs_pointer_size(path)
+    if pointer_size is not None:
+        # Report the size the pointer records (the truth about the dataset) and
+        # refuse to invent a row count from a stub we cannot read. Never let the
+        # stub's own 2 lines masquerade as the dataset's row count.
+        return {
+            "file": path.name,
+            "format": "csv" if path.suffix.lower() == ".csv" else "json",
+            "category": entry.category,
+            "bytes": str(pointer_size),
+            "rows": "",
+            "generated_date": generated_date(path),
+            "source_script": entry.source_script,
+            "description": entry.description,
+            "caveat": entry.caveat,
+        }
     if path.suffix.lower() == ".csv":
         row_count = csv_rows(path) if rows is None else rows
         fmt = "csv"
@@ -619,9 +666,33 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
+def guard_lfs_smudged() -> None:
+    """Refuse to run at all against un-smudged LFS pointers.
+
+    The catalog is a *published* discovery surface, so a checkout that cannot
+    see the data must fail loudly rather than describe the stubs. Without this,
+    the failure is invisible in both directions: CI (no ``lfs: true``) writes
+    pointer-derived rows, a normal clone writes real ones, and each silently
+    reverts the other forever (issue #127).
+    """
+    stubs = [(p.name, size) for p in public_data_files()
+             if (size := lfs_pointer_size(p)) is not None]
+    if not stubs:
+        return
+    listing = "\n".join(f"  - {name} (really {size:,} bytes)" for name, size in stubs)
+    raise SystemExit(
+        f"{len(stubs)} data file(s) are un-smudged Git LFS pointers in this "
+        f"checkout:\n{listing}\n"
+        "Cataloguing them would publish the pointer stubs' size and row count as "
+        "the datasets' own. Fetch the real files (`git lfs pull`), or in CI add "
+        "`with: lfs: true` to the actions/checkout step."
+    )
+
+
 def main() -> int:
     args = parse_args()
     validate_catalog()
+    guard_lfs_smudged()
     rows = build_rows()
     if args.check:
         check_existing(rows)
