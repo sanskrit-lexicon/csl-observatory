@@ -4,6 +4,8 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+## [1.7.2] - 2026-07-29
+
 ### Changed
 - **All seven workflows now check out with `lfs: true`, not just the one that needed it
   (follow-on to [#127](https://github.com/sanskrit-lexicon/csl-observatory/issues/127)).**
@@ -561,6 +563,7 @@ sanskrit-lexicon organisation plus the OBS-T error-typology language resource.
 - Citation DOI minted: [10.5281/zenodo.15834721](https://doi.org/10.5281/zenodo.15834721) (in CITATION.cff). Contributor ORCIDs are not yet registered.
 
 [Unreleased]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v1.6.0...HEAD
+[1.7.2]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v1.7.1...v1.7.2
 [1.7.1]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v1.7.0...v1.7.1
 [1.7.0]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v1.6.0...v1.7.0
 [1.6.0]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v1.5.0...v1.6.0
