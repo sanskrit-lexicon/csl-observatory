@@ -114,10 +114,14 @@ PER_PAGE = 200
 # self-description). `cites:<id>` is identifier-exact: no string ambiguity at
 # all. OpenAlex's reference extraction is imperfect, so anchor hits still pass
 # the domain gate before being counted.
+# (id, label, year). The year is load-bearing, not decoration: OpenAlex's
+# reference extraction emits impossible edges (a 2012 work "citing" the 2014
+# record), and a citation cannot precede the work it cites, so the year gives a
+# free deterministic guard against the noisiest class of false C2.
 RESOURCE_ANCHORS = [
-    ("W3192303795", "Cologne Digital Sanskrit Dictionaries (resource record, 2014)"),
-    ("W3032245164", "Transforming the CDSD into OntoLex-Lemon (LDL 2020)"),
-    ("W2554076622", "Kapp & Malten, Report on the Cologne Sanskrit Dictionary Project (2006)"),
+    ("W3192303795", "Cologne Digital Sanskrit Dictionaries (resource record, 2014)", 2014),
+    ("W3032245164", "Transforming the CDSD into OntoLex-Lemon (LDL 2020)", 2020),
+    ("W2554076622", "Kapp & Malten, Report on the Cologne Sanskrit Dictionary Project (2006)", 2006),
 ]
 
 # Family A'. The *print* dictionaries CDSL digitises. Their citation counts are
@@ -138,8 +142,14 @@ PRINT_ANCHORS = [
 # `axis`: what a genuine hit attests.
 PROBES = [
     # -- name-unique: the digital resource itself -----------------------------
+    # OpenAlex stems phrase tokens, so the singular "…Sanskrit Dictionary" is
+    # NOT a second probe: it returns a byte-identical 39-work set (verified
+    # 2026-07-29; the deliberate misspelling "…Dictionarys" also returns 39,
+    # while the different-stem "…Lexica" returns 0 — tokens are stemmed, not
+    # dropped). Registering both inflated the advertised probe count and made 20
+    # of the C1 rows display two independent name-unique confirmations where
+    # there is one. Retired for that reason, with no effect on any count.
     ("cdsd", '"Cologne Digital Sanskrit Dictionaries"', "name-unique", "digital"),
-    ("cdsd-sg", '"Cologne Digital Sanskrit Dictionary"', "name-unique", "digital"),
     ("cdsl", '"Cologne Digital Sanskrit Lexicon"', "name-unique", "digital"),
     ("cologne-lex", '"Cologne Sanskrit Lexicon"', "name-unique", "digital"),
     ("cologne-dict", '"Cologne Sanskrit Dictionary"', "name-unique", "digital"),
@@ -147,8 +157,18 @@ PROBES = [
     ("koelner", '"Kölner Sanskrit-Wörterbuch"', "name-unique", "digital"),
     ("csl-orig", '"csl-orig"', "name-unique", "digital"),
     # -- name-unique: downstream tools that exist only because CDSL does ------
+    # The bar is *entailment*, not association: naming the tool must entail
+    # naming CDSL. "PyCDSL" passes — it is literally "a Python interface to the
+    # Cologne Digital Sanskrit Lexicon", so a work that names it has named CDSL.
+    # "Digital Pali Dictionary" does NOT and was removed (H1478 audit): DPD is
+    # an independent Pali lexicographic project. It consumes Cologne data, but a
+    # work saying "lemmatized using the Digital Pali Dictionary" has named DPD,
+    # not CDSL — counting it was a transitivity error, and it put exactly one
+    # work (W7130705740, a CRAN package record whose text contains no
+    # occurrence of "Cologne") into C1 on that basis alone. Reach *through* a
+    # downstream consumer is a different claim from citation and must not be
+    # summed into this one.
     ("pycdsl", '"PyCDSL"', "name-unique", "digital"),
-    ("dpd", '"Digital Pali Dictionary"', "name-unique", "digital"),
     # -- ambiguous: the print dictionaries CDSL digitises ---------------------
     ("mw-full", '"Monier-Williams Sanskrit-English Dictionary"', "ambiguous", "print"),
     ("pwk-title", '"Sanskrit-Wörterbuch in kürzerer Fassung"', "ambiguous", "print"),
@@ -223,6 +243,16 @@ _TRANSIENT = ("429", "500", "502", "503", "504", "timed out", "timeout",
 # --------------------------------------------------------------------------- #
 # Fetch helpers (only used under --fetch)
 # --------------------------------------------------------------------------- #
+class BudgetExhausted(RuntimeError):
+    """OpenAlex refused for lack of daily keyless budget.
+
+    Distinct from a transient 429: retrying cannot help (the documented
+    ``retryAfter`` is hours), and treating it as a per-probe warning would let a
+    half-finished fetch overwrite a complete cache with fewer works — silently
+    *lowering* the published citation count. It must abort the fetch instead.
+    """
+
+
 def _http_json(url: str, retries: int = 3):
     """Fetch a JSON URL with the stdlib and bounded exponential backoff."""
     last = "unknown http error"
@@ -234,6 +264,14 @@ def _http_json(url: str, retries: int = 3):
                 return json.loads(resp.read().decode("utf-8")), ""
         except urllib.error.HTTPError as exc:
             last = f"HTTP {exc.code}"
+            try:
+                body = exc.read().decode("utf-8", "replace")
+            except Exception:  # noqa: BLE001 - body is best-effort diagnostics
+                body = ""
+            if "insufficient budget" in body.lower():
+                raise BudgetExhausted(
+                    "OpenAlex daily keyless budget exhausted — "
+                    + body.strip()[:300]) from exc
             if str(exc.code) in _TRANSIENT and attempt < retries:
                 time.sleep(2 ** attempt + 1)
                 continue
@@ -311,22 +349,28 @@ def _count_only(filt: str) -> tuple[int | None, str]:
 
 
 def fetch_all(cache_dir: Path) -> None:
-    """Refresh every API cache under `cache_dir`. Partial failures become
-    warnings so an offline rebuild still works from whatever landed."""
-    cache_dir.mkdir(parents=True, exist_ok=True)
+    """Refresh every API cache under `cache_dir`, atomically.
+
+    Individual probe failures become warnings so an offline rebuild still works
+    from whatever landed. Budget exhaustion is different in kind and aborts the
+    whole fetch: a truncated snapshot would find fewer works and silently
+    *lower* the published citation count, which is the one failure mode this
+    report cannot afford. So nothing is written until every payload is in hand.
+    """
     fetched_at = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     warnings: list[str] = []
+    pending: dict[str, str] = {}
 
     # --- Family A: citation-graph anchors ---
     anchors = {}
-    for wid, label in RESOURCE_ANCHORS:
+    for wid, label, _year in RESOURCE_ANCHORS:
         res, total, trunc, warn = _enumerate(f"cites:{wid}")
         if warn:
             warnings.append(f"anchor {wid}: {warn}")
         anchors[wid] = {"label": label, "total_count": total,
                         "truncated": trunc, "results": res}
-    (cache_dir / "anchors.json").write_text(
-        json.dumps(anchors, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    pending["anchors.json"] = json.dumps(
+        anchors, ensure_ascii=False, indent=2) + "\n"
 
     # --- Family A': print-dictionary envelope (counts only, never enumerated) ---
     print_anchors = []
@@ -343,9 +387,8 @@ def fetch_all(cache_dir: Path) -> None:
             "year": data.get("publication_year"),
             "cited_by_count": data.get("cited_by_count", 0),
         })
-    (cache_dir / "print_anchors.json").write_text(
-        json.dumps(print_anchors, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8")
+    pending["print_anchors.json"] = json.dumps(
+        print_anchors, ensure_ascii=False, indent=2) + "\n"
 
     # --- Family B/C: phrase probes ---
     probes = {}
@@ -357,8 +400,8 @@ def fetch_all(cache_dir: Path) -> None:
         probes[pid] = {"query": query, "filter": filt, "klass": klass,
                        "axis": axis, "total_count": total,
                        "truncated": trunc, "results": res}
-    (cache_dir / "probes.json").write_text(
-        json.dumps(probes, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    pending["probes.json"] = json.dumps(
+        probes, ensure_ascii=False, indent=2) + "\n"
 
     # --- Excluded probes: counts only, as evidence for the exclusion ---
     excluded = []
@@ -377,11 +420,11 @@ def fetch_all(cache_dir: Path) -> None:
         "has_fulltext:true,type:article|book|book-chapter|preprint|dissertation")
     if w2:
         warnings.append(f"frame fulltext: {w2}")
-    (cache_dir / "frame.json").write_text(
-        json.dumps({"openalex_scholarly_works": total_works,
-                    "openalex_fulltext_works": fulltext_works,
-                    "excluded_probes": excluded},
-                   ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    pending["frame.json"] = json.dumps(
+        {"openalex_scholarly_works": total_works,
+         "openalex_fulltext_works": fulltext_works,
+         "excluded_probes": excluded},
+        ensure_ascii=False, indent=2) + "\n"
 
     # --- Semantic Scholar: optional corroboration, never required ---
     s2_url = ("https://api.semanticscholar.org/graph/v1/paper/search"
@@ -394,15 +437,23 @@ def fetch_all(cache_dir: Path) -> None:
     else:
         s2_cache = {"status": "ok", "attempted_at": fetched_at,
                     "total": s2.get("total"), "data": s2.get("data", [])}
-    (cache_dir / "semantic_scholar.json").write_text(
-        json.dumps(s2_cache, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    pending["semantic_scholar.json"] = json.dumps(
+        s2_cache, ensure_ascii=False, indent=2) + "\n"
 
-    (cache_dir / "meta.json").write_text(
-        json.dumps({"fetched_at": fetched_at, "warnings": warnings,
-                    "probe_count": len(PROBES),
-                    "anchor_count": len(RESOURCE_ANCHORS),
-                    "max_results_per_probe": MAX_RESULTS_PER_PROBE},
-                   ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    pending["meta.json"] = json.dumps(
+        {"fetched_at": fetched_at, "warnings": warnings,
+         "probe_count": len(PROBES),
+         "anchor_count": len(RESOURCE_ANCHORS),
+         "max_results_per_probe": MAX_RESULTS_PER_PROBE},
+        ensure_ascii=False, indent=2) + "\n"
+
+    # Every payload is in hand: commit the snapshot in one go. Nothing above
+    # this line has touched the committed cache, so an abort mid-fetch (budget
+    # exhaustion, network loss) leaves the previous snapshot intact instead of
+    # replacing it with a partial one.
+    cache_dir.mkdir(parents=True, exist_ok=True)
+    for name, payload in pending.items():
+        (cache_dir / name).write_text(payload, encoding="utf-8")
     print(f"fetched → {cache_dir}")
     if warnings:
         print(f"  {len(warnings)} warning(s):")
@@ -458,6 +509,17 @@ def classify(cache_dir: Path | None) -> dict:
     anchors = _load(cache_dir, "anchors.json") or {}
     probes = _load(cache_dir, "probes.json") or {}
 
+    # The registry above — not the cache — is the source of truth. A probe or
+    # anchor retired from the constants must stop counting on the very next
+    # offline rebuild, without a re-fetch; otherwise a probe found to be unsound
+    # would keep contributing from a stale cache block and the report would go
+    # on publishing hits nobody can justify. (H1478 audit: retiring the `dpd`
+    # probe changed nothing until this filter existed.)
+    registered_probes = {p[0] for p in PROBES}
+    registered_anchors = {a[0] for a in RESOURCE_ANCHORS}
+    probes = {k: v for k, v in probes.items() if k in registered_probes}
+    anchors = {k: v for k, v in anchors.items() if k in registered_anchors}
+
     works: dict[str, dict] = {}
 
     def touch(rec: dict) -> dict:
@@ -470,9 +532,22 @@ def classify(cache_dir: Path | None) -> dict:
             works[wid] = cur
         return cur
 
+    anchor_years = {a[0]: a[2] for a in RESOURCE_ANCHORS}
+    impossible = 0
     for wid, block in anchors.items():
+        ayear = anchor_years.get(wid)
         for rec in block.get("results", []):
+            cyear = rec.get("year")
+            if ayear and cyear and cyear < ayear:
+                # A work cannot cite something published after it. OpenAlex's
+                # reference extraction emits these; dropping them costs nothing
+                # and removes the only class of false anchor edge detectable
+                # without reading the citing work.
+                impossible += 1
+                continue
             touch(rec)["matched_anchors"].append(wid)
+    if impossible:
+        print(f"  dropped {impossible} temporally impossible anchor edge(s)")
     for pid, block in probes.items():
         klass, axis = block.get("klass"), block.get("axis")
         for rec in block.get("results", []):
@@ -660,7 +735,7 @@ def build(cache_dir: Path | None) -> dict:
     A("")
     A("| Anchor | Citing works found |")
     A("|---|---:|")
-    for wid, label in RESOURCE_ANCHORS:
+    for wid, label, _year in RESOURCE_ANCHORS:
         b = anchors.get(wid, {})
         A(f"| [{label}](https://openalex.org/{wid}) | {b.get('total_count', 0)} |")
     A("")
@@ -683,6 +758,26 @@ def build(cache_dir: Path | None) -> dict:
         fam = "B name-unique" if klass == "name-unique" else "C ambiguous"
         A(f"| `{pid}` | `{query}` | {fam} | {axis} | {n} | {note} |")
     A("")
+    # Where C1 actually comes from. Stating the concentration pre-empts the
+    # obvious referee objection — that a long probe list implies a broad
+    # evidence base — and costs nothing, since no count depends on it.
+    nu_ids = [p for p, _q, k, _a in PROBES if k == "name-unique"]
+    contrib: dict[str, int] = {p: 0 for p in nu_ids}
+    for w in c1:
+        for p, k, _a in w["matched_probes"]:
+            if k == "name-unique":
+                contrib[p] = contrib.get(p, 0) + 1
+    dead = [p for p in nu_ids if not contrib.get(p)]
+    live = sorted((p for p in nu_ids if contrib.get(p)),
+                  key=lambda p: -contrib[p])
+    if dead and live:
+        A(f"**Where C1 actually comes from.** {len(dead)} of the {len(nu_ids)} name-unique "
+          "probes yield no external hits at all on this snapshot ("
+          + ", ".join(f"`{p}`" for p in dead) + "), so the evidence base is narrower than "
+          "the probe list suggests: "
+          + ", ".join(f"`{p}` {contrib[p]}" for p in live)
+          + f" (works may match more than one). The count rests chiefly on `{live[0]}`.")
+        A("")
 
     A("### Confidence tiers")
     A("")
@@ -692,6 +787,14 @@ def build(cache_dir: Path | None) -> dict:
     A("| **C2 probable** | cites a resource anchor **and** passes the domain gate, but "
       "matched no name-unique phrase (the graph edge exists; its context is not re-readable "
       "from the API, so it is not promoted) | yes |")
+    A("")
+    A("**C2 is the weaker of the two counted tiers, and this snapshot shows why.** "
+      "OpenAlex's reference extraction produced at least one temporally impossible edge — "
+      "a 2012 work recorded as citing the 2014 resource record — and 6 of the 10 raw anchor "
+      "edges were rejected by the domain gate. The gate is therefore the only thing standing "
+      "between graph noise and the count; a false edge attached to a genuinely Indological "
+      "paper would pass. A `citing_year < anchor_year` guard now drops the impossible ones "
+      "automatically, but it cannot catch a plausible false edge.")
     A("| **C3 possible** | matched only an ambiguous probe **and** passes the domain gate — "
       "attests the print dictionary | no, reported as an envelope |")
     A("| **C0 rejected** | fails the domain gate | no, retained in the CSV with its reason |")
@@ -782,21 +885,28 @@ def build(cache_dir: Path | None) -> dict:
     A("**What this sweep is:** a systematic, reproducible enumeration over OpenAlex's index "
       f"as of {fetched_at}, using {len(RESOURCE_ANCHORS)} citation-graph anchors and "
       f"{len(PROBES)} phrase probes, deduplicated by work id, domain-gated, with project "
-      "self-records removed. Every count regenerates offline from the committed cache; "
-      "re-running `--fetch` reproduces the method against a fresh index.")
+      "self-records removed. Every count regenerates offline from the committed cache — "
+      "that offline rebuild, not the network refresh, is the reproducibility guarantee "
+      "(see *Reproducing* below on OpenAlex's daily keyless budget).")
     A("")
     A("**What it is not:** a census. Four bounds on recall, stated rather than hedged:")
     A("")
     if total_w and ft_w:
         pct = 100.0 * ft_w / total_w
-        A(f"1. **Full-text coverage is the hard ceiling.** A phrase probe can only match a "
-          f"work whose full text OpenAlex has indexed: {ft_w:,} of {total_w:,} scholarly "
-          f"works, or **{pct:.1f}%**. Family B/C recall is bounded by that fraction; only "
-          "Family A (the citation graph) reaches beyond it.")
+        A(f"1. **Full-text coverage bounds the buried-mention case.** `fulltext.search` "
+          "matches a work's indexed title and abstract as well as its full text where one "
+          f"exists — {ft_w:,} of {total_w:,} scholarly works, or **{pct:.1f}%**, have "
+          "indexed full text. So that fraction does *not* cap recall outright: a work "
+          "naming CDSL in its title or abstract is reachable regardless, and this sweep's "
+          "own results include records (Zenodo depositions, CRAN packages) that have no "
+          "full text to index. What the fraction does bound is the sub-case that matters "
+          "most here — a mention buried in a body paragraph or a bibliography, which is "
+          "where most real citations of a dictionary live.")
     else:
-        A("1. **Full-text coverage is the hard ceiling.** A phrase probe can only match a "
-          "work whose full text OpenAlex has indexed — a minority of the corpus. (Frame "
-          "counts unavailable in this cache; re-run `--fetch`.)")
+        A("1. **Full-text coverage bounds the buried-mention case.** `fulltext.search` "
+          "matches indexed title and abstract as well as full text; only a minority of the "
+          "corpus has full text indexed, which bounds recall of mentions buried in a body "
+          "or bibliography. (Frame counts unavailable in this cache; re-run `--fetch`.)")
     A("2. **Siglum-only citations are invisible by design.** A work that cites the "
       "dictionary as \"MW s.v. …\" and nothing more cannot be recovered without accepting "
       "the noise measured above. This is a deliberate precision-over-recall trade, not an "
@@ -853,6 +963,15 @@ def build(cache_dir: Path | None) -> dict:
     A("python scripts/citation_sweep.py --fetch    # refresh the OpenAlex cache, then rebuild")
     A("```")
     A("")
+    A("**The offline rebuild is the reproducibility guarantee, not `--fetch`.** Every count "
+      "above regenerates exactly from the committed cache with no network. The refresh path "
+      "no longer does: as of 2026-07-29 OpenAlex meters keyless access by a small daily "
+      "dollar budget (`Insufficient budget … Resets at midnight UTC` after on the order of "
+      "fifteen requests from one address, with or without a `mailto`), so a full "
+      "`--fetch` over every probe needs a funded key or must be spread across days. The "
+      "script refuses to overwrite a complete cache with a budget-truncated one rather than "
+      "silently publishing a lower number.")
+    A("")
     A("The probe registry, domain-gate vocabulary, anchor list and tier rules are all "
       f"constants at the top of [`scripts/citation_sweep.py`]({blob}/scripts/citation_sweep.py) "
       "— change them there and re-run, rather than editing this report.")
@@ -905,7 +1024,14 @@ def main() -> int:
     args = ap.parse_args()
 
     if args.fetch:
-        fetch_all(CACHE_ROOT / SNAPSHOT_MONTH)
+        try:
+            fetch_all(CACHE_ROOT / SNAPSHOT_MONTH)
+        except BudgetExhausted as exc:
+            print(f"fetch ABORTED — {exc}", file=sys.stderr)
+            print("The committed cache was left untouched. Rebuild offline "
+                  "(no --fetch) to reproduce the published numbers, or supply a "
+                  "funded OpenAlex key before refreshing.", file=sys.stderr)
+            return 2
 
     cache_dir = latest_cache_dir()
     if cache_dir is None:

@@ -8,11 +8,11 @@ This is the G6 extension named in [`reports/external_reach.md`](https://github.c
 
 | Measure | Value | What it means |
 |---|---:|---|
-| **External citations of the digital resource (C1+C2)** | **36** | the defensible number — name-unique phrase match or citation-graph edge, domain-gated, self-records removed |
-| C1 confirmed | 32 | matched a string that can only denote CDSL |
+| **External citations of the digital resource (C1+C2)** | **35** | the defensible number — name-unique phrase match or citation-graph edge, domain-gated, self-records removed |
+| C1 confirmed | 31 | matched a string that can only denote CDSL |
 | C2 probable | 4 | cites a CDSL anchor work in OpenAlex's citation graph |
 | C3 print-dictionary envelope | 228 | attests Monier-Williams/Böhtlingk etc., **not** claimed as CDSL reach |
-| C0 rejected (failed domain gate) | 217 | phrase collisions, kept in the CSV |
+| C0 rejected (failed domain gate) | 216 | phrase collisions, kept in the CSV |
 | Project self-records excluded | 33 | our own Zenodo release DOIs and project-member works |
 | Seed recall | 2/5 | of the five hand-curated Tier-4 citations, how many the systematic sweep recovers |
 
@@ -48,7 +48,6 @@ Enumerating these would swap five accurate citations for hundreds of thousands o
 | Probe | Query | Family | Attests | Matching works | Enumerated |
 |---|---|---|---|---:|---|
 | `cdsd` | `"Cologne Digital Sanskrit Dictionaries"` | B name-unique | digital | 39 | 39 |
-| `cdsd-sg` | `"Cologne Digital Sanskrit Dictionary"` | B name-unique | digital | 39 | 39 |
 | `cdsl` | `"Cologne Digital Sanskrit Lexicon"` | B name-unique | digital | 52 | 52 |
 | `cologne-lex` | `"Cologne Sanskrit Lexicon"` | B name-unique | digital | 0 | 0 |
 | `cologne-dict` | `"Cologne Sanskrit Dictionary"` | B name-unique | digital | 1 | 1 |
@@ -56,7 +55,6 @@ Enumerating these would swap five accurate citations for hundreds of thousands o
 | `koelner` | `"Kölner Sanskrit-Wörterbuch"` | B name-unique | digital | 0 | 0 |
 | `csl-orig` | `"csl-orig"` | B name-unique | digital | 18 | 18 |
 | `pycdsl` | `"PyCDSL"` | B name-unique | digital | 2 | 2 |
-| `dpd` | `"Digital Pali Dictionary"` | B name-unique | digital | 1 | 1 |
 | `mw-full` | `"Monier-Williams Sanskrit-English Dictionary"` | C ambiguous | print | 159 | 159 |
 | `pwk-title` | `"Sanskrit-Wörterbuch in kürzerer Fassung"` | C ambiguous | print | 4 | 4 |
 | `pw-title` | `"Petersburger Wörterbuch"` | C ambiguous | print | 8 | 8 |
@@ -64,12 +62,16 @@ Enumerating these would swap five accurate citations for hundreds of thousands o
 | `ap90-title` | `"Practical Sanskrit-English Dictionary"` | C ambiguous | print | 181 | 181 |
 | `ambuda` | `"Ambuda"` | C ambiguous | digital | 73 | 73 |
 
+**Where C1 actually comes from.** 4 of the 8 name-unique probes yield no external hits at all on this snapshot (`cologne-lex`, `cologne-dict`, `koelner`, `csl-orig`), so the evidence base is narrower than the probe list suggests: `cdsd` 20, `cdsl` 10, `koeln-url` 2, `pycdsl` 2 (works may match more than one). The count rests chiefly on `cdsd`.
+
 ### Confidence tiers
 
 | Tier | Rule | Counted as CDSL reach? |
 |---|---|---|
 | **C1 confirmed** | matched a name-unique phrase **and** passes the domain gate | yes |
 | **C2 probable** | cites a resource anchor **and** passes the domain gate, but matched no name-unique phrase (the graph edge exists; its context is not re-readable from the API, so it is not promoted) | yes |
+
+**C2 is the weaker of the two counted tiers, and this snapshot shows why.** OpenAlex's reference extraction produced at least one temporally impossible edge — a 2012 work recorded as citing the 2014 resource record — and 6 of the 10 raw anchor edges were rejected by the domain gate. The gate is therefore the only thing standing between graph noise and the count; a false edge attached to a genuinely Indological paper would pass. A `citing_year < anchor_year` guard now drops the impossible ones automatically, but it cannot catch a plausible false edge.
 | **C3 possible** | matched only an ambiguous probe **and** passes the domain gate — attests the print dictionary | no, reported as an envelope |
 | **C0 rejected** | fails the domain gate | no, retained in the CSV with its reason |
 | **internal** | project self-record (org Zenodo release DOI, or a project member's own work) | no, would be circular |
@@ -80,38 +82,37 @@ Enumerating these would swap five accurate citations for hundreds of thousands o
 
 ## Results
 
-### C1 — confirmed (32)
+### C1 — confirmed (31)
 
 | Work | Year | Venue | Matched by | Link |
 |---|---:|---|---|---|
-| A Word-Level Digital Reader of the Prasthanatrayi with Sankara's Bhasya | 2026 | arXiv (Cornell University) | `cdsd, cdsd-sg` | [openalex](https://openalex.org/W7167794888) |
-| Critical Review of Asthi Dhatu Kshaya with Osteoporosis | 2026 | Journal of Ayurveda and Integrated Medical Sciences | `cdsd, cdsd-sg` | [openalex](https://openalex.org/W7130506483) |
-| tipitaka.critical: Lemmatized Critical Edition of the Pali Canon | 2026 | CRAN: Contributed Packages | `dpd` | [openalex](https://openalex.org/W7130705740) |
-| Accessible Sanskrit: A Cascading System for Text Analysis and Dictionary Access | 2025 | Proceedings of the Second Workshop on Ancient Language Processing | `cdsd, cdsd-sg` | [openalex](https://openalex.org/W4411113548) |
-| COMPUTATIONAL CHALLENGES IN ANCIENT LANGUAGE MODELING: THE CASE OF THE RIGVEDA | 2025 | Journal of Dynamics and Control | `cdsd, cdsd-sg` | [openalex](https://openalex.org/W4411756898) |
-| Female Development Across Ages: An Ayurvedic Review with Contemporary Correlations | 2025 | Journal of Ayurveda and Integrated Medical Sciences | `cdsd, cdsd-sg` | [openalex](https://openalex.org/W4411429827) |
-| Mahānāma: A Unique Testbed for Literary Entity Discovery and Linking | 2025 | Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing | `cdsd, cdsd-sg` | [openalex](https://openalex.org/W4416035700) |
+| A Word-Level Digital Reader of the Prasthanatrayi with Sankara's Bhasya | 2026 | arXiv (Cornell University) | `cdsd` | [openalex](https://openalex.org/W7167794888) |
+| Critical Review of Asthi Dhatu Kshaya with Osteoporosis | 2026 | Journal of Ayurveda and Integrated Medical Sciences | `cdsd` | [openalex](https://openalex.org/W7130506483) |
+| Accessible Sanskrit: A Cascading System for Text Analysis and Dictionary Access | 2025 | Proceedings of the Second Workshop on Ancient Language Processing | `cdsd` | [openalex](https://openalex.org/W4411113548) |
+| COMPUTATIONAL CHALLENGES IN ANCIENT LANGUAGE MODELING: THE CASE OF THE RIGVEDA | 2025 | Journal of Dynamics and Control | `cdsd` | [openalex](https://openalex.org/W4411756898) |
+| Female Development Across Ages: An Ayurvedic Review with Contemporary Correlations | 2025 | Journal of Ayurveda and Integrated Medical Sciences | `cdsd` | [openalex](https://openalex.org/W4411429827) |
+| Mahānāma: A Unique Testbed for Literary Entity Discovery and Linking | 2025 | Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing | `cdsd` | [openalex](https://openalex.org/W4416035700) |
 | Revolutionizing Sanskrit Research: In-depth applications of AI tools in indological studies | 2025 | International Journal of Advanced Academic Studies | `cdsl` | [openalex](https://openalex.org/W4412548294) |
-| Sanskrit Voyager: Unified Web Platform for Interactive Reading and Linguistic Analysis of Sanskrit Texts | 2025 | Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing: System Demonstrations | `cdsd, cdsd-sg, pycdsl` | [openalex](https://openalex.org/W4416037936) |
-| THE INDUS SCRIPT Recognition as an alphabet | 2025 | Research Square | `cdsd, cdsd-sg` | [openalex](https://openalex.org/W4415276108) |
+| Sanskrit Voyager: Unified Web Platform for Interactive Reading and Linguistic Analysis of Sanskrit Texts | 2025 | Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing: System Demonstrations | `cdsd, pycdsl` | [openalex](https://openalex.org/W4416037936) |
+| THE INDUS SCRIPT Recognition as an alphabet | 2025 | Research Square | `cdsd` | [openalex](https://openalex.org/W4415276108) |
 | “WHEN NATURE OPENS ITS PALLET” a Comparative Study of Polish rudy and English red | 2025 | Forum Filologiczne Ateneum | `cdsl` | [openalex](https://openalex.org/W7124248385) |
 | From Anekānta-vāda to Sarva-tantra-sva-tantra: Pluralism About Views and Philosophical Systems | 2024 | Journal of Indian Philosophy | `koeln-url` | [openalex](https://openalex.org/W4399581062) |
-| Sanskrit Knowledge-based Systems: Annotation and Computational Tools | 2024 | arXiv (Cornell University) | `cdsd, cdsd-sg, pycdsl` | [openalex](https://openalex.org/W4400104746) |
-| Yoga and yogins in the second part of the Bhagavata Purana | 2024 | Sententiae | `cdsd, cdsd-sg` | [openalex](https://openalex.org/W4402051662) |
-| Ayurvedic Consideration and Management of Herpes Zoster Affecting Trigeminal Nerve a Case Study Report | 2023 | International Journal of Pharmacognosy & Chinese Medicine | `cdsd, cdsd-sg` | [openalex](https://openalex.org/W4391267202) |
+| Sanskrit Knowledge-based Systems: Annotation and Computational Tools | 2024 | arXiv (Cornell University) | `cdsd, pycdsl` | [openalex](https://openalex.org/W4400104746) |
+| Yoga and yogins in the second part of the Bhagavata Purana | 2024 | Sententiae | `cdsd` | [openalex](https://openalex.org/W4402051662) |
+| Ayurvedic Consideration and Management of Herpes Zoster Affecting Trigeminal Nerve a Case Study Report | 2023 | International Journal of Pharmacognosy & Chinese Medicine | `cdsd` | [openalex](https://openalex.org/W4391267202) |
 | Gulma Roga | 2023 | Journal of Natural & Ayurvedic Medicine | `cdsl` | [openalex](https://openalex.org/W4391185131) |
 | Poles apart? From Wrestling and Mallkhāmb to Pole Yoga | 2023 | Journal of Yoga Studies | `cdsl` | [openalex](https://openalex.org/W4365448892) |
-| Sindhu Prakrit Unveils the Enigma: Revealing the origins of Ayurveda | 2023 | — | `cdsd, cdsd-sg` | [openalex](https://openalex.org/W4390144261) |
-| Trivarga: A Guideline for the Management of Manas Roga | 2023 | International Journal of Ayurveda and Pharma Research | `cdsd, cdsd-sg` | [openalex](https://openalex.org/W4386565470) |
-| Pustaka Pūjā: A Study of Sūtra Worship in Mahāyāna Buddhism | 2022 | TSpace (University of Toronto) | `cdsd, cdsd-sg` | [openalex](https://openalex.org/W7132909921) |
-| The Alphabet of Sindhu Prakrit (The decipherment of the Indus Script) | 2022 | — | `cdsd, cdsd-sg` | [openalex](https://openalex.org/W4283582067) |
+| Sindhu Prakrit Unveils the Enigma: Revealing the origins of Ayurveda | 2023 | — | `cdsd` | [openalex](https://openalex.org/W4390144261) |
+| Trivarga: A Guideline for the Management of Manas Roga | 2023 | International Journal of Ayurveda and Pharma Research | `cdsd` | [openalex](https://openalex.org/W4386565470) |
+| Pustaka Pūjā: A Study of Sūtra Worship in Mahāyāna Buddhism | 2022 | TSpace (University of Toronto) | `cdsd` | [openalex](https://openalex.org/W7132909921) |
+| The Alphabet of Sindhu Prakrit (The decipherment of the Indus Script) | 2022 | — | `cdsd` | [openalex](https://openalex.org/W4283582067) |
 | Impact of Changed Life Style on COVID-19 in India : Teachings of Sanathana Dharma (The eternal truth) | 2021 | International Journal of Scientific Research in Science and Technology | `cdsl` | [openalex](https://openalex.org/W3210008723) |
-| Svāhā in the Yagya: Meaning and Importance | 2021 | Interdisciplinary Journal of Yagya Research | `cdsd, cdsd-sg` | [openalex](https://openalex.org/W3202035061) |
-| CREACIÓN DE CULTUREMAS. EL CASO DE GITANISMOS EN EL ESPAÑOL DE CUBA | 2020 | Cultura Latinoamericana Revista de estudios interculturales | `cdsd, cdsd-sg` | [openalex](https://openalex.org/W3047605655) |
+| Svāhā in the Yagya: Meaning and Importance | 2021 | Interdisciplinary Journal of Yagya Research | `cdsd` | [openalex](https://openalex.org/W3202035061) |
+| CREACIÓN DE CULTUREMAS. EL CASO DE GITANISMOS EN EL ESPAÑOL DE CUBA | 2020 | Cultura Latinoamericana Revista de estudios interculturales | `cdsd` | [openalex](https://openalex.org/W3047605655) |
 | SEARCHING FOR THE LEXICAL CORE OF PROTO-INDO-EUROPEAN LANGUAGE | 2020 | Vestnik slavianskikh kul’tur [Bulletin of Slavic Cultures] | `cdsl, koeln-url` | [openalex](https://openalex.org/W3092578242) |
-| Transforming the Cologne Digital Sanskrit Dictionaries into OntoLex Lemon | 2020 | Zenodo (CERN European Organization for Nuclear Research) | `cdsd, cdsd-sg` | [openalex](https://openalex.org/W3032245164) |
-| The Root of Indian Communication Theory in the Ṛig Veda: Practical Vedānta | 2019 | Bodhi An Interdisciplinary Journal | `cdsd, cdsd-sg` | [openalex](https://openalex.org/W3010982759) |
-| Liberation and Non-Attachment: Arjuna’s Fear in the Bhagavad-Gītā | 2016 | Brock University Digital Repository (Brock University) | `cdsd, cdsd-sg` | [openalex](https://openalex.org/W2236639441) |
+| Transforming the Cologne Digital Sanskrit Dictionaries into OntoLex Lemon | 2020 | Zenodo (CERN European Organization for Nuclear Research) | `cdsd` | [openalex](https://openalex.org/W3032245164) |
+| The Root of Indian Communication Theory in the Ṛig Veda: Practical Vedānta | 2019 | Bodhi An Interdisciplinary Journal | `cdsd` | [openalex](https://openalex.org/W3010982759) |
+| Liberation and Non-Attachment: Arjuna’s Fear in the Bhagavad-Gītā | 2016 | Brock University Digital Repository (Brock University) | `cdsd` | [openalex](https://openalex.org/W2236639441) |
 | FOLLOWING THE NON-MONEY TRAIL: RECONCILING SOME ANGKORIAN TEMPLE ACCOUNTS | 2015 | Journal of Indo-Pacific Archaeology | `cdsl` | [openalex](https://openalex.org/W2234051868) |
 | Review of the caddisfly genus Tagalopsyche with the description of new species and a related new genus (Tricho | 2007 | Zootaxa | `cdsl` | [openalex](https://openalex.org/W2182547468) |
 | Sacred Connections with Cat-tail (&lt;i&gt;Typha&lt;/i&gt;, Typhaceae) - Dragons, Water-Serpents and Reed-Mace | 2007 | Ethnobotany Research and Applications | `cdsl` | [openalex](https://openalex.org/W2095705052) |
@@ -187,11 +188,11 @@ Total across the print anchors: **962** — an upper bound on the underlying dic
 
 ## Coverage and completeness
 
-**What this sweep is:** a systematic, reproducible enumeration over OpenAlex's index as of 2026-07-28, using 3 citation-graph anchors and 16 phrase probes, deduplicated by work id, domain-gated, with project self-records removed. Every count regenerates offline from the committed cache; re-running `--fetch` reproduces the method against a fresh index.
+**What this sweep is:** a systematic, reproducible enumeration over OpenAlex's index as of 2026-07-28, using 3 citation-graph anchors and 14 phrase probes, deduplicated by work id, domain-gated, with project self-records removed. Every count regenerates offline from the committed cache — that offline rebuild, not the network refresh, is the reproducibility guarantee (see *Reproducing* below on OpenAlex's daily keyless budget).
 
 **What it is not:** a census. Four bounds on recall, stated rather than hedged:
 
-1. **Full-text coverage is the hard ceiling.** A phrase probe can only match a work whose full text OpenAlex has indexed: 36,647,761 of 241,937,186 scholarly works, or **15.1%**. Family B/C recall is bounded by that fraction; only Family A (the citation graph) reaches beyond it.
+1. **Full-text coverage bounds the buried-mention case.** `fulltext.search` matches a work's indexed title and abstract as well as its full text where one exists — 36,647,761 of 241,937,186 scholarly works, or **15.1%**, have indexed full text. So that fraction does *not* cap recall outright: a work naming CDSL in its title or abstract is reachable regardless, and this sweep's own results include records (Zenodo depositions, CRAN packages) that have no full text to index. What the fraction does bound is the sub-case that matters most here — a mention buried in a body paragraph or a bibliography, which is where most real citations of a dictionary live.
 2. **Siglum-only citations are invisible by design.** A work that cites the dictionary as "MW s.v. …" and nothing more cannot be recovered without accepting the noise measured above. This is a deliberate precision-over-recall trade, not an oversight.
 3. **Print-form and non-indexed references are out of reach.** Monographs, festschrift chapters, and non-OA Indological venues are unevenly represented in OpenAlex; the Indological long tail is worse-covered than the NLP literature that cites CDSL most visibly.
 4. **Anchor selection bounds Family A.** Only works that *are* CDSL carry usable `cites:` edges; a citation pointing at the Cologne website with no anchor record leaves no graph edge to follow.
@@ -208,7 +209,7 @@ Total across the print anchors: **962** — an upper bound on the underlying dic
 
 A miss is informative, not a defect: seeds that are software repositories or institutional web pages have no OpenAlex work record to recover, which is precisely the coverage boundary bound 3 describes.
 
-**Therefore the claim this report supports is:** *at least 36 scholarly works in OpenAlex demonstrably name or cite the Cologne digital Sanskrit lexicon (snapshot 2026-07-28)* — a documented lower bound with stated recall bounds, not an exhaustive count. That is a materially stronger claim than "5, representative, no completeness claimed", and it is falsifiable: the probe registry, the cache, and the classification are all committed.
+**Therefore the claim this report supports is:** *at least 35 scholarly works in OpenAlex demonstrably name or cite the Cologne digital Sanskrit lexicon (snapshot 2026-07-28)* — a documented lower bound with stated recall bounds, not an exhaustive count. That is a materially stronger claim than "5, representative, no completeness claimed", and it is falsifiable: the probe registry, the cache, and the classification are all committed.
 
 ## Second-source corroboration
 
@@ -220,6 +221,8 @@ Semantic Scholar was attempted on 2026-07-28 and was **unavailable** (HTTP 429).
 python scripts/citation_sweep.py            # rebuild offline from the committed cache
 python scripts/citation_sweep.py --fetch    # refresh the OpenAlex cache, then rebuild
 ```
+
+**The offline rebuild is the reproducibility guarantee, not `--fetch`.** Every count above regenerates exactly from the committed cache with no network. The refresh path no longer does: as of 2026-07-29 OpenAlex meters keyless access by a small daily dollar budget (`Insufficient budget … Resets at midnight UTC` after on the order of fifteen requests from one address, with or without a `mailto`), so a full `--fetch` over every probe needs a funded key or must be spread across days. The script refuses to overwrite a complete cache with a budget-truncated one rather than silently publishing a lower number.
 
 The probe registry, domain-gate vocabulary, anchor list and tier rules are all constants at the top of [`scripts/citation_sweep.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/citation_sweep.py) — change them there and re-run, rather than editing this report.
 

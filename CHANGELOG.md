@@ -10,10 +10,10 @@ All notable changes to this repository are documented here, following [Keep a Ch
   extension).** `reports/external_reach.md` had named its own gap for a month ("Citations are
   under-counted here by design; a systematic Scholar / OpenAlex sweep is the natural G6
   extension"); this closes it. The sweep pulls **3 citation-graph anchors** (`cites:<id>`,
-  identifier-exact) plus **16 phrase probes**, deduplicates by OpenAlex work id, applies a
+  identifier-exact) plus **14 phrase probes**, deduplicates by OpenAlex work id, applies a
   46-token Indological/lexicographic domain gate, and removes the org's own Zenodo release
-  records, yielding a **documented lower bound of 36 works** that demonstrably name or cite
-  the Cologne *digital* lexicon (C1 confirmed 32 + C2 probable 4, snapshot 2026-07-28).
+  records, yielding a **documented lower bound of 35 works** that demonstrably name or cite
+  the Cologne *digital* lexicon (C1 confirmed 31 + C2 probable 4, snapshot 2026-07-28).
   The methodological core is what is *refused*: bare sigla are never enumerated, and their
   collision counts are published as the evidence — `"MW"` matches **2,336,225** works,
   `"PW"` 873,310, `"Monier-Williams"` 2,453 — because swapping five accurate citations for
@@ -26,6 +26,33 @@ All notable changes to this repository are documented here, following [Keep a Ch
   measured. Follows the established tier pattern: network only under `--fetch`, month-stamped
   JSON cache committed under `reports/citation_sweep_cache/`, and every count regenerates
   byte-identically offline from a fresh clone.
+  > **Adversarially audited before merge, and the audit moved the number.** The published
+  > figure is 35, not the 36 the first pass produced: a `"Digital Pali Dictionary"` probe had
+  > been filed as name-unique-for-CDSL, but DPD is an independent Pali project, so a work
+  > saying "lemmatized using the Digital Pali Dictionary" names DPD, not Cologne — reach
+  > *through* a downstream consumer is a different claim from citation and cannot be summed
+  > into it. Retiring that probe exposed a second defect: `classify()` read the cached probe
+  > blocks rather than the probe registry, so retiring a probe changed nothing until the
+  > registry became authoritative — an unsound probe could have gone on contributing from a
+  > stale cache. Also fixed: `"Cologne Digital Sanskrit Dictionary"` and `"…Dictionaries"`
+  > are one probe, not two (OpenAlex stems; verified byte-identical 39-work result sets), so
+  > 20 C1 rows had been showing phantom double confirmation; recall bound #1 claimed
+  > full-text coverage caps recall outright, which the sweep's own results refute (Zenodo and
+  > CRAN records have no full text yet matched); a temporally impossible citation edge (a
+  > 2012 work "citing" the 2014 record) is now dropped by a `citing_year < anchor_year`
+  > guard; and the report states where C1 actually concentrates (4 of 8 name-unique probes
+  > contribute nothing).
+- **OpenAlex now meters keyless access by a daily dollar budget — `--fetch` is no longer a
+  reproducibility path.** Measured 2026-07-29: `{"error":"Rate limit exceeded","message":
+  "Insufficient budget … Resets at midnight UTC","retryAfter":80414}` after roughly fifteen
+  count-only requests from one address, identical with or without a `mailto` (the script's
+  "polite pool … no key" comment was written against the old behaviour). Because the old code
+  treated this as a transient 429, retried three times with ≤5 s backoff against a documented
+  80,414 s `retryAfter`, and then wrote whatever had landed, a throttled refresh could have
+  **silently overwritten a complete cache with a truncated one and lowered the published
+  citation count**. `fetch_all` is now atomic — every payload is buffered and the snapshot is
+  committed in one go — and budget exhaustion raises rather than warns, leaving the previous
+  cache untouched. The offline rebuild is unaffected and remains the reproducibility guarantee.
 
 ### Changed
 - **`reports/external_reach.md` Tier 4 rewritten from "estimated, representative" to

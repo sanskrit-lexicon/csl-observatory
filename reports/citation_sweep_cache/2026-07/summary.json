@@ -1,13 +1,13 @@
 {
   "snapshot": "2026-07",
   "fetched_at": "2026-07-28",
-  "headline_external_digital": 36,
-  "c1": 32,
+  "headline_external_digital": 35,
+  "c1": 31,
   "c2": 4,
   "c3": 228,
-  "c0": 217,
+  "c0": 216,
   "internal_excluded": 33,
-  "probes": 16,
+  "probes": 14,
   "anchors": 3,
   "excluded_probes": [
     {
@@ -45,13 +45,6 @@
       "venue": "Journal of Ayurveda and Integrated Medical Sciences",
       "id": "W7130506483",
       "doi": "https://doi.org/10.21760/jaims.11.1.47"
-    },
-    {
-      "title": "tipitaka.critical: Lemmatized Critical Edition of the Pali Canon",
-      "year": 2026,
-      "venue": "CRAN: Contributed Packages",
-      "id": "W7130705740",
-      "doi": "https://doi.org/10.32614/cran.package.tipitaka.critical"
     },
     {
       "title": "Accessible Sanskrit: A Cascading System for Text Analysis and Dictionary Access",
@@ -115,6 +108,13 @@
       "venue": "Journal of Indian Philosophy",
       "id": "W4399581062",
       "doi": "https://doi.org/10.1007/s10781-024-09570-y"
+    },
+    {
+      "title": "Sanskrit Knowledge-based Systems: Annotation and Computational Tools",
+      "year": 2024,
+      "venue": "arXiv (Cornell University)",
+      "id": "W4400104746",
+      "doi": "https://doi.org/10.48550/arxiv.2406.18276"
     }
   ]
 }
