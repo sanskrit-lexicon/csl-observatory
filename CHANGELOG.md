@@ -4,7 +4,41 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+### Added
+- **`reports/citation_sweep.md` + `scripts/citation_sweep.py` — the systematic OpenAlex
+  citation sweep that replaces Tier 4's five hand-picked citations (H1478, roadmap G6
+  extension).** `reports/external_reach.md` had named its own gap for a month ("Citations are
+  under-counted here by design; a systematic Scholar / OpenAlex sweep is the natural G6
+  extension"); this closes it. The sweep pulls **3 citation-graph anchors** (`cites:<id>`,
+  identifier-exact) plus **16 phrase probes**, deduplicates by OpenAlex work id, applies a
+  46-token Indological/lexicographic domain gate, and removes the org's own Zenodo release
+  records, yielding a **documented lower bound of 36 works** that demonstrably name or cite
+  the Cologne *digital* lexicon (C1 confirmed 32 + C2 probable 4, snapshot 2026-07-28).
+  The methodological core is what is *refused*: bare sigla are never enumerated, and their
+  collision counts are published as the evidence — `"MW"` matches **2,336,225** works,
+  `"PW"` 873,310, `"Monier-Williams"` 2,453 — because swapping five accurate citations for
+  hundreds of thousands of noisy ones would be strictly worse for the paper than the hedge
+  it replaces. A separate **228-work print-dictionary envelope (C3)** is reported beside the
+  headline and never added to it: citing Monier-Williams 1899 says nothing about whether the
+  Cologne digital edition was used. Recall bounds are stated, not hedged — full-text
+  coverage is 15.1% of OpenAlex's corpus, siglum-only citations are invisible by design, and
+  the seed-recall proxy against the five previously hand-curated citations is published as
+  measured. Follows the established tier pattern: network only under `--fetch`, month-stamped
+  JSON cache committed under `reports/citation_sweep_cache/`, and every count regenerates
+  byte-identically offline from a fresh clone.
+
 ### Changed
+- **`reports/external_reach.md` Tier 4 rewritten from "estimated, representative" to
+  "systematic sweep, bounded" (H1478).** `scripts/external_reach.py` no longer publishes a
+  hand-maintained `CITATIONS` list; it consumes the sweep's committed output and prints the
+  method, the tier counts, an explicit coverage/completeness statement, and all 36 claimed
+  works. The old hand-picked list survives only as `SEED_CITATIONS`, the seed set whose
+  recovery the sweep measures as its recall proxy — adding a citation now means adding a
+  probe or an anchor, so the addition is systematic and its recall consequence is measured.
+  The site's [External Reach](https://sanskrit-lexicon.github.io/csl-observatory/reach) page
+  gains the swept-works table and a C1/C2/C3-by-year distribution; `citation_sweep.csv` is
+  registered in the public data catalog; `reports/README.md` now indexes both this report and
+  `external_reach.md`, which had never been indexed.
 - **docs/AGENT_ROADMAP.md live re-compile 2026-07-28 (H1787)** — Tier A/B rows re-verified against open issues + local csl-orig tip; open agent PRs #2865/#2867/#2872/#2874 babysit-only (csl-orig never agent-merged); close-ready / re-tier comments posted on #1537, devanagari#42, #1788, #2824, websanlexicon#60, #606. Label tallies still 2026-06-26 snapshot.
 
 ## [1.6.0] - 2026-07-28

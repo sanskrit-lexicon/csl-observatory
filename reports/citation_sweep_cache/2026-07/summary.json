@@ -1,0 +1,120 @@
+{
+  "snapshot": "2026-07",
+  "fetched_at": "2026-07-28",
+  "headline_external_digital": 36,
+  "c1": 32,
+  "c2": 4,
+  "c3": 228,
+  "c0": 217,
+  "internal_excluded": 33,
+  "probes": 16,
+  "anchors": 3,
+  "excluded_probes": [
+    {
+      "query": "\"MW\"",
+      "count": 2336225
+    },
+    {
+      "query": "\"PW\"",
+      "count": 873310
+    },
+    {
+      "query": "\"PWG\"",
+      "count": 8085
+    },
+    {
+      "query": "\"Monier-Williams\"",
+      "count": 2453
+    }
+  ],
+  "openalex_scholarly_works": 241937186,
+  "openalex_fulltext_works": 36647761,
+  "seed_recall": "2/5",
+  "semantic_scholar": "unavailable",
+  "top_c1": [
+    {
+      "title": "A Word-Level Digital Reader of the Prasthanatrayi with Sankara's Bhasya",
+      "year": 2026,
+      "venue": "arXiv (Cornell University)",
+      "id": "W7167794888",
+      "doi": "https://doi.org/10.5281/zenodo.21279193"
+    },
+    {
+      "title": "Critical Review of Asthi Dhatu Kshaya with Osteoporosis",
+      "year": 2026,
+      "venue": "Journal of Ayurveda and Integrated Medical Sciences",
+      "id": "W7130506483",
+      "doi": "https://doi.org/10.21760/jaims.11.1.47"
+    },
+    {
+      "title": "tipitaka.critical: Lemmatized Critical Edition of the Pali Canon",
+      "year": 2026,
+      "venue": "CRAN: Contributed Packages",
+      "id": "W7130705740",
+      "doi": "https://doi.org/10.32614/cran.package.tipitaka.critical"
+    },
+    {
+      "title": "Accessible Sanskrit: A Cascading System for Text Analysis and Dictionary Access",
+      "year": 2025,
+      "venue": "Proceedings of the Second Workshop on Ancient Language Processing",
+      "id": "W4411113548",
+      "doi": "https://doi.org/10.18653/v1/2025.alp-1.5"
+    },
+    {
+      "title": "COMPUTATIONAL CHALLENGES IN ANCIENT LANGUAGE MODELING: THE CASE OF THE RIGVEDA",
+      "year": 2025,
+      "venue": "Journal of Dynamics and Control",
+      "id": "W4411756898",
+      "doi": "https://doi.org/10.71058/jodac.v9i6007"
+    },
+    {
+      "title": "Female Development Across Ages: An Ayurvedic Review with Contemporary Correlations",
+      "year": 2025,
+      "venue": "Journal of Ayurveda and Integrated Medical Sciences",
+      "id": "W4411429827",
+      "doi": "https://doi.org/10.21760/jaims.10.4.31"
+    },
+    {
+      "title": "Mahānāma: A Unique Testbed for Literary Entity Discovery and Linking",
+      "year": 2025,
+      "venue": "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing",
+      "id": "W4416035700",
+      "doi": "https://doi.org/10.18653/v1/2025.emnlp-main.1269"
+    },
+    {
+      "title": "Revolutionizing Sanskrit Research: In-depth applications of AI tools in indological studies",
+      "year": 2025,
+      "venue": "International Journal of Advanced Academic Studies",
+      "id": "W4412548294",
+      "doi": "https://doi.org/10.33545/27068919.2025.v7.i7b.1577"
+    },
+    {
+      "title": "Sanskrit Voyager: Unified Web Platform for Interactive Reading and Linguistic Analysis of Sanskrit Texts",
+      "year": 2025,
+      "venue": "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing: System Demonstrations",
+      "id": "W4416037936",
+      "doi": "https://doi.org/10.18653/v1/2025.emnlp-demos.18"
+    },
+    {
+      "title": "THE INDUS SCRIPT Recognition as an alphabet",
+      "year": 2025,
+      "venue": "Research Square",
+      "id": "W4415276108",
+      "doi": "https://doi.org/10.21203/rs.3.rs-6801050/v1"
+    },
+    {
+      "title": "“WHEN NATURE OPENS ITS PALLET” a Comparative Study of Polish rudy and English red",
+      "year": 2025,
+      "venue": "Forum Filologiczne Ateneum",
+      "id": "W7124248385",
+      "doi": "https://doi.org/10.36575/2353-2912/1(13)2025-07"
+    },
+    {
+      "title": "From Anekānta-vāda to Sarva-tantra-sva-tantra: Pluralism About Views and Philosophical Systems",
+      "year": 2024,
+      "venue": "Journal of Indian Philosophy",
+      "id": "W4399581062",
+      "doi": "https://doi.org/10.1007/s10781-024-09570-y"
+    }
+  ]
+}
