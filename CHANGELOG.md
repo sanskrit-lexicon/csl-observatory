@@ -4,6 +4,30 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+### Fixed
+- **The public data catalog published Git LFS *pointer* sizes as dataset sizes — the citable
+  OBS-T release table was listed as "2 rows / 133 bytes" when it is 52,498 rows / ~62 MB
+  ([#127](https://github.com/sanskrit-lexicon/csl-observatory/issues/127), H1845).** Two
+  mutually-concealing halves: `refresh-observatory.yml` checked out **without** `lfs: true`,
+  so the weekly refresh saw ~133-byte stubs; and `data_index.py` sized whatever bytes were on
+  disk — correct behaviour given a wrong input, since a pointer is a *valid, readable, 2-line
+  CSV* and nothing errored. The result **oscillated**: any contributor with LFS smudged
+  regenerated true values and the next CI refresh silently reverted them, with neither side
+  flagged — a wrong number that keeps changing back reads as ordinary churn. `data_index.py
+  --check` could not catch it either, because it validates catalog *coverage* (is every
+  public file described?), not whether a described size corresponds to real data. Fixed at
+  both ends: CI now checks out with `lfs: true`, and `data_index.py` **refuses to run at all**
+  against un-smudged pointers (new `lfs_pointer_size()` + `guard_lfs_smudged()`), naming the
+  offending files and both remedies, so removing that CI line again fails the job loudly
+  instead of silently republishing stub metadata. If the guard is ever bypassed, a pointer now
+  reports the size recorded *in* the pointer and an **empty** row count — the honest answer
+  from a stub is *unknown*, never *2*. Verified with a two-sided control (pointer blocked
+  with an actionable message; real data, and a file merely *mentioning* the LFS spec URL, both
+  pass; silent on a clean checkout — 5/5). Blast radius bounded and checked: this workflow is
+  the only one running `data_index.py`, no site page loads the LFS-backed CSVs, and no
+  findings script reads them — catalog metadata was wrong, no published analysis was computed
+  over stubs.
+
 ## [1.7.0] - 2026-07-29
 
 ### Added
