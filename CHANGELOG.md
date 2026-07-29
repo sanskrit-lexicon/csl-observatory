@@ -4,7 +4,68 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+### Added
+- **`reports/citation_sweep.md` + `scripts/citation_sweep.py` — the systematic OpenAlex
+  citation sweep that replaces Tier 4's five hand-picked citations (H1478, roadmap G6
+  extension).** `reports/external_reach.md` had named its own gap for a month ("Citations are
+  under-counted here by design; a systematic Scholar / OpenAlex sweep is the natural G6
+  extension"); this closes it. The sweep pulls **3 citation-graph anchors** (`cites:<id>`,
+  identifier-exact) plus **14 phrase probes**, deduplicates by OpenAlex work id, applies a
+  46-token Indological/lexicographic domain gate, and removes the org's own Zenodo release
+  records, yielding a **documented lower bound of 35 works** that demonstrably name or cite
+  the Cologne *digital* lexicon (C1 confirmed 31 + C2 probable 4, snapshot 2026-07-28).
+  The methodological core is what is *refused*: bare sigla are never enumerated, and their
+  collision counts are published as the evidence — `"MW"` matches **2,336,225** works,
+  `"PW"` 873,310, `"Monier-Williams"` 2,453 — because swapping five accurate citations for
+  hundreds of thousands of noisy ones would be strictly worse for the paper than the hedge
+  it replaces. A separate **228-work print-dictionary envelope (C3)** is reported beside the
+  headline and never added to it: citing Monier-Williams 1899 says nothing about whether the
+  Cologne digital edition was used. Recall bounds are stated, not hedged — full-text
+  coverage is 15.1% of OpenAlex's corpus, siglum-only citations are invisible by design, and
+  the seed-recall proxy against the five previously hand-curated citations is published as
+  measured. Follows the established tier pattern: network only under `--fetch`, month-stamped
+  JSON cache committed under `reports/citation_sweep_cache/`, and every count regenerates
+  byte-identically offline from a fresh clone.
+  > **Adversarially audited before merge, and the audit moved the number.** The published
+  > figure is 35, not the 36 the first pass produced: a `"Digital Pali Dictionary"` probe had
+  > been filed as name-unique-for-CDSL, but DPD is an independent Pali project, so a work
+  > saying "lemmatized using the Digital Pali Dictionary" names DPD, not Cologne — reach
+  > *through* a downstream consumer is a different claim from citation and cannot be summed
+  > into it. Retiring that probe exposed a second defect: `classify()` read the cached probe
+  > blocks rather than the probe registry, so retiring a probe changed nothing until the
+  > registry became authoritative — an unsound probe could have gone on contributing from a
+  > stale cache. Also fixed: `"Cologne Digital Sanskrit Dictionary"` and `"…Dictionaries"`
+  > are one probe, not two (OpenAlex stems; verified byte-identical 39-work result sets), so
+  > 20 C1 rows had been showing phantom double confirmation; recall bound #1 claimed
+  > full-text coverage caps recall outright, which the sweep's own results refute (Zenodo and
+  > CRAN records have no full text yet matched); a temporally impossible citation edge (a
+  > 2012 work "citing" the 2014 record) is now dropped by a `citing_year < anchor_year`
+  > guard; and the report states where C1 actually concentrates (4 of 8 name-unique probes
+  > contribute nothing).
+- **OpenAlex now meters keyless access by a daily dollar budget — `--fetch` is no longer a
+  reproducibility path.** Measured 2026-07-29: `{"error":"Rate limit exceeded","message":
+  "Insufficient budget … Resets at midnight UTC","retryAfter":80414}` after roughly fifteen
+  count-only requests from one address, identical with or without a `mailto` (the script's
+  "polite pool … no key" comment was written against the old behaviour). Because the old code
+  treated this as a transient 429, retried three times with ≤5 s backoff against a documented
+  80,414 s `retryAfter`, and then wrote whatever had landed, a throttled refresh could have
+  **silently overwritten a complete cache with a truncated one and lowered the published
+  citation count**. `fetch_all` is now atomic — every payload is buffered and the snapshot is
+  committed in one go — and budget exhaustion raises rather than warns, leaving the previous
+  cache untouched. The offline rebuild is unaffected and remains the reproducibility guarantee.
+
 ### Changed
+- **`reports/external_reach.md` Tier 4 rewritten from "estimated, representative" to
+  "systematic sweep, bounded" (H1478).** `scripts/external_reach.py` no longer publishes a
+  hand-maintained `CITATIONS` list; it consumes the sweep's committed output and prints the
+  method, the tier counts, an explicit coverage/completeness statement, and all 36 claimed
+  works. The old hand-picked list survives only as `SEED_CITATIONS`, the seed set whose
+  recovery the sweep measures as its recall proxy — adding a citation now means adding a
+  probe or an anchor, so the addition is systematic and its recall consequence is measured.
+  The site's [External Reach](https://sanskrit-lexicon.github.io/csl-observatory/reach) page
+  gains the swept-works table and a C1/C2/C3-by-year distribution; `citation_sweep.csv` is
+  registered in the public data catalog; `reports/README.md` now indexes both this report and
+  `external_reach.md`, which had never been indexed.
 - **docs/AGENT_ROADMAP.md live re-compile 2026-07-28 (H1787)** — Tier A/B rows re-verified against open issues + local csl-orig tip; open agent PRs #2865/#2867/#2872/#2874 babysit-only (csl-orig never agent-merged); close-ready / re-tier comments posted on #1537, devanagari#42, #1788, #2824, websanlexicon#60, #606. Label tallies still 2026-06-26 snapshot.
 
 ## [1.6.0] - 2026-07-28

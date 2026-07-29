@@ -17,11 +17,17 @@ per-line provenance and a fetch date:
                             known ecosystem consumers (PyCDSL, Ambuda, Digital
                             Pali Dictionary, StarDict-Sanskrit, ...), each with a
                             URL.
-  4. Scholarly citations   — REPRESENTATIVE, not exhaustive (web/Scholar). No
-                            completeness claim.
+  4. Scholarly citations   — SYSTEMATIC OpenAlex sweep (H1478), consumed from
+                            ``scripts/citation_sweep.py``'s committed output.
+                            Replaced the five hand-picked "representative"
+                            citations this tier used to carry; the claim is now
+                            a documented lower bound with stated recall bounds,
+                            not a hedge. Method, per-work table and completeness
+                            statement: ``reports/citation_sweep.md``.
 
 The report separates MEASURED (tiers 1-3, every line with a URL and/or fetch
-date) from ESTIMATED (tier 4).
+date) from BOUNDED (tier 4 — systematic, reproducible, and explicit about what
+it cannot reach).
 
 Zenodo (OBS-T dataset views/downloads) is a PLANNED fifth tier but is currently
 **BLOCKED**: the DOI recorded across the repo (10.5281/zenodo.15834721) does not
@@ -130,9 +136,16 @@ KNOWN_CONSUMERS = [
      "https://github.com/Dictionaryphile/All_Dictionaries"),
 ]
 
-# Representative scholarly citations (NOT exhaustive — web/Scholar, 2020-2026).
-# Each is a published work that uses or cites the Cologne dictionaries/lexicon.
-CITATIONS = [
+# Tier 4 is now produced by the systematic sweep (scripts/citation_sweep.py,
+# H1478) and read from its committed artifacts below. The hand-picked list is
+# retained ONLY as the seed set whose recovery that sweep measures as its recall
+# proxy — it is no longer what the report publishes. Do not add to it: add a
+# probe or an anchor to citation_sweep.py instead, so the addition is systematic
+# and its recall consequence is measured.
+SWEEP_CSV = DATA / "citation_sweep.csv"
+SWEEP_CACHE_ROOT = ROOT / "reports" / "citation_sweep_cache"
+
+SEED_CITATIONS = [
     ("Transforming the Cologne Digital Sanskrit Dictionaries into OntoLex-Lemon",
      "2020", "LDL / ACL Anthology", "https://aclanthology.org/2020.ldl-1.2/"),
     ("PyCDSL: a Python interface to the Cologne Digital Sanskrit Lexicon",
@@ -154,6 +167,42 @@ ZENODO_EXPECT_TOKENS = ("sanskrit", "cologne", "obs-t", "correction", "lexicon",
 
 _TRANSIENT = ("502", "503", "504", "timed out", "timeout", "connection reset",
               "temporarily unavailable", "bad gateway")
+
+
+# --------------------------------------------------------------------------- #
+# Tier 4 input — the systematic sweep's committed output (offline, no network)
+# --------------------------------------------------------------------------- #
+def load_sweep() -> tuple[dict, list[dict]]:
+    """Return (summary, claimed_rows) from the committed citation-sweep artifacts.
+
+    ``claimed_rows`` are the works this report is entitled to publish as reach:
+    external C1 + C2 only. C3 (print-dictionary envelope), C0 (domain-gate
+    rejects) and project self-records are deliberately excluded here as well as
+    there — summing them would be exactly the overclaim the sweep exists to
+    prevent.
+
+    Degrades to ``({}, [])`` if the sweep has not been run in this checkout, so
+    this script never hard-fails offline; the report then says the tier is
+    unavailable rather than silently reporting zero citations.
+    """
+    summary: dict = {}
+    if SWEEP_CACHE_ROOT.exists():
+        months = sorted(p for p in SWEEP_CACHE_ROOT.iterdir()
+                        if p.is_dir() and (p / "summary.json").exists())
+        if months:
+            summary = json.loads(
+                (months[-1] / "summary.json").read_text(encoding="utf-8"))
+
+    rows: list[dict] = []
+    if SWEEP_CSV.exists():
+        with SWEEP_CSV.open(encoding="utf-8", newline="") as f:
+            for r in csv.DictReader(f):
+                if r.get("bucket") == "external" and r.get("confidence_tier") in ("C1", "C2"):
+                    rows.append(r)
+    rows.sort(key=lambda r: (r.get("confidence_tier", ""),
+                             -int(r.get("year") or 0),
+                             r.get("title") or ""))
+    return summary, rows
 
 
 # --------------------------------------------------------------------------- #
@@ -348,6 +397,12 @@ def main() -> None:
             if owner not in INTERNAL_OWNERS:
                 external_repos.add(full)
 
+    # ---- tier 4: systematic citation sweep (offline, from committed output) ----
+    sweep, sweep_rows = load_sweep()
+    sweep_ok = bool(sweep) and bool(sweep_rows)
+    sweep_headline = sweep.get("headline_external_digital", 0) if sweep else 0
+    sweep_fetched = sweep.get("fetched_at", "—") if sweep else "—"
+
     # ---- Zenodo status ----
     zen = load_cache(f"zenodo_{ZENODO_RECORD_ID}.json")
     zstatus, zdetail = zenodo_status(zen)
@@ -376,9 +431,11 @@ def main() -> None:
         add("dependent_codesearch", full, "raw_url_or_site_reference", "",
             f"https://github.com/{full}", "measured",
             "GitHub code-search hit for CDSL raw-URL / site consumption")
-    for title, year, venue, url in CITATIONS:
-        add("citation", title, "scholarly_citation", year, url, "estimated",
-            f"venue: {venue}")
+    for r in sweep_rows:
+        add("citation", r.get("title") or "", "scholarly_citation",
+            r.get("year") or "", r.get("url") or "", "measured",
+            f"{r.get('confidence_tier')} · venue: {r.get('venue') or '—'} · "
+            f"matched: {r.get('match_reason') or ''}")
     add("zenodo", f"record {ZENODO_RECORD_ID}", "status", zstatus,
         f"https://doi.org/10.5281/zenodo.{ZENODO_RECORD_ID}", "blocked", zdetail)
 
@@ -403,7 +460,9 @@ def main() -> None:
       "and cites the Cologne Digital Sanskrit Lexicon (CDSL) — not funder-facing "
       "vanity metrics (Workstream G6, MG 2026-07-03). **Measured** tiers "
       "(stars/forks, traffic, dependents) carry a URL and/or fetch date; the "
-      "**estimated** citation tier is representative, with no completeness claim.")
+      "citation tier is a **systematic, reproducible sweep** of OpenAlex whose "
+      "recall bounds are stated rather than hedged (H1478 — it replaced the five "
+      "hand-picked citations this tier used to carry).")
     A("")
 
     A("## Headline")
@@ -419,8 +478,14 @@ def main() -> None:
       "distinct external repos referencing org raw-URLs / the Cologne site |")
     A(f"| Curated known consumers | {len(KNOWN_CONSUMERS)} | "
       "libraries/apps/data packages shipping or wrapping CDSL |")
-    A(f"| Representative scholarly citations | {len(CITATIONS)} | "
-      "NOT exhaustive — see caveat |")
+    if sweep_ok:
+        A(f"| Scholarly citations of the digital resource | **{sweep_headline}** | "
+          f"systematic OpenAlex sweep ({sweep_fetched}) — a documented **lower "
+          "bound**, not a census |")
+    else:
+        A("| Scholarly citations of the digital resource | — | "
+          "sweep artifacts absent from this checkout — run "
+          "`python scripts/citation_sweep.py` |")
     A(f"| Zenodo OBS-T download stats | **{zstatus.upper()}** | see blocker below |")
     A("")
     A("**The stars-vs-clones gap is the finding.** The org collects ~"
@@ -484,17 +549,88 @@ def main() -> None:
         A("- _(no external hits in the current cache)_")
     A("")
 
-    A("## Tier 4 — Scholarly citations (estimated, representative)")
+    A("## Tier 4 — Scholarly citations (systematic sweep, bounded)")
     A("")
-    A("A **representative, non-exhaustive** set of published works that use or "
-      "cite the Cologne dictionaries/lexicon (web + Scholar, 2020-2026). This is "
-      "not a systematic citation count — no completeness is claimed.")
-    A("")
-    A("| Work | Year | Venue | Link |")
-    A("|---|---|---|---|")
-    for title, year, venue, url in CITATIONS:
-        A(f"| {title} | {year} | {venue} | [link]({url}) |")
-    A("")
+    if not sweep_ok:
+        A("_The citation sweep's committed output is not present in this "
+          "checkout, so this tier is unavailable. Run "
+          "`python scripts/citation_sweep.py` (offline, rebuilds from the "
+          "committed cache) and regenerate this report._")
+        A("")
+    else:
+        blob = ("https://github.com/sanskrit-lexicon/csl-observatory/blob/main")
+        A("**Method.** Every work below was found by a systematic, reproducible "
+          f"sweep of OpenAlex (snapshot {sweep_fetched}): "
+          f"{sweep.get('anchors', 0)} citation-graph anchors (`cites:<id>`, "
+          f"identifier-exact) plus {sweep.get('probes', 0)} phrase probes, "
+          "deduplicated by work id, passed through a domain gate, with project "
+          "self-records removed. Bare dictionary sigla are deliberately **never** "
+          "enumerated — they collide with millions of unrelated works, and the "
+          "measured collision counts are published as the evidence for that "
+          f"exclusion. Full method, probe registry, per-work tables and the "
+          f"complete result set: [`reports/citation_sweep.md`]({blob}/reports/"
+          "citation_sweep.md), regenerated by "
+          f"[`scripts/citation_sweep.py`]({blob}/scripts/citation_sweep.py).")
+        A("")
+        A("| Measure | Value | What it means |")
+        A("|---|---:|---|")
+        A(f"| **Citations of the digital resource (C1+C2)** | **{sweep_headline}** | "
+          "the claimed number: name-unique phrase match or citation-graph edge, "
+          "domain-gated, self-records removed |")
+        A(f"| C1 confirmed | {sweep.get('c1', 0)} | matched a string that can only "
+          "denote the Cologne digital resource |")
+        A(f"| C2 probable | {sweep.get('c2', 0)} | cites a CDSL anchor work in "
+          "OpenAlex's citation graph |")
+        A(f"| C3 print-dictionary envelope | {sweep.get('c3', 0)} | attests "
+          "Monier-Williams / Böhtlingk etc. — **not** counted as CDSL reach |")
+        A(f"| Rejected by the domain gate | {sweep.get('c0', 0)} | phrase "
+          "collisions, retained in the CSV with their reason |")
+        A(f"| Project self-records excluded | {sweep.get('internal_excluded', 0)} | "
+          "the org's own Zenodo release DOIs and project-member works |")
+        A("")
+        A("**Coverage and completeness — what this number is and is not.** It is "
+          f"a **documented lower bound**: *at least {sweep_headline} scholarly "
+          "works in OpenAlex demonstrably name or cite the Cologne digital "
+          f"Sanskrit lexicon as of {sweep_fetched}*. It is **not** a census, and "
+          "four bounds on its recall are stated rather than hedged: (1) a phrase "
+          "probe can only match a work whose full text OpenAlex has indexed "
+          + (f"— {100.0 * sweep['openalex_fulltext_works'] / sweep['openalex_scholarly_works']:.1f}% "
+             "of the scholarly corpus on this snapshot"
+             if sweep.get("openalex_fulltext_works") and sweep.get("openalex_scholarly_works")
+             else "— a minority of the corpus") +
+          "; (2) works citing the dictionary only by siglum (\"MW s.v. …\") are "
+          "invisible by design, a deliberate precision-over-recall trade; "
+          "(3) monographs, festschrift chapters and non-OA Indological venues are "
+          "unevenly indexed, so the Indological long tail is worse covered than "
+          "the NLP literature; (4) only works that *are* CDSL carry usable "
+          "`cites:` edges, which bounds the citation-graph family. Measured "
+          f"recall proxy: {sweep.get('seed_recall', 'n/a')} of the citations "
+          "previously hand-curated into this tier are recovered by the systematic "
+          "method — see the sweep report for why each miss is a coverage boundary "
+          "rather than a defect.")
+        A("")
+        A(f"**The distinction that must not blur:** the {sweep.get('c3', 0)} C3 "
+          "works attest the *print* dictionaries CDSL digitises. Citing "
+          "Monier-Williams 1899 says nothing about whether the Cologne digital "
+          "edition was used, so C3 is published beside the headline and never "
+          "added to it. Summing them would be the single easiest way to make this "
+          "tier dishonest.")
+        A("")
+        if sweep.get("semantic_scholar") != "ok":
+            A("_Second source: Semantic Scholar was attempted and was "
+              f"**{sweep.get('semantic_scholar', 'unattempted')}** (its keyless "
+              "pool is shared and rate-limits); no count here depends on it, so "
+              "this snapshot is single-source (OpenAlex) and says so._")
+            A("")
+        A(f"### The {len(sweep_rows)} works claimed as reach")
+        A("")
+        A("| Work | Year | Venue | Tier | Link |")
+        A("|---|---:|---|---|---|")
+        for r in sweep_rows:
+            A(f"| {(r.get('title') or '')[:100]} | {r.get('year') or ''} | "
+              f"{r.get('venue') or '—'} | {r.get('confidence_tier')} | "
+              f"[openalex]({r.get('url')}) |")
+        A("")
 
     A("## Zenodo OBS-T download stats — BLOCKED (DOI mismatch)")
     A("")
@@ -540,8 +676,20 @@ def main() -> None:
       "audience is builders and scholars pulling data, not stargazers.")
     A("- **The dependents are the strongest scholar-facing evidence** — each is a "
       "URL-checkable project that chose CDSL as its lexical backbone.")
-    A("- **Citations are under-counted here by design**; a systematic Scholar / "
-      "OpenAlex sweep (API-gated) is the natural G6 extension.")
+    if sweep_ok:
+        A("- **The citation tier is now systematic, and it is a floor.** "
+          f"{sweep_headline} works demonstrably name or cite the *digital* "
+          "resource; that number is a documented lower bound with four stated "
+          "recall bounds, not the hedge it replaced. Siglum-only citations "
+          "remain out of reach by design — buying them back would cost more "
+          "precision than the count is worth.")
+        A("- **Do not quote the print-dictionary envelope as CDSL reach.** The "
+          f"{sweep.get('c3', 0)} C3 works attest Monier-Williams and Böhtlingk, "
+          "not the Cologne digital edition.")
+    else:
+        A("- **Citations are under-counted here by design**; the systematic "
+          "OpenAlex sweep exists (`scripts/citation_sweep.py`) but its output is "
+          "missing from this checkout.")
     A("- **Fix the OBS-T DOI before the paper ships** — the current DOI points at "
       "someone else's work.")
     A("")
@@ -555,7 +703,8 @@ def main() -> None:
     print(f"wrote {OUT_CSV}")
     print(f"  stars {total_stars}  forks {total_forks}  "
           f"clones(sample) {total_clones}  dependents(ext) {len(external_repos)}  "
-          f"consumers {len(KNOWN_CONSUMERS)}  citations {len(CITATIONS)}")
+          f"consumers {len(KNOWN_CONSUMERS)}  "
+          f"citations(swept C1+C2) {len(sweep_rows)}")
     print(f"  zenodo: {zstatus} — {zdetail}")
     if meta.get("warnings"):
         print(f"  cache warnings: {len(meta['warnings'])}")

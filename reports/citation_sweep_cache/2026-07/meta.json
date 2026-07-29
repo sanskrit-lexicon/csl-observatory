@@ -1,0 +1,9 @@
+{
+  "fetched_at": "2026-07-28",
+  "warnings": [
+    "semantic scholar: HTTP 429"
+  ],
+  "probe_count": 16,
+  "anchor_count": 3,
+  "max_results_per_probe": 400
+}

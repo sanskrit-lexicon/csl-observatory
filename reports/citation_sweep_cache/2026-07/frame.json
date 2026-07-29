@@ -1,0 +1,30 @@
+{
+  "openalex_scholarly_works": 241937186,
+  "openalex_fulltext_works": 36647761,
+  "excluded_probes": [
+    {
+      "label": "MW",
+      "query": "\"MW\"",
+      "why": "bare dictionary siglum; also megawatt, molecular weight, microwave, Mann-Whitney, initials",
+      "count": 2336225
+    },
+    {
+      "label": "PW",
+      "query": "\"PW\"",
+      "why": "bare dictionary siglum; also pulse width, plane wave, power, personal watercraft, initials",
+      "count": 873310
+    },
+    {
+      "label": "PWG",
+      "query": "\"PWG\"",
+      "why": "bare dictionary siglum; also working-group acronyms",
+      "count": 8085
+    },
+    {
+      "label": "Monier-Williams",
+      "query": "\"Monier-Williams\"",
+      "why": "surname alone: matches every citation of any Monier-Williams edition or reprint, and other bearers of the name",
+      "count": 2453
+    }
+  ]
+}

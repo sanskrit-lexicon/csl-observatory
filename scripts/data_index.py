@@ -46,6 +46,12 @@ CATALOG: dict[str, Entry] = {
         "Repository-level contributor concentration and bus-factor indicators.",
         "Computed from committed contributor snapshots; merged identities depend on the maintainer-reviewed map.",
     ),
+    "citation_sweep.csv": Entry(
+        "external reach",
+        "scripts/citation_sweep.py",
+        "Systematic OpenAlex citation sweep: one row per swept work, with its confidence tier (C1 confirmed / C2 probable / C3 print-dictionary envelope / C0 rejected), what it attests (digital resource vs print dictionary), the probe or citation-graph anchor that matched it, and whether it is an external or project-internal record.",
+        "A documented lower bound, not a census: phrase probes can only reach works whose full text OpenAlex has indexed, and bare sigla (MW/PW/PWG) are deliberately never enumerated because they collide with millions of unrelated works. Only C1+C2 external rows are claimed as reach; C3 attests the underlying print dictionaries and must not be summed with them.",
+    ),
     "commits.csv": Entry(
         "github snapshot",
         "observatory/fetch.py; observatory/transform.py",
@@ -205,8 +211,8 @@ CATALOG: dict[str, Entry] = {
     "external_reach.csv": Entry(
         "external reach",
         "scripts/external_reach.py",
-        "Scholar-framed external reach: GitHub stars/forks, 14-day clone/view traffic for core repos, downstream dependents (known consumers + code-search hits), and representative citations, in one tidy long table.",
-        "Mixed measured/estimated: traffic is a sliding 14-day sample of core repos (not all 76); dependents from code search are a floor; citations are representative, not exhaustive. Zenodo tier is blocked pending a DOI correction.",
+        "Scholar-framed external reach: GitHub stars/forks, 14-day clone/view traffic for core repos, downstream dependents (known consumers + code-search hits), and the citations found by the systematic OpenAlex sweep, in one tidy long table.",
+        "Traffic is a sliding 14-day sample of core repos (not all 76); dependents from code search are a floor; the citation rows are the sweep's C1+C2 external works, a documented lower bound rather than a census (see citation_sweep.csv). Zenodo tier is blocked pending a DOI correction.",
     ),
     "issue_lifecycle_survival.csv": Entry(
         "issue lifecycle",
