@@ -4,6 +4,21 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+## [1.8.0] - 2026-08-04
+
+### Changed
+- **July cross-repo decisions re-adjudicated (H1875, Fable 5 `claude-fable-5`).**
+  Every item of the 2026-07-02 edition of
+  [`docs/CROSS_REPO_DECISIONS.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/CROSS_REPO_DECISIONS.md)
+  re-checked against live repo state via seven read-only evidence sweeps:
+  14 still-correct, 10 overtaken (struck in place with superseding pointers),
+  9 contradicted (evidence + ruling in place). Headline corrections: the
+  Tier-1 second-annotator recruit was PARKED by M.G. on 03-07 and must not
+  resurface in 2026; "A12 DOI minted" was false (H1364 scrub); MWS G5 gold
+  executed in full 02–03-07; csl-atlas H4 agent-adjudicated and the Xref
+  "independent witnesses" premise retracted; the SanskritKaraoke audio-TODO
+  and IndologyScholars sheet counts corrected against the actual files.
+
 ## [1.7.3] - 2026-07-29
 
 ### Changed
