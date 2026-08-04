@@ -8,7 +8,7 @@ the standards repo consumes — it commits observatory to keeping the schema
 fields named below stable, and lets csl-standards implement OntoLex-Lemon/TEI
 Lex-0 output without re-deriving the mapping. Source:
 [`docs/HYPOTHESIS_VIZ_STANDARDS_SPEC_2026-07.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/HYPOTHESIS_VIZ_STANDARDS_SPEC_2026-07.md)
-§4.4, staged via [H1495](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1495-Sonnet_csl-observatory_obs-t-ontolex-tei-routing-contract_22.07.26.md).
+§4.4, staged via [H1495](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1495-Sonnet_csl-observatory_obs-t-ontolex-tei-routing-contract_22.07.26.md).
 
 ## Field mapping
 

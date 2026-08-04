@@ -3,7 +3,7 @@
 _Created: 28-07-2026 · Last updated: 28-07-2026_
 
 Executed under handoff
-[H1759](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1759-Fable_csl-observatory_a12-obs-t-manuscript-reconciliation_27.07.26.md)
+[H1759](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1759-Fable_csl-observatory_a12-obs-t-manuscript-reconciliation_27.07.26.md)
 by Fable 5 (`claude-fable-5`), 28-07-2026.
 
 ## The defect
