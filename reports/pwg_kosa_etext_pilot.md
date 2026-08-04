@@ -7,7 +7,7 @@ _Opus 5 1M (`claude-opus-5[1m]`), H1715. Measurement reproducible with
 per-page numbers in
 [`data/pwg_scan_index_tracker/kosa_ocr_pilot.tsv`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/data/pwg_scan_index_tracker/kosa_ocr_pilot.tsv)._
 
-[H1715](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1715-Opus_csl-observatory_pwg-kosa-etext-pilot-amara-abhidhana_27.07.26.md)
+[H1715](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1715-Opus_csl-observatory_pwg-kosa-etext-pilot-amara-abhidhana_27.07.26.md)
 proposed OCR-ing the two heaviest kośa scan sets from the
 [H1706 e-text queue](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/data/pwg_scan_index_tracker/pwg_etext_candidate_queue.tsv)
 — `amara_dlc` (Amarakoṣa, Deslongchamps 1839; 16,151 PWG citations) and `abch2`

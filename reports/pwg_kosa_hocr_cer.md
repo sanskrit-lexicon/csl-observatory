@@ -9,7 +9,7 @@ per-page data in
 (cached hOCR under `raw/`, stripped text under `text/`, alignment output in `manifest.tsv`
 and `cer_sample.tsv`)._
 
-[H1715](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1715-Opus_csl-observatory_pwg-kosa-etext-pilot-amara-abhidhana_27.07.26.md)
+[H1715](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1715-Opus_csl-observatory_pwg-kosa-etext-pilot-amara-abhidhana_27.07.26.md)
 measured that BSB's already-published per-page hOCR beats local tesseract 5 `san` by 2.5×
 on a token-validity metric, but could not report a character error rate — see
 [`reports/pwg_kosa_etext_pilot.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/pwg_kosa_etext_pilot.md)

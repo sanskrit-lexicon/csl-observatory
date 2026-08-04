@@ -55,6 +55,6 @@ Digital Scholarship in the Humanities, or International Journal of Lexicography 
 
 Scaffolded 03-07-2026 by Fable 5 (`claude-fable-5`) executing [H089](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H089-Fable_csl-observatory_obs_capture_recapture_03.07.26.md); analysis shipped same session (commit `acd8687`).
 
-Extended 27-07-2026 by Opus 5 1M (`claude-opus-5[1m]`) executing [H1477](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1477-Opus_csl-observatory_capture-recapture-fuzzy-linkage-corrector-pair_22.07.26.md): the measured record-linkage ladder, the record-count sweep over all 44 csl-orig v02 dictionaries, and the within-era corrector-pair design. Readiness 2/5 → 3/5 (all three of the criteria stated for that step are now met; external validation is the remaining gate).
+Extended 27-07-2026 by Opus 5 1M (`claude-opus-5[1m]`) executing [H1477](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1477-Opus_csl-observatory_capture-recapture-fuzzy-linkage-corrector-pair_22.07.26.md): the measured record-linkage ladder, the record-count sweep over all 44 csl-orig v02 dictionaries, and the within-era corrector-pair design. Readiness 2/5 → 3/5 (all three of the criteria stated for that step are now met; external validation is the remaining gate).
 
 _Dr. Mārcis Gasūns_
