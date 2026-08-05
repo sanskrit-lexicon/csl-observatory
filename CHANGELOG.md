@@ -4,6 +4,8 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+## [1.10.0] - 2026-08-05
+
 ### Added
 - **Story page chapter 2 — the first measured month, July 2026 (H1864, Fable 5 `claude-fable-5`).**
   [`observatory/site/src/story.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/observatory/site/src/story.md)
