@@ -4,6 +4,7 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+## [1.9.1] - 2026-08-05
 ### Fixed
 - **G17 `refresh_observatory.py --check-only` red fixed (H2037, Sonnet 5 `claude-sonnet-5`).**
   `repo-metadata-check` and `workflow-health-check` were failing because `repos.csv` gained
