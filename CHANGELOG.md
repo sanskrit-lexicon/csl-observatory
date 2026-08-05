@@ -4,6 +4,25 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+### Added
+- **Story page chapter 2 — the first measured month, July 2026 (H1864, Fable 5 `claude-fable-5`).**
+  [`observatory/site/src/story.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/observatory/site/src/story.md)
+  gains a second chapter grounded entirely in July-committed reports: org activity in the
+  thirteen-year curve (1,422 commits, month #2 of the whole record; closings 91 vs 69
+  openings), the scan-index campaign committed as data
+  ([`reports/pwg_scan_index.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/pwg_scan_index.md)),
+  the kośa OCR NO-GO pilot
+  ([`reports/pwg_kosa_etext_pilot.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/pwg_kosa_etext_pilot.md)),
+  the first error-population estimates
+  ([`reports/error_recapture.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/error_recapture.md),
+  [`reports/corrector_recapture.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/corrector_recapture.md)),
+  and the OpenAlex citation lower bound
+  ([`reports/citation_sweep.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/citation_sweep.md)).
+  Four new figures, each from an already-committed feed with a Chart Trust Block and an
+  `Inputs.table` fallback; chapter 1's three figures retrofitted with the same trust
+  blocks + CSV downloads; `story` added to `scripts/site_visualization_smoke.py` PAGES
+  (now 12 pages).
+
 ## [1.9.1] - 2026-08-05
 ### Fixed
 - **G17 `refresh_observatory.py --check-only` red fixed (H2037, Sonnet 5 `claude-sonnet-5`).**

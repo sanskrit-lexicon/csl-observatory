@@ -24,6 +24,7 @@ PAGES = [
     "pos-by-text",
     "paradigm-cell-coverage",
     "sense-polysemy",
+    "story",
 ]
 
 
