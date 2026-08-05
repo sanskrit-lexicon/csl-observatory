@@ -4,6 +4,24 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+### Fixed
+- **G17 `refresh_observatory.py --check-only` red fixed (H2037, Sonnet 5 `claude-sonnet-5`).**
+  `repo-metadata-check` and `workflow-health-check` were failing because `repos.csv` gained
+  `PUI` (Purana Index 1951) on 2026-07-31 and neither `repo_metadata.csv` nor
+  `workflow_health.csv` had been re-derived since — a stale-artifact drift, not a code
+  regression, exactly as the phase's own note predicted. Reran the writer phases
+  (`repo_metadata_snapshot.py`, `workflow_health.py`, `data_index.py`) to add the missing
+  row. Also fixed a real bug surfaced along the way: `refresh_observatory.py`'s
+  `run_text()` decoded subprocess output without an explicit `encoding="utf-8"`, so any
+  non-UTF-8 byte from `npm run build` on Windows (observed: a stray `0xad`) crashed the
+  whole pipeline with an unhandled `UnicodeDecodeError` instead of reporting the phase as
+  failed. Added `encoding="utf-8", errors="replace"`. All six data/regression `--check-only`
+  phases now pass locally; `site-build` remains locally red only because `observable build`
+  fetches `npm:d3@latest` from a CDN this network can't reach (`ConnectTimeoutError`) — out
+  of scope per the handoff's own "CDN-only failures without local fix path" exclusion. CI's
+  equivalent `npm run build` step (real network) went green on the 2026-08-03 scheduled
+  [Refresh observatory run](https://github.com/sanskrit-lexicon/csl-observatory/actions/runs/30789576509).
+
 ## [1.9.0] - 2026-08-05
 
 ### Added

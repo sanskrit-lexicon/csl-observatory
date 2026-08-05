@@ -76,6 +76,8 @@ def run_text(command: list[str], cwd: Path = ROOT) -> tuple[int, str]:
             command,
             cwd=cwd,
             text=True,
+            encoding="utf-8",
+            errors="replace",
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
             check=False,
