@@ -22,6 +22,18 @@ All notable changes to this repository are documented here, following [Keep a Ch
   equivalent `npm run build` step (real network) went green on the 2026-08-03 scheduled
   [Refresh observatory run](https://github.com/sanskrit-lexicon/csl-observatory/actions/runs/30789576509).
 
+## [1.9.0] - 2026-08-05
+
+### Added
+- **A69 paper draft: the PWG scan-index campaign (H1863, Fable 5 `claude-fable-5`).**
+  [`article/A69_pwg_scan_index_campaign.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/article/A69_pwg_scan_index_campaign.md)
+  — full draft (methods, results, limitations) over the committed campaign registry
+  (`data/pwg_scan_index_tracker/`), the 40-issue history reconstruction, and the
+  resolver wiring audit; every number traced to committed data, none newly computed.
+  Records (not averages) the `scan_dirs_observed_wired: 32` (summary JSON) vs 35
+  (post-H1714 report table) same-day discrepancy as a data-consistency finding.
+  Registered as A69 in Uprava `ARTICLES.md`, readiness 3/5.
+
 ## [1.8.0] - 2026-08-04
 
 ### Changed
