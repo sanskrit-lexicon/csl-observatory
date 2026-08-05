@@ -16,6 +16,7 @@ that duplicates A61.
 | [`refs.bib`](refs.bib) | — | — | BibTeX bibliography for the companion paper |
 | [`A15_github_ecosystem.md`](A15_github_ecosystem.md) | Gasūns | Formal third-person | A15 full draft: CDSL as a GitHub maintenance ecosystem (seven analytical findings incl. the data-layer bus factor, the correction-loop anatomy + 52,498-event ledger, the `csl-orig` campaign case study, claim→artifact inventory; boundary note vs the pair above) |
 | [`A48_error_recapture.md`](A48_error_recapture.md) | Gasūns | Formal third-person | A48 skeleton: capture–recapture estimate of residual errors |
+| [`A69_pwg_scan_index_campaign.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/article/A69_pwg_scan_index_campaign.md) | Gasūns | Formal third-person | A69 full draft: the 2025–2026 PWG scan-index campaign — coverage by citation mass, resolver wiring audit, process findings (review caught dictionary errors, not volunteer errors; edition identity as the expensive failure) |
 
 The report has a legacy root mirror at
 [`gasuns-cologne-30-report.md`](../gasuns-cologne-30-report.md). It is not an
