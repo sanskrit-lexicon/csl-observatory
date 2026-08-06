@@ -1,6 +1,6 @@
 # Cross-Repo Decisions Needed — Master Index
 
-_Created: 14-06-2026 · Last updated: 04-08-2026_
+_Created: 14-06-2026 · Last updated: 06-08-2026_
 
 Consolidated list of every item across the Sanskrit Lexicon repos that is
 blocked on a human decision, a credential/access grant, or a scholarly
@@ -38,6 +38,53 @@ M.G.'s call, options priced), or **Drop/Park** (premise stale or premature).
 
 > Agent note: when M.G. asks "what's next?", surface this list. Items are
 > ordered by leverage — Tier 1 unblocks the most with the least effort.
+
+---
+
+## D — Ruled decisions graduated from Uprava CONTRADICTIONS (binding; do not re-litigate)
+
+The [Uprava CONTRADICTIONS](https://github.com/gasyoun/Uprava/blob/main/CONTRADICTIONS.md)
+registry holds *unresolved* disagreements between two sources. Its stated
+graduation path is that a **ruled** contradiction becomes a `D##` here and leaves a
+tombstone there. This section is that landing surface, opened 06-08-2026 with the
+first graduation.
+
+**Numbering.** `D01`, `D02`, … — zero-padded, this file's own append-only sequence,
+never renumbered. It is **distinct** from the observatory-scoped `D1`–`D4` in
+[`DECISIONS_NEEDED.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/DECISIONS_NEEDED.md)
+and from the `D2`–`D5` finding ids in
+[`PERFORMANCE_AUDIT_2026-07.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/PERFORMANCE_AUDIT_2026-07.md);
+the zero-padding is what keeps the three apart at a glance.
+
+### D01 — A measurement of a third-party tool is scoped to the VERSION it was taken on (06-08-2026)
+
+**Ruling.** A standing truth derived from measuring someone else's tool records a
+property of **that version**, not a permanent property of the route. When a later
+run contradicts it, the first question is *did the dependency change under us*, and
+the deciding evidence is a **knob-by-knob diff of the two rigs' source** — not a
+third measurement. Where the two rigs agree on every knob that could produce the
+effect, the newer reading wins and the standing truth is **rewritten, not
+re-confirmed**.
+
+**The case that established it.** Whether a one-shot `claude -p` subprocess can
+amortise its own system prompt across calls. Measured **cannot** on CLI v1.127.0
+(02-08-2026, two identical back-to-back calls each re-creating ~49 k cache tokens);
+measured **can** on v2.1.223 (06-08-2026, purpose-built 7-call sequence — cold call
+wrote 26 243 + read 28 882 = 55 125, five later calls created **0** and read 55 125
+exactly, at gaps of 34/94/120/128/557 s). Both runs were right about their own
+version. The rigs differ in exactly one knob — spawn cwd — which changes how *large*
+the created prefix is and cannot change whether call #2 reuses call #1's.
+
+**Binding consequences.**
+
+| | |
+|---|---|
+| Operational home of the rewritten truth | [PROMPT_CACHING_PWG_RU §1](https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/PROMPT_CACHING_PWG_RU.md) + [RUN_FREQ_MAX](https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/src/pilot/RUN_FREQ_MAX.md) — where executors actually read it |
+| Route consequence | the Messages-API port loses its cache argument; it is re-based on wall-clock and turn-count, not on turning `create` into `read` |
+| Standing requirement | **every cache/cost measurement records the CLI version next to the numbers** — a number without a version cannot be re-adjudicated later, only re-run |
+| Not established | behaviour past the 1 h TTL gap (deliberately unmeasured); amortisation for *agentic* (multi-turn) calls, whose envelope sums a variable turn count and so is not a comparable quantity |
+| Evidence | [re-measure memo](https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/pwg_ru/h2250/CLI_CACHE_AMORTISATION_REMEASURE_06-08-2026.md) · [raw envelopes](https://github.com/gasyoun/SanskritLexicography/tree/master/RussianTranslation/pwg_ru/h2250/raw) · [PR #1148](https://github.com/gasyoun/SanskritLexicography/pull/1148) |
+| Provenance | H2250, Opus 5 (`claude-opus-5[1m]`); probe calls on Sonnet 5 (`claude-sonnet-5`). Graduated from [Uprava CONTRADICTIONS §7](https://github.com/gasyoun/Uprava/blob/main/CONTRADICTIONS.md); generalised as [Uprava FINDINGS §326](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md) |
 
 ---
 

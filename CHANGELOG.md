@@ -4,6 +4,17 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+### Added
+- **`D01` — the first ruled decision graduated from Uprava CONTRADICTIONS (H2250, Opus 5 `claude-opus-5[1m]`).**
+  [`docs/CROSS_REPO_DECISIONS.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/CROSS_REPO_DECISIONS.md)
+  gains the `D##` landing surface the CONTRADICTIONS graduation contract has always
+  pointed at but which never existed, plus its numbering rule (zero-padded, append-only,
+  distinct from the observatory-scoped `D1`–`D4` in `DECISIONS_NEEDED.md`). `D01` rules
+  that a measurement of a third-party tool is scoped to the **version** it was taken on:
+  when a later run contradicts a standing truth, the deciding evidence is a knob-by-knob
+  diff of the two rigs' source, not a third measurement — established on the `claude -p`
+  cache-amortisation reversal between CLI v1.127.0 and v2.1.223.
+
 ## [1.10.0] - 2026-08-05
 
 ### Added
