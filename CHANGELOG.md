@@ -4,6 +4,8 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+## [1.11.0] - 2026-08-06
+
 ### Added
 - **`D01` — the first ruled decision graduated from Uprava CONTRADICTIONS (H2250, Opus 5 `claude-opus-5[1m]`).**
   [`docs/CROSS_REPO_DECISIONS.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/CROSS_REPO_DECISIONS.md)
