@@ -58,10 +58,13 @@ def parse_iso(date_str):
 def write_csv(path, rows, header):
     """Write rows to CSV."""
     with open(path, "w", encoding="utf-8", newline="") as f:
-        w = csv.writer(f)
+        w = csv.writer(f, lineterminator="\n")
         w.writerow(header)
         for row in rows:
-            w.writerow(row)
+            w.writerow(
+                v.replace("\r\n", " ").replace("\r", " ") if isinstance(v, str) else v
+                for v in row
+            )
 
 def main():
     print(f"\n{'='*60}")

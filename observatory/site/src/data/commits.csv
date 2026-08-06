@@ -31,7 +31,7 @@ AMAR,0ebf3fc7fd30,2026-08-03T05:14:04Z,dependabot[bot],dependabot[bot],49699333+
 AMAR,51d9f7488be4,2026-07-31T13:07:27Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .gitattributes (eol=lf line-ending policy) (#10)
 AMAR,d7189e343392,2026-07-31T12:37:37Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#11)
 AMAR,0f785258565d,2026-07-30T13:18:06Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,add changelog duplicate-entry guard (CI) (#9)
-AMAR,fa40706ce597,2026-07-12T16:08:04Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (1 links, 1 files)"
+AMAR,fa40706ce597,2026-07-12T16:08:04Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (1 links, 1  files)"
 AMAR,0809f5b490c2,2026-07-12T03:33:33Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: metadoc template v2 backfill (H663) (#7)
 AMAR,6f497029b55a,2026-07-11T23:25:28Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,ai-wip: seed .ai_state.md session journal (H704)
 AMAR,9cad0d59be98,2026-07-11T06:54:35Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: conversion pipeline operator manual + metadoc (H531) (#6)
@@ -57,7 +57,7 @@ AP,6a19493c981b,2026-07-20T05:14:35Z,dependabot[bot],dependabot[bot],49699333+de
 AP,767c2d33309e,2026-07-14T09:21:22Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,Merge remote-tracking branch 'origin/main'
 AP,a1b8febe7f39,2026-07-14T04:14:11Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 3 broken link(s) (org-wide link audit, auto-fix pass)"
 AP,a84d781ef545,2026-07-14T04:14:11Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 3 broken link(s) (org-wide link audit, auto-fix pass)"
-AP,54a63a7682e0,2026-07-12T16:08:15Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (1 links, 1 files)"
+AP,54a63a7682e0,2026-07-12T16:08:15Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (1 links, 1  files)"
 AP,4135bf20533a,2026-07-12T03:33:28Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: metadoc template v2 backfill (H663) (#47)
 AP,4ebb4b686ab4,2026-07-11T07:39:20Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: pipelines operator manual + metadoc (H524) (#46)
 AP,2c78097a7859,2026-07-10T22:31:22Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): refresh to current issue/milestone/contributor state (H548) (#45)
@@ -310,7 +310,7 @@ ApteES,dc772049ae39,2026-07-20T05:12:42Z,dependabot[bot],dependabot[bot],4969933
 ApteES,dbe0fc253a04,2026-07-14T09:21:25Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,Merge remote-tracking branch 'origin/main'
 ApteES,0fca9f50f237,2026-07-14T04:18:41Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 6 broken link(s) (org-wide link audit, auto-fix pass)"
 ApteES,e225457ff49b,2026-07-14T04:18:41Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 6 broken link(s) (org-wide link audit, auto-fix pass)"
-ApteES,fee845f89235,2026-07-12T16:10:18Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (2 links, 1 files)"
+ApteES,fee845f89235,2026-07-12T16:10:18Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (2 links, 1  files)"
 ApteES,6d15af2294d1,2026-07-12T03:33:19Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: metadoc template v2 backfill (H663) (#26)
 ApteES,6b0eb3245c4d,2026-07-11T23:26:05Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,ai-wip: seed .ai_state.md session journal (H704)
 ApteES,f88ac0771c42,2026-07-11T09:34:44Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: tooling operator manual + metadoc (H521) (#25)
@@ -556,7 +556,7 @@ BHS,2cb2327b28f1,2026-07-24T06:06:17Z,gasyoun,Mārcis Gasūns,gasyoun@users.nore
 BHS,342c85251367,2026-07-14T09:21:28Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,Merge remote-tracking branch 'origin/main'
 BHS,387c0e371d05,2026-07-14T04:10:55Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 5 broken link(s) (org-wide link audit, auto-fix pass)"
 BHS,2d76c40437c8,2026-07-14T04:10:55Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 5 broken link(s) (org-wide link audit, auto-fix pass)"
-BHS,4eec3b263ca7,2026-07-12T16:10:34Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (1 links, 1 files)"
+BHS,4eec3b263ca7,2026-07-12T16:10:34Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (1 links, 1  files)"
 BHS,e9557c7fe484,2026-07-11T17:54:53Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: metadoc template v2 backfill (H663) (#15)
 BHS,662024c2cc70,2026-07-11T10:06:53Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: correction pipelines operator manual + metadoc (H519) (#13)
 BHS,f90790f9aeeb,2026-07-05T18:35:41Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: upgrade README to best-standard with usage example (#11)
@@ -625,7 +625,7 @@ BOP,aa44f50ec977,2026-07-14T04:10:58Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix
 BOP,4486ad7aa809,2026-07-14T04:10:58Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 3 broken link(s) (org-wide link audit, auto-fix pass)"
 BOP,04f0a4fa9e67,2026-07-13T11:42:53Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #16 from sanskrit-lexicon/readme-refresh-h548
 BOP,c2feaf9632a0,2026-07-13T11:20:02Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,Merge remote-tracking branch 'origin/main' into readme-refresh-h548
-BOP,9420775fce2e,2026-07-12T16:11:36Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (1 links, 1 files)"
+BOP,9420775fce2e,2026-07-12T16:11:36Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (1 links, 1  files)"
 BOP,f087dd135194,2026-07-11T09:34:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: add correction operator manual + metadoc (H516) (#15)
 BOP,3aea3b566e35,2026-07-10T22:31:35Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): refresh to org conventions (H548) (#14)
 BOP,d13d1a8b1526,2026-07-10T21:04:11Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,docs(README): refresh to org conventions (H548)
@@ -867,7 +867,7 @@ CCS,44b9187e01cf,2020-04-15T01:40:12Z,funderburkjim,funderburkjim,funderburkjim@
 COLOGNE,facb43fe5b18,2026-07-23T09:40:32Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): CodeQL triggers on main (H1522 / H1245) (#473)
 COLOGNE,63a59f4f1f3a,2026-07-20T05:12:27Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,Bump actions/setup-python from 6 to 7 (#472)
 COLOGNE,36a97fa5e26d,2026-07-18T11:45:24Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs: TOOLING_MANUAL estate refresh — fact-check recounts, executed worked examples, LAST_VERIFIED metadoc block (H1245) (#471)"
-COLOGNE,5222acbbebc5,2026-07-12T16:18:15Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (1 links, 1 files)"
+COLOGNE,5222acbbebc5,2026-07-12T16:18:15Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (1 links, 1  files)"
 COLOGNE,9cdb83283f6a,2026-07-12T03:33:06Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: metadoc template v2 backfill (H663) (#470)
 COLOGNE,c560a6222d38,2026-07-11T06:26:00Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: record H506 manual completion in .ai_state.md (#469)
 COLOGNE,3530b05e901e,2026-07-11T06:22:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs: add operator TOOLING_MANUAL.md + metadoc, link from README (H506) (#468)"
@@ -1883,7 +1883,7 @@ GRA,38838620c7e2,2026-07-20T05:13:50Z,dependabot[bot],dependabot[bot],49699333+d
 GRA,9cc34e785470,2026-07-14T09:22:16Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,Merge remote-tracking branch 'origin/main'
 GRA,310dec78610a,2026-07-14T04:16:36Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 4 broken link(s) (org-wide link audit, auto-fix pass)"
 GRA,9e3b0d1e5079,2026-07-14T04:16:36Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 4 broken link(s) (org-wide link audit, auto-fix pass)"
-GRA,a188b7774002,2026-07-12T16:18:25Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (1 links, 1 files)"
+GRA,a188b7774002,2026-07-12T16:18:25Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (1 links, 1  files)"
 GRA,9b15c96cd36d,2026-07-11T06:46:13Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: add sub-workflow operator manual + metadoc (H512) (#55)
 GRA,c9c2f2aff564,2026-07-10T22:31:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): refresh status claims to live counts + add Pages landing page (H548) (#54)
 GRA,fdc003d33609,2026-07-10T21:02:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: drop ё per MG rule (keep всё/все distinction) - H543 (#53)
@@ -2110,7 +2110,7 @@ LRV,2482857218fa,2026-07-31T12:31:24Z,gasyoun,Mārcis Gasūns,gasyoun@users.nore
 LRV,88cbeffa3d44,2026-07-14T09:22:23Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,Merge remote-tracking branch 'origin/main'
 LRV,155b147e604f,2026-07-14T04:14:13Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 3 broken link(s) (org-wide link audit, auto-fix pass)"
 LRV,f4a8ea2b5cac,2026-07-14T04:14:13Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 3 broken link(s) (org-wide link audit, auto-fix pass)"
-LRV,a9d3f71a0fe3,2026-07-12T16:19:20Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (2 links, 1 files)"
+LRV,a9d3f71a0fe3,2026-07-12T16:19:20Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (2 links, 1  files)"
 LRV,34d58067b498,2026-07-12T12:22:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(README): full blob URLs, verify facts, bump date (H548) (#40)"
 LRV,a0fdc589d565,2026-07-11T23:25:53Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,ai-wip: seed .ai_state.md session journal (H704)
 LRV,2a6c7ddd1f5d,2026-07-11T17:56:14Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: metadoc template v2 backfill (H663) (#39)
@@ -2301,7 +2301,7 @@ MD,82e60a99cd69,2026-07-20T05:13:09Z,dependabot[bot],dependabot[bot],49699333+de
 MD,facdb1c31059,2026-07-14T09:22:28Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,Merge remote-tracking branch 'origin/main'
 MD,13fd168b6cfa,2026-07-14T04:14:16Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 7 broken link(s) (org-wide link audit, auto-fix pass)"
 MD,79c7f1a391e2,2026-07-14T04:14:16Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 7 broken link(s) (org-wide link audit, auto-fix pass)"
-MD,2cd083ae5d7a,2026-07-12T16:19:31Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (1 links, 1 files)"
+MD,2cd083ae5d7a,2026-07-12T16:19:31Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (1 links, 1  files)"
 MD,1ba9ffab0046,2026-07-11T07:16:17Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: add pipeline operator manual + metadoc (H513) (#24)
 MD,fcde89cc81c7,2026-07-10T22:30:53Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): refresh to current state (H548) (#23)
 MD,42188afe845a,2026-07-10T20:17:15Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: drop ё per MG rule (keep всё/все distinction) - H543 (#22)
@@ -2474,7 +2474,7 @@ MWS,af45f16fc49a,2026-07-16T22:00:46Z,gasyoun,Mārcis Gasūns,gasyoun@users.nore
 MWS,9aac8acb9a1e,2026-07-14T09:22:34Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,Merge remote-tracking branch 'origin/master'
 MWS,50c10c671330,2026-07-14T04:23:57Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 21 broken link(s) (org-wide link audit, auto-fix pass)"
 MWS,4fe7bbdc8784,2026-07-14T04:23:57Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 21 broken link(s) (org-wide link audit, auto-fix pass)"
-MWS,fbc5ac64f639,2026-07-12T16:06:30Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (7 links, 6 files)"
+MWS,fbc5ac64f639,2026-07-12T16:06:30Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (7 links, 6  files)"
 MWS,6135e17673be,2026-07-11T18:41:19Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"A17 (PAPER_RU): author-voice pass — register, onomastics, de-anglicization + SIGNOFF (H681) (#241)"
 MWS,6c9350e004e4,2026-07-10T22:31:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): refresh status claims + apply org MD conventions (H548) (#240)
 MWS,bf5a09a73e0c,2026-07-10T21:01:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: drop ё per MG rule (keep всё/все distinction) - H543 (#239)
@@ -3686,7 +3686,7 @@ PWK,cbdb864a3623,2026-07-20T05:13:51Z,dependabot[bot],dependabot[bot],49699333+d
 PWK,e62d0ce4a782,2026-07-14T09:22:41Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,Merge remote-tracking branch 'origin/main'
 PWK,95fa664d8000,2026-07-14T04:28:57Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 8 broken link(s) (org-wide link audit, auto-fix pass)"
 PWK,cd0811ce645e,2026-07-14T04:28:57Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 8 broken link(s) (org-wide link audit, auto-fix pass)"
-PWK,b366aedd3251,2026-07-12T16:20:07Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (1 links, 1 files)"
+PWK,b366aedd3251,2026-07-12T16:20:07Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (1 links, 1  files)"
 PWK,13477a3c4d83,2026-07-12T03:33:37Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: metadoc template v2 backfill (H663) (#132)
 PWK,be6efd7fb9aa,2026-07-11T07:23:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: pipelines operator manual + metadoc (H530) (#131)
 PWK,67d1518f4ce1,2026-07-10T22:30:29Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(README): refresh stale issue/milestone counts, add dated header, remove HTML (H548) (#130)"
@@ -4213,7 +4213,7 @@ VCP,b83c86d60f0f,2026-07-20T05:14:45Z,dependabot[bot],dependabot[bot],49699333+d
 VCP,295c20c5f592,2026-07-14T09:23:02Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,Merge remote-tracking branch 'origin/main'
 VCP,a7f7509c22ed,2026-07-14T04:31:48Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 17 broken link(s) (org-wide link audit, auto-fix pass)"
 VCP,4a0447ea11ac,2026-07-14T04:31:48Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 17 broken link(s) (org-wide link audit, auto-fix pass)"
-VCP,4a85ded252e6,2026-07-12T16:27:01Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (1 links, 1 files)"
+VCP,4a85ded252e6,2026-07-12T16:27:01Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (1 links, 1  files)"
 VCP,ed61836aa205,2026-07-11T23:27:22Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,ai-wip: seed .ai_state.md session journal (H704)
 VCP,9f76b45d77f3,2026-07-11T18:00:23Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: metadoc template v2 backfill (H663) (#43)
 VCP,0a022d3baeb5,2026-07-11T11:18:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): correct contributor count from live GitHub API — H548 follow-up (#42)
@@ -5633,7 +5633,7 @@ csl-apidev,c308baf7040e,2026-07-14T09:21:56Z,gasyoun,Mārcis Gasūns,gasyoun@ya.
 csl-apidev,935272c491f2,2026-07-14T04:38:03Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 4 broken link(s) (org-wide link audit, auto-fix pass)"
 csl-apidev,d887680ad8d5,2026-07-14T04:38:03Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 4 broken link(s) (org-wide link audit, auto-fix pass)"
 csl-apidev,44c5b329054e,2026-07-12T16:33:22Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,design(pwkvn): Minimal-direction mockup of the dict-web landing (H563 fan-out) (#83)
-csl-apidev,d613950979b3,2026-07-12T16:06:10Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (9 links, 5 files)"
+csl-apidev,d613950979b3,2026-07-12T16:06:10Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (9 links, 5  files)"
 csl-apidev,c7d2922cf7f7,2026-07-11T06:15:22Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): refresh stale issue stats + document fork-sync + web-backend role (H549) (#82)
 csl-apidev,6a3ae27b09dc,2026-07-09T04:22:44Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,SPEC-3: C-SALT MW parity report + input-default bugfix + cleanurl start (#81)
 csl-apidev,accdca4a6c8f,2026-07-08T19:30:01Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,docs: repoint H233 handoff link to Uprava archive/
@@ -6262,7 +6262,7 @@ csl-app,a2c55d4372f3,2026-07-30T13:16:52Z,gasyoun,Mārcis Gasūns,gasyoun@users.
 csl-app,1b10af51b77c,2026-07-14T09:21:59Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,Merge remote-tracking branch 'origin/main'
 csl-app,a7195a760125,2026-07-14T04:38:03Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 1 broken link(s) (org-wide link audit, auto-fix pass)"
 csl-app,43073967a8e0,2026-07-14T04:38:03Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 1 broken link(s) (org-wide link audit, auto-fix pass)"
-csl-app,254ea3ec483d,2026-07-12T16:23:16Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (1 links, 1 files)"
+csl-app,254ea3ec483d,2026-07-12T16:23:16Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (1 links, 1  files)"
 csl-app,4367b0b2006a,2026-07-11T17:56:05Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: metadoc template v2 backfill (H663) (#55)
 csl-app,4a0789308bc5,2026-07-11T06:48:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: correct README facts + full blob URLs (H549) (#54)
 csl-app,35b14478daea,2026-07-10T21:56:50Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: add Build & Release operator manual + metadoc (H504) (#53)
@@ -6510,7 +6510,7 @@ csl-corrections,a00eb23406fe,2026-07-13T02:01:29Z,github-actions[bot],github-act
 csl-corrections,faeaaa936f77,2026-07-12T19:47:18Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,corrections: promote 2026-07 batch to batch_20260712 (csl-orig PR #2879)
 csl-corrections,015fa8d0d9f6,2026-07-12T18:23:09Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,corrections(ap90): change_ap90_1 XML-validated 🟡->🔵 (make_xml All records parsed by ET)
 csl-corrections,08e54daaea63,2026-07-12T17:57:08Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,corrections: track the pending AP90 batch queue (audit trail)
-csl-corrections,25837672ee3b,2026-07-12T16:03:10Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (32 links, 3 files)"
+csl-corrections,25837672ee3b,2026-07-12T16:03:10Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (32 links, 3  files)"
 csl-corrections,b9e05bed7c81,2026-07-12T01:59:34Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-07-11
 csl-corrections,3c8408edbf32,2026-07-11T18:45:41Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,guard: block direct commits in the shared main tree (force worktrees)
 csl-corrections,ece86adcae90,2026-07-11T17:57:21Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: metadoc template v2 backfill (H663) (#299)
@@ -7799,7 +7799,7 @@ csl-inflect,14cd8021e6f0,2026-07-27T18:00:12Z,gasyoun,Mārcis Gasūns,gasyoun@us
 csl-inflect,20a77aff710d,2026-07-15T05:18:44Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,chore(release): 0.1.0
 csl-inflect,82d9f6c8c581,2026-07-14T09:22:05Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,Merge remote-tracking branch 'origin/main'
 csl-inflect,a118033646fb,2026-07-14T04:34:30Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 1 broken link(s) (org-wide link audit, auto-fix pass)"
-csl-inflect,83d97aff3859,2026-07-12T16:23:57Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (1 links, 1 files)"
+csl-inflect,83d97aff3859,2026-07-12T16:23:57Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (1 links, 1  files)"
 csl-inflect,a1829fd11757,2026-07-11T17:56:32Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: metadoc template v2 backfill (H663) (#27)
 csl-inflect,36c1377abe96,2026-07-11T06:14:53Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): rewrite so every claim is currently true (H549) (#26)
 csl-inflect,010c5823c1b8,2026-07-10T22:54:12Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: add pipeline operator manual + metadoc (H507) (#25)
@@ -8192,7 +8192,7 @@ csl-newsletter,c157e3baec95,2026-07-31T12:33:37Z,gasyoun,Mārcis Gasūns,gasyoun
 csl-newsletter,64f9672a84e4,2026-07-27T17:56:03Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#7)
 csl-newsletter,a53bc8dc7b6e,2026-07-14T09:22:07Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,Merge remote-tracking branch 'origin/main'
 csl-newsletter,b09058ca14ec,2026-07-14T04:33:54Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 1 broken link(s) (org-wide link audit, auto-fix pass)"
-csl-newsletter,414e0c376057,2026-07-12T16:24:23Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (1 links, 1 files)"
+csl-newsletter,414e0c376057,2026-07-12T16:24:23Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (1 links, 1  files)"
 csl-newsletter,489c700da461,2026-07-11T07:35:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: add publish operator manual + metadoc (H514) (#6)
 csl-newsletter,bb74bfc463e6,2026-07-11T06:15:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(readme): refresh to reflect true state (H549) (#5)
 csl-newsletter,30a5a733aa68,2026-07-09T01:39:41Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,Dedupe case-only README.md/readme.md duplicate
@@ -8311,7 +8311,7 @@ csl-observatory,7434effd32b0,2026-07-13T21:32:10Z,gasyoun,Mārcis Gasūns,gasyou
 csl-observatory,9d99bd786550,2026-07-13T17:29:23Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"H817 WS1.2: 3 new statistics census artifacts (POS-per-text, paradigm-cell coverage, sense/polysemy per dict) (#88)"
 csl-observatory,694dfb154f2b,2026-07-13T12:19:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H817 WS1.3: statistics census dashboard skeleton (6 Observable pages) (#89)
 csl-observatory,95629fcd3816,2026-07-12T19:43:08Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore: adopt org-standard PR template (data/build/docs/navigation) (#87)
-csl-observatory,0801f63dfc9f,2026-07-12T16:06:42Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (7 links, 3 files)"
+csl-observatory,0801f63dfc9f,2026-07-12T16:06:42Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: repoint dead Uprava handoff links to archive/ (7 links, 3  files)"
 csl-observatory,24d7cbe61536,2026-07-12T09:39:07Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H787: per-family verdict table for the 5 census-flagged pipeline template families (#86)
 csl-observatory,81175a091afd,2026-07-12T05:18:21Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,ai-state: journal H688 census close (PR #85)
 csl-observatory,fa629831ea93,2026-07-12T05:03:22Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"H688: code-duplication census re-run — the sanskrit-util dedup payoff, measured (#85)"
