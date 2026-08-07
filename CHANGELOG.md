@@ -4,6 +4,20 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+## [1.12.0] - 2026-08-07
+### Fixed
+- **Stripped embedded CR bytes from `commits.csv`, sanitized the CSV generator**
+  (H2315, Sonnet 5 `claude-sonnet-5`): part of the org EOL census
+  ([Uprava/tools/eol_census.py](https://github.com/gasyoun/Uprava/blob/main/tools/eol_census.py)).
+  18 commit-subject fields carried a literal `\r` control character (not a CRLF
+  line ending — `git add --renormalize` left them untouched) in both
+  `data/commits.csv` and `observatory/site/src/data/commits.csv`. Fixed the
+  two committed copies and `observatory/transform.py`'s `write_csv()`, which now
+  strips `\r`/`\r\n` from string fields and sets `lineterminator="\n"` explicitly
+  (Python's `csv.writer` defaults to `\r\n` even on Linux when the file is opened
+  with `newline=""`) — so a future regeneration won't reintroduce this.
+  [#147](https://github.com/sanskrit-lexicon/csl-observatory/pull/147).
+
 ## [1.11.0] - 2026-08-06
 
 ### Added
