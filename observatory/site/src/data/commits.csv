@@ -4401,6 +4401,8 @@ VEI,ad6ecb776bb7,2016-01-02T10:33:26Z,drdhaval2785,drdhaval2785,drdhaval2785@gma
 VEI,1bdf92e1bf80,2016-01-02T10:29:29Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,vei.xml without alterations
 VEI,4fc8228932e0,2016-01-02T10:26:11Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,initial commit
 VEI,f354d4e0cb58,2016-01-02T10:19:41Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+WIL,f1547e479e81,2026-08-06T05:00:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,prefaces: second-copy collation of 1819 Devanagari flags; preface ends unsigned (H2213 follow-up) (#26)
+WIL,ed53f586e84b,2026-08-05T21:29:47Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,prefaces: WIL 1819 first-edition front-matter OCR — 53 pages + consolidated EN edition (H2213) (#25)
 WIL,130d9adfea06,2026-08-02T13:11:05Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs: WIL 1819 vs 1832 edition lineage (PWG/MW bases, OCR gap, L./W.) (#24)"
 WIL,c75ba5add3ce,2026-07-31T20:25:56Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(changelog): add minimal Keep-a-Changelog (H2012 Phase F residual) (#23)
 WIL,f2c2b6b3e991,2026-07-31T12:45:27Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .gitattributes (eol=lf line-ending policy) (#22)
@@ -4678,6 +4680,14 @@ cologne-hugo,bc9c9f8041ce,2026-06-14T04:48:44Z,gasyoun,Mārcis Gasūns,gasyoun@u
 cologne-hugo,33e04b625b7e,2026-05-29T05:11:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): refresh tooling-repo README with live counts (2026-05-29)
 cologne-hugo,27567866a9e7,2026-05-15T07:39:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 cologne-hugo,17af959d4467,2021-01-20T04:59:40Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+cologne-stardict,0590b83d6d3f,2026-08-04T13:30:17Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit b7297b97cf9f7112277ea98f7969291eb1d5f495
+cologne-stardict,83a7cd78daaf,2026-08-04T13:24:36Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit a0a2dd49c81ff4f4178970e1a336a77f78127ed9
+cologne-stardict,2bd7df811de8,2026-08-04T13:12:27Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 921c1c7868a1ad9a69bc57b8b8f117401c66b814
+cologne-stardict,61e529b06bd7,2026-08-04T13:04:50Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 5599c2ab1a7089afbf207bfd6136162a037fe621
+cologne-stardict,5d661eb2fdbf,2026-08-04T12:55:15Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 3e83c160470f38964bf099335baf6d56b66a99a7
+cologne-stardict,20634490b689,2026-08-04T12:44:58Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit dfe22d366b2c499bdf2f9ed5d60d030dab98e513
+cologne-stardict,d9f300fc2348,2026-08-04T12:38:36Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 303bcae3df2a0bba0731cb8acd747d35728f576f
+cologne-stardict,85fc2ca0a40b,2026-08-04T12:32:04Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit f8622359d426bffd7c996fef24d25619a4086605
 cologne-stardict,212b544a9210,2026-07-31T12:36:00Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#51)
 cologne-stardict,9e0c98489094,2026-07-29T11:18:53Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 7b1c164621b4b323523b9bc7a05743fd000bb47d
 cologne-stardict,17d3b722099f,2026-07-26T14:05:52Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 3512762645e606c3411d4713b79a1b0dac7716ca
@@ -6468,6 +6478,29 @@ csl-app,3f5f02ce0114,2026-03-18T19:13:28Z,drdhaval2785,Dr. Dhaval Patel,drdhaval
 csl-app,41a87dfe9b1a,2026-03-18T17:59:44Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,v0.1.0
 csl-app,601df1e6d0c8,2026-03-18T17:25:31Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,app working
 csl-app,3827040885b1,2026-03-18T16:14:06Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,initial commit
+csl-corrections,c75c766b530a,2026-08-10T01:07:44Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-08-09
+csl-corrections,71f0f9c5f962,2026-08-09T16:59:21Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H2306: harden batch_pending durability checker (#351)
+csl-corrections,52dd07f7e0dc,2026-08-09T01:06:11Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-08-08
+csl-corrections,bfebfde83241,2026-08-08T01:02:09Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-08-07
+csl-corrections,11eb497fa2fe,2026-08-07T05:40:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore(agents): regenerate AGENTS.md org-context block (H2331) (#341)
+csl-corrections,52ad2f2c35a5,2026-08-07T02:13:44Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-08-06
+csl-corrections,8ef2c5edbf7a,2026-08-06T19:22:46Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"fix: repair 2 of 2 broken link(s) (org-wide link audit, auto-fix pass) (#335)"
+csl-corrections,72acdc0dbc2d,2026-08-06T16:49:20Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,add the pre-push silent-revert guard + CRLF-in-blob gate (H2280/H2289/H2301) (#339)
+csl-corrections,28836aff5dd6,2026-08-06T07:53:30Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(audit): correction-queue pipeline audit (H2022, Fable lane) (#338)"
+csl-corrections,0c410c82d67a,2026-08-06T01:51:18Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-08-05
+csl-corrections,b78de9fc005c,2026-08-05T01:50:22Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-08-04
+csl-corrections,364f79a84096,2026-08-04T13:24:09Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 20 July 2026. Close https://github.com/sanskrit-lexicon/csl-corrections/issues/312
+csl-corrections,f6e2069c0672,2026-08-04T13:17:43Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 19 July 2026. Close https://github.com/sanskrit-lexicon/csl-corrections/issues/310
+csl-corrections,ba450bbe304d,2026-08-04T13:06:19Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 18 July 2026. See https://github.com/sanskrit-lexicon/csl-corrections/issues/309
+csl-corrections,e9a7aa321c27,2026-08-04T12:58:54Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 17 July 2026. Close https://github.com/sanskrit-lexicon/csl-corrections/issues/306
+csl-corrections,dea2c98957fb,2026-08-04T12:51:44Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 16 July 2026. Close https://github.com/sanskrit-lexicon/csl-corrections/issues/305
+csl-corrections,d6fb8fc0d45a,2026-08-04T12:38:52Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 15 July 2026. Close https://github.com/sanskrit-lexicon/csl-corrections/issues/304
+csl-corrections,1a8621529ef5,2026-08-04T12:33:20Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 14 July 2026. Close https://github.com/sanskrit-lexicon/csl-corrections/issues/303
+csl-corrections,ed68d0b00632,2026-08-04T12:30:31Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 12 July 2026. Close https://github.com/sanskrit-lexicon/csl-corrections/issues/301
+csl-corrections,c08e7371db19,2026-08-04T12:26:12Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 11 July 2026. Close https://github.com/sanskrit-lexicon/csl-corrections/issues/300
+csl-corrections,f49af3679f73,2026-08-04T08:09:13Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,promote mw -> batch_20260804 (csl-orig PR #2885); queue now clear
+csl-corrections,5a4a9714f2ae,2026-08-04T07:12:31Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,promote batch_pending -> batch_20260804 (csl-orig PR #2884); hold mw
+csl-corrections,98be595eaf0f,2026-08-04T01:49:02Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-08-03
 csl-corrections,0629c77381dc,2026-08-03T05:17:14Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/setup-python from 6 to 7 (#333)
 csl-corrections,b04b3331ff2c,2026-08-03T05:16:15Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"census: bump EXPECTED for legitimate 2026-08 batch growth (G14, H2035) (#331)"
 csl-corrections,3108cf25d0bd,2026-08-03T05:14:24Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/checkout from 5 to 7 (#332)
@@ -7497,6 +7530,9 @@ csl-corrections,03c38c194339,2019-12-16T23:50:54Z,,James Funderburk,jfunderb@dia
 csl-corrections,e23efa275d19,2019-12-16T22:28:35Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,initialization from Cologne /php
 csl-corrections,6fa5aa987701,2019-12-16T21:49:45Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initialize material from sanskrit-lexicon/CORRECTIONS repository
 csl-corrections,e854ffd2f3cc,2019-12-16T20:34:56Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+csl-devanagari,a819c6a9177d,2026-08-07T05:40:57Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore(agents): regenerate AGENTS.md org-context block (H2331) (#55)
+csl-devanagari,4e8b839cbbb9,2026-08-06T16:49:00Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"add the pre-push silent-revert guard (H2280/H2289, Uprava#1516) (#54)"
+csl-devanagari,8e64764adc52,2026-08-04T08:08:31Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(eol): renormalize the one CRLF-in-blob file left behind by #50 (#52)
 csl-devanagari,82fc00e4666a,2026-07-27T17:55:26Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#50)
 csl-devanagari,2673ffc18b9d,2026-07-20T13:45:17Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H1393: AGENTS.md org-context block + operational-hazard pointer (#49)
 csl-devanagari,c470d4525f93,2026-07-14T17:24:47Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Add 'temp*'  to .gitignore
@@ -8188,6 +8224,9 @@ csl-lslink,2842b0274af8,2026-03-31T18:03:03Z,funderburkjim,funderburkjim,funderb
 csl-lslink,3de81a0a1a4f,2026-03-31T02:24:40Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,"created link files for gra, mw, pw, pwg"
 csl-lslink,077ec47bd51d,2026-03-31T02:12:42Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,"Initial commit, sch"
 csl-lslink,e36bec73e813,2026-03-31T01:43:07Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+csl-newsletter,174af4d1b109,2026-08-06T07:27:17Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore(release): 0.2.0 (#11)
+csl-newsletter,81200c67927d,2026-08-06T07:24:07Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #10 from sanskrit-lexicon/h1853-august-2026-edition
+csl-newsletter,765a4a528fc1,2026-08-06T07:20:37Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,newsletter: add August 2026 edition (H1853)
 csl-newsletter,c157e3baec95,2026-07-31T12:33:37Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#9)
 csl-newsletter,64f9672a84e4,2026-07-27T17:56:03Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#7)
 csl-newsletter,a53bc8dc7b6e,2026-07-14T09:22:07Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,Merge remote-tracking branch 'origin/main'
@@ -8251,6 +8290,22 @@ csl-newsletter,bced52b7f19f,2021-09-14T04:37:04Z,drdhaval2785,Dhaval Patel,drdha
 csl-newsletter,53c6fa85e014,2021-09-13T14:34:31Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,csl-orig commits taken into consideration
 csl-newsletter,b04b08d7e699,2021-09-13T13:28:15Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,addition
 csl-newsletter,5ab58ee2cd64,2021-09-13T12:33:30Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,september started
+csl-observatory,025278cf4b6b,2026-08-09T14:33:16Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(H2207): .ai_state.md — Pages deploy re-triggered, no code change (#184)"
+csl-observatory,4dadf45e9262,2026-08-07T05:41:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore(agents): regenerate AGENTS.md org-context block (H2331) (#148)
+csl-observatory,fe76db4dbd50,2026-08-07T04:54:58Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H2315): changelog v1.12.0, .ai_state.md, CITATION.cff sync (artifact-propagate)"
+csl-observatory,8efc1f1031f6,2026-08-06T17:26:28Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"fix(eol): strip embedded CR bytes from commits.csv, sanitize CSV generator (H2315) (#147)"
+csl-observatory,a6e6c60e8dd1,2026-08-06T16:48:40Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"add the pre-push silent-revert guard (H2280/H2289, Uprava#1516) (#138)"
+csl-observatory,5c3a5f1109bc,2026-08-06T11:46:24Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore(release): 1.11.0 (#146)
+csl-observatory,05a7b7ead0b2,2026-08-06T11:41:06Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(decisions): D01 — a measurement of a third-party tool is version-scoped (H2250) (#145)
+csl-observatory,78c6bf65ad7b,2026-08-05T20:45:06Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore(release): 1.10.0 (#144)
+csl-observatory,e28040999d4e,2026-08-05T20:37:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"feat(story): chapter 2 — the first measured month, July 2026 (H1864) (#143)"
+csl-observatory,a43a61542fe8,2026-08-05T19:23:00Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(.ai_state): log H2037 completion + observable-site npm install / subprocess-encoding gotchas (#142)
+csl-observatory,5e9755dea35e,2026-08-05T11:02:06Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore(release): 1.9.1 (#141)
+csl-observatory,d0687af4feff,2026-08-05T10:49:19Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(G17): refresh_observatory.py --check-only stale artifact + subprocess encoding bug (H2037) (#140)
+csl-observatory,a984542ea78a,2026-08-05T08:06:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,A69: PWG scan-index campaign paper draft (H1863) — v1.9.0 (#139)
+csl-observatory,8c61e93df44a,2026-08-04T17:42:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: re-adjudicate July cross-repo decisions — 04-08 edition (H1875) — v1.8.0 (#137)
+csl-observatory,370d18d33133,2026-08-04T12:05:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"fix: repair 10 of 10 broken link(s) (org-wide link audit, auto-fix pass) (#136)"
+csl-observatory,060fa37add91,2026-08-03T06:22:29Z,actions-user,csl-observatory-bot,actions@github.com,data: monthly refresh (2026-08-03)
 csl-observatory,e93396078aaa,2026-07-31T12:33:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#133)
 csl-observatory,f6844a3029e1,2026-07-29T21:11:30Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,add changelog duplicate-entry guard (CI) (#131)
 csl-observatory,967ce5833fed,2026-07-29T20:13:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: fix stale ROADMAP/OBSERVATORY_ROADMAP status (H1877 roadmap-drift sweep) (#132)
@@ -8755,6 +8810,15 @@ csl-observatory,eec8dc712aed,2026-05-07T19:29:28Z,gasyoun,Mārcis Gasūns,gasyou
 csl-observatory,c236fb5ac130,2026-05-07T19:28:08Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"feat: companion paper, headword counter, retry logic, templates"
 csl-observatory,1947ea3757ed,2026-05-07T17:04:56Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Create gasuns-cologne-30-report.md
 csl-observatory,e24574b2785a,2026-05-07T15:58:23Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"chore: bootstrap observatory — scripts, first data snapshot, dashboards, article scaffold"
+csl-orig,b7297b97cf9f,2026-08-04T13:23:12Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 20 July 2026. See https://github.com/sanskrit-lexicon/csl-corrections/issues/312
+csl-orig,a0a2dd49c81f,2026-08-04T13:17:58Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 19 July 2026. See https://github.com/sanskrit-lexicon/csl-corrections/issues/310
+csl-orig,921c1c7868a1,2026-08-04T13:05:17Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 18 July 2026. See https://github.com/sanskrit-lexicon/csl-corrections/issues/309
+csl-orig,5599c2ab1a70,2026-08-04T12:59:07Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 17 July 2026. See https://github.com/sanskrit-lexicon/csl-corrections/issues/306
+csl-orig,3e83c160470f,2026-08-04T12:49:37Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 16 July 2026. See https://github.com/sanskrit-lexicon/csl-corrections/issues/305
+csl-orig,dfe22d366b2c,2026-08-04T12:39:17Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 15 July 2026. See https://github.com/sanskrit-lexicon/csl-corrections/issues/304
+csl-orig,303bcae3df2a,2026-08-04T12:32:32Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 14 July 2026. See https://github.com/sanskrit-lexicon/csl-corrections/issues/303
+csl-orig,eefd86e80e65,2026-08-04T12:29:12Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 12 July 2026. See https://github.com/sanskrit-lexicon/csl-corrections/issues/301
+csl-orig,f8622359d426,2026-08-04T12:22:58Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 11 July 2026. See https://github.com/sanskrit-lexicon/csl-corrections/issues/300
 csl-orig,cc2d19927f0c,2026-07-29T11:38:57Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,BEN - add homonym markup as per https://github.com/sanskrit-lexicon/BEN/issues/29#issuecomment-4994618384
 csl-orig,7b1c164621b4,2026-07-29T11:13:42Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,BEN - minor errors caught by unusal headwords in log4.tsv in https://github.com/sanskrit-lexicon/BEN/issues/28
 csl-orig,3512762645e6,2026-07-26T14:00:54Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,BEN added sub-headwords. See https://github.com/sanskrit-lexicon/BEN/issues/28
@@ -12194,6 +12258,7 @@ csl-whitroot,8cc498b236a4,2020-03-10T00:40:41Z,funderburkjim,funderburkjim,funde
 csl-whitroot,1ad3839f7ae5,2019-11-08T22:16:37Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Avoid PHP 'notice undefined index'
 csl-whitroot,50b959a5b934,2019-11-08T21:59:14Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,Initial commit
 csl-whitroot,0dcec9223ad0,2019-11-08T21:19:28Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+hwnorm1,4a80a35376ab,2026-08-09T05:48:48Z,actions-user,HWNORM1 BOT,actions@github.com,Regenerated hwnorm1.sqlite as on 20260809-054846
 hwnorm1,0ca7287673e7,2026-07-29T12:15:24Z,actions-user,HWNORM1 BOT,actions@github.com,Regenerated hwnorm1.sqlite as on 20260729-121523
 hwnorm1,d52f08df4386,2026-07-26T14:04:44Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,regen after BEN subheadword addition
 hwnorm1,7fbf08ad819c,2026-07-14T09:22:19Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,Merge remote-tracking branch 'origin/main'
@@ -12400,6 +12465,7 @@ hwnorm1,d1624f255cc6,2015-11-21T12:17:04Z,drdhaval2785,Dr. Dhaval Patel,drdhaval
 hwnorm1,a9366009ac66,2015-11-21T05:48:32Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,no restrictions
 hwnorm1,44f02cbe0c06,2015-11-21T05:04:03Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Convention 1 raw files
 hwnorm1,0edc815b114a,2015-11-19T05:22:04Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+hwnorm2,7bb33a91fd43,2026-08-09T05:50:32Z,actions-user,HWNORM1 BOT,actions@github.com,Regenerated hwnorm2 repo as on 20260809-055032
 hwnorm2,d0a24053b764,2026-07-31T12:31:58Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#8)
 hwnorm2,a32e7174bdb6,2026-07-29T12:17:10Z,actions-user,HWNORM1 BOT,actions@github.com,Regenerated hwnorm2 repo as on 20260729-121710
 hwnorm2,efb7eb65a98d,2026-07-12T07:35:18Z,actions-user,HWNORM1 BOT,actions@github.com,Regenerated hwnorm2 repo as on 20260712-073517

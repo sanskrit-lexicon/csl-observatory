@@ -40,6 +40,7 @@ AMAR,10,add/upgrade .gitattributes (eol=lf line-ending policy),closed,2026-07-31
 AMAR,11,add/upgrade .pre-commit-config.yaml (mixed-line-ending lf),closed,2026-07-31T10:59:09Z,2026-07-31T12:37:37Z,gasyoun,,,0,PR
 AMAR,12,build(deps): bump actions/checkout from 5 to 7,closed,2026-08-03T05:12:09Z,2026-08-03T05:17:18Z,dependabot[bot],dependencies|github_actions,,0,PR
 AMAR,13,build(deps): bump actions/setup-python from 6 to 7,closed,2026-08-03T05:12:17Z,2026-08-03T05:14:05Z,dependabot[bot],dependencies|github_actions,,0,PR
+AMAR,14,H531 · 10-07-2026 — Author a detailed operator manual for AMAR,closed,2026-08-08T13:26:25Z,2026-08-08T13:26:27Z,gasyoun,handoff,,1,issue
 AP,1,Making AP public,closed,2025-07-06T20:15:25Z,2025-07-07T19:27:01Z,funderburkjim,content-enhancement|medium,Major Enhancements,7,issue
 AP,2,"AP<ab>, <ls> tooltips",closed,2025-09-01T18:50:53Z,2026-01-31T01:26:54Z,funderburkjim,markup|medium,Structured Data,9,issue
 AP,3,AP: 'b'->'v' sanskrit global changes,closed,2025-12-13T03:20:56Z,2026-02-10T17:20:44Z,funderburkjim,text-correction|minor,Digitization Quality,57,issue
@@ -90,6 +91,7 @@ AP,47,docs: metadoc template v2 backfill (H663),closed,2026-07-11T18:03:36Z,2026
 AP,48,Bump actions/setup-python from 6 to 7,closed,2026-07-20T05:12:25Z,2026-07-20T05:14:36Z,dependabot[bot],dependencies|github_actions,,0,PR
 AP,49,fix(changelog): drop the duplicated scaffold line,closed,2026-07-29T19:38:49Z,2026-07-30T13:17:22Z,gasyoun,,,0,PR
 AP,50,add/upgrade .pre-commit-config.yaml (mixed-line-ending lf),closed,2026-07-31T10:59:19Z,2026-07-31T12:37:32Z,gasyoun,,,0,PR
+AP,51,H524 · 10-07-2026 — Author a detailed operator manual for AP,closed,2026-08-08T13:26:16Z,2026-08-08T13:26:18Z,gasyoun,handoff,,1,issue
 AP90,1,verbs01,open,2020-03-14T19:17:51Z,,funderburkjim,content-enhancement|medium,Major Enhancements,1,issue
 AP90,2,verbs from 1957 ap,open,2020-03-16T01:24:16Z,,funderburkjim,content-enhancement|medium,Major Enhancements,3,issue
 AP90,3,Add AP Review,open,2020-03-24T12:19:13Z,,gasyoun,content-enhancement|minor,Major Enhancements,0,issue
@@ -141,6 +143,7 @@ AP90,48,build(deps): bump actions/setup-python from 6 to 7,closed,2026-07-20T05:
 AP90,49,feat: AP90 front-matter OCR + RU,closed,2026-07-23T16:07:07Z,2026-07-23T17:41:21Z,gasyoun,,,0,PR
 AP90,50,add/upgrade .gitattributes (eol=lf line-ending policy),closed,2026-07-31T10:45:38Z,2026-07-31T13:07:22Z,gasyoun,,,0,PR
 AP90,51,add/upgrade .pre-commit-config.yaml (mixed-line-ending lf),closed,2026-07-31T10:59:26Z,2026-07-31T12:37:23Z,gasyoun,,,0,PR
+AP90,52,H523 · 10-07-2026 — Author a detailed operator manual for AP90,closed,2026-08-08T13:26:11Z,2026-08-08T13:26:13Z,gasyoun,handoff,,1,issue
 ApteES,1,Normalizing pada-gana 'spelling' in digitization,open,2014-07-15T19:29:31Z,,funderburkjim,markup|minor,Structured Data,9,issue
 ApteES,2,New wikisource locations,closed,2014-07-17T01:20:37Z,2020-12-15T02:33:16Z,funderburkjim,enhancement|content-enhancement|medium,Major Enhancements,7,issue
 ApteES,3,Title overlapping,closed,2014-08-21T09:38:36Z,2014-08-22T18:53:57Z,Shalu411,bug|minor,Digitization Quality,2,issue
@@ -171,6 +174,8 @@ ApteES,27,build(deps): bump actions/setup-python from 6 to 7,closed,2026-07-20T0
 ApteES,28,add changelog duplicate-entry guard (CI),closed,2026-07-29T18:13:14Z,2026-07-29T21:05:27Z,gasyoun,,,0,PR
 ApteES,29,add/upgrade .gitattributes (eol=lf line-ending policy),closed,2026-07-31T10:45:50Z,2026-07-31T13:07:17Z,gasyoun,,,0,PR
 ApteES,30,add/upgrade .pre-commit-config.yaml (mixed-line-ending lf),closed,2026-07-31T10:59:37Z,2026-07-31T12:37:18Z,gasyoun,,,0,PR
+ApteES,31,H520 · 10-07-2026 — ApteES manual: ae_saninvert / hwspellcheck / transcode tooling,closed,2026-08-08T13:25:56Z,2026-08-08T13:25:58Z,gasyoun,handoff,,1,issue
+ApteES,32,H521 · 10-07-2026 — Author a detailed operator manual for ApteES,closed,2026-08-08T13:26:01Z,2026-08-08T13:26:03Z,gasyoun,handoff,,1,issue
 ArabicInSanskrit,1,MW arabic words,closed,2015-01-18T20:59:14Z,2015-01-21T20:09:14Z,funderburkjim,enhancement|minor,User Experience,96,issue
 ArabicInSanskrit,2,"MW arabic words, part 2",closed,2015-01-19T22:37:04Z,2015-01-21T20:09:52Z,funderburkjim,enhancement|minor,User Experience,72,issue
 ArabicInSanskrit,3,"MW arabic words, part 3",closed,2015-01-20T01:35:04Z,2015-05-05T19:39:02Z,funderburkjim,enhancement|minor,User Experience,19,issue
@@ -248,6 +253,7 @@ BHS,16,fix(prefaces): align abbr keys to body .txt naming (H1571),closed,2026-07
 BHS,17,add changelog duplicate-entry guard (CI),closed,2026-07-29T18:13:14Z,2026-07-29T21:05:29Z,gasyoun,,,0,PR
 BHS,18,add/upgrade .gitattributes (eol=lf line-ending policy),closed,2026-07-31T10:45:59Z,2026-07-31T12:49:47Z,gasyoun,,,0,PR
 BHS,19,add/upgrade .pre-commit-config.yaml (mixed-line-ending lf),closed,2026-07-31T11:00:04Z,2026-07-31T12:44:47Z,gasyoun,,,0,PR
+BHS,20,H519 · 10-07-2026 — Author a detailed operator manual for BHS,closed,2026-08-08T13:25:52Z,2026-08-08T13:25:54Z,gasyoun,handoff,,1,issue
 BOP,1,Greek text,closed,2022-05-02T16:55:05Z,2024-01-16T10:02:05Z,funderburkjim,content-enhancement|medium,Major Enhancements,16,issue
 BOP,2,deva-slp1 anomaly,open,2022-05-02T20:06:30Z,,funderburkjim,minor|encoding,Digitization Quality,2,issue
 BOP,3,Additional entry in AB version,closed,2022-05-05T05:31:14Z,2024-05-09T19:15:45Z,Andhrabharati,minor|text-correction,Digitization Quality,3,issue
@@ -269,6 +275,7 @@ BOP,18,add/upgrade .gitattributes (eol=lf line-ending policy),closed,2026-07-31T
 BOP,19,add/upgrade .pre-commit-config.yaml (mixed-line-ending lf),closed,2026-07-31T11:00:36Z,2026-07-31T12:44:39Z,gasyoun,,,0,PR
 BOP,20,build(deps): bump actions/checkout from 5 to 7,closed,2026-08-03T05:14:03Z,2026-08-03T05:15:17Z,dependabot[bot],dependencies|github_actions,,0,PR
 BOP,21,build(deps): bump actions/setup-python from 6 to 7,closed,2026-08-03T05:14:09Z,2026-08-03T05:17:46Z,dependabot[bot],dependencies|github_actions,,0,PR
+BOP,22,H516 · 10-07-2026 — Author a detailed operator manual for BOP,closed,2026-08-08T13:25:43Z,2026-08-08T13:25:45Z,gasyoun,handoff,,1,issue
 BOR,1,"comma, semicolon etc inside Devanagari scope",open,2021-09-14T12:16:17Z,,drdhaval2785,encoding|medium,Digitization Quality,5,issue
 BOR,2,Yj -> jY,open,2022-09-14T04:17:19Z,,funderburkjim,text-correction|medium,Digitization Quality,3,issue
 BOR,3,BOR possible additional material ,open,2024-05-13T19:19:33Z,,funderburkjim,question|minor,Structured Data,2,issue
@@ -795,6 +802,8 @@ COLOGNE,471,"docs: TOOLING_MANUAL estate refresh — fact-check recounts, execut
 COLOGNE,472,Bump actions/setup-python from 6 to 7,closed,2026-07-20T05:12:09Z,2026-07-20T05:12:27Z,dependabot[bot],dependencies|github_actions,,0,PR
 COLOGNE,473,fix(ci): CodeQL triggers on main (H1522 / H1245),closed,2026-07-23T09:39:26Z,2026-07-23T09:40:32Z,gasyoun,,,0,PR
 COLOGNE,474,add changelog duplicate-entry guard (CI),closed,2026-07-29T18:13:49Z,2026-07-29T21:05:42Z,gasyoun,,,0,PR
+COLOGNE,475,H260 · 06-07-2026 — Roll out `/cologne-pages-landing` to all dictionary repos missing the SEO landing page,closed,2026-08-08T12:42:07Z,2026-08-08T12:42:10Z,gasyoun,handoff,,1,issue
+COLOGNE,476,H506 · 10-07-2026 — Author a detailed operator manual for COLOGNE,closed,2026-08-08T13:24:45Z,2026-08-08T13:24:47Z,gasyoun,handoff,,1,issue
 CORRECTIONS,1,Announcement of correctionform.txt,closed,2014-10-03T01:22:12Z,2015-12-02T11:58:08Z,funderburkjim,Documentation,,14,issue
 CORRECTIONS,2,Wrong entries detected in MW vs PWG,closed,2014-10-05T10:03:16Z,2014-10-16T00:46:53Z,drdhaval2785,,,133,issue
 CORRECTIONS,3,Extra space in Devanagari rendering,closed,2014-10-05T11:47:15Z,2014-11-22T05:39:10Z,drdhaval2785,Bug,,3,issue
@@ -1340,6 +1349,7 @@ GRA,56,build(deps): bump actions/setup-python from 6 to 7,closed,2026-07-20T05:1
 GRA,57,fix(security): gra-dev jQuery 1.4.3 → 3.7.1 + js-cookie (H1523),closed,2026-07-24T03:07:44Z,2026-07-24T03:11:27Z,gasyoun,,,0,PR
 GRA,58,fix(changelog): drop the duplicated scaffold line,closed,2026-07-29T19:39:11Z,2026-07-30T13:17:12Z,gasyoun,,,0,PR
 GRA,59,add/upgrade .gitattributes (eol=lf line-ending policy),closed,2026-07-31T10:50:18Z,2026-07-31T12:50:34Z,gasyoun,,,0,PR
+GRA,60,H512 · 10-07-2026 — Author a detailed operator manual for GRA,closed,2026-08-08T13:25:14Z,2026-08-08T13:25:16Z,gasyoun,handoff,,1,issue
 GreekInSanskrit,1,"Welcome, Jonathan",closed,2015-04-15T02:25:35Z,2016-01-14T22:13:12Z,funderburkjim,enhancement|minor,User Experience,6,issue
 GreekInSanskrit,2,Greek in MW: review,closed,2015-04-15T20:36:35Z,2022-05-17T04:56:20Z,funderburkjim,enhancement|minor,User Experience,16,issue
 GreekInSanskrit,3,Greek text in Wilson Dictionary,closed,2015-04-16T19:03:57Z,2015-06-04T19:13:10Z,funderburkjim,enhancement|minor,User Experience,24,issue
@@ -1489,6 +1499,7 @@ LRV,40,docs(README): refresh to current facts + org MD conventions,closed,2026-0
 LRV,41,add changelog duplicate-entry guard (CI),closed,2026-07-29T18:20:16Z,2026-07-29T21:05:54Z,gasyoun,,,0,PR
 LRV,42,add/upgrade .gitattributes (eol=lf line-ending policy),closed,2026-07-31T10:51:00Z,2026-07-31T12:46:07Z,gasyoun,,,0,PR
 LRV,43,add/upgrade .pre-commit-config.yaml (mixed-line-ending lf),closed,2026-07-31T11:14:18Z,2026-07-31T12:31:24Z,gasyoun,,,0,PR
+LRV,44,H510 · 10-07-2026 — Author a detailed operator manual for LRV,closed,2026-08-08T13:25:05Z,2026-08-08T13:25:07Z,gasyoun,handoff,,1,issue
 MCI,1,Printed Book Categories Lost in OCR?,open,2014-09-26T07:51:20Z,,gasyoun,question|minor,Structured Data,10,issue
 MCI,2,[markup] Minor mci.txt Markup Oddities,closed,2026-05-22T07:37:01Z,2026-05-29T07:19:43Z,gasyoun,markup|minor,Structured Data,1,issue
 MCI,3,build(deps): bump dependabot/fetch-metadata from 2 to 3,closed,2026-06-14T04:47:57Z,2026-06-14T04:48:42Z,dependabot[bot],dependencies|github_actions,,0,PR
@@ -1526,6 +1537,7 @@ MD,25,build(deps): bump actions/setup-python from 6 to 7,closed,2026-07-20T05:12
 MD,26,fix(changelog): drop the duplicated scaffold line,closed,2026-07-29T19:39:22Z,2026-07-30T13:17:07Z,gasyoun,,,0,PR
 MD,27,add/upgrade .gitattributes (eol=lf line-ending policy),closed,2026-07-31T10:51:03Z,2026-07-31T12:45:58Z,gasyoun,,,0,PR
 MD,28,add/upgrade .pre-commit-config.yaml (mixed-line-ending lf),closed,2026-07-31T11:14:46Z,2026-07-31T12:31:10Z,gasyoun,,,0,PR
+MD,29,H513 · 10-07-2026 — Author a detailed operator manual for MD,closed,2026-08-08T13:25:18Z,2026-08-08T13:25:20Z,gasyoun,handoff,,1,issue
 MW72,1,IAST convention of MW72 for vocalic 'r',closed,2014-08-24T21:33:27Z,2020-12-14T18:17:07Z,funderburkjim,question|minor,Structured Data,2,issue
 MW72,2,vakratu?,closed,2014-09-05T10:24:12Z,2014-12-03T01:50:44Z,Shalu411,minor|text-correction,Digitization Quality,7,issue
 MW72,3,Converting Sanskrit in MW72 from AS to slp1,closed,2016-10-14T22:25:14Z,2016-11-19T23:16:53Z,funderburkjim,encoding|medium,Digitization Quality,18,issue
@@ -1810,6 +1822,23 @@ MWS,270,docs: DICT_PROFILE Wilson 1819/1832 edition-basis split,closed,2026-08-0
 MWS,271,"fix(docs): MW. is authority mark (SKD/pandit notes), not 1872 self-cite",closed,2026-08-02T15:40:15Z,2026-08-02T15:40:52Z,gasyoun,,,0,PR
 MWS,272,build(deps): bump actions/setup-python from 6 to 7,closed,2026-08-03T05:12:51Z,2026-08-03T05:13:18Z,dependabot[bot],dependencies|github_actions,,0,PR
 MWS,273,build(deps): bump actions/checkout from 5 to 7,closed,2026-08-03T05:12:55Z,2026-08-03T05:17:43Z,dependabot[bot],dependencies|github_actions,,0,PR
+MWS,274,H013 · 02-07-2026 — Handoff — Fable window S1: MWS: July monthly Fable planning session,closed,2026-08-08T07:21:10Z,2026-08-08T07:21:20Z,gasyoun,handoff,,1,issue
+MWS,275,H049 · 02-07-2026 — Handoff — Fable window S2: MWS: A16 hostile-review pass (MW microstructure → IJL),closed,2026-08-08T07:47:07Z,2026-08-08T07:47:16Z,gasyoun,handoff,,1,issue
+MWS,276,"H059 · 02-07-2026 — Handoff — MWS SPEC-2: G5 gold-sample annotation, PASS A",closed,2026-08-08T07:51:49Z,2026-08-08T07:52:02Z,gasyoun,handoff,,1,issue
+MWS,277,"H060 · 02-07-2026 — Handoff — MWS SPEC-2: G5 gold-sample annotation, PASS B",closed,2026-08-08T07:52:21Z,2026-08-08T07:52:35Z,gasyoun,handoff,,1,issue
+MWS,278,H070 · 02-07-2026 — Handoff — H070 · MWS: G5 gold-sample adjudication + fold measured P/R into A16,closed,2026-08-08T07:57:50Z,2026-08-08T07:58:13Z,gasyoun,handoff,,1,issue
+MWS,279,H079 · 03-07-2026 — Handoff — H079 · MWS: A16 revision session — figures (Major 6) + journal voice/supplement (Major 8) + minors,closed,2026-08-08T08:02:18Z,2026-08-08T08:02:26Z,gasyoun,handoff,,1,issue
+MWS,280,H133 · 03-07-2026 — MWS Pāṇini `<ls>` link-target/link-splitting batch (ashtadhyayi.com),closed,2026-08-08T08:36:00Z,2026-08-08T08:36:02Z,gasyoun,handoff,,1,issue
+MWS,281,H1763 · 27-07-2026 — Регистровая правка русского перевода предисловий MW 1899,closed,2026-08-08T09:29:05Z,2026-08-08T09:29:07Z,gasyoun,handoff,,1,issue
+MWS,282,H1786 · 28-07-2026 — Author a detailed operator manual for MWS (medium docs-debt),closed,2026-08-08T09:30:32Z,2026-08-08T09:30:34Z,gasyoun,handoff,,1,issue
+MWS,283,H150 · 04-07-2026 — A18: MW citation-registers corpus-query prep (P3 evidence block),closed,2026-08-08T10:14:57Z,2026-08-08T10:15:22Z,gasyoun,handoff,,1,issue
+MWS,284,H1500 · 22-07-2026 — MWS: Fix 31 broken phw cross-reference links (phw_integrity.csv),closed,2026-08-08T10:15:36Z,2026-08-08T10:15:51Z,gasyoun,handoff,,1,issue
+MWS,285,H1501 · 22-07-2026 — MWS: Draft #86 `&c.` -> `<ab>` tagging correction,closed,2026-08-08T10:16:05Z,2026-08-08T10:16:23Z,gasyoun,handoff,,1,issue
+MWS,286,H1881 · 29-07-2026 — MWS: Lexicographic-type inventory over the 215 MW entry types,closed,2026-08-08T10:33:47Z,2026-08-08T10:33:49Z,gasyoun,handoff,,1,issue
+MWS,287,"H2214 · 02-08-2026 — Correct MW. citation marker: authority mark (SKD/pandit notes), not 1872 self-citation",closed,2026-08-08T11:52:03Z,2026-08-08T11:52:14Z,gasyoun,handoff,,1,issue
+MWS,288,H391 · 08-07-2026 — mws_susr_kathas_sbr_edition_confirm,closed,2026-08-08T12:51:58Z,2026-08-08T12:52:00Z,gasyoun,handoff,,1,issue
+MWS,289,"H395 · 08-07-2026 — A46: MW 1899 preface methodology paper, skeleton scaffold",closed,2026-08-08T12:52:12Z,2026-08-08T12:52:14Z,gasyoun,handoff,,1,issue
+MWS,290,H681 · 11-07-2026 — A17 «Лексикографический хедж» (RU): author pass,closed,2026-08-08T13:31:39Z,2026-08-08T13:31:41Z,gasyoun,handoff,,1,issue
 MWinflect,1,Directory structure of repository,open,2018-10-16T20:32:12Z,,funderburkjim,enhancement|minor|domain:morphology,User Experience,6,issue
 MWinflect,2,nominals/lexnorm-all2.txt,open,2018-10-16T21:33:09Z,,funderburkjim,enhancement|minor|domain:morphology,User Experience,4,issue
 MWinflect,3,stem_model intro: indeclineables,open,2018-10-17T21:41:59Z,,funderburkjim,enhancement|minor|domain:morphology,User Experience,6,issue
@@ -1869,6 +1898,8 @@ MWinflect,56,"docs: calc_tables.txt provenance, verified reproducible (H695)",cl
 MWinflect,57,add .gitattributes (eol=lf line-ending policy),closed,2026-07-27T17:02:45Z,2026-07-27T17:55:52Z,gasyoun,,,0,PR
 MWinflect,58,add changelog duplicate-entry guard (CI),closed,2026-07-29T18:20:25Z,2026-07-29T21:06:04Z,gasyoun,,,0,PR
 MWinflect,59,add/upgrade .pre-commit-config.yaml (mixed-line-ending lf),closed,2026-07-31T11:15:10Z,2026-07-31T12:30:55Z,gasyoun,,,0,PR
+MWinflect,60,H511 · 10-07-2026 — Author a detailed operator manual for MWinflect,closed,2026-08-08T13:25:09Z,2026-08-08T13:25:11Z,gasyoun,handoff,,1,issue
+MWinflect,61,H695 · 11-07-2026 — MWinflect calc_tables.txt (96 MB): rebuildable? Document the builder,closed,2026-08-08T13:32:35Z,2026-08-08T13:32:37Z,gasyoun,handoff,,1,issue
 PUI,1,Modern IAST for PUI >= 6 occurrences,closed,2026-04-05T03:33:56Z,2026-04-05T13:41:21Z,drdhaval2785,encoding|minor,Digitization Quality,8,issue
 PUI,2,Questions for resolution,open,2026-04-05T07:12:39Z,,drdhaval2785,question|minor,Structured Data,6,issue
 PUI,3,Improbable ngrams,closed,2026-04-05T07:22:23Z,2026-04-05T12:48:34Z,drdhaval2785,text-correction|minor,Digitization Quality,0,issue
@@ -2094,10 +2125,16 @@ PWG,216,docs: thin PLAN for preface enrichment support,closed,2026-07-24T11:49:3
 PWG,217,fix(prefaces): page-boundary OCR omissions (H1721),closed,2026-07-27T23:28:01Z,2026-07-27T23:29:48Z,gasyoun,,,0,PR
 PWG,218,docs(prefaces): legend-store join note + 12-key spot-check (H1596),closed,2026-07-28T05:08:25Z,2026-07-28T05:08:51Z,gasyoun,,,0,PR
 PWG,219,docs: PWG pipeline operator manual (H1785),closed,2026-07-28T19:15:26Z,2026-07-28T19:16:25Z,gasyoun,,,0,PR
-PWG,220,[markup] PWG v2 of AB,open,2026-07-30T11:33:44Z,,drdhaval2785,markup,,6,issue
+PWG,220,[markup] PWG v2 of AB,open,2026-07-30T11:33:44Z,,drdhaval2785,markup,,13,issue
 PWG,221,add/upgrade .gitattributes (eol=lf line-ending policy),closed,2026-07-31T10:53:38Z,2026-07-31T12:45:44Z,gasyoun,,,0,PR
 PWG,222,pwg_ru_coverage: scheduled refresh,closed,2026-08-02T00:00:33Z,2026-08-02T00:00:36Z,gasyoun,,,0,PR
 PWG,223,docs: README — PWG print base is WIL 1819 not CDSL 1832,closed,2026-08-02T13:08:27Z,2026-08-02T13:11:22Z,gasyoun,,,0,PR
+PWG,224,Strange error !!,open,2026-08-05T12:00:51Z,,Andhrabharati,,,1,issue
+PWG,225,H1558 · 24-07-2026 — PWG+PW prefaces: methods note + CITATION.cff citeability,closed,2026-08-08T09:16:24Z,2026-08-08T09:16:26Z,gasyoun,handoff,,1,issue
+PWG,226,H1561 · 24-07-2026 — Review packet for Andhrabharati (PWG#210),closed,2026-08-08T09:16:43Z,2026-08-08T09:16:45Z,gasyoun,handoff,,1,issue
+PWG,227,H1596 · 24-07-2026 — PWG thin METHODS + spot-check,closed,2026-08-08T09:19:12Z,2026-08-08T09:19:14Z,gasyoun,handoff,,1,issue
+PWG,228,H1721 · 27-07-2026 — PWG/PW pref: fix page-boundary OCR omissions + broaden boundary scan,closed,2026-08-08T09:27:01Z,2026-08-08T09:27:03Z,gasyoun,handoff,,1,issue
+PWG,229,H1785 · 28-07-2026 — Author a detailed operator manual for PWG (medium docs-debt),closed,2026-08-08T09:30:28Z,2026-08-08T09:30:30Z,gasyoun,handoff,,1,issue
 PWK,1,Implement Fuzzy-Found Errors,open,2014-09-02T05:45:17Z,,gasyoun,content-enhancement|medium,Major Enhancements,3,issue
 PWK,2,Sigla,open,2014-09-16T00:26:22Z,,gasyoun,markup|minor,Structured Data,1,issue
 PWK,3,Sanskrit-Wörterbuch,closed,2014-09-16T00:27:38Z,2014-09-16T17:02:54Z,gasyoun,content-enhancement|medium,Major Enhancements,1,issue
@@ -2239,6 +2276,8 @@ PWK,139,docs(prefaces): legend store join note + spot-check (H1597),closed,2026-
 PWK,140,fix(prefaces): pwpref03 page-boundary OCR omission (H1721),closed,2026-07-27T23:29:29Z,2026-07-27T23:29:52Z,gasyoun,,,0,PR
 PWK,141,fix(changelog): drop the duplicated scaffold line,closed,2026-07-29T19:39:32Z,2026-07-30T13:17:03Z,gasyoun,,,0,PR
 PWK,142,add/upgrade .gitattributes (eol=lf line-ending policy),closed,2026-07-31T10:53:39Z,2026-07-31T12:45:39Z,gasyoun,,,0,PR
+PWK,143,H1597 · 24-07-2026 — PWK thin METHODS + spot-check,closed,2026-08-08T09:19:16Z,2026-08-08T09:19:19Z,gasyoun,handoff,,1,issue
+PWK,144,H530 · 10-07-2026 — Author a detailed operator manual for PWK,closed,2026-08-08T13:26:21Z,2026-08-08T13:26:23Z,gasyoun,handoff,,1,issue
 SCH,1,Anglicized Sanskrit Coding Scheme,closed,2014-01-15T20:10:17Z,2020-12-14T18:09:18Z,gasyoun,enhancement|encoding|minor,Digitization Quality,3,issue
 SCH,2,SCH-Nachträge,closed,2014-09-18T19:00:56Z,2021-09-05T10:45:27Z,funderburkjim,content-enhancement|medium,Major Enhancements,4,issue
 SCH,3,[Schµ793] €1,closed,2014-09-18T20:57:02Z,2020-12-14T18:13:18Z,gasyoun,markup|minor,Structured Data,4,issue
@@ -2360,6 +2399,7 @@ VCP,44,build(deps): bump actions/setup-python from 6 to 7,closed,2026-07-20T05:1
 VCP,45,add/upgrade .gitattributes (eol=lf line-ending policy),closed,2026-07-31T10:56:31Z,2026-07-31T12:45:35Z,gasyoun,,,0,PR
 VCP,46,add/upgrade .pre-commit-config.yaml (mixed-line-ending lf),closed,2026-07-31T11:21:44Z,2026-07-31T12:29:27Z,gasyoun,,,0,PR
 VCP,47,docs(changelog): minimal KaC for VCP (H2012 Phase F),closed,2026-07-31T20:25:39Z,2026-07-31T20:25:45Z,gasyoun,,,0,PR
+VCP,48,H508 · 10-07-2026 — Author a detailed operator manual for VCP,closed,2026-08-08T13:24:55Z,2026-08-08T13:24:57Z,gasyoun,handoff,,1,issue
 VEI,1,Links to Panini,open,2025-01-17T17:26:26Z,,gasyoun,link-target|medium,Dictionary to Book,0,issue
 VEI,2,[markup] Minor vei.txt Markup Oddities,closed,2026-05-22T07:46:04Z,2026-05-29T07:19:56Z,gasyoun,markup|minor,Structured Data,1,issue
 VEI,3,build(deps): bump dependabot/fetch-metadata from 2 to 3,closed,2026-06-14T04:48:26Z,2026-06-14T04:48:57Z,dependabot[bot],dependencies|github_actions,,0,PR
@@ -2394,6 +2434,9 @@ WIL,21,docs(README): refresh to org conventions + verify live issue counts (H548
 WIL,22,add/upgrade .gitattributes (eol=lf line-ending policy),closed,2026-07-31T10:56:56Z,2026-07-31T12:45:27Z,gasyoun,,,0,PR
 WIL,23,docs(changelog): minimal KaC for WIL (H2012 Phase F),closed,2026-07-31T20:25:54Z,2026-07-31T20:25:57Z,gasyoun,,,0,PR
 WIL,24,"docs: WIL 1819 vs 1832 edition lineage (PWG/MW bases, OCR gap)",closed,2026-08-02T13:08:01Z,2026-08-02T13:11:06Z,gasyoun,,,0,PR
+WIL,25,prefaces: WIL 1819 first-edition front-matter OCR — 53 pages + consolidated EN edition (H2213),closed,2026-08-05T21:29:14Z,2026-08-05T21:29:47Z,gasyoun,,,0,PR
+WIL,26,prefaces: second-copy collation of 1819 Devanagari flags; preface ends unsigned (H2213 follow-up),closed,2026-08-06T05:00:04Z,2026-08-06T05:00:12Z,gasyoun,,,0,PR
+WIL,27,H2213 · 02-08-2026 — WIL 1819 preface OCR (front matter only; full body out of scope),closed,2026-08-08T11:51:40Z,2026-08-08T11:51:49Z,gasyoun,handoff,,1,issue
 Wil-YAT,1,Request for clickable HTML,closed,2015-04-19T13:41:27Z,2020-12-14T18:45:28Z,drdhaval2785,content-enhancement|medium,Major Enhancements,5,issue
 Wil-YAT,2,Oddities in Yates 'IAST',closed,2017-05-30T03:15:47Z,2020-12-14T18:42:18Z,funderburkjim,minor|encoding,Digitization Quality,1,issue
 Wil-YAT,3,Oddities in Yates Devanagari markup,closed,2017-05-31T00:04:37Z,2017-06-01T19:40:01Z,funderburkjim,markup|minor,Structured Data,10,issue
@@ -2637,6 +2680,22 @@ csl-apidev,133,chore: re-vendor sanskrit-util v0.5.1 (H1969),closed,2026-07-30T1
 csl-apidev,134,add/upgrade .pre-commit-config.yaml (mixed-line-ending lf),closed,2026-07-31T11:04:18Z,2026-07-31T12:35:31Z,gasyoun,,,0,PR
 csl-apidev,135,chore(deps): bump actions/checkout from 5 to 7,closed,2026-08-03T05:13:32Z,2026-08-03T05:15:13Z,dependabot[bot],major|dependencies|github_actions,,0,PR
 csl-apidev,136,chore(deps): bump actions/setup-python from 6 to 7,closed,2026-08-03T05:13:38Z,2026-08-03T05:17:22Z,dependabot[bot],major|dependencies|github_actions,,0,PR
+csl-apidev,137,H064 · 02-07-2026 — Handoff — csl-apidev SPEC-3: C-SALT parity report + Phase-2 closeout,closed,2026-08-08T07:53:28Z,2026-08-08T07:54:43Z,gasyoun,handoff,,1,issue
+csl-apidev,138,H088 · 03-07-2026 — csl-apidev `lookup/` Wave 1: modern global lookup page + safe call pattern,closed,2026-08-08T08:05:41Z,2026-08-08T08:05:55Z,gasyoun,handoff,,1,issue
+csl-apidev,139,H095 · 03-07-2026 — csl-apidev `lookup/` Wave 2: dictinfo cards + pushState permalinks,closed,2026-08-08T08:08:11Z,2026-08-08T08:08:16Z,gasyoun,handoff,,1,issue
+csl-apidev,140,H118 · 03-07-2026 — Fable 5 adversarial review of the csl-apidev simple-search overhaul,closed,2026-08-08T08:26:41Z,2026-08-08T08:26:43Z,gasyoun,handoff,,1,issue
+csl-apidev,141,H122 · 03-07-2026 — apply the Fable-5 review fix-ups to the simple-search docs + eval gate,closed,2026-08-08T08:29:31Z,2026-08-08T08:29:33Z,gasyoun,handoff,,1,issue
+csl-apidev,142,H139 · 03-07-2026 — csl-apidev: Vārttika→parent-sūtra href branch in `ls_callback_mw_href()`,closed,2026-08-08T08:38:52Z,2026-08-08T08:38:55Z,gasyoun,handoff,,1,issue
+csl-apidev,143,"H140 · 03-07-2026 — csl-apidev `lookup/` Wave 3: scan links, citation copy, accent/dark mode, deprecation ask",closed,2026-08-08T08:39:30Z,2026-08-08T08:39:32Z,gasyoun,handoff,,1,issue
+csl-apidev,144,"H147 · 03-07-2026 — csl-apidev `app/` slice 1: unified Cologne search UI (Proposal A, Research Workbench)",closed,2026-08-08T08:43:38Z,2026-08-08T08:43:39Z,gasyoun,handoff,,1,issue
+csl-apidev,145,H1562 · 24-07-2026 — Wire Fix I DCS-2026 wf1 ranking into simple-search getword_list,closed,2026-08-08T09:16:48Z,2026-08-08T09:16:50Z,gasyoun,handoff,,1,issue
+csl-apidev,146,H1695 · 26-07-2026 — Fix csl-apidev rowSlp1() to case-fold IAST before to_slp1 (H1671 audit follow-on),closed,2026-08-08T09:25:22Z,2026-08-08T09:25:24Z,gasyoun,handoff,,1,issue
+csl-apidev,147,H1784 · 28-07-2026 — Author a detailed operator manual for csl-apidev,closed,2026-08-08T09:30:23Z,2026-08-08T09:30:25Z,gasyoun,handoff,,1,issue
+csl-apidev,148,H1497 · 22-07-2026 — csl-apidev: Port Bengali script → SLP1 transcoder table,closed,2026-08-08T10:13:13Z,2026-08-08T10:13:28Z,gasyoun,handoff,,1,issue
+csl-apidev,149,H225 · 06-07-2026 — Cologne UX: four end-to-end design-direction prototypes,closed,2026-08-08T12:15:10Z,2026-08-08T12:15:20Z,gasyoun,handoff,,1,issue
+csl-apidev,150,H227 · 06-07-2026 — Cologne redesign: crawlability + structured data (SEO pass),closed,2026-08-08T12:22:01Z,2026-08-08T12:22:14Z,gasyoun,handoff,,1,issue
+csl-apidev,151,"H233 · 06-07-2026 — Adversarial code review of the H227 SSR entry-permalink pass (every line, logic, performance, bugs)",closed,2026-08-08T12:34:09Z,2026-08-08T12:34:13Z,gasyoun,handoff,,1,issue
+csl-apidev,152,H815 · 12-07-2026 — csl-apidev pwkvn dict-web landing -> Minimal mockup (H563 fan-out),closed,2026-08-08T13:39:29Z,2026-08-08T13:39:31Z,gasyoun,handoff,,1,issue
 csl-app,1,An App for Sanskrit-Lexicon,closed,2026-03-18T18:22:37Z,2026-04-15T12:56:54Z,drdhaval2785,enhancement|good first issue|minor,,6,issue
 csl-app,2,Cologne Theme and Customisable Themes,closed,2026-03-24T07:03:36Z,2026-03-24T07:03:47Z,drdhaval2785,enhancement|minor,,1,issue
 csl-app,3,Add badic_adjust,closed,2026-03-24T09:22:31Z,2026-03-24T16:45:00Z,drdhaval2785,feature|major,,0,issue
@@ -2697,6 +2756,8 @@ csl-app,57,add changelog duplicate-entry guard (CI),closed,2026-07-29T19:44:08Z,
 csl-app,58,add/upgrade .pre-commit-config.yaml (mixed-line-ending lf),closed,2026-07-31T11:05:29Z,2026-07-31T12:43:46Z,gasyoun,,,0,PR
 csl-app,59,Bump actions/setup-python from 6 to 7,closed,2026-08-03T05:12:07Z,2026-08-03T05:14:11Z,dependabot[bot],major|dependencies|github_actions,,0,PR
 csl-app,60,Bump actions/checkout from 5 to 7,closed,2026-08-03T05:12:13Z,2026-08-03T05:17:01Z,dependabot[bot],major|dependencies|github_actions,,0,PR
+csl-app,61,H177 · 04-07-2026 — csl-app stuck merge-conflict marker on `PULL_REQUEST_TEMPLATE.md`,closed,2026-08-08T09:29:29Z,2026-08-08T09:29:31Z,gasyoun,handoff,,1,issue
+csl-app,62,H504 · 10-07-2026 — Author a detailed operator manual for csl-app,closed,2026-08-08T13:24:36Z,2026-08-08T13:24:38Z,gasyoun,handoff,,1,issue
 csl-corrections,1,csl-corrections initialized,closed,2019-12-17T02:09:12Z,2019-12-22T05:46:41Z,funderburkjim,doc|question|minor,Structured Data,7,issue
 csl-corrections,2,Preliminary instructions for Correction installation,closed,2019-12-18T02:14:21Z,2019-12-22T05:46:10Z,funderburkjim,doc|question|minor,Structured Data,7,issue
 csl-corrections,3,WIL errors while regen,closed,2019-12-18T05:14:26Z,2019-12-18T15:32:01Z,drdhaval2785,bug|minor,Digitization Quality,6,issue
@@ -2815,7 +2876,7 @@ csl-corrections,115,User emails - awk command,closed,2026-02-04T04:19:00Z,2026-0
 csl-corrections,116,List of hyphenated words,closed,2026-02-15T23:56:55Z,2026-05-01T14:10:15Z,drdhaval2785,deferred|text-correction|medium,Digitization Quality,0,issue
 csl-corrections,117,List of separate words - which Scott wants to join,closed,2026-02-16T05:31:28Z,2026-02-16T16:27:21Z,drdhaval2785,batch|text-correction|medium,Digitization Quality,5,issue
 csl-corrections,118,List of words where hyphen is suggested to be added,closed,2026-02-16T06:37:57Z,2026-05-01T14:10:15Z,drdhaval2785,deferred|text-correction|medium,Digitization Quality,0,issue
-csl-corrections,119,Sanskrit Questions for Andhrabharati (Part-7),open,2026-03-03T09:59:06Z,,aumsanskrit,question|minor,Structured Data,197,issue
+csl-corrections,119,Sanskrit Questions for Andhrabharati (Part-7),open,2026-03-03T09:59:06Z,,aumsanskrit,question|minor,Structured Data,203,issue
 csl-corrections,120,Missing vacana marks,open,2026-04-02T18:48:35Z,,drdhaval2785,deferred|markup|minor|tech-debt,Structured Data,1,issue
 csl-corrections,121,Scott 20260203 batch progress,closed,2026-04-02T18:49:28Z,2026-04-03T04:22:11Z,drdhaval2785,text-correction|medium,Digitization Quality,1,issue
 csl-corrections,122,A few uncertain entries,closed,2026-04-03T04:46:04Z,2026-04-03T04:47:25Z,drdhaval2785,question|minor,Structured Data,2,issue
@@ -2988,19 +3049,19 @@ csl-corrections,296,docs: batch processing runbook + metadoc + README link (H502
 csl-corrections,297,docs(README): refresh to current facts + org link conventions (H549),closed,2026-07-10T22:57:20Z,2026-07-11T06:15:16Z,gasyoun,,,0,PR
 csl-corrections,298,Daily Corrections - 2026-07-10,closed,2026-07-11T01:56:08Z,2026-07-11T07:11:24Z,github-actions[bot],daily-corrections,,0,issue
 csl-corrections,299,docs: metadoc template v2 backfill (H663),closed,2026-07-11T17:56:08Z,2026-07-11T17:57:21Z,gasyoun,,,0,PR
-csl-corrections,300,Daily Corrections - 2026-07-11,open,2026-07-12T01:59:35Z,,github-actions[bot],daily-corrections|text-correction|minor,Digitization Quality,0,issue
-csl-corrections,301,Daily Corrections - 2026-07-12,open,2026-07-13T02:01:31Z,,github-actions[bot],daily-corrections|text-correction|minor,Digitization Quality,0,issue
+csl-corrections,300,Daily Corrections - 2026-07-11,closed,2026-07-12T01:59:35Z,2026-08-04T12:26:17Z,github-actions[bot],daily-corrections|text-correction|minor,Digitization Quality,0,issue
+csl-corrections,301,Daily Corrections - 2026-07-12,closed,2026-07-13T02:01:31Z,2026-08-04T12:30:36Z,github-actions[bot],daily-corrections|text-correction|minor,Digitization Quality,0,issue
 csl-corrections,302,ai-wip: tidy sweep -- append ap90 batch_20260712 correction loci,closed,2026-07-13T12:01:15Z,2026-07-13T17:00:41Z,gasyoun,,,0,PR
-csl-corrections,303,Daily Corrections - 2026-07-14,open,2026-07-15T01:44:12Z,,github-actions[bot],daily-corrections|text-correction|minor,Digitization Quality,0,issue
-csl-corrections,304,Daily Corrections - 2026-07-15,open,2026-07-16T01:54:13Z,,github-actions[bot],daily-corrections|text-correction|minor,Digitization Quality,0,issue
-csl-corrections,305,Daily Corrections - 2026-07-16,open,2026-07-17T01:58:15Z,,github-actions[bot],daily-corrections|text-correction|minor,Digitization Quality,0,issue
-csl-corrections,306,Daily Corrections - 2026-07-17,open,2026-07-18T01:47:44Z,,github-actions[bot],daily-corrections|text-correction|minor,Digitization Quality,0,issue
+csl-corrections,303,Daily Corrections - 2026-07-14,closed,2026-07-15T01:44:12Z,2026-08-04T12:33:25Z,github-actions[bot],daily-corrections|text-correction|minor,Digitization Quality,0,issue
+csl-corrections,304,Daily Corrections - 2026-07-15,closed,2026-07-16T01:54:13Z,2026-08-04T12:38:57Z,github-actions[bot],daily-corrections|text-correction|minor,Digitization Quality,0,issue
+csl-corrections,305,Daily Corrections - 2026-07-16,closed,2026-07-17T01:58:15Z,2026-08-04T12:51:50Z,github-actions[bot],daily-corrections|text-correction|minor,Digitization Quality,0,issue
+csl-corrections,306,Daily Corrections - 2026-07-17,closed,2026-07-18T01:47:44Z,2026-08-04T12:58:58Z,github-actions[bot],daily-corrections|text-correction|minor,Digitization Quality,0,issue
 csl-corrections,307,census: bump EXPECTED for legitimate 2026-07 batch growth (G14),closed,2026-07-18T02:55:18Z,2026-07-18T02:56:23Z,gasyoun,,,0,PR
 csl-corrections,308,H864: bump G14 census EXPECTED for the ap90 batch_20260712 append,closed,2026-07-18T03:05:02Z,2026-07-18T03:13:23Z,gasyoun,,,1,PR
-csl-corrections,309,Daily Corrections - 2026-07-18,open,2026-07-19T01:57:12Z,,github-actions[bot],daily-corrections|text-correction|minor,Digitization Quality,0,issue
-csl-corrections,310,Daily Corrections - 2026-07-19,open,2026-07-20T03:20:57Z,,github-actions[bot],daily-corrections|text-correction|minor,Digitization Quality,0,issue
+csl-corrections,309,Daily Corrections - 2026-07-18,closed,2026-07-19T01:57:12Z,2026-08-04T13:06:36Z,github-actions[bot],daily-corrections|text-correction|minor,Digitization Quality,0,issue
+csl-corrections,310,Daily Corrections - 2026-07-19,closed,2026-07-20T03:20:57Z,2026-08-04T13:17:48Z,github-actions[bot],daily-corrections|text-correction|minor,Digitization Quality,0,issue
 csl-corrections,311,H1393: AGENTS.md org-context block + operational-hazard pointer,closed,2026-07-20T13:33:44Z,2026-07-20T13:45:11Z,gasyoun,,,0,PR
-csl-corrections,312,Daily Corrections - 2026-07-20,open,2026-07-21T01:56:08Z,,github-actions[bot],daily-corrections,,0,issue
+csl-corrections,312,Daily Corrections - 2026-07-20,closed,2026-07-21T01:56:08Z,2026-08-04T13:24:20Z,github-actions[bot],daily-corrections,,0,issue
 csl-corrections,313,Daily Corrections - 2026-07-21,open,2026-07-22T01:55:06Z,,github-actions[bot],daily-corrections,,0,issue
 csl-corrections,314,Daily Corrections - 2026-07-22,open,2026-07-23T02:03:16Z,,github-actions[bot],daily-corrections,,0,issue
 csl-corrections,315,Daily Corrections - 2026-07-23,open,2026-07-24T01:58:14Z,,github-actions[bot],daily-corrections,,0,issue
@@ -3022,6 +3083,25 @@ csl-corrections,330,Daily Corrections - 2026-08-02,open,2026-08-03T02:03:38Z,,gi
 csl-corrections,331,"census: bump EXPECTED for legitimate 2026-08 batch growth (G14, H2035)",closed,2026-08-03T04:42:33Z,2026-08-03T05:16:15Z,gasyoun,,,0,PR
 csl-corrections,332,build(deps): bump actions/checkout from 5 to 7,closed,2026-08-03T05:11:32Z,2026-08-03T05:14:25Z,dependabot[bot],dependencies|github_actions,,0,PR
 csl-corrections,333,build(deps): bump actions/setup-python from 6 to 7,closed,2026-08-03T05:11:38Z,2026-08-03T05:17:15Z,dependabot[bot],dependencies|github_actions,,0,PR
+csl-corrections,334,Daily Corrections - 2026-08-03,open,2026-08-04T01:49:04Z,,github-actions[bot],daily-corrections,,0,issue
+csl-corrections,335,fix: repair 2 broken link(s) (link audit),closed,2026-08-04T12:03:43Z,2026-08-06T19:22:46Z,gasyoun,,,0,PR
+csl-corrections,336,Daily Corrections - 2026-08-04,open,2026-08-05T01:50:24Z,,github-actions[bot],daily-corrections,,0,issue
+csl-corrections,337,Daily Corrections - 2026-08-05,open,2026-08-06T01:51:19Z,,github-actions[bot],daily-corrections,,0,issue
+csl-corrections,338,"docs(audit): correction-queue pipeline audit (H2022, Fable lane)",closed,2026-08-06T07:16:50Z,2026-08-06T07:53:30Z,gasyoun,,,0,PR
+csl-corrections,339,add the pre-push silent-revert guard + CRLF-in-blob gate (H2280/H2289/H2301),closed,2026-08-06T14:46:19Z,2026-08-06T16:49:21Z,gasyoun,,,0,PR
+csl-corrections,340,Daily Corrections - 2026-08-06,open,2026-08-07T02:13:46Z,,github-actions[bot],daily-corrections,,0,issue
+csl-corrections,341,chore(agents): regenerate AGENTS.md org-context block (H2331),closed,2026-08-07T05:33:29Z,2026-08-07T05:40:49Z,gasyoun,,,0,PR
+csl-corrections,342,Daily Corrections - 2026-08-07,open,2026-08-08T01:02:12Z,,github-actions[bot],daily-corrections,,0,issue
+csl-corrections,343,H2035 · 31-07-2026 — G14: bump correction_loci census EXPECTED + open PR,closed,2026-08-08T10:45:00Z,2026-08-08T10:45:02Z,gasyoun,handoff,,1,issue
+csl-corrections,344,"H271 · 07-07-2026 — Fable deep-analysis: correction-data hypotheses + viz, csl-atlas DH improvement, ACL Anthology methods transfer",closed,2026-08-08T12:43:08Z,2026-08-08T12:43:11Z,gasyoun,handoff,,1,issue
+csl-corrections,345,H294 · 07-07-2026 — Build correction_loci.tsv + corrections-native viz (H271 backlog #1),closed,2026-08-08T12:45:11Z,2026-08-08T12:45:13Z,gasyoun,handoff,,1,issue
+csl-corrections,346,H356 · 08-07-2026 — Seven auto-derived epistemic sibling registries (assumptions/contradictions/gaps/dead-ends/recipes/staleness/glossary) mirrored across SanskritLexicography + Uprava,closed,2026-08-08T12:49:49Z,2026-08-08T12:49:51Z,gasyoun,handoff,,1,issue
+csl-corrections,347,H756 · 11-07-2026 — G13: AP90 sarpis duplicate --Comp. correction queued (CORRECTIONS#434),closed,2026-08-08T13:35:47Z,2026-08-08T13:35:49Z,gasyoun,handoff,,1,issue
+csl-corrections,348,H2086 · 01-08-2026 — csl-orig batch_pending durability + validate gaps,closed,2026-08-08T15:14:08Z,2026-08-08T15:14:10Z,gasyoun,handoff,,1,issue
+csl-corrections,349,H502 · 10-07-2026 — Author a detailed operator manual for csl-corrections,closed,2026-08-08T15:20:58Z,2026-08-08T15:21:00Z,gasyoun,handoff,,1,issue
+csl-corrections,350,Daily Corrections - 2026-08-08,open,2026-08-09T01:06:14Z,,github-actions[bot],daily-corrections,,0,issue
+csl-corrections,351,H2306: harden batch_pending durability checker,closed,2026-08-09T14:31:14Z,2026-08-09T16:59:21Z,gasyoun,,,0,PR
+csl-corrections,352,Daily Corrections - 2026-08-09,open,2026-08-10T01:07:46Z,,github-actions[bot],daily-corrections,,0,issue
 csl-devanagari,1,MW72 questions,closed,2021-09-02T18:53:28Z,2021-09-03T04:57:55Z,drdhaval2785,enhancement|minor,,27,issue
 csl-devanagari,2,LAN issues,open,2021-09-02T19:14:06Z,,drdhaval2785,question|trivial|domain:transcoding,Community,5,issue
 csl-devanagari,3,CAE issues,open,2021-09-02T19:16:32Z,,drdhaval2785,enhancement|minor|domain:transcoding,User Experience,5,issue
@@ -3073,6 +3153,10 @@ csl-devanagari,48,docs: correct README creation date (H549 audit),closed,2026-07
 csl-devanagari,49,H1393: AGENTS.md org-context block + operational-hazard pointer,closed,2026-07-20T13:33:52Z,2026-07-20T13:45:17Z,gasyoun,,,0,PR
 csl-devanagari,50,add .gitattributes (eol=lf line-ending policy),closed,2026-07-27T17:04:23Z,2026-07-27T17:55:26Z,gasyoun,,,0,PR
 csl-devanagari,51,add/upgrade .pre-commit-config.yaml (mixed-line-ending lf),open,2026-07-31T11:05:36Z,,gasyoun,,,0,PR
+csl-devanagari,52,fix(eol): renormalize the one CRLF-in-blob file left behind by #50,closed,2026-08-04T08:00:55Z,2026-08-04T08:08:31Z,gasyoun,,,0,PR
+csl-devanagari,53,fix: repair 1 broken link(s) (link audit),open,2026-08-04T12:03:38Z,,gasyoun,,,0,PR
+csl-devanagari,54,"add the pre-push silent-revert guard (H2280/H2289, Uprava#1516)",closed,2026-08-04T18:08:01Z,2026-08-06T16:49:01Z,gasyoun,,,0,PR
+csl-devanagari,55,chore(agents): regenerate AGENTS.md org-context block (H2331),closed,2026-08-07T05:34:02Z,2026-08-07T05:40:58Z,gasyoun,,,0,PR
 csl-doc,1,Intro,open,2018-11-24T01:49:16Z,,funderburkjim,trivial|documentation|domain:rendering,Developer Experience,2,issue
 csl-doc,2,SCH-Nachtraege regenerated on each commit,closed,2019-06-27T05:41:40Z,2021-08-07T07:08:40Z,drdhaval2785,bug,,16,issue
 csl-doc,3,Recover 'contributor' link,closed,2019-11-08T01:14:55Z,2019-11-08T01:15:04Z,funderburkjim,bug|minor,,0,issue
@@ -3147,6 +3231,9 @@ csl-inflect,25,docs: pipeline operator manual + metadoc (H507),closed,2026-07-10
 csl-inflect,26,docs(README): rewrite so every claim is currently true (H549),closed,2026-07-10T23:13:56Z,2026-07-11T06:14:54Z,gasyoun,,,0,PR
 csl-inflect,27,docs: metadoc template v2 backfill (H663),closed,2026-07-11T17:55:53Z,2026-07-11T17:56:32Z,gasyoun,,,0,PR
 csl-inflect,28,add .gitattributes (eol=lf line-ending policy),closed,2026-07-27T17:43:16Z,2026-07-27T18:00:12Z,gasyoun,,,0,PR
+csl-inflect,29,H093 · 03-07-2026 — csl-inflect upstream probe: PR queue + ONE mobile-CSS probe PR,closed,2026-08-08T08:07:29Z,2026-08-08T08:07:41Z,gasyoun,handoff,,1,issue
+csl-inflect,30,H094 · 03-07-2026 — csl-inflect open-issue research sweep (give-back on Jim's 2020 TODOs),closed,2026-08-08T08:07:57Z,2026-08-08T08:08:06Z,gasyoun,handoff,,1,issue
+csl-inflect,31,H507 · 10-07-2026 — Author a detailed operator manual for csl-inflect,closed,2026-08-08T13:24:50Z,2026-08-08T13:24:53Z,gasyoun,handoff,,1,issue
 csl-json,1,YAT json comparable to that of ashtadhyayi.com,closed,2021-08-16T05:11:17Z,2021-08-16T06:20:38Z,drdhaval2785,,,2,issue
 csl-json,2,Shabdakalpadruma quotation marks,closed,2021-08-16T05:55:27Z,2021-08-16T15:32:45Z,drdhaval2785,,,1,issue
 csl-json,3,MWE showing different pattern,closed,2021-08-16T06:19:58Z,2021-08-16T15:32:53Z,drdhaval2785,,,1,issue
@@ -3204,6 +3291,7 @@ csl-lnum,6,docs(README): rewrite to accurate canonical doc (H549),closed,2026-07
 csl-lnum,7,add .gitattributes (eol=lf line-ending policy),closed,2026-07-27T17:53:47Z,2026-07-27T18:01:19Z,gasyoun,,,0,PR
 csl-lnum,8,add/upgrade .pre-commit-config.yaml (mixed-line-ending lf),closed,2026-07-31T11:07:44Z,2026-07-31T12:34:15Z,gasyoun,,,0,PR
 csl-lnum,9,fix: drop legacy readme.md colliding with README.md on Windows,closed,2026-08-02T21:23:33Z,2026-08-02T21:23:44Z,gasyoun,,,0,PR
+csl-lnum,10,H1955 · 30-07-2026 — csl-lnum: fix README/readme casefold dirt + catch up origin/main,closed,2026-08-08T10:39:29Z,2026-08-08T10:39:31Z,gasyoun,handoff,,1,issue
 csl-lslink,1,Initialization of zipped sqlite files,open,2026-03-31T02:53:13Z,,funderburkjim,documentation|minor,Developer Experience,0,issue
 csl-lslink,2,build(deps): bump dependabot/fetch-metadata from 2 to 3,closed,2026-06-14T04:52:59Z,2026-06-14T04:53:12Z,dependabot[bot],major|dependencies|github_actions,,0,PR
 csl-lslink,3,Revise pwg links after conversion to v1e version of pwg.txt,open,2026-06-21T19:38:53Z,,funderburkjim,data-pipeline|major|domain:link-resolution,Data Quality,0,issue
@@ -3219,6 +3307,10 @@ csl-newsletter,6,docs: publish operator manual + metadoc (H514),closed,2026-07-1
 csl-newsletter,7,add .gitattributes (eol=lf line-ending policy),closed,2026-07-27T17:10:56Z,2026-07-27T17:56:03Z,gasyoun,,,0,PR
 csl-newsletter,8,add changelog duplicate-entry guard (CI),closed,2026-07-29T18:17:16Z,2026-07-29T21:06:37Z,gasyoun,,,0,PR
 csl-newsletter,9,add/upgrade .pre-commit-config.yaml (mixed-line-ending lf),closed,2026-07-31T11:08:11Z,2026-07-31T12:33:38Z,gasyoun,,,0,PR
+csl-newsletter,10,newsletter: August 2026 edition + draft-script pagination fix (H1853),closed,2026-08-06T07:22:16Z,2026-08-06T07:24:07Z,gasyoun,,,0,PR
+csl-newsletter,11,chore(release): 0.2.0,closed,2026-08-06T07:26:58Z,2026-08-06T07:27:17Z,gasyoun,,,0,PR
+csl-newsletter,12,H1853 · 29-07-2026 — csl-newsletter: August 2026 CDSL newsletter edition — full RU/EN prose (time-critical),closed,2026-08-08T10:30:55Z,2026-08-08T10:30:59Z,gasyoun,handoff,,1,issue
+csl-newsletter,13,H514 · 10-07-2026 — Author a detailed operator manual for csl-newsletter,closed,2026-08-08T13:25:23Z,2026-08-08T13:25:25Z,gasyoun,handoff,,1,issue
 csl-observatory,1,Identify nine unidentified contributors in the contributor map,open,2026-05-07T19:24:09Z,,gasyoun,enhancement|minor,User Experience,0,issue
 csl-observatory,2,Article submission roadmap (Indo-Iranian Journal): outstanding work,open,2026-05-07T19:57:33Z,,gasyoun,documentation|minor,Developer Experience,0,issue
 csl-observatory,3,L0 preview cladogram + Paper-1 sect.3.5 / sect.5.2.1 + Patel annotation scaffold,closed,2026-05-28T14:33:52Z,2026-05-28T15:51:52Z,gasyoun,,,0,PR
@@ -3354,6 +3446,55 @@ csl-observatory,132,docs: fix stale ROADMAP/OBSERVATORY_ROADMAP status (H1877),c
 csl-observatory,133,add/upgrade .pre-commit-config.yaml (mixed-line-ending lf),closed,2026-07-31T11:08:23Z,2026-07-31T12:33:34Z,gasyoun,,,0,PR
 csl-observatory,134,chore(deps): bump actions/setup-python from 6 to 7,open,2026-08-03T05:11:57Z,,dependabot[bot],major|dependencies|github_actions,,0,PR
 csl-observatory,135,chore(deps): bump actions/checkout from 5 to 7,open,2026-08-03T05:12:05Z,,dependabot[bot],major|dependencies|github_actions,,0,PR
+csl-observatory,136,fix: repair 10 broken link(s) (link audit),closed,2026-08-04T12:05:28Z,2026-08-04T12:05:35Z,gasyoun,,,0,PR
+csl-observatory,137,"docs: H1875 — July cross-repo decisions re-adjudication (04-08 edition, v1.8.0)",closed,2026-08-04T17:41:15Z,2026-08-04T17:42:40Z,gasyoun,,,0,PR
+csl-observatory,138,"add the pre-push silent-revert guard (H2280/H2289, Uprava#1516)",closed,2026-08-04T17:50:07Z,2026-08-06T16:48:40Z,gasyoun,,,0,PR
+csl-observatory,139,A69: PWG scan-index campaign paper draft (H1863) — v1.9.0,closed,2026-08-05T08:05:46Z,2026-08-05T08:06:34Z,gasyoun,,,0,PR
+csl-observatory,140,fix(G17): refresh_observatory.py --check-only stale artifact + subprocess encoding bug,closed,2026-08-05T10:35:57Z,2026-08-05T10:49:19Z,gasyoun,,,0,PR
+csl-observatory,141,chore(release): 1.9.1,closed,2026-08-05T11:00:13Z,2026-08-05T11:02:07Z,gasyoun,,,0,PR
+csl-observatory,142,docs(.ai_state): H2037 completion + site-build gotchas,closed,2026-08-05T19:14:07Z,2026-08-05T19:23:01Z,gasyoun,,,0,PR
+csl-observatory,143,"feat(story): chapter 2 — the first measured month, July 2026 (H1864)",closed,2026-08-05T20:09:36Z,2026-08-05T20:37:43Z,gasyoun,,,0,PR
+csl-observatory,144,chore(release): 1.10.0,closed,2026-08-05T20:43:42Z,2026-08-05T20:45:06Z,gasyoun,,,0,PR
+csl-observatory,145,docs(decisions): D01 — a measurement of a third-party tool is version-scoped (H2250),closed,2026-08-06T11:39:06Z,2026-08-06T11:41:07Z,gasyoun,,,0,PR
+csl-observatory,146,chore(release): 1.11.0,closed,2026-08-06T11:46:02Z,2026-08-06T11:46:24Z,gasyoun,,,0,PR
+csl-observatory,147,"fix(eol): strip embedded CR bytes from commits.csv, sanitize CSV generator",closed,2026-08-06T17:26:11Z,2026-08-06T17:26:29Z,gasyoun,,,0,PR
+csl-observatory,148,chore(agents): regenerate AGENTS.md org-context block (H2331),closed,2026-08-07T05:35:54Z,2026-08-07T05:41:04Z,gasyoun,,,0,PR
+csl-observatory,149,H009 · 02-07-2026 — Handoff — A13 fix pass: make the CDSL narrative report submission-ready for IIJ,closed,2026-08-08T07:19:24Z,2026-08-08T07:19:32Z,gasyoun,handoff,,1,issue
+csl-observatory,150,H014 · 02-07-2026 — Handoff — Fable window S3: csl-observatory: decisions-master triage + A13 go/no-go,closed,2026-08-08T07:21:27Z,2026-08-08T07:21:38Z,gasyoun,handoff,,1,issue
+csl-observatory,151,H089 · 03-07-2026 — OBS capture–recapture: estimate errors REMAINING per dictionary (G3),closed,2026-08-08T08:06:06Z,2026-08-08T08:06:12Z,gasyoun,handoff,,1,issue
+csl-observatory,152,H090 · 03-07-2026 — OBS contributor↔repo network page (G4),closed,2026-08-08T08:06:21Z,2026-08-08T08:06:26Z,gasyoun,handoff,,1,issue
+csl-observatory,153,"H091 · 03-07-2026 — OBS narrative story page: 13 years, one scroll (G5)",closed,2026-08-08T08:06:33Z,2026-08-08T08:06:43Z,gasyoun,handoff,,1,issue
+csl-observatory,154,"H092 · 03-07-2026 — OBS external impact & reach, scholar-framed (G6)",closed,2026-08-08T08:07:07Z,2026-08-08T08:07:18Z,gasyoun,handoff,,1,issue
+csl-observatory,155,"H1223 · 18-07-2026 — G17: csl-observatory `data-index-check` byte-count drift — confirm cause, re-baseline canonically",closed,2026-08-08T08:29:48Z,2026-08-08T08:29:50Z,gasyoun,handoff,,1,issue
+csl-observatory,156,H1477 · 22-07-2026 — csl-observatory: Extend the OBS-T capture-recapture estimator (A48) with fuzzy record-linkage and a within-era corrector-pair recapture model,closed,2026-08-08T08:43:59Z,2026-08-08T08:44:01Z,gasyoun,handoff,,1,issue
+csl-observatory,157,H1478 · 22-07-2026 — csl-observatory: Design a systematic OpenAlex/Semantic Scholar citation sweep to replace G6's hand-picked citation tier,closed,2026-08-08T08:44:03Z,2026-08-08T08:44:05Z,gasyoun,handoff,,1,issue
+csl-observatory,158,"H1706 · 26-07-2026 — Reuse the PWG literary-sources scan-index tracker every way it pays: machine registry, observatory coverage, e-text queue, and the Andhrabharati-guided process history",closed,2026-08-08T09:26:09Z,2026-08-08T09:26:11Z,gasyoun,handoff,,1,issue
+csl-observatory,159,"H1715 · 27-07-2026 — E-text pilot on the two heaviest PWG kośa scan indexes (`amara_dlc`, `abch2`)",closed,2026-08-08T09:26:40Z,2026-08-08T09:26:42Z,gasyoun,handoff,,1,issue
+csl-observatory,160,H1720 · 27-07-2026 — Harvest the BSB per-page hOCR for the two PWG kośa editions and align it against the committed e-texts,closed,2026-08-08T09:26:56Z,2026-08-08T09:26:58Z,gasyoun,handoff,,1,issue
+csl-observatory,161,"H1736 · 27-07-2026 — Repair csl-observatory's four red default-branch workflows — one real break, two honest audits, one secret",closed,2026-08-08T09:27:35Z,2026-08-08T09:27:37Z,gasyoun,handoff,,1,issue
+csl-observatory,162,H1759 · 27-07-2026 — A12 (OBS-T): reconcile the two rival manuscripts into one canonical draft,closed,2026-08-08T09:28:51Z,2026-08-08T09:28:54Z,gasyoun,handoff,,1,issue
+csl-observatory,163,H1766 · 27-07-2026 — H1477 salvage: form-era L-code drift census + word-initial HK residue in looks_hk,closed,2026-08-08T09:29:17Z,2026-08-08T09:29:19Z,gasyoun,handoff,,1,issue
+csl-observatory,164,H1787 · 28-07-2026 — Tier A/B live recompile + PR babysit + close-ready comments,closed,2026-08-08T09:30:36Z,2026-08-08T09:30:38Z,gasyoun,handoff,,1,issue
+csl-observatory,165,"H149 · 03-07-2026 — A15: sketch the ""CDSL as GitHub maintenance ecosystem"" manuscript from its outline",closed,2026-08-08T10:06:08Z,2026-08-08T10:06:27Z,gasyoun,handoff,,1,issue
+csl-observatory,166,H1494 · 22-07-2026 — csl-observatory: Add persistent event-ID scheme to correction-event schema,closed,2026-08-08T10:09:38Z,2026-08-08T10:10:25Z,gasyoun,handoff,,1,issue
+csl-observatory,167,"H1495 · 22-07-2026 — csl-observatory: Commit OntoLex-Lemon/TEI Lex-0 routing-contract doc, hand off to csl-standards",closed,2026-08-08T10:11:48Z,2026-08-08T10:12:07Z,gasyoun,handoff,,1,issue
+csl-observatory,168,H1496 · 22-07-2026 — csl-observatory: Build no-BOM/UTF-8/NFC/XML-parse CI guard template for dictionary-source change paths,closed,2026-08-08T10:12:31Z,2026-08-08T10:12:49Z,gasyoun,handoff,,1,issue
+csl-observatory,169,H1524 · 23-07-2026 — csl-observatory analytical idle-stats pages (POS · paradigm · polysemy),closed,2026-08-08T10:23:28Z,2026-08-08T10:23:32Z,gasyoun,handoff,,1,issue
+csl-observatory,170,H1539 · 23-07-2026 — csl-observatory: Add MWSA evaluation-lineage subsection to OBS-T datasheet + paper,closed,2026-08-08T10:26:22Z,2026-08-08T10:26:28Z,gasyoun,handoff,,1,issue
+csl-observatory,171,H1540 · 23-07-2026 — csl-observatory: Extend pull_data.py to fetch project-board fields + add rate-limit notes,closed,2026-08-08T10:26:50Z,2026-08-08T10:27:07Z,gasyoun,handoff,,1,issue
+csl-observatory,172,H1541 · 23-07-2026 — csl-observatory: Generalize docs/DATASHEET.md into a reusable DATASHEET_TEMPLATE.md,closed,2026-08-08T10:27:13Z,2026-08-08T10:27:17Z,gasyoun,handoff,,1,issue
+csl-observatory,173,H1542 · 23-07-2026 — csl-observatory: Roll out .gitattributes LF line-ending policy to remaining active tooling repos,closed,2026-08-08T10:27:21Z,2026-08-08T10:27:24Z,gasyoun,handoff,,1,issue
+csl-observatory,174,H1845 · 29-07-2026 — Fix #127: data_index.csv published LFS pointer sizes as dataset sizes,closed,2026-08-08T10:29:54Z,2026-08-08T10:30:00Z,gasyoun,handoff,,1,issue
+csl-observatory,175,H1863 · 29-07-2026 — csl-observatory: PWG scan-index campaign — paper draft,closed,2026-08-08T10:32:06Z,2026-08-08T10:32:09Z,gasyoun,handoff,,1,issue
+csl-observatory,176,H1864 · 29-07-2026 — csl-observatory: Story page second chapter — July results,closed,2026-08-08T10:32:13Z,2026-08-08T10:32:17Z,gasyoun,handoff,,1,issue
+csl-observatory,177,"H1875 · 29-07-2026 — csl-observatory: Cross-repo decisions, July edition — re-adjudication",closed,2026-08-08T10:33:29Z,2026-08-08T10:33:32Z,gasyoun,handoff,,1,issue
+csl-observatory,178,H2037 · 31-07-2026 — G17: fix observatory --check-only stale artifact red,closed,2026-08-08T10:45:10Z,2026-08-08T10:45:12Z,gasyoun,handoff,,1,issue
+csl-observatory,179,H269 · 07-07-2026 — Fable: csl-observatory new-hypotheses + idle-layer visualizations + ACL/DH standards spec doc,closed,2026-08-08T12:42:56Z,2026-08-08T12:42:59Z,gasyoun,handoff,,1,issue
+csl-observatory,180,H293 · 07-07-2026 — Sonnet: csl-observatory — build Part 2 of the Phase-3 spec (two dashboard pages + palette.css),closed,2026-08-08T12:45:05Z,2026-08-08T12:45:07Z,gasyoun,handoff,,1,issue
+csl-observatory,181,H303 · 07-07-2026 — Sonnet: csl-observatory — run Part 1 of the Phase-3 spec (hypotheses H4–H8 rigor script + report),closed,2026-08-08T12:45:22Z,2026-08-08T12:45:25Z,gasyoun,handoff,,1,issue
+csl-observatory,182,"H671 · 11-07-2026 — A14 CDSL methodological infrastructure: verify claims vs metrics, figures, 3/5 → 4/5",closed,2026-08-08T13:31:06Z,2026-08-08T13:31:08Z,gasyoun,handoff,,1,issue
+csl-observatory,183,H688 · 11-07-2026 — Code-duplication census re-run: measuring the sanskrit-util dedup payoff,closed,2026-08-08T13:32:08Z,2026-08-08T13:32:10Z,gasyoun,handoff,,1,issue
+csl-observatory,184,docs(H2207): .ai_state.md — Pages deploy re-triggered,closed,2026-08-09T14:32:57Z,2026-08-09T14:33:17Z,gasyoun,,,0,PR
 csl-orig,1,AP and PD data,closed,2019-07-23T13:37:39Z,2020-12-29T02:35:30Z,drdhaval2785,doc|question|minor,Structured Data,14,issue
 csl-orig,2,why hwextra here,closed,2019-09-10T00:20:23Z,2019-12-23T09:34:49Z,funderburkjim,text-correction|minor,Digitization Quality,7,issue
 csl-orig,3,digitization update workflow,closed,2019-09-10T00:42:05Z,2023-12-15T15:21:52Z,funderburkjim,doc|question|minor,Structured Data,6,issue
@@ -6210,11 +6351,17 @@ csl-orig,2875,"A35 review fixes: Wilson artifact decomposition, WIL root fold, k
 csl-orig,2876,"A35: ACL Anthology related-work, ISCLS venue, submission-readiness memo",closed,2026-07-04T16:10:44Z,2026-07-04T16:10:52Z,gasyoun,,,0,PR
 csl-orig,2877,docs(README): refresh to accurate project overview (H548),closed,2026-07-10T21:54:28Z,2026-07-10T22:30:02Z,gasyoun,,,0,PR
 csl-orig,2878,docs: self-contained correction operator manual + metadoc (H515),closed,2026-07-11T08:16:20Z,2026-07-11T08:16:38Z,gasyoun,,,0,PR
-csl-orig,2879,"corrections: 2026-07 batch (ap90, 15 changes, 2 issues)",open,2026-07-12T19:45:18Z,,gasyoun,,,0,PR
+csl-orig,2879,"corrections: 2026-07 batch (ap90, 15 changes, 2 issues) + repo docs",open,2026-07-12T19:45:18Z,,gasyoun,,,0,PR
 csl-orig,2880,Bump actions/setup-python from 6 to 7,closed,2026-07-20T05:12:50Z,2026-07-20T05:13:50Z,dependabot[bot],major|dependencies|github_actions,,0,PR
 csl-orig,2881,[feature] single interface for online requests,closed,2026-07-28T14:00:53Z,2026-07-30T03:17:05Z,dhammagift,feature,,6,issue
 csl-orig,2882,MW accent in non-Vedic texts and gender error,open,2026-07-29T11:49:51Z,,drdhaval2785,,,0,issue
 csl-orig,2883,add changelog duplicate-entry guard (CI),open,2026-07-29T18:17:12Z,,gasyoun,,,0,PR
+csl-orig,2884,"corrections: 2026-08 batch (57 changes across ap90, mw72, pwg)",open,2026-08-04T06:39:52Z,,gasyoun,,,0,PR
+csl-orig,2885,"corrections: mw 2026-08 batch (21,811 lines — &c. markup + phw graph)",open,2026-08-04T07:58:57Z,,gasyoun,,,0,PR
+csl-orig,2886,H050 · 02-07-2026 — Handoff — Fable window S6: csl-orig: A35 hostile review (Pāṇinian-derivation consistency → IJL),closed,2026-08-08T07:47:27Z,2026-08-08T07:47:44Z,gasyoun,handoff,,1,issue
+csl-orig,2887,H108 · 03-07-2026 — A35 review fixes: apply M1–M5 + minors to the derivation paper & pipeline,closed,2026-08-08T08:20:28Z,2026-08-08T08:20:31Z,gasyoun,handoff,,1,issue
+csl-orig,2888,"H2270 · 04-08-2026 — csl-orig 2026-08 batch: resolve the non-sequential queue, XML-validate, ship",closed,2026-08-08T12:22:25Z,2026-08-08T12:22:32Z,gasyoun,handoff,,1,issue
+csl-orig,2889,H515 · 10-07-2026 — Author a detailed operator manual for csl-orig,closed,2026-08-08T13:25:37Z,2026-08-08T13:25:41Z,gasyoun,handoff,,1,issue
 csl-pywork,1,templates and constants,closed,2019-09-17T15:43:27Z,2020-12-13T20:02:57Z,funderburkjim,documentation|code-cleanup,,12,issue
 csl-pywork,2,Progress,closed,2019-09-30T01:36:19Z,2020-12-13T03:58:08Z,funderburkjim,documentation|code-cleanup|trivial,,3,issue
 csl-pywork,3,Ubuntu installation problems,closed,2019-09-30T01:55:58Z,2021-08-07T06:26:11Z,funderburkjim,documentation,February 2021,22,issue
@@ -6294,6 +6441,8 @@ csl-pywork,76,ai-wip: journal H1783 completion in .ai_state.md,closed,2026-07-28
 csl-pywork,77,add changelog duplicate-entry guard (CI),closed,2026-07-29T18:17:58Z,2026-07-29T21:06:43Z,gasyoun,,,0,PR
 csl-pywork,78,add/upgrade .pre-commit-config.yaml (mixed-line-ending lf),closed,2026-07-31T11:08:46Z,2026-07-31T12:33:24Z,gasyoun,,,0,PR
 csl-pywork,79,chore(release): cut v0.2.2 (H2012 residual),closed,2026-07-31T20:22:25Z,2026-07-31T20:22:27Z,gasyoun,,,0,PR
+csl-pywork,80,H1783 · 28-07-2026 — Author a detailed operator manual for csl-pywork,closed,2026-08-08T09:30:19Z,2026-08-08T09:30:21Z,gasyoun,handoff,,1,issue
+csl-pywork,81,H787 · 12-07-2026 — Reconcile csl-pywork templates with the modal deployed versions (FINDINGS §73 follow-up),closed,2026-08-08T13:37:53Z,2026-08-08T13:37:56Z,gasyoun,handoff,,1,issue
 csl-sqlite,1,[docs-pass] Add documentation files (infrastructure),open,2026-05-22T13:55:43Z,,gasyoun,documentation|minor,Developer Experience,1,issue
 csl-sqlite,2,build(deps): bump dependabot/fetch-metadata from 2 to 3,closed,2026-06-14T04:51:17Z,2026-06-14T04:52:02Z,dependabot[bot],major|dependencies|github_actions,,0,PR
 csl-sqlite,3,docs(README): describe actual dual-channel SQLite distribution (H549),closed,2026-07-10T23:47:05Z,2026-07-11T06:14:20Z,gasyoun,,,0,PR
@@ -6440,6 +6589,11 @@ csl-websanlexicon,137,docs(security): audit vendored JS deps; bump js-cookie to 
 csl-websanlexicon,138,docs: v02 web-frontend operator manual + metadoc; cut 0.3.0 (H1782),closed,2026-07-28T18:40:50Z,2026-07-28T18:41:52Z,gasyoun,,,0,PR
 csl-websanlexicon,139,"docs: correct issue #46 status — already resolved via H1523, not open (H1877)",closed,2026-07-29T20:04:07Z,2026-07-29T20:05:03Z,gasyoun,,,0,PR
 csl-websanlexicon,140,add/upgrade .pre-commit-config.yaml (mixed-line-ending lf),closed,2026-07-31T11:09:21Z,2026-07-31T12:40:46Z,gasyoun,,,0,PR
+csl-websanlexicon,141,H084 · 03-07-2026 — PHP endpoint hardening → csl-websanlexicon makotemplates (Wave 1),closed,2026-08-08T08:04:18Z,2026-08-08T08:04:26Z,gasyoun,handoff,,1,issue
+csl-websanlexicon,142,H086 · 03-07-2026 — Handoff — csl-websanlexicon W2: make Semgrep a blocking gate on new findings,closed,2026-08-08T08:04:58Z,2026-08-08T08:05:09Z,gasyoun,handoff,,1,issue
+csl-websanlexicon,143,H087 · 03-07-2026 — Cologne dictionaries page-speed quick wins (csl-websanlexicon),closed,2026-08-08T08:05:22Z,2026-08-08T08:05:31Z,gasyoun,handoff,,1,issue
+csl-websanlexicon,144,H1782 · 28-07-2026 — Author a detailed operator manual for csl-websanlexicon,closed,2026-08-08T09:30:15Z,2026-08-08T09:30:17Z,gasyoun,handoff,,1,issue
+csl-websanlexicon,145,"H1512 · 22-07-2026 — csl-websanlexicon: Audit and pin vendored JS dependencies (jQuery 3.5.0, jquery.cookie.js, orphus.customized.js)",closed,2026-08-08T10:20:38Z,2026-08-08T10:20:49Z,gasyoun,handoff,,1,issue
 csl-westergaard,1,व्रथादयः -> क्र्यादयः,open,2025-08-18T17:30:34Z,,shenyileirob,enhancement|minor|domain:metadata,User Experience,0,issue
 csl-westergaard,2,build(deps): bump dependabot/fetch-metadata from 2 to 3,closed,2026-06-14T04:49:46Z,2026-06-14T04:51:08Z,dependabot[bot],major|dependencies|github_actions,,0,PR
 csl-westergaard,3,security: prevent reflected XSS via page parameter (disp/index.php),closed,2026-06-14T08:52:23Z,2026-06-14T09:02:55Z,gasyoun,,,0,PR
