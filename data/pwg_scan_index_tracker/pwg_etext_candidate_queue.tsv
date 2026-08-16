@@ -13,7 +13,7 @@ rank	ls_code	title	citation_count	dict_citations	ru_subset_refs	ru_subset_scan_h
 12	VS.	VĀJASANEYISAM̃HITĀ	6078	2646	241	240	1098	vajasasa	https://github.com/sanskrit-lexicon-scans/vajasasa	yes	https://github.com/sanskrit-lexicon/PWG/issues/124	2025-04-11	5.5	
 13	ŚĀK.	ŚĀKUNTALA Bohtlingk ed.	5500	2679	440	439	427	shakuntala	https://github.com/sanskrit-lexicon-scans/shakuntala	yes	https://github.com/sanskrit-lexicon/PWG/issues/125	2025-03-22	12.9	
 14	MĀRK. P.	MĀRKĀṆḌEYAPURĀṆA	5436	2389	355	355	693	markandeyapurana	https://github.com/sanskrit-lexicon-scans/markandeyapurana	yes	https://github.com/sanskrit-lexicon/PWG/issues/122	2025-03-17	7.8	
-15	TS.	TAITTIRĪYASAM̃HITĀ	5387	2736	353	352	846	taittiriyas	https://github.com/sanskrit-lexicon-scans/taittiriyas	partial	https://github.com/sanskrit-lexicon/PWG/issues/134	2025-04-14	6.4	
+15	TS.	TAITTIRĪYASAM̃HITĀ	5387	2736	353	352	846	taittiriyas	https://github.com/sanskrit-lexicon-scans/taittiriyas	yes	https://github.com/sanskrit-lexicon/PWG/issues/134	2025-04-14	6.4	
 16	HALĀY.	HALĀYUDHA	5159	1209	29	26	417	armh2	https://github.com/sanskrit-lexicon-scans/armh2	yes	https://github.com/sanskrit-lexicon/PWG/issues/121	2025-03-12	12.4	
 17	VOP.	VOPADEVA'S Grammatik, Bohtlingk	5149	1441	280	276	489	mugdhabodha	https://github.com/sanskrit-lexicon-scans/mugdhabodha	yes	https://github.com/sanskrit-lexicon/PWG/issues/110	2025-03-05	10.5	
 18	AIT. BR.	AITAREYABRĀHMAṆA	4545	2458	258	257	898	aitbr	https://github.com/sanskrit-lexicon-scans/aitbr	yes	https://github.com/sanskrit-lexicon/PWG/issues/159	2025-08-12	5.1	
@@ -22,14 +22,14 @@ rank	ls_code	title	citation_count	dict_citations	ru_subset_refs	ru_subset_scan_h
 21	N.	NALOPĀKHYĀNA in B. Ch.	3446	1191	193	193	459	bchrest1	https://github.com/sanskrit-lexicon-scans/bchrest1	yes	https://github.com/sanskrit-lexicon/PWG/issues/93	2025-03-05	7.5	
 22	HIT.	HITOPADEŚA 1829 Schlegel & Lassen ed.	3364	953	225	224	460	hitopadesha	https://github.com/sanskrit-lexicon-scans/hitopadesha	yes	https://github.com/sanskrit-lexicon/PWG/issues/152	2025-06-16	7.3	
 23	NIR.	YĀSKA'S NIRUKTA sammt den NIGHAṆṬAVA'S	3166	1945	72	71	552	nirukta	https://github.com/sanskrit-lexicon-scans/nirukta	yes	https://github.com/sanskrit-lexicon/PWG/issues/167	2025-09-08	5.7	
-24	TBR.	TAITTIRĪYABRĀHMAṆA	2929	1600	211	209	2420	taittiriyabr	https://github.com/sanskrit-lexicon-scans/taittiriyabr	partial	https://github.com/sanskrit-lexicon/PWG/issues/144	2025-05-07	1.2	
+24	TBR.	TAITTIRĪYABRĀHMAṆA	2929	1600	211	209	2420	taittiriyabr	https://github.com/sanskrit-lexicon-scans/taittiriyabr	yes	https://github.com/sanskrit-lexicon/PWG/issues/144	2025-05-07	1.2	
 25	BHAṬṬ.	BHAṬṬIKĀVYA 1828 Calc. ed.	2561	1428	378	377	1456	bhattikavya	https://github.com/sanskrit-lexicon-scans/bhattikavya	yes	https://github.com/sanskrit-lexicon/PWG/issues/143	2025-04-27	1.8	
 26	KUMĀRAS.	KUMĀRASAM̃BHAVA	2510	1268	139	139	159	kumaras	https://github.com/sanskrit-lexicon-scans/kumaras	yes	https://github.com/sanskrit-lexicon/PWG/issues/146	2025-05-13	15.8	
 27	BHAG.	BHAGAVADGĪTĀ 1823 Schlegel ed.	2275	1372	205	204	225	bhagavadgita	https://github.com/sanskrit-lexicon-scans/bhagavadgita	yes	https://github.com/sanskrit-lexicon/PWG/issues/129	2025-03-31	10.1	
 28	PAÑCAR.	NĀRADA PAÑCARĀTRA	2221		74	74	395	pancar	https://github.com/sanskrit-lexicon-scans/pancar	partial	https://github.com/sanskrit-lexicon/PWG/issues/137	2025-07-20	5.6	
 29	MEGH.	MEGHADŪTA	2020	945	114	114	153	meghasrnga	https://github.com/sanskrit-lexicon-scans/meghasrnga	yes	https://github.com/sanskrit-lexicon/PWG/issues/147	2025-05-22	13.2	
 30	HĀR.	(Same book as 16 above) HĀRĀVALĪ 1807 Calc. ed.	1865	911	4	4		medini	https://github.com/sanskrit-lexicon-scans/medini	yes	https://github.com/sanskrit-lexicon/PWG/issues/105	2025-03-09		
-31	ṚV. PRĀT.	RigVeda, Uebersetzung des Prâtisâkhya (1856 & 1869) Max Muller	1755	788	51		746	rvps	https://github.com/sanskrit-lexicon-scans/rvps	no	https://github.com/sanskrit-lexicon/PWG/issues/173	2026-07-05	2.4	
+31	ṚV. PRĀT.	RigVeda, Uebersetzung des Prâtisâkhya (1856 & 1869) Max Muller	1755	788	51		746	rvps	https://github.com/sanskrit-lexicon-scans/rvps	yes	https://github.com/sanskrit-lexicon/PWG/issues/173	2026-07-05	2.4	
 32	VIKR.	VIKRAMORVAŚĪ	1560	808	90	90	723	vikramor	https://github.com/sanskrit-lexicon-scans/vikramor	yes	https://github.com/sanskrit-lexicon/PWG/issues/157	2025-08-08	2.2	
 33	NAIGH.	(Same book as 36 above) YĀSKA'S NIRUKTA zu Grunde liegende NAIGHAṆṬUKAKĀṆḌA	1477	1227	22	21		nirukta	https://github.com/sanskrit-lexicon-scans/nirukta	yes	https://github.com/sanskrit-lexicon/PWG/issues/167	2025-09-08		
 34	H. ś.	(Same book as 13 above) die Śeṣa zu HEMACANDRA'S ABHIDHĀNACINTĀMAṆI	1301	976	3	3		abch2	https://github.com/sanskrit-lexicon-scans/abch2	yes	https://github.com/sanskrit-lexicon/PWG/issues/104	2025-03-09		OCR-from-scratch RULED OUT by the H1715 pilot (27-07-2026): local tesseract 5 `san` scores 17.8% valid tokens against this work's own committed e-text, while the Bayerische Staatsbibliothek already publishes per-page hOCR for this edition at 43.8% — 2.5× better and free. Re-scoped to ingest-and-correct; see reports/pwg_kosa_etext_pilot.md.

@@ -1,0 +1,25 @@
+{
+  "table": "pwg_ls_counts_current.tsv",
+  "what": "PWG <ls> elements per bibliography abbreviation, longest-prefix rollup",
+  "generated": "2026-08-16",
+  "generator": "scripts/pwg_ls_counts.py (port of PWG lsextract_all.py)",
+  "inputs": {
+    "pwg_txt": {
+      "path": "csl-orig/v02/pwg/pwg.txt",
+      "sha256": "430c910f8b0c9229d89ef1580b2385883ce5f4e2ee83dfc6ecb7d6251bb62166",
+      "csl_orig_commit": "78cbb257d9c655f7464e342d17507f8133140c96"
+    },
+    "pwgbib_input": {
+      "path": "PWG/pwgissues/issue94/pwgbib_input.txt",
+      "sha256": "6b8106e36718cbb5bc05ac09c76d8f047e630a1e1754c5a0d1201286f077c891",
+      "pwg_commit": "b7b2226c9abf36c40c9ca731470e310dc8c48dbf"
+    }
+  },
+  "totals": {
+    "ALL": 799500,
+    "NUMBER": 1,
+    "UNKNOWN": 3254,
+    "attributed": 796245
+  },
+  "denominator_note": "ALL is the only dictionary-wide denominator these counts support; attributed excludes NUMBER and UNKNOWN buckets."
+}

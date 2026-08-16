@@ -40,11 +40,17 @@ const works = await FileAttachment("data/pwg_scan_index.csv").csv({typed: true})
 </div>
 
 :::note
-**Scope.** ${sum.tracked_works} literary sources tracked, snapshot ${sum.as_of}. The
-percentage is coverage of the **tracked set** — the works the campaign took on — not
-of the dictionary's whole citation apparatus. Those two denominators are not
-interchangeable, and the [full report](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/pwg_scan_index.md)
-§6.2 shows why.
+**Two denominators, and they are not interchangeable.** The headline percentage is
+coverage of the **tracked set** — the works the campaign took on. Against the whole
+dictionary it is
+${(100 * sum.indexed_citation_mass / sum.citation_mass_denominator).toFixed(1)}%:
+${sum.indexed_citation_mass.toLocaleString("en-US")} of
+${sum.citation_mass_denominator.toLocaleString("en-US")} `<ls>` citations, the `ALL` of
+the ${sum.citation_mass_denominator_snapshot} count snapshot these numbers come from.
+That second figure was unavailable until H2874 recovered the column's provenance;
+mixing it with a differently dated total is the mistake the
+[contract](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/pwg_citation_count_provenance.md)
+exists to prevent. ${sum.tracked_works} sources tracked, snapshot ${sum.as_of}.
 :::
 
 ## Where the work stands
