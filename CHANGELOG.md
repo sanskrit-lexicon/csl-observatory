@@ -4,6 +4,14 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+### Changed
+
+- **H2820 — CLAUDE.md truth-pass** (Grok 4.6 `grok-4.6`, 16-08-2026). Replaced
+  the Cologne type/severity/milestone dump with what this repo is, how to run
+  (`check_workspace.py`, dashboard `npm run build`, PWG citation `--check`),
+  and do-not-touch (atlas / standards / VisualDCS / frozen `pwg_ls_counts`).
+  AGENTS.md twin regenerated.
+
 ## [1.13.0] - 2026-08-16
 
 ### Added
