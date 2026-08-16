@@ -26,6 +26,7 @@ page.
 | [`obs_q_correction_sustainability.md`](obs_q_correction_sustainability.md) | _(probe; `obs_q_correction.py` is next)_ | — | Content corrections are single-person-burst-driven: ≤4 correctors/yr, lead 51–100%; resolution median 6 d but a tail to 6.4 yr |
 | [`pwg_citation_coverage.md`](pwg_citation_coverage.md) | _(external: [`build_citation_index.py`](https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/src/build_citation_index.py))_ | — | PWG `<ls>` link coverage (translated subset): 83.2% of 50,065 citation occurrences resolve (69% scan / 14% HTML); 446 works un-digitised |
 | [`pwg_scan_index.md`](pwg_scan_index.md) | `pwg_scan_index.py` | [Scan-Index Campaign](https://sanskrit-lexicon.github.io/csl-observatory/scan-index) | The 2025–26 volunteer indexing campaign that built those scan targets: 55/82 works done, 73.7% of tracked citation mass, 28,963 pages, 8 volunteers; 7 works unclaimed, 5 of them Vedic |
+| [`pwg_citation_count_provenance.md`](pwg_citation_count_provenance.md) | `pwg_citation_count_provenance.py` (counts: `pwg_ls_counts.py`) | — | Where that campaign's `Citation count` column came from, after H1706 recorded it as unrecoverable: the 2024-09-11 `lsextract_all.txt` work-family rollup, `ALL` 739,056, 66/67 rows exact. Ships the denominator contract — `citation_count_safe`, fold-by-family, same-snapshot `ALL` — and a `--check` gate that refuses unproven values |
 | [`pwg_kosa_etext_pilot.md`](pwg_kosa_etext_pilot.md) | `pwg_kosa_ocr_probe.py` | — | Measured NO-GO on OCR-from-scratch for the two heaviest PWG kośa scans: local tesseract 5 `san` 17.8% valid tokens vs 43.8% for the hOCR the Bayerische Staatsbibliothek already publishes — 2.5×, free. Re-scoped to ingest-and-correct |
 | [`external_reach.md`](external_reach.md) | `external_reach.py` | [External Reach](https://sanskrit-lexicon.github.io/csl-observatory/reach) | The stars-vs-clones gap: ~112 stars org-wide against 6,923 clones in a single 14-day window — CDSL is consumed as infrastructure, not favourited; 10 named consumers + 17 code-search dependents |
 | [`citation_sweep.md`](citation_sweep.md) | `citation_sweep.py` | [External Reach](https://sanskrit-lexicon.github.io/csl-observatory/reach) | The G6 citation extension: a systematic OpenAlex sweep replaces Tier 4's five hand-picked citations with a documented **lower bound** — 36 works demonstrably naming/citing the *digital* resource, with a separately-fenced 228-work print-dictionary envelope and four stated recall bounds |
@@ -108,8 +109,15 @@ python scripts/contributor_identity.py
 python scripts/workflow_health.py
 python scripts/data_index.py
 python scripts/pwg_scan_index.py          # add --fetch to re-snapshot the upstream sheet
+python scripts/pwg_citation_count_provenance.py   # --check for the denominator gate alone
+python scripts/pwg_ls_counts.py --recount # rebuild the CURRENT <ls> count table only
 python scripts/pwg_kosa_ocr_probe.py      # OCR engine comparison; --sweep for the parameter sweep
 ```
+
+`pwg_scan_index.py` reads its `citation_count_safe` / `_provenance` / `_full` columns
+from the provenance dataset, so run `pwg_citation_count_provenance.py` first when the
+tracker snapshot changes. `pwg_ls_counts.py --recount` never touches the frozen
+2024-09-11 table — that one is dated evidence, not a derivation.
 
 Each finding script writes its `reports/<name>.md` and refreshes the matching
 `observatory/site/src/data/<name>.csv`. `repo_health_regression.py` is read-only:
