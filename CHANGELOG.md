@@ -4,6 +4,8 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+## [1.13.0] - 2026-08-16
+
 ### Added
 - **PWG tracker `Citation count` — provenance recovered, and a denominator contract
   in place of the ban** (H2874, Opus 5 `claude-opus-5`). H1706 committed the column
