@@ -1,5 +1,5 @@
 {
- "as_of": "2026-07-27",
+ "as_of": "2026-08-16",
  "source_sheet": "https://docs.google.com/spreadsheets/d/1rcYfQE0D26RNdWSmRQzhFnV3Gf248wSuldTj-wt8_O0/edit?gid=0",
  "tracked_works": 82,
  "done": 55,
@@ -8,13 +8,16 @@
  "page_wise": 14,
  "not_required": 3,
  "volunteers": 8,
- "tracked_citation_mass": 268425,
- "indexed_citation_mass": 197876,
+ "tracked_citation_mass": 268365,
+ "indexed_citation_mass": 197816,
  "indexed_mass_pct_of_tracked": 73.7,
  "dictionary_ls_occurrences_for_scale": 344229,
+ "citation_mass_denominator": 739056,
+ "citation_mass_denominator_snapshot": "2024-09-11",
+ "citation_count_current_denominator": 799500,
  "pages_indexed": 28963,
  "scans_published": 55,
- "scan_dirs_observed_wired": 32,
+ "scan_dirs_observed_wired": 35,
  "median_index_to_public_days": 12,
  "months": [
   {
@@ -77,7 +80,7 @@
   {
    "handle": "@IrinaKonstant",
    "works": 13,
-   "citation_mass": 61664,
+   "citation_mass": 61604,
    "pages": 5439
   },
   {

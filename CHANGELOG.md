@@ -4,6 +4,37 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+### Added
+- **PWG tracker `Citation count` — provenance recovered, and a denominator contract
+  in place of the ban** (H2874, Opus 5 `claude-opus-5`). H1706 committed the column
+  as having unresolved provenance and barred it from any denominator. It is the
+  per-abbreviation total of
+  [`pwgissues/issue74/lsextract_all.txt`](https://github.com/sanskrit-lexicon/PWG/blob/master/pwgissues/issue74/lsextract_all.txt)
+  dated 2024-09-11 (`ALL = 739,056`) — every `<ls>` element attributed to the longest
+  bibliography abbreviation that prefixes it. 66 of the 67 valued rows match digit for
+  digit; `NAIGH.` is carried as a near-miss, not corrected. New:
+  [`scripts/pwg_ls_counts.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/pwg_ls_counts.py)
+  (a port of the upstream generator, held to byte-identical output by `--verify-port`),
+  the two committed count tables under
+  [`data/pwg_scan_index_tracker/ls_counts/`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/data/pwg_scan_index_tracker/ls_counts),
+  the 82-row
+  [`pwg_citation_count_provenance.tsv`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/data/pwg_scan_index_tracker/pwg_citation_count_provenance.tsv),
+  and
+  [`reports/pwg_citation_count_provenance.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/pwg_citation_count_provenance.md).
+
+### Changed
+- **The registry consumes a provenance-checked field, not the spreadsheet cell**
+  (H2874). `pwg_scan_index.tsv` gains `citation_count_safe` (the source table's own
+  number, blank where provenance is unresolved), `citation_count_provenance`, and
+  `citation_count_full` (regenerated against current dictionary data). Every citation
+  mass in [`reports/pwg_scan_index.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/pwg_scan_index.md)
+  and the summary JSON is now built from the safe field, and both carry an explicit
+  `denominator` — so the scan-index page can state dictionary-wide coverage instead of
+  only coverage of the tracked set. `python scripts/pwg_citation_count_provenance.py
+  --check` is the gate: it rejects an unproven value, a case-insensitive join onto a
+  citation-bearing case-variant group, two rows of one bibliography family both
+  carrying a value, and any sum above its own denominator.
+
 ## [1.12.0] - 2026-08-07
 ### Fixed
 - **Stripped embedded CR bytes from `commits.csv`, sanitized the CSV generator**

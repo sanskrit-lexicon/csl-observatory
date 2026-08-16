@@ -1,0 +1,19 @@
+{
+  "table": "pwg_ls_counts_2024-09-11.tsv",
+  "what": "PWG <ls> elements per bibliography abbreviation, longest-prefix rollup -- the table the scan-index tracker's `Citation count` column was read off",
+  "as_of": "2024-09-11",
+  "generated_by_upstream": "PWG/pwgissues/issue74/lsextract_all.txt",
+  "upstream_sha256": "59136807d86f423c595c375d3e6771b32f11f4f2e28cd6ddda8d9827df995343",
+  "pwgbib_input": {
+    "path": "PWG/pwgissues/issue74/pwgbib_input.txt",
+    "sha256": "1c36dac02348cb5f76449495d98ffed1d5c1048bb293c362f05b7b7e5ba35b6b"
+  },
+  "pwg_commit": "b7b2226c9abf36c40c9ca731470e310dc8c48dbf",
+  "totals": {
+    "ALL": 739056,
+    "ALL_stated_upstream": 739056,
+    "NUMBER": 60,
+    "UNKNOWN": 4
+  },
+  "note": "Verbatim copy of the upstream count table, plus the bibliography code rejoined by abbreviation. Never regenerate this file against newer dictionary data -- it is the dated evidence for the tracker column."
+}

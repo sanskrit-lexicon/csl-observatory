@@ -369,6 +369,35 @@ def load_scan_audit(tracker_dir: Path):
     return out, path
 
 
+def load_provenance():
+    """Per-row citation-count provenance, from the H2874 dataset.
+
+    Built by `scripts/pwg_citation_count_provenance.py`, which also owns the contract
+    gate. Absent file -> empty, and the columns below simply stay blank; this generator
+    must not become the thing that decides what a tracker number means.
+    """
+    path = (Path(__file__).resolve().parents[1] / "data" / "pwg_scan_index_tracker"
+            / "pwg_citation_count_provenance.tsv")
+    if not path.exists():
+        print(f"WARNING: no provenance dataset at {path}; citation-count provenance "
+              "columns will be blank", file=sys.stderr)
+        return []
+    with path.open(encoding="utf-8") as fh:
+        return list(csv.DictReader(fh, delimiter="\t"))
+
+
+def load_ls_count_denominators():
+    """(tracker-era ALL, current ALL) from the committed ls-count table metadata."""
+    base = (Path(__file__).resolve().parents[1] / "data" / "pwg_scan_index_tracker"
+            / "ls_counts")
+    out = []
+    for name in ("pwg_ls_counts_2024-09-11.meta.json", "pwg_ls_counts_current.meta.json"):
+        p = base / name
+        out.append(json.loads(p.read_text(encoding="utf-8"))["totals"]["ALL"]
+                   if p.exists() else None)
+    return tuple(out)
+
+
 def lookup_variants(row):
     """Code spellings to try against an external table, most specific first."""
     seen, out = set(), []
@@ -487,12 +516,31 @@ def main():
         else:
             r["count_ratio"] = None
 
+    # ---- citation-count provenance (H2874) -------------------------------------
+    # The sheet's column is the 2024-09-11 `lsextract_all.txt` rollup; `citation_count`
+    # keeps the sheet's own transcription, `citation_count_safe` carries the number that
+    # table actually holds, and only the safe field is allowed into arithmetic.
+    prov = {p["ls_code"]: p for p in load_provenance()}
+    ls_all_tracker_era, ls_all_current = load_ls_count_denominators()
+    for r in rows:
+        p = prov.get(r["ls_code"], {})
+        r["citation_count_provenance"] = p.get("provenance", "")
+        r["citation_count_safe"] = int(p["citation_count_safe"]) \
+            if p.get("citation_count_safe") else None
+        r["citation_count_full"] = int(p["canonical_value"]) \
+            if p.get("canonical_value") else None
+
     # ---- aggregate -------------------------------------------------------------
     by_status = defaultdict(list)
     for r in rows:
         by_status[r["status"]].append(r)
 
+    # Citation mass runs on the provenance-checked value, not the sheet's transcription
+    # of it (H2874). The two differ on one row today; the point is that they are allowed
+    # to differ at all, and only one of them has a denominator behind it.
     def mass(rs):
+        if prov:
+            return sum(r["citation_count_safe"] or 0 for r in rs)
         return sum(r["citation_count"] or 0 for r in rs)
 
     def pages(rs):
@@ -514,7 +562,7 @@ def main():
             continue
         h = first_handle(r["volunteer"])
         per_vol[h]["rows"] += 1
-        per_vol[h]["mass"] += r["citation_count"] or 0
+        per_vol[h]["mass"] += mass([r])
         per_vol[h]["pages"] += r["total_pages"] or 0
         per_vol[h]["works"].append(r["ls_code"])
 
@@ -540,7 +588,8 @@ def main():
     # ---- registry TSV ----------------------------------------------------------
     cols = ["ls_code", "ls_code_raw", "ls_code_base", "book_no", "volume", "title",
             "status", "status_gloss", "vedic_marked", "shares_book_with_previous",
-            "citation_count", "total_pages", "volunteer", "started", "finished",
+            "citation_count", "citation_count_safe", "citation_count_provenance",
+            "citation_count_full", "total_pages", "volunteer", "started", "finished",
             "issue_repo", "issue_no", "issue_url", "index_posted", "scan_dir",
             "scan_dir_canonical", "scan_spelling_ok", "scan_url", "scan_pages_url",
             "scan_repo_exists", "scan_repo_size_kb", "scan_repo_pushed_at",
@@ -563,6 +612,9 @@ def main():
                 r["title"], r["status"], r["status_gloss"],
                 "yes" if r["vedic_marked"] else "", "yes" if r["shares_book_with_previous"] else "",
                 r["citation_count"] if r["citation_count"] is not None else "",
+                r["citation_count_safe"] if r["citation_count_safe"] is not None else "",
+                r["citation_count_provenance"],
+                r["citation_count_full"] if r["citation_count_full"] is not None else "",
                 r["total_pages"] if r["total_pages"] is not None else "",
                 r["volunteer"], iso(r["started"]), iso(r["finished"]),
                 r["issue_repo"], r["issue_no"] or "", issue_url, iso(r["index_posted"]),
@@ -589,7 +641,14 @@ def main():
         "citation_mass": {
             "tracked": tracked_mass,
             "indexed_done": indexed_mass,
-            "dictionary_total": crefs_total or None,
+            # The denominator these two may be divided by: the `ALL` of the same
+            # ls-count snapshot they are summed from (H2874).
+            "denominator": ls_all_tracker_era,
+            "denominator_snapshot": "2024-09-11",
+            # A different measurement of a different object, kept for scale only. It
+            # counts cleaned citation strings, not work families -- never a denominator
+            # for the two numbers above.
+            "cleaned_string_occurrences_for_scale": crefs_total or None,
         },
         "works": [
             {k: (iso(v) if isinstance(v, date) else v) for k, v in r.items()}
@@ -676,6 +735,12 @@ def main():
         # Dictionary-wide `<ls>` occurrence total, for scale ONLY. It is not a valid
         # denominator for indexed_citation_mass -- see report section 6.2.
         "dictionary_ls_occurrences_for_scale": crefs_total or None,
+        # The denominators citation mass may legitimately be divided by (H2874): the
+        # `ALL` of the ls-count snapshot the numerator came from. `citation_mass_*`
+        # figures above are built from the 2024-09-11 column, so that is their partner.
+        "citation_mass_denominator": ls_all_tracker_era,
+        "citation_mass_denominator_snapshot": "2024-09-11",
+        "citation_count_current_denominator": ls_all_current,
         "pages_indexed": pages(done_rows),
         "scans_published": sum(1 for r in done_rows if r["public_link"]),
         "scan_dirs_observed_wired": len({r["scan_dir"] for r in done_rows
@@ -830,7 +895,24 @@ def main():
         A("**Nothing unresolved.** Every tracked row names a work the dictionary's own "
           "bibliography lists.\n")
 
-    A("### 6.2 Citation counts — NOT commensurable, and the sheet's provenance is open\n")
+    A("### 6.2 Citation counts — provenance resolved, and still not commensurable\n")
+    A("The sheet's `Citation count` column is the per-abbreviation total of "
+      f"[`pwgissues/issue74/lsextract_all.txt`]({PWG_BLOB}/pwgissues/issue74/lsextract_all.txt), "
+      f"the PWG count table dated **2024-09-11** with `ALL = {fmt(ls_all_tracker_era)}`: every "
+      "`<ls>` element in the dictionary attributed to the longest bibliography abbreviation "
+      "that prefixes it. 66 of the 67 valued rows match it digit for digit. That table is "
+      "committed here as the input of record, the column is regenerable by "
+      f"[`scripts/pwg_ls_counts.py`]({REPO_BLOB}/scripts/pwg_ls_counts.py), and the full "
+      "argument plus the per-row dataset is in "
+      f"[`reports/pwg_citation_count_provenance.md`]({REPO_BLOB}/reports/pwg_citation_count_provenance.md) "
+      "(H2874).\n")
+    A("So the counts **do** have a denominator now — their own snapshot's `ALL`, carried in "
+      "the summary JSON as `citation_mass_denominator`. What they still are not is "
+      "commensurable with the cleaned-string extraction below, and rows of one "
+      "bibliography family still share a single total, so a naive row sum double-counts. "
+      "The registry therefore exposes `citation_count_safe` (the source table's own number, "
+      "blank where provenance is unresolved) alongside the sheet's `citation_count`, and "
+      "every figure in this report is built from the safe field.\n")
     have_both = [r for r in rows if r["count_ratio"]]
     A("The sheet's `Citation count` column and the full-dictionary `<ls>` extraction "
       f"([`sortedcrefs.txt`]({PWG_BLOB}/pwg_ls/pwg_dhaval/abbrvwork/abbrvoutput/sortedcrefs.txt)) "
@@ -855,13 +937,14 @@ def main():
         A("")
     A(f"For scale, the extraction totals **{fmt(crefs_total)}** `<ls>` occurrences over "
       f"{fmt(len(crefs))} distinct cleaned strings across the whole dictionary.\n")
-    A("> **Open question, recorded not resolved.** Which extraction produced the sheet's "
-      "`Citation count` column is not documented anywhere reachable from the sheet, and it "
-      "reproduces neither the bare-string counts nor a leading-abbreviation rollup of them. "
-      "Until that provenance is established, the sheet's counts are used **only** as a "
-      "consistent internal ranking (they order the works the same way any reasonable count "
-      "would), never as a share of a dictionary-wide denominator. Resolving it needs the "
-      "coordinator who built the column, not more computation.\n")
+    A("> **Closed, with one residue.** H1706 recorded this column's provenance as open and "
+      "barred it from any denominator; H2874 traced it to the 2024-09-11 count table above "
+      "and replaced the ban with a contract "
+      f"(`python scripts/pwg_citation_count_provenance.py --check`). The residue is "
+      "`NAIGH.`, whose sheet cell reads 1,477 against 1,417 in the source table and matches "
+      "no committed snapshot of the count — carried as a near-miss, never silently "
+      "corrected. What remains genuinely unrecorded is *who* ran the extraction and when "
+      "they pasted it in; the number no longer depends on that testimony.\n")
     # De-duplicate by the matched abbreviation: several volume rows share one parent
     # count, and listing that count three times would read as three works.
     ru_by_key = {}
