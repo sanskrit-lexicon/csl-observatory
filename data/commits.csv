@@ -1104,6 +1104,8 @@ COLOGNE,73a7502fe900,2014-12-11T23:28:17Z,funderburkjim,funderburkjim,funderburk
 COLOGNE,b28f2dd555b4,2014-12-11T23:21:14Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,intro to aws S3 command line interface
 COLOGNE,0c194addcaea,2014-10-01T10:43:45Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Bibliography for 37 books added
 COLOGNE,d263eac05a9f,2014-01-14T14:14:31Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Initial commit
+CORRECTIONS,1e04b2341c1b,2026-08-12T08:03:50Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .gitattributes (eol=lf line-ending policy) (#450)
+CORRECTIONS,86dd5cda97be,2026-08-12T08:03:47Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#451)
 CORRECTIONS,643fd6df920b,2026-07-11T11:04:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): purpose-first rewrite + recover stranded CHANGELOG (H548) (#449)
 CORRECTIONS,28335992f9e1,2026-07-05T18:29:47Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: upgrade README to best-standard with usage example (#448)
 CORRECTIONS,38cce60334ea,2026-07-03T05:10:35Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,security: guard dict against array injection (is_string) (#445)
@@ -2435,6 +2437,7 @@ MW72,5cf4de93d91c,2016-11-19T03:15:45Z,funderburkjim,funderburkjim,funderburkjim
 MW72,6152839e897d,2016-11-18T20:02:16Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,revise for corrections to mw72
 MW72,407551355822,2016-11-16T00:18:12Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,20161107 initial commit
 MW72,1f9d6101296f,2014-08-24T21:07:18Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+MWS,4f28f1b34cb0,2026-08-16T20:09:09Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(claude): what/run/dont around ../mwsxml/mws.xml (H2821) (#291)
 MWS,667cfe9e6b8c,2026-08-03T05:17:43Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/checkout from 5 to 7 (#273)
 MWS,4306e2309428,2026-08-03T05:13:17Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/setup-python from 6 to 7 (#272)
 MWS,d06574408970,2026-08-02T15:40:52Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #271 from sanskrit-lexicon/h-mw-dot-skd-auth-26608
@@ -3203,6 +3206,7 @@ PUI,3899675e4762,2026-04-05T04:28:18Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785
 PUI,28ae8d0bc1a9,2026-04-05T03:54:10Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,started issue #1
 PUI,b6bcff376a5d,2026-04-05T03:29:33Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,init
 PUI,18f13c5a4a72,2026-04-05T03:28:50Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,first commit
+PWG,593bcb3d477e,2026-08-16T20:08:32Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(claude): what/run/dont around ../pwgxml/pwg.xml (H2821) (#230)
 PWG,85175ae51f78,2026-08-02T13:11:21Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: README note — PWG print base is WIL 1819 not CDSL 1832 (#223)
 PWG,c996b1cb22f4,2026-08-02T00:00:36Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,pwg_ru_coverage: scheduled refresh 2026-08-02 (#222)
 PWG,ebd9f3872693,2026-08-01T16:32:02Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,initial commit on #220
@@ -6478,6 +6482,13 @@ csl-app,3f5f02ce0114,2026-03-18T19:13:28Z,drdhaval2785,Dr. Dhaval Patel,drdhaval
 csl-app,41a87dfe9b1a,2026-03-18T17:59:44Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,v0.1.0
 csl-app,601df1e6d0c8,2026-03-18T17:25:31Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,app working
 csl-app,3827040885b1,2026-03-18T16:14:06Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,initial commit
+csl-corrections,94f6b8b446aa,2026-08-17T00:48:12Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-08-16
+csl-corrections,ba965dc57ed8,2026-08-16T20:08:00Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(H2820): truth-pass CLAUDE.md and regenerate AGENTS.md twin (#360)
+csl-corrections,7b87b838d87d,2026-08-15T06:56:20Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,data(derived): refresh correction_loci.tsv — 21 875 rows were still batch_pending after batch_20260804 shipped (#356)
+csl-corrections,f9d91baa4e95,2026-08-14T18:26:12Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: regenerate AGENTS.md generated-block (H2757 / H2694 routing) (#359)
+csl-corrections,d0350c76e328,2026-08-13T01:16:05Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-08-12
+csl-corrections,3812aaa9c047,2026-08-12T01:14:39Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-08-11
+csl-corrections,8c4a33ac3ac2,2026-08-11T01:07:02Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-08-10
 csl-corrections,c75c766b530a,2026-08-10T01:07:44Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-08-09
 csl-corrections,71f0f9c5f962,2026-08-09T16:59:21Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H2306: harden batch_pending durability checker (#351)
 csl-corrections,52dd07f7e0dc,2026-08-09T01:06:11Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-08-08
@@ -7530,6 +7541,9 @@ csl-corrections,03c38c194339,2019-12-16T23:50:54Z,,James Funderburk,jfunderb@dia
 csl-corrections,e23efa275d19,2019-12-16T22:28:35Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,initialization from Cologne /php
 csl-corrections,6fa5aa987701,2019-12-16T21:49:45Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initialize material from sanskrit-lexicon/CORRECTIONS repository
 csl-corrections,e854ffd2f3cc,2019-12-16T20:34:56Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+csl-devanagari,257ab8d3f572,2026-08-14T18:21:41Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: regenerate AGENTS.md generated-block (H2757 / H2694 routing) (#56)
+csl-devanagari,ed93e8cba4fc,2026-08-12T08:03:43Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#51)
+csl-devanagari,64c4f08d929a,2026-08-12T08:03:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"fix: repair 1 of 1 broken link(s) (org-wide link audit, auto-fix pass) (#53)"
 csl-devanagari,a819c6a9177d,2026-08-07T05:40:57Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore(agents): regenerate AGENTS.md org-context block (H2331) (#55)
 csl-devanagari,4e8b839cbbb9,2026-08-06T16:49:00Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"add the pre-push silent-revert guard (H2280/H2289, Uprava#1516) (#54)"
 csl-devanagari,8e64764adc52,2026-08-04T08:08:31Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(eol): renormalize the one CRLF-in-blob file left behind by #50 (#52)
@@ -8290,6 +8304,13 @@ csl-newsletter,bced52b7f19f,2021-09-14T04:37:04Z,drdhaval2785,Dhaval Patel,drdha
 csl-newsletter,53c6fa85e014,2021-09-13T14:34:31Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,csl-orig commits taken into consideration
 csl-newsletter,b04b08d7e699,2021-09-13T13:28:15Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,addition
 csl-newsletter,5ab58ee2cd64,2021-09-13T12:33:30Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,september started
+csl-observatory,ba96d551148f,2026-08-16T20:08:05Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(H2820): truth-pass CLAUDE.md and regenerate AGENTS.md twin (#190)
+csl-observatory,d5cc09890d3d,2026-08-16T12:41:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore(agents): regenerate the AGENTS.md context block — new csl-observatory danger fact (H2874) (#189)
+csl-observatory,90029b9f6610,2026-08-16T12:18:23Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(H2874): register the provenance report; state the citation-count consumption + sync rule in CLAUDE.md (#188)
+csl-observatory,0c79ddb37524,2026-08-16T11:23:19Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore(release): 1.13.0 — PWG Citation count provenance + denominator contract (H2874) (#187)
+csl-observatory,15ab5caf713f,2026-08-16T11:16:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"data(pwg-tracker): recover Citation count provenance, ship the denominator contract (H2874) (#186)"
+csl-observatory,e4265cbb5754,2026-08-14T18:22:05Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: regenerate AGENTS.md generated-block (H2757 / H2694 routing) (#185)
+csl-observatory,bda09c50f6c6,2026-08-10T04:29:43Z,actions-user,csl-observatory-bot,actions@github.com,data: monthly refresh (2026-08-10)
 csl-observatory,025278cf4b6b,2026-08-09T14:33:16Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(H2207): .ai_state.md — Pages deploy re-triggered, no code change (#184)"
 csl-observatory,4dadf45e9262,2026-08-07T05:41:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore(agents): regenerate AGENTS.md org-context block (H2331) (#148)
 csl-observatory,fe76db4dbd50,2026-08-07T04:54:58Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H2315): changelog v1.12.0, .ai_state.md, CITATION.cff sync (artifact-propagate)"
@@ -8810,6 +8831,9 @@ csl-observatory,eec8dc712aed,2026-05-07T19:29:28Z,gasyoun,Mārcis Gasūns,gasyou
 csl-observatory,c236fb5ac130,2026-05-07T19:28:08Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"feat: companion paper, headword counter, retry logic, templates"
 csl-observatory,1947ea3757ed,2026-05-07T17:04:56Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Create gasuns-cologne-30-report.md
 csl-observatory,e24574b2785a,2026-05-07T15:58:23Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"chore: bootstrap observatory — scripts, first data snapshot, dashboards, article scaffold"
+csl-orig,485bf79113b2,2026-08-13T04:54:46Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,NYBJ slp1
+csl-orig,0c8e72c95cfe,2026-08-13T04:49:46Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,NYBJ v3edit
+csl-orig,09c68d1d2651,2026-08-11T07:07:21Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,NYBJ initial commit
 csl-orig,b7297b97cf9f,2026-08-04T13:23:12Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 20 July 2026. See https://github.com/sanskrit-lexicon/csl-corrections/issues/312
 csl-orig,a0a2dd49c81f,2026-08-04T13:17:58Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 19 July 2026. See https://github.com/sanskrit-lexicon/csl-corrections/issues/310
 csl-orig,921c1c7868a1,2026-08-04T13:05:17Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 18 July 2026. See https://github.com/sanskrit-lexicon/csl-corrections/issues/309
@@ -11052,6 +11076,9 @@ csl-orig,ecc689a3a281,2019-07-20T05:43:47Z,drdhaval2785,drdhaval2785,drdhaval278
 csl-orig,661fb1081d4f,2019-07-20T05:21:21Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,copy to cologne web structure
 csl-orig,f325e2abde72,2019-07-20T05:15:30Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,added hwextra
 csl-orig,6f45dd5ce45d,2019-07-20T04:50:29Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,csl-orig initial commit
+csl-pywork,8c9949c51594,2026-08-16T20:09:20Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(claude): replace taxonomy stub with generator runbook (H2821) (#82)
+csl-pywork,0362241bd347,2026-08-11T07:59:28Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,NYBJ meanings separated
+csl-pywork,30b03f2244ea,2026-08-11T07:07:43Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,NYBJ initial commit
 csl-pywork,ae3aa6173708,2026-07-31T20:22:27Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore(release): cut v0.2.2 — H1783 residual salvage (H2012 residual) (#79)
 csl-pywork,85843a50cbcd,2026-07-31T12:33:23Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#78)
 csl-pywork,50be731f23a1,2026-07-28T21:39:15Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: journal H1783 completion in .ai_state.md (#76)
@@ -11627,6 +11654,9 @@ csl-sqlite,a6a257a9a836,2026-05-29T05:10:13Z,gasyoun,Mārcis Gasūns,gasyoun@use
 csl-sqlite,299157791231,2026-05-15T06:00:57Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 csl-sqlite,fc82dcdff2e1,2026-04-11T06:00:27Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,README update
 csl-sqlite,fca7cdc9f757,2026-04-08T11:48:40Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+csl-websanlexicon,e89e3c7a41da,2026-08-16T20:08:16Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(claude): replace taxonomy stub with frontend runbook (H2821) (#146)
+csl-websanlexicon,9cd1287c60d2,2026-08-11T07:59:54Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,NYBJ meanings and footnotes separated visually
+csl-websanlexicon,593dc8051e87,2026-08-11T07:08:04Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,NYBJ initial commit
 csl-websanlexicon,741d2362b88e,2026-07-31T12:40:46Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#140)
 csl-websanlexicon,4d3501f3d407,2026-07-29T20:05:03Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: correct .ai_state.md issue #46 status (H1877 roadmap-drift sweep) (#139)
 csl-websanlexicon,997f0895d1c4,2026-07-28T18:41:51Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: add v02 web-frontend operator manual + metadoc; cut 0.3.0 (H1782) (#138)
