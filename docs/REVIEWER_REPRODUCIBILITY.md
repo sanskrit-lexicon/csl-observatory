@@ -137,9 +137,9 @@ For citation, include:
 - repository: `sanskrit-lexicon/csl-observatory`
 - file name and generated date from `data_index.csv`
 - git commit or tagged release (frozen: `obs-t-data-v1.0.0`)
-- DOI: not yet minted (`10.5281/zenodo.15834721`, previously listed here, is a **false DOI** — it resolves to an unrelated topology preprint; see [SanskritLexicography CONTRADICTIONS §8](https://github.com/gasyoun/SanskritLexicography/blob/master/CONTRADICTIONS.md))
+- DOI: Zenodo concept DOI [`10.5281/zenodo.21346705`](https://doi.org/10.5281/zenodo.21346705) (version `10.5281/zenodo.21965649`, published 2026-08-16; an earlier entry, `10.5281/zenodo.15834721`, was a **false DOI** resolving to an unrelated topology preprint — see [SanskritLexicography CONTRADICTIONS §8](https://github.com/gasyoun/SanskritLexicography/blob/master/CONTRADICTIONS.md))
 
-No Zenodo DOI exists yet for this dataset — cite the repository + commit/tag until one is genuinely minted.
+No unverified DOI may be cited for this dataset — every DOI must be live-checked against its title/creator before it goes in (the sweep script enforces this by construction).
 
 ## Review Checklist
 

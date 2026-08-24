@@ -29,14 +29,14 @@ The report separates MEASURED (tiers 1-3, every line with a URL and/or fetch
 date) from BOUNDED (tier 4 — systematic, reproducible, and explicit about what
 it cannot reach).
 
-Zenodo (OBS-T dataset views/downloads) is a PLANNED fifth tier but is currently
-**BLOCKED**: the DOI recorded across the repo (10.5281/zenodo.15834721) does not
-resolve to the OBS-T dataset — it resolves to an unrelated topology preprint
-("A Non-Surgical ... Proof of Topological Sphericity ...", created 2025-07-08,
-a year before OBS-T's claimed 2026-07-01 mint). Rather than attribute a
-stranger's 1,261 downloads to CDSL, the script fetches the record, verifies its
-title/creator against expected tokens, and reports the mismatch as a status row
-for MG to resolve. See ``docs`` / GTD and ``.ai_state.md``.
+Zenodo (OBS-T dataset views/downloads) is the fifth tier, live since 2026-08-24:
+``ZENODO_RECORD_ID`` = 21965649 (concept DOI 10.5281/zenodo.21346705, published
+2026-08-16). History: the DOI originally recorded across the repo
+(10.5281/zenodo.15834721) resolved to an unrelated topology preprint ("A
+Non-Surgical ... Proof of Topological Sphericity ...", created 2025-07-08), so the
+script has always fetched the record and verified its title/creator against
+expected tokens rather than attribute a stranger's downloads to CDSL — that guard
+is what caught the mismatch and it stays on. See ``docs`` / GTD and ``.ai_state.md``.
 
 API parts run only under ``--fetch`` and are cached under
 ``reports/external_reach_cache/<YYYY-MM>/`` (a *committed* cache — small JSON) so
@@ -161,7 +161,7 @@ SEED_CITATIONS = [
 
 # Zenodo record recorded (in the repo) as the OBS-T dataset, plus tokens we
 # expect a genuine OBS-T record's title to contain. A miss = DOI mismatch.
-ZENODO_RECORD_ID = "15834721"
+ZENODO_RECORD_ID = "21965649"
 ZENODO_EXPECT_TOKENS = ("sanskrit", "cologne", "obs-t", "correction", "lexicon",
                         "dictionary")
 

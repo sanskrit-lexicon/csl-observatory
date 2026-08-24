@@ -140,7 +140,7 @@ If you use these data in published work:
 
 > Gasūns, M. et al. (2026). *CSL Observatory: 13 years of Cologne Digital Sanskrit Lexicon* [Data set]. `sanskrit-lexicon/csl-observatory` (no Zenodo DOI minted yet).
 
-Plus the snapshot date for reproducibility. `10.5281/zenodo.15834721`, previously cited here, was a false DOI — it resolves to an unrelated topology preprint, confirmed by a live check 20-07-2026 (H1364; see [SanskritLexicography CONTRADICTIONS §8](https://github.com/gasyoun/SanskritLexicography/blob/master/CONTRADICTIONS.md)).
+Plus the snapshot date for reproducibility. The dataset's Zenodo concept DOI is [`10.5281/zenodo.21346705`](https://doi.org/10.5281/zenodo.21346705) (version `10.5281/zenodo.21965649`, published 2026-08-16). `10.5281/zenodo.15834721`, previously cited here, was a false DOI — it resolves to an unrelated topology preprint, confirmed by a live check 20-07-2026 (H1364; see [SanskritLexicography CONTRADICTIONS §8](https://github.com/gasyoun/SanskritLexicography/blob/master/CONTRADICTIONS.md)).
 
 ## Tech Stack
 

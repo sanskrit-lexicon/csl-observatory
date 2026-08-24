@@ -1,0 +1,86 @@
+{
+  "csl-orig": {
+    "views_count": 120,
+    "views_uniques": 46,
+    "clones_count": 664,
+    "clones_uniques": 429
+  },
+  "MWS": {
+    "views_count": 76,
+    "views_uniques": 41,
+    "clones_count": 116,
+    "clones_uniques": 29
+  },
+  "COLOGNE": {
+    "views_count": 58,
+    "views_uniques": 45,
+    "clones_count": 23,
+    "clones_uniques": 10
+  },
+  "CORRECTIONS": {
+    "views_count": 29,
+    "views_uniques": 29,
+    "clones_count": 1497,
+    "clones_uniques": 975
+  },
+  "cologne-stardict": {
+    "views_count": 8,
+    "views_uniques": 6,
+    "clones_count": 3519,
+    "clones_uniques": 2443
+  },
+  "csl-pywork": {
+    "views_count": 12,
+    "views_uniques": 5,
+    "clones_count": 97,
+    "clones_uniques": 24
+  },
+  "csl-websanlexicon": {
+    "views_count": 10,
+    "views_uniques": 7,
+    "clones_count": 456,
+    "clones_uniques": 22
+  },
+  "csl-observatory": {
+    "views_count": 10,
+    "views_uniques": 7,
+    "clones_count": 125,
+    "clones_uniques": 63
+  },
+  "csl-inflect": {
+    "views_count": 0,
+    "views_uniques": 0,
+    "clones_count": 13,
+    "clones_uniques": 11
+  },
+  "PWK": {
+    "views_count": 9,
+    "views_uniques": 7,
+    "clones_count": 21,
+    "clones_uniques": 9
+  },
+  "GRA": {
+    "views_count": 6,
+    "views_uniques": 6,
+    "clones_count": 22,
+    "clones_uniques": 11
+  },
+  "ApteES": {
+    "views_count": 13,
+    "views_uniques": 5,
+    "clones_count": 18,
+    "clones_uniques": 10
+  },
+  "csl-apidev": {
+    "views_count": 11,
+    "views_uniques": 8,
+    "clones_count": 116,
+    "clones_uniques": 92
+  },
+  "csl-atlas": {
+    "views_count": 11,
+    "views_uniques": 8,
+    "clones_count": 229,
+    "clones_uniques": 70
+  }
+}

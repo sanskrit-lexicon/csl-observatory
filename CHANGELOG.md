@@ -5,6 +5,16 @@ All notable changes to this repository are documented here, following [Keep a Ch
 ## [Unreleased]
 
 ### Changed
+- **OBS-T Zenodo DOI sweep to the genuine concept DOI `10.5281/zenodo.21346705`** (24-08-2026).
+  The genuine record was minted 2026-08-16 in the org-wide Zenodo sitting (version
+  `10.5281/zenodo.21965649`); the reserved draft `21159888` proved nonexistent (404).
+  Authoritative citation surfaces now point at the real DOI: `CITATION.cff`, `README.md`,
+  `STATUS.md`, `docs/REVIEWER_REPRODUCIBILITY.md`, `observatory/site/src/data.md`,
+  `article/A48_error_recapture.md`, `paper-obs-t-error-typology.md`; `ZENODO_RECORD_ID`
+  in `scripts/external_reach.py` -> 21965649; stale 2026-07 cache removed; `--fetch` re-ran
+  green with live title/creator verification. The `/reach` Zenodo tier is unblocked.
+  Historical entries below intentionally keep `10.5281/zenodo.15834721` - that number is
+  part of the mismatch story, not a citation.
 
 - **H2820 — CLAUDE.md truth-pass** (Grok 4.6 `grok-4.6`, 16-08-2026). Replaced
   the Cologne type/severity/milestone dump with what this repo is, how to run

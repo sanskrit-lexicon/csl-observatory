@@ -39,7 +39,7 @@ These are computed from the committed snapshot; the dashboard and
   (for an inter-annotator κ) before submission; tooling is ready in
   [`scripts/obs_t_gold.py`](scripts/obs_t_gold.py) and
   [`validation/`](validation/).
-- **Citability**: Zenodo DOI ✅ minted ([10.5281/zenodo.15834721](https://doi.org/10.5281/zenodo.15834721), in CITATION.cff + README). Remaining: register contributor ORCIDs.
+- **Citability**: Zenodo DOI ✅ minted ([10.5281/zenodo.21346705](https://doi.org/10.5281/zenodo.21346705), in CITATION.cff + README). Remaining: register contributor ORCIDs.
 
 ---
 

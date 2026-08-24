@@ -127,7 +127,12 @@ const zBad = zenodo && zenodo.value === "mismatch";
 >
 > ${zBad ? "The recorded DOI `10.5281/zenodo.15834721` resolves to an unrelated topology preprint, so its download counts are **not** attributed to CDSL. This is an MG decision — re-mint or correct the DOI across `CITATION.cff`, the paper draft, the roadmap, and `.ai_state.md`. Tracked in Uprava GTD." : ""}
 
-Once the correct OBS-T record exists, update `ZENODO_RECORD_ID` in [`scripts/external_reach.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/external_reach.py) and re-run `--fetch` to populate this tier.
+**Resolved 2026-08-24:** the genuine record exists — concept DOI
+[`10.5281/zenodo.21346705`](https://doi.org/10.5281/zenodo.21346705) (version
+21965649, published 2026-08-16). `ZENODO_RECORD_ID` in
+[`scripts/external_reach.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/external_reach.py)
+points at it, `--fetch` re-ran, and this tier now reports OBS-T's own downloads.
+(The mismatch branch above stays as the standing guard.)
 
 ---
 

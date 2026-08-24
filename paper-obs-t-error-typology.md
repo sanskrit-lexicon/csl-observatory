@@ -460,11 +460,11 @@ give stdlib-only **reference baselines** that define the task rather than tune a
 These low numbers are the point of a baseline: they establish headroom for the neural
 sequence models the resource is meant to enable.
 
-**DOI.** ⚠️ Not yet minted. The DOI previously recorded for this dataset
-(`10.5281/zenodo.15834721`) is **false** — it resolves to an unrelated preprint
-(confirmed by a live Zenodo check, 20-07-2026). A genuine Zenodo deposit must be
-minted before any version of this paper cites a DOI; do not submit with a
-placeholder.
+**DOI.** ✅ Minted: concept DOI [`10.5281/zenodo.21346705`](https://doi.org/10.5281/zenodo.21346705)
+(version DOI `10.5281/zenodo.21965649`, published 2026-08-16, CC-BY-4.0). The DOI
+previously recorded for this dataset (`10.5281/zenodo.15834721`) was **false** — it
+resolved to an unrelated preprint (confirmed by a live Zenodo check, 20-07-2026); the
+repo-wide sweep to the genuine DOI landed 24-08-2026 (`scripts/fix_obs_t_doi.py`).
 
 ## 7. Discussion
 

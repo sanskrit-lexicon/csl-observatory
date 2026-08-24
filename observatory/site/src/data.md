@@ -104,10 +104,11 @@ python scripts/data_index.py --check
 ## Citation
 
 If you use these data in published work, cite the repository snapshot, the
-specific downloaded file, and the generated date shown in the catalog. No
-Zenodo DOI is minted yet — `10.5281/zenodo.15834721`, previously listed here,
-was a false DOI resolving to an unrelated topology preprint (see the [Reach
-page](/reach) and [SanskritLexicography CONTRADICTIONS §8](https://github.com/gasyoun/SanskritLexicography/blob/master/CONTRADICTIONS.md)).
+specific downloaded file, the generated date shown in the catalog, and the
+dataset's Zenodo concept DOI [`10.5281/zenodo.21346705`](https://doi.org/10.5281/zenodo.21346705)
+(version `10.5281/zenodo.21965649`, published 2026-08-16). An earlier entry,
+`10.5281/zenodo.15834721`, was a false DOI resolving to an unrelated topology
+preprint (see the [Reach page](/reach) and [SanskritLexicography CONTRADICTIONS §8](https://github.com/gasyoun/SanskritLexicography/blob/master/CONTRADICTIONS.md)).
 
 <style>
 .metric-grid {

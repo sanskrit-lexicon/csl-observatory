@@ -1,0 +1,56 @@
+{
+  "sanskrit-lexicon raw.githubusercontent.com": {
+    "total_count": 32,
+    "repos": [
+      "Karthik777/litesearch",
+      "PerfectSolutionsClassifieds/SanskritAI",
+      "ambuda-org/dictionaries",
+      "ashtadhyayi-com/data",
+      "bhaddacak/paliplatform",
+      "chalcolith/enochian",
+      "gasyoun/SanskritLexicography",
+      "gasyoun/Uprava",
+      "julowe/st-johns",
+      "kunalpro379/SanskritGPT",
+      "mgasner/reshith",
+      "rramphal/browser-customizations",
+      "sanskrit-lexicon/COLOGNE",
+      "sanskrit-lexicon/CORRECTIONS",
+      "sanskrit-lexicon/MD",
+      "skalyan91/sud-workbench",
+      "techformist/japakosha-content",
+      "udai7/dictionary"
+    ]
+  },
+  "sanskrit-lexicon.uni-koeln.de": {
+    "total_count": 3656,
+    "repos": [
+      "Dictionaryphile/All_Dictionaries",
+      "ambuda-org/ambuda",
+      "digitalpalidictionary/dpd-db",
+      "funderburkjim/elispsanskrit",
+      "sanskrit-lexicon/COLOGNE",
+      "sanskrit-lexicon/CORRECTIONS",
+      "sanskrit-lexicon/MWS",
+      "sanskrit-lexicon/PWK",
+      "sanskrit-lexicon/csl-orig",
+      "sanskrit-lexicon/csl-santam",
+      "sanskrit-sandhi/sanskrit",
+      "yajnadevam/ScriptDerivation"
+    ]
+  },
+  "github.com/sanskrit-lexicon": {
+    "total_count": 2120,
+    "repos": [
+      "indic-dict/stardict-sanskrit",
+      "sanskrit-lexicon/ApteES",
+      "sanskrit-lexicon/COLOGNE",
+      "sanskrit-lexicon/CORRECTIONS",
+      "sanskrit-lexicon/MWS",
+      "sanskrit-lexicon/PWK",
+      "sanskrit-lexicon/cologne-stardict",
+      "sanskrit-lexicon/csl-orig",
+      "sanskrit-lexicon/csl-santam"
+    ]
+  }
+}
