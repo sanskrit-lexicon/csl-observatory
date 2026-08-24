@@ -1,14 +1,14 @@
 {
   "snapshot_date": "2026-08",
-  "transformed_at": "2026-08-17T03:48:45.230204",
+  "transformed_at": "2026-08-24T03:54:02.166701",
   "files": {
-    "issues.csv": 6743,
-    "commits.csv": 12878,
+    "issues.csv": 6769,
+    "commits.csv": 12907,
     "repos.csv": 77,
     "contributors.csv": 286,
-    "timeseries_monthly.csv": 1525,
+    "timeseries_monthly.csv": 1526,
     "timeseries_annual.csv": 383,
-    "issue_typology_annual.csv": 141
+    "issue_typology_annual.csv": 142
   },
   "dataset_ids": {
     "correction-events": {

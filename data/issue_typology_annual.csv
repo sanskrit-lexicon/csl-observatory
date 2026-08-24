@@ -126,13 +126,14 @@ year,type_label,count
 2025,scan-quality,4
 2025,tech-debt,2
 2025,text-correction,1026
-2026,bug,93
+2026,bug,94
 2026,content-enhancement,34
 2026,documentation,38
 2026,encoding,10
 2026,enhancement,106
 2026,feature,9
 2026,infrastructure,9
+2026,link-splitting,1
 2026,link-target,9
 2026,markup,86
 2026,performance,3

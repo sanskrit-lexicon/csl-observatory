@@ -1,7 +1,7 @@
 login,contributions,repos,role,real_name,affiliation,orcid,status
 funderburkjim,4890,59,maintainer,Jim Funderburk,Cologne Digital Sanskrit Dictionaries,,needs-orcid
 drdhaval2785,3834,41,core,Dhaval Patel,Cologne Digital Sanskrit Dictionaries,,needs-orcid
-gasyoun,3006,77,lead,Mārcis Gasūns,Cologne Digital Sanskrit Dictionaries,,needs-orcid
+gasyoun,3030,77,lead,Mārcis Gasūns,Cologne Digital Sanskrit Dictionaries,,needs-orcid
 AnnaRybakovaT,82,11,occasional,Anna Rybakova,,,needs-orcid
 Andhrabharati,63,3,core,Nagabhushana Rao,Andhrabharati,,needs-orcid
 aumsanskrit,17,1,contributor,Scott Rhodes,,,needs-orcid
@@ -16,5 +16,5 @@ sumanthegde,1,1,,,,,needs-name-and-orcid
 adminlip,1,1,,,,,needs-name-and-orcid
 vlastavesely,1,1,,,,,needs-name-and-orcid
 dependabot[bot],198,75,,,,,bot
-github-actions[bot],141,3,bot,GitHub Actions (bot),,,bot
-actions-user,65,4,bot,GitHub Actions (bot),,,bot
+github-actions[bot],145,3,bot,GitHub Actions (bot),,,bot
+actions-user,66,4,bot,GitHub Actions (bot),,,bot

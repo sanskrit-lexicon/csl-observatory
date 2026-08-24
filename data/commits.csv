@@ -722,6 +722,7 @@ BOR,d877742df320,2021-09-14T11:19:51Z,drdhaval2785,Dhaval Patel,drdhaval2785@gma
 BOR,45224e31f8c8,2021-09-14T04:54:03Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,removed space
 BOR,7d25470b9310,2021-09-14T04:52:48Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,initial try
 BOR,75af7dab0858,2021-09-14T04:47:08Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,first commit
+BUR,ee81715098a6,2026-08-18T05:46:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,feat(prefaces): BUR 28-page front matter OCR FR+EN+RU + consolidated pref_all editions (#17)
 BUR,7925bc9a542b,2026-07-31T12:44:31Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#16)
 BUR,111ce61b545a,2026-07-12T03:33:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: land README H548 refresh + SEO landing page + changelog v1 (recovered unpushed work) (#12)
 BUR,5524d3b04cda,2026-07-05T18:35:48Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: upgrade README to best-standard with usage example (#10)
@@ -2437,6 +2438,7 @@ MW72,5cf4de93d91c,2016-11-19T03:15:45Z,funderburkjim,funderburkjim,funderburkjim
 MW72,6152839e897d,2016-11-18T20:02:16Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,revise for corrections to mw72
 MW72,407551355822,2016-11-16T00:18:12Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,20161107 initial commit
 MW72,1f9d6101296f,2014-08-24T21:07:18Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+MWS,0018775ea8fc,2026-08-20T20:46:37Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(claude): drop false mwsxml path; date header (H3048) (#292)
 MWS,4f28f1b34cb0,2026-08-16T20:09:09Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(claude): what/run/dont around ../mwsxml/mws.xml (H2821) (#291)
 MWS,667cfe9e6b8c,2026-08-03T05:17:43Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/checkout from 5 to 7 (#273)
 MWS,4306e2309428,2026-08-03T05:13:17Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/setup-python from 6 to 7 (#272)
@@ -3206,6 +3208,9 @@ PUI,3899675e4762,2026-04-05T04:28:18Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785
 PUI,28ae8d0bc1a9,2026-04-05T03:54:10Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,started issue #1
 PUI,b6bcff376a5d,2026-04-05T03:29:33Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,init
 PUI,18f13c5a4a72,2026-04-05T03:28:50Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,first commit
+PWG,038bae50929e,2026-08-23T00:00:56Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,pwg_ru_coverage: scheduled refresh 2026-08-23 (#233)
+PWG,9bf74301c3d8,2026-08-20T20:46:03Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #232 from sanskrit-lexicon/h3047-claude-md-refresh-17396
+PWG,ff1ffc1dc473,2026-08-20T20:42:56Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,docs(claude): nested script paths + dated header (H3047)
 PWG,593bcb3d477e,2026-08-16T20:08:32Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(claude): what/run/dont around ../pwgxml/pwg.xml (H2821) (#230)
 PWG,85175ae51f78,2026-08-02T13:11:21Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: README note — PWG print base is WIL 1819 not CDSL 1832 (#223)
 PWG,c996b1cb22f4,2026-08-02T00:00:36Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,pwg_ru_coverage: scheduled refresh 2026-08-02 (#222)
@@ -6482,6 +6487,15 @@ csl-app,3f5f02ce0114,2026-03-18T19:13:28Z,drdhaval2785,Dr. Dhaval Patel,drdhaval
 csl-app,41a87dfe9b1a,2026-03-18T17:59:44Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,v0.1.0
 csl-app,601df1e6d0c8,2026-03-18T17:25:31Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,app working
 csl-app,3827040885b1,2026-03-18T16:14:06Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,initial commit
+csl-corrections,2caea26bab1b,2026-08-24T00:49:33Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-08-23
+csl-corrections,5d2189fd1093,2026-08-23T04:44:27Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,chore(twin): regenerate AGENTS.md org-context block (H3307 wave)
+csl-corrections,8c18a7183136,2026-08-21T00:51:40Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-08-20
+csl-corrections,e5ecbffd0187,2026-08-20T01:11:06Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"queue(pw): link-splitting change file — 141 lines, one <ls> per address (H3152) (#366)"
+csl-corrections,d45e5cd6aefd,2026-08-20T00:46:15Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-08-19
+csl-corrections,7677709691c8,2026-08-19T00:46:41Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-08-18
+csl-corrections,7a698d2c68e8,2026-08-17T05:49:03Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add the pre-push silent-revert guard + CRLF-in-blob gate (H2280/H2289/H2301) (#364)
+csl-corrections,4bd8cfa85387,2026-08-17T04:57:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add the pre-push silent-revert guard + CRLF-in-blob gate (H2280/H2289/H2301) (#363)
+csl-corrections,bcc06ab64f3b,2026-08-17T04:21:20Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,add the pre-push silent-revert guard + CRLF-in-blob gate (H2280/H2289/H2301) (#362)
 csl-corrections,94f6b8b446aa,2026-08-17T00:48:12Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-08-16
 csl-corrections,ba965dc57ed8,2026-08-16T20:08:00Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(H2820): truth-pass CLAUDE.md and regenerate AGENTS.md twin (#360)
 csl-corrections,7b87b838d87d,2026-08-15T06:56:20Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,data(derived): refresh correction_loci.tsv — 21 875 rows were still batch_pending after batch_20260804 shipped (#356)
@@ -7541,6 +7555,11 @@ csl-corrections,03c38c194339,2019-12-16T23:50:54Z,,James Funderburk,jfunderb@dia
 csl-corrections,e23efa275d19,2019-12-16T22:28:35Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,initialization from Cologne /php
 csl-corrections,6fa5aa987701,2019-12-16T21:49:45Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initialize material from sanskrit-lexicon/CORRECTIONS repository
 csl-corrections,e854ffd2f3cc,2019-12-16T20:34:56Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+csl-devanagari,80c56099eaef,2026-08-23T04:44:39Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,chore(twin): regenerate AGENTS.md org-context block (H3307 wave)
+csl-devanagari,6c941c69c2e4,2026-08-20T19:02:12Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: refresh CLAUDE.md dated header and how-to-run (H3041) (#61)
+csl-devanagari,b1db16065ef5,2026-08-17T05:49:20Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add the pre-push silent-revert guard + CRLF-in-blob gate (H2280/H2289/H2301) (#60)
+csl-devanagari,789f91bd9645,2026-08-17T04:58:00Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add the pre-push silent-revert guard + CRLF-in-blob gate (H2280/H2289/H2301) (#59)
+csl-devanagari,478e6dcb651f,2026-08-17T04:21:30Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,add the pre-push silent-revert guard + CRLF-in-blob gate (H2280/H2289/H2301) (#58)
 csl-devanagari,257ab8d3f572,2026-08-14T18:21:41Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: regenerate AGENTS.md generated-block (H2757 / H2694 routing) (#56)
 csl-devanagari,ed93e8cba4fc,2026-08-12T08:03:43Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#51)
 csl-devanagari,64c4f08d929a,2026-08-12T08:03:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"fix: repair 1 of 1 broken link(s) (org-wide link audit, auto-fix pass) (#53)"
@@ -8304,6 +8323,12 @@ csl-newsletter,bced52b7f19f,2021-09-14T04:37:04Z,drdhaval2785,Dhaval Patel,drdha
 csl-newsletter,53c6fa85e014,2021-09-13T14:34:31Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,csl-orig commits taken into consideration
 csl-newsletter,b04b08d7e699,2021-09-13T13:28:15Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,addition
 csl-newsletter,5ab58ee2cd64,2021-09-13T12:33:30Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,september started
+csl-observatory,c4026d6d38a2,2026-08-23T04:44:51Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,chore(twin): regenerate AGENTS.md org-context block (H3307 wave)
+csl-observatory,b299a186a7cf,2026-08-17T17:03:31Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(archive): move legacy broad-metrics roadmap to docs/archive/ + tombstone (H2999) (#194)
+csl-observatory,4fb043c2f098,2026-08-17T05:48:48Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add the pre-push silent-revert guard + CRLF-in-blob gate (H2280/H2289/H2301) (#193)
+csl-observatory,82e0acd5dc84,2026-08-17T04:57:20Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add the pre-push silent-revert guard + CRLF-in-blob gate (H2280/H2289/H2301) (#192)
+csl-observatory,8d9d8bb5c018,2026-08-17T04:21:00Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,add the pre-push silent-revert guard + CRLF-in-blob gate (H2280/H2289/H2301) (#191)
+csl-observatory,f1136049f945,2026-08-17T03:49:49Z,actions-user,csl-observatory-bot,actions@github.com,data: monthly refresh (2026-08-17)
 csl-observatory,ba96d551148f,2026-08-16T20:08:05Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(H2820): truth-pass CLAUDE.md and regenerate AGENTS.md twin (#190)
 csl-observatory,d5cc09890d3d,2026-08-16T12:41:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore(agents): regenerate the AGENTS.md context block — new csl-observatory danger fact (H2874) (#189)
 csl-observatory,90029b9f6610,2026-08-16T12:18:23Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(H2874): register the provenance report; state the citation-count consumption + sync rule in CLAUDE.md (#188)
@@ -8831,6 +8856,8 @@ csl-observatory,eec8dc712aed,2026-05-07T19:29:28Z,gasyoun,Mārcis Gasūns,gasyou
 csl-observatory,c236fb5ac130,2026-05-07T19:28:08Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"feat: companion paper, headword counter, retry logic, templates"
 csl-observatory,1947ea3757ed,2026-05-07T17:04:56Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Create gasuns-cologne-30-report.md
 csl-observatory,e24574b2785a,2026-05-07T15:58:23Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"chore: bootstrap observatory — scripts, first data snapshot, dashboards, article scaffold"
+csl-orig,ac7e82f625cc,2026-08-20T20:46:59Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(claude): data-store runbook + H3044 freshness pass
+csl-orig,4f0424ce7dff,2026-08-18T06:27:23Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,A35: ACL Anthology related-work + ISCLS venue + submission-readiness memo (#2891)
 csl-orig,485bf79113b2,2026-08-13T04:54:46Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,NYBJ slp1
 csl-orig,0c8e72c95cfe,2026-08-13T04:49:46Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,NYBJ v3edit
 csl-orig,09c68d1d2651,2026-08-11T07:07:21Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,NYBJ initial commit
@@ -11076,6 +11103,7 @@ csl-orig,ecc689a3a281,2019-07-20T05:43:47Z,drdhaval2785,drdhaval2785,drdhaval278
 csl-orig,661fb1081d4f,2019-07-20T05:21:21Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,copy to cologne web structure
 csl-orig,f325e2abde72,2019-07-20T05:15:30Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,added hwextra
 csl-orig,6f45dd5ce45d,2019-07-20T04:50:29Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,csl-orig initial commit
+csl-pywork,e460545c98d9,2026-08-20T20:45:19Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(claude): H3045 14d freshness — bump header, name xmlchk_xampp.sh (#83)"
 csl-pywork,8c9949c51594,2026-08-16T20:09:20Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(claude): replace taxonomy stub with generator runbook (H2821) (#82)
 csl-pywork,0362241bd347,2026-08-11T07:59:28Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,NYBJ meanings separated
 csl-pywork,30b03f2244ea,2026-08-11T07:07:43Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,NYBJ initial commit
@@ -11654,6 +11682,7 @@ csl-sqlite,a6a257a9a836,2026-05-29T05:10:13Z,gasyoun,Mārcis Gasūns,gasyoun@use
 csl-sqlite,299157791231,2026-05-15T06:00:57Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 csl-sqlite,fc82dcdff2e1,2026-04-11T06:00:27Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,README update
 csl-sqlite,fca7cdc9f757,2026-04-08T11:48:40Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+csl-websanlexicon,ea4cb2eaa6b2,2026-08-20T20:42:44Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(claude): H3046 SLA refresh — tooling runbook pointer + dated header (#147)
 csl-websanlexicon,e89e3c7a41da,2026-08-16T20:08:16Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(claude): replace taxonomy stub with frontend runbook (H2821) (#146)
 csl-websanlexicon,9cd1287c60d2,2026-08-11T07:59:54Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,NYBJ meanings and footnotes separated visually
 csl-websanlexicon,593dc8051e87,2026-08-11T07:08:04Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,NYBJ initial commit
