@@ -1,9 +1,19 @@
 # CDSL Observatory: One-Year Maintainer Roadmap
 
-_Created: 30-05-2026 · Last updated: 29-07-2026_
+_Created: 30-05-2026 · Last updated: 27-08-2026_
 
-Last updated: 2026-07-29
+Last updated: 2026-08-27
 Horizon: 2026-06 to 2027-06
+
+> **Truth-pass 27-08-2026 (Opus 5 `claude-opus-5`, [H3002](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3002-Opus_multi_stale-roadmap-s4-cologne-ask-replan_17.08.26.md), stale-roadmap slice 4).**
+> Statuses only — no new items, no re-scoping. Two Q3 rows (RH1, RH3) still read `blocked`
+> although MG approved both on **2026-06-17** and the RH1 rollout completed 2026-06-19; the
+> "Next Implementation Session" section at the foot still opens by asking for those same two
+> approvals. Both are corrected below against
+> [`docs/REPOSITORY_HEALTH_DECISION_PACKET.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/REPOSITORY_HEALTH_DECISION_PACKET.md)
+> and the 2026-08-24 regeneration of
+> [`reports/repo_health.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/repo_health.md).
+> Everything else in the file measured accurate.
 Audience: maintainer first. Contributor and reviewer-facing surfaces are planned
 after the maintenance backbone is sturdier.
 
@@ -41,19 +51,19 @@ belong in sibling projects or archived planning docs.
 |---|---|
 | Owner | `MG` = maintainer; `Codex` = implementation assistant; `Org` = requires sanskrit-lexicon maintainer decision |
 | Status | `next`, `active`, `blocked`, `scheduled`, `done` |
-| Cadence | Review this file every Friday; update statuses after each implementation session |
+| Cadence | **Monthly**, on the `docs/MAINTAINER_REVIEW_CHECKLIST.md` ritual (SC6); update statuses after each implementation session. *Re-stated 27-08-2026: this row read "every Friday", which neither matched the observed edit history (29-07-2026 → 27-08-2026 with no status change) nor SC6's own monthly ritual. A cadence nobody keeps is worse than an honest one.* |
 
 ## 2026-Q3: Repository Health First
 
 | ID | Action | Owner | Status | Target | Acceptance |
 |---|---|---|---|---|---|
-| RH1 | Decide license policy for code/data/dictionary repos. | MG + Org | blocked | 2026-06-28 | Written decision in `docs/DECISIONS_NEEDED.md`; policy distinguishes code, dictionary data, OBS-T data, and legacy repos. |
+| RH1 | Decide license policy for code/data/dictionary repos. | MG + Org | done | 2026-06-28 | **Approved by MG 2026-06-17**, five repo groups ruled, in `docs/REPOSITORY_HEALTH_DECISION_PACKET.md` §1. Rollout **complete 2026-06-19** — ~36 repos licensed across 7 batches, logged in `docs/RH1_LICENSE_ROLLOUT_LOG.md`. Met inside target. |
 | RH2 | Resolve the license backlog from `reports/repo_health.md`: 41 no-license repos and 21 `NOASSERTION` repos. | MG + Codex | done | 2026-08-31 | Each repo has a recognized license or an explicit issue explaining why not. RH1 rollout (PR #54/#55, merged 2026-06-19/20) resolved this: `reports/repo_health.md` (2026-07-28) shows 0/77 `NOASSERTION` and 6/77 no-license, all six being the RH3 archive/temp candidates (intentionally excluded, tracked separately). |
-| RH3 | Archive or justify the six cleanup candidates: `santamlegacy`, `temp_corrections_*`, `test_cologne_push`. | MG + Org | blocked | 2026-07-15 | Each candidate is archived or has a short retention note linked from the org project. |
+| RH3 | Archive or justify the six cleanup candidates: `santamlegacy`, `temp_corrections_*`, `test_cologne_push`. | funderburkjim | active | 2026-07-15 | **Decision made 2026-06-17; 4 of 6 archived 2026-06-19** (`santamlegacy`, `temp_corrections_acc`, `temp_corrections_ae`, `test_cologne_push`, via `scripts/rh3_archive.py`). `temp_corrections_ap90` and `temp_corrections_mw` each still hold one open *active* scholarly-question issue authored by funderburkjim — **MG ruled 2026-06-19 that he migrates/closes them**, then `scripts/rh3_archive.py` (which blocks on open issues) is simply re-run. Not `blocked` on a decision: the decision exists. Owner moved off `MG + Org` accordingly. |
 | RH4 | Add a standard `.gitattributes` / line-ending policy to active tooling repos. | Codex | done | 2026-07-31 | All 34 repos in `.github/workflows/tooling-audit.yml` REPOS carry `eol=lf` `.gitattributes` — verified and rolled out 2026-07-27 via [H1542](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1542-Sonnet_csl-observatory_rh4-gitattributes-lf-rollout_23.07.26.md). |
 | RH5 | Add no-BOM, UTF-8, NFC, and XML parse guards for dictionary-source change paths. | Codex | done | 2026-08-15 | CI template exists and is piloted on `csl-orig` or the owning tooling repo. |
 | RH6 | Finish issue-taxonomy rollout across remaining repos. | MG + Codex | done | 2026-08-31 | Rollout is verified complete; ongoing taxonomy/project drift is handled by the monthly maintainer review checklist. |
-| RH7 | Normalize missing descriptions and basic metadata for the top flagged repos. | MG | scheduled | 2026-07-31 | `reports/repo_health.md` missing-description list is empty or justified. |
+| RH7 | Normalize missing descriptions and basic metadata for the top flagged repos. | MG | active | 2026-09-30 | `reports/repo_health.md` missing-description list is empty or justified. **Target re-dated 27-08-2026** — the 2026-07-31 target passed unmet. Nearly there: the 2026-08-24 regeneration shows **3 / 77** repos still without a description (`csl-inflect`, `hwnorm2`, `sanskrit-lexicon.github.io`), so this is three one-line `gh repo edit --description` calls plus a report refresh, not a project. |
 
 Evidence to keep current: `reports/repo_health.md`,
 `docs/hygiene_issues_draft.md`, `docs/RUNBOOK_NOTES.md`,
@@ -128,15 +138,23 @@ These are valuable but not first-year blockers:
 
 ## Next Implementation Session
 
-Start by reviewing the blocked human decisions, then turn approved repository
-decisions into implementation packets:
+**Rewritten 27-08-2026.** Steps 1 and 2 previously asked for the license-matrix
+and cleanup-candidate approvals — both of which MG granted on **2026-06-17**, so
+the file's own opening instruction had been pointing the next session at a
+decision that already existed for two months. What is actually left:
 
-1. Approve or revise the license matrix in `docs/REPOSITORY_HEALTH_DECISION_PACKET.md`.
-2. Approve or revise archive/retain recommendations for the six cleanup candidates.
-3. Use `docs/WEEKLY_MAINTAINER_WORK_PLAN_2026-06-13.md`, `/ops-command`,
-   `/repository-risk`, `/taxonomy-triage`, and
-   `/community-continuity` as the maintainer review control surface.
-4. Prepare the first approved license or cleanup implementation batch; if no
-   decision is made, continue with refresh-script implementation prep.
+1. **RH7 — three descriptions.** `gh repo edit sanskrit-lexicon/<repo> --description "…"`
+   for `csl-inflect`, `hwnorm2`, and `sanskrit-lexicon.github.io`, then re-run
+   `scripts/repo_health.py`. The smallest open item on this roadmap.
+2. **RH3 — nothing for us.** The two unarchived `temp_corrections_*` repos wait
+   on funderburkjim closing his own open issues; re-run `scripts/rh3_archive.py`
+   once they are clear. Do not force it.
+3. **AR1/AR3 — the real engineering.** Both are `active` and both stop at the
+   same wall: the live-server rehearsal (plan steps 7–9 of
+   `docs/REFRESH_SCRIPT_MODERNIZATION_PLAN.md`) and the scheduled-refresh
+   credential hardening need Cologne server access (C2), not more code.
+4. **Control surface** for the monthly review, unchanged:
+   `docs/WEEKLY_MAINTAINER_WORK_PLAN_2026-06-13.md`, `/ops-command`,
+   `/repository-risk`, `/taxonomy-triage`, `/community-continuity`.
 
 _Dr. Mārcis Gasūns_
