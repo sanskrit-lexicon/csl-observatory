@@ -4,6 +4,18 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+### Added
+- **H3487 — adversarial audit of the Cologne tooling codebase** (OxAlpha
+  `opencode/z-ai/glm-5.3-flash`, 28-08-2026). New
+  [docs/CODEBASE_ADVERSARIAL_AUDIT_2026-08.md](docs/CODEBASE_ADVERSARIAL_AUDIT_2026-08.md):
+  reconstructed call graphs for csl-pywork, csl-orig build scripts,
+  csl-websanlexicon v02 templates, csl-apidev; 71-site silent-failure census
+  (swallowed exceptions, unchecked exit codes, destroy-on-fail, blank-200,
+  encoding/key1-key2 traps, unbounded scans) with file:line evidence at pinned
+  commit hashes; cross-reference vs PERFORMANCE_AUDIT_2026-07 (D1-D3 verified
+  fixed via websanlexicon PR #83; D4/D6 still open; apidev #45 fixed since
+  23-07) and AGENT_ROADMAP; 11 ranked gap specs for future handoffs.
+
 ### Changed
 - **OBS-T Zenodo DOI sweep to the genuine concept DOI `10.5281/zenodo.21346705`** (24-08-2026).
   The genuine record was minted 2026-08-16 in the org-wide Zenodo sitting (version
