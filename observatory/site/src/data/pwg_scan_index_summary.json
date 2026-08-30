@@ -1,11 +1,11 @@
 {
- "as_of": "2026-08-16",
+ "as_of": "2026-08-30",
  "source_sheet": "https://docs.google.com/spreadsheets/d/1rcYfQE0D26RNdWSmRQzhFnV3Gf248wSuldTj-wt8_O0/edit?gid=0",
- "tracked_works": 82,
+ "tracked_works": 80,
  "done": 55,
  "on_going": 3,
  "to_do": 7,
- "page_wise": 14,
+ "page_wise": 12,
  "not_required": 3,
  "volunteers": 8,
  "tracked_citation_mass": 268365,
@@ -16,9 +16,9 @@
  "citation_mass_denominator_snapshot": "2024-09-11",
  "citation_count_current_denominator": 799500,
  "pages_indexed": 28963,
- "scans_published": 55,
+ "scans_published": 0,
  "scan_dirs_observed_wired": 35,
- "median_index_to_public_days": 12,
+ "median_index_to_public_days": null,
  "months": [
   {
    "month": "2025-01",
@@ -28,52 +28,42 @@
   {
    "month": "2025-02",
    "indexes_finished": 17,
-   "scans_published": 5
+   "scans_published": 0
   },
   {
    "month": "2025-03",
    "indexes_finished": 15,
-   "scans_published": 18
+   "scans_published": 0
   },
   {
    "month": "2025-04",
    "indexes_finished": 8,
-   "scans_published": 9
+   "scans_published": 0
   },
   {
    "month": "2025-05",
    "indexes_finished": 7,
-   "scans_published": 8
+   "scans_published": 0
   },
   {
    "month": "2025-06",
    "indexes_finished": 3,
-   "scans_published": 10
-  },
-  {
-   "month": "2025-07",
-   "indexes_finished": 0,
-   "scans_published": 1
+   "scans_published": 0
   },
   {
    "month": "2025-08",
    "indexes_finished": 1,
-   "scans_published": 2
+   "scans_published": 0
   },
   {
    "month": "2025-09",
    "indexes_finished": 2,
-   "scans_published": 2
+   "scans_published": 0
   },
   {
    "month": "2026-01",
    "indexes_finished": 1,
    "scans_published": 0
-  },
-  {
-   "month": "2026-07",
-   "indexes_finished": 0,
-   "scans_published": 1
   }
  ],
  "per_volunteer": [

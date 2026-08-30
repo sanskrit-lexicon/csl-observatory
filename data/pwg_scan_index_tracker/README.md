@@ -37,17 +37,17 @@ Campaign history: [`docs/PWG_SCAN_INDEX_CAMPAIGN_HISTORY_2025_2026.md`](https://
   (link-public, maintainer-kept). The sheet is **live and volatile** — it is the
   campaign's working document, not a release. The snapshot here is a point-in-time
   copy; re-take it with `python scripts/pwg_scan_index.py --fetch`.
-- **Snapshot taken:** 27-07-2026, all four tabs.
+- **Snapshot taken:** 30-08-2026, all four tabs.
 - **The snapshot is the input of record.** Every derived file in this directory is
   regenerated from `snapshot/`, never from the network, so a checkout reproduces the
   reports offline and byte-identically.
-- **One redaction, applied at fetch time.** The sheet's `Team` tab maps each volunteer's
-  real personal name to their GitHub handle. The handles are public — they appear on every
-  coordinating issue — but that name-to-handle linkage is not, and this repository is.
-  The name column is therefore replaced with `[redacted: personal name]` by
-  `REDACT_COLUMNS` in the generator, so re-running `--fetch` cannot reintroduce it. The
-  handle column is untouched: every credit, count, and per-volunteer figure in the reports
-  is unaffected. Publishing the names is a human decision, not an automated one.
+- **Names published by owner ruling (30-08-2026).** The sheet's `Team` tab maps each
+  volunteer's real personal name to their GitHub handle. From the first snapshot until
+  29-08-2026 the name column was redacted at fetch time (`REDACT_COLUMNS` in the
+  generator); on 30-08-2026 the repository owner ruled to publish the names
+  (aging-audit vote sheet, card `volunteer_names`, option b — consent given by ruling),
+  so `--fetch` now copies the live sheet verbatim. Re-enable the redaction only on a
+  fresh owner ruling.
 
 - **`scan_target_audit.tsv` is a dated static audit, not a per-run derivation.** Built
   27-07-2026 (H1706, Opus 5 `claude-opus-5`) from two read-only passes: the live GitHub API
