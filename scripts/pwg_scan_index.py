@@ -81,13 +81,15 @@ DONE_STATUSES = {"done"}
 # --------------------------------------------------------------------------- fetch
 
 # Columns redacted before the snapshot is committed, by tab slug -> column indices.
-# The sheet's `Team` tab maps each volunteer's real personal name to their GitHub
-# handle. The handles are public -- they appear on every coordinating issue -- but
-# the name-to-handle linkage is not, and this repository is public. Committing it
-# would publish personal data beyond what the public record already carries, which
-# is not a call an automated pass gets to make. The handle column is kept, so the
-# roster and every credit in the reports survive the redaction intact.
-REDACT_COLUMNS = {"team": [2]}
+# HISTORY: the `Team` tab's personal-name column was redacted here from the first
+# snapshot until 2026-08-29 (name-to-handle linkage treated as non-public; the
+# handles alone were always public). On 2026-08-30 the repository owner ruled to
+# publish the names (aging-audit vote sheet card `volunteer_names`, option b —
+# consent given by ruling; decisions.json in gasyoun/Uprava review/), so the
+# redaction transform is disabled and the committed snapshot carries the live
+# names verbatim. Re-enable by restoring {"team": [2]} only on a fresh
+# owner ruling.
+REDACT_COLUMNS = {}
 REDACTED = "[redacted: personal name]"
 
 
@@ -1078,12 +1080,12 @@ def main():
                          + ", ".join(f"*{t}*" for t in orphan)
                          + ". Either a plan that never became a tracked row, or a row deleted "
                            "from `Works`; the registry follows `Works`.")
-    notes.append("**One redaction in the committed snapshot.** The sheet's `Team` tab maps "
-                 "each volunteer's real personal name to their GitHub handle. The handles "
-                 "are public — they are on every coordinating issue — but that linkage is "
-                 "not, and this repository is. The name column is redacted at fetch time; "
-                 "the handle column, and therefore every credit and count in this report, "
-                 "is untouched.")
+    notes.append("**Names published by owner ruling (2026-08-30).** The sheet's `Team` tab "
+                 "maps each volunteer's real personal name to their GitHub handle. Until "
+                 "29-08-2026 the name column was redacted at fetch time (linkage treated as "
+                 "non-public); on 30-08-2026 the repository owner ruled to publish the names "
+                 "(aging-audit vote sheet, card `volunteer_names`, option b), so the snapshot "
+                 "now carries the live sheet verbatim.")
     no_count = [r for r in rows if r["citation_count"] is None]
     if no_count:
         notes.append(f"**{len(no_count)} rows carry no citation count** (the sheet writes "
