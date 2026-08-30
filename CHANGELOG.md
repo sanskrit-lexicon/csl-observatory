@@ -4,6 +4,7 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+## [1.13.1] - 2026-08-30
 ### Added
 - **H3487 — adversarial audit of the Cologne tooling codebase** (OxAlpha
   `opencode/z-ai/glm-5.3-flash`, 28-08-2026). New
