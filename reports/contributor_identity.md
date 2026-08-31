@@ -10,10 +10,10 @@ Purpose: close the attribution gap the bus-factor finding surfaced — every hum
 |---|---:|
 | Confirmed name **and** registered ORCID | 0 |
 | Confirmed name, ORCID still a placeholder | 7 |
-| No confirmed name (and no ORCID) | 9 |
+| No confirmed name (and no ORCID) | 10 |
 | Bots (excluded) | 3 |
 
-**Bottom line: 0 of 16 human contributors have a registered ORCID.** The core group already has confirmed names; the gap is ORCID registration for them plus identification of the occasional contributors.
+**Bottom line: 0 of 17 human contributors have a registered ORCID.** The core group already has confirmed names; the gap is ORCID registration for them plus identification of the occasional contributors.
 
 ## Worksheet (commit authors, by contribution volume)
 
@@ -23,7 +23,7 @@ Fill `Real name` and `ORCID` where blank. `—` in ORCID means none on file (or 
 |---|---:|---:|---|---|---|---|
 | `funderburkjim` | 4,890 | 59 | maintainer | Jim Funderburk | Cologne Digital Sanskrit Dictionaries | — |
 | `drdhaval2785` | 3,834 | 41 | core | Dhaval Patel | Cologne Digital Sanskrit Dictionaries | — |
-| `gasyoun` | 3,030 | 77 | lead | Mārcis Gasūns | Cologne Digital Sanskrit Dictionaries | — |
+| `gasyoun` | 3,110 | 77 | lead | Mārcis Gasūns | Cologne Digital Sanskrit Dictionaries | — |
 | `AnnaRybakovaT` | 82 | 11 | occasional | Anna Rybakova | — | — |
 | `Andhrabharati` | 63 | 3 | core | Nagabhushana Rao | Andhrabharati | — |
 | `aumsanskrit` | 17 | 1 | contributor | Scott Rhodes | — | — |
@@ -35,6 +35,7 @@ Fill `Real name` and `ORCID` where blank. `—` in ORCID means none on file (or 
 | `sanskritisampada` | 1 | 1 | occasional | **?** | — | — |
 | `maltenth` | 1 | 1 | core | Thomas Malten | University of Cologne | — |
 | `sumanthegde` | 1 | 1 | — | **?** | — | — |
+| `Ox-Alpha` | 1 | 1 | — | **?** | — | — |
 | `adminlip` | 1 | 1 | — | **?** | — | — |
 | `vlastavesely` | 1 | 1 | — | **?** | — | — |
 
@@ -46,7 +47,7 @@ These contributors are identified — they only need to register (or supply) an 
 |---|---|---|---:|
 | Jim Funderburk | `funderburkjim` | maintainer | 4,890 |
 | Dhaval Patel | `drdhaval2785` | core | 3,834 |
-| Mārcis Gasūns | `gasyoun` | lead | 3,030 |
+| Mārcis Gasūns | `gasyoun` | lead | 3,110 |
 | Anna Rybakova | `AnnaRybakovaT` | occasional | 82 |
 | Nagabhushana Rao | `Andhrabharati` | core | 63 |
 | Scott Rhodes | `aumsanskrit` | contributor | 17 |
@@ -63,6 +64,7 @@ These contributors are identified — they only need to register (or supply) an 
 | `Haqob` | 2 | 1 |
 | `sanskritisampada` | 1 | 1 |
 | `sumanthegde` | 1 | 1 |
+| `Ox-Alpha` | 1 | 1 |
 | `adminlip` | 1 | 1 |
 | `vlastavesely` | 1 | 1 |
 

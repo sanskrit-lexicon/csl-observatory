@@ -125,6 +125,13 @@ people:
     repos_authored: ["csl-inflect", "csl-observatory", "csl-websanlexicon"]
     repos_contributed: []
     enrichment_status: needs_affiliation
+  - login: Ox-Alpha
+    name: null
+    orcid: null
+    affiliation: null
+    repos_authored: []
+    repos_contributed: ["csl-observatory"]
+    enrichment_status: needs_name_and_orcid
   - login: sanskritisampada
     name: null
     orcid: null
