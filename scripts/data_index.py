@@ -404,7 +404,14 @@ CATALOG: dict[str, Entry] = {
         "and source link.",
         "Values are aggregated from ~15 sibling repos, not computed in this repo; "
         "re-verify against the linked source before citing a specific count. "
-        "as_of_date is per-row, not a single snapshot date.",
+        "as_of_date is per-row, not a single snapshot date. "
+        "These 59 data rows are the register's DENOMINATOR OF RECORD (H3793, "
+        "01-09-2026): the roadmap's own Part-0 prose says ~48 and its Part-IV KPI "
+        "table says 48, so a completion percentage is only computable against this "
+        "file. Two rows can never reach done and are capped, not pending -- "
+        "sense/polysemy (only 11 of 44 dicts carry structural sense markers) and "
+        "corpus root-class (unaccented DCS cannot split class I/VI or IV/passive); "
+        "do not read either as outstanding work.",
     ),
     "taxonomy_adoption.csv": Entry(
         "issue taxonomy",
