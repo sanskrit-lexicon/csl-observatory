@@ -4,6 +4,35 @@ All notable changes to this repository are documented here, following [Keep a Ch
 
 ## [Unreleased]
 
+### Fixed
+- **The statistics-census register feed understated delivery on three rows, and the public
+  dashboard pages rendered that** (H3793 residual, Opus 5 `claude-opus-5[1m]`, 01-09-2026).
+  [`observatory/site/src/data/stats_census_register.csv`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/observatory/site/src/data/stats_census_register.csv)
+  is hand-curated and had not been touched since it was seeded — every one of its 59 rows was
+  stamped 12–18-07-2026 — while three had since been overtaken:
+  **L1 "Definition typology"** read `not_started` though the classifier had covered
+  **44/44 csl-orig dicts · 1,496,157 `<L>` records** with an n=79 stratified gold of 55/79
+  since 24-07-2026
+  ([report](https://github.com/gasyoun/SanskritLexicography/blob/master/data/DEFINITION_TYPOLOGY_WS2_4_2026.md));
+  **L2 "Paradigm-cell coverage"** read `partial` though it closed at **8,054/11,096 roots ·
+  171 finite cells**; and **L3 "POS distribution per text"** read `partial` though it closed at
+  **270/270 texts · 5,688,416 tokens** — both under H817 WS1.2, both with a live page since
+  H1524. All three drifted the same way, so the observatory was publishing *less* progress than
+  the project had made. Each row now carries its real value, its own source report as
+  `source_url`, and the measurement's own date — the two H817 rows keep `2026-07-13`, because
+  only the status reading was wrong, not the measurement.
+- **The register now names its denominator of record.** The census is counted three ways —
+  the roadmap's Part-0 prose says ~48, its Part-IV KPI table says 48, and this feed holds
+  **59** — so no completion percentage was computable against any of them. The
+  [`scripts/data_index.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/data_index.py)
+  entry now states that this file's 59 rows are the denominator, and that two rows are
+  **capped rather than pending**: sense/polysemy (only 11 of 44 dicts carry structural sense
+  markers) and corpus root-class (unaccented DCS cannot split class I/VI or IV/passive).
+  Neither can ever reach `done`, so neither should be read as outstanding work. Post-correction
+  the register stands at **44 done · 7 partial · 8 not_started**. Rationale and the full Q1→Q2
+  audit:
+  [Q1_DELIVERY_AND_Q2_ANALYTICAL_LAYER_STATISTICS_CENSUS_01-09-2026.md](https://github.com/gasyoun/SanskritLexicography/blob/master/Q1_DELIVERY_AND_Q2_ANALYTICAL_LAYER_STATISTICS_CENSUS_01-09-2026.md).
+
 ## [1.13.1] - 2026-08-30
 ### Added
 - **H3487 — adversarial audit of the Cologne tooling codebase** (OxAlpha

@@ -8,7 +8,7 @@ L1,Lexicon text,Correction-event log,52498 events / 43 dicts / 208 corrector lab
 L1,Lexicon text,n-gram membership oracle,6656616 n-grams,6656616,done,CORRECTIONS,https://github.com/sanskrit-lexicon/CORRECTIONS/tree/master/ngram,2026-07-12
 L1,Lexicon text,Sense-count / polysemy distribution per dict,11/44 dicts (rest structurally blocked),11,partial,SanskritLexicography,https://github.com/gasyoun/Uprava/blob/main/handoffs/H817-Sonnet_SanskritLexicography_stats-roadmap-q1-census-dashboard_12.07.26.md,2026-07-13
 L1,Lexicon text,Diachronic first-attestation (which dict coins a headword),partial - A40 growth curve only,,partial,SanskritLexicography,https://github.com/gasyoun/Uprava/blob/main/ARTICLES.md,2026-07-12
-L1,Lexicon text,Definition typology (synonym vs equivalent vs encyclopedic),not started,,not_started,SanskritLexicography,https://github.com/gasyoun/SanskritLexicography/blob/master/ROADMAP_STATISTICS_ORG_CENSUS_2026_2027.md,2026-07-12
+L1,Lexicon text,Definition typology (synonym vs equivalent vs encyclopedic),44/44 dicts · 1496157 records · gold 55/79,1496157,partial,SanskritLexicography,https://github.com/gasyoun/SanskritLexicography/blob/master/data/DEFINITION_TYPOLOGY_WS2_4_2026.md,2026-07-24
 L1,Lexicon text,Per-dict editorial fingerprint (citation x markup x error),not started,,not_started,SanskritLexicography,https://github.com/gasyoun/SanskritLexicography/blob/master/ROADMAP_STATISTICS_ORG_CENSUS_2026_2027.md,2026-07-12
 L2,Morphology & forms,kosha.db entries,444773,444773,done,kosha,https://github.com/gasyoun/kosha/blob/main/docs/KOSHA_DB_COMPLETENESS_AUDIT.md,2026-07-12
 L2,Morphology & forms,kosha.db senses,692403,692403,done,kosha,https://github.com/gasyoun/kosha/blob/main/docs/KOSHA_DB_COMPLETENESS_AUDIT.md,2026-07-12
@@ -18,7 +18,7 @@ L2,Morphology & forms,DCS lemmas,180176,180176,done,SanskritRussian,https://gith
 L2,Morphology & forms,DCS form->lemma rows,408000,408000,done,SanskritRussian,https://github.com/gasyoun/SanskritRussian,2026-07-12
 L2,Morphology & forms,Heritage form oracle (DICO lemmas),24500,24500,done,SanskritLexicography,https://github.com/gasyoun/SanskritLexicography/tree/master/HeadwordLists,2026-07-12
 L2,Morphology & forms,vidyut FST fallback forms,28500,28500,done,SanskritRussian,https://github.com/gasyoun/SanskritRussian,2026-07-12
-L2,Morphology & forms,Paradigm-cell coverage (which cells attested per root),quantified org-wide (H817 WS1.2),,partial,VisualDCS,https://github.com/gasyoun/VisualDCS,2026-07-13
+L2,Morphology & forms,Paradigm-cell coverage (which cells attested per root),8054/11096 roots · 171 finite cells (H817 WS1.2),8054,done,VisualDCS,https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/paradigm_cell_coverage.md,2026-07-13
 L2,Morphology & forms,Form->lemma ambiguity rate,not started,,not_started,SanskritLexicography,https://github.com/gasyoun/SanskritLexicography/blob/master/ROADMAP_STATISTICS_ORG_CENSUS_2026_2027.md,2026-07-12
 L3,Corpus & usage,DCS full corpus tokens,5688416,5688416,done,VisualDCS,https://github.com/gasyoun/VisualDCS,2026-07-12
 L3,Corpus & usage,DCS full corpus sentences,754726,754726,done,VisualDCS,https://github.com/gasyoun/VisualDCS,2026-07-12
@@ -29,7 +29,7 @@ L3,Corpus & usage,SamudraManthanam sources,152,152,done,SamudraManthanam,https:/
 L3,Corpus & usage,Stop-word parallels,40573260,40573260,done,VisualDCS,https://github.com/gasyoun/VisualDCS/blob/main/src/DCS-data-2026/reports/m9_archive_ingest.md,2026-07-12
 L3,Corpus & usage,Frequency layer lemmas (per-period vectors),83277,83277,done,kosha,https://github.com/gasyoun/kosha/blob/main/data/frequency/lemma_frequency.tsv,2026-07-12
 L3,Corpus & usage,2021->2026 corpus delta,report shipped,,done,VisualDCS,https://github.com/gasyoun/VisualDCS/blob/main/derived-data/Corpus-Delta-2021-2026/REPORT.md,2026-07-12
-L3,Corpus & usage,POS distribution per text,closed (H817 WS1.2),,partial,SanskritLexicography,https://github.com/gasyoun/Uprava/blob/main/handoffs/H817-Sonnet_SanskritLexicography_stats-roadmap-q1-census-dashboard_12.07.26.md,2026-07-13
+L3,Corpus & usage,POS distribution per text,270/270 texts · 5688416 tokens (H817 WS1.2),270,done,SanskritLexicography,https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/pos_distribution_per_text.md,2026-07-13
 L3,Corpus & usage,Lemma/root frequency bands per text,whole-corpus only (E26),,partial,kosha,https://github.com/gasyoun/kosha/blob/main/data/frequency/lemma_frequency.tsv,2026-07-12
 L3,Corpus & usage,Meter / prosody statistics,not started,,not_started,SanskritKaraoke,https://github.com/gasyoun/SanskritKaraoke,2026-07-12
 L3,Corpus & usage,Vedic accent coverage,not started - VedaWeb reuse pending,,not_started,VedaWeb,https://github.com/gasyoun/SanskritLexicography/blob/master/ROADMAP_STATISTICS_ORG_CENSUS_2026_2027.md,2026-07-12
