@@ -1,1 +1,0 @@
-- docs: Cologne codebase improvement map 2026-09 — prior-art status sweep, 22 verified gaps, ranked roadmap ([#201](https://github.com/sanskrit-lexicon/csl-observatory/pull/201), H3884)

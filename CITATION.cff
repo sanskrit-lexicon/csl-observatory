@@ -10,8 +10,8 @@ message: >
   H1364, confirmed by a live Zenodo check.)
 license: GPL-3.0
 repository-code: https://github.com/sanskrit-lexicon/csl-observatory
-version: 1.13.2
-date-released: 2026-09-01
+version: 1.13.3
+date-released: 2026-09-02
 abstract: >
   Observatory code and OBS-T correction-event corpus for the Cologne Digital
   Sanskrit Dictionaries (CDSL). Code: GPL-3.0. OBS-T data release
