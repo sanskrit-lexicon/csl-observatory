@@ -5,6 +5,9 @@ All notable changes to this repository are documented here, following [Keep a Ch
 ## [Unreleased]
 <!-- entries land in changelog_queue/ -- appended via tools/changelog_queue_consume.py, consumed by cut_release.py at release-cut (H3355); direct bullets here are hook-blocked -->
 
+## [1.13.3] - 2026-09-02
+
+- docs: Cologne codebase improvement map 2026-09 — prior-art status sweep, 22 verified gaps, ranked roadmap ([#201](https://github.com/sanskrit-lexicon/csl-observatory/pull/201), H3884)
 ## [1.13.2] - 2026-09-01
 ### Fixed
 - **The statistics-census register feed understated delivery on three rows, and the public
