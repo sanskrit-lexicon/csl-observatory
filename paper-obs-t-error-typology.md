@@ -237,9 +237,8 @@ sources (a form pointer to record 4477 once meant *utkaṇṭhā*; that slot now
 
 Our first design used a single "component" column, filling it from the location-join where
 possible and from an edit-type heuristic otherwise. A human-free reliability check exposed
-the mistake: on the 6,969 form events where both signals are available, they agree only
-**0.1 %** of the time
-([`obs_t_silver.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_t_silver.md)).
+the mistake: on the 5,634 form events where both signals are available, they agree only
+**0.1 %** of the time (5 of 5,634 = 0.089 %; [`obs_t_silver.json`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_t_silver.md)).
 That near-zero is structural — the join answers *where* (a headword typo → `headword`)
 while the heuristic answers *what kind* (a typo → `orthography`); they disagree because
 they measure different things. The fix is the two-axis design: derive **location** from
@@ -414,8 +413,10 @@ directionally while spelling, case, and transposition fall.
 ### 5.7 Cross-dictionary error density
 
 Normalising by entry count (`<L>` markers), correction *density* ranges widely among
-dictionaries with ≥ 30 events — from **160.8 per 1,000 entries** (PGN) and 91.4 (BUR) down
-to ~56 (PUI). PW, the largest dictionary, carries the most raw events (13,662) at 80.1 per
+dictionaries with ≥ 30 events — and read over the full 43-dictionary table the spread is
+≈**4.5–160.8 per 1,000 entries**: 160.8 (PGN) and 91.4 (BUR) at the top, down to 4.48
+(mwe, 145 events) at the floor, with PUI (~56) nowhere near the bottom of the range.
+PW, the largest dictionary, carries the most raw events (13,662) at 80.1 per
 1,000. We stress in §7 that high density reflects curatorial attention as much as latent
 error.
 

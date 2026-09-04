@@ -129,7 +129,12 @@ credit and count below uses handles only.
 **73.7% is coverage of the tracked set, not of the dictionary.** The denominator is the
 sheet's own citation-count column, which is not commensurable with the dictionary-wide
 `<ls>` extraction (344,229 occurrences over 9,321 distinct cleaned citation strings;
-§6.1). The long tail of thousands of once-cited works was never in scope.
+§6.1): that total is counted on cleaned sorted-reference lines, while the tracker masses
+sit on the `lsextract_all` extraction base of 739,056 `<ls>` elements (2024-09-11
+snapshot), so dividing one by the other is meaningless. On that shared base the honest
+dictionary-level shares are: tracked 268,425 / 739,056 ≈ **36.3%** of all `<ls>`
+occurrences, indexed ≈ **26.8%**. The long tail of thousands of once-cited works was never
+in scope.
 
 Fourteen works classified `page-wise` and three `not required` are **not backlog**: they
 are rulings that a per-entry index is the wrong instrument. The `page-wise` category was
@@ -155,9 +160,11 @@ itself by tractability, and what remains at the end is precisely what no volunte
 
 ### 3.3 Throughput and velocity
 
-Eight volunteers carried very unequal loads — the top three (13, 15 and 8 works;
-61,664, 58,955 and 35,099 citation mass) account for 79% of indexed citation mass.
-Velocity was front-loaded: of 56 monthly index-completion events, 42 fall in
+Eight volunteers carried very unequal loads — the top three by done-status mass (15, 11
+and 7 works; 58,955, 58,820 and 33,004 citation mass) account for **76.2%** of indexed
+citation mass (done-only numerator over the same done-only 197,876 denominator; rows in
+NR/on-going status are excluded).
+Velocity was front-loaded: of 56 monthly index-completion events (done status), 40 fall in
 February–April 2025, with a long tail of single completions through 2026-01. Publication
 of the scan directory is a separate pipeline (upload, review, publish) with its own
 queue; the median lag from index posted to scan public was **12 days**, range 1–177,
@@ -269,36 +276,43 @@ place the sheet's `Public Link` dates exist outside the sheet.
 
 ## 5 · Limitations
 
-### 5.1 The citation counts have open provenance
+### 5.1 The citation counts' provenance — recovered; a contract replaces the ban
 
-Which extraction produced the sheet's citation-count column is not documented anywhere
-reachable from the sheet, and it reproduces neither the bare-string counts of the
-dictionary's own `<ls>` extraction nor a leading-abbreviation rollup of them: over the 56
-rows where both numbers exist, the sheet/extraction ratio ranges from 1.2× to 433.0×
-(median 2.09×) — the two count different objects (the extraction keys on cleaned citation
-*strings*, the sheet on *books*). Until the provenance is established by the coordinator
-who built the column, the counts support internal ranking only. Every percentage in this
-paper therefore has the tracked set, not the dictionary, as its denominator, and the
-73.7% headline cannot be restated as "73.7% of the PWG's citations now resolve".
+At draft freeze the sheet's citation-count column had open provenance: it reproduced
+neither the bare-string counts of the dictionary's own `<ls>` extraction nor a
+leading-abbreviation rollup of them, and supported internal ranking only. That is now
+resolved — the column is the per-abbreviation total of
+[`lsextract_all.txt`](https://github.com/sanskrit-lexicon/PWG/blob/master/pwgissues/issue74/lsextract_all.txt)
+(the 2024-09-11 table, `ALL = 739,056`); of the 67 tracked rows carrying a value, 66 match
+exactly and 1 is a near-miss, provenance and denominator contract committed as
+[`reports/pwg_citation_count_provenance.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/pwg_citation_count_provenance.md)
+(16-08-2026). The two counts differ because they count different objects — the extraction
+keys on cleaned citation *strings*, the sheet on *work families* — and the contract keeps
+them apart: a percentage is meaningful only against the `ALL` of the same snapshot. Every
+percentage in this paper therefore still has the tracked set, not the dictionary, as its
+denominator, and the 73.7% headline cannot be restated as "73.7% of PWG's citations now
+resolve" (the dictionary-level shares on the shared base are ≈36.3% tracked / ≈26.8%
+indexed, see §2).
 
 ### 5.2 Per-volume masses are floors
 
 Fifteen tracked rows carry no citation count of their own (multi-volume works whose count
 sits on the first volume), so per-volume mass figures are floors, not exact values.
 
-### 5.3 One committed artifact disagrees with another — recorded, not averaged
+### 5.3 One committed artifact disagreed with another — recorded, then regenerated
 
-The dashboard summary
+At draft freeze the dashboard summary
 ([`observatory/site/src/data/pwg_scan_index_summary.json`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/observatory/site/src/data/pwg_scan_index_summary.json))
-records `scan_dirs_observed_wired: 32`, while the report's frontier table (§3.4 here)
-counts 35 fully wired directories. Both artifacts are dated 27-07-2026. The explanation
-is sequencing, not measurement: the resolver fixes that flipped `rvps`,
-`taittiriyas` and `taittiriyabr` to fully wired landed the same day
+recorded `scan_dirs_observed_wired: 32`, while the report's frontier table (§3.4 here)
+counted 35 fully wired directories (both artifacts dated 27-07-2026). The explanation was
+sequencing, not measurement: the resolver fixes that flipped `rvps`, `taittiriyas` and
+`taittiriyabr` to fully wired landed the same day
 ([gasyoun/SanskritLexicography#840](https://github.com/gasyoun/SanskritLexicography/pull/840)),
 and the report table was updated while the summary JSON was not regenerated. Per this
-project's convention the disagreement is a finding to record, not a pair of numbers to
-average; the post-fix count (35) is current, and the JSON should be regenerated at the
-next dashboard refresh.
+project's convention the disagreement was recorded, not averaged; the summary JSON has
+since been regenerated and now records **35**, matching the report. The case is kept as
+the worked example of the convention: a recorded disagreement is a finding, and its
+resolution is a regeneration, not a silent overwrite.
 
 ### 5.4 What the issue trail cannot show
 
