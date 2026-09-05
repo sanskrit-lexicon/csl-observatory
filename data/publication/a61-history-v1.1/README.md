@@ -1,3 +1,5 @@
+_Created: 18-07-2026 · Last updated: 05-09-2026_
+
 # A61 history evidence snapshot v1.1
 
 This immutable evidence contract supports article A61, *The Cologne Digital
@@ -70,3 +72,5 @@ python scripts/build_article_snapshot.py --check
 The build validates evidence references, the two pending email milestones, the
 five-implementer correction, chapter coverage, and the A13 byte fence at
 SHA-256 `05fbe656224d93e46921614b2a609631c6769f761c8832e84ac84a3c991c9f00`.
+
+_Dr. Mārcis Gasūns_

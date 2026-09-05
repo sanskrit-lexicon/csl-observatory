@@ -1,3 +1,5 @@
+_Created: 12-06-2026 · Last updated: 05-09-2026_
+
 # Codex review prompt — OBS-T error-typology track
 
 Paste the section below (between the rulers) to Codex / a reviewing agent. It has
@@ -125,3 +127,5 @@ where it will matter. The paper prose is not written yet; review the artifacts, 
 a manuscript.
 
 ---
+
+_Dr. Mārcis Gasūns_

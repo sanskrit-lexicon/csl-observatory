@@ -1,3 +1,5 @@
+_Created: 15-05-2026 · Last updated: 05-09-2026_
+
 ---
 title: CSL Observatory — overview
 toc: false
@@ -173,3 +175,5 @@ To cite the data, see [Data downloads → Citation](/data). The error-typology c
 <style>
 .card .big { font-size: 2rem; font-weight: 600; display: block; }
 </style>
+
+_Dr. Mārcis Gasūns_

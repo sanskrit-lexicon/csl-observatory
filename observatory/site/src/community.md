@@ -1,3 +1,5 @@
+_Created: 15-05-2026 · Last updated: 05-09-2026_
+
 ---
 title: Community growth
 toc: true
@@ -180,3 +182,5 @@ Plot.plot({
 Of **${busFactor.length}** repositories with human contributors, **${bf1.length}** depend on a single maintainer for the majority of their history. Just **${peopleFor(0.5)}** person accounts for half of all recorded contributions, and the core trio carries **${(coreShare * 100).toFixed(0)}%** — a Gini of **${gini(totals).toFixed(2)}** confirms a long tail of one-off contributors behind a tiny active core.
 
 [← back to overview](/)
+
+_Dr. Mārcis Gasūns_

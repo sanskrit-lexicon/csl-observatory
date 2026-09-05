@@ -1,3 +1,5 @@
+_Created: 27-06-2026 · Last updated: 05-09-2026_
+
 # Bug Triage Findings — 2026-06-27 Sweep
 
 Agent sweep of all `bug`-labeled open issues across the `sanskrit-lexicon` org (84 issues, 22 repos).
@@ -193,3 +195,5 @@ Re-run of the 9 network-failed issues from the original P4 sweep. Network connec
 | Issue | Status |
 |---|---|
 | [csl-orig #1788](https://github.com/sanskrit-lexicon/csl-orig/issues/1788) | MW sup→rev (L>592.1) — clarification comment posted; Andhrabharati to confirm before applying |
+
+_Dr. Mārcis Gasūns_

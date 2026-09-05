@@ -1,3 +1,5 @@
+_Created: 31-05-2026 · Last updated: 05-09-2026_
+
 # Taxonomy Drift Watch — design
 
 Keep every repo **taxonomy-complete after** the 2026-05 rollout, by catching
@@ -9,8 +11,8 @@ an auto-fixer — see *Apply mode* below.
 
 | Piece | Covers | Trigger |
 |---|---|---|
-| [`scripts/tooling_runbook.py`](../scripts/tooling_runbook.py) `verify` / `audit` | tooling repos (per-issue gate + project reconciliation) | manual |
-| [`.github/workflows/tooling-audit.yml`](../.github/workflows/tooling-audit.yml) | tooling repos | weekly cron + dispatch |
+| [`scripts/tooling_runbook.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/tooling_runbook.py) `verify` / `audit` | tooling repos (per-issue gate + project reconciliation) | manual |
+| [`.github/workflows/tooling-audit.yml`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/.github/workflows/tooling-audit.yml) | tooling repos | weekly cron + dispatch |
 
 The **dictionary** side had no equivalent. This change adds it, modelled on the
 tooling pieces rather than reinventing them.
@@ -18,14 +20,14 @@ tooling pieces rather than reinventing them.
 ## The two layers
 
 **1. Backstop audit (cron + dispatch).**
-[`scripts/dict_runbook.py`](../scripts/dict_runbook.py) `audit` over the 34
-dictionary repos, driven by [`.github/workflows/dict-audit.yml`](../.github/workflows/dict-audit.yml)
+[`scripts/dict_runbook.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/dict_runbook.py) `audit` over the 34
+dictionary repos, driven by [`.github/workflows/dict-audit.yml`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/.github/workflows/dict-audit.yml)
 weekly (Mon 03:30 UTC) and on demand. A nonzero `mismatches:` count fails the
 job — a red check is the per-run signal. Tooling repos keep their existing
 weekly audit.
 
 **2. Event-driven guard (per-repo).**
-[`runbook/templates/taxonomy-drift.yml`](../runbook/templates/taxonomy-drift.yml)
+[`runbook/templates/taxonomy-drift.yml`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/runbook/templates/taxonomy-drift.yml)
 re-checks the *changed* issue on every `issues` event and toggles a
 `needs-triage` label. Immediate; needs no PAT (uses `--no-project` +
 `GITHUB_TOKEN`). Currently a **draft template** — fanned out per-repo by a future
@@ -44,7 +46,7 @@ Digitization Quality=2, Structured Data=3, Major Enhancements=4; **MWS uses
 ## Apply mode — PR-only, never push to default
 
 The watch **never auto-applies taxonomy** and never pushes to a default branch.
-Actual fixes stay the human-run [cologne-issue-runbook](../runbook/cologne-issue-runbook.md)
+Actual fixes stay the human-run [cologne-issue-runbook](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/runbook/cologne-issue-runbook.md)
 / `tooling_runbook.py classify`, which open their own changes for review. The
 guard's only write is the `needs-triage` label (issue metadata, not a commit).
 (Taxonomy assignments are label/milestone/project API calls, so they can't be a
@@ -54,7 +56,7 @@ PR; detection-only is the coherent reading of "PR-only".)
 
 - Cron audits need org **projectV2 read**, which `GITHUB_TOKEN` lacks → reuse the
   existing **`TOOLING_AUDIT_TOKEN`** PAT (`read:project` + `repo`), credential
-  **C1** in [DECISIONS_NEEDED.md](DECISIONS_NEEDED.md). No new token.
+  **C1** in [DECISIONS_NEEDED.md](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/DECISIONS_NEEDED.md). No new token.
 - The event guard needs no PAT (project dimension deferred to the cron via
   `--no-project`).
 
@@ -94,3 +96,5 @@ no longer produces false mismatches.
   covers tooling repos.
 - Whether the cron audit should additionally append a drift list to a dated
   report (current default: red check + step summary only, to stay low-noise).
+
+_Dr. Mārcis Gasūns_

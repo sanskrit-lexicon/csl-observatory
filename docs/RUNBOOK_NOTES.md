@@ -1,7 +1,9 @@
+_Created: 29-05-2026 · Last updated: 05-09-2026_
+
 # Tooling-runbook operating notes
 
 Conventions and gotchas that aren't captured in the runbook spec itself
-([runbook/cologne-tooling-runbook.md](../runbook/cologne-tooling-runbook.md))
+([runbook/cologne-tooling-runbook.md](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/runbook/cologne-tooling-runbook.md))
 but matter when applying it to live repos. Started 2026-05-29 after the
 full-sweep pass.
 
@@ -9,7 +11,7 @@ full-sweep pass.
 
 ## Canonical executor
 
-Use **[`scripts/tooling_runbook.py`](../scripts/tooling_runbook.py)** —
+Use **[`scripts/tooling_runbook.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/tooling_runbook.py)** —
 do not reinvent the phases per repo.
 
 | Subcommand | Phase | Purpose |
@@ -49,7 +51,7 @@ wave: `csl-apidev`, `csl-websanlexicon`, `csl-corrections`, and
 issues were never added to the project. Backfilled the same day.
 
 Whenever new tooling repos come online (the org reference table in
-[runbook/README.md](../runbook/README.md) tracks candidates), they
+[runbook/README.md](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/runbook/README.md) tracks candidates), they
 should be processed end-to-end — labels, classify, gate-pass, project,
 README refresh — before being treated as onboarded.
 
@@ -121,7 +123,7 @@ issue-type/severity breakdown.
 
 ## Weekly audit workflow
 
-[`.github/workflows/tooling-audit.yml`](../.github/workflows/tooling-audit.yml)
+[`.github/workflows/tooling-audit.yml`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/.github/workflows/tooling-audit.yml)
 runs the `audit` subcommand every Monday 03:00 UTC and fails the job on
 any nonzero mismatch count. The workflow needs a repo secret
 **`TOOLING_AUDIT_TOKEN`** — a PAT with `read:project` and `repo`
@@ -153,3 +155,5 @@ Largest backlogs at snapshot: `csl-orig` 68, `MWinflect` 48,
 `csl-websanlexicon` 25, `csl-apidev` 22, `csl-corrections` 21,
 `alternateheadwords` 19, `hwnorm1` / `csl-devanagari` / `mw-dev` 17
 each, `csl-inflect` 12.
+
+_Dr. Mārcis Gasūns_

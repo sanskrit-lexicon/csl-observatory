@@ -1,3 +1,5 @@
+_Created: 17-06-2026 · Last updated: 05-09-2026_
+
 ---
 title: Reproducibility
 toc: true
@@ -116,3 +118,5 @@ generated date. No Zenodo DOI minted yet — see [Data Downloads](/data).
 
 The longer repository guide is
 [`docs/REVIEWER_REPRODUCIBILITY.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/REVIEWER_REPRODUCIBILITY.md).
+
+_Dr. Mārcis Gasūns_

@@ -1,3 +1,5 @@
+_Created: 17-06-2026 · Last updated: 05-09-2026_
+
 # RH1 License Rollout Log
 
 Execution record for the RH1 license policy approved by MG on 2026-06-17
@@ -138,3 +140,5 @@ six RH3 archive/temp candidates, intentionally excluded until that decision runs
 The committed `repo_health.csv` snapshot predates this rollout, so the dashboard
 still shows the pre-rollout license counts. A data refresh (`scripts/pull_data.py`
 → `repo_health.py`) will reconcile the numbers.
+
+_Dr. Mārcis Gasūns_

@@ -1,3 +1,5 @@
+_Created: 15-05-2026 · Last updated: 05-09-2026_
+
 ---
 title: Repository Benchmarks
 toc: false
@@ -46,3 +48,5 @@ If a comparator lacks public repository evidence, it should be shown as
 `unknown` rather than filled from content, corpus, lookup, or citation sources.
 
 [back to overview](/)
+
+_Dr. Mārcis Gasūns_

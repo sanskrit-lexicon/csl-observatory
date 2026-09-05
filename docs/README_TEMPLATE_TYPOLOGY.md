@@ -1,3 +1,5 @@
+_Created: 12-06-2026 · Last updated: 05-09-2026_
+
 # README template typology
 
 This note defines the README patterns to use across Sanskrit Lexicon
@@ -300,3 +302,5 @@ Short summary.
 ```
 
 Do not delete the older narrative unless it is duplicated by the new sections.
+
+_Dr. Mārcis Gasūns_

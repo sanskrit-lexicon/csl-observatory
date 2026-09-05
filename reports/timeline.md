@@ -1,3 +1,5 @@
+_Created: 07-05-2026 · Last updated: 05-09-2026_
+
 # Activity timeline
 
 ## Contributor active spans
@@ -49,3 +51,4 @@ gantt
 | 2025 | 612 |
 | 2026 | 1,714 |
 
+_Dr. Mārcis Gasūns_

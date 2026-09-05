@@ -1,3 +1,5 @@
+_Created: 03-07-2026 · Last updated: 05-09-2026_
+
 ---
 title: Thirteen years, one scroll — the story of the Cologne corrections
 toc: false
@@ -436,3 +438,5 @@ The same month moved the research pipeline without a single new figure needing t
 .card .big { font-size: 2.1rem; font-weight: 600; display: block; line-height: 1.1; }
 .card .muted { font-size: 0.8rem; opacity: 0.65; display: block; margin-top: 0.15rem; }
 </style>
+
+_Dr. Mārcis Gasūns_

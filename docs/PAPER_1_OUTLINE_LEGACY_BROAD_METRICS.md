@@ -1,3 +1,5 @@
+_Created: 16-05-2026 · Last updated: 05-09-2026_
+
 # Legacy Broad Paper Outline
 
 Status: legacy reference only. This file predates the 2026-06-04 boundary
@@ -13,7 +15,7 @@ GitHub/org-only report outline.
 **Target venue**: World Sanskrit Conference 2028, long paper (~15-20 pages)
 **Structure**: Methodology-first (per author decision 2026-05-15)
 **Authorship**: Claude drafts full first pass; M. Gasūns rewrites for voice
-**Companion**: [`OBSERVATORY_ROADMAP.md`](OBSERVATORY_ROADMAP.md)
+**Companion**: [`OBSERVATORY_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/OBSERVATORY_ROADMAP.md)
 
 This is the **paragraph-by-paragraph outline**. Every paragraph slot lists its KPI source, target word count, figure reference, and "draft trigger" (which roadmap phase produces enough data to draft it).
 
@@ -256,3 +258,5 @@ WSC long-paper limit is typically 15-20 pages → trim §5 sub-paragraphs as nee
 6. After Phase F: §5.4.4–5.4.5
 7. After Phase G: §4.2.4, §5.4.6–5.4.7
 8. Always-on: §1, §2, §6, §7 — drafted last with full data context
+
+_Dr. Mārcis Gasūns_

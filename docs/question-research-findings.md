@@ -1,3 +1,5 @@
+_Created: 27-06-2026 · Last updated: 05-09-2026_
+
 # Question Research Findings — 2026-06-27 Sweep
 
 Agent sweep of all `question`-labeled open issues across the `sanskrit-lexicon` org.
@@ -152,3 +154,5 @@ Based on findings — human can close with one click:
 - [COLOGNE #272](https://github.com/sanskrit-lexicon/COLOGNE/issues/272) — by design, can close
 - [COLOGNE #287](https://github.com/sanskrit-lexicon/COLOGNE/issues/287) — archival record only
 - [ACC #17](https://github.com/sanskrit-lexicon/ACC/issues/17) — pending acc6 merge decision
+
+_Dr. Mārcis Gasūns_

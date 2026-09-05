@@ -1,8 +1,8 @@
 # Cologne tooling codebase — adversarial audit: call graph + silent-failure census (August 2026)
 
-_Created: 28-08-2026 · Last updated: 28-08-2026_
+_Created: 28-08-2026 · Last updated: 05-09-2026_
 
-Fresh-eyes adversarial audit of the Cologne **tooling** codebase — trust nothing, read from code, not docs. Executed as [Uprava handoff H3487](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3487-OxAlpha_csl-observatory_cologne-codebase-adversarial-audit_25.08.26.md); audit by OxAlpha (`opencode/z-ai/glm-5.3-flash`). Cross-references [PERFORMANCE_AUDIT_2026-07.md](PERFORMANCE_AUDIT_2026-07.md) and [AGENT_ROADMAP.md](AGENT_ROADMAP.md); does not blindly contradict them — every prior-audit item was re-verified against current tips (table in §6).
+Fresh-eyes adversarial audit of the Cologne **tooling** codebase — trust nothing, read from code, not docs. Executed as [Uprava handoff H3487](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3487-OxAlpha_csl-observatory_cologne-codebase-adversarial-audit_25.08.26.md); audit by OxAlpha (`opencode/z-ai/glm-5.3-flash`). Cross-references [PERFORMANCE_AUDIT_2026-07.md](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/PERFORMANCE_AUDIT_2026-07.md) and [AGENT_ROADMAP.md](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/AGENT_ROADMAP.md); does not blindly contradict them — every prior-audit item was re-verified against current tips (table in §6).
 
 **Read-only pass.** The only artifact is this memo (+ its PR). No findings were "fixed" here; §7 turns the highest-yield ones into launchable gap specs.
 

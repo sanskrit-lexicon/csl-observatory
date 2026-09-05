@@ -1,3 +1,5 @@
+_Created: 03-07-2026 · Last updated: 05-09-2026_
+
 ---
 title: Contributor network
 toc: true
@@ -125,3 +127,5 @@ Plot.plot({
 > **Conclusion:** Only the top three rows have meaningful width; rows four to ten are narrow specialists. Reading down almost any column lands on the same one or two names — the matrix confirms that the network's apparent breadth is three people's reach, not a distributed community.
 
 The cross-repo *issue-reference* graph (which issues cite which across repositories) needs issue bodies the committed snapshot does not carry; it is tracked as an API-gated extension under Workstream G4 in the [roadmap](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/OBSERVATORY_ROADMAP.md).
+
+_Dr. Mārcis Gasūns_

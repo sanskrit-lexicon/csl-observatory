@@ -1,3 +1,5 @@
+_Created: 15-05-2026 · Last updated: 05-09-2026_
+
 ---
 title: Tech stack and ecosystem
 toc: true
@@ -106,3 +108,5 @@ Plot.plot({
 > **Conclusion:** The three-wave pattern reveals how the project evolved — from a raw corpus upload, through infrastructure consolidation, to a mature and self-monitoring toolset. Dictionary repos named by abbreviation cluster at the top (oldest); tooling repos with the `csl-` prefix accumulate toward the bottom (newest). Repo-naming is therefore a proxy for both age and purpose: if it has a short uppercase name, it is a dictionary; if it starts with `csl-`, it is infrastructure built on top of that dictionary corpus.
 
 [← back to overview](/)
+
+_Dr. Mārcis Gasūns_

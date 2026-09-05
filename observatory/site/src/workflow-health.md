@@ -1,3 +1,5 @@
+_Created: 17-06-2026 · Last updated: 05-09-2026_
+
 ---
 title: Workflow Health
 toc: true
@@ -242,3 +244,5 @@ display(Inputs.table(queue, {
   font-weight: 700;
 }
 </style>
+
+_Dr. Mārcis Gasūns_

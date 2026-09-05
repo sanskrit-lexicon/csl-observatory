@@ -1,3 +1,5 @@
+_Created: 17-06-2026 · Last updated: 05-09-2026_
+
 # OBS-T Fix Plan (Archived)
 
 Status: implemented and verified, then archived on 2026-06-12.
@@ -64,3 +66,5 @@ Observed after the full pipeline rerun:
 - Run `python scripts/obs_t_translit_check.py` and keep the sibilant-ambiguity note in the generated report.
 - Keep `scripts/obs_t_gold.py --make`, `scripts/obs_t_gold.py --score`, `scripts/obs_t_errorsample.py --make`, and `scripts/obs_t_errorsample.py --score` human-gated; do not run them in the automated pipeline.
 - Inspect the headline count deltas above before using the release in a paper draft.
+
+_Dr. Mārcis Gasūns_

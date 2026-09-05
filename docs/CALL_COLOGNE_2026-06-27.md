@@ -1,3 +1,5 @@
+_Created: 27-06-2026 · Last updated: 05-09-2026_
+
 # Cologne maintainers call — 27 June 2026
 
 **Attendees:** Gasūns · Jim Funderburk ([@funderburkjim](https://github.com/funderburkjim)) · Dhaval Patel · Andhrabharati
@@ -97,3 +99,5 @@
 - [csl-devanagari #41](https://github.com/sanskrit-lexicon/csl-devanagari/issues/41) · [#42](https://github.com/sanskrit-lexicon/csl-devanagari/issues/42) · [#43](https://github.com/sanskrit-lexicon/csl-devanagari/issues/43)
 - [csl-orig #1537](https://github.com/sanskrit-lexicon/csl-orig/issues/1537) · [#1788](https://github.com/sanskrit-lexicon/csl-orig/issues/1788) · [PR #2863 (shipped)](https://github.com/sanskrit-lexicon/csl-orig/pull/2863)
 - [PWK #12](https://github.com/sanskrit-lexicon/PWK/issues/12) · [VCP #20](https://github.com/sanskrit-lexicon/VCP/issues/20)
+
+_Dr. Mārcis Gasūns_

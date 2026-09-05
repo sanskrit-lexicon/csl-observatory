@@ -1,3 +1,5 @@
+_Created: 15-05-2026 · Last updated: 05-09-2026_
+
 ---
 title: Issue taxonomy
 toc: true
@@ -152,3 +154,5 @@ display(Plot.plot({
 > **Conclusion:** The correction-heavy repositories (csl-orig, MWS) carry the most issues in absolute terms but also show high closure rates — their campaigns ran to completion. The current open backlog is concentrated in a smaller number of repos where correction campaigns are still in progress or triaging has not kept pace with issue creation. The open-vs-closed split is a practical triage dashboard: amber-heavy bars are the next places to focus review effort.
 
 [← back to overview](/)
+
+_Dr. Mārcis Gasūns_

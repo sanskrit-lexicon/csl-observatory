@@ -1,3 +1,5 @@
+_Created: 17-06-2026 · Last updated: 05-09-2026_
+
 ---
 title: Taxonomy triage
 toc: true
@@ -186,3 +188,5 @@ display(Plot.plot({
 > **Conclusion:** The co-occurrence matrix reveals the labelling conventions in practice across the org. Bright cells in expected positions confirm the taxonomy is being applied consistently. Unexpected bright cells identify either labelling inconsistencies to clean up or genuine edge cases that deserve an explicit convention note in the taxonomy documentation.
 
 [Back to overview](/)
+
+_Dr. Mārcis Gasūns_

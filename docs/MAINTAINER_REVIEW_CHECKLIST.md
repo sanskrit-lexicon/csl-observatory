@@ -1,3 +1,5 @@
+_Created: 17-06-2026 · Last updated: 05-09-2026_
+
 # Monthly Maintainer Review Checklist
 
 Date created: 2026-06-12
@@ -209,3 +211,5 @@ Next implementation session:
 
 Default next action when no new decision is made: continue with the highest
 priority unblocked repository-health item in `docs/ROADMAP.md`.
+
+_Dr. Mārcis Gasūns_

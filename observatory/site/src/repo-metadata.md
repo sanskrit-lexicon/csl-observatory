@@ -1,3 +1,5 @@
+_Created: 17-06-2026 · Last updated: 05-09-2026_
+
 ---
 title: Repository metadata
 toc: true
@@ -191,3 +193,5 @@ display(html`<table>
 ```
 
 [Back to overview](/)
+
+_Dr. Mārcis Gasūns_

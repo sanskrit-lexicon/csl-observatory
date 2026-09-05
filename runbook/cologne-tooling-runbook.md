@@ -1,6 +1,8 @@
+_Created: 15-05-2026 · Last updated: 05-09-2026_
+
 Apply the **Cologne tooling-repo taxonomy** to a non-dictionary repository given in the argument: $ARGUMENTS.
 
-The org is `sanskrit-lexicon`. This runbook is for **infrastructure, tooling, data-pipeline, and frontend repos** — NOT for dictionary digitization repos (those use [`cologne-issue-runbook.md`](cologne-issue-runbook.md)).
+The org is `sanskrit-lexicon`. This runbook is for **infrastructure, tooling, data-pipeline, and frontend repos** — NOT for dictionary digitization repos (those use [`cologne-issue-runbook.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/runbook/cologne-issue-runbook.md)).
 
 Execute all phases **without asking for user confirmation** except where marked [ASK]. Complete through commit and push.
 
@@ -448,7 +450,7 @@ Generate `CLAUDE.md` with sections tailored to the repo category:
 
 Required sections (order matters):
 1. Title + one-sentence purpose
-2. **Manual overview block (preserve verbatim)** — human-maintained README material belongs between `<!-- BEGIN MANUAL: overview -->` and `<!-- END MANUAL: overview -->`. Preserve every `<!-- BEGIN MANUAL:* -->` block exactly when regenerating README content. Use the Jim-style templates in [`docs/README_TEMPLATE_TYPOLOGY.md`](../docs/README_TEMPLATE_TYPOLOGY.md), especially Templates C-E for source-data, build, and web-runtime repos.
+2. **Manual overview block (preserve verbatim)** — human-maintained README material belongs between `<!-- BEGIN MANUAL: overview -->` and `<!-- END MANUAL: overview -->`. Preserve every `<!-- BEGIN MANUAL:* -->` block exactly when regenerating README content. Use the Jim-style templates in [`docs/README_TEMPLATE_TYPOLOGY.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/README_TEMPLATE_TYPOLOGY.md), especially Templates C-E for source-data, build, and web-runtime repos.
 3. Status badge row (build, license, language, last commit)
 4. Contents (top-level dir table)
 5. **Tech stack table**: runtime, framework, db, build tool, deploy target
@@ -655,3 +657,5 @@ Auto-update via Phase 9 README generation script — fetch all `cross-repo` issu
 | `scanned-book` | csl-kale, csl-westergaard, csl-whitroot | User Experience | bug, enhancement |
 | `build-meta` | cologne-hugo, sanskrit-fonts, csl-newsletter | DevX | infrastructure, build-tooling |
 | `archive` | santamlegacy, temp_corrections_*, MW72 | (none) | wontfix, documentation |
+
+_Dr. Mārcis Gasūns_

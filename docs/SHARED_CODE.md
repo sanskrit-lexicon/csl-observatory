@@ -1,3 +1,5 @@
+_Created: 15-06-2026 · Last updated: 05-09-2026_
+
 # SHARED_CODE.md — canonical sources across the Sanskrit-Lexicon / CDSL repos
 
 > **Reading the paths in this file.** All paths below (e.g. `csl-pywork/v02/...`,
@@ -228,3 +230,5 @@ Hash a single basename to tell vendored-identical copies from real forks:
 ```powershell
 Get-ChildItem $root -Recurse -File -Filter transcoder.py | Get-FileHash -Algorithm MD5 | Group-Object Hash
 ```
+
+_Dr. Mārcis Gasūns_

@@ -1,3 +1,5 @@
+_Created: 07-05-2026 · Last updated: 05-09-2026_
+
 # Code of Conduct
 
 This project adheres to the [Contributor Covenant 2.1](https://www.contributor-covenant.org/version/2/1/code_of_conduct/). By participating you agree to uphold a respectful and inclusive environment for all contributors, regardless of nationality, language background, expertise level, or affiliation.
@@ -21,3 +23,5 @@ Concerns may be raised privately by opening an issue tagged `code-of-conduct` in
 ## Attribution
 
 This Code of Conduct is adapted from the Contributor Covenant 2.1, available at https://www.contributor-covenant.org/version/2/1/code_of_conduct.html.
+
+_Dr. Mārcis Gasūns_

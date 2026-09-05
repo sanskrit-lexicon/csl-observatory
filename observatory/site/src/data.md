@@ -1,3 +1,5 @@
+_Created: 15-05-2026 · Last updated: 05-09-2026_
+
 ---
 title: Data Downloads
 toc: true
@@ -149,3 +151,5 @@ preprint (see the [Reach page](/reach) and [SanskritLexicography CONTRADICTIONS 
   overflow-x: auto;
 }
 </style>
+
+_Dr. Mārcis Gasūns_

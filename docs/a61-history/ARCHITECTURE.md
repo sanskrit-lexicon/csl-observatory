@@ -1,3 +1,5 @@
+_Created: 18-07-2026 · Last updated: 05-09-2026_
+
 # Evidence architecture for A61 and A13
 
 ## Ownership
@@ -70,3 +72,5 @@ the meaning of v1.1. The preceding v1.0 directory remains immutable.
   10–15 December; no word limit is published.
 - **Build:** the generator validates evidence references and the protected A13
   hash. Site build receives three best-effort attempts for external CDN failure.
+
+_Dr. Mārcis Gasūns_

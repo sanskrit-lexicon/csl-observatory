@@ -1,3 +1,5 @@
+_Created: 07-05-2026 · Last updated: 05-09-2026_
+
 # Status
 
 > **Current status (2026-06).** The observatory is live and reproducible.
@@ -5,14 +7,14 @@
 > [dashboard](https://sanskrit-lexicon.github.io/csl-observatory/), and the
 > standalone **OBS-T error-typology** track (a 52,498-event correction corpus,
 > two-axis typology, datasheet, and baselines) has its single canonical paper in
-> [`paper-obs-t-error-typology.md`](paper-obs-t-error-typology.md)
+> [`paper-obs-t-error-typology.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/paper-obs-t-error-typology.md)
 > (reconciled 28-07-2026, H1759 — the earlier one-axis draft is retired).
 
 ## Where to start
 
-1. **[`README.md`](README.md)** — what this is, the headline numbers, and the repo map.
-2. **[`reports/README.md`](reports/README.md)** — the reproducible findings, each script → report → site page.
-3. **[`reports/synthesis.md`](reports/synthesis.md)** — *State of the observatory*, the findings tied into one picture.
+1. **[`README.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/README.md)** — what this is, the headline numbers, and the repo map.
+2. **[`reports/README.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/README.md)** — the reproducible findings, each script → report → site page.
+3. **[`reports/synthesis.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/synthesis.md)** — *State of the observatory*, the findings tied into one picture.
 4. **[Dashboard](https://sanskrit-lexicon.github.io/csl-observatory/)** — the live, downloadable charts.
 
 ## Headline numbers (snapshot 2026-06)
@@ -27,17 +29,17 @@
 | OBS-T correction corpus | 50,953 events across 43 dictionaries |
 
 These are computed from the committed snapshot; the dashboard and
-[`data/manifest.json`](data/manifest.json) are the source of truth.
+[`data/manifest.json`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/data/manifest.json) are the source of truth.
 
 ## Open work
 
 - **Findings & hygiene follow-ups** are filed as issues #15–#25 on
   [Tooling Roadmap project #9](https://github.com/orgs/sanskrit-lexicon/projects/9)
   (most need a maintainer decision or credential — see
-  [`docs/DECISIONS_NEEDED.md`](docs/DECISIONS_NEEDED.md)).
+  [`docs/DECISIONS_NEEDED.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/DECISIONS_NEEDED.md)).
 - **OBS-T paper** awaits human gold-sample annotation + a second annotator
   (for an inter-annotator κ) before submission; tooling is ready in
-  [`scripts/obs_t_gold.py`](scripts/obs_t_gold.py) and
+  [`scripts/obs_t_gold.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/obs_t_gold.py) and
   [`validation/`](validation/).
 - **Citability**: Zenodo DOI ✅ minted ([10.5281/zenodo.21346705](https://doi.org/10.5281/zenodo.21346705), in CITATION.cff + README). Remaining: register contributor ORCIDs.
 
@@ -46,3 +48,5 @@ These are computed from the committed snapshot; the dashboard and
 *Provenance: this repo grew out of autonomous build sessions in 2026-05/06.
 The original 2026-05-07 session log (with its then-current, now-superseded
 numbers) is preserved in git history rather than reproduced here.*
+
+_Dr. Mārcis Gasūns_

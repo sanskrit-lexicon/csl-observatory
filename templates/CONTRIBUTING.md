@@ -1,3 +1,5 @@
+_Created: 07-05-2026 · Last updated: 05-09-2026_
+
 # Contributing
 
 Thank you for considering a contribution to a Cologne Digital Sanskrit Dictionaries (CDSL) repository. This file is templated across all CDSL dictionary repositories; project-specific guidance is in `CLAUDE.md`.
@@ -47,8 +49,10 @@ If you have a GitHub account, your commits will be attributed automatically. We 
 
 ## Code of Conduct
 
-By contributing you agree to abide by the [Contributor Covenant 2.1](CODE_OF_CONDUCT.md).
+By contributing you agree to abide by the [Contributor Covenant 2.1](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/templates/CODE_OF_CONDUCT.md).
 
 ## Licence
 
 By contributing you agree your contributions will be licensed under the same terms as the repository: **CC BY-SA 4.0** for dictionary data, **GPL-3.0** for code.
+
+_Dr. Mārcis Gasūns_

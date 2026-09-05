@@ -1,3 +1,5 @@
+_Created: 17-06-2026 · Last updated: 05-09-2026_
+
 # Reviewer Reproducibility
 
 Date: 2026-06-13
@@ -167,3 +169,5 @@ Then inspect:
 
 Known human/org blockers, such as license rollout or repository archiving, stay
 in `docs/DECISIONS_NEEDED.md` until MG or the organization resolves them.
+
+_Dr. Mārcis Gasūns_

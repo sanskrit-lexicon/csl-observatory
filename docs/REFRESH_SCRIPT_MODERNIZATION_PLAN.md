@@ -1,3 +1,5 @@
+_Created: 17-06-2026 · Last updated: 05-09-2026_
+
 # Refresh Script Modernization Plan
 
 Date: 2026-06-12
@@ -135,3 +137,5 @@ Required options:
 
 No external repository mutation is authorized until the maintainer explicitly
 starts the `csl-pywork#53` implementation step.
+
+_Dr. Mārcis Gasūns_

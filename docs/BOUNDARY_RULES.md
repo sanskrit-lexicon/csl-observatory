@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # Boundary Rules
 
 Date: 2026-06-03
@@ -104,3 +106,5 @@ Before adding a new file, page, generated dataset, or script, ask:
 > or organization-level process?
 
 If the answer is no, open or use a different repository.
+
+_Dr. Mārcis Gasūns_

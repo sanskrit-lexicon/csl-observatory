@@ -1,3 +1,5 @@
+_Created: 17-06-2026 · Last updated: 05-09-2026_
+
 # Workflow Health
 
 Read-only workflow/release reliability baseline for the `sanskrit-lexicon` organization.
@@ -42,3 +44,5 @@ Read-only workflow/release reliability baseline for the `sanskrit-lexicon` organ
 - Rows with fetch warnings are retained with explicit warning text rather than failing the whole run.
 
 Generated data: `observatory/site/src/data/workflow_health.csv`.
+
+_Dr. Mārcis Gasūns_

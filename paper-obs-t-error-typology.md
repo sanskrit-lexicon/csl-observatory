@@ -1,3 +1,5 @@
+_Created: 13-06-2026 · Last updated: 05-09-2026_
+
 # Surface, Not Substance: A Two-Axis Error Typology of Twelve Years of Correction to the Cologne Digital Sanskrit Lexicon
 
 *Draft manuscript for a computational-linguistics / language-resource venue (target:
@@ -638,3 +640,5 @@ with every count restated to the released 52,498-event snapshot. Target venue:
 LREC-COLING (IJL alternate). Pending human steps: byline confirmation, genuine Zenodo
 DOI mint (§6), expert review of the encoding ↔ orthography boundary rows (§8),
 read-and-sign.*
+
+_Dr. Mārcis Gasūns_

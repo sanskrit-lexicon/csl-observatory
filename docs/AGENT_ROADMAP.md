@@ -1,6 +1,6 @@
 # Agent Roadmap — Sanskrit Lexicon Issue Automation
 
-_Created: 26-06-2026 · Last updated: 28-07-2026_
+_Created: 26-06-2026 · Last updated: 05-09-2026_
 
 _**Canonical copy — the only editable one.** Last compiled: **2026-07-28** (live re-check of Tier A/B + PR babysit; prior body: 2026-06-30 P7). Re-compile when new issues are opened or a skill ships. The [Uprava copy](https://github.com/gasyoun/Uprava/blob/main/AGENT_ROADMAP.md) is a pointer stub, not a mirror — canonicity ruled 19-07-2026 per the [H699 reconciliation](https://github.com/gasyoun/Uprava/blob/main/docs/AGENT_ROADMAP_RECONCILIATION_07.2026.md)._
 
@@ -145,8 +145,8 @@ These have diff lists or patterns in the issue body but the issue may already be
 
 | Skill | Issues unlocked | What it does |
 |---|---|---|
-| `cologne-question-research` ✅ **DONE 2026-06-27** | ~130 `question` issues across org | Sweep complete: ~73 comments posted (concrete data only); ~57 skipped. Findings digest: [`docs/question-research-findings.md`](question-research-findings.md). Policy: no "inconclusive" posts; collapsible `<details>` on all future comments. |
-| `cologne-bug-triage` ✅ **DONE 2026-06-27** | 84 `bug` issues across 22 repos | ~24 comments posted; ~10 new Tier A bugs found; ~8 confirmed already-fixed; ~18 skipped (active threads/network). Findings digest: [`docs/bug-triage-findings.md`](bug-triage-findings.md). 9 issues need re-run after network failures. |
+| `cologne-question-research` ✅ **DONE 2026-06-27** | ~130 `question` issues across org | Sweep complete: ~73 comments posted (concrete data only); ~57 skipped. Findings digest: [`docs/question-research-findings.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/question-research-findings.md). Policy: no "inconclusive" posts; collapsible `<details>` on all future comments. |
+| `cologne-bug-triage` ✅ **DONE 2026-06-27** | 84 `bug` issues across 22 repos | ~24 comments posted; ~10 new Tier A bugs found; ~8 confirmed already-fixed; ~18 skipped (active threads/network). Findings digest: [`docs/bug-triage-findings.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/bug-triage-findings.md). 9 issues need re-run after network failures. |
 
 ---
 

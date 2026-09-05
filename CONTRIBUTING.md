@@ -1,3 +1,5 @@
+_Created: 07-05-2026 · Last updated: 05-09-2026_
+
 # Contributing to csl-observatory
 
 
@@ -6,7 +8,7 @@
 The csl-observatory is the **GitHub/org measurement layer** for the Cologne Digital Sanskrit Lexicon (CDSL) project. We welcome contributions from Sanskritists, software engineers, lexicographers, digital humanists, and historians of linguistics when the work starts from repositories, issues, pull requests, commits, contributors, workflows, or organization-level maintenance evidence.
 
 New contributors should start with
-[`docs/CONTRIBUTOR_ENTRY_PATH.md`](docs/CONTRIBUTOR_ENTRY_PATH.md), which lists
+[`docs/CONTRIBUTOR_ENTRY_PATH.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/CONTRIBUTOR_ENTRY_PATH.md), which lists
 safe setup steps, first-task areas, taxonomy labels, review expectations, and
 where not to work without maintainer approval.
 
@@ -63,7 +65,7 @@ The line between "contribution" and "co-authorship" is a judgment call by the pr
 
 ### For AI-assisted or automated work
 
-Follow [`docs/AI_CONTRIBUTION_POLICY.md`](docs/AI_CONTRIBUTION_POLICY.md).
+Follow [`docs/AI_CONTRIBUTION_POLICY.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/AI_CONTRIBUTION_POLICY.md).
 In short: keep AI-assisted work auditable but low-noise. Dictionary repos should
 use ordinary project commit conventions without AI co-author trailers; tooling
 and infrastructure repos may use the existing AI co-author convention. Prefer
@@ -103,7 +105,7 @@ Every published analysis is reproducible from public artifacts:
 
 ## Code of Conduct
 
-Adheres to the [Contributor Covenant 2.1](CODE_OF_CONDUCT.md). Be respectful, inclusive, and professional. The CDSL community spans many countries, languages, and academic traditions; treat that diversity as a strength.
+Adheres to the [Contributor Covenant 2.1](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/CODE_OF_CONDUCT.md). Be respectful, inclusive, and professional. The CDSL community spans many countries, languages, and academic traditions; treat that diversity as a strength.
 
 ## Recognising existing contributors
 
@@ -111,17 +113,19 @@ Major credit to the foundational CDSL maintainers and contributors whose work th
 - **Jim Funderburk** (funderburkjim) — the project's longest-serving engineer
 - **Dr Dhaval Patel** (drdhaval2785) — author of the headword normalisation framework + many tools
 - **Mārcis Gasūns** (gasyoun) — project lead
-- All named contributors in [`data/people.yaml`](data/people.yaml)
+- All named contributors in [`data/people.yaml`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/data/people.yaml)
 
 ---
 
 For full project plans, see:
-- [`docs/OBSERVATORY_DESIGN.md`](docs/OBSERVATORY_DESIGN.md) — overall architecture
-- [`docs/OBSERVATORY_ROADMAP.md`](docs/OBSERVATORY_ROADMAP.md) — GitHub/org measurement roadmap
-- [`docs/PAPER_1_OUTLINE.md`](docs/PAPER_1_OUTLINE.md) — boundary-safe observatory report outline
+- [`docs/OBSERVATORY_DESIGN.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/OBSERVATORY_DESIGN.md) — overall architecture
+- [`docs/OBSERVATORY_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/OBSERVATORY_ROADMAP.md) — GitHub/org measurement roadmap
+- [`docs/PAPER_1_OUTLINE.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/PAPER_1_OUTLINE.md) — boundary-safe observatory report outline
 
 Dictionary-structure plans now live in `csl-atlas`; standards/export work lives
 in `csl-standards`; DCS/corpus work lives in `VisualDCS` or a future
 grammar/corpus repository.
 
 Welcome aboard.
+
+_Dr. Mārcis Gasūns_

@@ -1,3 +1,5 @@
+_Created: 17-06-2026 · Last updated: 05-09-2026_
+
 ---
 title: Community continuity
 toc: true
@@ -186,3 +188,5 @@ display(Plot.plot({
 > **Conclusion:** Zero or near-zero ORCID coverage is the primary attribution blocker for the OBS-T paper and any future dataset publication. The fix is registration — each named contributor needs to create or link an ORCID account — which requires direct contact and cannot be automated. This is tracked in hygiene issue #20.
 
 [Back to overview](/)
+
+_Dr. Mārcis Gasūns_

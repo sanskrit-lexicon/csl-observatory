@@ -1,3 +1,5 @@
+_Created: 17-06-2026 · Last updated: 05-09-2026_
+
 # Contributor Entry Path
 
 Date: 2026-06-12
@@ -10,13 +12,13 @@ runbooks, and dashboard surfaces.
 
 ## Start Here
 
-1. Read [`BOUNDARY_RULES.md`](BOUNDARY_RULES.md) so observatory work stays out
+1. Read [`BOUNDARY_RULES.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/BOUNDARY_RULES.md) so observatory work stays out
    of dictionary-content research and standards/export work.
-2. Read [`AI_CONTRIBUTION_POLICY.md`](AI_CONTRIBUTION_POLICY.md) if you use AI
+2. Read [`AI_CONTRIBUTION_POLICY.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/AI_CONTRIBUTION_POLICY.md) if you use AI
    assistance or automation.
-3. Check [`DECISIONS_NEEDED.md`](DECISIONS_NEEDED.md) before touching anything
+3. Check [`DECISIONS_NEEDED.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/DECISIONS_NEEDED.md) before touching anything
    related to licenses, archives, credentials, or external services.
-4. Use [`MAINTAINER_CONTINUITY_PACKET.md`](MAINTAINER_CONTINUITY_PACKET.md) for
+4. Use [`MAINTAINER_CONTINUITY_PACKET.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/MAINTAINER_CONTINUITY_PACKET.md) for
    local setup, report regeneration, and dashboard build commands.
 
 ## Local Setup
@@ -94,9 +96,9 @@ Severity labels:
 - `major`: multiple modules, visible behavior, or design decision.
 - `critical`: data loss, security, blocked users, or production outage.
 
-Use [`runbook/cologne-tooling-runbook.md`](../runbook/cologne-tooling-runbook.md)
+Use [`runbook/cologne-tooling-runbook.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/runbook/cologne-tooling-runbook.md)
 for full tooling taxonomy rules and
-[`runbook/cologne-issue-runbook.md`](../runbook/cologne-issue-runbook.md) for
+[`runbook/cologne-issue-runbook.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/runbook/cologne-issue-runbook.md) for
 dictionary-repo issue taxonomy rules.
 
 ## Where Not To Start
@@ -133,8 +135,10 @@ observatory-scoped decision:
 
 ## Useful Pointers
 
-- Active maintainer roadmap: [`ROADMAP.md`](ROADMAP.md)
-- Implementation roadmap: [`OBSERVATORY_ROADMAP.md`](OBSERVATORY_ROADMAP.md)
-- Monthly review checklist: [`MAINTAINER_REVIEW_CHECKLIST.md`](MAINTAINER_REVIEW_CHECKLIST.md)
-- Repository health decisions: [`REPOSITORY_HEALTH_DECISION_PACKET.md`](REPOSITORY_HEALTH_DECISION_PACKET.md)
-- Bus-factor action plan: [`BUS_FACTOR_ACTION_PLAN.md`](BUS_FACTOR_ACTION_PLAN.md)
+- Active maintainer roadmap: [`ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/ROADMAP.md)
+- Implementation roadmap: [`OBSERVATORY_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/OBSERVATORY_ROADMAP.md)
+- Monthly review checklist: [`MAINTAINER_REVIEW_CHECKLIST.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/MAINTAINER_REVIEW_CHECKLIST.md)
+- Repository health decisions: [`REPOSITORY_HEALTH_DECISION_PACKET.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/REPOSITORY_HEALTH_DECISION_PACKET.md)
+- Bus-factor action plan: [`BUS_FACTOR_ACTION_PLAN.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/BUS_FACTOR_ACTION_PLAN.md)
+
+_Dr. Mārcis Gasūns_

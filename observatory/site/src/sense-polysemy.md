@@ -1,3 +1,5 @@
+_Created: 23-07-2026 · Last updated: 05-09-2026_
+
 ---
 title: Sense polysemy by dictionary
 toc: true
@@ -224,3 +226,5 @@ Download source TSV:
 · report:
 [`reports/sense_polysemy_per_dict.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/sense_polysemy_per_dict.md)
 · sibling census: [L1 Lexicon](./census-l1-lexicon).
+
+_Dr. Mārcis Gasūns_

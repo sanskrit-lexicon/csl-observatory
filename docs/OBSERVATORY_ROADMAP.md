@@ -1,6 +1,6 @@
 # csl-observatory Implementation Roadmap
 
-_Created: 16-05-2026 · Last updated: 29-07-2026_
+_Created: 16-05-2026 · Last updated: 05-09-2026_
 
 Horizon: 2026-06 to 2027-06
 Primary audience: maintainer. Secondary audiences, added later in the year:
@@ -9,7 +9,7 @@ Phase-2 audience decision (MG, 2026-07-03): scholars first, some of whom may
 become future contributors — no funder-facing work. See Workstream G.
 
 This document is the implementation plan for the observatory itself. The
-maintainer-facing priority order lives in [`ROADMAP.md`](ROADMAP.md).
+maintainer-facing priority order lives in [`ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/ROADMAP.md).
 
 ## Boundary Rule
 
@@ -105,7 +105,7 @@ sustainability work.
 | F3 | Paper reviewer artifact. | MG + Codex | scheduled | 2027-06-15 | Frozen corpus, reports, datasheet, license, and reproduction instructions are ready. |
 
 The completed OBS-T post-review implementation tracker is archived at
-[`archive/OBS_T_FIX_PLAN_2026-06-12.md`](archive/OBS_T_FIX_PLAN_2026-06-12.md).
+[`archive/OBS_T_FIX_PLAN_2026-06-12.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/archive/OBS_T_FIX_PLAN_2026-06-12.md).
 
 ## Workstream G: Phase-2 Research Tracks (2026-07-03 Rethink)
 

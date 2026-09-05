@@ -1,3 +1,5 @@
+_Created: 03-07-2026 · Last updated: 05-09-2026_
+
 ---
 title: External Reach
 toc: true
@@ -137,3 +139,5 @@ points at it, `--fetch` re-ran, and this tier now reports OBS-T's own downloads.
 ---
 
 _Last API fetch: ${fetchedAt}. API tiers are cached (committed) under `reports/external_reach_cache/` so this page regenerates offline. Object of analysis: repository metadata, GitHub traffic, third-party code references, and publication citations — in scope per [`docs/BOUNDARY_RULES.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/BOUNDARY_RULES.md). Roadmap: Workstream G6._
+
+_Dr. Mārcis Gasūns_

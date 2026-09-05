@@ -1,3 +1,5 @@
+_Created: 05-06-2026 · Last updated: 05-09-2026_
+
 # State of the observatory — synthesis
 
 **csl-observatory · 2026-06-05 · Cologne Digital Sanskrit Dictionaries**
@@ -12,11 +14,11 @@
 
 _Each headline number below is computed offline and reproducibly from the data
 in `observatory/site/src/data/`; this document only ties them together. Sources:
-[`bus_factor.md`](bus_factor.md), [`repo_health.md`](repo_health.md),
-[`taxonomy_adoption.md`](taxonomy_adoption.md),
-[`velocity_timeline.md`](velocity_timeline.md),
-[`contributor_identity.md`](contributor_identity.md). Index of all reports:
-[`README.md`](README.md)._
+[`bus_factor.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/bus_factor.md), [`repo_health.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/repo_health.md),
+[`taxonomy_adoption.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/taxonomy_adoption.md),
+[`velocity_timeline.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/velocity_timeline.md),
+[`contributor_identity.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/contributor_identity.md). Index of all reports:
+[`README.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/README.md)._
 
 ## The ecosystem in one paragraph
 
@@ -69,8 +71,8 @@ people.
   emergence of pull-request workflow in 2026 is a healthy early signal.
 - **Hygiene is the quick win.** Licensing, default-branch standardisation, and
   ORCID registration are mechanical and high-leverage. Drafted (not filed) as
-  reviewable issues in [`docs/hygiene_issues_draft.md`](../docs/hygiene_issues_draft.md);
-  the ORCID worksheet is [`contributor_identity.md`](contributor_identity.md).
+  reviewable issues in [`docs/hygiene_issues_draft.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/hygiene_issues_draft.md);
+  the ORCID worksheet is [`contributor_identity.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/contributor_identity.md).
 - **The taxonomy is worth finishing, not rebuilding.** Close the small
   conformance tail (over-typed issues, stray labels) rather than re-litigating
   the scheme.
@@ -91,7 +93,9 @@ numbers as a cross-check.
 > Cologne Digital Sanskrit Dictionaries. Snapshot 2026-06-05. DOI: pending
 > Zenodo mint.
 
-Cite with the snapshot date for reproducibility; see [`../CITATION.cff`](../CITATION.cff).
+Cite with the snapshot date for reproducibility; see [`../CITATION.cff`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/CITATION.cff).
 
 *Object of analysis: the GitHub organization as a whole — in scope per
 `docs/BOUNDARY_RULES.md`.*
+
+_Dr. Mārcis Gasūns_

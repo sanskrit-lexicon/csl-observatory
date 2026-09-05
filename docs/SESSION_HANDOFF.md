@@ -1,3 +1,5 @@
+_Created: 16-05-2026 · Last updated: 05-09-2026_
+
 # Session Handoff
 
 Date: 2026-06-03
@@ -51,3 +53,5 @@ Boundary cleanup status: merged on 2026-06-04 in
 - Observatory pages may link to those external paths, but they should start
   from repos, issues, contributors, workflows, governance, metrics, or
   organization-level publication planning.
+
+_Dr. Mārcis Gasūns_

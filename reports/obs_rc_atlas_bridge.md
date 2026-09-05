@@ -1,3 +1,5 @@
+_Created: 10-06-2026 · Last updated: 05-09-2026_
+
 # OBS-R / OBS-C — bridge memo to `csl-atlas`
 
 **Status:** bridge / routing memo, not a final paper. **Boundary:** OBS-R
@@ -100,4 +102,6 @@ git -C ../csl-orig … ; awk '/^<L>/{ent++} {while(match($0,/<ls>[^<]*<\/ls>/)) 
 
 _Full awk bodies in the 2026-06-09/10 probe log / plan file
 `tender-wondering-reddy.md`. OBS-Q (org-process, in-scope here) is written up
-separately in [`obs_q_correction_sustainability.md`](obs_q_correction_sustainability.md)._
+separately in [`obs_q_correction_sustainability.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_q_correction_sustainability.md)._
+
+_Dr. Mārcis Gasūns_

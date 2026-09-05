@@ -1,3 +1,5 @@
+_Created: 15-05-2026 · Last updated: 05-09-2026_
+
 # Legacy Broad Metrics Design
 
 Status: legacy reference only. This file predates the 2026-06-04 boundary
@@ -275,3 +277,5 @@ Total active build effort: ~7 weeks, spread across 18 months.
 ---
 
 *Next step on approval: implement Phase 1 (data fetcher + 12-year backfill).*
+
+_Dr. Mārcis Gasūns_

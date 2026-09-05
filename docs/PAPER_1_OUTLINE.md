@@ -1,3 +1,5 @@
+_Created: 16-05-2026 · Last updated: 05-09-2026_
+
 # Observatory Report Outline
 
 Date: 2026-06-04
@@ -67,3 +69,5 @@ Measuring CDSL as a GitHub maintenance ecosystem
 - Matomo/top-entry analytics.
 - Wikipedia/Wiktionary backlink studies.
 - Exact claims about labor value unless a separate methodology is approved.
+
+_Dr. Mārcis Gasūns_

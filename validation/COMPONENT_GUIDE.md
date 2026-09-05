@@ -1,3 +1,5 @@
+_Created: 11-06-2026 · Last updated: 05-09-2026_
+
 # Location annotation guide (axis A)
 
 Label each correction by **where in the dictionary entry** it repairs — the
@@ -25,3 +27,5 @@ Tips:
   which tag's content changed.
 - For **form-layer** rows, judge from `old_iast`→`new_iast` and the `headword`.
 - Do not look at any auto-generated label; this sheet hides it on purpose.
+
+_Dr. Mārcis Gasūns_

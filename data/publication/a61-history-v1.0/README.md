@@ -1,3 +1,5 @@
+_Created: 18-07-2026 · Last updated: 05-09-2026_
+
 # A61 history evidence snapshot v1.0
 
 This directory is the immutable evidence contract for article A61, *The
@@ -35,3 +37,5 @@ python scripts/build_article_snapshot.py --check
 The event layer is intentionally narrower than a general project chronology.
 It records only milestones required by A61/A13 and expands when the historical
 email archive can be reviewed.
+
+_Dr. Mārcis Gasūns_

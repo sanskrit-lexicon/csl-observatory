@@ -1,3 +1,5 @@
+_Created: 07-05-2026 · Last updated: 05-09-2026_
+
 # Report on the Cologne Digital Sanskrit Lexicon Project
 
 > **Mārcis Gasūns**
@@ -1505,3 +1507,5 @@ MCI \* 1993 Mahabharata Cultural Index
     Dubyanskiy Readings, HSE University, Moscow, 2021; "The Development of
     Cologne Digital Sanskrit Lexicons: How Voluntary Crowdsourcing Is
     Changing the Sanskrit Internet", University of Vienna, 2024.
+
+_Dr. Mārcis Gasūns_

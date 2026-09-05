@@ -1,6 +1,6 @@
 # CDSL Observatory: One-Year Maintainer Roadmap
 
-_Created: 30-05-2026 · Last updated: 27-08-2026_
+_Created: 30-05-2026 · Last updated: 05-09-2026_
 
 Last updated: 2026-08-27
 Horizon: 2026-06 to 2027-06
@@ -33,7 +33,7 @@ The priority order for the next year is:
 5. OBS-T paper readiness, last, after the infrastructure is safer.
 
 For the implementation detail behind the observatory itself, see
-[`OBSERVATORY_ROADMAP.md`](OBSERVATORY_ROADMAP.md).
+[`OBSERVATORY_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/OBSERVATORY_ROADMAP.md).
 
 ## Scope Rules
 
@@ -123,7 +123,7 @@ the Tooling Roadmap project.
 | OT4 | Freeze a paper-reviewer artifact. | MG + Codex | scheduled | 2027-06-15 | DOI/tag or frozen archive exists with exact data, scripts, reports, and reviewer instructions. |
 
 The completed post-review OBS-T fix tracker is archived at
-[`archive/OBS_T_FIX_PLAN_2026-06-12.md`](archive/OBS_T_FIX_PLAN_2026-06-12.md).
+[`archive/OBS_T_FIX_PLAN_2026-06-12.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/archive/OBS_T_FIX_PLAN_2026-06-12.md).
 
 ## Parking Lot
 

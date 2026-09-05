@@ -1,3 +1,5 @@
+_Created: 07-05-2026 · Last updated: 05-09-2026_
+
 # Article folder
 
 This folder contains articles on the Cologne Digital Sanskrit Dictionaries
@@ -11,15 +13,15 @@ that duplicates A61.
 
 | File | Authors | Voice | Topic |
 |---|---|---|---|
-| [`00-report-narrative.md`](00-report-narrative.md) | Mārcis Gasūns | Analytical history with situated first-person evidence | What repository records reveal and conceal; founder-to-community transition |
-| [`01-empirical-companion.md`](01-empirical-companion.md) | Funderburk, Patel, Rao, Gasūns | Formal third-person | Quantitative survey, runbook, standards alignment, infrastructure |
-| [`refs.bib`](refs.bib) | — | — | BibTeX bibliography for the companion paper |
-| [`A15_github_ecosystem.md`](A15_github_ecosystem.md) | Gasūns | Formal third-person | A15 full draft: CDSL as a GitHub maintenance ecosystem (seven analytical findings incl. the data-layer bus factor, the correction-loop anatomy + 52,498-event ledger, the `csl-orig` campaign case study, claim→artifact inventory; boundary note vs the pair above) |
-| [`A48_error_recapture.md`](A48_error_recapture.md) | Gasūns | Formal third-person | A48 skeleton: capture–recapture estimate of residual errors |
+| [`00-report-narrative.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/article/00-report-narrative.md) | Mārcis Gasūns | Analytical history with situated first-person evidence | What repository records reveal and conceal; founder-to-community transition |
+| [`01-empirical-companion.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/article/01-empirical-companion.md) | Funderburk, Patel, Rao, Gasūns | Formal third-person | Quantitative survey, runbook, standards alignment, infrastructure |
+| [`refs.bib`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/article/refs.bib) | — | — | BibTeX bibliography for the companion paper |
+| [`A15_github_ecosystem.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/article/A15_github_ecosystem.md) | Gasūns | Formal third-person | A15 full draft: CDSL as a GitHub maintenance ecosystem (seven analytical findings incl. the data-layer bus factor, the correction-loop anatomy + 52,498-event ledger, the `csl-orig` campaign case study, claim→artifact inventory; boundary note vs the pair above) |
+| [`A48_error_recapture.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/article/A48_error_recapture.md) | Gasūns | Formal third-person | A48 skeleton: capture–recapture estimate of residual errors |
 | [`A69_pwg_scan_index_campaign.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/article/A69_pwg_scan_index_campaign.md) | Gasūns | Formal third-person | A69 full draft: the 2025–2026 PWG scan-index campaign — coverage by citation mass, resolver wiring audit, process findings (review caught dictionary errors, not volunteer errors; edition identity as the expensive failure) |
 
 The report has a legacy root mirror at
-[`gasuns-cologne-30-report.md`](../gasuns-cologne-30-report.md). It is not an
+[`gasuns-cologne-30-report.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/gasuns-cologne-30-report.md). It is not an
 authoritative submission source; the version in this folder is canonical and
 the only version that shares the A61 evidence contract.
 
@@ -63,7 +65,7 @@ fall back to Latin Modern.
 Indo-Iranian Journal (Brill). A13 is designed to stand alone; A61 targets the
 World Sanskrit Conference and may be cited as the wider synthesis. The
 bibliography uses
-[`indo-iranian-journal.csl`](indo-iranian-journal.csl), an author-date
+[`indo-iranian-journal.csl`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/article/indo-iranian-journal.csl), an author-date
 style based on the Chicago Manual of Style 18th edition (adjust to Brill
 house style as needed).
 
@@ -72,3 +74,5 @@ house style as needed).
 Both articles are licensed CC BY 4.0. The data and figures referenced in
 the companion paper are licensed CC BY 4.0 (see `../DATA_LICENSE.md`) and
 live in `../data/`.
+
+_Dr. Mārcis Gasūns_

@@ -1,3 +1,5 @@
+_Created: 03-07-2026 · Last updated: 05-09-2026_
+
 ---
 title: Issue lifecycle
 toc: true
@@ -142,3 +144,5 @@ Plot.plot({
 ## Data
 
 All four datasets are downloadable from the [Data](data) page: `issue_lifecycle_survival.csv`, `issue_lifecycle_backlog.csv`, `issue_lifecycle_close.csv`, `issue_lifecycle_repo.csv`. Regenerate with `python scripts/issue_lifecycle.py` (offline, reproducible).
+
+_Dr. Mārcis Gasūns_

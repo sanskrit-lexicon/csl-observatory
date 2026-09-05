@@ -1,3 +1,5 @@
+_Created: 11-06-2026 · Last updated: 05-09-2026_
+
 # Datasheet - CDSL Correction-Event Corpus (OBS-T)
 
 Following Gebru et al., *Datasheets for Datasets* (2021). Describes the released
@@ -135,3 +137,5 @@ python scripts/obs_t_regression.py
   `python scripts/obs_t_gold.py --make`, `python scripts/obs_t_gold.py --score`,
   `python scripts/obs_t_errorsample.py --make`, and
   `python scripts/obs_t_errorsample.py --score`.
+
+_Dr. Mārcis Gasūns_

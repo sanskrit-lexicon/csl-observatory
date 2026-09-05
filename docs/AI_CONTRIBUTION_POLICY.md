@@ -1,3 +1,5 @@
+_Created: 30-05-2026 · Last updated: 05-09-2026_
+
 # AI / Bot Contribution Policy
 
 Norms for AI-assisted and automated contributions across the [`sanskrit-lexicon`](https://github.com/sanskrit-lexicon) org, after maintainer feedback (e.g. MWS#194) on the value and volume of bot-attributed activity. The goal: keep AI assistance useful and auditable without adding noise that burdens reviewers.
@@ -26,4 +28,6 @@ Maintainers have flagged that high-volume bot/AI-attributed commits and comments
 Applies to all automation and AI agents operating on the org — Claude Code / Agent SDK runs, CI bots, and the daily-corrections updater.
 
 ---
-*Roadmap item Q6. See [`ROADMAP.md`](ROADMAP.md).*
+*Roadmap item Q6. See [`ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/ROADMAP.md).*
+
+_Dr. Mārcis Gasūns_

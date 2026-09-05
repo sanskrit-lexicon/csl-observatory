@@ -1,3 +1,5 @@
+_Created: 15-05-2026 · Last updated: 05-09-2026_
+
 ---
 title: Activity timeline
 toc: true
@@ -179,3 +181,5 @@ Plot.plot({
 > **Conclusion:** The org has never had more than ~15 distinct commit-authors in a year, and the trend is flat rather than growing. Volume-per-person has increased, but the team itself has not. This is the single most important context for reading any other activity metric in the observatory: high throughput does not indicate a large or growing community — it indicates a small group of extremely productive, highly committed individuals.
 
 [← back to overview](/)
+
+_Dr. Mārcis Gasūns_

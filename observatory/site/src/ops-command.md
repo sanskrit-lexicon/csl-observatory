@@ -1,3 +1,5 @@
+_Created: 17-06-2026 · Last updated: 05-09-2026_
+
 ---
 title: Ops command center
 toc: true
@@ -198,3 +200,5 @@ display(Plot.plot({
 > **Conclusion:** If "master"/"flagged" is the darkest cell, branch renaming and hygiene improvement are correlated — fixing one creates momentum for the other. If "master"/"clean" is also densely populated, branch naming is an isolated issue that a simple rename resolves without triggering any other hygiene work.
 
 [Back to overview](/)
+
+_Dr. Mārcis Gasūns_

@@ -1,3 +1,5 @@
+_Created: 18-07-2026 · Last updated: 05-09-2026_
+
 # A61/A13 history-evidence plan
 
 Status: active, 18 July 2026. Primary paper: A61. Complementary paper: A13.
@@ -74,7 +76,9 @@ immutable.
 
 ## Linked execution documents
 
-- [Roadmap](ROADMAP.md)
-- [Architecture](ARCHITECTURE.md)
-- [Implementation](IMPLEMENTATION.md)
-- [Verification](VERIFICATION.md)
+- [Roadmap](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/a61-history/ROADMAP.md)
+- [Architecture](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/a61-history/ARCHITECTURE.md)
+- [Implementation](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/a61-history/IMPLEMENTATION.md)
+- [Verification](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/a61-history/VERIFICATION.md)
+
+_Dr. Mārcis Gasūns_

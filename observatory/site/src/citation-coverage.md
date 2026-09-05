@@ -1,3 +1,5 @@
+_Created: 02-07-2026 · Last updated: 05-09-2026_
+
 ---
 title: PWG citation coverage
 toc: false
@@ -59,3 +61,5 @@ literary-source work, and are regenerated from the RussianTranslation pipeline:
   · [covered vs uncovered + frontier](https://github.com/sanskrit-lexicon/PWG/blob/main/pwg_ls/pwg_ru_coverage/COVERAGE_COMPARISON.md)
 - data: [`pwg_citation_coverage.json`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/observatory/site/src/data/pwg_citation_coverage.json)
 - generator: [`build_citation_index.py`](https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/src/build_citation_index.py)
+
+_Dr. Mārcis Gasūns_

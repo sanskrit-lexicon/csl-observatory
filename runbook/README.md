@@ -1,3 +1,5 @@
+_Created: 07-05-2026 · Last updated: 05-09-2026_
+
 # Runbook
 
 This folder contains the canonical, version-controlled source of the
@@ -37,13 +39,13 @@ The four `.md` files in this folder are also installed at
 
 | File | Role |
 |---|---|
-| [`cologne-issue-runbook.md`](cologne-issue-runbook.md) | Sixteen-phase **dictionary**-repo runbook (single repo) |
-| [`cologne-runbook-all.md`](cologne-runbook-all.md) | Wrapper for batch-processing dictionary repos |
-| [`cologne-tooling-runbook.md`](cologne-tooling-runbook.md) | Seventeen-phase **tooling**-repo runbook (single repo) |
-| [`cologne-tooling-all.md`](cologne-tooling-all.md) | Wrapper for batch-processing tooling repos |
-| [`../docs/RUNBOOK_NOTES.md`](../docs/RUNBOOK_NOTES.md) | Operating notes — gotchas, conventions, csl-orig mapping table |
-| [`../docs/README_TEMPLATE_TYPOLOGY.md`](../docs/README_TEMPLATE_TYPOLOGY.md) | Jim-style README archetypes and manual-block preservation contract |
-| [`../scripts/tooling_runbook.py`](../scripts/tooling_runbook.py) | CLI executor for the tooling runbook (8 subcommands) |
+| [`cologne-issue-runbook.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/runbook/cologne-issue-runbook.md) | Sixteen-phase **dictionary**-repo runbook (single repo) |
+| [`cologne-runbook-all.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/runbook/cologne-runbook-all.md) | Wrapper for batch-processing dictionary repos |
+| [`cologne-tooling-runbook.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/runbook/cologne-tooling-runbook.md) | Seventeen-phase **tooling**-repo runbook (single repo) |
+| [`cologne-tooling-all.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/runbook/cologne-tooling-all.md) | Wrapper for batch-processing tooling repos |
+| [`../docs/RUNBOOK_NOTES.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/RUNBOOK_NOTES.md) | Operating notes — gotchas, conventions, csl-orig mapping table |
+| [`../docs/README_TEMPLATE_TYPOLOGY.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/README_TEMPLATE_TYPOLOGY.md) | Jim-style README archetypes and manual-block preservation contract |
+| [`../scripts/tooling_runbook.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/tooling_runbook.py) | CLI executor for the tooling runbook (8 subcommands) |
 
 ## Taxonomy comparison
 
@@ -123,7 +125,7 @@ Processed in two waves:
   `sanskrit-lexicon.github.io`, `csl-orig`.
 
 The runbook is now codified as
-[`scripts/tooling_runbook.py`](../scripts/tooling_runbook.py) — eight
+[`scripts/tooling_runbook.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/tooling_runbook.py) — eight
 subcommands (`setup`, `classify`, `verify`, `project`, `refresh`,
 `milestones`, `sha`, `audit`) that implement Phases 2–9 mechanically.
 
@@ -148,5 +150,7 @@ treat the script's `audit` output as the canonical health check.
 ## Citation
 
 If you cite this runbook directly, please use the entry in
-[`../CITATION.cff`](../CITATION.cff) and the BibTeX entry
-`runbook2026` in [`../article/refs.bib`](../article/refs.bib).
+[`../CITATION.cff`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/CITATION.cff) and the BibTeX entry
+`runbook2026` in [`../article/refs.bib`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/article/refs.bib).
+
+_Dr. Mārcis Gasūns_

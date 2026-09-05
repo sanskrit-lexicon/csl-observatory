@@ -1,3 +1,5 @@
+_Created: 17-06-2026 · Last updated: 05-09-2026_
+
 # Repository Health Decision Packet
 
 Date: 2026-06-13 (RH1 + RH3 approved 2026-06-17)
@@ -112,3 +114,5 @@ After RH1 and RH3 are approved:
 5. Re-run `python scripts/repo_health.py` and update roadmap statuses.
 
 No external repository mutation is authorized by this packet alone.
+
+_Dr. Mārcis Gasūns_

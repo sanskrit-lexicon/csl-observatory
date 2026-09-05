@@ -1,3 +1,5 @@
+_Created: 04-06-2026 · Last updated: 05-09-2026_
+
 # Dictionary Structure Work Moved
 
 Date: 2026-06-03
@@ -19,3 +21,5 @@ Moved to `csl-atlas`:
 
 `csl-observatory` remains the GitHub/org observatory: repositories, issues,
 pull requests, contributors, workflows, runbooks, and digitisation-work metrics.
+
+_Dr. Mārcis Gasūns_

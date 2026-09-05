@@ -1,3 +1,5 @@
+_Created: 07-05-2026 · Last updated: 05-09-2026_
+
 # Contributors
 
 Each contributor section gives canonical identity, GitHub login, role, span of activity, repositories touched, and headline metrics. ORCIDs marked `PLACEHOLDER-…` are awaiting registration; please open a PR to fill them in.
@@ -436,3 +438,4 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **Lines changed**: +0 / −0
 - **Role notes**: Sanskrit scholar; ad hoc consultation.
 
+_Dr. Mārcis Gasūns_

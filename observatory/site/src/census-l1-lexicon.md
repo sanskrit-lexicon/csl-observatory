@@ -1,3 +1,5 @@
+_Created: 13-07-2026 · Last updated: 05-09-2026_
+
 ---
 title: "Census — L1 Lexicon text"
 toc: true
@@ -125,3 +127,5 @@ manufactured into additional bars.
 .census-table th, .census-table td { vertical-align: top; }
 .table-scroll { max-width: 100%; overflow-x: auto; }
 </style>
+
+_Dr. Mārcis Gasūns_

@@ -1,3 +1,5 @@
+_Created: 07-07-2026 · Last updated: 05-09-2026_
+
 ---
 title: Correction Anatomy
 toc: true
@@ -284,3 +286,5 @@ display(Plot.plot({
 > **Conclusion:** Correction labor is long-tenure, few-hands: the core pair's spans run 2014–2026 while most of the top 20 are short, bounded engagements. Sustainability of the correction corpus therefore depends on the same two-person continuity the community pages flag at repo level.
 
 [Back to overview](/)
+
+_Dr. Mārcis Gasūns_

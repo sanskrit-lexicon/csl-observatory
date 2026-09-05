@@ -1,3 +1,5 @@
+_Created: 18-07-2026 · Last updated: 05-09-2026_
+
 # A61/A13 roadmap
 
 ## Gate 1 — evidence integrity
@@ -65,3 +67,5 @@ This gate is intentionally not a blocker for the first article handoff.
 Acceptance: no verified claim relies on either pending email row, every
 retained number has a registry row, the A13 byte fence is intact, and every
 removed stale figure is explicitly labelled removed/superseded.
+
+_Dr. Mārcis Gasūns_

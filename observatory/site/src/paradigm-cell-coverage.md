@@ -1,3 +1,5 @@
+_Created: 23-07-2026 · Last updated: 05-09-2026_
+
 ---
 title: Paradigm-cell coverage
 toc: true
@@ -234,3 +236,5 @@ Download source TSV:
 · report:
 [`reports/paradigm_cell_coverage.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/paradigm_cell_coverage.md)
 · sibling census: [L2 Morphology](./census-l2-morphology) · [L5 Roots](./census-l5-roots).
+
+_Dr. Mārcis Gasūns_

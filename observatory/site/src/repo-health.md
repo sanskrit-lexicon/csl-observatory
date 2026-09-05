@@ -1,3 +1,5 @@
+_Created: 05-06-2026 · Last updated: 05-09-2026_
+
 ---
 title: Repository health
 toc: true
@@ -252,3 +254,5 @@ Plot.plot({
 Of **${n}** repositories, only **${cleanRepos}** are free of hygiene flags. The dominant gaps are licensing (**${noLicense}** with none, **${unrecognised}** unrecognised) and the legacy **${legacyBranch}** repos still defaulting to `master`. Staleness is not a problem — every repo was pushed within the last few weeks, so the ecosystem's risk is concentration and hygiene, not abandonment (see [Community](/community)).
 
 [← back to overview](/)
+
+_Dr. Mārcis Gasūns_

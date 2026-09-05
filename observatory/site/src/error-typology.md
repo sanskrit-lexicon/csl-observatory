@@ -1,3 +1,5 @@
+_Created: 11-06-2026 · Last updated: 05-09-2026_
+
 ---
 title: Error typology
 toc: true
@@ -275,3 +277,5 @@ Plot.plot({
 [`docs/BOUNDARY_RULES.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/BOUNDARY_RULES.md).
 The lexicographic-structure interpretation cross-links to
 [`csl-atlas`](https://github.com/sanskrit-lexicon/csl-atlas).*
+
+_Dr. Mārcis Gasūns_

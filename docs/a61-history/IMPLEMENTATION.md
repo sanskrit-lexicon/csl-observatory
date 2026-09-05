@@ -1,3 +1,5 @@
+_Created: 18-07-2026 · Last updated: 05-09-2026_
+
 # A61/A13 implementation contract
 
 ## Article-critical code changes
@@ -64,3 +66,5 @@ local branches and commits without pushing.
 - **Build:** run snapshot write/check, data-index check, workspace, OBS-T and
   repository-health regressions. Attempt the site build three times; repeated
   external CDN failure is reported separately from deterministic regressions.
+
+_Dr. Mārcis Gasūns_

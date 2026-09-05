@@ -1,3 +1,5 @@
+_Created: 17-06-2026 · Last updated: 05-09-2026_
+
 # Bus-Factor Action Plan
 
 Date: 2026-06-12
@@ -100,3 +102,5 @@ python scripts/repo_health.py
   contributor identity and ORCID backlog.
 - RH1/RH3 must be resolved before this plan treats licenses or cleanup
   candidates as complete.
+
+_Dr. Mārcis Gasūns_

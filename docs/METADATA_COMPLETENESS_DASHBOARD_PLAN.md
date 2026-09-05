@@ -1,3 +1,5 @@
+_Created: 17-06-2026 · Last updated: 05-09-2026_
+
 # Metadata Completeness Dashboard Plan
 
 Date: 2026-06-13
@@ -145,3 +147,5 @@ B3 is complete when all are true:
 
 B3 no longer depends on unresolved `unknown` live fields, but future refresh
 automation should still avoid relying on a single interactive local credential.
+
+_Dr. Mārcis Gasūns_

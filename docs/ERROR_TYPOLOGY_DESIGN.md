@@ -1,3 +1,5 @@
+_Created: 11-06-2026 · Last updated: 05-09-2026_
+
 # Error typology of digital Sanskrit dictionaries — design spec
 
 Date: 2026-06-11 · **Updated 2026-07-28 (H1759 manuscript reconciliation; κ gate note)**
@@ -354,3 +356,5 @@ Observable Framework pages under the observatory site:
 - `docs/BOUNDARY_RULES.md` · `docs/OBSERVATORY_DESIGN.md`
 - `data/headwords.json` (entry counts) · `scripts/contributors_map.json`
 - csl-atlas microstructure work (cross-link for the lexicographic frame)
+
+_Dr. Mārcis Gasūns_

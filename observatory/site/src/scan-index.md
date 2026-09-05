@@ -1,3 +1,5 @@
+_Created: 27-07-2026 · Last updated: 05-09-2026_
+
 ---
 title: PWG scan-index campaign
 toc: true
@@ -214,3 +216,5 @@ display(Plot.plot({
 - upstream tracker — [Google Sheet](https://docs.google.com/spreadsheets/d/1rcYfQE0D26RNdWSmRQzhFnV3Gf248wSuldTj-wt8_O0/edit?gid=0), snapshotted verbatim under [`snapshot/`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/data/pwg_scan_index_tracker/snapshot)
 
 [← back to overview](/)
+
+_Dr. Mārcis Gasūns_

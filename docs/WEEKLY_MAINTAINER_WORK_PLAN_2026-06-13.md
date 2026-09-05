@@ -1,3 +1,5 @@
+_Created: 17-06-2026 · Last updated: 05-09-2026_
+
 # Weekly Maintainer Work Plan: Repository Decisions First
 
 Date: 2026-06-13
@@ -131,3 +133,5 @@ Next implementation session:
   branches, or open org-wide rollout PRs without explicit MG/Org approval.
 - Keep archive candidates out of license rollout until RH3 is decided.
 - Keep OBS-T paper work out of this week unless a regression fails.
+
+_Dr. Mārcis Gasūns_

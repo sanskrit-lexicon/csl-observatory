@@ -1,3 +1,5 @@
+_Created: 07-07-2026 · Last updated: 05-09-2026_
+
 ---
 title: Org Shape
 toc: true
@@ -204,3 +206,5 @@ display(Plot.plot({
 > **Conclusion:** The backlog is overwhelmingly issues (~98% of open items), and that split barely moves between snapshots: the org's backlog ages in place rather than churning. Combined with the drift panels above, the picture is a stable, slowly growing issue mountain tended by a small, diversified core — the org-shape context in which the correction labor of the [Correction Anatomy](/correction-anatomy) page happens.
 
 [Back to overview](/)
+
+_Dr. Mārcis Gasūns_

@@ -1,3 +1,5 @@
+_Created: 28-06-2026 · Last updated: 05-09-2026_
+
 ---
 title: Conclusions index
 toc: true
@@ -92,3 +94,5 @@ Three findings recur across every page and reinforce each other:
 Full narrative write-up: [synthesis report](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/synthesis.md).
 
 [← back to overview](/)
+
+_Dr. Mārcis Gasūns_

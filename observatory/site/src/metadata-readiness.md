@@ -1,3 +1,5 @@
+_Created: 17-06-2026 · Last updated: 05-09-2026_
+
 ---
 title: Metadata readiness
 toc: true
@@ -194,3 +196,5 @@ display(Plot.plot({
 > **Conclusion:** If most licensed repos also lack releases, the org has completed the first prerequisite for scholarly citability (licensing) but not the second (stable versioned snapshots). The next step is creating tagged releases for the primary data repos and minting Zenodo DOIs — the action tracked in the Data page's citation section.
 
 [Back to overview](/)
+
+_Dr. Mārcis Gasūns_

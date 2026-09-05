@@ -1,3 +1,5 @@
+_Created: 15-05-2026 · Last updated: 05-09-2026_
+
 # csl-observatory Design
 
 Date: 2026-06-04
@@ -111,3 +113,5 @@ The earlier design included source mining, Matomo analytics, backlinks,
 citation tracking, and a broad WSC publication program. That historical plan is
 preserved in `OBSERVATORY_DESIGN_LEGACY_BROAD_METRICS.md` for reference, but it
 is not the active scope.
+
+_Dr. Mārcis Gasūns_

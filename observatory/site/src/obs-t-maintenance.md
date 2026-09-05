@@ -1,3 +1,5 @@
+_Created: 17-06-2026 · Last updated: 05-09-2026_
+
 ---
 title: OBS-T maintenance
 toc: true
@@ -166,3 +168,5 @@ display(Plot.plot({
 > **Conclusion:** Monthly component trends are the OBS-T operational health signal: if all components are flat near zero in recent months, correction activity has slowed; if they are active, the corpus is still being refined. A crossing of two component lines — e.g. sense overtaking headword — marks a phase transition in the project's correction focus and should be noted in the OBS-T paper's temporal-analysis section.
 
 [Back to overview](/)
+
+_Dr. Mārcis Gasūns_

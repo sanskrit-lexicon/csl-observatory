@@ -1,3 +1,5 @@
+_Created: 07-05-2026 · Last updated: 05-09-2026_
+
 # Coverage and provenance
 
 This report tracks **dictionary entry counts** (counted as `<L>` markers in source files), **license declarations**, and **markup integrity** (whether `<L>` and `<LEND>` markers balance) across the CDSL ecosystem. Headword counts are derived from source files in `csl-orig/v02/<dict>/<dict>.txt` by `scripts/count_headwords.py`.
@@ -157,3 +159,4 @@ pie title Top-10 dictionaries by entry count
 
 **License coverage**: 37 of 78 repos declare a license; **41 are unlicensed** (FAIR R1.1 violation, addressed by runbook Phase 11).
 
+_Dr. Mārcis Gasūns_

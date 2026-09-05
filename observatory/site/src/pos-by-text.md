@@ -1,3 +1,5 @@
+_Created: 23-07-2026 · Last updated: 05-09-2026_
+
 ---
 title: POS distribution by text
 toc: true
@@ -254,3 +256,5 @@ Download source TSV:
 · report:
 [`reports/pos_distribution_per_text.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/pos_distribution_per_text.md)
 · [Data downloads](./data) · sibling census: [L3 Corpus](./census-l3-corpus).
+
+_Dr. Mārcis Gasūns_

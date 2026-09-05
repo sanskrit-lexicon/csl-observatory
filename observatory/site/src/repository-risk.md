@@ -1,3 +1,5 @@
+_Created: 17-06-2026 · Last updated: 05-09-2026_
+
 ---
 title: Repository risk
 toc: true
@@ -182,3 +184,5 @@ display(Plot.plot({
 > **Conclusion:** The flag distribution is the headline hygiene metric for the org at a snapshot in time. A shift left (more repos at 0) after a cleanup campaign confirms the campaign worked. Any tail at 3+ flags after RH1 identifies the remaining hard cases that need direct maintainer attention, not automation.
 
 [Back to overview](/)
+
+_Dr. Mārcis Gasūns_

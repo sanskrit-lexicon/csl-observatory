@@ -1,3 +1,5 @@
+_Created: 07-05-2026 · Last updated: 05-09-2026_
+
 Apply the full Sanskrit Lexicon issue-taxonomy runbook to the repository given in the argument: $ARGUMENTS
 
 The org is always `sanskrit-lexicon`. Execute all ten phases **without asking for user confirmation** except where a step is marked [ASK]. Complete all phases through commit and push.
@@ -293,7 +295,7 @@ Create or update `CLAUDE.md` in the repo root. Include:
 
 Create or update `README.md`. Required sections in order:
 1. Title + one-paragraph description
-2. **Manual overview block (preserve verbatim)** — human-maintained README material belongs between `<!-- BEGIN MANUAL: overview -->` and `<!-- END MANUAL: overview -->`. Preserve every `<!-- BEGIN MANUAL:* -->` block exactly when regenerating README content. Use the Jim-style templates in [`docs/README_TEMPLATE_TYPOLOGY.md`](../docs/README_TEMPLATE_TYPOLOGY.md), especially Template A for dictionary workbench repos.
+2. **Manual overview block (preserve verbatim)** — human-maintained README material belongs between `<!-- BEGIN MANUAL: overview -->` and `<!-- END MANUAL: overview -->`. Preserve every `<!-- BEGIN MANUAL:* -->` block exactly when regenerating README content. Use the Jim-style templates in [`docs/README_TEMPLATE_TYPOLOGY.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/README_TEMPLATE_TYPOLOGY.md), especially Template A for dictionary workbench repos.
 3. Contents table (top-level directories)
 4. Timeline table (period → work, derived from git log and issue dates)
 5. Projects & Milestones table with live counts + two Mermaid pie charts (closed by ms, open by ms)
@@ -447,3 +449,5 @@ Templates live in `csl-observatory/templates/` and are propagated by `scripts/pr
 - [ ] `CLAUDE.md` committed
 - [ ] `README.md` committed with live counts and validated Mermaid charts
 - [ ] Pushed to `origin/master`
+
+_Dr. Mārcis Gasūns_

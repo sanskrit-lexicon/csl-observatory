@@ -1,3 +1,5 @@
+_Created: 14-06-2026 · Last updated: 05-09-2026_
+
 # Org Maintenance Log
 
 Cross-repo repo-health, CI, and security work spanning the Sanskrit Lexicon /
@@ -77,3 +79,5 @@ Removed it from the last repo carrying it and fixed the source so it can't recur
   to correct. Stale crosswalk totals to refresh (ambiguous 45→52, edges 7315→9878, roots
   785→790); `app_data.json` carries 5 roots absent from the crosswalk spine.
 - **csl-apidev**: confirm/harden the canonical Salt-API served surface as the API finalizes.
+
+_Dr. Mārcis Gasūns_

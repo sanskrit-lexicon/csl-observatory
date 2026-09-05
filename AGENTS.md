@@ -6,7 +6,7 @@ This file orients Codex and other non-Claude agent sessions. The section between
 ## Shared org context (generated — H1393 layer)
 
 - Encodings / key1/key2 / transcoder traps: [Sanskrit context primer](https://github.com/gasyoun/github-spine/blob/main/SANSKRIT_CONTEXT_PRIMER.md).
-- Task routing: [CLAUDE.md](CLAUDE.md) — matching section, not end-to-end.
+- Task routing: [CLAUDE.md](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/CLAUDE.md) — matching section, not end-to-end.
 - Danger facts (destroy-work-if-missed; full text + sources in [DANGER_FACTS.md](https://github.com/gasyoun/Uprava/blob/main/DANGER_FACTS.md)):
   - data/pwg_scan_index_tracker/ls_counts/pwg_ls_counts_2024-09-11.tsv is dated EVIDENCE, not a derivation — never regenerate it against current dictionary data. It is the count table the volunteer tracker's Citation count column was read off (66/67 rows exact); pwg_ls_counts.py --recount writes only the _current sibling. Between the two snapshots `an.` falls 1797 to 1 while `H. an.` rises 2075 with a byte-identical bibliography entry — an ls re-tagging, not a recount — so a silent refresh reports a finished index as having nothing left to serve and no diff looks wrong. Consume citation_count_safe, fold by in_pwgbib before summing (work-family rollup), divide only by the ALL of the same snapshot (H2874)
   - Check estate surfaces before building: kosha datasets.json (registry), DATA_LAYERS_CENSUS.md (unregistered data), PROJECT_INTERLINKS.md + interlinks_edges.tsv (edges), FEATURES_INDEX.md (inventory), REUSE_INDEX.md (reuse) - query memory_recall / /context first, build only the gap.

@@ -1,3 +1,5 @@
+_Created: 17-06-2026 · Last updated: 05-09-2026_
+
 # Maintainer Continuity Packet
 
 Date: 2026-06-12
@@ -223,7 +225,7 @@ If automation fails because credentials are missing, update
 ## Public Artifact Refresh Modernization
 
 The selective Cologne refresh script is not modernized in this repository. The
-planning packet is [`REFRESH_SCRIPT_MODERNIZATION_PLAN.md`](REFRESH_SCRIPT_MODERNIZATION_PLAN.md).
+planning packet is [`REFRESH_SCRIPT_MODERNIZATION_PLAN.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/REFRESH_SCRIPT_MODERNIZATION_PLAN.md).
 Use it before starting `csl-pywork#53`; do not change the Cologne cron or
 push-capable refresh scripts without maintainer/server approval.
 
@@ -285,3 +287,5 @@ Update these maintainer docs when the refresh changes decisions or priorities:
 4. Keep blocked external actions in `docs/DECISIONS_NEEDED.md`.
 5. Keep raw snapshots and generated build artifacts out of git unless they are
    intended release data.
+
+_Dr. Mārcis Gasūns_

@@ -1,3 +1,5 @@
+_Created: 07-05-2026 · Last updated: 05-09-2026_
+
 ---
 title: "Methodological infrastructure of the Cologne Digital Sanskrit Dictionaries"
 subtitle: "A quantitative companion to Gasūns, *Report on Cologne Digital Sanskrit Lexicon Project* (forthcoming)"
@@ -803,3 +805,5 @@ played.
 
 ::: {#refs}
 :::
+
+_Dr. Mārcis Gasūns_

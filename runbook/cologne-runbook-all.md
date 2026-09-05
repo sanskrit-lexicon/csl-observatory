@@ -1,3 +1,5 @@
+_Created: 07-05-2026 · Last updated: 05-09-2026_
+
 Apply the full Sanskrit Lexicon issue-taxonomy runbook to every unprocessed repo in the org.
 
 ## Step 1 — Discover unprocessed repos
@@ -126,3 +128,5 @@ After spawning all sub-agents, report:
   - Project 2 (DQ):  `PVT_kwDOAGGnOc4BW402`
   - Project 3 (SD):  `PVT_kwDOAGGnOc4BW404`
   - Project 4 (ME):  `PVT_kwDOAGGnOc4BW405`
+
+_Dr. Mārcis Gasūns_

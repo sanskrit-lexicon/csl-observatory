@@ -1,3 +1,5 @@
+_Created: 05-06-2026 · Last updated: 05-09-2026_
+
 # Org-hygiene issues
 
 Date: 2026-06-05
@@ -7,9 +9,9 @@ Date: 2026-06-05
 in `csl-observatory` (see the mapping in the summary table below). This file
 is retained as the rationale/source-of-truth for those issues.
 
-These turn the findings in [`reports/repo_health.md`](../reports/repo_health.md),
-[`reports/taxonomy_adoption.md`](../reports/taxonomy_adoption.md), and
-[`reports/contributor_identity.md`](../reports/contributor_identity.md) into
+These turn the findings in [`reports/repo_health.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/repo_health.md),
+[`reports/taxonomy_adoption.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/taxonomy_adoption.md), and
+[`reports/contributor_identity.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/contributor_identity.md) into
 GitHub issues. Each carries a `⚠ Care` note where an action is visible or
 partly irreversible — those notes are reproduced in the filed issues and still
 require maintainer judgement before execution.
@@ -133,7 +135,7 @@ before filing in case they have moved.
 > identified and only need an ORCID (Jim Funderburk, Dhaval Patel, Mārcis
 > Gasūns, Anna Rybakova, Nagabhushana Rao, Scott Rhodes, Thomas Malten); nine
 > occasional authors still need identification. Worksheet:
-> [`reports/contributor_identity.md`](../reports/contributor_identity.md).
+> [`reports/contributor_identity.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/contributor_identity.md).
 >
 > **Acceptance:** registered ORCIDs filled into `scripts/contributors_map.json`
 > for the seven named contributors; the nine unknown logins triaged. Extends
@@ -152,7 +154,7 @@ before filing in case they have moved.
 > violation) and **999 issues carry one of 54 stray labels** (GitHub defaults
 > like `duplicate`/`help wanted`, capitalised dupes like `Documentation`/`Bug`,
 > and a `domain:*` scheme). Detail:
-> [`reports/taxonomy_adoption.md`](../reports/taxonomy_adoption.md).
+> [`reports/taxonomy_adoption.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/taxonomy_adoption.md).
 >
 > **Acceptance:** over-typed issues reduced to one type label each; stray
 > labels deleted or folded into the taxonomy (decide the fate of the `domain:*`
@@ -175,3 +177,5 @@ before filing in case they have moved.
 *Object of analysis: GitHub repositories, issues, and contributors — in scope
 per `docs/BOUNDARY_RULES.md`. These drafts act on the observatory's own
 findings; filing them is a separate, human-authorised step.*
+
+_Dr. Mārcis Gasūns_

@@ -1,25 +1,27 @@
+_Created: 27-07-2026 · Last updated: 05-09-2026_
+
 # Encoding/XML Guard — design (RH5)
 
 Catch encoding regressions on dictionary-source change paths before they land
 — a BOM re-introduced by an editor's tool, a non-NFC accented character, a
 malformed XML edit — instead of relying on manual review to notice
-([`../CLAUDE.md`](../CLAUDE.md) "Encoding — BOM is inconsistent, check before
+([`../CLAUDE.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/CLAUDE.md) "Encoding — BOM is inconsistent, check before
 editing" already documents how easy this is to get wrong by hand).
 
 ## What already exists (don't duplicate)
 
 | Piece | Covers | Trigger |
 |---|---|---|
-| [`scripts/dict_runbook.py`](../scripts/dict_runbook.py) / [`dict-audit.yml`](../.github/workflows/dict-audit.yml) | issue taxonomy completeness | weekly cron + dispatch |
-| [`runbook/templates/taxonomy-drift.yml`](../runbook/templates/taxonomy-drift.yml) | per-issue taxonomy drift | issue events (draft template) |
+| [`scripts/dict_runbook.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/dict_runbook.py) / [`dict-audit.yml`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/.github/workflows/dict-audit.yml) | issue taxonomy completeness | weekly cron + dispatch |
+| [`runbook/templates/taxonomy-drift.yml`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/runbook/templates/taxonomy-drift.yml) | per-issue taxonomy drift | issue events (draft template) |
 
 Neither checks file *content* hygiene — this is a new, third piece, modelled
-on the same two-layer shape as [`DRIFT_WATCH.md`](DRIFT_WATCH.md) rather than
+on the same two-layer shape as [`DRIFT_WATCH.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/DRIFT_WATCH.md) rather than
 reinventing it.
 
 ## The guard
 
-[`scripts/encoding_xml_guard.py`](../scripts/encoding_xml_guard.py) `check
+[`scripts/encoding_xml_guard.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/encoding_xml_guard.py) `check
 <path>...` — four rules per file:
 
 1. **no-bom** — file does not start with a UTF-8 BOM, unless explicitly
@@ -35,7 +37,7 @@ CI-friendly contract, same shape as `dict_runbook.py`/`tooling_runbook.py`
 
 ## The two layers
 
-**1. Pilot (this repo).** [`.github/workflows/encoding-guard.yml`](../.github/workflows/encoding-guard.yml)
+**1. Pilot (this repo).** [`.github/workflows/encoding-guard.yml`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/.github/workflows/encoding-guard.yml)
 runs `encoding_xml_guard.py self-test` against bundled fixtures
 ([`runbook/fixtures/encoding_guard/`](../runbook/fixtures/encoding_guard))
 on every push/PR touching the guard or its fixtures, plus `workflow_dispatch`.
@@ -49,7 +51,7 @@ this CI template, so the pilot lives here rather than in csl-orig (agents
 never commit to csl-orig directly, per `../CLAUDE.md`).
 
 **2. Event-driven guard (per-repo, fan-out).**
-[`runbook/templates/encoding-xml-guard.yml`](../runbook/templates/encoding-xml-guard.yml)
+[`runbook/templates/encoding-xml-guard.yml`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/runbook/templates/encoding-xml-guard.yml)
 — a **draft template**, mirroring `taxonomy-drift.yml`'s shape: fetches
 `encoding_xml_guard.py` from csl-observatory via sparse checkout, runs it on
 a PR's changed files within that repo's dictionary-source change paths, and
@@ -89,3 +91,5 @@ None. `contents: read` + the default `GITHUB_TOKEN` is enough for both layers
   needs a standing `--allow-bom` entry before the fan-out (per CLAUDE.md's
   "some HeadwordLists exports have one, some don't" note) — audit before
   deploying, don't assume clean.
+
+_Dr. Mārcis Gasūns_

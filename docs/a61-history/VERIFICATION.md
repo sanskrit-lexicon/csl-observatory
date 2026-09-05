@@ -1,3 +1,5 @@
+_Created: 18-07-2026 · Last updated: 05-09-2026_
+
 # A61/A13 verification contract
 
 ## Automated gates
@@ -78,3 +80,5 @@ The first packet passes when all automated gates are green, all Major findings
 are either applied or explicitly open, and the FABLE handoff points to the
 snapshot and referee memo. Readiness can move from 3/5 to 4/5 only after no
 unresolved Major evidence or argument finding remains.
+
+_Dr. Mārcis Gasūns_

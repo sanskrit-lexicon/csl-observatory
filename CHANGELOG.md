@@ -1,3 +1,5 @@
+_Created: 07-05-2026 · Last updated: 05-09-2026_
+
 # Changelog
 
 All notable changes to this repository are documented here, following [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -42,7 +44,7 @@ All notable changes to this repository are documented here, following [Keep a Ch
 ### Added
 - **H3487 — adversarial audit of the Cologne tooling codebase** (OxAlpha
   `opencode/z-ai/glm-5.3-flash`, 28-08-2026). New
-  [docs/CODEBASE_ADVERSARIAL_AUDIT_2026-08.md](docs/CODEBASE_ADVERSARIAL_AUDIT_2026-08.md):
+  [docs/CODEBASE_ADVERSARIAL_AUDIT_2026-08.md](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/CODEBASE_ADVERSARIAL_AUDIT_2026-08.md):
   reconstructed call graphs for csl-pywork, csl-orig build scripts,
   csl-websanlexicon v02 templates, csl-apidev; 71-site silent-failure census
   (swallowed exceptions, unchecked exit codes, destroy-on-fail, blank-200,
@@ -321,7 +323,7 @@ All notable changes to this repository are documented here, following [Keep a Ch
 ## [1.6.0] - 2026-07-28
 
 ### Added
-- **`reports/pwg_kosa_hocr_cer.md` — first CER measurement for BSB's published per-page hOCR against a print e-text (H1720).** All 374 indexed pages of the `amara_dlc` (Amarakoṣa, Deslongchamps 1839, `bsb10250868`) campaign harvested via [`scripts/pwg_kosa_hocr_ingest.py`](scripts/pwg_kosa_hocr_ingest.py), page offset (`-3`) derived empirically rather than assumed, and aligned to [`AMAR/amar.txt`](https://github.com/sanskrit-lexicon/AMAR) by content (token-overlap window search per kāṇḍa, never by in-page digits — the FINDINGS §480 trap). Mean CER over a 39-page depth-stratified sample: **0.719**, reported as a ceiling, not a floor — a gender-tag format mismatch between AMAR's per-word gloss list and the printed verse text inflates the figure independently of true OCR error, on top of the expected edition-variance caveat. `abch2` (Hemacandra) harvest/CER remains open follow-on work; the handoff's DoD is met by one edition.
+- **`reports/pwg_kosa_hocr_cer.md` — first CER measurement for BSB's published per-page hOCR against a print e-text (H1720).** All 374 indexed pages of the `amara_dlc` (Amarakoṣa, Deslongchamps 1839, `bsb10250868`) campaign harvested via [`scripts/pwg_kosa_hocr_ingest.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/pwg_kosa_hocr_ingest.py), page offset (`-3`) derived empirically rather than assumed, and aligned to [`AMAR/amar.txt`](https://github.com/sanskrit-lexicon/AMAR) by content (token-overlap window search per kāṇḍa, never by in-page digits — the FINDINGS §480 trap). Mean CER over a 39-page depth-stratified sample: **0.719**, reported as a ceiling, not a floor — a gender-tag format mismatch between AMAR's per-word gloss list and the printed verse text inflates the figure independently of true OCR error, on top of the expected edition-variance caveat. `abch2` (Hemacandra) harvest/CER remains open follow-on work; the handoff's DoD is met by one edition.
 - **`reports/record_linkage_rejected_alternatives.md` — the negative results behind the G3/A48
   linkage key, including a measurement that only existed on an unmerged branch (H1477).**
   Handoff H1477 was implemented twice concurrently; the second implementation was left
@@ -748,11 +750,11 @@ sanskrit-lexicon organisation plus the OBS-T error-typology language resource.
 - **Five org-process findings** (offline, script → report → site page):
   contributor concentration / bus factor, repository health, issue-taxonomy
   adoption, velocity & health timeline, and a contributor-identity worksheet —
-  plus [`reports/synthesis.md`](reports/synthesis.md).
+  plus [`reports/synthesis.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/synthesis.md).
 - **OBS-T error-typology track** — a 50,953-event correction corpus (form
   archive + `csl-orig` git history) with a two-axis typology (location ×
-  edit-type), reference baselines, a Gebru-style [`docs/DATASHEET.md`](docs/DATASHEET.md),
-  a JSON schema, and a draft paper ([`paper-obs-t-error-typology.md`](paper-obs-t-error-typology.md)).
+  edit-type), reference baselines, a Gebru-style [`docs/DATASHEET.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/DATASHEET.md),
+  a JSON schema, and a draft paper ([`paper-obs-t-error-typology.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/paper-obs-t-error-typology.md)).
 - **Observable Framework dashboard** (`observatory/site/`) deployed to GitHub
   Pages, with monthly auto-refresh (`.github/workflows/refresh-observatory.yml`).
 - **Org tooling** — issue-taxonomy runbooks, community-file templates, and
@@ -774,3 +776,5 @@ sanskrit-lexicon organisation plus the OBS-T error-typology language resource.
 [1.1.0]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/sanskrit-lexicon/csl-observatory/compare/v0.1.0...v1.0.0
 [0.1.0]: https://github.com/sanskrit-lexicon/csl-observatory/releases/tag/v0.1.0
+
+_Dr. Mārcis Gasūns_

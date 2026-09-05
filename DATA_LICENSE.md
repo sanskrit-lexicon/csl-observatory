@@ -1,3 +1,5 @@
+_Created: 17-06-2026 · Last updated: 05-09-2026_
+
 # Data License
 
 The OBS-T correction-event dataset published from this repository, including:
@@ -17,3 +19,5 @@ as stated in `LICENSE` and `CITATION.cff`.
 When citing the data, attribute the CDSL/sanskrit-lexicon community and the
 `csl-observatory` OBS-T correction-event corpus. The released data replaces raw
 form-submit email addresses with stable public aliases or pseudonyms.
+
+_Dr. Mārcis Gasūns_

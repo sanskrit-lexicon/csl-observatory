@@ -1,3 +1,5 @@
+_Created: 15-05-2026 · Last updated: 05-09-2026_
+
 Apply the **Cologne tooling-repo runbook** to every uncategorized non-dictionary repo in the org.
 
 ## Step 1 — Discover unprocessed tool repos
@@ -70,7 +72,7 @@ Queue every repo printed `UNPROCESSED` (after routing dictionary/archive repos v
 ### Skip these (dictionary repos — use `cologne-issue-runbook.md` instead)
 `PWG`, `PWK`, `MWS`, `MD`, `AP`, `AP90`, `GRA`, `FRI`, `SCH`, `DCS`, `VCP`, `ApteES`, `SKD`, `MCI`, `WIL`, `BHS`, `VEI`, `ACC`, `KRM`, `BUR`, `CAE`, `CCS`, `STC`, `BEN`, `BOR`, `INM`, `BOP`, `LRV`, `AMAR`, `SHS`, `KNA`, `KOW`, `PUI`
 
-(`CORRECTIONS` is **not** a dictionary — it is the cross-dictionary correction-history meta repo. Per [DECISIONS_NEEDED.md](../docs/DECISIONS_NEEDED.md) A2 it is **skipped as meta** (like `COLOGNE`); see *Skip these (meta repos)* below.)
+(`CORRECTIONS` is **not** a dictionary — it is the cross-dictionary correction-history meta repo. Per [DECISIONS_NEEDED.md](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/DECISIONS_NEEDED.md) A2 it is **skipped as meta** (like `COLOGNE`); see *Skip these (meta repos)* below.)
 
 ### Skip these (archives, no triage needed)
 `santamlegacy`, `temp_corrections_*`, `test_cologne_push`, `Wil-YAT`, `MW72` (legacy 1872 dict, low activity)
@@ -134,3 +136,5 @@ After spawning all sub-agents, report:
 - The two **org-level tooling projects** (Stability & Quality, Capabilities & Roadmap) only need to be created once (Phase 6). After the first repo creates them, subsequent repos reuse them.
 - For `cross-repo` issues, the assigned sub-agent links companion issues in the body before assigning the label. The next runbook iteration auto-updates `CROSS_REPO_INDEX.md` in each repo.
 - `csl-observatory` is special: it was processed earlier with **dictionary** labels (mistakenly). Phase 0 should detect this and Phase 3 should remove the dictionary type labels (`link-target`, `text-correction`, etc.) before applying tool labels.
+
+_Dr. Mārcis Gasūns_
