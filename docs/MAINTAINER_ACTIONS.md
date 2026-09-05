@@ -54,7 +54,7 @@ _Dropped since 03-07: [csl-devanagari #45](https://github.com/sanskrit-lexicon/c
 
 ## Longer-running (csl-apidev)
 
-- Point [`init_word_frequency()`](https://github.com/sanskrit-lexicon/csl-apidev/blob/main/v1.1/getword_list_1.0_main.php) (v1.1) at [`wf1/wf.txt`](https://github.com/sanskrit-lexicon/csl-apidev/tree/main/wf1) — a one-line switch; the surrounding code is frozen, so it is the maintainer's to flip (Fix I, roadmap §12).
+- Point `init_word_frequency()` (v1.1) at `wf1/wf.txt` — a one-line switch; the surrounding code is frozen, so it is the maintainer's to flip (Fix I, roadmap §12).
 - Implement csl-apidev **v1.2 M1→M5** from [`simple-search/roadmap_v1.2.md`](https://github.com/sanskrit-lexicon/csl-apidev/blob/main/simple-search/roadmap_v1.2.md).
 - Adopt cleanurl's dict-code in the [`Salt` rewrite](https://github.com/sanskrit-lexicon/Salt/blob/main/salt_entries.md) §1.7.
 
