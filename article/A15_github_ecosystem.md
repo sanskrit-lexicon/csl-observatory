@@ -1,6 +1,6 @@
 # Measuring the Cologne Digital Sanskrit Dictionaries as a GitHub Maintenance Ecosystem
 
-_Created: 03-07-2026 · Last updated: 28-07-2026_
+_Created: 03-07-2026 · Last updated: 06-09-2026_
 
 **Status (11-07-2026):** full draft (H672 pass, Fable 5 `claude-fable-5`), paper A15;
 advanced from the 03-07 skeleton by folding in the correction-event ledger
@@ -10,9 +10,10 @@ and the claim→artifact inventory. Sequencing: the
 schedules A15 after A13/A14, but this draft depends on neither of them *shipping* —
 A13 is GO-conditional for IIJ and A14 is ORCID-gated; only A15's eventual **submission**
 should wait on their venue outcomes. Venue: TBD (@DECIDE — likely the same
-LREC/JOHD-family as A13/A14; a human decides). Byline: pending MG ruling.
+LREC/JOHD-family as A13/A14; a human decides). Byline: pending MG ruling. Passes:
+author-voice pass 06-09-2026 ([SIGNOFF_A15_author_pass.md](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/article/SIGNOFF_A15_author_pass.md)).
 
-**Draft byline:** Mārcis Gasūns
+**Draft byline:** Mārcis Gasūns, independent scholar (ORCID 0000-0003-4513-884X), gasyoun@ya.ru
 
 ## Abstract
 
@@ -25,7 +26,7 @@ reproducible instruments of repository mining: contributor concentration, reposi
 hygiene, issue lifecycle, taxonomy conformance, activity velocity, external
 reach, and — new to this class of study — the *correction throughput of the data
 layer itself*. Against a snapshot of 76 repositories, 5,324 issues, and 9,877
-commits (2014–2026), we find a paradoxical profile: throughput is high and rising
+commits (2014–2026), I find a paradoxical profile: throughput is high and rising
 (a record 2,519 commits in 2026), yet 67 of 76 repositories depend on a single
 maintainer, three people account for 98.0% of all contributions, and 620 open
 issues are more than four years old. The fragility extends below the code: a
@@ -36,7 +37,7 @@ carrying 64–100% of each year's corrections — and that while 206 people have
 correction campaign of 2025–2026 — 1,023 issues opened in one year, 923 closed
 the next — shows that the ecosystem's characteristic rhythm is the *correction
 wave*, not steady-state maintenance, a rhythm the correction ledger traces back
-to 2015. We argue that GitHub-native metrics, properly bounded, give digital
+to 2015. I argue that GitHub-native metrics, properly bounded, give digital
 lexicography a maintenance observability layer it currently lacks, and that the
 CDSL profile (used as infrastructure, cloned ~6,900 times a fortnight, yet starred
 only 103 times) is likely typical of scholarly data organisations.
@@ -82,7 +83,10 @@ repositories, issues, PRs, commits, contributors, workflows, labels, milestones,
 metadata. It does not analyse dictionary entries, dictionary structure, TEI/OntoLex
 exports, corpus data, or website telemetry; those live in sibling projects, and the
 error *content* of corrections is the subject of a separate typology resource
-(A12). What remains is precisely the maintenance layer.
+(A12). What remains is precisely the maintenance layer. The contribution of this
+article is a single one: the seventh instrument — correction throughput measured
+over the dictionary text rather than over the platform — and the reading it forces
+of the six platform instruments beside it.
 
 Section 2 describes the data and its reproducibility envelope. Section 3 presents
 the seven maintenance findings — six platform-level instruments plus a
@@ -206,10 +210,10 @@ unlicensed repositories (the pre-rollout count, recorded in
 to **6** (all archival/temp candidates), with 70/76 now
 carrying a recognised SPDX license. Remaining debt is structural rather than legal:
 46/76 repositories still default to the legacy `master` branch, 5 lack a
-description, and 2 disposable repositories await archiving. Notably, **zero
+description, and 2 disposable repositories await archiving. **Zero
 repositories are stale** (all pushed within 180 days) and 22 carry no hygiene flag
 at all. Hygiene, unlike concentration, proved fixable by a bounded effort — a point
-we return to in the discussion.
+I return to in the discussion.
 
 ### 3.3 Issue taxonomy: retroactive order, fragile at the edge
 
@@ -230,8 +234,8 @@ classified is a habit the ecosystem has not yet formed.
 (Source: [`reports/issue_lifecycle.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/issue_lifecycle.md),
 snapshot as-of 2026-06-01.)
 
-The median closed issue closes in **6 days** — for a three-person volunteer
-operation, remarkably fast. But the distribution is savagely long-tailed: the 90th
+The median closed issue closes in **6 days** — fast for a three-person volunteer
+operation. But the distribution is heavy-tailed: the 90th
 percentile is 349 days, 23% of issues are still open a year after opening, and of
 the 913 issues open at the snapshot, **719 (79%) are older than two years** and 620
 are older than four. A **silent backlog** of 178 open issues (19%) has never
@@ -277,7 +281,7 @@ The six instruments above measure the platform. The seventh measures the thing
 the platform exists for: correction of the dictionary text itself. Across 1,849
 commits touching `csl-orig`'s dictionary sources (2019–2026), **no year had more
 than four distinct content correctors**, and the lead corrector's annual share
-ranged from 64% to 100% — 2020 was literally a single-corrector year (269
+ranged from 64% to 100% — 2020 was a single-corrector year (269
 commits, one person). Of the 37 dictionaries with at least ten correction
 commits, every one is dominated by a single corrector, and four exceed an 80%
 lead share. Resolution latency over the 244 tracked correction issues is
@@ -464,8 +468,10 @@ concentration instruments are what keep the reading honest.
 
 ## 5. Discussion
 
-**What the profile says.** Measured as a software organisation, CDSL is
-simultaneously robust and fragile. Robust: no stale repositories, a 6-day median
+**What the profile says.** The introduction asked what it costs to keep the
+corpus alive and whether that work is sustainable; the profile answers in two
+halves. Measured as a software organisation, CDSL is simultaneously robust and
+fragile. Robust: no stale repositories, a 6-day median
 issue close, rising throughput, a completed licensing campaign, and demonstrated
 capacity to cut a 1,742-issue backlog nearly in half (to 913) within a year. Fragile: every one of those
 capabilities is embodied in three people, 65 repositories would lose their majority
@@ -496,7 +502,7 @@ bounded by volunteer hours is increasingly bounded by review attention. That
 relieves the throughput half of the profile and leaves the concentration half
 untouched — the reviewing humans are the same three people, and the correction
 ledger's data-layer bus factor (Section 3.7) does not improve when the drafting
-is delegated. The honest framing is that agents convert a labour shortage into
+is delegated. In effect, agents convert a labour shortage into
 a *governance* concentration: more of the ecosystem's output now flows through
 fewer human decision points per unit of change. Observatories for scholarly
 infrastructure should therefore begin distinguishing authored from reviewed
@@ -506,14 +512,14 @@ contribution — a distinction GitHub's data model does not natively surface.
 metrics: 923 closed issues say nothing about whether the underlying corrections
 were philologically right (that is A12's question), and contribution counts are a
 poor proxy for scholarly effort — a one-line fix to a Vedic accent may cost more
-expertise than a hundred mechanical commits. We also make no labour-valuation
+expertise than a hundred mechanical commits. I also make no labour-valuation
 claims. The metrics bound what can be said: they observe the *shape* of
 maintenance, reliably and reproducibly, and that shape was previously invisible.
 
 **Generalisation.** Nothing in the method is Sanskrit-specific. Any long-running
 scholarly data organisation on a forge — critical editions, corpus projects,
 linguistic databases — could stand up the same observatory (the code is GPL-3.0)
-and obtain the same seven-instrument profile. We conjecture the CDSL profile is
+and obtain the same seven-instrument profile. I conjecture the CDSL profile is
 typical of the class: high-throughput, hyper-concentrated, campaign-driven,
 infrastructure-consumed, and star-invisible. Testing that conjecture across
 organisations is the natural next study.
