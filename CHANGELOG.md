@@ -7,6 +7,9 @@ All notable changes to this repository are documented here, following [Keep a Ch
 ## [Unreleased]
 <!-- entries land in changelog_queue/ -- appended via tools/changelog_queue_consume.py, consumed by cut_release.py at release-cut (H3355); direct bullets here are hook-blocked -->
 
+## [1.13.4] - 2026-09-06
+
+- feat(recapture): below-floor estimator comparison + calibrated bands — four candidate families scored against pw/mw/bur under a pre-registered rule; every strength-borrowing estimator fails (×0.35–×3.4, prevalence spans ×4.1), the m ≥ 10 floor is shown to be a precision convention rather than a boundary, and the measured median shift gives 5 dictionaries their first bounded estimate while 26 with m = 0 are ruled unreachable (`scripts/lowm_estimators.py`, `reports/error_recapture_lowm.md`, H3986)
 ## [1.13.3] - 2026-09-02
 
 - docs: Cologne codebase improvement map 2026-09 — prior-art status sweep, 22 verified gaps, ranked roadmap ([#201](https://github.com/sanskrit-lexicon/csl-observatory/pull/201), H3884)
