@@ -1,0 +1,37 @@
+candidate,target,scoring,estimate,chapman,ratio,ci_low,ci_high,in_ci,p25,p75,iq_ratio,reps_defined,verdict
+C0 Chapman (control),bur,loo,17247,17247,1.0,12517,21977,1,,,,,QUALIFIES
+C1 Chao2 (two-era),bur,loo,17600,17247,1.02,12517,21977,1,,,,,DOES NOT QUALIFY
+C2 Chao2 (correctors),bur,loo,19776,17247,1.147,12517,21977,1,,,,,DOES NOT QUALIFY
+C3a Pooled prevalence,bur,loo,10503,17247,0.609,12517,21977,0,,,,,DOES NOT QUALIFY
+C3b EB shrinkage,bur,loo,17388,17247,1.008,12517,21977,1,,,,,QUALIFIES
+C4 Density extrapolation,bur,loo,6039,17247,0.35,12517,21977,0,,,,,DOES NOT QUALIFY
+C0 Chapman (control),mw,loo,60997,60997,1.0,51233,70761,1,,,,,QUALIFIES
+C1 Chao2 (two-era),mw,loo,93993,60997,1.541,51233,70761,0,,,,,DOES NOT QUALIFY
+C2 Chao2 (correctors),mw,loo,132292,60997,2.169,51233,70761,0,,,,,DOES NOT QUALIFY
+C3a Pooled prevalence,mw,loo,208007,60997,3.41,51233,70761,0,,,,,DOES NOT QUALIFY
+C3b EB shrinkage,mw,loo,61722,60997,1.012,51233,70761,1,,,,,QUALIFIES
+C4 Density extrapolation,mw,loo,181935,60997,2.983,51233,70761,0,,,,,DOES NOT QUALIFY
+C0 Chapman (control),pw,loo,67852,67852,1.0,59196,76509,1,,,,,QUALIFIES
+C1 Chao2 (two-era),pw,loo,157864,67852,2.327,59196,76509,0,,,,,DOES NOT QUALIFY
+C2 Chao2 (correctors),pw,loo,64987,67852,0.958,59196,76509,1,,,,,DOES NOT QUALIFY
+C3a Pooled prevalence,pw,loo,121551,67852,1.791,59196,76509,0,,,,,DOES NOT QUALIFY
+C3b EB shrinkage,pw,loo,68127,67852,1.004,59196,76509,1,,,,,QUALIFIES
+C4 Density extrapolation,pw,loo,92526,67852,1.364,59196,76509,0,,,,,DOES NOT QUALIFY
+C0 Chapman (control),bur,censored,14918,17247,0.865,,,,11788,18509,1.57,400,QUALIFIES
+C1 Chao2 (two-era),bur,censored,17820,17247,1.033,,,,13633,19776,1.45,400,DOES NOT QUALIFY
+C2 Chao2 (correctors),bur,censored,19776,17247,1.147,,,,19776,19776,1.0,400,DOES NOT QUALIFY
+C3a Pooled prevalence,bur,censored,10596,17247,0.614,,,,10555,10628,1.01,400,DOES NOT QUALIFY
+C3b EB shrinkage,bur,censored,16232,17247,0.941,,,,12784,19776,1.55,400,QUALIFIES
+C4 Density extrapolation,bur,censored,6039,17247,0.35,,,,6039,6039,1.0,400,DOES NOT QUALIFY
+C0 Chapman (control),mw,censored,51352,60997,0.842,,,,41045,65854,1.6,400,QUALIFIES
+C1 Chao2 (two-era),mw,censored,93845,60997,1.539,,,,70826,123552,1.74,397,DOES NOT QUALIFY
+C2 Chao2 (correctors),mw,censored,132292,60997,2.169,,,,132292,132292,1.0,400,DOES NOT QUALIFY
+C3a Pooled prevalence,mw,censored,205554,60997,3.37,,,,204306,206315,1.01,400,DOES NOT QUALIFY
+C3b EB shrinkage,mw,censored,68458,60997,1.122,,,,54799,87231,1.59,400,QUALIFIES
+C4 Density extrapolation,mw,censored,181935,60997,2.983,,,,181935,181935,1.0,400,DOES NOT QUALIFY
+C0 Chapman (control),pw,censored,55712,67852,0.821,,,,46279,75438,1.63,400,QUALIFIES
+C1 Chao2 (two-era),pw,censored,155408,67852,2.29,,,,125137,170556,1.36,395,DOES NOT QUALIFY
+C2 Chao2 (correctors),pw,censored,64987,67852,0.958,,,,64987,64987,1.0,400,DOES NOT QUALIFY
+C3a Pooled prevalence,pw,censored,120374,67852,1.774,,,,119794,121224,1.01,400,DOES NOT QUALIFY
+C3b EB shrinkage,pw,censored,66198,67852,0.976,,,,54796,90372,1.65,400,QUALIFIES
+C4 Density extrapolation,pw,censored,92526,67852,1.364,,,,92526,92526,1.0,400,DOES NOT QUALIFY

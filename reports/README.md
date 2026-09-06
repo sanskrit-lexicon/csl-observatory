@@ -1,4 +1,4 @@
-_Created: 05-06-2026 · Last updated: 05-09-2026_
+_Created: 05-06-2026 · Last updated: 06-09-2026_
 
 # Observatory reports
 
@@ -53,6 +53,7 @@ released resource, NLP baselines, and a validation suite. Design:
 | [`obs_t_issuelabel.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_t_issuelabel.md) | `obs_t_issuelabel.py` | Independent issue-typing corroborates: surface/text 65.6% vs content 17.1% |
 | [`error_recapture.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/error_recapture.md) | `error_recapture.py` · `headword_linkage.py` | Two-era Chapman capture–recapture on a measured linkage ladder (`form_key`): recaptures pw 196 · mw 131 · bur 44 · cae 13; caps from all 44 csl-orig v02 record counts |
 | [`corrector_recapture.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/corrector_recapture.md) | `corrector_recapture.py` | Within-era design — correctors as capture occasions, pairwise Chapman + Chao2; gives `pwg` its first population estimate (~26,515) |
+| [`error_recapture_lowm.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/error_recapture_lowm.md) | `lowm_estimators.py` | Do any estimators survive the m < 10 floor? Four candidate families scored against pw/mw/bur under a pre-registered rule: every strength-borrowing one fails (×0.35–×3.4), because prevalence spans ×4.1. The floor is a precision convention, not a boundary — the measured median shift (×0.54 at m=1) divides out and gives 5 dictionaries their first bounded estimate; 26 with m=0 stay unreachable. **Run before `error_recapture.py`**, which reads its output |
 | [`record_linkage_rejected_alternatives.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/record_linkage_rejected_alternatives.md) | — (documentation) | The keys that were tried and rejected: edit-distance-1 (rejected twice, independently), full diacritic folding, and the `<L>` join — **64% of form-era `<L>` codes have drifted**, so an L-number join is unsafe outside pw/mw |
 
 Human-gated (awaiting annotation): `python scripts/obs_t_gold.py --make`,
