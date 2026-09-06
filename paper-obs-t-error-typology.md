@@ -1,4 +1,4 @@
-_Created: 13-06-2026 · Last updated: 05-09-2026_
+_Created: 13-06-2026 · Last updated: 06-09-2026_
 
 # Surface, Not Substance: A Two-Axis Error Typology of Twelve Years of Correction to the Cologne Digital Sanskrit Lexicon
 
@@ -33,18 +33,17 @@ ORCID: 0000-0003-4513-884X
 
 ## Abstract
 
-We present a twelve-year, **52,498-event** corpus of corrections to the Cologne Digital
+I present a twelve-year, **52,498-event** corpus of corrections to the Cologne Digital
 Sanskrit Lexicon (CDSL — 43 dictionaries, 208 named correctors, 2014–2026) and a
 **two-axis typology** of the errors those corrections repair. Unifying a 2014–2019
-correction-form archive with the 2019–2026 source git history, we normalise every edit
+correction-form archive with the 2019–2026 source git history, I normalise every edit
 to IAST — which requires resolving the form archive's mixed Devanagari/Harvard-Kyoto
 encoding, a finding in itself — and describe each correction on two orthogonal axes: its
 **location** in the dictionary microstructure (headword, sense, citation, markup, …),
 recovered by joining the edit to the XML-tagged source, and its **edit-type** (spelling,
 punctuation, spacing, diacritic, …), read from a character-level edit-operation trace.
-The two axes are genuinely orthogonal: a location-join and an edit-type heuristic that a
-naïve single-axis design conflated agree only 0.1 % of the time, a near-zero we show to
-be structural, not noise. Three results follow. **(H1)** Corrections concentrate first in
+The two axes are orthogonal: a location-join and an edit-type heuristic that a
+naïve single-axis design conflated agree only 0.1 % of the time, a near-zero I show to be structural, not noise. Three results follow. **(H1)** Corrections concentrate first in
 **sense** (52.7 % of located edits), with markup, headword, and citation as the next tier;
 the median edit distance is 2, but minor-edit rates vary sharply by location (headword
 85.6 %, sense 38.2 %, markup 5.2 %). **(H2)** The location profile differs sharply by
@@ -55,11 +54,9 @@ signal led by *b*/*v* emerges. The location codebook is validated by a blind
 cross-model double annotation of a frozen 390-event sample: Cohen κ = 0.906
 (95 % CI 0.872–0.938) between two LLM annotators from different model families —
 agreement that licenses the codebook as executable and its labels as stable, not as
-human-validated ground truth. We release the
-corpus with per-event evidence labels, three crosswalk typologies (ERRANT, OCR, Katre
+human-validated ground truth. I release the corpus with per-event evidence labels, three crosswalk typologies (ERRANT, OCR, Katre
 textual-criticism), a temporal train/test split, and reference baselines for error
-detection, correction and type classification. The central interpretive caveat is stated
-plainly: these are *corrected* events — a measure of curatorial attention — not a raw
+detection, correction and type classification. One caveat governs every reading: these are *corrected* events — a measure of curatorial attention — not a raw
 error rate.
 
 **Keywords:** error typology; digital lexicography; Sanskrit; correction corpus;
@@ -79,19 +76,19 @@ collection regimes (a public correction form, then a source git repository), for
 dictionaries and several hundred contributors. This paper assembles it into a single
 typed corpus and reads an error typology off it.
 
-The analysis is enabled by a data advantage particular to this project: we hold both the
+The analysis is enabled by a data advantage particular to this project: I hold both the
 corrections **and** the XML-tagged source files (`csl-orig`) locally, so each edit can be
 located inside the dictionary microstructure it repairs — a headword versus a definition
 versus a source citation — rather than treated as an undifferentiated string change. That
 single capability is what turns a changelog into a typology.
 
-Our contributions are: (i) a unified, IAST-normalised, evidence-labelled corpus of 52,498
+My contributions are: (i) a unified, IAST-normalised, evidence-labelled corpus of 52,498
 correction events with full provenance across five data layers (§3); (ii) a **two-axis
-typology** — *location* × *edit-type* — whose orthogonality we establish empirically
+typology** — *location* × *edit-type* — whose orthogonality I establish empirically
 (§4); (iii) three tested findings on the shape, dictionary-dependence and diachrony of the
 error profile (§5); and (iv) a released language resource with a temporal split and
 reference baselines for Sanskrit error detection, correction and type classification (§6).
-Throughout, we keep one caveat in view and return to it in §7: the corpus measures
+Throughout, I keep one caveat in view and return to it in §7: the corpus measures
 *corrected* errors — where curators chose to act — not the latent error rate of any
 dictionary.
 
@@ -108,22 +105,20 @@ operation × part-of-speech scheme; the OCR/digitisation literature types by
 substitution/segmentation/reading-order; classical textual criticism (Katre 1941) types
 by omission/addition/substitution/transposition. Each is a *kind-of-change* taxonomy. The
 dictionary adds a second, orthogonal question those schemes do not ask — *which part of
-the entry* was repaired — and we show (§4.3) that collapsing the two into one column,
-as our own first design did, is a measurable error. We therefore report the typology as
+the entry* was repaired — and I show (§4.3) that collapsing the two into one column, as my own first design did, is a measurable error. I therefore report the typology as
 two axes and crosswalk the edit-type axis to all three external schemes so reviewers from
 any tradition can read it.
 
 **Adjacent correction corpora.** The nearest NLP resources are the English
 grammatical-error corpora — the Cambridge Learner Corpus (Yannakoudakis et al. 2011),
 the CoNLL-2014 shared task (Ng et al. 2014), and BEA-2019 (Bryant et al. 2019) — whose
-parallel old/new pairs OBS-T's event schema mirrors, though our errors arise from OCR
+parallel old/new pairs OBS-T's event schema mirrors, though the errors here arise from OCR
 artifacts, transliteration inconsistency and a multi-script transcription history rather
 than from learner grammar. OCR gold standards for historical documents (Springmann et
 al. 2016; Clematide et al. 2016) share the concern with character-level noise but
 operate at document level, without the entry-microstructure attribution that makes a
 correction record readable as lexicography; Piotrowski (2012) identifies the
-multi-script polyglot entry as the hardest class for automated processing — exactly the
-CDSL record type. Digital-humanities correction logs (the DTA base format, Haaf et al.
+multi-script polyglot entry as the hardest class for automated processing, which is the CDSL record type. Digital-humanities correction logs (the DTA base format, Haaf et al.
 2015; OCR4all, Reul et al. 2019) maintain comparable provenance chains for historical
 German printing. On the lexicographic side, the structured-release formalisms of the
 wordnet and OntoLex-Lemon communities (Bond and Paik 2012; McCrae et al. 2012) frame
@@ -134,21 +129,20 @@ the *error signal* in their digitisation history.
 
 **Post-correction lineage for the edit-type axis.** Because Axis B classifies *kind of
 change* rather than *location*, it inherits directly from the OCR/digitisation
-post-correction literature rather than from lexicography — and that literature has
-converged on exactly the error granularity Axis B reports (spelling, diacritic, case,
+post-correction literature rather than from lexicography — and that literature has converged on the error granularity Axis B reports (spelling, diacritic, case,
 spacing, punctuation, digit, transposition). Richter et al. (2018) correct a
 low-resource historical corpus (Faroese) with a character-level HMM decoded by a
 modified Viterbi search, escalating only the harder residual cases to a small set of
 targeted heuristics — a two-tier design (cheap channel model first, human/heuristic
 effort where it counts) that reduced word error rate from 7.6% to 1.3% at roughly 65
-human-hours, directly comparable in spirit to our own edit-op trace plus crosswalk
+human-hours, comparable in spirit to my own edit-op trace plus crosswalk
 fallback. Lyu et al. (2021) instead learn the character-substitution channel end-to-end
 with a recurrent+convolutional network and a correction-aware loss. Both pre-date large
 language models; more recently, Thomas et al. (2024) show an instruction-tuned Llama 2
 correcting historical newspaper OCR at a 54.5% character-error-rate reduction against
 23.3% for a fine-tuned BART baseline on BLN600, and Boros et al. (2024) benchmark
 fourteen foundation LLMs across post-correction tasks spanning languages, periods, and
-document types. We read this lineage specifically as *prior art for what a corrector
+document types. I read this lineage as *prior art for what a corrector
 looks like once an error is typed* — the CDSL is not OCR-sourced, but a large share of
 its correction events (the spelling/diacritic/case/spacing/punctuation clusters that
 dominate Axis B, §5.3) are the same class of small, local, channel-model-tractable
@@ -206,7 +200,7 @@ whose identity is not attested remain separate labels rather than being guessed.
 Normalising the form archive to IAST is not a formality. The form cells are
 **mixed-encoding across dictionaries** — some correctors typed Devanagari, others
 Harvard-Kyoto romanisation (`bharahezaravRtti` = *bharaheśaravṛtti*), while the
-`csl-orig` sources are SLP1. We route Devanagari runs and HK-looking roman tokens through
+`csl-orig` sources are SLP1. I route Devanagari runs and HK-looking roman tokens through
 two self-contained transliterators to a common IAST (NFC for display, NFD for
 diacritic-level edit operations). The heterogeneity is itself a result: a single
 historical correction archive can carry three transliteration systems, and any
@@ -216,7 +210,7 @@ cross-dictionary statistic that does not unify them first will mis-segment the e
 
 ### 4.1 The edit-operation trace
 
-For every event we compute a Damerau–Levenshtein alignment over **NFD** characters — so a
+For every event I compute a Damerau–Levenshtein alignment over **NFD** characters — so a
 diacritic is its own combining character and therefore its own edit — yielding a typed op
 list (`sub`/`ins`/`del`/`transpose` × `diacritic`/`vowel`/`consonant`/`whitespace`/
 `punctuation`/`digit`/…). This trace drives both the edit-type axis and the three external
@@ -229,7 +223,7 @@ Each event is attributed to the microstructure component it repairs by joining t
 headword, `<lex>` → grammar, `<ls>` → citation, definition prose → sense, tag delimiters
 → markup, …). On the **git layer the join is 100 % positional** — the changed source line
 carries its own tags — so location is read off directly. On the **form layer only 28.8 %
-join**, for two legacy-data reasons we report rather than hide: the form's "L-code" cell
+join**, for two legacy-data reasons: the form's "L-code" cell
 is free text, and the 2014-era sequential record ids have **drifted** against today's
 sources (a form pointer to record 4477 once meant *utkaṇṭhā*; that slot now holds
 *utkalaṃ*). Location is reported on **derived labels only** — join failures are labelled
@@ -237,7 +231,7 @@ sources (a form pointer to record 4477 once meant *utkaṇṭhā*; that slot now
 
 ### 4.3 Why two axes, established empirically
 
-Our first design used a single "component" column, filling it from the location-join where
+My first design used a single "component" column, filling it from the location-join where
 possible and from an edit-type heuristic otherwise. A human-free reliability check exposed
 the mistake: on the 5,634 form events where both signals are available, they agree only
 **0.1 %** of the time (5 of 5,634 = 0.089 %; [`obs_t_silver.json`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_t_silver.md)).
@@ -245,8 +239,7 @@ That near-zero is structural — the join answers *where* (a headword typo → `
 while the heuristic answers *what kind* (a typo → `orthography`); they disagree because
 they measure different things. The fix is the two-axis design: derive **location** from
 the source join, keep **edit-type** in its own axis and in the ERRANT/OCR crosswalks, and
-never file a type value into the location column. The 0.1 % is thus not a data-quality
-failure but the measurement that justifies the paper's central methodological move.
+never file a type value into the location column. The 0.1 % is thus the measurement that justifies the paper's central methodological move, not a data-quality failure.
 
 ### 4.4 Crosswalks
 
@@ -254,14 +247,14 @@ The edit-type axis is additionally typed under three external schemes from the s
 trace: **ERRANT** (operation × unit), **OCR/digitisation** (substitution / segmentation /
 insertion / deletion / transposition), and **textual criticism** (Katre 1941:
 substitution / omission / addition / transposition, plus haplography / dittography /
-metathesis). One corpus, four readings.
+metathesis). One corpus thus admits four readings.
 
 ### 4.5 Evaluation lineage
 
 OBS-T label validation, its confusion/alignment analysis (§4.3), and any future
 cross-dictionary sense/headword mapping are instances of the ELEXIS/GlobaLex
 **Monolingual Word Sense Alignment (MWSA)** shared-task family (Ahmadi et al. 2020). Rather
-than invent a bespoke validation method, we adopt the MWSA evaluation contract — a **frozen
+than invent a bespoke validation method, I adopt the MWSA evaluation contract — a **frozen
 gold sample, two annotators, Cohen's κ, and per-class precision/recall/F1** — for the
 gold-annotation gate described in §8. The harness
 ([`scripts/obs_t_gold.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/obs_t_gold.py))
@@ -274,8 +267,7 @@ content routes to *csl-atlas*, with OBS-T keeping only the process metrics.
 
 The validation instrument is a frozen, stratified 390-event sample
 ([`validation/gold_sample.csv`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/validation/gold_sample.csv)),
-drawn by `source_layer` × `evidence_level` under the MWSA-style contract of §4.5. Its
-provenance is stated plainly: the sample's original `gold_component` column was filled
+drawn by `source_layer` × `evidence_level` under the MWSA-style contract of §4.5. Its provenance is as follows: the sample's original `gold_component` column was filled
 in a single machine first pass (a rule-based classifier, LLM-assisted) — no human
 annotated it at any point. Its 0.29 agreement with the automatic attribution is
 therefore a *consistency* figure between two heuristic processes on the historical
@@ -292,8 +284,7 @@ different model families — Opus 4.8 (`claude-opus-4-8`) and Sonnet 5
 with all label columns and notes stripped from the input and row order shuffled.
 Cross-model agreement on the 8-value location axis is **Cohen κ = 0.906 (95 %
 bootstrap CI 0.872–0.938, 2,000 resamples; raw agreement 92.8 %, 362/390)**; at the
-pre-registered coarser 4-group granularity κ = 0.896 [0.855–0.935]. Label stability
-was measured, not assumed: over three repeated runs on a fixed 30-row subsample the
+pre-registered coarser 4-group granularity κ = 0.896 [0.855–0.935]. Label stability was also measured: over three repeated runs on a fixed 30-row subsample the
 flip-rate was 4.4 % and 5.6 % per annotator, below the pre-registered 10 % threshold.
 The κ gate, granularity ladder, seeds and annotator models were pre-registered and
 committed before either pass ran; the 28 disagreement rows and full statistics are
@@ -389,8 +380,7 @@ are where edits are structural — re-tagging or re-sourcing — and so span mor
 Location is not independent of dictionary. A chi-square test of location × dictionary
 (top 15 by volume, derived labels) gives χ² = 26,192.5, dof = 70. Row-level p-values
 are descriptive because events cluster by commit/campaign; the effect size is
-**Cramér's V = 0.432** (commit-block bootstrap CI [0.407, 0.482]). Dictionaries differ in *where* their errors sit, not
-merely how many they have — a fingerprint, not just a count.
+**Cramér's V = 0.432** (commit-block bootstrap CI [0.407, 0.482]). Dictionaries differ in *where* their errors sit and not merely in how many they have; the location profile is a fingerprint, not just a count.
 
 ### 5.6 H3 — the profile shifts over twelve years
 
@@ -419,7 +409,7 @@ dictionaries with ≥ 30 events — and read over the full 43-dictionary table t
 ≈**4.5–160.8 per 1,000 entries**: 160.8 (PGN) and 91.4 (BUR) at the top, down to 4.48
 (mwe, 145 events) at the floor, with PUI (~56) nowhere near the bottom of the range.
 PW, the largest dictionary, carries the most raw events (13,662) at 80.1 per
-1,000. We stress in §7 that high density reflects curatorial attention as much as latent
+1,000. I stress in §7 that high density reflects curatorial attention as much as latent
 error.
 
 ### 5.8 Crosswalks and the character-confusion signal
@@ -429,14 +419,13 @@ Read through the external schemes, the same edits distribute as: **OCR** — sub
 — addition 20,546, substitution 15,246, omission 14,260, with the classical
 metathesis/haplography/dittography tail (491 / 496 / 231). The clean form-layer phoneme
 signal is led by **b → v** (341), the classic Sanskrit orthographic merger, followed by
-*k*/*t*, *s*/*m* and a retroflex-and-diacritic repair cluster — exactly the confusions a
-Sanskrit OCR or spell-checker should target first.
+*k*/*t*, *s*/*m* and a retroflex-and-diacritic repair cluster: the confusions a Sanskrit OCR or spell-checker should target first.
 
 ### 5.9 Who repairs what
 
 Correction labour is concentrated: **Jim Funderburk** (35,057 events, mostly sense) and
 **Dhaval Patel** (8,248, sense) account for the large majority, with a long tail of named
-volunteers (the present author among them at 445, mostly headword). The process detail —
+volunteers (I am among them, at 445, mostly headword). The process detail —
 latency, throughput, the contributor network's growth — is the subject of the OBS-Q
 companion.
 
@@ -447,12 +436,11 @@ The corpus is released as
 with a Gebru-style datasheet
 ([`docs/DATASHEET.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/DATASHEET.md)),
 per-event evidence labels, the three crosswalk columns, and a **temporal split** (train on
-the past, test on recent edits) under **CC-BY-4.0**. It supports three tasks, for which we
-give stdlib-only **reference baselines** that define the task rather than tune a system
+the past, test on recent edits) under **CC-BY-4.0**. It supports three tasks, for which I give stdlib-only **reference baselines** that define the task rather than tune a system
 ([`obs_t_baselines.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_t_baselines.md)):
 
 1. **Error detection** — does a character-trigram LM prefer the corrected form? Pairwise
-   accuracy **0.516** (chance 0.5): the task is hard precisely because old and new differ
+   accuracy **0.516** (chance 0.5): the task is hard because old and new differ
    by a single character.
 2. **Error correction** — a Norvig-style noisy-channel edit-1 model reaches acc@1 **0.059**,
    with 78.7 % of test errors within its edit-distance-1 reach.
@@ -463,7 +451,7 @@ give stdlib-only **reference baselines** that define the task rather than tune a
 These low numbers are the point of a baseline: they establish headroom for the neural
 sequence models the resource is meant to enable.
 
-**DOI.** ✅ Minted: concept DOI [`10.5281/zenodo.21346705`](https://doi.org/10.5281/zenodo.21346705)
+**DOI.** Minted: concept DOI [`10.5281/zenodo.21346705`](https://doi.org/10.5281/zenodo.21346705)
 (version DOI `10.5281/zenodo.21965649`, published 2026-08-16, CC-BY-4.0). The DOI
 previously recorded for this dataset (`10.5281/zenodo.15834721`) was **false** — it
 resolved to an unrelated preprint (confirmed by a live Zenodo check, 20-07-2026); the
@@ -475,16 +463,13 @@ repo-wide sweep to the genuine DOI landed 24-08-2026 (`scripts/fix_obs_t_doi.py`
 records *corrected* events — where curators looked and acted — not a dictionary's latent
 error rate. A dictionary with high correction density (§5.7) may be **better** maintained,
 not worse; the falling-headword trend (§5.6) reflects a finished campaign, not improving
-typists. Every share in this paper is a share of curatorial attention. We state this
-because the alternative reading — "PGN is the buggiest dictionary" — is both tempting and
+typists. Every share in this paper is a share of curatorial attention. I state this because the alternative reading — "PGN is the buggiest dictionary" — is both tempting and
 wrong.
 
 **Surface dominance has a lesson for QA.** That corrections are overwhelmingly small
 surface edits, even in the definition and headword fields (§5.4), means the highest-yield
-automated quality tooling for digital Sanskrit lexicography is **not** semantic — it is
-spelling, spacing, punctuation and diacritic normalisation, targeted by the
-character-confusion profile of §5.8. The error mass is where a transducer can reach it —
-which is precisely the class of corrector the OCR/digitisation post-correction lineage
+automated quality tooling for digital Sanskrit lexicography is not semantic; it is spelling, spacing, punctuation and diacritic normalisation, targeted by the
+character-confusion profile of §5.8. The error mass is where a transducer can reach it, which is the class of corrector the OCR/digitisation post-correction lineage
 (§2) was built for, from channel-model HMMs (Richter et al. 2018) through LLM-based
 correctors (Thomas et al. 2024; Boros et al. 2024).
 
@@ -516,22 +501,19 @@ meaning-changing correction that happens to be one character (a wrong vowel that
 lemma) is counted as a small edit; the "surface, not substance" claim is about edit *size*
 and *location*, not a claim that no correction ever changes meaning.
 
-**Coverage gaps.** PW's top location is `unattributed` (form-era, unjoined), so its dense
-density figure is real but its location mix is partly unknown; dictionaries below the
+**Coverage gaps.** PW's top location is `unattributed` (form-era, unjoined), so its density figure is real but its location mix is partly unknown; dictionaries below the
 ≥ 30-event floor are omitted from the density and dictionary-difference tests.
 
 ## 9. Conclusion
 
-Twelve years of correcting the Cologne Digital Sanskrit Lexicon resolve into a clear and
-slightly surprising picture: the corrections cluster exactly where meaning lives — in
+Twelve years of correcting the Cologne Digital Sanskrit Lexicon answer the question the introduction posed (what was wrong, where, and how that changed) with one picture: the corrections cluster where meaning lives — in
 definitions and headwords — yet are almost entirely small surface repairs, they form a
 per-dictionary fingerprint rather than a uniform noise floor, and that fingerprint has
 visibly shifted as the project's curatorial priorities moved from headwords to structure.
-We release the corpus, its two-axis typology (location codebook validated at
+I release the corpus, its two-axis typology (location codebook validated at
 cross-model κ = 0.906), three crosswalk readings and reference
 baselines as a language resource for Sanskrit error detection and correction — with the
-standing caveat that it measures the repairs a community chose to make, which is a
-different and more human thing than a list of a dictionary's mistakes.
+standing caveat that it measures the repairs a community chose to make, which is a different and more human record than a list of a dictionary's mistakes.
 
 ---
 
@@ -639,6 +621,7 @@ the retired one-axis draft
 with every count restated to the released 52,498-event snapshot. Target venue:
 LREC-COLING (IJL alternate). Pending human steps: byline confirmation, genuine Zenodo
 DOI mint (§6), expert review of the encoding ↔ orthography boundary rows (§8),
-read-and-sign.*
+read-and-sign;
+author-voice pass 06-09-2026 ([SIGNOFF_A12_author_pass.md](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/SIGNOFF_A12_author_pass.md)).*
 
 _Dr. Mārcis Gasūns_
