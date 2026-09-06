@@ -1,37 +1,38 @@
-_Created: 07-05-2026 · Last updated: 05-09-2026_
+_Created: 07-05-2026 · Last updated: 06-09-2026_
 
 # What Repositories Forget: Reconstructing CDSL's Transition from Institutional Project to Distributed Infrastructure
 
 > **Mārcis Gasūns**
 >
-> Sanskrit Zealots' Society / Russia, Obninsk
+> Sanskrit Zealots' Society, Obninsk, Russia
 >
-> gasyoun@gmail.com
+> ORCID 0000-0003-4513-884X · gasyoun@ya.ru
 
 ## Abstract
 
-The Cologne Digital Sanskrit Lexicon (CDSL), initiated at the University
-of Cologne in 1994, left two very unequal historical records. Its first
-twenty years survive chiefly in published reports, files, correspondence,
-and participant memory; its public GitHub record begins only in 2014.
-This article examines what is gained and lost when the history of a
-scholarly infrastructure is reconstructed from repositories.
+The Cologne Digital Sanskrit Lexicon (CDSL), begun at the University of
+Cologne in 1994, has left two very unequal historical records. Its first
+twenty years survive chiefly in published reports, files, correspondence
+and the memory of participants; its public GitHub record begins only in
+2014. I ask what is gained and what is lost when the history of a
+scholarly infrastructure is reconstructed from its repositories.
 
-Repository evidence is excellent for tracing public workflow—versions,
-corrections, issue coordination, and the distribution of implementation—
-but poor at recovering negotiation, tacit maintenance, failed experiments,
-and informal scholarly credit. Exact quantitative claims therefore belong
-to the companion synthesis A61 and its frozen `a61-history-v1.0` evidence
-release. Here the differing totals are themselves a methodological result:
-78 repositories in the June 2026 API inventory are not the same population
-as 76 repositories in transformed activity tables; 208 OBS-T corrector
-labels are not 208 known people; and the sixteen non-bot Git identities do
-not enumerate everyone who helped CDSL historically.
+Repository evidence traces public workflow well: versions, corrections,
+the coordination of issues, and how implementation was distributed. It
+recovers negotiation, tacit maintenance, failed experiments and informal
+scholarly credit poorly. Exact quantitative claims therefore belong to
+the companion synthesis A61 and its frozen `a61-history-v1.0` evidence
+release. Here the differing totals are themselves a methodological
+result: the 78 repositories of the June 2026 API inventory are not the
+same population as the 76 repositories of the transformed activity
+tables; 208 OBS-T corrector labels are not 208 known people; and the
+sixteen non-bot Git identities do not enumerate everyone who has helped
+CDSL over the years.
 
 Using the transition from founder-led institutional production to
-distributed infrastructure as its case, the article shows that public
-versioning made work more recoverable without making authority or labour
-fully distributed. The repository is thus both an archive of collaboration
+distributed infrastructure as my case, I show that public versioning
+made work more recoverable without making authority or labour fully
+distributed. The repository is thus both an archive of collaboration
 and a biased instrument: it illuminates the period after 2014 precisely
 where it casts the earlier project into shadow.
 
@@ -43,25 +44,24 @@ archival silence; maintenance; crowdsourcing.
 
 ## Introduction
 
-At the 37th ICANAS, held in 2004 in Moscow, under the aegis of the
+It was at the 37th ICANAS, held in Moscow in 2004 under the aegis of the
 Institute of Oriental Studies (IOS) of the Russian Academy of Sciences,
-was the first time I met Peter Scharf's book Ramopakhyana, printed in
-2002. First, it occurred to me how a Sanskrit reader should be made,
-including traditional and detailed classification of compounds. Second,
-I met there with prominent Japanese and Indian Indologists, and sitting
-in the restaurant after one of the sessions a small talk burned the
-bridges. They said that both of them are making marginal notes on their
-copies of Monier-Williams (MW) dictionaries. I understood that there
-exist many private lists with corrections and additions for Sanskrit
-dictionaries that will never see the light of day. Dust is what they
-will gather, not attention. And that work should be centralized at least
-partly, gathering such marginal notes. Now, after twenty years, I must
-admit we are not a single step closer. But we are getting ready. There
-is still no Wiki-format dictionary of Sanskrit, where one could add a
-meaning or quote and get verified and validated by the scholar
-community. That was the day Dr. Peter Scharf and Sir Monier-Williams
-changed the very way I think about Sanskrit studies. Changed once and
-forever.
+that I first met Peter Scharf's book Ramopakhyana, printed in 2002.
+First, it occurred to me how a Sanskrit reader should be made, including
+a traditional and detailed classification of compounds. Second, I met
+there prominent Japanese and Indian Indologists, and a small talk in the
+restaurant after one of the sessions burned the bridges behind me. Both
+said they were making marginal notes on their copies of Monier-Williams
+(MW). I understood that there exist many private lists with corrections
+and additions for Sanskrit dictionaries that will never see the light of
+day. Dust is what they will gather, not attention. That work should be
+centralized, at least in part, by gathering such marginal notes. Now,
+after twenty years, I must admit we are not a single step closer. But we
+are getting ready. There is still no Wiki-format dictionary of Sanskrit,
+where one could add a meaning or a quotation and have it verified and
+validated by the scholarly community. That was the day Dr. Peter Scharf
+and Sir Monier-Williams changed the way I think about Sanskrit studies,
+once and forever.
 
 The Cologne Digital Sanskrit Dictionaries project is a long-term project
 (1994–) with one major aim: to be the ultimate place for validated
@@ -76,8 +76,8 @@ additional hyperlinks Cologne digital dictionaries will remain superior
 to other digital Sanskrit dictionary projects and it's our
 responsibility to keep up the standard and spread the word.
 
-Nowadays it's performed collaboratively without a complex organizational
-superstructure voluntarily, but lack of funding is slowing it
+Nowadays the work is done collaboratively and voluntarily, without any
+complex organizational superstructure, but lack of funding slows it
 drastically. As stated at the 10th International Sanskrit Conference in
 Bangalore (Kapp and Malten, 1997) almost 30 years ago:
 
@@ -118,9 +118,9 @@ shared milestone layer as `evidence_pending`; it is not used here as proof.
 This separation also changes the use of first-person evidence. Recollection
 has value when it identifies a decision, conflict, or missing archive that a
 repository cannot contain. It has little value as a second, unsourced route
-to facts already measurable from committed data. First-person passages below
-are therefore retained as situated evidence and argument, not as a substitute
-for the A61 audit.
+to facts already measurable from committed data. I therefore keep the
+first-person passages below as situated evidence and argument, not as a
+substitute for the A61 audit.
 
 ## Sanskrit Dictionaries
 
@@ -1248,25 +1248,29 @@ Sanskrit research in the upcoming millennia.
 
 ## Conclusion
 
-Repository history makes one part of CDSL unusually legible: after 2014 we can
-reconstruct documented correction traffic, public coordination, and the
-concentration of implementation. It makes another part easy to forget: the
-institutional negotiation, private correspondence, tacit server work, and
-uncommitted experiments from which that public record emerged.
+A history written from the repository sees one part of CDSL unusually
+well: after 2014 we can reconstruct the documented correction traffic, the public
+coordination, and the concentration of implementation. It forgets the
+other part: the institutional negotiation, the private correspondence,
+the tacit server work and the uncommitted experiments from which that
+public record emerged.
 
 The resulting history is neither a memoir nor a dashboard. A61 supplies the
-canonical synthesis and frozen measures. This article shows why those measures
-need archival boundaries and why first-person evidence matters only where it
-identifies decisions or silences the repository cannot recover. Taken together,
-the two papers describe a project that moved from founder-led production toward
-distributed infrastructure without becoming ownerless or labour-independent.
+canonical synthesis and the frozen measures. This article shows why those
+measures need archival boundaries, and why first-person evidence matters
+only where it identifies decisions, or silences, that the repository cannot
+recover. Read together,
+the two papers describe a project that moved from founder-led production
+toward distributed infrastructure without becoming ownerless or
+independent of labour.
 
-CDSL's decisive achievement is recoverability: a future group can obtain the
-sources, inspect the decisions, and continue correction without rebuilding the
-entire intellectual object from private archives. Its decisive historical
-warning is that recoverable data can coexist with concentrated authority. The
-next stage is not merely to preserve more records, but to widen the group able
-to interpret and act on them.
+CDSL's decisive achievement is recoverability: a future group can obtain
+the sources, inspect the decisions and continue the correction without
+rebuilding the whole intellectual object from private archives. Its
+decisive historical warning is that recoverable data can coexist with
+concentrated authority. The next stage is to widen the group able to
+interpret and act on the records we now have, not only to preserve more
+of them.
 
 ## Acknowledgements
 
@@ -1488,7 +1492,7 @@ MCI \* 1993 Mahabharata Cultural Index
 
 [^16]: Institute of Indology and Tamil Studies (IITS) does not exist any
     longer. Klaus Ludwig Janert was the first professor in Cologne, so
-    the department must have started in 1963. Ater him was Dieter B.
+    the department must have started in 1963. After him was Dieter B.
     Kapp and Ulrike Niklas. After 2006, Indology was reduced to Tamil
     studies and the Indology program became part of a weird composite
     'Cultures and languages of Asias' bachelor and masters program.
@@ -1542,7 +1546,7 @@ MCI \* 1993 Mahabharata Cultural Index
 [^36]: https://github.com/sanskrit-lexicon/csl-corrections/blob/master/dictionaries/mw/mw_printchange.txt
 
 [^37]: Humans usually can't read SLP1 easily, if you are not Jim
-    Fundeburk. It's meant for the bots between us. Indian volunteers
+    Funderburk. It's meant for the bots between us. Indian volunteers
     prefer Devanagari to IAST romanized transliteration. Russians and
     Westerners prefer IAST.
 
