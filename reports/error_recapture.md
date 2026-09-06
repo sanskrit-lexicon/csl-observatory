@@ -1,4 +1,4 @@
-_Created: 03-07-2026 · Last updated: 05-09-2026_
+_Created: 03-07-2026 · Last updated: 06-09-2026_
 
 # Capture-recapture: how much correction work is left?
 
@@ -36,7 +36,7 @@ Effect on the published figures — the same estimator, exact vs linked join:
 
 | Dict | m (exact) | m (linked) | N (exact join) | N (linked join) |
 |---|---:|---:|---:|---:|
-| pw | 169 | 196 | ~78,194 | ~67,866 |
+| pw | 169 | 196 | ~78,194 | ~67,852 |
 | mw | 105 | 131 | ~65,497 | ~60,997 |
 | cae | 1 | 13 | below threshold | ~40,069 (capped) |
 | bur | 23 | 44 | ~19,776 | ~17,247 |
@@ -46,17 +46,17 @@ Effect on the published figures — the same estimator, exact vs linked join:
 | Metric | Value |
 |---|---:|
 | Correction events analysed | 52,498 |
-| Distinct error sites observed (all 43 dicts) | 44,086 |
+| Distinct error sites observed (all 43 dicts) | 44,073 |
 | Dictionaries with enough overlap to estimate (m >= 10) | 4 |
-| Estimated error-site population (those dicts) | **~186,179** |
-| Sites already corrected there | 21,684 |
-| **Estimated error sites still uncorrected there** | **~164,495** |
+| Estimated error-site population (those dicts) | **~186,165** |
+| Sites already corrected there | 21,682 |
+| **Estimated error sites still uncorrected there** | **~164,483** |
 
 ## Per-dictionary estimates
 
 | Dict | Records | Form sites n1 | Git sites n2 | Recaptures m | Observed | N (Chapman) | 95% CI | Chao (heterogeneity scenario) | Remaining |
 |---|---:|---:|---:|---:|---:|---:|---|---:|---:|
-| **pw** | 170,556 | 9,758 | 1,369 | 196 | 10,931 | ~67,866 | 59,208-76,525 | 170,556 | **~56,935** |
+| **pw** | 170,556 | 9,756 | 1,369 | 196 | 10,929 | ~67,852 | 59,196-76,509 | 170,556 | **~56,923** |
 | **mw** | 286,525 | 1,443 | 5,575 | 131 | 6,887 | ~60,997 | 51,233-70,761 | 181,099 | **~54,110** |
 | **cae** | 40,069 | 1,824 | 339 | 13 | 2,150 | ~40,069 (capped) | 22,442-40,069 | 40,069 | **~37,919** |
 | **bur** | 19,776 | 877 | 883 | 44 | 1,716 | ~17,247 | 12,517-21,977 | 19,776 | **~15,531** |
@@ -69,9 +69,9 @@ Dictionaries below the overlap threshold (lower bound = observed sites only):
 
 | Dict | n1 | n2 | m | Observed (lower bound on N) |
 |---|---:|---:|---:|---:|
-| ccs | 3,411 | 44 | 2 | 3,453 |
-| pwg | 198 | 1,918 | 1 | 2,115 |
-| ap90 | 306 | 1,468 | 6 | 1,768 |
+| ccs | 3,404 | 44 | 2 | 3,446 |
+| pwg | 197 | 1,918 | 1 | 2,114 |
+| ap90 | 304 | 1,468 | 6 | 1,766 |
 | wil | 1,700 | 63 | 0 | 1,763 |
 | ap | 476 | 1,105 | 4 | 1,577 |
 | pd | 1,372 | 0 | 0 | 1,372 |
@@ -83,7 +83,7 @@ Dictionaries below the overlap threshold (lower bound = observed sites only):
 | skd | 502 | 124 | 2 | 624 |
 | gra | 351 | 235 | 6 | 580 |
 | yat | 290 | 250 | 0 | 540 |
-| sch | 95 | 405 | 0 | 500 |
+| sch | 94 | 405 | 0 | 499 |
 | acc | 178 | 283 | 0 | 461 |
 | bhs | 27 | 275 | 0 | 302 |
 | bop | 38 | 237 | 0 | 275 |
@@ -108,6 +108,14 @@ Dictionaries below the overlap threshold (lower bound = observed sites only):
 | pgn | 0 | 25 | 0 | 25 |
 | snp | 0 | 1 | 0 | 1 |
 
+### What the m >= 10 floor is, and what it is not
+
+That threshold has been tested against this corpus rather than assumed, by thinning the three dictionaries with an uncapped estimate until their recaptures fall below it and asking what the estimator then does: [`error_recapture_lowm.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/error_recapture_lowm.md) (`scripts/lowm_estimators.py`). Three results bear on how the table above should be read.
+
+1. **No estimator that borrows strength across dictionaries reproduces the known answers.** Pooled-prevalence and correction-density extrapolation — the two candidates that are defined where m = 0 — land between x0.35 and x3.4 of Chapman on pw, mw and bur, because error-site prevalence across those three spans a factor of 4.1 and exchangeability across dictionaries is therefore false. Chao2 over the two eras and Chao2 over correctors fail their own scorings (x1.02-x2.33 and x0.96-x2.17). **For the dictionaries with m = 0 the observed count in the table above is not a placeholder awaiting a better formula — it is the answer, as a lower bound.**
+2. **The floor is a precision convention, not an identifiability boundary.** Below it Chapman is median-shifted by a factor that depends on the sample size and barely on the dictionary (x0.54 at m = 1, x0.69 at m = 2, x0.88 at m = 5; the three agree to within 9% at every rung). Dividing that measured shift out yields corrected estimates with 5-95% bands for the dictionaries that have at least one recapture.
+3. **That correction reaches 5 of them** — `skd`, `stc`, `ae`, `mwe`, `inm` — in [`error_recapture_calibrated.csv`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/observatory/site/src/data/error_recapture_calibrated.csv). 7 more (`ccs`, `pwg`, `ap90`, `ap`, `ben`, `pui`, `gra`) have their corrected estimate capped at their own record count, which carries the same reading as cae above: treat the dictionary as unproofread, not as carrying a number.
+
 ## Sensitivity
 
 **(a) Site key with the error component.** Including `error_component` in the site key collapses recaptures (e.g. mw m 131 -> 44, pw m 196 -> 12) — but this reflects missing data, not substance: 77% of form-era events are component-unattributed (`evidence_level = inferred`), so component keys mismatch mechanically. The headword-level key is the honest unit.
@@ -116,7 +124,7 @@ Dictionaries below the overlap threshold (lower bound = observed sites only):
 
 | Dict | N (all events) | N (campaigns excluded) |
 |---|---:|---:|
-| pw | ~67,866 | ~68,232 |
+| pw | ~67,852 | ~68,232 |
 | mw | ~60,997 | ~53,132 |
 | cae | ~40,069 | ~29,798 |
 | bur | ~17,247 | ~5,082 |
@@ -125,8 +133,8 @@ Dictionaries below the overlap threshold (lower bound = observed sites only):
 
 ## Reading
 
-- The two eras overlap remarkably little: of 44,086 observed error sites org-wide, only a few hundred were touched in both eras. Under mark-recapture logic, low overlap between two substantial samples means the underlying population is LARGE: what has been corrected so far is a minority of what exists.
-- **pw**: ~67,866 error-prone records estimated = ~40% of its 170,556 records; 10,931 corrected so far = **~16% of the estimated work done**, ~56,935 records still awaiting a first correction (Chapman scenario; under heterogeneity the remaining share is larger).
+- The two eras overlap remarkably little: of 44,073 observed error sites org-wide, only a few hundred were touched in both eras. Under mark-recapture logic, low overlap between two substantial samples means the underlying population is LARGE: what has been corrected so far is a minority of what exists.
+- **pw**: ~67,852 error-prone records estimated = ~40% of its 170,556 records; 10,929 corrected so far = **~16% of the estimated work done**, ~56,923 records still awaiting a first correction (Chapman scenario; under heterogeneity the remaining share is larger).
 - **mw**: ~60,997 error-prone records estimated = ~21% of its 286,525 records; 6,887 corrected so far = **~11% of the estimated work done**, ~54,110 records still awaiting a first correction (Chapman scenario; under heterogeneity the remaining share is larger).
 - **cae**: ~40,069 error-prone records estimated (estimate capped at the full dictionary) = ~100% of its 40,069 records; 2,150 corrected so far = **~5% of the estimated work done**, ~37,919 records still awaiting a first correction (Chapman scenario; under heterogeneity the remaining share is larger).
 - **bur**: ~17,247 error-prone records estimated = ~87% of its 19,776 records; 1,716 corrected so far = **~10% of the estimated work done**, ~15,531 records still awaiting a first correction (Chapman scenario; under heterogeneity the remaining share is larger).
@@ -137,7 +145,7 @@ Dictionaries below the overlap threshold (lower bound = observed sites only):
 | Dict | Era | N (two-era, whole dictionary) | N (Chao2 over that era's correctors) |
 |---|---|---:|---:|
 | mw | git | ~60,997 | ~132,292 |
-| pw | form | ~67,866 | ~64,987 |
+| pw | form | ~67,852 | ~64,987 |
 | mw | form | ~60,997 | ~38,495 |
 | bur | git | ~17,247 | ~19,776 |
 
