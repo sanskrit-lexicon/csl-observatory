@@ -1,4 +1,4 @@
-_Created: 07-05-2026 · Last updated: 05-09-2026_
+_Created: 07-05-2026 · Last updated: 06-09-2026_
 
 ---
 title: "Methodological infrastructure of the Cologne Digital Sanskrit Dictionaries"
@@ -55,8 +55,8 @@ geometry: margin=2.5cm
 
 # 1. Introduction
 
-The Cologne Digital Sanskrit Dictionaries are presented in two voices in the
-present pair of articles. The narrative report by Gasūns (forthcoming) speaks
+The present pair of articles presents the Cologne Digital Sanskrit
+Dictionaries in two voices. The narrative report by Gasūns (forthcoming) speaks
 in the first person from a vantage of three decades of personal involvement;
 it traces the project from its origin in Thomas Malten's Cologne Indology
 seminar in 1994, through Peter Scharf's 2004 collaboration at Brown, the
@@ -147,7 +147,7 @@ cologne-stardict, csl-apidev, csl-corrections, csl-pywork, csl-websanlexicon,
 MWS, PWK, hwnorm1 [are the] most active [repositories]", and that "some of
 them will remain unsolved, but at least documented". In 2026 the project
 undertook a systematic triage of issues across its dictionary repositories,
-motivated by precisely this observation: an unresolved issue is more useful
+motivated by this observation: an unresolved issue is more useful
 than a deleted one, but only if it is classified, prioritised, and attached
 to a long-lived programme of work.
 
@@ -368,7 +368,7 @@ GitHub-default labels
 | `link-splitting` | 9 | 1.5 |
 | **total** | **608** | 100.0 |
 
-Three observations are warranted. First, `markup` and `content-enhancement`
+Three points follow. First, `markup` and `content-enhancement`
 together account for 47.2 percent of typed work, confirming the report's
 claim (in "Future Plans") that "the corpus revolution in lexicography has
 not yet reached
@@ -436,7 +436,7 @@ excluded from the table).
 | Haqob | `Haqob` | occasional | 2 | 1 | 2020 |
 | Thomas Malten | `maltenth` | core | 1 | 1 | 2021 |
 
-The picture is striking: a single contributor (Funderburk) has authored
+A single contributor (Funderburk) has authored
 60.7 percent of the project's captured commits over its entire GitHub
 history; a second
 contributor (Patel) has authored a further 31.0 percent. The remaining 47
@@ -447,7 +447,7 @@ of the initial team members are active now. The ship has lost its captain",
 and with the report's stated need to plan for the "transition to the orphan
 no-Jim mode".
 
-We note one caveat: the very low commit count attributed to Thomas Malten
+One caveat: the very low commit count attributed to Thomas Malten
 (a single 2021 commit) reflects only commits made under the GitHub login
 `maltenth` on the
 project's *current* GitHub branches; the foundational digitisation work
@@ -546,9 +546,9 @@ Sanskrit Analysis Tool" (under "Computer Programs"); "Digitization" =
 The general pattern is that the report's figures and our empirical
 counts are mutually consistent once the relevant unit is identified
 (lemma vs `<L>`-record vs definition character). The discrepancies are
-not errors; they are different valid measures of the same underlying
-corpus. A **figure of merit for cross-dictionary work**, in our view,
-should standardise on the lemma rather than the `<L>` record, because
+not errors but different valid measures of the same underlying corpus.
+A **figure of merit for cross-dictionary work**, in our view, should
+standardise on the lemma rather than the `<L>` record, because
 the `<L>` count is sensitive to internal markup choices (such as the
 alternate-headword expansion) that are not visible to the end
 user. The observatory will report both counts going forward.
@@ -721,7 +721,7 @@ are in the repository's `README.md` and `CONTRIBUTING.md`.
 
 # 7. Limitations
 
-Three limitations of the present analysis are explicit.
+We make three limitations of the present analysis explicit.
 
 **Commit-history pagination failures.** The GraphQL endpoint returned HTTP
 502 errors during commit-history pagination for several large repositories.
