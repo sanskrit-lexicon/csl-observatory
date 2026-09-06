@@ -7,6 +7,9 @@ All notable changes to this repository are documented here, following [Keep a Ch
 ## [Unreleased]
 <!-- entries land in changelog_queue/ -- appended via tools/changelog_queue_consume.py, consumed by cut_release.py at release-cut (H3355); direct bullets here are hook-blocked -->
 
+## [1.13.5] - 2026-09-06
+
+- docs(A48): publish the five calibrated below-floor bands as a separate table — MG ruling «в таблицу» (06-09-2026). [`article/A48_error_recapture.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/article/A48_error_recapture.md) gains a **Results tables** section: Table 1 restates the Chapman mark–recapture estimates (pw/mw/bur/cae), Table 2 carries `skd`/`stc`/`ae`/`mwe`/`inm` with the calibration's three-dictionary basis, its ×1.09 agreement band and its never-tested-against-a-fourth caveat in the caption rather than a footnote. Two tables deliberately, not one with a flag column: a calibrated band is arithmetic on a Chapman value, not an estimator's output (H4252)
 ## [1.13.4] - 2026-09-06
 
 - feat(recapture): below-floor estimator comparison + calibrated bands — four candidate families scored against pw/mw/bur under a pre-registered rule; every strength-borrowing estimator fails (×0.35–×3.4, prevalence spans ×4.1), the m ≥ 10 floor is shown to be a precision convention rather than a boundary, and the measured median shift gives 5 dictionaries their first bounded estimate while 26 with m = 0 are ruled unreachable (`scripts/lowm_estimators.py`, `reports/error_recapture_lowm.md`, H3986)
