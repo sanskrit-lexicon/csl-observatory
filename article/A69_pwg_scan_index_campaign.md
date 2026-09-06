@@ -1,12 +1,16 @@
 # Indexing 29,000 pages so a dictionary can cite them: the PWG scan-index campaign, 2025–2026
 
-_Created: 05-08-2026 · Last updated: 05-08-2026_
+_Created: 05-08-2026 · Last updated: 06-09-2026_
 
 **Status:** full draft (A69, readiness 3/5) — complete prose, needs human revision, byline
 and venue decisions. Drafted by Fable 5 (`claude-fable-5`) under
 [H1863](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1863-Fable_csl-observatory_pwg-scan-index-campaign-paper-draft_29.07.26.md);
 every number in this draft is traced to committed campaign data in this repository (§ Data
-availability), none is newly computed here.
+availability), none is newly computed here. Author-voice pass 06-09-2026
+([SIGNOFF_A69_author_pass.md](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/article/SIGNOFF_A69_author_pass.md)).
+
+Mārcis Gasūns, independent scholar
+([ORCID 0000-0003-4513-884X](https://orcid.org/0000-0003-4513-884X)), gasyoun@ya.ru
 
 ## Abstract
 
@@ -16,15 +20,15 @@ those references clickable if the printed editions they cite are page-indexed: f
 printed page, which verses does it carry, and which PDF page image shows it. Between
 January 2025 and July 2026, eight volunteers — coordinated entirely in public GitHub
 issues — page-indexed 55 printed editions, 28,963 pages in all, covering 73.7% of the
-citation mass the campaign tracked. This paper describes the campaign as a measured
-object: its coverage weighted by citation mass rather than page count, its per-volunteer
+citation mass the campaign tracked. I describe the campaign as a measured object: its
+coverage weighted by citation mass rather than page count, its per-volunteer
 throughput, its velocity and publication lag, the wiring status of the resulting 37
 public scan repositories, and the defects a static audit of the citation resolver found.
 Two process findings stand out. First, the quality-review loop caught almost no volunteer
 errors; what it caught, in volume, were errors in the dictionaries themselves, making the
 indexing campaign an unplanned dictionary-proofreading instrument. Second, the expensive
 failure mode was never a bad index but a wrong *edition* — citations that turned out to
-follow a different printed edition than the one indexed. We state plainly what the data
+follow a different printed edition than the one indexed. I state plainly what the data
 cannot support: the sheet's own citation counts have undocumented provenance and are used
 only as an internal ranking, never as a share of a dictionary-wide denominator.
 
@@ -43,11 +47,13 @@ printed page → verse range → PDF page, and resolver code that turns a citati
 into a URL. The scans and resolver are infrastructure; the index is labour — someone must
 leaf through every page of a 2,420-page Brāhmaṇa and record where each section begins.
 
-This paper documents the campaign that produced those indexes for the PWG: who did what,
-how much got done, what it cost in review effort, what broke, and what the resulting
-infrastructure can and cannot yet do. It is a descriptive study of a completed (in its
-kāvya and kośa portion) volunteer campaign, written against committed, cross-validated
-data rather than against recollection.
+I document the campaign that produced those indexes for the PWG: who did what, how much
+got done, what it cost in review effort, what broke, and what the resulting
+infrastructure can and cannot yet do. The contribution is a single one: a measured,
+cross-validated account of that campaign, with its registry committed so that every
+number below can be traced to it. The campaign is complete in its kāvya and kośa
+portion; the account is written against committed, cross-validated data rather than
+against recollection.
 
 ## 2 · Data and methods
 
@@ -234,7 +240,7 @@ that the coordinators confirmed. The format survived by imitation, not documenta
 
 ### 4.2 The review loop caught dictionary errors, not volunteer errors
 
-The striking process finding: across the whole trail, only a handful of submitted indexes
+The first process finding: across the whole trail, only a handful of submitted indexes
 needed revision — one full redo, one systematic off-by-40, one surplus column, one
 omitted section. Most works passed with zero correction rounds. What the loop caught in
 volume were **errors in the dictionaries themselves**, recorded in a consistent
@@ -326,8 +332,8 @@ carries two), which slightly under-credits paired work.
 
 ### 5.5 What this paper does not claim
 
-No novelty is claimed for crowd-sourced indexing as such, nor for linking dictionary
-citations to facsimiles — both exist elsewhere in digital lexicography. The contribution
+I claim no novelty for crowd-sourced indexing as such, nor for linking dictionary
+citations to facsimiles; both exist elsewhere in digital lexicography. The contribution
 is descriptive and infrastructural: a measured, cross-validated account of one completed
 campaign over a citation apparatus of unusual density, its committed registry, and the
 process findings (§4.2, §4.3) that a successor campaign — for the PW, the MW, or the
@@ -335,7 +341,8 @@ remaining Vedic backlog — would otherwise rediscover at full price.
 
 ## 6 · Future work
 
-Four items are open and committed as such: (i) the seven-work Vedic backlog (10,998
+The introduction asked what the resulting infrastructure cannot yet do. Four items are
+open and committed as such: (i) the seven-work Vedic backlog (10,998
 citations); (ii) the retroactive exhaustive cross-check — generating every dictionary
 reference to every linked work and listing the misses — proposed after it drove the
 Mahābhārata's 69 unmatched references to zero, but never run campaign-wide; (iii) the
