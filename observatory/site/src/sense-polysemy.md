@@ -225,6 +225,6 @@ Download source TSV:
 [`sense_polysemy_per_dict.tsv`](https://raw.githubusercontent.com/sanskrit-lexicon/csl-observatory/main/data/sense_polysemy_per_dict.tsv)
 · report:
 [`reports/sense_polysemy_per_dict.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/sense_polysemy_per_dict.md)
-· sibling census: [L1 Lexicon](./census-l1-lexicon).
+· sibling census: L1 Lexicon.
 
 _Dr. Mārcis Gasūns_

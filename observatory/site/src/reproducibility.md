@@ -111,10 +111,10 @@ workflow.
 
 ## Data And Citation
 
-Use [Data Downloads](/data) or `observatory/site/src/data/data_index.csv` to
+Use Data Downloads or `observatory/site/src/data/data_index.csv` to
 identify the exact public CSV/JSON file, generated date, source script, and
 caveat. Cite the repository commit or frozen tag together with the file and
-generated date. No Zenodo DOI minted yet — see [Data Downloads](/data).
+generated date. No Zenodo DOI minted yet — see Data Downloads.
 
 The longer repository guide is
 [`docs/REVIEWER_REPRODUCIBILITY.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/REVIEWER_REPRODUCIBILITY.md).

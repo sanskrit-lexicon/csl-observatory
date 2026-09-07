@@ -235,6 +235,6 @@ Download source TSV:
 [`paradigm_cell_coverage_per_root.tsv`](https://raw.githubusercontent.com/sanskrit-lexicon/csl-observatory/main/data/paradigm_cell_coverage_per_root.tsv)
 · report:
 [`reports/paradigm_cell_coverage.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/paradigm_cell_coverage.md)
-· sibling census: [L2 Morphology](./census-l2-morphology) · [L5 Roots](./census-l5-roots).
+· sibling census: L2 Morphology · L5 Roots.
 
 _Dr. Mārcis Gasūns_

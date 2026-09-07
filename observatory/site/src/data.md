@@ -110,7 +110,7 @@ specific downloaded file, the generated date shown in the catalog, and the
 dataset's Zenodo concept DOI [`10.5281/zenodo.21346705`](https://doi.org/10.5281/zenodo.21346705)
 (version `10.5281/zenodo.21965649`, published 2026-08-16). An earlier entry,
 `10.5281/zenodo.15834721`, was a false DOI resolving to an unrelated topology
-preprint (see the [Reach page](/reach) and [SanskritLexicography CONTRADICTIONS §8](https://github.com/gasyoun/SanskritLexicography/blob/master/CONTRADICTIONS.md)).
+preprint (see the Reach page and [SanskritLexicography CONTRADICTIONS §8](https://github.com/gasyoun/SanskritLexicography/blob/master/CONTRADICTIONS.md)).
 
 <style>
 .metric-grid {

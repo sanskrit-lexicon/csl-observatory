@@ -7,9 +7,9 @@ toc: false
 
 # CSL Observatory
 
-**A living, fully-open measurement of the [Cologne Digital Sanskrit Lexicon](https://www.sanskrit-lexicon.uni-koeln.de/)** — 13 years of volunteer work digitising and correcting the foundational Sanskrit dictionaries, turned into citable, reproducible data. Every figure below is computed live from datasets you can [download and reuse](/data); nothing here is hand-typed.
+**A living, fully-open measurement of the [Cologne Digital Sanskrit Lexicon](https://www.sanskrit-lexicon.uni-koeln.de/)** — 13 years of volunteer work digitising and correcting the foundational Sanskrit dictionaries, turned into citable, reproducible data. Every figure below is computed live from datasets you can download and reuse; nothing here is hand-typed.
 
-> 📖 **New here? Read [**The Story**](/story) first** — the thirteen-year arc of the project in a single five-minute scroll, written to be sent to a colleague or cited, with every number embedded. The dashboards below are for browsing; the story is for understanding.
+> 📖 **New here? Read **The Story** first** — the thirteen-year arc of the project in a single five-minute scroll, written to be sent to a colleague or cited, with every number embedded. The dashboards below are for browsing; the story is for understanding.
 
 ```js
 const annual = await FileAttachment("data/timeseries_annual.csv").csv({typed: true});
@@ -61,12 +61,12 @@ const conformant = d3.sum(taxonomy, d => d.conformant) / d3.sum(taxonomy, d => d
 const peakAuthors = d3.max(velocity, d => d.active_authors);
 ```
 
-Across 13 years and ${repos.length} repositories, a small, dedicated team has logged tens of thousands of dictionary corrections entirely in the open — and the [error-typology study](/error-typology) turns ${obsT.events.toLocaleString()} of them, across ${obsT.dictionaries} dictionaries, into a published, reusable language resource. Four offline, reproducible analyses describe the organisation behind that work: productive, well-governed, and actively maintained — though carried by a tiny core and still thin on reuse metadata. Full write-up: [synthesis report](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/synthesis.md).
+Across 13 years and ${repos.length} repositories, a small, dedicated team has logged tens of thousands of dictionary corrections entirely in the open — and the error-typology study turns ${obsT.events.toLocaleString()} of them, across ${obsT.dictionaries} dictionaries, into a published, reusable language resource. Four offline, reproducible analyses describe the organisation behind that work: productive, well-governed, and actively maintained — though carried by a tiny core and still thin on reuse metadata. Full write-up: [synthesis report](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/synthesis.md).
 
-- **Concentration** — the core trio carries **${(coreShare * 100).toFixed(0)}%** of all contributions, and **${bf1} of ${busFactor.length}** repos have a bus factor of 1. [Community →](/community)
-- **Activity** — thousands of commits, yet the busiest year drew only **${peakAuthors}** distinct authors: volume-per-person, not a growing base. [Activity →](/activity)
-- **Process** — **${(conformant * 100).toFixed(0)}%** of issues are fully taxonomy-conformant, after adoption climbed to a 92% peak in 2025. [Issue taxonomy →](/coverage)
-- **Hygiene** — **${noLicense} of ${repoHealth.length}** repos carry no license, and no contributor has a registered ORCID. [Repo health →](/repo-health)
+- **Concentration** — the core trio carries **${(coreShare * 100).toFixed(0)}%** of all contributions, and **${bf1} of ${busFactor.length}** repos have a bus factor of 1. Community →
+- **Activity** — thousands of commits, yet the busiest year drew only **${peakAuthors}** distinct authors: volume-per-person, not a growing base. Activity →
+- **Process** — **${(conformant * 100).toFixed(0)}%** of issues are fully taxonomy-conformant, after adoption climbed to a 92% peak in 2025. Issue taxonomy →
+- **Hygiene** — **${noLicense} of ${repoHealth.length}** repos carry no license, and no contributor has a registered ORCID. Repo health →
 
 ## Lead figure: How the work changed over 13 years
 
@@ -114,7 +114,7 @@ Plot.plot({
 })
 ```
 
-> **Conclusion:** The opened/closed gap is largest in 2020–2022, the peak of the correction campaigns, and narrows in 2023–2025 as those campaigns wound down. The 2026 data shows closings keeping pace with openings — a healthier balance, consistent with the backlog-reduction trend visible in the [Activity](/activity) page.
+> **Conclusion:** The opened/closed gap is largest in 2020–2022, the peak of the correction campaigns, and narrows in 2023–2025 as those campaigns wound down. The 2026 data shows closings keeping pace with openings — a healthier balance, consistent with the backlog-reduction trend visible in the Activity page.
 
 ## Top 10 most active repositories (all-time)
 
@@ -148,29 +148,29 @@ Plot.plot({
 
 ## Navigation
 
-- [**Ops Command**](/ops-command) - maintainer operating dashboard across blockers, issue pressure, metadata, and bus factor
-- [**Activity**](/activity) — issue/commit/PR throughput timelines, heatmaps, GitHub-style year grids
-- [**OBS-T Maintenance**](/obs-t-maintenance) - light operational checks for the correction typology release
-- [**Issue taxonomy**](/coverage) — GitHub issue and PR label patterns by repo
-- [**Taxonomy Triage**](/taxonomy-triage) - label quality, conformance, and open issue triage views
-- [**Community**](/community) — contributor growth, retention, bus-factor analysis
-- [**Community Continuity**](/community-continuity) - maintainer concentration, retention, and identity readiness
-- [**Repository Health**](/repo-health) — licensing, default-branch, and hygiene audit
-- [**Repository Risk**](/repository-risk) - deeper license, branch, flag, size, and cleanup-risk charts
-- [**Metadata Readiness**](/metadata-readiness) - B3 documentation, automation, release, and unknown-field blockers
-- [**Tech Stack**](/tech-stack) — language evolution, dependency graphs, runbook adoption
-- [**Repository Benchmarks**](/benchmarks) — project-level openness and repository evidence
-- [**Data**](/data) — raw downloads (CSV, JSON, Parquet) for reproducibility
+- **Ops Command** - maintainer operating dashboard across blockers, issue pressure, metadata, and bus factor
+- **Activity** — issue/commit/PR throughput timelines, heatmaps, GitHub-style year grids
+- **OBS-T Maintenance** - light operational checks for the correction typology release
+- **Issue taxonomy** — GitHub issue and PR label patterns by repo
+- **Taxonomy Triage** - label quality, conformance, and open issue triage views
+- **Community** — contributor growth, retention, bus-factor analysis
+- **Community Continuity** - maintainer concentration, retention, and identity readiness
+- **Repository Health** — licensing, default-branch, and hygiene audit
+- **Repository Risk** - deeper license, branch, flag, size, and cleanup-risk charts
+- **Metadata Readiness** - B3 documentation, automation, release, and unknown-field blockers
+- **Tech Stack** — language evolution, dependency graphs, runbook adoption
+- **Repository Benchmarks** — project-level openness and repository evidence
+- **Data** — raw downloads (CSV, JSON, Parquet) for reproducibility
 
 ## About & how to cite
 
 The observatory is an open-source project of the [sanskrit-lexicon](https://github.com/sanskrit-lexicon) organisation, part of the [Cologne Digital Sanskrit Dictionaries](https://www.sanskrit-lexicon.uni-koeln.de/) effort. It measures only the org's own GitHub activity — repositories, issues, commits, contributors — and the public correction record; the dictionary *content* itself lives in the upstream dictionary repos. Code and data are released under open licences (GPL-3.0 for code, CC-BY-4.0 for the datasets).
 
-To cite the data, see [Data downloads → Citation](/data). The error-typology corpus has its own [datasheet](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/DATASHEET.md).
+To cite the data, see Data downloads → Citation. The error-typology corpus has its own [datasheet](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/DATASHEET.md).
 
 ---
 
-*Data snapshot: **${manifest.snapshot_date}**, refreshed monthly from the GitHub API — see [how it's built](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/OBSERVATORY_DESIGN.md) and [Data downloads](/data) for the exact figures.*
+*Data snapshot: **${manifest.snapshot_date}**, refreshed monthly from the GitHub API — see [how it's built](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/OBSERVATORY_DESIGN.md) and Data downloads for the exact figures.*
 
 <style>
 .card .big { font-size: 2rem; font-weight: 600; display: block; }

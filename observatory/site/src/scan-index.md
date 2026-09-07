@@ -14,7 +14,7 @@ it cites. This page measures that campaign **by citation mass** — a 159-page
 *Kumārasaṃbhava* and a 2,420-page *Taittirīyabrāhmaṇa* are neither equal work nor
 equal payoff.
 
-Complement, not duplicate, of [Citation Coverage](/citation-coverage): that page
+Complement, not duplicate, of Citation Coverage: that page
 asks how many citations *link out*; this one asks how the link targets got built.
 
 ```js

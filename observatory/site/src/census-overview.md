@@ -107,12 +107,12 @@ Plot.plot({
 
 | Layer | Focus | Page |
 |---|---|---|
-| L1 | Lexicon text (44 dictionaries) | [Lexicon text](./census-l1-lexicon) |
-| L2 | Morphology & forms (kosha, DCS, Heritage, vidyut) | [Morphology & forms](./census-l2-morphology) |
-| L3 | Corpus & usage (DCS, SamudraManthanam) | [Corpus & usage](./census-l3-corpus) |
-| L4 | Translation (RU/EN kits, alignment, glossaries) | [Translation](./census-l4-translation) |
-| L5 | Roots & etymology | [Roots & etymology](./census-l5-roots) |
-| L6 | Repo-meta & process | see [Repo health](./repo-health), [Org shape](./org-shape), [Community](./community) — already extensively covered |
+| L1 | Lexicon text (44 dictionaries) | Lexicon text |
+| L2 | Morphology & forms (kosha, DCS, Heritage, vidyut) | Morphology & forms |
+| L3 | Corpus & usage (DCS, SamudraManthanam) | Corpus & usage |
+| L4 | Translation (RU/EN kits, alignment, glossaries) | Translation |
+| L5 | Roots & etymology | Roots & etymology |
+| L6 | Repo-meta & process | see Repo health, Org shape, Community — already extensively covered |
 | L7 | Product & funnel | mostly ○ not started, gated on host credentials — tracked in the register below, no dedicated page yet |
 
 ## Full register

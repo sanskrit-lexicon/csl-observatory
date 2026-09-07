@@ -9,7 +9,7 @@ toc: true
 
 Statistics over the **44 digitized dictionaries**: headwords, overlap, markup,
 citations, corrections, and the sense/definition-level gaps still open. Part of
-the [statistics census overview](./census-overview) (H817 WS1.3).
+the statistics census overview (H817 WS1.3).
 
 ```js
 const all = await FileAttachment("data/stats_census_register.csv").csv({typed: true});

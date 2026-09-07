@@ -9,7 +9,7 @@ toc: true
 
 Statistics over inflected-form coverage: **kosha.db**, DCS lemma/form tables,
 the Heritage form oracle, and vidyut's FST fallback. Part of the
-[statistics census overview](./census-overview) (H817 WS1.3).
+statistics census overview (H817 WS1.3).
 
 ```js
 const all = await FileAttachment("data/stats_census_register.csv").csv({typed: true});

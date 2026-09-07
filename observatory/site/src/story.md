@@ -181,11 +181,11 @@ The arc above is the encouraging reading. But the same record carries four harde
 
 ## The work rests on one person
 
-Across all thirteen years, a single contributor — **${topPerson.real_name}** — accounts for **${(topShare * 100).toFixed(0)}%** of every recorded contribution in the organisation. That is not a criticism of anyone; it is a structural risk. A project this concentrated is one departure away from stalling, and no amount of tooling changes that. It is the first thing a would-be funder, host institution, or successor needs to know. [Community analysis →](/community)
+Across all thirteen years, a single contributor — **${topPerson.real_name}** — accounts for **${(topShare * 100).toFixed(0)}%** of every recorded contribution in the organisation. That is not a criticism of anyone; it is a structural risk. A project this concentrated is one departure away from stalling, and no amount of tooling changes that. It is the first thing a would-be funder, host institution, or successor needs to know. Community analysis →
 
 ## Most of the backlog was never answered
 
-Of the open issues still on the books, **${silentTotal}** have never received a single reply — not a triage label, not a comment, nothing. Silence, not disagreement, is the dominant failure mode: work is filed and then quietly outlives everyone's attention. The backlog is not a queue being worked down in order; it is a sediment, and most of it has never been touched since the day it was opened. [Issue lifecycle →](/lifecycle)
+Of the open issues still on the books, **${silentTotal}** have never received a single reply — not a triage label, not a comment, nothing. Silence, not disagreement, is the dominant failure mode: work is filed and then quietly outlives everyone's attention. The backlog is not a queue being worked down in order; it is a sediment, and most of it has never been touched since the day it was opened. Issue lifecycle →
 
 ## Issues that survive early tend to survive forever
 
@@ -215,7 +215,7 @@ Plot.plot({
 
 ## One thing did get fixed: licensing
 
-The record is not only decline. When the observatory surfaced that **41** of the org's repositories carried no license at all — a FAIR-reuse violation that made the data legally unsafe to build on — the project acted. After the RH1 license rollout, only **${noLicense}** repositories remain unlicensed, and those are the archive candidates intentionally held back for a separate cleanup. A measured problem became a closed one. [Repository health →](/repo-health)
+The record is not only decline. When the observatory surfaced that **41** of the org's repositories carried no license at all — a FAIR-reuse violation that made the data legally unsafe to build on — the project acted. After the RH1 license rollout, only **${noLicense}** repositories remain unlicensed, and those are the archive candidates intentionally held back for a separate cleanup. A measured problem became a closed one. Repository health →
 
 > **What this proves:** the observatory is not a mirror the project looks into and sighs at — the licensing repair (41 → ${noLicense}) is the template. Surface a fact, act on it, re-measure. That is the loop this whole site exists to enable.
 
@@ -223,9 +223,9 @@ The record is not only decline. When the observatory surfaced that **41** of the
 
 If this story leaves you wanting to help rather than only to cite, the most valuable thing you can do is the least glamorous: **answer a silent issue.** The ${silentTotal} never-answered open issues are where a single reply — a triage label, a clarifying question, a "this is fixed" — has the highest marginal value in the entire organisation.
 
-- **Triage the silence** — the [Issue Lifecycle](/lifecycle) and [Taxonomy Triage](/taxonomy-triage) pages surface the unanswered and unlabelled backlog, repo by repo.
-- **See where the work is** — the [Ops Command](/ops-command) view ranks repositories by open pressure and metadata blockers, so a first contribution lands where it counts.
-- **Reuse the data** — every figure on this page is downloadable from the [Data](/data) page under CC-BY-4.0; the [error-typology corpus](/error-typology) is a published language resource in its own right.
+- **Triage the silence** — the Issue Lifecycle and Taxonomy Triage pages surface the unanswered and unlabelled backlog, repo by repo.
+- **See where the work is** — the Ops Command view ranks repositories by open pressure and metadata blockers, so a first contribution lands where it counts.
+- **Reuse the data** — every figure on this page is downloadable from the Data page under CC-BY-4.0; the error-typology corpus is a published language resource in its own right.
 
 Thirteen years of one small circle's careful work are now legible, citable, and open. The next chapter is whether that circle widens.
 
@@ -304,7 +304,7 @@ Plot.plot({
 
 ### A volunteer campaign becomes a dataset
 
-The single largest July commit was historiographical: the 2025–26 **PWG scan-index campaign** — eighteen months of volunteers page-indexing the printed editions that the Böhtlingk-Roth dictionary cites — was committed as data ([PR #107](https://github.com/sanskrit-lexicon/csl-observatory/pull/107)): a registry of **${scanSum.tracked_works} tracked works**, of which **${scanSum.done} are done**, covering **${scanSum.indexed_mass_pct_of_tracked}%** of the tracked citation mass — **${scanSum.pages_indexed.toLocaleString()}** pages indexed by **${scanSum.volunteers}** volunteers. The full analysis is in the [campaign report](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/pwg_scan_index.md) and on its [dedicated page](/scan-index).
+The single largest July commit was historiographical: the 2025–26 **PWG scan-index campaign** — eighteen months of volunteers page-indexing the printed editions that the Böhtlingk-Roth dictionary cites — was committed as data ([PR #107](https://github.com/sanskrit-lexicon/csl-observatory/pull/107)): a registry of **${scanSum.tracked_works} tracked works**, of which **${scanSum.done} are done**, covering **${scanSum.indexed_mass_pct_of_tracked}%** of the tracked citation mass — **${scanSum.pages_indexed.toLocaleString()}** pages indexed by **${scanSum.volunteers}** volunteers. The full analysis is in the [campaign report](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/pwg_scan_index.md) and on its dedicated page.
 
 ```js
 const scanSum = await FileAttachment("data/pwg_scan_index_summary.json").json();
@@ -432,7 +432,7 @@ The same month moved the research pipeline without a single new figure needing t
 
 ---
 
-*Every figure on this page is computed from the committed datasets — snapshot **${manifest.snapshot_date}**. The scheduled refresh is intended to be monthly but may lag; the snapshot date, not the page-view date, is authoritative. Download the underlying CSV/JSON from the [Data](/data) page to check any number here.*
+*Every figure on this page is computed from the committed datasets — snapshot **${manifest.snapshot_date}**. The scheduled refresh is intended to be monthly but may lag; the snapshot date, not the page-view date, is authoritative. Download the underlying CSV/JSON from the Data page to check any number here.*
 
 <style>
 .card .big { font-size: 2.1rem; font-weight: 600; display: block; line-height: 1.1; }

@@ -9,7 +9,7 @@ toc: true
 
 Statistics over verbal roots and derivational morphology: the MW root
 inventory, etymology derivation tables, root-oracle agreement, and the
-Whitney × DCS audit. Part of the [statistics census overview](./census-overview)
+Whitney × DCS audit. Part of the statistics census overview
 (H817 WS1.3).
 
 ```js

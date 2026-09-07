@@ -21,7 +21,7 @@ One-paragraph summaries of what each visualisation in the observatory tells us, 
 
 ---
 
-## Tech stack ([/tech-stack](/tech-stack))
+## Tech stack (/tech-stack)
 
 **Repos by primary language.** Python's dominance reflects the correction and generation pipeline that forms the project's backbone. Most HTML repos are dictionary display pages produced by csl-pywork rather than hand-written front-ends. The language mix has stayed stable over 13 years — the project never shifted to a new stack.
 
@@ -31,7 +31,7 @@ One-paragraph summaries of what each visualisation in the observatory tells us, 
 
 ---
 
-## Activity ([/activity](/activity))
+## Activity (/activity)
 
 **Org-wide throughput (commits, issues, PRs).** Commit and issue volume peaked together in 2020–2022, driven by bulk correction campaigns on csl-orig. Pull requests barely register before 2026 — the org operated through direct commits and issue threads for its first decade, a workflow shaped by the small trusted-core team structure and the high throughput of individually-applied dictionary fixes.
 
@@ -47,7 +47,7 @@ One-paragraph summaries of what each visualisation in the observatory tells us, 
 
 ---
 
-## Community ([/community](/community))
+## Community (/community)
 
 **Top contributors by total commits.** The contribution distribution is sharply unequal: a single contributor accounts for more than half of all recorded commits, with the next two forming a tight core trio — everyone else trails far behind. This is the primary sustainability risk for the org: not low activity, but extreme concentration in individuals who cannot easily be replaced.
 
@@ -59,7 +59,7 @@ One-paragraph summaries of what each visualisation in the observatory tells us, 
 
 ---
 
-## Issue taxonomy ([/coverage](/coverage))
+## Issue taxonomy (/coverage)
 
 **Issue typology evolution.** `text-correction` dominated the issue base for most of the project's life, but since 2022 `markup`, `link-target`, and `enhancement` have all grown, signalling a shift from raw correction work towards structural improvement and web-display feature development. The project's issue history is a direct readout of its digitisation roadmap.
 
@@ -71,7 +71,7 @@ One-paragraph summaries of what each visualisation in the observatory tells us, 
 
 ---
 
-## Repository health ([/repo-health](/repo-health))
+## Repository health (/repo-health)
 
 **Licensing.** The RH1 license rollout materially improved the org's licensing posture — the no-license and NOASSERTION backlogs are cleared except for a small number of archive/temp candidates blocked on the RH3 cleanup decision. The org's data is now legally usable by scholars who need a clear license to build on CDSL materials.
 

@@ -13,7 +13,7 @@ GitHub/org-only roadmap.
 # csl-observatory — expansion roadmap
 
 **Version**: 1.0 · **Date**: 2026-05-15 · **Owner**: M. Gasūns + Claude Code
-**Companion to**: [`OBSERVATORY_DESIGN.md`](OBSERVATORY_DESIGN.md), [`PAPER_1_OUTLINE.md`](PAPER_1_OUTLINE.md)
+**Companion to**: `OBSERVATORY_DESIGN.md`, `PAPER_1_OUTLINE.md`
 
 This doc enumerates **everything additional** that can be measured, every new visualisation, the phasing to build it, and the matching paragraph mapping for Paper 1.
 
@@ -160,7 +160,7 @@ Each phase is independently shippable and produces one or more dashboard pages p
 - §5.4.6–5.4.7 (2 paragraphs)
 
 ### Phase H — Paper 1 manuscript draft (continuous, finalised after F+G)
-- I draft all sections per the [Paper 1 outline](PAPER_1_OUTLINE.md)
+- I draft all sections per the Paper 1 outline
 - You rewrite for voice and academic tone
 - Iterate until WSC 2028 deadline
 

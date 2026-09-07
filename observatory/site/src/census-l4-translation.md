@@ -9,7 +9,7 @@ toc: true
 
 Statistics over the Russian/English translation programme: the corpus-lexicon
 Sa→Ru alignment, the 3-layer glossary, mw_ru cards, and per-dict RU coverage.
-Part of the [statistics census overview](./census-overview) (H817 WS1.3).
+Part of the statistics census overview (H817 WS1.3).
 
 ```js
 const all = await FileAttachment("data/stats_census_register.csv").csv({typed: true});

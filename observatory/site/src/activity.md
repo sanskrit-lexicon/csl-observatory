@@ -159,11 +159,11 @@ Plot.plot({
 
 ## Annual distinct commit-authors
 
-The author count is perhaps the most striking statistic in the org's history: despite generating nearly 10,000 commits across 76 repositories over 13 years, the org has never had more than about 15 distinct people committing code in a single year. Volume and team size are completely decoupled. This is the structural backdrop for every bus-factor and concentration finding in the [Community](/community) analysis.
+The author count is perhaps the most striking statistic in the org's history: despite generating nearly 10,000 commits across 76 repositories over 13 years, the org has never had more than about 15 distinct people committing code in a single year. Volume and team size are completely decoupled. This is the structural backdrop for every bus-factor and concentration finding in the Community analysis.
 
 > **How to read:** Each bar is the count of distinct GitHub logins that authored at least one commit to any org repository in that year, computed from the full commits dataset rather than summing per-repo counts (which would double-count people active in multiple repos). **Example 1:** A bar of height 11 in 2021 — the busiest commit year by volume — means only 11 different people contributed any code that year, despite thousands of commits being made. **Example 2:** A bar that is shorter than the previous year means the org's active contributor pool shrank — people left without being replaced.
 
-Organization-wide distinct authors per year, recomputed from `commits.csv` (the per-repo `unique_authors` column cannot be summed — it double-counts people active in several repos). Even at peak, the active base is tiny — the concentration the [Community](/community) bus-factor analysis quantifies.
+Organization-wide distinct authors per year, recomputed from `commits.csv` (the per-repo `unique_authors` column cannot be summed — it double-counts people active in several repos). Even at peak, the active base is tiny — the concentration the Community bus-factor analysis quantifies.
 
 ```js
 Plot.plot({

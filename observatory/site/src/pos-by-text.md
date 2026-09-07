@@ -255,6 +255,6 @@ Download source TSV:
 [`pos_distribution_per_text.tsv`](https://raw.githubusercontent.com/sanskrit-lexicon/csl-observatory/main/data/pos_distribution_per_text.tsv)
 · report:
 [`reports/pos_distribution_per_text.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/pos_distribution_per_text.md)
-· [Data downloads](./data) · sibling census: [L3 Corpus](./census-l3-corpus).
+· [Data downloads](./data) · sibling census: L3 Corpus.
 
 _Dr. Mārcis Gasūns_
