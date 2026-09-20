@@ -28,6 +28,7 @@ The 2026-06-04 boundary cleanup is merged: dictionary-structure research belongs
 - **[Design document](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/OBSERVATORY_DESIGN.md)** — boundary-safe architecture and KPI scope
 - **[Docs archive index](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/ARCHIVE.md)** — legacy and moved-to-`csl-atlas` documents in one place
 - **[Data downloads](https://github.com/sanskrit-lexicon/csl-observatory/tree/main/observatory/site/src/data)** — every chart's source as CSV
+- **A15 analysis-inputs dataset (Zenodo)** — archived, versioned snapshot of the analysis inputs (76-repo snapshot, issue/commit ledgers, 52,498-event correction ledger): concept DOI [10.5281/zenodo.22853817](https://doi.org/10.5281/zenodo.22853817), version DOI [10.5281/zenodo.22853818](https://doi.org/10.5281/zenodo.22853818)
 - **[Runbooks](https://github.com/sanskrit-lexicon/csl-observatory/tree/main/runbook)** — the issue-taxonomy procedures applied to all active repos
 - **[Maintenance skills](https://github.com/sanskrit-lexicon/cologne-skills)** — portable Claude Code skills for org-wide security & maintenance (PHP XSS sweep · security audit · alert triage)
 - **[Contributor & work statistics](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/CONTRIBUTOR_STATS.md)** — per-contributor & per-repo commits, churn, tenure, and issues (2014–2026)
