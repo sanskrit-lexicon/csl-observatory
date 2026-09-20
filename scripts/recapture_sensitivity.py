@@ -401,6 +401,18 @@ def nonlinear_kernel_gap(cv, alt_thetas=None):
         p1 = sum(w * (1.0 - math.exp(-th)) for th, w in thetas)
         p11 = sum(w * (1.0 - math.exp(-th)) ** 2 for th, w in thetas)
         return p11 / (p1 * p1)
+    two_pt, alt_thetas = nonlinear_kernel_families(cv, alt_thetas)
+    return g(two_pt), g(alt_thetas)
+
+
+def nonlinear_kernel_families(cv, alt_thetas=None):
+    """The two mixing families the nonlinear-kernel demonstration compares.
+
+    Split out of `nonlinear_kernel_gap` so `selftest` can assert the moments of the
+    families the function ACTUALLY uses. Review 3 showed the first version of that
+    assertion re-declared the families as literals, so restoring the cv^2/8 weight
+    bug left it green -- a regression test that tests a copy of the code is not a
+    regression test."""
     two_pt = ((1.0 - cv, 0.5), (1.0 + cv, 0.5))
     if alt_thetas is None:
         # Three-point family with the same mean (1) and the same variance (cv^2).
@@ -412,7 +424,7 @@ def nonlinear_kernel_gap(cv, alt_thetas=None):
         w_out = 0.125                                  # mass at 1 -/+ 2cv
         alt_thetas = ((1.0 - 2.0 * cv, w_out), (1.0, 1.0 - 2.0 * w_out),
                       (1.0 + 2.0 * cv, w_out))
-    return g(two_pt), g(alt_thetas)
+    return two_pt, alt_thetas
 
 
 # --------------------------------------------------------------------------- #
@@ -1473,9 +1485,16 @@ def write_md(est, estimable, env_rows, thr, swaps, nonid, od, ctrl, zero_m,
     A('Two readings remain, and the data here cannot separate them:')
     A('')
     A('1. **Heavy-tailed heterogeneity** — a small minority of records attracting very '
-      'many corrections, heavier than a Gamma tail. Then γ = 1 + CV²(θ) is not merely '
-      '> 1 but potentially far above the grid in §4, because a heavy tail inflates '
-      'E[θ²] without bound.')
+      'many corrections, heavier than a Gamma tail. It is tempting to read γ = 1 + CV²(θ) '
+      'off that tail and conclude the dependence must be large and positive. **That step '
+      'is invalid here, and review 3 was right to strike it.** The identity needs capture '
+      'probability linear in θ (§9 item 3); the quantity that governs γ is the dispersion '
+      'of the *capture probabilities*, not of the underlying intensities, and a bounded '
+      'nonlinear kernel compresses an unbounded intensity tail into probabilities that '
+      'cannot exceed 1. Nor is the *direction* assured: shared heterogeneity does push γ '
+      'up when it acts alone, but sequential removal pushes the other way and can '
+      'dominate — control E computes exactly that case and lands at γ ≈ 0.974, below '
+      'independence. So this reading leaves γ unsigned as well as unsized.')
     A('2. **Clustered events** — corrections at a site are not conditionally independent: '
       'one commit fixes several errors in one entry, one corrector works an entry '
       'through. Then the counts say nothing directly about capture probability, because '
@@ -1638,7 +1657,20 @@ def write_md(est, estimable, env_rows, thr, swaps, nonid, od, ctrl, zero_m,
       'linkage error: §2 shows neither enters as a γ, so neither is bounded by any '
       'number in this report. An envelope over dependence is not an envelope over the '
       'design.')
-    A('6. The overdispersion of §6 is computed on the operating linkage key, so it '
+    A('6. **The control suite is a consistency check, not a proof of the model.** '
+      'Review 3 ran sixteen deliberate mutations of the statistical content against '
+      'the full suite: six were caught, **ten passed all 76 controls and all 36 '
+      'invariants** — among them altering the era-2 survival exponent in both '
+      'implementations at once, substituting Petersen for Chapman in the simulated '
+      'point estimate, and negating the log-likelihood. What the suite demonstrates is '
+      'that the report\'s arithmetic is internally consistent and that its published '
+      'numbers reproduce; it does not demonstrate that the declared model is the right '
+      'one. The one guard against that here is external: review 3\'s own event-by-event '
+      'simulation of 500,000 sites at four settings agreed with the law used here to '
+      'within 2.9 standard errors, and rejected a mutated survival model by 25.6. '
+      'Closing the remaining gap needs a generative test in the suite itself, which is '
+      'the highest-value follow-up this report leaves behind.')
+    A('7. The overdispersion of §6 is computed on the operating linkage key, so it '
       'inherits that key\'s measured false-match rate. It is a descriptive comparison '
       'against a family\'s variance ceiling, with no sampling distribution attached — '
       'not a calibrated test at a stated level.')
@@ -1654,7 +1686,7 @@ def write_md(est, estimable, env_rows, thr, swaps, nonid, od, ctrl, zero_m,
     A('## 9a. Deviations from the preregistration')
     A('')
     A('The preregistration forbids editing itself after the results commit and requires '
-      'every changed decision rule to appear here as a labelled deviation. All seven '
+      'every changed decision rule to appear here as a labelled deviation. All twelve '
       'below were made **after** results existed. Six follow a first independent '
       'logic review of this report (Codex Astra `gpt-6-astra`, 20-09-2026) which '
       'returned FAIL; items 8–12 follow that reviewer’s **second** pass over the '
@@ -1723,7 +1755,8 @@ def write_md(est, estimable, env_rows, thr, swaps, nonid, od, ctrl, zero_m,
       'what it is for — recovering a KNOWN population from independent sources — but '
       'it is not the three-way match the preregistration describes.')
     A('12. **Control C’s acceptance rule is not the preregistered one.** The frozen '
-      'rule requires the **simulated** γ to fall monotonically across k̄ levels; the '
+      'rule requires the **simulated** γ to rise monotonically toward 1 across k̄ '
+      'levels; the '
       'implementation checks that the analytic γ is below 1 and that the simulation '
       'agrees with it. The committed rows are in fact monotone, so nothing in the '
       'table changes, but the two rules are not equivalent and the weaker one is what '
@@ -1965,9 +1998,10 @@ def selftest():
         f'gamma {gamma_of(*ref[:1], ref[3], ref[4]):.6f} vs corrupted '
         f'{gamma_of(corrupt[0], corrupt[3], corrupt[4]):.6f}')
 
-    # the equal-moment demonstration must actually hold its moments equal
-    two_pt = ((1.0 - 0.5, 0.5), (1.0 + 0.5, 0.5))
-    alt = ((1.0 - 2.0 * 0.5, 0.125), (1.0, 0.75), (1.0 + 2.0 * 0.5, 0.125))
+    # The equal-moment demonstration must actually hold its moments equal -- and the
+    # families checked must be the ones the FUNCTION builds, not a copy of them
+    # (review 3: re-declaring them as literals left the cv^2/8 bug undetectable).
+    two_pt, alt = nonlinear_kernel_families(0.5)
 
     def _mom(fam):
         m = sum(w * t for t, w in fam)
