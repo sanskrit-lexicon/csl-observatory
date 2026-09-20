@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-_Created: 15-05-2026 · Last updated: 05-09-2026_
+_Created: 15-05-2026 · Last updated: 20-09-2026 (H5176 SLA review: run commands + scripts/ paths re-verified current)_
 
 `csl-observatory` is the **build-meta / org-observability** repo for the
 Cologne Digital Sanskrit Lexicon: it measures the `sanskrit-lexicon` GitHub
