@@ -23,6 +23,10 @@ so that E[n1] = N p1, E[n2] = N p2, E[m] = N p1 p2 gamma, and therefore
 
     N = gamma * (n1 n2 / m).
 
+The last line substitutes realised counts into a relation that holds in
+EXPECTATIONS; that substitution is this report's convention, not a consequence of
+the identity above (external review, defect 1).
+
 gamma = 1 is independence; gamma > 1 is positive dependence (Chapman UNDERestimates);
 gamma < 1 is negative dependence (Chapman OVERestimates). Every violation of the
 independence assumption — shared catchability, heterogeneous detectability, the
@@ -32,8 +36,9 @@ The published numbers are the gamma = 1 slice of that family.
 gamma is NOT identifiable here. A two-list table has three observable counts
 (era-1 only, era-2 only, both); the independence model already spends all three on
 (N, p1, p2) and leaves zero residual degrees of freedom. Adding gamma makes four
-parameters for three counts: the likelihood is exactly flat along the curve
-{(N, p1, p2, gamma) : gamma/N = const}. `nonidentification_check()` demonstrates
+parameters for three counts. The CELL FIT is exact all along the curve
+{(N, p1, p2, gamma) : gamma/N = const}; the finite-N likelihood is not exactly flat
+over it, only far too weakly sloped to choose. `nonidentification_check()` shows
 this numerically rather than asserting it.
 
 Controls (preregistered in reports/recapture_sensitivity_prereg.md)
@@ -306,11 +311,48 @@ def joint_cells(q1, q2, kbar, cv, thetas=None):
     return p11, p1 - p11, p2 - p11, p1, p2
 
 
+def joint_cells_closed(q1, q2, kbar, cv, thetas=None):
+    """The SAME cells as `joint_cells`, by a wholly different derivation.
+
+    Poisson splitting rather than a k-by-k sum. With K ~ zero-truncated
+    Poisson(lam), Z = 1 - exp(-lam), and per-error fates a, b as in `joint_cells`,
+    the generating function E[x^K] = (exp(-lam(1-x)) - exp(-lam))/Z collapses the
+    series to
+
+        A = 1 - exp(-lam*a),  B = 1 - exp(-lam*b)
+        p1 = E_theta[A]/Z,  p2 = E_theta[B]/Z,  p11 = E_theta[A*B]/Z
+
+    with no summation at all. This exists because control E validates its gamma
+    against a simulation drawn FROM the cells it is checking, so a corrupted joint
+    model passes every control -- review 2 demonstrated exactly that by scaling p11
+    by 0.8. An agreement check between two independent derivations is what actually
+    pins the model; `selftest` runs it over a grid and asserts it REJECTS that
+    mutation."""
+    if thetas is None:
+        thetas = ((1.0 - cv, 0.5), (1.0 + cv, 0.5))
+    lam = ztp_lambda_for_mean(kbar) if kbar > 1.0 else 1e-9
+    z = 1.0 - math.exp(-lam)
+    p1 = p2 = p11 = 0.0
+    for th, w in thetas:
+        a = q1 * th
+        b = (1.0 - a) * (q2 * th)
+        if min(a, b, 1.0 - a - b) < 0.0 or max(a, b) > 1.0:
+            return None
+        ea = 1.0 - math.exp(-lam * a)
+        eb = 1.0 - math.exp(-lam * b)
+        p1 += w * ea / z
+        p2 += w * eb / z
+        p11 += w * ea * eb / z
+    return p11, p1 - p11, p2 - p11, p1, p2
+
+
 def gamma_two_point(cv):
     """The analytic gamma of the heterogeneity mechanism alone: 1 + CV^2.
 
     Valid only where capture probability is LINEAR in theta (p_j * theta), which is
-    how controls B and E construct it (external review, defect 8). Under a nonlinear
+    how control B constructs it. Control E does NOT have that kernel -- its
+    site-level capture is 1 - (1-a)^k, nonlinear in theta, and it carries removal
+    dependence besides (review 2, new defect 4). Under a nonlinear
     kernel the identity fails and two families sharing (mean, variance) disagree --
     `nonlinear_kernel_gap` exhibits that, and `selftest` pins it."""
     return 1.0 + cv * cv
@@ -361,8 +403,13 @@ def nonlinear_kernel_gap(cv, alt_thetas=None):
         return p11 / (p1 * p1)
     two_pt = ((1.0 - cv, 0.5), (1.0 + cv, 0.5))
     if alt_thetas is None:
-        # three-point family with the same mean (1) and the same variance (cv^2)
-        w_out = cv * cv / (2.0 * 4.0)                  # mass at 1 -/+ 2cv
+        # Three-point family with the same mean (1) and the same variance (cv^2).
+        # Mass w at 1 -/+ 2cv gives variance 2*w*(2cv)^2 = 8*w*cv^2, so w = 1/8
+        # EXACTLY -- independent of cv. The first version used w = cv^2/8, whose
+        # variance is cv^4, so the two families did NOT share a variance and the
+        # demonstration showed nothing (review 2, new defect 1). `selftest` now
+        # asserts the moments agree before comparing the kernels.
+        w_out = 0.125                                  # mass at 1 -/+ 2cv
         alt_thetas = ((1.0 - 2.0 * cv, w_out), (1.0, 1.0 - 2.0 * w_out),
                       (1.0 + 2.0 * cv, w_out))
     return g(two_pt), g(alt_thetas)
@@ -937,11 +984,20 @@ def main():
     with open(OUT_CSV, 'w', encoding='utf-8', newline='') as f:
         w = csv.DictWriter(f, fieldnames=list(env_rows[0].keys()))
         w.writeheader(); w.writerows(env_rows)
+    # Every field a control computes is exported. The earlier list omitted the
+    # per-family and per-mechanism columns while `data_index.py` and section 9
+    # promised them -- extrasaction='ignore' dropped them silently (review 2,
+    # new defect 3). restval keeps the rectangle when a control lacks a column.
     ctrl_fields = ['control', 'dict', 'cv', 'kbar', 'n_true', 'gamma_analytic',
                    'gamma_emp', 'median', 'p25', 'p75', 'rel_bias', 'bias_predicted',
-                   'coverage', 'envelope_recovery', 'n_reps', 'passes']
+                   'coverage', 'envelope_recovery', 'n_reps', 'passes',
+                   'family', 'cv_realised', 'gamma_identity',
+                   'implied_n1', 'implied_n2', 'observed_n1', 'observed_n2',
+                   'gamma_sequential', 'gamma_heterogeneity', 'gamma_naive_product',
+                   'product_error']
     with open(OUT_CTRL, 'w', encoding='utf-8', newline='') as f:
-        w = csv.DictWriter(f, fieldnames=ctrl_fields, extrasaction='ignore')
+        w = csv.DictWriter(f, fieldnames=ctrl_fields, extrasaction='ignore',
+                           restval='')
         w.writeheader(); w.writerows(ctrl)
 
     write_md(est, estimable, env_rows, thr, swaps, nonid, od, ctrl, zero_m,
@@ -1061,8 +1117,10 @@ def write_md(est, estimable, env_rows, thr, swaps, nonid, od, ctrl, zero_m,
     A('A two-list table has exactly three observable counts — era-1 only, era-2 only, '
       'both. The independence model spends all three on (N, p1, p2): it is saturated, '
       'with zero residual degrees of freedom and therefore no goodness-of-fit test. '
-      'Adding γ gives four parameters for three counts, and the likelihood is flat '
-      f'along the curve. On {top["dict"]} (n1={top["n1_form"]:,}, n2={top["n2_git"]:,}, '
+      'Adding γ gives four parameters for three counts, and the fit stays exact all '
+      'along the curve — the likelihood varies over it, but by far too little to '
+      'choose (quantified in the last column, and stated precisely below the table). '
+      f'On {top["dict"]} (n1={top["n1_form"]:,}, n2={top["n2_git"]:,}, '
       f'm={top["m_overlap"]:,}):')
     A('')
     lls = [ll for _, _, ll, _ in nonid if ll is not None]
@@ -1423,8 +1481,12 @@ def write_md(est, estimable, env_rows, thr, swaps, nonid, od, ctrl, zero_m,
       'through. Then the counts say nothing directly about capture probability, because '
       'the Poisson kernel itself is wrong.')
     A('')
-    A('Both readings break the published design\'s assumptions; they differ in which '
-      'assumption. Distinguishing them needs event *timestamps and authorship* per site '
+    A('The two readings are not equally damaging, and review 2 was right to press '
+      'the point: reading 1 breaks the design\'s homogeneous-catchability assumption, '
+      'whereas reading 2 is **compatible with homogeneous capture** — independent, '
+      'equally findable errors arriving in batches reproduce the same dispersion at '
+      'γ = 1. So the dispersion on its own does not establish that any assumption '
+      'fails. Distinguishing them needs event *timestamps and authorship* per site '
       '— available in the events CSV, out of scope here (§9), and the concrete next '
       'investigation this report recommends.')
     A('')
@@ -1521,7 +1583,13 @@ def write_md(est, estimable, env_rows, thr, swaps, nonid, od, ctrl, zero_m,
       'headline crossing** — i.e. rules out the γ < crossing region — which would make '
       'the published ordering safe to quote after all. (A γ estimate merely *outside* '
       '[0.5, 2.0] would say the grid is too narrow, not that the ordering is robust: '
-      'that is the condition this replaces.)')
+      'that is the condition this replaces.) **This condition presumes a γ COMMON to '
+      'the dictionaries being ordered**, which is the whole-corpus reading the '
+      'headline uses. It does not survive per-dictionary γ: review 2 supplied the '
+      'counterexample γ_pw = 1.0, γ_mw = 1.1 — both far above the crossing, yet the '
+      'remainders become 56,923 and 60,210 and the ordering reverses anyway. §5 is '
+      'where that differential case is bounded; a single γ estimate, however tight, '
+      'cannot close it.')
     A('2. **The sequential-removal mechanism is shown not to operate** — era-1 '
       'corrections are found not to remove the errors an era-2 recapture would need '
       '(re-introduction, partial fixes, or independent error inventories per era), '
@@ -1550,7 +1618,10 @@ def write_md(est, estimable, env_rows, thr, swaps, nonid, od, ctrl, zero_m,
       'reports. Both reproduce γ = 1 + CV² at their *realised* CV to machine precision. '
       'Neither is sound as a *fitting* family, which is §6\'s trap.')
     A('3. **The identity γ = 1 + CV² needs capture probability LINEAR in θ** (p_j·θ), '
-      'which is how controls B and E construct it. Under a nonlinear kernel such as '
+      'which is how control **B** constructs it — and **not** how control E does: E\'s '
+      'site-level capture is 1 − (1−a)^k, nonlinear in θ and carrying removal '
+      'dependence besides, which is precisely why E\'s γ has to be computed from its '
+      'joint cells instead of read off the identity. Under a nonlinear kernel such as '
       '1 − e^(−θ) it fails, and two families sharing a mean and a variance no longer '
       'even agree with each other — `--selftest` exhibits a pair that differ at CV = '
       '0.5. So the identity may not be applied to unbounded intensity heterogeneity of '
@@ -1584,10 +1655,11 @@ def write_md(est, estimable, env_rows, thr, swaps, nonid, od, ctrl, zero_m,
     A('')
     A('The preregistration forbids editing itself after the results commit and requires '
       'every changed decision rule to appear here as a labelled deviation. All seven '
-      'below were made **after** results existed; six of them follow an independent '
-      'logic review of the first version of this report (Codex Astra `gpt-6-astra`, '
-      '20-09-2026), which returned FAIL. They are listed whether they helped the '
-      'report’s thesis or hurt it.')
+      'below were made **after** results existed. Six follow a first independent '
+      'logic review of this report (Codex Astra `gpt-6-astra`, 20-09-2026) which '
+      'returned FAIL; items 8–12 follow that reviewer’s **second** pass over the '
+      'repairs, which returned FAIL again and found this very list incomplete. They '
+      'are listed whether they helped the report’s thesis or hurt it.')
     A('')
     A('1. **Fragility rule — corrected, changes a published verdict.** The rule reads '
       '«the smallest |log γ| at which this happens … fragile if it happens at γ ∈ '
@@ -1624,6 +1696,38 @@ def write_md(est, estimable, env_rows, thr, swaps, nonid, od, ctrl, zero_m,
       'Poisson mixture matching the moments exactly. §8’s refutation conditions were '
       'rewritten: two of the three bore on the grid’s extent rather than on the ordering '
       'claim they were supposed to be able to refute.')
+    A('8. **Control B’s acceptance target was changed, not merely extended.** The '
+      'identity is now checked against each family’s **realised** CV rather than the '
+      'nominal one, with an absolute 1e−9 gate. This matters for the clipped-Gamma '
+      'companion, whose tail truncation puts its simulated γ at ≈1.812 against the '
+      'nominal-CV target of 2 — a 9.4% gap. Checking at the realised CV is the '
+      'defensible test (it is a statement about the family one actually has), but it '
+      'is a different numerical test from the preregistered one, and adding a second '
+      'family is not a disclosure of that change.')
+    A('9. **Fragility thresholds are continuous, not grid-based.** The frozen rule '
+      'specifies the first γ **on the grid** at which the interval stops covering; the '
+      'implementation solves for the exact crossing instead. The grid-based first '
+      'exits are pw 1.25, mw 1.25, cae 1.00, bur 1.50, and the fragile flags are '
+      'identical either way — the rules agree here, but they are not the same rule.')
+    A('10. **The central identification claim was narrowed.** The preregistration '
+      'promises a demonstration that the data cannot prefer any γ. What §2 now shows '
+      'is an exact cell fit at every γ with a weak monotone finite-N preference, and '
+      'exact non-identification only under the conditional/Poisson formulations. The '
+      'likelihood spread quoted there is also specific to the grid: the excluded '
+      'N = S_obs boundary attains a higher likelihood than any grid point, so the '
+      'spread bounds discrimination *within the grid*, not everywhere.')
+    A('11. **Control A matches the margins, not all three preregistered expectations.** '
+      'Its cells are set from the observed era sizes, so E[n1] and E[n2] match by '
+      'construction while E[m] does not: restoring the capped dictionary exposes the '
+      'largest case, E[m] = 15.4 against an observed m = 13. The control still does '
+      'what it is for — recovering a KNOWN population from independent sources — but '
+      'it is not the three-way match the preregistration describes.')
+    A('12. **Control C’s acceptance rule is not the preregistered one.** The frozen '
+      'rule requires the **simulated** γ to fall monotonically across k̄ levels; the '
+      'implementation checks that the analytic γ is below 1 and that the simulation '
+      'agrees with it. The committed rows are in fact monotone, so nothing in the '
+      'table changes, but the two rules are not equivalent and the weaker one is what '
+      'actually ran.')
     A('')
     A('Unchanged from the preregistration: the γ grid, the CV and k̄ grids, the seed, the '
       'replicate count, the estimator, the fragile band itself, the ranking definition, '
@@ -1828,6 +1932,57 @@ def selftest():
     chk('that slope is monotone, i.e. a real if weak preference for smaller N',
         lls == sorted(lls, reverse=True) or lls == sorted(lls),
         'direction recorded in the report rather than described as flat')
+
+    # ---- invariants added 20-09-2026 after the SECOND external review ----
+    # Control E cannot validate `joint_cells`: it simulates FROM those cells, so any
+    # corrupted joint model passes it. Review 2 proved this by scaling p11 by 0.8 and
+    # watching 76/76 controls still pass. The real check is agreement between two
+    # independent derivations -- the k-by-k sum and the Poisson-splitting closed form.
+    worst = 0.0
+    n_cmp = 0
+    for q1 in (0.05, 0.2, 0.4):
+        for q2 in (0.02, 0.1):
+            for kbar in (1.5, 2.5, 4.0):
+                for cv in (0.0, 0.5, 0.85):
+                    a_ = joint_cells(q1, q2, kbar, cv)
+                    b_ = joint_cells_closed(q1, q2, kbar, cv)
+                    if a_ is None or b_ is None:
+                        continue
+                    n_cmp += 1
+                    worst = max(worst, max(abs(x - y) for x, y in zip(a_, b_)))
+    chk('joint model agrees with an INDEPENDENT closed-form derivation',
+        n_cmp > 0 and worst < 1e-12,
+        f'{n_cmp} settings, max cell discrepancy {worst:.2e}')
+
+    # ... and that check must have the power to reject the mutation review 2 used.
+    ref = joint_cells(0.2, 0.1, 1.5, 0.85)
+    ind = joint_cells_closed(0.2, 0.1, 1.5, 0.85)
+    corrupt = (ref[0] * 0.8, ref[3] - ref[0] * 0.8, ref[4] - ref[0] * 0.8,
+               ref[3], ref[4])
+    caught = max(abs(x - y) for x, y in zip(corrupt, ind)) > 1e-12
+    chk('that agreement check REJECTS the p11 x 0.8 corruption review 2 slipped past '
+        'every control', caught,
+        f'gamma {gamma_of(*ref[:1], ref[3], ref[4]):.6f} vs corrupted '
+        f'{gamma_of(corrupt[0], corrupt[3], corrupt[4]):.6f}')
+
+    # the equal-moment demonstration must actually hold its moments equal
+    two_pt = ((1.0 - 0.5, 0.5), (1.0 + 0.5, 0.5))
+    alt = ((1.0 - 2.0 * 0.5, 0.125), (1.0, 0.75), (1.0 + 2.0 * 0.5, 0.125))
+
+    def _mom(fam):
+        m = sum(w * t for t, w in fam)
+        v = sum(w * (t - m) ** 2 for t, w in fam)
+        return m, v
+
+    m1, v1 = _mom(two_pt)
+    m2, v2 = _mom(alt)
+    chk('the two families in the nonlinear-kernel demonstration really do share a '
+        'mean and a variance', abs(m1 - m2) < 1e-12 and abs(v1 - v2) < 1e-12,
+        f'means {m1:.6f}/{m2:.6f}, variances {v1:.6f}/{v2:.6f}')
+    g_a, g_b = nonlinear_kernel_gap(0.5)
+    chk('and under 1 - exp(-theta) they nonetheless disagree, so the identity is '
+        'kernel-dependent', abs(g_a - g_b) > 1e-6,
+        f'gamma {g_a:.6f} vs {g_b:.6f} at equal moments')
 
     # published counts reproduce from the events CSV (the arithmetic half)
     if os.path.exists(EVENTS) and os.path.exists(PUBLISHED):
