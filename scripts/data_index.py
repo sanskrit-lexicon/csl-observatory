@@ -199,8 +199,8 @@ CATALOG: dict[str, Entry] = {
     "recapture_sensitivity_controls.csv": Entry(
         "obs-t recapture",
         "scripts/recapture_sensitivity.py",
-        "Simulation controls behind the sensitivity envelope: independent-source recovery, heterogeneity-induced positive dependence and sequential removal, each with its analytic gamma, simulated gamma, Chapman bias and nominal-95% CI coverage.",
-        "Seeded (5072), 400 replicates per cell, exact multinomial sampling. The coverage column describes the STATISTICAL interval only; its collapse under heterogeneity is the finding of the table, not a defect in it.",
+        "Simulation controls behind the sensitivity envelope: independent-source recovery, heterogeneity-induced positive dependence (two mixing families), sequential removal, and the composition of the last two, each with its analytic gamma, simulated gamma, Chapman bias and nominal-95% CI coverage.",
+        "Seeded (5072), 400 replicates per cell, exact multinomial sampling. The coverage column describes the STATISTICAL interval only; its collapse under heterogeneity is the finding of the table, not a defect in it. The 'E mechanism composition' rows carry gamma_naive_product beside the true joint gamma to show the two mechanisms' factors must NOT be multiplied -- the product can invert the sign of the net bias. Control B rows carry cv_realised, which is below the nominal cv for the clipped-Gamma family; the identity holds at the realised value.",
     ),
     "headword_key_collisions.csv": Entry(
         "dictionary inventory",

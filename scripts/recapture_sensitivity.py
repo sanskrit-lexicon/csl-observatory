@@ -97,6 +97,11 @@ SEED = 5072
 FRAGILE_BAND = (0.90, 1.10)     # an interval that breaks inside this band is "fragile"
 TOL = 0.05                      # 5% tolerance on every preregistered pass condition
 COVERAGE_MIN = 0.90             # control A nominal-95% coverage floor
+# Two-sided since 20-09-2026 (external review, defect 6): a coverage FLOOR alone is
+# satisfied by any interval wide enough, including the degenerate [0, inf). A
+# calibration control that cannot reject over-coverage certifies nothing about the
+# interval it is meant to be calibrating. `selftest` mutates the interval to prove it.
+COVERAGE_MAX = 0.99             # control A nominal-95% coverage ceiling
 
 
 # --------------------------------------------------------------------------- #
@@ -262,11 +267,116 @@ def gamma_of(p11, p1, p2):
     return p11 / (p1 * p2) if p1 > 0 and p2 > 0 else float('nan')
 
 
+def joint_cells(q1, q2, kbar, cv, thetas=None):
+    """Cell probabilities when BOTH mechanisms act at once.
+
+    One site-level factor theta (mean 1, coefficient of variation `cv`) scales the
+    per-error detection probabilities of both eras, AND the form era fixes what it
+    detects, over a zero-truncated Poisson error count of mean `kbar`. Exact: the
+    theta mixture and the k sum are both evaluated, nothing is simulated.
+
+    This exists because the two mechanisms' gammas DO NOT MULTIPLY (external review,
+    defect 4). Conditioning on a shared theta correlates the two eras' detection
+    within a site, so the composite gamma has to be computed from the joint cells.
+    `control_e` reports the exact discrepancy; `selftest` pins it."""
+    if thetas is None:
+        thetas = ((1.0 - cv, 0.5), (1.0 + cv, 0.5))     # symmetric two-point, E=1
+    lam = ztp_lambda_for_mean(kbar) if kbar > 1.0 else 1e-9
+    norm = 1.0 - math.exp(-lam)
+    p1 = p2 = p11 = 0.0
+    for th, w in thetas:
+        a = q1 * th                          # found in era 1 -> fixed, cannot recur
+        b = (1.0 - a) * (q2 * th)            # survives era 1, found in era 2
+        r = 1.0 - a - b
+        if min(a, b, r) < 0.0 or max(a, b) > 1.0:
+            return None                      # theta pushes a probability out of range
+        s1 = s2 = s12 = 0.0
+        term = math.exp(-lam)                 # Poisson(lam) pmf at k = 0
+        for k in range(1, 400):
+            term *= lam / k                   # recurrence: no factorial, no overflow
+            pk = term / norm
+            if pk < 1e-15 and k > lam + 10:
+                break
+            s1 += pk * (1.0 - (1.0 - a) ** k)
+            s2 += pk * (1.0 - (1.0 - b) ** k)
+            s12 += pk * (1.0 - (1.0 - a) ** k - (1.0 - b) ** k + r ** k)
+        p1 += w * s1
+        p2 += w * s2
+        p11 += w * s12
+    return p11, p1 - p11, p2 - p11, p1, p2
+
+
+def gamma_two_point(cv):
+    """The analytic gamma of the heterogeneity mechanism alone: 1 + CV^2.
+
+    Valid only where capture probability is LINEAR in theta (p_j * theta), which is
+    how controls B and E construct it (external review, defect 8). Under a nonlinear
+    kernel the identity fails and two families sharing (mean, variance) disagree --
+    `nonlinear_kernel_gap` exhibits that, and `selftest` pins it."""
+    return 1.0 + cv * cv
+
+
+def family_moments(thetas):
+    """(mean, realised CV) of a discrete mixing family."""
+    mean = sum(w * th for th, w in thetas)
+    var = sum(w * (th - mean) ** 2 for th, w in thetas)
+    return mean, (var ** 0.5) / mean if mean else float('nan')
+
+
+def clipped_gamma_thetas(cv, nodes=96, lo=0.0, hi=4.0):
+    """Discretised Gamma(shape=1/cv^2, mean 1) clipped to [lo, hi], renormalised to
+    mean 1 exactly. The robustness companion control B's own docstring promised and
+    did not ship (external review, defect 6).
+
+    Clipping truncates the Gamma's upper tail, so the family's REALISED CV falls below
+    the nominal one it was built from (nominal 1.00 -> realised 0.901). The identity is
+    a statement about the family one actually has, so each row carries `cv_realised`
+    and its gamma is checked against 1 + cv_realised^2 -- which it matches to machine
+    precision, confirming the identity from a second family rather than restating it."""
+    if cv <= 0:
+        return ((1.0, 1.0),)
+    shape = 1.0 / (cv * cv)
+    scale = 1.0 / shape
+    edges = [lo + (hi - lo) * i / nodes for i in range(nodes + 1)]
+    pts = []
+    for i in range(nodes):
+        mid = (edges[i] + edges[i + 1]) / 2.0
+        # Gamma density at the midpoint, unnormalised (constant cancels below).
+        dens = mid ** (shape - 1.0) * math.exp(-mid / scale) if mid > 0 else 0.0
+        if dens > 0:
+            pts.append([mid, dens])
+    tot = sum(w for _, w in pts)
+    pts = [[m, w / tot] for m, w in pts]
+    mean = sum(m * w for m, w in pts)
+    return tuple((m / mean, w) for m, w in pts)       # rescale to E[theta] = 1
+
+
+def nonlinear_kernel_gap(cv, alt_thetas=None):
+    """gamma under a NONLINEAR capture kernel 1 - exp(-theta), for two mixing
+    families that share a mean and a variance. Linear-kernel theory says both give
+    1 + CV^2; under this kernel they do not even agree with each other."""
+    def g(thetas):
+        p1 = sum(w * (1.0 - math.exp(-th)) for th, w in thetas)
+        p11 = sum(w * (1.0 - math.exp(-th)) ** 2 for th, w in thetas)
+        return p11 / (p1 * p1)
+    two_pt = ((1.0 - cv, 0.5), (1.0 + cv, 0.5))
+    if alt_thetas is None:
+        # three-point family with the same mean (1) and the same variance (cv^2)
+        w_out = cv * cv / (2.0 * 4.0)                  # mass at 1 -/+ 2cv
+        alt_thetas = ((1.0 - 2.0 * cv, w_out), (1.0, 1.0 - 2.0 * w_out),
+                      (1.0 + 2.0 * cv, w_out))
+    return g(two_pt), g(alt_thetas)
+
+
 # --------------------------------------------------------------------------- #
 # control runners
 # --------------------------------------------------------------------------- #
-def run_cells(n_true, p11, p10, p01, reps, seed):
-    """Replicate tables -> Chapman point/CI summaries against the known truth."""
+def run_cells(n_true, p11, p10, p01, reps, seed, ci_widen=1.0):
+    """Replicate tables -> Chapman point/CI summaries against the known truth.
+
+    `ci_widen` exists only for `selftest`'s interval mutation (defect 6): scaling the
+    half-width by a large factor produces the degenerate interval whose coverage the
+    two-sided gate must REJECT. Every real control call leaves it at 1.0."""
     rng = random.Random(seed)
     pts, covered, gammas = [], 0, []
     for _ in range(reps):
@@ -274,6 +384,8 @@ def run_cells(n_true, p11, p10, p01, reps, seed):
         if m <= 0:
             continue
         n_hat, se, lo, hi = ER.chapman(n1, n2, m)
+        if ci_widen != 1.0:
+            lo, hi = n_hat - (n_hat - lo) * ci_widen, n_hat + (hi - n_hat) * ci_widen
         pts.append(n_hat)
         covered += int(lo <= n_true <= hi)
         gammas.append(n_true * m / (n1 * n2) if n1 and n2 else float('nan'))
@@ -296,36 +408,66 @@ def control_a(targets, reps, seed):
         r = run_cells(n_true, p11, p10, p01, reps, seed)
         r.update(control='A independent-source recovery', dict=t['dict'], cv='',
                  kbar='', gamma_analytic=1.0, n_true=n_true,
-                 passes=int(abs(r['rel_bias']) <= TOL and r['coverage'] >= COVERAGE_MIN))
+                 passes=int(abs(r['rel_bias']) <= TOL
+                            and COVERAGE_MIN <= r['coverage'] <= COVERAGE_MAX))
         rows.append(r)
     return rows
 
 
+def mixture_cells(p1, p2, thetas):
+    """Cells built by INTEGRATING over an explicit mixing family, not by substituting
+    1 + CV^2 into the answer.
+
+    External review, defect 6: control B used to generate its cells from the very
+    identity it then reported as confirmed, so the check could not fail. Here the
+    family is the input, the cells come from it, and `gamma_of` reads the identity
+    back out -- the only path by which the check can disagree with the theory."""
+    p1m = sum(w * p1 * th for th, w in thetas)
+    p2m = sum(w * p2 * th for th, w in thetas)
+    p11 = sum(w * (p1 * th) * (p2 * th) for th, w in thetas)
+    if min(p1m - p11, p2m - p11) <= 0 or p11 <= 0:
+        return None
+    return p11, p1m - p11, p2m - p11, p1m, p2m
+
+
 def control_b(targets, reps, seed, cvs=CV_GRID):
     rows = []
+    families = (('two-point', lambda cv: ((1.0 - cv, 0.5), (1.0 + cv, 0.5))),
+                ('gamma-clipped', clipped_gamma_thetas))
     for t in targets:
         n_true = int(round(t['n_hat']))
         p1, p2 = t['n1_form'] / n_true, t['n2_git'] / n_true
         for cv in cvs:
-            p11, p10, p01 = hetero_cells(p1, p2, cv)
-            if min(p10, p01) <= 0 or p11 + p10 + p01 >= 1:
-                continue
-            g = 1 + cv * cv
-            r = run_cells(n_true, p11, p10, p01, reps, seed)
-            if r is None:
-                continue
-            # does the envelope, evaluated at the analytic gamma, recover the truth?
-            n1s = int(round(n_true * p1)); n2s = int(round(n_true * p2))
-            ms = int(round(n_true * p11))
-            rec = envelope(n1s, n2s, ms, g)
-            r.update(control='B heterogeneous detectability', dict=t['dict'], cv=cv,
-                     kbar='', gamma_analytic=g, n_true=n_true,
-                     envelope_recovery=rec / n_true - 1 if rec else '',
-                     bias_predicted=-(cv * cv) / (1 + cv * cv))
-            r['passes'] = int(abs(r['gamma_emp'] - g) <= TOL * g
-                              and abs(r['rel_bias'] - r['bias_predicted']) <= TOL
-                              and abs(rec / n_true - 1) <= TOL)
-            rows.append(r)
+            for fam_name, fam in families:
+                if cv == 0.0 and fam_name == 'gamma-clipped':
+                    continue                      # degenerate, identical to two-point
+                cells = mixture_cells(p1, p2, fam(cv))
+                if cells is None:
+                    continue
+                p11, p10, p01, p1m, p2m = cells
+                if p11 + p10 + p01 >= 1:
+                    continue
+                # read the identity back OUT of the constructed cells
+                g_emp_family = gamma_of(p11, p1m, p2m)
+                _, cv_real = family_moments(fam(cv))
+                g = gamma_two_point(cv_real)     # identity at the family's TRUE cv
+                r = run_cells(n_true, p11, p10, p01, reps, seed)
+                if r is None:
+                    continue
+                # does the envelope, evaluated at the analytic gamma, recover the truth?
+                n1s = int(round(n_true * p1m)); n2s = int(round(n_true * p2m))
+                ms = int(round(n_true * p11))
+                rec = envelope(n1s, n2s, ms, g_emp_family)
+                r.update(control='B heterogeneous detectability', dict=t['dict'], cv=cv,
+                         kbar='', gamma_analytic=g_emp_family, n_true=n_true,
+                         family=fam_name, gamma_identity=g, cv_realised=cv_real,
+                         envelope_recovery=rec / n_true - 1 if rec else '',
+                         bias_predicted=-(g_emp_family - 1) / g_emp_family)
+                r['passes'] = int(abs(g_emp_family - g) <= 1e-9        # the identity itself
+                                  and abs(r['gamma_emp'] - g_emp_family) <= TOL * g_emp_family
+                                  and abs(r['rel_bias'] - r['bias_predicted']) <= TOL
+                                  and abs(rec / n_true - 1) <= TOL)
+                rows.append(r)
     return rows
 
 
@@ -333,12 +475,19 @@ def control_c(targets, reps, seed, kbars=KBAR_GRID):
     rows = []
     for t in targets:
         n_true = int(round(t['n_hat']))
-        # q1, q2 solved so the simulated era sizes match the dictionary's observed ones
+        # PER-ERROR detection probabilities. They are NOT calibrated to reproduce the
+        # dictionary's site-level era sizes: a site with k errors is caught if any one
+        # of them is found, so the implied site-level size exceeds n_j whenever k > 1
+        # (external review, defect 9). The mechanism's gamma does not depend on q1, q2
+        # -- it is a function of kbar alone -- so the gamma column is unaffected; the
+        # COVERAGE column is therefore not dictionary-matched, and each row now carries
+        # the implied sizes so the mismatch is visible rather than assumed away.
         q1 = t['n1_form'] / n_true
         q2 = t['n2_git'] / n_true
         for kbar in kbars:
             p11, p10, p01, p1, p2 = sequential_cells(q1, q2, kbar)
             g = gamma_of(p11, p1, p2)
+            implied_n1, implied_n2 = round(n_true * p1), round(n_true * p2)
             if min(p10, p01) <= 0 or p11 <= 0:
                 # kbar = 1 is the degenerate corner: one error per site, fixed in era 1,
                 # so recapture is impossible and gamma = 0. Recorded, not simulated —
@@ -356,8 +505,50 @@ def control_c(targets, reps, seed, kbars=KBAR_GRID):
                 continue
             r.update(control='C sequential removal', dict=t['dict'], cv='', kbar=kbar,
                      gamma_analytic=g, n_true=n_true, envelope_recovery='',
+                     implied_n1=implied_n1, implied_n2=implied_n2,
+                     observed_n1=t['n1_form'], observed_n2=t['n2_git'],
                      bias_predicted=1 / g - 1)
             r['passes'] = int(g < 1.0 and abs(r['gamma_emp'] - g) <= TOL * g)
+            rows.append(r)
+    return rows
+
+
+def control_e(targets, reps, seed, cells=((1.5, 0.50), (1.5, 0.85), (2.5, 0.50),
+                                          (2.5, 1.00), (4.0, 0.85))):
+    """E  MECHANISM COMPOSITION (added 20-09-2026 after external review, defect 4).
+
+    Controls B and C each size one mechanism. The report then MULTIPLIED their gammas
+    to argue heterogeneity cancels sequential removal at CV = 0.85. That step has no
+    derivation: a shared site-level theta correlates the eras within a site, so the
+    composite gamma is not the product. This control computes the joint gamma exactly
+    and reports the product's error. It PASSES when the simulation reproduces the
+    exact joint gamma -- the product is reported, never used."""
+    rows = []
+    for t in targets:
+        n_true = int(round(t['n_hat']))
+        q1, q2 = t['n1_form'] / n_true, t['n2_git'] / n_true
+        for kbar, cv in cells:
+            jc = joint_cells(q1, q2, kbar, cv)
+            if jc is None:
+                continue
+            p11, p10, p01, p1, p2 = jc
+            if min(p10, p01) <= 0 or p11 <= 0 or p11 + p10 + p01 >= 1:
+                continue
+            g_joint = gamma_of(p11, p1, p2)
+            sc = sequential_cells(q1, q2, kbar)
+            g_seq = gamma_of(sc[0], sc[3], sc[4])
+            g_het = gamma_two_point(cv)
+            product = g_seq * g_het
+            r = run_cells(n_true, p11, p10, p01, reps, seed)
+            if r is None:
+                continue
+            r.update(control='E mechanism composition', dict=t['dict'], cv=cv,
+                     kbar=kbar, gamma_analytic=g_joint, n_true=n_true,
+                     gamma_sequential=g_seq, gamma_heterogeneity=g_het,
+                     gamma_naive_product=product,
+                     product_error=product - g_joint,
+                     envelope_recovery='', bias_predicted=1 / g_joint - 1)
+            r['passes'] = int(abs(r['gamma_emp'] - g_joint) <= TOL * g_joint)
             rows.append(r)
     return rows
 
@@ -633,13 +824,19 @@ def main():
 
     estimable = [r for r in est if r['estimable']]
     estimable.sort(key=lambda r: -r['remaining_hat'])
-    targets = [r for r in estimable if not r['capped']] or estimable
+    # EVERY estimable dictionary, capped ones included. The earlier exclusion of the
+    # capped row (cae) was undeclared protocol drift: the preregistration promises the
+    # controls for every estimable dictionary, and the cap affects only how the
+    # PUBLISHED row is displayed, not whether the mechanism can be simulated against
+    # its counts (external review, defect 5).
+    targets = estimable
 
     reps = args.reps
     ctl_targets = targets[:1] if args.quick else targets
     ctrl = (control_a(ctl_targets, reps, SEED)
             + control_b(ctl_targets, reps, SEED)
-            + control_c(ctl_targets, reps, SEED))
+            + control_c(ctl_targets, reps, SEED)
+            + control_e(ctl_targets, reps, SEED))
 
     # envelope table
     env_rows = []
@@ -668,9 +865,26 @@ def main():
                                            float(r['ci_high'])) if r['ci_high'] != '' else None,
              'g_cap': gamma_for_target(r['n1_form'], r['n2_git'], r['m_overlap'], cap) if cap else None,
              'g_sobs': gamma_for_target(r['n1_form'], r['n2_git'], r['m_overlap'], r['s_observed'])}
-        a['fragile'] = int(a['g_ci_low'] is not None
-                           and FRAGILE_BAND[0] <= a['g_ci_low'] <= FRAGILE_BAND[1]
-                           and FRAGILE_BAND[0] <= a['g_ci_high'] <= FRAGILE_BAND[1])
+        # LITERAL preregistered rule (restored 20-09-2026, external review defect 5):
+        # "report the smallest |log gamma| at which this happens, and call the interval
+        # fragile if it happens at gamma in [0.90, 1.10]". The implementation had
+        # silently required BOTH crossings inside the band, which is a strictly
+        # stronger and therefore more flattering test. The break is the crossing
+        # NEAREST gamma = 1; if the published interval already excludes the envelope
+        # at gamma = 1, the break is at gamma = 1 itself.
+        n_at_1 = envelope(r['n1_form'], r['n2_git'], r['m_overlap'], 1.0)
+        outside_at_1 = (r['ci_low'] != ''
+                        and not (float(r['ci_low']) <= n_at_1 <= float(r['ci_high'])))
+        crossings = [g for g in (a['g_ci_low'], a['g_ci_high']) if g and g > 0]
+        if outside_at_1:
+            a['g_break'] = 1.0
+        elif crossings:
+            a['g_break'] = min(crossings, key=lambda g: abs(math.log(g)))
+        else:
+            a['g_break'] = None
+        a['break_at_gamma_1_via_cap'] = int(outside_at_1)
+        a['fragile'] = int(a['g_break'] is not None
+                           and FRAGILE_BAND[0] <= a['g_break'] <= FRAGILE_BAND[1])
         thr.append(a)
 
     # ranking
@@ -678,8 +892,19 @@ def main():
     swaps = []
     for i in range(len(estimable) - 1):
         a, b = estimable[i], estimable[i + 1]
+        g_swap = common_gamma_swap(a, b)
+        # A crossing is only a real reordering if both dictionaries still have a
+        # POSITIVE remaining count there. cae / bur cross at gamma = 0.016, where
+        # both remainders are about -1,440: under the report's floor both are zero
+        # and the pair ties rather than swapping (external review, defect 7).
+        rem_a = remaining_at(a, g_swap) if g_swap and g_swap > 0 else None
+        rem_b = remaining_at(b, g_swap) if g_swap and g_swap > 0 else None
+        feasible = int(rem_a is not None and rem_b is not None
+                       and rem_a > 0 and rem_b > 0)
         swaps.append({'pair': f"{a['dict']} / {b['dict']}",
-                      'common_gamma': common_gamma_swap(a, b),
+                      'common_gamma': g_swap,
+                      'remaining_at_crossing': rem_a,
+                      'feasible': feasible,
                       'differential_ratio': differential_ratio_swap(a, b)})
 
     # identifiability demonstration on the largest dictionary
@@ -811,12 +1036,27 @@ def write_md(est, estimable, env_rows, thr, swaps, nonid, od, ctrl, zero_m,
     A('')
     A('    γ  =  P(caught in era 2 | caught in era 1) / P(caught in era 2)')
     A('')
-    A('gives E[n1] = N·p1, E[n2] = N·p2, E[m] = N·p1·p2·γ and hence **N = γ·(n1·n2/m)**. '
+    A('gives E[n1] = N·p1, E[n2] = N·p2, E[m] = N·p1·p2·γ and hence the *moment* '
+      'identity **N = γ·E[n1]·E[n2]/E[m]**. Substituting the realised counts — and, '
+      'below, Chapman’s +1-adjusted ratio in place of the plain one — is the '
+      'sensitivity **convention** of this report, not a further consequence of that '
+      'identity: the equality holds between expectations, and the plug-in version '
+      'inherits the usual ratio-estimator error on top. '
       'Independence is γ = 1. Positive dependence (γ > 1) means the eras revisit the '
       'same sites, m is inflated and Chapman **underestimates**; negative dependence '
       '(γ < 1) means a form-era fix removes the error a git-era recapture would have '
-      'needed, m is deflated and Chapman **overestimates**. Every assumption violation '
-      'the published report names enters through this single factor.')
+      'needed, m is deflated and Chapman **overestimates**.')
+    A('')
+    A('**What γ does and does not absorb.** Every *dependence between the two eras* on '
+      'a fixed, correctly linked set of sites is summarised by this one number — that '
+      'covers both mechanisms `error_recapture.md` names (sequential occasions, '
+      'correlated catchability), and it is what §3 sizes. Two other assumptions of the '
+      'published design are **not** of that form and are not covered anywhere in this '
+      'report: **closure** (sites entering or leaving the population between the eras '
+      'changes the estimand itself, not the dependence between lists) and **linkage '
+      'error** (a false match inflates m, a missed match deflates it, which corrupts '
+      'the observation mechanism rather than re-weighting it). A scalar multiplier '
+      'cannot repair either, and neither is bounded by the envelope below.')
     A('')
     A('A two-list table has exactly three observable counts — era-1 only, era-2 only, '
       'both. The independence model spends all three on (N, p1, p2): it is saturated, '
@@ -837,15 +1077,31 @@ def write_md(est, estimable, env_rows, thr, swaps, nonid, od, ctrl, zero_m,
         A(f'| {g:.2f} | {n:,.0f} | {resid:.2e} | {ll - ref:+.4f} |')
     if len(lls) > 1:
         A('')
+        n_lo = min(n for _, n, ll, _ in nonid if ll is not None)
+        n_hi = max(n for _, n, ll, _ in nonid if ll is not None)
         A('The middle column is the point: **at every γ the fitted model reproduces all '
-          'three observed counts exactly** (residuals at floating-point noise). A 16-fold '
-          'range of N̂ fits the data equally well. The last column spans '
-          f'**{max(lls) - min(lls):.3f} log-likelihood units** across that whole range — '
-          'the likelihood is flat to three decimal places, and what little slope it has '
-          'comes from the combinatorial term, not from any evidence about dependence. '
-          'This is not a wide confidence interval; it is non-identification. More events '
-          'from these same two eras do not touch it, because the deficiency is in the '
-          'design — two lists — and not in the sample size.')
+          'three observed counts exactly** (residuals at floating-point noise). The '
+          f'grid spans a **{n_hi / n_lo:.1f}-fold** range of N̂ — {n_lo:,.0f} to '
+          f'{n_hi:,.0f} — and every value in it fits the table equally well.')
+        A('')
+        A('The last column needs stating precisely, because it is weaker than "flat". '
+          f'It spans **{max(lls) - min(lls):.3f} log-likelihood units** across that '
+          'range, and the difference is **monotone**: the finite-N combinatorial term '
+          'gives a real, if very weak, preference for the smaller N̂ (the profile also '
+          'excludes the boundary N = S_obs, which would sit at the end of that same '
+          'slope). So this is not exact non-identification of the full finite-N '
+          'likelihood; it is a likelihood that discriminates by less than a fifth of a '
+          'log-unit where two units is the conventional threshold for *weak* evidence. '
+          'The identification argument proper is the middle column and the parameter '
+          'count — four parameters, three counts, zero residual degrees of freedom — '
+          'not the size of that slope. Exact non-identification holds for the unseen '
+          'cell under the conditional/Poisson formulations, where the term producing '
+          'this slope is not part of the likelihood at all.')
+        A('')
+        A('Either way the practical consequence is the same, and it is not a wide '
+          'confidence interval: more events from these same two eras do not touch it, '
+          'because the deficiency is in the design — two lists — and not in the sample '
+          'size.')
     A('')
 
     A('## 3. Controls')
@@ -910,10 +1166,41 @@ def write_md(est, estimable, env_rows, thr, swaps, nonid, od, ctrl, zero_m,
           f"The corner case is the sharpest statement in this report: if a site carries "
           f"**exactly one** error, the form era's fix removes the very thing a git-era "
           f"recapture would need, γ = 0, and the two-era design cannot estimate that "
-          f"dictionary at all — not imprecisely, at all. Against heterogeneity, though, "
-          f"this is the smaller force: a detectability CV of "
-          f"{math.sqrt(max(1/gmin - 1, 1e-9)):.2f} already cancels the strongest "
-          f"non-degenerate cell here, and any CV above it flips the net bias downward.")
+          f"dictionary at all — not imprecisely, at all.")
+    e_rows = [r for r in ctrl if r['control'].startswith('E')]
+    if e_rows:
+        A('')
+        worst_e = max(e_rows, key=lambda r: abs(r['product_error']))
+        neg = [r for r in e_rows if r['gamma_analytic'] < 1.0]
+        A("**E — mechanism composition, and a correction to an earlier draft of this "
+          "report.** An earlier version argued that heterogeneity *cancels* sequential "
+          "removal at a detectability CV of about 0.85, by multiplying the two "
+          "mechanisms' γ values together. That step is wrong, and external review "
+          "caught it. When one site-level factor scales both eras' detection "
+          "probabilities, the eras become correlated *within* a site, and the composite "
+          "γ is not the product of the separate ones. Control E computes the joint "
+          "mechanism exactly instead of multiplying:")
+        A('')
+        A('| k̄ | CV | γ sequential | γ heterogeneity | naive product | **true joint γ** | product error |')
+        A('|---:|---:|---:|---:|---:|---:|---:|')
+        for r in sorted(e_rows, key=lambda r: (r['kbar'], r['cv']))[:8]:
+            A(f"| {r['kbar']:.1f} | {r['cv']:.2f} | {r['gamma_sequential']:.4f} | "
+              f"{r['gamma_heterogeneity']:.4f} | {r['gamma_naive_product']:.4f} | "
+              f"**{r['gamma_analytic']:.4f}** | {r['product_error']:+.4f} |")
+        A('')
+        A("The product overstates the composite γ in every cell, by as much as "
+          f"{abs(worst_e['product_error']):.3f}, and it can get the **sign of the net "
+          "bias wrong**: at k̄ = 1.5, CV = 0.85 the product says 1.004 — cancellation, "
+          "a hair of positive dependence — while the true joint value is "
+          f"{[r for r in e_rows if abs(r['cv']-0.85) < 1e-9 and abs(r['kbar']-1.5) < 1e-9][0]['gamma_analytic']:.4f}"
+          ", still clearly negative dependence. "
+          + (f"{len(neg)} of the {len(e_rows)} composed cells stay below 1. "
+             if neg else "")
+          + "The correction runs **in favour of** this report's headline rather than "
+            "against it: heterogeneity does not neutralise sequential removal as easily "
+            "as the multiplied figure suggested, so the γ < 1 region that reorders the "
+            "ranking in §5 is reached under a wider range of joint assumptions, not a "
+            "narrower one.")
     A('')
 
     A('## 4. The envelope, and where the published intervals break')
@@ -946,14 +1233,17 @@ def write_md(est, estimable, env_rows, thr, swaps, nonid, od, ctrl, zero_m,
     A('')
     A('The γ at which each published boundary is crossed:')
     A('')
-    A('| Dict | γ at CI low | γ at CI high | CI fragile? | γ at record count | '
-      'γ at observed floor |')
-    A('|---|---:|---:|:--:|---:|---:|')
+    A('| Dict | γ at CI low | γ at CI high | **break γ** (nearest 1) | CI fragile? | '
+      'γ at record count | γ at observed floor |')
+    A('|---|---:|---:|---:|:--:|---:|---:|')
     for t in thr:
-        A('| {d} | {lo} | {hi} | {f} | {cap} | {so} |'.format(
+        brk = ('1.000 (already outside at γ = 1)' if t['break_at_gamma_1_via_cap']
+               else (f"{t['g_break']:.3f}" if t['g_break'] else '—'))
+        A('| {d} | {lo} | {hi} | {b} | {f} | {cap} | {so} |'.format(
             d=t['dict'],
             lo=(f"{t['g_ci_low']:.3f}" if t['g_ci_low'] else '—'),
             hi=(f"{t['g_ci_high']:.3f}" if t['g_ci_high'] else '—'),
+            b=brk,
             f=('**yes**' if t['fragile'] else 'no'),
             cap=(f"{t['g_cap']:.3f}" if t['g_cap'] else '—'),
             so=(f"{t['g_sobs']:.3f}" if t['g_sobs'] else '—')))
@@ -961,13 +1251,23 @@ def write_md(est, estimable, env_rows, thr, swaps, nonid, od, ctrl, zero_m,
     frag = [t['dict'] for t in thr if t['fragile']]
     widths = [(t['dict'], max(abs(t['g_ci_low'] - 1), abs(t['g_ci_high'] - 1)))
               for t in thr if t['g_ci_low'] and t['g_ci_high']]
+    via_cap = [t['dict'] for t in thr if t['fragile'] and t['break_at_gamma_1_via_cap']]
     if frag:
-        A(f"Fragile by the preregistered rule — exhausted by a dependence departure of "
-          f"10% or less in either direction: **{', '.join(frag)}**.")
+        A(f"**Fragile by the preregistered rule — the nearest break to γ = 1 falls "
+          f"inside [0.90, 1.10]: {', '.join(frag)}.** The rule is applied as written "
+          "(«report the smallest |log γ| at which this happens … fragile if it happens "
+          "at γ ∈ [0.90, 1.10]»). An earlier draft of this report implemented it as a "
+          "requirement that *both* boundary crossings lie inside the band — a strictly "
+          "stronger and more flattering test, which reported no fragile interval at "
+          "all. That was an undeclared deviation; external review caught it and the "
+          "literal rule is restored here."
+          + (f" For **{', '.join(via_cap)}** the break is at γ = 1 itself: the raw "
+             "envelope already sits outside the published *capped* interval before any "
+             "dependence is introduced, so the flag records the cap, not a dependence "
+             "finding — see the reading note below." if via_cap else ''))
     else:
-        A('**No interval is *fragile* by the letter of the preregistered rule** (none '
-          'breaks inside γ ∈ [0.90, 1.10] on BOTH sides), and the rule is reported as '
-          'it was written rather than loosened after the fact. But read the widths: ')
+        A('**No interval is *fragile* by the letter of the preregistered rule** — no '
+          'break nearest γ = 1 falls inside [0.90, 1.10]. But read the widths: ')
     if widths:
         A('')
         A('the whole published 95% interval of '
@@ -996,15 +1296,40 @@ def write_md(est, estimable, env_rows, thr, swaps, nonid, od, ctrl, zero_m,
       'A **dictionary-differential** γ can reorder it trivially. Both thresholds are '
       'exact (the crossing is linear in γ), not simulated:')
     A('')
-    A('| Adjacent pair | swaps at common γ | swaps at γ-ratio (2nd ÷ 1st) |')
-    A('|---|---:|---:|')
+    A('| Adjacent pair | swaps at common γ | real reordering? | swaps at γ-ratio (2nd ÷ 1st) |')
+    A('|---|---:|:--:|---:|')
     for s in swaps:
-        A('| {p} | {c} | {d} |'.format(
+        if not s['common_gamma'] or s['common_gamma'] <= 0:
+            feas = '—'
+        elif s['feasible']:
+            feas = 'yes'
+        else:
+            feas = (f"no — both remainders ≈ {s['remaining_at_crossing']:,.0f} there"
+                    if s['remaining_at_crossing'] is not None else 'no')
+        A('| {p} | {c} | {f} | {d} |'.format(
             p=s['pair'],
             c=(f"{s['common_gamma']:.3f}" if s['common_gamma'] and s['common_gamma'] > 0 else 'never (γ > 0)'),
+            f=feas,
             d=(f"{s['differential_ratio']:.3f}" if s['differential_ratio'] else '—')))
     A('')
-    in_grid = [s for s in swaps if s['common_gamma'] and GAMMA_GRID[0] <= s['common_gamma'] <= GAMMA_GRID[-1]]
+    infeas = [s for s in swaps if s['common_gamma'] and s['common_gamma'] > 0
+              and not s['feasible']]
+    if infeas:
+        A('One crossing in that table is arithmetic only, not a reordering that could be '
+          'observed: '
+          + ', '.join(f"**{s['pair']}** at γ = {s['common_gamma']:.3f}" for s in infeas)
+          + ' puts *both* dictionaries at a negative remaining count, which the '
+            'report’s floor clamps to zero — so the pair ties at zero rather than '
+            'changing places. External review flagged it; it is kept in the table and '
+            'marked rather than dropped.')
+        A('')
+    A('The differential column is also narrower than it looks: each ratio is computed '
+      'holding the first dictionary at γ = 1, so it answers «how much more dependent '
+      'would the second have to be than an *independent* first», not «what ratio of two '
+      'arbitrary γ values reverses the pair».')
+    A('')
+    in_grid = [s for s in swaps if s['common_gamma'] and s['feasible']
+               and GAMMA_GRID[0] <= s['common_gamma'] <= GAMMA_GRID[-1]]
     if in_grid:
         A('Pairs that swap **inside** the preregistered γ range: '
           + ', '.join(f"{s['pair']} (γ = {s['common_gamma']:.3f})" for s in in_grid)
@@ -1068,10 +1393,26 @@ def write_md(est, estimable, env_rows, thr, swaps, nonid, od, ctrl, zero_m,
           + (f"**{len(unre)} of {len(live)}** are above the Poisson–Gamma ceiling "
              f"entirely, by up to {max(o['excess'] for o in unre):.1f}×." if unre else ''))
     A('')
-    A('That last row of numbers is the real finding of this section, and it is a '
-      'negative one: **the per-site correction counts are not a mixed-Poisson process.** '
-      'No latent-rate heterogeneity of the usual one-parameter kind can generate this '
-      'much spread at this mean. Two readings, and the data here cannot separate them:')
+    A('That last column is the real finding of this section, and it is a negative one, '
+      'stated with the scope it actually has: **no zero-truncated Poisson–Gamma of '
+      'that mean can produce this much spread.** The Gamma family — the standard '
+      'latent-rate mixture, and the one whose CV feeds γ = 1 + CV² — has a finite '
+      'variance ceiling at a fixed truncated mean, and these cells are above it.')
+    A('')
+    A('**That is a statement about the Gamma family, not about mixed Poissons in '
+      'general, and an earlier draft of this report overreached by claiming the '
+      'latter.** External review supplied the counterexample: a bounded two-point '
+      'mixture of Poisson rates (0.01 and 5.616, with weight 4.81e-4 on the high rate) '
+      'reproduces the pw-form truncated mean 1.2181 and variance 1.2002 exactly. So a '
+      'mixed-Poisson description exists; it simply cannot be a Gamma one. Worse for '
+      'any attempt to read γ off these counts: **homogeneous capture with clustered '
+      'event batches reproduces the same moments with γ = 1**. Event-count '
+      'overdispersion therefore does not by itself refute homogeneous catchability. '
+      'Nor is "observed moments exceed a family\'s ceiling" a calibrated test — no '
+      'sampling distribution is attached to it here, so it is a descriptive '
+      'impossibility for that family, not a rejection at a stated level.')
+    A('')
+    A('Two readings remain, and the data here cannot separate them:')
     A('')
     A('1. **Heavy-tailed heterogeneity** — a small minority of records attracting very '
       'many corrections, heavier than a Gamma tail. Then γ = 1 + CV²(θ) is not merely '
@@ -1093,13 +1434,18 @@ def write_md(est, estimable, env_rows, thr, swaps, nonid, od, ctrl, zero_m,
       'mix how many errors a record carries with how findable they are, and only the '
       'second belongs in γ.')
     A('')
-    A('**What it does establish.** The homogeneous-catchability picture underlying '
-      'γ = 1 is not a mild idealisation of these histories — it is refuted by them, in '
-      f'{len(unre)} of {len(live)} era-dictionary cells, by a margin no one-parameter '
-      'mixture can close. Under reading 1 that puts γ above 1, possibly far above, and '
-      'the published figures at the **bottom** of their own envelope. Under reading 2 '
-      'the direction is simply unknown — which is not the reassuring branch, because '
-      'the published CI is computed as though neither reading were live.')
+    A('**What it does establish.** That the *simplest* quantitative story about these '
+      'histories — a Gamma-mixed Poisson, the model whose CV would feed straight into '
+      f'γ = 1 + CV² — is unavailable in {len(unre)} of {len(live)} era-dictionary '
+      'cells. Any model that fits has to be something else: a heavier or a bounded '
+      'non-Gamma mixture, or a clustered event process. Under reading 1 that puts γ '
+      'above 1, possibly far above, and the published figures at the **bottom** of '
+      'their own envelope. Under reading 2 the direction is simply unknown. What it '
+      'does **not** establish is that homogeneous catchability is refuted: reading 2 '
+      'is compatible with γ = 1 exactly, as the batch-event construction above shows. '
+      'The honest summary is that these counts leave the assumption untested rather '
+      'than disproved — which is still not the reassuring branch, because the '
+      'published CI is computed as though it were settled.')
     A('')
 
     A('## 7. Zero recapture: still not identified')
@@ -1145,9 +1491,11 @@ def write_md(est, estimable, env_rows, thr, swaps, nonid, od, ctrl, zero_m,
                    'robust: a dependence departure of ~13% exhausts them (§4).')
         conf = ('high for the arithmetic — every threshold in §4 and §5 is an exact '
                 'inversion, not a simulation, and the controls reproduce their analytic '
-                'predictions to within 5% at 30 of 30 cells; moderate for the practical '
-                'severity, which depends on the true mean error count per site — a '
-                'quantity §6 shows these histories cannot pin down')
+                f'predictions to within 5% at {sum(r["passes"] for r in ctrl)} of '
+                f'{len(ctrl)} cells; moderate for the practical severity, which depends '
+                'on the true mean error count per site — a quantity §6 shows these '
+                'histories cannot pin down; and explicitly NOT extended to closure or '
+                'linkage error, which §2 puts outside γ altogether')
     else:
         claim = ('**The ordering of the four estimable dictionaries by remaining error '
                  'sites is robust to any corpus-common dependence factor in [0.50, 2.00], '
@@ -1161,17 +1509,30 @@ def write_md(est, estimable, env_rows, thr, swaps, nonid, od, ctrl, zero_m,
     A('')
     A(f'**Confidence:** {conf}.')
     A('')
-    A('**This is refuted if** any of the following is shown: (i) an independent design '
-      'over the same sites — the within-era corrector design of '
+    A('**This is refuted if** any of the following is shown. The conditions below were '
+      'rewritten after external review pointed out that the previous set challenged the '
+      'grid’s *extent* rather than the claim itself — a refutation condition has to bear '
+      'on the ordering, which is what the claim is about.')
+    A('')
+    A('1. **An independent γ estimate that excludes the crossing.** The within-era '
+      'corrector design of '
       '[`corrector_recapture.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/corrector_recapture.md) '
-      'is the existing candidate — yields a γ estimate outside [0.5, 2.0], which would '
-      'put the truth outside the envelope drawn here; (ii) a third capture occasion is '
-      'constructed for any dictionary, since three lists identify pairwise dependence '
-      'and would replace this envelope with an estimate; or (iii) the over-ceiling '
-      'dispersion of §6 is shown to be entirely within-site event clustering (reading 2 '
-      'there) once timestamps and authorship are used, which would remove the empirical '
-      'basis for expecting γ > 1 — though not the non-identification, which stands '
-      'either way.')
+      'yields a γ for these sites whose plausible range lies **entirely above the '
+      'headline crossing** — i.e. rules out the γ < crossing region — which would make '
+      'the published ordering safe to quote after all. (A γ estimate merely *outside* '
+      '[0.5, 2.0] would say the grid is too narrow, not that the ordering is robust: '
+      'that is the condition this replaces.)')
+    A('2. **The sequential-removal mechanism is shown not to operate** — era-1 '
+      'corrections are found not to remove the errors an era-2 recapture would need '
+      '(re-introduction, partial fixes, or independent error inventories per era), '
+      'removing the only mechanism this report demonstrates can reach the crossing.')
+    A('3. **A third capture occasion plus an identifying assumption.** Three lists do '
+      'not identify the unseen cell on their own; they do so under a stated constraint '
+      'such as no three-way interaction. A third occasion *with* such an assumption '
+      'defended would replace this envelope with an estimate and settle the ordering '
+      'directly. (Reading §6’s dispersion as pure event clustering would remove one '
+      'argument for γ > 1 — but the ordering claim rests on the γ < 1 branch, so that '
+      'finding would leave it standing, which is why it is no longer listed here.)')
     A('')
     A('**What would NOT refute it:** more correction events from these same two eras. '
       'The deficiency is structural (§2); more data shrinks the CI that is already the '
@@ -1183,24 +1544,90 @@ def write_md(est, estimable, env_rows, thr, swaps, nonid, od, ctrl, zero_m,
     A('1. γ is a single summary of everything that breaks independence. Real dependence '
       'can be non-uniform across sites in ways one scalar cannot express; the envelope '
       'is then correct on average and wrong site by site.')
-    A('2. Control B fixes the heterogeneity family to a bounded symmetric two-point θ so '
-      'that capture probabilities stay probabilities at CV = 1. For the CONTROL that is '
-      'sound — γ depends on θ only through its first two moments, so the family is a '
-      'presentational choice there. It is not sound as a *fitting* family, which is §6\'s '
-      'Trap 2, and higher-moment behaviour is exactly what §6 finds the data demanding.')
-    A('3. Control C assumes each error is detected independently and that the form era '
+    A('2. Control B runs two bounded families — a symmetric two-point θ and a clipped '
+      'Gamma — so that capture probabilities stay probabilities at CV = 1, and builds '
+      'its cells by integrating the family rather than by substituting the identity it '
+      'reports. Both reproduce γ = 1 + CV² at their *realised* CV to machine precision. '
+      'Neither is sound as a *fitting* family, which is §6\'s trap.')
+    A('3. **The identity γ = 1 + CV² needs capture probability LINEAR in θ** (p_j·θ), '
+      'which is how controls B and E construct it. Under a nonlinear kernel such as '
+      '1 − e^(−θ) it fails, and two families sharing a mean and a variance no longer '
+      'even agree with each other — `--selftest` exhibits a pair that differ at CV = '
+      '0.5. So the identity may not be applied to unbounded intensity heterogeneity of '
+      'the kind §6\'s reading 1 contemplates.')
+    A('4. Control C assumes each error is detected independently and that the form era '
       'fixes what it detects. Partial fixes and re-introduced errors are not modelled; '
-      'both would push γ back toward 1.')
-    A('4. The closure assumption of the original design is untouched here.')
-    A('5. The overdispersion of §6 is computed on the operating linkage key, so it '
-      'inherits that key\'s measured false-match rate.')
-    A('6. §6 leaves one question open that its own data could close: whether the '
+      'both would push γ back toward 1. Its q₁, q₂ are **per-error** probabilities set '
+      'from the dictionary\'s era sizes, which does not reproduce those era sizes at '
+      'the site level once sites carry more than one error (each row prints the implied '
+      'sizes beside the observed ones). The mechanism\'s γ is a function of k̄ alone and '
+      'is unaffected; the coverage column of those rows is therefore illustrative and '
+      'not dictionary-matched.')
+    A('5. The closure assumption of the original design is untouched here, and so is '
+      'linkage error: §2 shows neither enters as a γ, so neither is bounded by any '
+      'number in this report. An envelope over dependence is not an envelope over the '
+      'design.')
+    A('6. The overdispersion of §6 is computed on the operating linkage key, so it '
+      'inherits that key\'s measured false-match rate. It is a descriptive comparison '
+      'against a family\'s variance ceiling, with no sampling distribution attached — '
+      'not a calibrated test at a stated level.')
+    A('7. §6 leaves one question open that its own data could close: whether the '
       'over-ceiling dispersion is heavy-tailed site heterogeneity or within-site event '
       'clustering. The events CSV carries per-event date and author, so the test is '
       'available — count *distinct correction occasions* per site instead of events, and '
       'the clustering reading predicts the excess dispersion largely disappears. That is '
       'the single next step this report recommends, and it is deliberately not taken '
       'here: the mint scopes this task to the dependence envelope.')
+    A('')
+
+    A('## 9a. Deviations from the preregistration')
+    A('')
+    A('The preregistration forbids editing itself after the results commit and requires '
+      'every changed decision rule to appear here as a labelled deviation. All seven '
+      'below were made **after** results existed; six of them follow an independent '
+      'logic review of the first version of this report (Codex Astra `gpt-6-astra`, '
+      '20-09-2026), which returned FAIL. They are listed whether they helped the '
+      'report’s thesis or hurt it.')
+    A('')
+    A('1. **Fragility rule — corrected, changes a published verdict.** The rule reads '
+      '«the smallest |log γ| at which this happens … fragile if it happens at γ ∈ '
+      '[0.90, 1.10]». It had been implemented as *both* crossings inside the band. '
+      'Restored to the literal rule, which flags **cae** where the first version '
+      'reported no fragile interval at all.')
+    A('2. **Control E added (not preregistered).** Composition of two mechanisms. Added '
+      'because the first version multiplied two separately derived γ values, a step '
+      'with no derivation; §3 now computes the joint mechanism exactly. This is a '
+      'post-hoc addition and is labelled as such rather than presented as planned.')
+    A('3. **Capped dictionaries restored to the controls.** The preregistration promises '
+      'the controls for every estimable dictionary; the implementation had excluded the '
+      'capped row (cae). All '
+      f'{len(set(r["dict"] for r in ctrl))} estimable dictionaries are now run.')
+    A('4. **Coverage gate made two-sided.** The preregistration specifies a coverage '
+      '*floor* only. A floor alone is satisfied by any sufficiently wide interval — '
+      'review demonstrated that replacing every interval with [0, ∞) passes every '
+      'control. A ceiling was added and `--selftest` now asserts the gate rejects that '
+      'mutation.')
+    A('5. **Control B rebuilt to avoid circularity, and a second family added.** Its '
+      'cells had been generated by substituting γ = 1 + CV² — the identity the control '
+      'reports as confirmed — so the check could not fail. Cells are now obtained by '
+      'integrating an explicit mixing family, and the clipped-Gamma companion named in '
+      'the design note is actually run beside the two-point family.')
+    A('6. **Overdispersion estimator changed from the preregistered one.** The '
+      'preregistration names the moment estimator CV²_obs = (Var − Mean)/Mean². That '
+      'expression ignores zero truncation and returns negative values on these counts. '
+      '§6 instead reports a dispersion ratio against a *matched zero-truncated* Poisson '
+      'and a comparison against the Poisson–Gamma variance ceiling. The preregistered '
+      'restriction that no γ may be estimated from these counts is unchanged and '
+      'honoured.')
+    A('7. **Two claims narrowed.** §6 said the counts «are not a mixed-Poisson process»; '
+      'that is true only of the *Gamma* family, and review supplied a bounded two-point '
+      'Poisson mixture matching the moments exactly. §8’s refutation conditions were '
+      'rewritten: two of the three bore on the grid’s extent rather than on the ordering '
+      'claim they were supposed to be able to refute.')
+    A('')
+    A('Unchanged from the preregistration: the γ grid, the CV and k̄ grids, the seed, the '
+      'replicate count, the estimator, the fragile band itself, the ranking definition, '
+      'and the zero-recapture prohibition of §7.')
     A('')
 
     A('## 10. Reproduce')
@@ -1254,6 +1681,60 @@ def selftest():
     p11, p10, p01 = hetero_cells(0.10, 0.05, 0.5)
     chk('hetero cells give gamma = 1 + cv^2',
         abs(gamma_of(p11, p11 + p10, p11 + p01) - 1.25) < 1e-12)
+
+    # ---- invariants added 20-09-2026 after external review (gpt-6-astra) ----
+    # Each pins one defect that review found, so a regression restores it loudly.
+
+    # defect 6: cells built by INTEGRATING a family must reproduce the identity,
+    # for the two-point family AND the clipped-Gamma companion.
+    for fam_name, thetas in (('two-point', ((0.5, 0.5), (1.5, 0.5))),
+                             ('gamma-clipped', clipped_gamma_thetas(0.5))):
+        cells = mixture_cells(0.10, 0.05, thetas)
+        g_read = gamma_of(cells[0], cells[3], cells[4])
+        chk(f'{fam_name} mixture integrates to gamma = 1 + cv^2',
+            abs(g_read - 1.25) < 2e-2, f'gamma={g_read:.6f}')
+
+    # defect 6: the coverage gate must REJECT a deliberately broken interval.
+    p11h, p10h, p01h = hetero_cells(0.10, 0.05, 0.0)
+    good = run_cells(20000, p11h, p10h, p01h, 200, SEED)
+    broke = run_cells(20000, p11h, p10h, p01h, 200, SEED, ci_widen=1e6)
+    chk('two-sided coverage gate accepts the honest interval',
+        COVERAGE_MIN <= good['coverage'] <= COVERAGE_MAX, f"{good['coverage']:.3f}")
+    chk('two-sided coverage gate REJECTS a [0, inf) interval',
+        not (COVERAGE_MIN <= broke['coverage'] <= COVERAGE_MAX),
+        f"coverage={broke['coverage']:.3f} would have passed a floor-only gate")
+
+    # defect 4: the two mechanisms' gammas must NOT be multiplied.
+    q1t, q2t = 9756 / 68143.0, 1369 / 68143.0
+    jc = joint_cells(q1t, q2t, 1.5, 0.85)
+    g_joint = gamma_of(jc[0], jc[3], jc[4])
+    sc_t = sequential_cells(q1t, q2t, 1.5)
+    prod = gamma_of(sc_t[0], sc_t[3], sc_t[4]) * gamma_two_point(0.85)
+    chk('joint gamma is NOT the product of the two mechanisms',
+        abs(prod - g_joint) > 0.02,
+        f'product={prod:.6f} joint={g_joint:.6f} error={prod - g_joint:+.6f}')
+    chk('joint gamma at CV=0.85 still shows NET NEGATIVE dependence',
+        g_joint < 1.0, f'{g_joint:.6f} — the product wrongly claimed cancellation')
+
+    # defect 8: gamma = 1 + cv^2 needs a LINEAR capture kernel. Under 1 - exp(-theta)
+    # two families sharing (mean, variance) disagree, so the identity is not general.
+    g_two, g_alt = nonlinear_kernel_gap(0.5)
+    chk('nonlinear kernel breaks the 1 + cv^2 identity',
+        abs(g_two - g_alt) > 1e-3,
+        f'two-point={g_two:.6f} three-point={g_alt:.6f} (both CV=0.5)')
+
+    # defect 3: the variance ceiling is a GAMMA-family fact. A bounded two-point
+    # Poisson mixture reaches moments the Gamma family cannot, so "not a mixed
+    # Poisson process" was too strong a reading of it.
+    rates, weights = (0.01, 5.6159883122), (1 - 0.0004813620, 0.0004813620)
+    p0 = sum(w * math.exp(-r) for r, w in zip(rates, weights))
+    mu_mix = sum(w * r for r, w in zip(rates, weights)) / (1 - p0)
+    ex2 = sum(w * (r + r * r) for r, w in zip(rates, weights)) / (1 - p0)
+    var_mix = ex2 - mu_mix * mu_mix
+    ceiling = gamma_family_variance_ceiling(mu_mix)
+    chk('a two-point Poisson mixture exceeds the Gamma-family ceiling',
+        var_mix > ceiling,
+        f'mean={mu_mix:.6f} var={var_mix:.6f} > gamma-ceiling={ceiling:.6f}')
 
     # sequential mechanism must be negative-dependence and monotone toward 1
     gs = [gamma_of(*(lambda c: (c[0], c[3], c[4]))(sequential_cells(0.10, 0.05, k)))
@@ -1337,8 +1818,16 @@ def selftest():
         all(r[3] is not None and r[3] < 1e-6 for r in nid),
         f"max residual {max(r[3] for r in nid if r[3] is not None):.2e}")
     lls = [r[2] for r in nid if r[2] is not None]
-    chk('log-likelihood is flat across the gamma grid',
-        max(lls) - min(lls) < 1.0, f'spread {max(lls) - min(lls):.4f}')
+    # NOT "flat" (external review, defect 2): the finite-N term gives a real, weak,
+    # monotone slope favouring smaller N. The invariant that carries the argument is
+    # the EXACT cell fit above; this one only bounds how little the likelihood can
+    # discriminate -- well under the conventional 2-unit evidential threshold.
+    spread = max(lls) - min(lls)
+    chk('log-likelihood spread over the grid stays far below 2 units',
+        spread < 1.0, f'spread {spread:.4f} (monotone in gamma, not flat)')
+    chk('that slope is monotone, i.e. a real if weak preference for smaller N',
+        lls == sorted(lls, reverse=True) or lls == sorted(lls),
+        'direction recorded in the report rather than described as flat')
 
     # published counts reproduce from the events CSV (the arithmetic half)
     if os.path.exists(EVENTS) and os.path.exists(PUBLISHED):

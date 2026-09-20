@@ -31,7 +31,9 @@ With the form era as occasion 1 and the git era as occasion 2 over N sites,
 
     γ  =  P(caught in era 2 | caught in era 1) / P(caught in era 2)
 
-gives E[n1] = N·p1, E[n2] = N·p2, E[m] = N·p1·p2·γ and hence **N = γ·(n1·n2/m)**. Independence is γ = 1. Positive dependence (γ > 1) means the eras revisit the same sites, m is inflated and Chapman **underestimates**; negative dependence (γ < 1) means a form-era fix removes the error a git-era recapture would have needed, m is deflated and Chapman **overestimates**. Every assumption violation the published report names enters through this single factor.
+gives E[n1] = N·p1, E[n2] = N·p2, E[m] = N·p1·p2·γ and hence the *moment* identity **N = γ·E[n1]·E[n2]/E[m]**. Substituting the realised counts — and, below, Chapman’s +1-adjusted ratio in place of the plain one — is the sensitivity **convention** of this report, not a further consequence of that identity: the equality holds between expectations, and the plug-in version inherits the usual ratio-estimator error on top. Independence is γ = 1. Positive dependence (γ > 1) means the eras revisit the same sites, m is inflated and Chapman **underestimates**; negative dependence (γ < 1) means a form-era fix removes the error a git-era recapture would have needed, m is deflated and Chapman **overestimates**.
+
+**What γ does and does not absorb.** Every *dependence between the two eras* on a fixed, correctly linked set of sites is summarised by this one number — that covers both mechanisms `error_recapture.md` names (sequential occasions, correlated catchability), and it is what §3 sizes. Two other assumptions of the published design are **not** of that form and are not covered anywhere in this report: **closure** (sites entering or leaving the population between the eras changes the estimand itself, not the dependence between lists) and **linkage error** (a false match inflates m, a missed match deflates it, which corrupts the observation mechanism rather than re-weighting it). A scalar multiplier cannot repair either, and neither is bounded by the envelope below.
 
 A two-list table has exactly three observable counts — era-1 only, era-2 only, both. The independence model spends all three on (N, p1, p2): it is saturated, with zero residual degrees of freedom and therefore no goodness-of-fit test. Adding γ gives four parameters for three counts, and the likelihood is flat along the curve. On pw (n1=9,756, n2=1,369, m=196):
 
@@ -47,7 +49,11 @@ A two-list table has exactly three observable counts — era-1 only, era-2 only,
 | 1.50 | 102,214 | 0.00e+00 | -0.1369 |
 | 2.00 | 136,285 | 2.84e-14 | -0.1516 |
 
-The middle column is the point: **at every γ the fitted model reproduces all three observed counts exactly** (residuals at floating-point noise). A 16-fold range of N̂ fits the data equally well. The last column spans **0.152 log-likelihood units** across that whole range — the likelihood is flat to three decimal places, and what little slope it has comes from the combinatorial term, not from any evidence about dependence. This is not a wide confidence interval; it is non-identification. More events from these same two eras do not touch it, because the deficiency is in the design — two lists — and not in the sample size.
+The middle column is the point: **at every γ the fitted model reproduces all three observed counts exactly** (residuals at floating-point noise). The grid spans a **4.0-fold** range of N̂ — 34,071 to 136,285 — and every value in it fits the table equally well.
+
+The last column needs stating precisely, because it is weaker than "flat". It spans **0.152 log-likelihood units** across that range, and the difference is **monotone**: the finite-N combinatorial term gives a real, if very weak, preference for the smaller N̂ (the profile also excludes the boundary N = S_obs, which would sit at the end of that same slope). So this is not exact non-identification of the full finite-N likelihood; it is a likelihood that discriminates by less than a fifth of a log-unit where two units is the conventional threshold for *weak* evidence. The identification argument proper is the middle column and the parameter count — four parameters, three counts, zero residual degrees of freedom — not the size of that slope. Exact non-identification holds for the unseen cell under the conditional/Poisson formulations, where the term producing this slope is not part of the likelihood at all.
+
+Either way the practical consequence is the same, and it is not a wide confidence interval: more events from these same two eras do not touch it, because the deficiency is in the design — two lists — and not in the sample size.
 
 ## 3. Controls
 
@@ -57,22 +63,44 @@ Preregistered pass conditions, 400 replicates per cell, seed 5072, exact multino
 |---|---|---:|---:|---:|---:|---:|---:|---:|:--:|
 | A independent-source recovery | pw | — | — | 1.0000 | 1.0075 | -1.2% | — | 95.5% | PASS |
 | A independent-source recovery | mw | — | — | 1.0000 | 1.0034 | -1.0% | — | 93.5% | PASS |
+| A independent-source recovery | cae | — | — | 1.0000 | 0.9891 | -4.8% | — | 90.8% | PASS |
 | A independent-source recovery | bur | — | — | 1.0000 | 0.9996 | -1.9% | — | 91.5% | PASS |
 | B heterogeneous detectability | pw | 0.00 | — | 1.0000 | 1.0075 | -1.2% | -0.0% | 95.5% | PASS |
 | B heterogeneous detectability | pw | 0.25 | — | 1.0625 | 1.0665 | -6.6% | -5.9% | 77.0% | PASS |
+| B heterogeneous detectability | pw | 0.25 | — | 1.0625 | 1.0665 | -6.6% | -5.9% | 77.0% | PASS |
 | B heterogeneous detectability | pw | 0.50 | — | 1.2500 | 1.2412 | -19.7% | -20.0% | 2.8% | PASS |
+| B heterogeneous detectability | pw | 0.50 | — | 1.2492 | 1.2472 | -20.1% | -19.9% | 3.5% | PASS |
 | B heterogeneous detectability | pw | 0.75 | — | 1.5625 | 1.5532 | -35.8% | -36.0% | 0.0% | PASS |
+| B heterogeneous detectability | pw | 0.75 | — | 1.5219 | 1.5194 | -34.3% | -34.3% | 0.0% | PASS |
 | B heterogeneous detectability | pw | 1.00 | — | 2.0000 | 1.9994 | -50.1% | -50.0% | 0.0% | PASS |
+| B heterogeneous detectability | pw | 1.00 | — | 1.8123 | 1.8121 | -44.9% | -44.8% | 0.0% | PASS |
 | B heterogeneous detectability | mw | 0.00 | — | 1.0000 | 1.0034 | -1.0% | -0.0% | 93.5% | PASS |
 | B heterogeneous detectability | mw | 0.25 | — | 1.0625 | 1.0576 | -6.0% | -5.9% | 82.0% | PASS |
+| B heterogeneous detectability | mw | 0.25 | — | 1.0625 | 1.0576 | -6.0% | -5.9% | 82.0% | PASS |
 | B heterogeneous detectability | mw | 0.50 | — | 1.2500 | 1.2506 | -20.5% | -20.0% | 12.2% | PASS |
+| B heterogeneous detectability | mw | 0.50 | — | 1.2492 | 1.2476 | -20.3% | -19.9% | 13.0% | PASS |
 | B heterogeneous detectability | mw | 0.75 | — | 1.5625 | 1.5548 | -35.9% | -36.0% | 0.0% | PASS |
+| B heterogeneous detectability | mw | 0.75 | — | 1.5219 | 1.5196 | -34.5% | -34.3% | 0.0% | PASS |
 | B heterogeneous detectability | mw | 1.00 | — | 2.0000 | 2.0074 | -50.3% | -50.0% | 0.0% | PASS |
+| B heterogeneous detectability | mw | 1.00 | — | 1.8123 | 1.8211 | -45.3% | -44.8% | 0.0% | PASS |
+| B heterogeneous detectability | cae | 0.00 | — | 1.0000 | 0.9891 | -4.8% | -0.0% | 90.8% | PASS |
+| B heterogeneous detectability | cae | 0.25 | — | 1.0625 | 1.0255 | -8.1% | -5.9% | 90.2% | PASS |
+| B heterogeneous detectability | cae | 0.25 | — | 1.0625 | 1.0255 | -8.1% | -5.9% | 90.2% | PASS |
+| B heterogeneous detectability | cae | 0.50 | — | 1.2500 | 1.2198 | -21.9% | -20.0% | 63.0% | PASS |
+| B heterogeneous detectability | cae | 0.50 | — | 1.2492 | 1.2198 | -21.9% | -19.9% | 63.0% | PASS |
+| B heterogeneous detectability | cae | 0.75 | — | 1.5625 | 1.5541 | -37.9% | -36.0% | 27.8% | PASS |
+| B heterogeneous detectability | cae | 0.75 | — | 1.5219 | 1.5298 | -37.0% | -34.3% | 27.8% | PASS |
+| B heterogeneous detectability | cae | 1.00 | — | 2.0000 | 1.9727 | -50.8% | -50.0% | 1.2% | PASS |
+| B heterogeneous detectability | cae | 1.00 | — | 1.8123 | 1.8146 | -46.5% | -44.8% | 6.2% | PASS |
 | B heterogeneous detectability | bur | 0.00 | — | 1.0000 | 0.9996 | -1.9% | -0.0% | 91.5% | PASS |
 | B heterogeneous detectability | bur | 0.25 | — | 1.0625 | 1.0572 | -7.2% | -5.9% | 87.0% | PASS |
+| B heterogeneous detectability | bur | 0.25 | — | 1.0625 | 1.0572 | -7.2% | -5.9% | 87.0% | PASS |
 | B heterogeneous detectability | bur | 0.50 | — | 1.2500 | 1.2491 | -21.2% | -20.0% | 45.0% | PASS |
+| B heterogeneous detectability | bur | 0.50 | — | 1.2492 | 1.2478 | -21.1% | -19.9% | 45.0% | PASS |
 | B heterogeneous detectability | bur | 0.75 | — | 1.5625 | 1.5616 | -36.7% | -36.0% | 1.5% | PASS |
+| B heterogeneous detectability | bur | 0.75 | — | 1.5219 | 1.5362 | -35.7% | -34.3% | 3.0% | PASS |
 | B heterogeneous detectability | bur | 1.00 | — | 2.0000 | 1.9991 | -50.4% | -50.0% | 0.0% | PASS |
+| B heterogeneous detectability | bur | 1.00 | — | 1.8123 | 1.7954 | -44.9% | -44.8% | 0.0% | PASS |
 | C sequential removal | pw | — | 1.0 | 0.0000 | n/a | unbounded | unbounded | n/a | PASS |
 | C sequential removal | pw | — | 1.5 | 0.5828 | 0.5804 | +71.6% | +71.6% | 0.0% | PASS |
 | C sequential removal | pw | — | 2.5 | 0.8926 | 0.8906 | +12.2% | +12.0% | 2.0% | PASS |
@@ -81,16 +109,55 @@ Preregistered pass conditions, 400 replicates per cell, seed 5072, exact multino
 | C sequential removal | mw | — | 1.5 | 0.5828 | 0.5795 | +71.6% | +71.6% | 0.0% | PASS |
 | C sequential removal | mw | — | 2.5 | 0.8926 | 0.8910 | +12.1% | +12.0% | 9.0% | PASS |
 | C sequential removal | mw | — | 4.0 | 0.9802 | 0.9804 | +2.0% | +2.0% | 86.8% | PASS |
+| C sequential removal | cae | — | 1.0 | 0.0000 | n/a | unbounded | unbounded | n/a | PASS |
+| C sequential removal | cae | — | 1.5 | 0.5828 | 0.5765 | +64.9% | +71.6% | 60.8% | PASS |
+| C sequential removal | cae | — | 2.5 | 0.8926 | 0.8929 | +10.7% | +12.0% | 89.5% | PASS |
+| C sequential removal | cae | — | 4.0 | 0.9802 | 0.9808 | +1.6% | +2.0% | 93.2% | PASS |
 | C sequential removal | bur | — | 1.0 | 0.0000 | n/a | unbounded | unbounded | n/a | PASS |
 | C sequential removal | bur | — | 1.5 | 0.5828 | 0.5875 | +67.3% | +71.6% | 0.5% | PASS |
 | C sequential removal | bur | — | 2.5 | 0.8926 | 0.8912 | +11.8% | +12.0% | 63.7% | PASS |
 | C sequential removal | bur | — | 4.0 | 0.9802 | 0.9771 | +2.2% | +2.0% | 92.8% | PASS |
+| E mechanism composition | pw | 0.50 | 1.5 | 0.7027 | 0.7050 | +41.3% | +42.3% | 0.0% | PASS |
+| E mechanism composition | pw | 0.85 | 1.5 | 0.9735 | 0.9758 | +2.2% | +2.7% | 96.5% | PASS |
+| E mechanism composition | pw | 0.50 | 2.5 | 1.0610 | 1.0625 | -6.0% | -5.8% | 38.0% | PASS |
+| E mechanism composition | pw | 1.00 | 2.5 | 1.7853 | 1.7881 | -44.1% | -44.0% | 0.0% | PASS |
+| E mechanism composition | pw | 0.85 | 4.0 | 1.5871 | 1.5854 | -36.9% | -37.0% | 0.0% | PASS |
+| E mechanism composition | mw | 0.50 | 1.5 | 0.7206 | 0.7198 | +38.3% | +38.8% | 0.0% | PASS |
+| E mechanism composition | mw | 0.85 | 1.5 | 0.9951 | 0.9984 | -0.2% | +0.5% | 94.2% | PASS |
+| E mechanism composition | mw | 0.50 | 2.5 | 1.0914 | 1.0929 | -8.6% | -8.4% | 21.2% | PASS |
+| E mechanism composition | mw | 1.00 | 2.5 | 1.7853 | 1.7862 | -44.0% | -44.0% | 0.0% | PASS |
+| E mechanism composition | mw | 0.85 | 4.0 | 1.6380 | 1.6373 | -38.9% | -39.0% | 0.0% | PASS |
+| E mechanism composition | cae | 0.50 | 1.5 | 0.7208 | 0.7018 | +36.7% | +38.7% | 87.5% | PASS |
+| E mechanism composition | cae | 0.85 | 1.5 | 0.9954 | 0.9819 | -1.3% | +0.5% | 93.0% | PASS |
+| E mechanism composition | cae | 0.50 | 2.5 | 1.0982 | 1.0836 | -8.6% | -8.9% | 75.5% | PASS |
+| E mechanism composition | cae | 1.00 | 2.5 | 1.7853 | 1.7741 | -44.0% | -44.0% | 0.0% | PASS |
+| E mechanism composition | cae | 0.85 | 4.0 | 1.6577 | 1.6615 | -39.9% | -39.7% | 0.0% | PASS |
+| E mechanism composition | bur | 0.50 | 1.5 | 0.7180 | 0.7212 | +36.7% | +39.3% | 27.0% | PASS |
+| E mechanism composition | bur | 0.85 | 1.5 | 0.9923 | 0.9891 | +0.1% | +0.8% | 94.0% | PASS |
+| E mechanism composition | bur | 0.50 | 2.5 | 1.0893 | 1.0904 | -8.6% | -8.2% | 58.5% | PASS |
+| E mechanism composition | bur | 1.00 | 2.5 | 1.7853 | 1.7852 | -44.1% | -44.0% | 0.0% | PASS |
+| E mechanism composition | bur | 0.85 | 4.0 | 1.6382 | 1.6389 | -39.0% | -39.0% | 0.0% | PASS |
 
-**A — independent-source recovery.** When the two sources really are independent the published machinery recovers the truth: median bias -1.36%, nominal-95% coverage 93.5%. The arithmetic is not the problem.
+**A — independent-source recovery.** When the two sources really are independent the published machinery recovers the truth: median bias -2.22%, nominal-95% coverage 92.8%. The arithmetic is not the problem.
 
-**B — heterogeneous detectability.** The analytic identity γ = 1 + CV² is reproduced at every level, and the envelope evaluated at that γ recovers the true N. The interesting column is the last one: at CV = 0.75 the nominal 95% interval covers the truth 0.0% of the time. Already at CV = 0.50 — mild unevenness — coverage is 20.0% and the point estimate is -20% off. **The published CI is a statement about sampling noise only; it carries no information about the assumption that dominates the error.**
+**B — heterogeneous detectability.** The analytic identity γ = 1 + CV² is reproduced at every level, and the envelope evaluated at that γ recovers the true N. The interesting column is the last one: at CV = 0.75 the nominal 95% interval covers the truth 0.0% of the time. Already at CV = 0.50 — mild unevenness — coverage is 30.9% and the point estimate is -21% off. **The published CI is a statement about sampling noise only; it carries no information about the assumption that dominates the error.**
 
-**C — sequential removal.** Sized here for the first time. Over the mean-error grid the mechanism gives γ ∈ [0.583, 0.980] — an **upward** bias on N̂ of +2% to +72%, weakening as sites carry more errors, exactly as the mechanism predicts. The corner case is the sharpest statement in this report: if a site carries **exactly one** error, the form era's fix removes the very thing a git-era recapture would need, γ = 0, and the two-era design cannot estimate that dictionary at all — not imprecisely, at all. Against heterogeneity, though, this is the smaller force: a detectability CV of 0.85 already cancels the strongest non-degenerate cell here, and any CV above it flips the net bias downward.
+**C — sequential removal.** Sized here for the first time. Over the mean-error grid the mechanism gives γ ∈ [0.583, 0.980] — an **upward** bias on N̂ of +2% to +72%, weakening as sites carry more errors, exactly as the mechanism predicts. The corner case is the sharpest statement in this report: if a site carries **exactly one** error, the form era's fix removes the very thing a git-era recapture would need, γ = 0, and the two-era design cannot estimate that dictionary at all — not imprecisely, at all.
+
+**E — mechanism composition, and a correction to an earlier draft of this report.** An earlier version argued that heterogeneity *cancels* sequential removal at a detectability CV of about 0.85, by multiplying the two mechanisms' γ values together. That step is wrong, and external review caught it. When one site-level factor scales both eras' detection probabilities, the eras become correlated *within* a site, and the composite γ is not the product of the separate ones. Control E computes the joint mechanism exactly instead of multiplying:
+
+| k̄ | CV | γ sequential | γ heterogeneity | naive product | **true joint γ** | product error |
+|---:|---:|---:|---:|---:|---:|---:|
+| 1.5 | 0.50 | 0.5828 | 1.2500 | 0.7285 | **0.7027** | +0.0258 |
+| 1.5 | 0.50 | 0.5828 | 1.2500 | 0.7285 | **0.7206** | +0.0079 |
+| 1.5 | 0.50 | 0.5828 | 1.2500 | 0.7285 | **0.7208** | +0.0077 |
+| 1.5 | 0.50 | 0.5828 | 1.2500 | 0.7285 | **0.7180** | +0.0105 |
+| 1.5 | 0.85 | 0.5828 | 1.7225 | 1.0039 | **0.9735** | +0.0304 |
+| 1.5 | 0.85 | 0.5828 | 1.7225 | 1.0039 | **0.9951** | +0.0087 |
+| 1.5 | 0.85 | 0.5828 | 1.7225 | 1.0039 | **0.9954** | +0.0085 |
+| 1.5 | 0.85 | 0.5828 | 1.7225 | 1.0039 | **0.9923** | +0.0116 |
+
+The product overstates the composite γ in every cell, by as much as 0.101, and it can get the **sign of the net bias wrong**: at k̄ = 1.5, CV = 0.85 the product says 1.004 — cancellation, a hair of positive dependence — while the true joint value is 0.9735, still clearly negative dependence. 8 of the 20 composed cells stay below 1. The correction runs **in favour of** this report's headline rather than against it: heterogeneity does not neutralise sequential removal as easily as the multiplied figure suggested, so the γ < 1 region that reorders the ranking in §5 is reached under a wider range of joint assumptions, not a narrower one.
 
 ## 4. The envelope, and where the published intervals break
 
@@ -112,14 +179,14 @@ N̂ at each grid γ, floored at the observed site count (a population cannot be 
 
 The γ at which each published boundary is crossed:
 
-| Dict | γ at CI low | γ at CI high | CI fragile? | γ at record count | γ at observed floor |
-|---|---:|---:|:--:|---:|---:|
-| pw | 0.872 | 1.128 | no | 2.514 | 0.161 |
-| mw | 0.840 | 1.160 | no | 4.697 | 0.113 |
-| cae | 0.506 | 0.904 | no | 0.904 | 0.049 |
-| bur | 0.726 | 1.274 | no | 1.147 | 0.100 |
+| Dict | γ at CI low | γ at CI high | **break γ** (nearest 1) | CI fragile? | γ at record count | γ at observed floor |
+|---|---:|---:|---:|:--:|---:|---:|
+| pw | 0.872 | 1.128 | 1.128 | no | 2.514 | 0.161 |
+| mw | 0.840 | 1.160 | 1.160 | no | 4.697 | 0.113 |
+| cae | 0.506 | 0.904 | 1.000 (already outside at γ = 1) | **yes** | 0.904 | 0.049 |
+| bur | 0.726 | 1.274 | 1.274 | no | 1.147 | 0.100 |
 
-**No interval is *fragile* by the letter of the preregistered rule** (none breaks inside γ ∈ [0.90, 1.10] on BOTH sides), and the rule is reported as it was written rather than loosened after the fact. But read the widths: 
+**Fragile by the preregistered rule — the nearest break to γ = 1 falls inside [0.90, 1.10]: cae.** The rule is applied as written («report the smallest |log γ| at which this happens … fragile if it happens at γ ∈ [0.90, 1.10]»). An earlier draft of this report implemented it as a requirement that *both* boundary crossings lie inside the band — a strictly stronger and more flattering test, which reported no fragile interval at all. That was an undeclared deviation; external review caught it and the literal rule is restored here. For **cae** the break is at γ = 1 itself: the raw envelope already sits outside the published *capped* interval before any dependence is introduced, so the flag records the cap, not a dependence finding — see the reading note below.
 
 the whole published 95% interval of **pw** is spent by a 12.8% departure from independence, **mw** is spent by a 16.0% departure from independence, **cae** is spent by a 49.4% departure from independence, **bur** is spent by a 27.4% departure from independence. For scale, control B shows a detectability CV of 0.25 — the mildest non-zero level in the grid — is already a 6.25% departure, and CV = 0.50 is a 25% one, i.e. several times the entire statistical interval.
 
@@ -131,11 +198,15 @@ Published order by estimated remaining error sites: **pw > mw > cae > bur**.
 
 Two questions, and they have different answers. A **corpus-common** γ scales every dictionary's N̂ by the same factor, but *remaining* = N̂ − S_obs subtracts a different observed count from each, so even a common γ can reorder the list. A **dictionary-differential** γ can reorder it trivially. Both thresholds are exact (the crossing is linear in γ), not simulated:
 
-| Adjacent pair | swaps at common γ | swaps at γ-ratio (2nd ÷ 1st) |
-|---|---:|---:|
-| pw / mw | 0.590 | 1.046 |
-| mw / cae | 0.284 | 1.269 |
-| cae / bur | 0.016 | 2.545 |
+| Adjacent pair | swaps at common γ | real reordering? | swaps at γ-ratio (2nd ÷ 1st) |
+|---|---:|:--:|---:|
+| pw / mw | 0.590 | yes | 1.046 |
+| mw / cae | 0.284 | yes | 1.269 |
+| cae / bur | 0.016 | no — both remainders ≈ -1,441 there | 2.545 |
+
+One crossing in that table is arithmetic only, not a reordering that could be observed: **cae / bur** at γ = 0.016 puts *both* dictionaries at a negative remaining count, which the report’s floor clamps to zero — so the pair ties at zero rather than changing places. External review flagged it; it is kept in the table and marked rather than dropped.
+
+The differential column is also narrower than it looks: each ratio is computed holding the first dictionary at γ = 1, so it answers «how much more dependent would the second have to be than an *independent* first», not «what ratio of two arbitrary γ values reverses the pair».
 
 Pairs that swap **inside** the preregistered γ range: pw / mw (γ = 0.590). Those orderings are not safe to quote without the assumption attached.
 
@@ -162,7 +233,11 @@ Two estimator traps had to be walked past to get a number here, and both are wor
 
 **7 of 8** era-dictionary cells are overdispersed against the matched zero-truncated Poisson, up to D = 5.18. **7 of 8** are above the Poisson–Gamma ceiling entirely, by up to 4.0×.
 
-That last row of numbers is the real finding of this section, and it is a negative one: **the per-site correction counts are not a mixed-Poisson process.** No latent-rate heterogeneity of the usual one-parameter kind can generate this much spread at this mean. Two readings, and the data here cannot separate them:
+That last column is the real finding of this section, and it is a negative one, stated with the scope it actually has: **no zero-truncated Poisson–Gamma of that mean can produce this much spread.** The Gamma family — the standard latent-rate mixture, and the one whose CV feeds γ = 1 + CV² — has a finite variance ceiling at a fixed truncated mean, and these cells are above it.
+
+**That is a statement about the Gamma family, not about mixed Poissons in general, and an earlier draft of this report overreached by claiming the latter.** External review supplied the counterexample: a bounded two-point mixture of Poisson rates (0.01 and 5.616, with weight 4.81e-4 on the high rate) reproduces the pw-form truncated mean 1.2181 and variance 1.2002 exactly. So a mixed-Poisson description exists; it simply cannot be a Gamma one. Worse for any attempt to read γ off these counts: **homogeneous capture with clustered event batches reproduces the same moments with γ = 1**. Event-count overdispersion therefore does not by itself refute homogeneous catchability. Nor is "observed moments exceed a family's ceiling" a calibrated test — no sampling distribution is attached to it here, so it is a descriptive impossibility for that family, not a rejection at a stated level.
+
+Two readings remain, and the data here cannot separate them:
 
 1. **Heavy-tailed heterogeneity** — a small minority of records attracting very many corrections, heavier than a Gamma tail. Then γ = 1 + CV²(θ) is not merely > 1 but potentially far above the grid in §4, because a heavy tail inflates E[θ²] without bound.
 2. **Clustered events** — corrections at a site are not conditionally independent: one commit fixes several errors in one entry, one corrector works an entry through. Then the counts say nothing directly about capture probability, because the Poisson kernel itself is wrong.
@@ -171,7 +246,7 @@ Both readings break the published design's assumptions; they differ in which ass
 
 **What this does NOT establish.** Not a value for γ: §2 forbids it and this section adds no identification. Not even a bound, since reading 2 would void the link between count dispersion and capture dependence entirely. Event counts also mix how many errors a record carries with how findable they are, and only the second belongs in γ.
 
-**What it does establish.** The homogeneous-catchability picture underlying γ = 1 is not a mild idealisation of these histories — it is refuted by them, in 7 of 8 era-dictionary cells, by a margin no one-parameter mixture can close. Under reading 1 that puts γ above 1, possibly far above, and the published figures at the **bottom** of their own envelope. Under reading 2 the direction is simply unknown — which is not the reassuring branch, because the published CI is computed as though neither reading were live.
+**What it does establish.** That the *simplest* quantitative story about these histories — a Gamma-mixed Poisson, the model whose CV would feed straight into γ = 1 + CV² — is unavailable in 7 of 8 era-dictionary cells. Any model that fits has to be something else: a heavier or a bounded non-Gamma mixture, or a clustered event process. Under reading 1 that puts γ above 1, possibly far above, and the published figures at the **bottom** of their own envelope. Under reading 2 the direction is simply unknown. What it does **not** establish is that homogeneous catchability is refuted: reading 2 is compatible with γ = 1 exactly, as the batch-event construction above shows. The honest summary is that these counts leave the assumption untested rather than disproved — which is still not the reassuring branch, because the published CI is computed as though it were settled.
 
 ## 7. Zero recapture: still not identified
 
@@ -183,20 +258,39 @@ A further 12 dictionaries sit between m = 1 and the m ≥ 10 floor. For them the
 
 **The published ordering of dictionaries by remaining error sites is NOT robust to the dependence assumption, and the mechanism that breaks it is one the existing report already names.** The pw / mw ordering — the headline pair — reverses at a corpus-common γ of 0.590, and control C puts the sequential-removal mechanism at γ = 0.583 when sites average 1.5 errors: the flip point is inside the range a mechanism already conceded in `error_recapture.md` can produce, not out at the edge of a hypothetical grid. The point estimates and their 95% intervals are separately not robust: a dependence departure of ~13% exhausts them (§4).
 
-**Confidence:** high for the arithmetic — every threshold in §4 and §5 is an exact inversion, not a simulation, and the controls reproduce their analytic predictions to within 5% at 30 of 30 cells; moderate for the practical severity, which depends on the true mean error count per site — a quantity §6 shows these histories cannot pin down.
+**Confidence:** high for the arithmetic — every threshold in §4 and §5 is an exact inversion, not a simulation, and the controls reproduce their analytic predictions to within 5% at 76 of 76 cells; moderate for the practical severity, which depends on the true mean error count per site — a quantity §6 shows these histories cannot pin down; and explicitly NOT extended to closure or linkage error, which §2 puts outside γ altogether.
 
-**This is refuted if** any of the following is shown: (i) an independent design over the same sites — the within-era corrector design of [`corrector_recapture.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/corrector_recapture.md) is the existing candidate — yields a γ estimate outside [0.5, 2.0], which would put the truth outside the envelope drawn here; (ii) a third capture occasion is constructed for any dictionary, since three lists identify pairwise dependence and would replace this envelope with an estimate; or (iii) the over-ceiling dispersion of §6 is shown to be entirely within-site event clustering (reading 2 there) once timestamps and authorship are used, which would remove the empirical basis for expecting γ > 1 — though not the non-identification, which stands either way.
+**This is refuted if** any of the following is shown. The conditions below were rewritten after external review pointed out that the previous set challenged the grid’s *extent* rather than the claim itself — a refutation condition has to bear on the ordering, which is what the claim is about.
+
+1. **An independent γ estimate that excludes the crossing.** The within-era corrector design of [`corrector_recapture.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/corrector_recapture.md) yields a γ for these sites whose plausible range lies **entirely above the headline crossing** — i.e. rules out the γ < crossing region — which would make the published ordering safe to quote after all. (A γ estimate merely *outside* [0.5, 2.0] would say the grid is too narrow, not that the ordering is robust: that is the condition this replaces.)
+2. **The sequential-removal mechanism is shown not to operate** — era-1 corrections are found not to remove the errors an era-2 recapture would need (re-introduction, partial fixes, or independent error inventories per era), removing the only mechanism this report demonstrates can reach the crossing.
+3. **A third capture occasion plus an identifying assumption.** Three lists do not identify the unseen cell on their own; they do so under a stated constraint such as no three-way interaction. A third occasion *with* such an assumption defended would replace this envelope with an estimate and settle the ordering directly. (Reading §6’s dispersion as pure event clustering would remove one argument for γ > 1 — but the ordering claim rests on the γ < 1 branch, so that finding would leave it standing, which is why it is no longer listed here.)
 
 **What would NOT refute it:** more correction events from these same two eras. The deficiency is structural (§2); more data shrinks the CI that is already the least of the problems.
 
 ## 9. Limitations
 
 1. γ is a single summary of everything that breaks independence. Real dependence can be non-uniform across sites in ways one scalar cannot express; the envelope is then correct on average and wrong site by site.
-2. Control B fixes the heterogeneity family to a bounded symmetric two-point θ so that capture probabilities stay probabilities at CV = 1. For the CONTROL that is sound — γ depends on θ only through its first two moments, so the family is a presentational choice there. It is not sound as a *fitting* family, which is §6's Trap 2, and higher-moment behaviour is exactly what §6 finds the data demanding.
-3. Control C assumes each error is detected independently and that the form era fixes what it detects. Partial fixes and re-introduced errors are not modelled; both would push γ back toward 1.
-4. The closure assumption of the original design is untouched here.
-5. The overdispersion of §6 is computed on the operating linkage key, so it inherits that key's measured false-match rate.
-6. §6 leaves one question open that its own data could close: whether the over-ceiling dispersion is heavy-tailed site heterogeneity or within-site event clustering. The events CSV carries per-event date and author, so the test is available — count *distinct correction occasions* per site instead of events, and the clustering reading predicts the excess dispersion largely disappears. That is the single next step this report recommends, and it is deliberately not taken here: the mint scopes this task to the dependence envelope.
+2. Control B runs two bounded families — a symmetric two-point θ and a clipped Gamma — so that capture probabilities stay probabilities at CV = 1, and builds its cells by integrating the family rather than by substituting the identity it reports. Both reproduce γ = 1 + CV² at their *realised* CV to machine precision. Neither is sound as a *fitting* family, which is §6's trap.
+3. **The identity γ = 1 + CV² needs capture probability LINEAR in θ** (p_j·θ), which is how controls B and E construct it. Under a nonlinear kernel such as 1 − e^(−θ) it fails, and two families sharing a mean and a variance no longer even agree with each other — `--selftest` exhibits a pair that differ at CV = 0.5. So the identity may not be applied to unbounded intensity heterogeneity of the kind §6's reading 1 contemplates.
+4. Control C assumes each error is detected independently and that the form era fixes what it detects. Partial fixes and re-introduced errors are not modelled; both would push γ back toward 1. Its q₁, q₂ are **per-error** probabilities set from the dictionary's era sizes, which does not reproduce those era sizes at the site level once sites carry more than one error (each row prints the implied sizes beside the observed ones). The mechanism's γ is a function of k̄ alone and is unaffected; the coverage column of those rows is therefore illustrative and not dictionary-matched.
+5. The closure assumption of the original design is untouched here, and so is linkage error: §2 shows neither enters as a γ, so neither is bounded by any number in this report. An envelope over dependence is not an envelope over the design.
+6. The overdispersion of §6 is computed on the operating linkage key, so it inherits that key's measured false-match rate. It is a descriptive comparison against a family's variance ceiling, with no sampling distribution attached — not a calibrated test at a stated level.
+7. §6 leaves one question open that its own data could close: whether the over-ceiling dispersion is heavy-tailed site heterogeneity or within-site event clustering. The events CSV carries per-event date and author, so the test is available — count *distinct correction occasions* per site instead of events, and the clustering reading predicts the excess dispersion largely disappears. That is the single next step this report recommends, and it is deliberately not taken here: the mint scopes this task to the dependence envelope.
+
+## 9a. Deviations from the preregistration
+
+The preregistration forbids editing itself after the results commit and requires every changed decision rule to appear here as a labelled deviation. All seven below were made **after** results existed; six of them follow an independent logic review of the first version of this report (Codex Astra `gpt-6-astra`, 20-09-2026), which returned FAIL. They are listed whether they helped the report’s thesis or hurt it.
+
+1. **Fragility rule — corrected, changes a published verdict.** The rule reads «the smallest |log γ| at which this happens … fragile if it happens at γ ∈ [0.90, 1.10]». It had been implemented as *both* crossings inside the band. Restored to the literal rule, which flags **cae** where the first version reported no fragile interval at all.
+2. **Control E added (not preregistered).** Composition of two mechanisms. Added because the first version multiplied two separately derived γ values, a step with no derivation; §3 now computes the joint mechanism exactly. This is a post-hoc addition and is labelled as such rather than presented as planned.
+3. **Capped dictionaries restored to the controls.** The preregistration promises the controls for every estimable dictionary; the implementation had excluded the capped row (cae). All 4 estimable dictionaries are now run.
+4. **Coverage gate made two-sided.** The preregistration specifies a coverage *floor* only. A floor alone is satisfied by any sufficiently wide interval — review demonstrated that replacing every interval with [0, ∞) passes every control. A ceiling was added and `--selftest` now asserts the gate rejects that mutation.
+5. **Control B rebuilt to avoid circularity, and a second family added.** Its cells had been generated by substituting γ = 1 + CV² — the identity the control reports as confirmed — so the check could not fail. Cells are now obtained by integrating an explicit mixing family, and the clipped-Gamma companion named in the design note is actually run beside the two-point family.
+6. **Overdispersion estimator changed from the preregistered one.** The preregistration names the moment estimator CV²_obs = (Var − Mean)/Mean². That expression ignores zero truncation and returns negative values on these counts. §6 instead reports a dispersion ratio against a *matched zero-truncated* Poisson and a comparison against the Poisson–Gamma variance ceiling. The preregistered restriction that no γ may be estimated from these counts is unchanged and honoured.
+7. **Two claims narrowed.** §6 said the counts «are not a mixed-Poisson process»; that is true only of the *Gamma* family, and review supplied a bounded two-point Poisson mixture matching the moments exactly. §8’s refutation conditions were rewritten: two of the three bore on the grid’s extent rather than on the ordering claim they were supposed to be able to refute.
+
+Unchanged from the preregistration: the γ grid, the CV and k̄ grids, the seed, the replicate count, the estimator, the fragile band itself, the ranking definition, and the zero-recapture prohibition of §7.
 
 ## 10. Reproduce
 
@@ -210,7 +304,7 @@ Evidence manifest (inputs frozen at run time):
 | Input | SHA-256 |
 |---|---|
 | `observatory/site/src/data/correction_events_final.csv` | `092528e4738f1ae1acebe06a6edc1863e4bea365de377b352b90ab3c2aa382be` |
-| `observatory/site/src/data/error_recapture.csv` | `d4a61f84b85093ff347bdfbd69c55127da1f540a99504e994a257aaf4bded5f8` |
+| `observatory/site/src/data/error_recapture.csv` | `27e1113610575a1d7b33155b03782d13aa684ee526280c5337eb72c5f9340421` |
 
 Replicates 400, seed 5072, grid frozen in [`recapture_sensitivity_prereg.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/recapture_sensitivity_prereg.md).
 

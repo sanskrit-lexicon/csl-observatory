@@ -332,7 +332,10 @@ def main():
       'envelope around every number below. Its headline: a ~13% departure from '
       'independence exhausts the whole 95% CI of the largest dictionary, and the '
       'sequential mechanism of (1) alone reaches far more than that. Quote the '
-      'figures here with that envelope, not with the CI alone.')
+      'figures here with that envelope, not with the CI alone. Two caveats travel '
+      'with it: the envelope covers dependence *between the two eras* only — closure '
+      'and linkage error are not of that form and are outside it — and it bounds '
+      'rather than estimates, because the factor is not identifiable here.')
     A('')
     A('## Site linkage: how the two eras are joined, and at what error rate')
     A('')
