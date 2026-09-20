@@ -324,6 +324,16 @@ def main():
       '(new errors can be introduced between eras), a second upward pressure. '
       'Read every figure as order-of-magnitude.')
     A('')
+    A('**How much of each figure is the assumption?** Violations (1) and (2) both '
+      'enter the estimate as a single multiplicative dependence factor, and that '
+      'factor is not identifiable from a two-list table. '
+      '[`recapture_sensitivity.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/recapture_sensitivity.md) '
+      'sizes both mechanisms against preregistered controls and draws the resulting '
+      'envelope around every number below. Its headline: a ~13% departure from '
+      'independence exhausts the whole 95% CI of the largest dictionary, and the '
+      'sequential mechanism of (1) alone reaches far more than that. Quote the '
+      'figures here with that envelope, not with the CI alone.')
+    A('')
     A('## Site linkage: how the two eras are joined, and at what error rate')
     A('')
     A('The eras do not spell headwords alike. Form-era cells are hand-typed web-form '
