@@ -190,6 +190,18 @@ CATALOG: dict[str, Entry] = {
         "Chapman capture-recapture estimates of error-prone records remaining per dictionary, from two-era overlap.",
         "Order-of-magnitude only: sequential occasions and heterogeneous catchability violate Chapman assumptions in opposite directions; estimates capped at record counts.",
     ),
+    "recapture_sensitivity.csv": Entry(
+        "obs-t recapture",
+        "scripts/recapture_sensitivity.py",
+        "Per dictionary x dependence factor gamma: the Chapman estimate re-evaluated across the preregistered gamma grid, flagged for whether it still falls inside the published 95% CI and whether it exceeds the dictionary's record count.",
+        "An ENVELOPE, not a fit: gamma is not identifiable from a two-list table, so no row here is better supported by the data than any other. The gamma = 1 row is the published estimate. Values are floored at the observed site count.",
+    ),
+    "recapture_sensitivity_controls.csv": Entry(
+        "obs-t recapture",
+        "scripts/recapture_sensitivity.py",
+        "Simulation controls behind the sensitivity envelope: independent-source recovery, heterogeneity-induced positive dependence (two mixing families), sequential removal, and the composition of the last two, each with its analytic gamma, simulated gamma, Chapman bias and nominal-95% CI coverage.",
+        "Seeded (5072), 400 replicates per cell, exact multinomial sampling. The coverage column describes the STATISTICAL interval only; its collapse under heterogeneity is the finding of the table, not a defect in it. The 'E mechanism composition' rows carry gamma_naive_product beside the true joint gamma to show the two mechanisms' factors must NOT be multiplied -- the product can invert the sign of the net bias. Control B rows carry cv_realised, which is below the nominal cv for the clipped-Gamma family; the identity holds at the realised value.",
+    ),
     "headword_key_collisions.csv": Entry(
         "dictionary inventory",
         "scripts/headword_linkage.py",

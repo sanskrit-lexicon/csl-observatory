@@ -1,4 +1,4 @@
-_Created: 03-07-2026 · Last updated: 06-09-2026_
+_Created: 03-07-2026 · Last updated: 20-09-2026_
 
 # Capture-recapture: how much correction work is left?
 
@@ -11,6 +11,8 @@ OBS-T's two correction layers act as two capture occasions over error-prone site
 An **independent second design** — correctors within one era as the capture occasions — cross-checks these numbers in [`corrector_recapture.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/corrector_recapture.md). It is the only handle on the sequential-occasion bias below, which cannot be measured from inside the two-era design.
 
 **Assumption violations, stated plainly.** (1) The occasions are sequential: a site fixed completely in era 1 cannot be recaptured in era 2, which depresses m and biases N upward. (2) Catchability is heterogeneous and positively correlated across eras (both target long, high-traffic entries), biasing N downward. The violations pull in opposite directions; confidence intervals are statistical-only and do not cover these design biases. (3) Population closure is imperfect (new errors can be introduced between eras), a second upward pressure. Read every figure as order-of-magnitude.
+
+**How much of each figure is the assumption?** Violations (1) and (2) both enter the estimate as a single multiplicative dependence factor, and that factor is not identifiable from a two-list table. [`recapture_sensitivity.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/recapture_sensitivity.md) sizes both mechanisms against preregistered controls and draws the resulting envelope around every number below. Its headline: a ~13% departure from independence exhausts the whole 95% CI of the largest dictionary, and the sequential mechanism of (1) alone reaches far more than that. Quote the figures here with that envelope, not with the CI alone. Two caveats travel with it: the envelope covers dependence *between the two eras* only — closure and linkage error are not of that form and are outside it — and it bounds rather than estimates, because the factor is not identifiable here.
 
 ## Site linkage: how the two eras are joined, and at what error rate
 
