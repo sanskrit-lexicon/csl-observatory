@@ -346,6 +346,120 @@ def joint_cells_closed(q1, q2, kbar, cv, thetas=None):
     return p11, p1 - p11, p2 - p11, p1, p2
 
 
+# --------------------------------------------------------------------------- #
+# generative acceptance (H5221): simulate the MECHANISM, not the cells
+# --------------------------------------------------------------------------- #
+# Every control above draws its tables FROM the cell probabilities the analytic
+# path computes, and the two joint derivations share one reading of the mechanism.
+# Review 3 of H5072 mutated the statistical content sixteen ways; ten mutations --
+# the era-2 survival exponent changed in BOTH derivations at once, Petersen put in
+# place of Chapman in the simulated point estimate, the log-likelihood negated --
+# passed all 76 controls and all 36 invariants. The functions below go back to the
+# definitions: sites and per-error correction events are drawn one by one, an
+# estimator is computed from its textbook formula, and a table's probability is
+# counted rather than evaluated. `selftest` asserts the analytic path agrees with
+# them within GEN_Z_MAX standard errors.
+GEN_Z_MAX = 4.0     # |analytic - empirical| / SE ceiling for every generative check
+GEN_SEED = 5221
+
+
+def _ztpois_draw(lam, rng):
+    """One zero-truncated Poisson draw by Knuth multiplication, rejecting zeros."""
+    target = math.exp(-lam)
+    while True:
+        k, p = 0, 1.0
+        while True:
+            p *= rng.random()
+            if p <= target:
+                break
+            k += 1
+        if k:
+            return k
+
+
+def simulate_sites(q1, q2, kbar, cv, n_sites, seed):
+    """Event-by-event draw of the joint mechanism; returns empirical (p1, p2, p11).
+
+    Straight from the definition, with no cell formula anywhere: each site gets a
+    theta from the symmetric two-point family and K ~ zero-truncated Poisson(mean
+    kbar) errors; the form era finds each error w.p. q1*theta and FIXES it; the git
+    era finds each error that SURVIVED w.p. q2*theta. kbar = 1 is one error per site."""
+    rng = random.Random(seed)
+    lam = ztp_lambda_for_mean(kbar) if kbar > 1.0 else None
+    c1 = c2 = c12 = 0
+    for _ in range(n_sites):
+        th = 1.0 - cv if rng.random() < 0.5 else 1.0 + cv
+        k = _ztpois_draw(lam, rng) if lam else 1
+        f1 = f2 = False
+        for _e in range(k):
+            if rng.random() < q1 * th:
+                f1 = True                        # found in era 1 -> fixed, gone
+            elif rng.random() < q2 * th:
+                f2 = True                        # survived era 1, found in era 2
+        c1 += f1
+        c2 += f2
+        c12 += f1 and f2
+    return c1 / n_sites, c2 / n_sites, c12 / n_sites
+
+
+def generative_z(cells, emp, n_sites):
+    """max |z| over (p1, p2, p11) between analytic `cells` and an empirical triple."""
+    ana = (cells[3], cells[4], cells[0])
+    zs = []
+    for a, e in zip(ana, emp):
+        se = math.sqrt(max(a * (1 - a), 1e-300) / n_sites)
+        zs.append(abs(a - e) / se)
+    return max(zs)
+
+
+def textbook_chapman_medians(n_true, p1, p2, reps, seed):
+    """Sorted Chapman estimates from site-by-site capture at independence.
+
+    Each of n_true sites is caught in era 1 w.p. p1 and, independently, in era 2
+    w.p. p2; the estimate is Chapman's (n1 + 1)(n2 + 1)/(m + 1) - 1 written out here
+    rather than borrowed, so a substitution anywhere in the pipeline shows up.
+    Replicates with m = 0 are dropped, as `run_cells` drops them."""
+    rng = random.Random(seed)
+    out = []
+    for _ in range(reps):
+        n1 = n2 = m = 0
+        for _s in range(n_true):
+            a = rng.random() < p1
+            b = rng.random() < p2
+            n1 += a; n2 += b; m += a and b
+        if m:
+            out.append((n1 + 1) * (n2 + 1) / (m + 1) - 1)
+    out.sort()
+    return out
+
+
+def midrank_cdf(sorted_vals, x):
+    """Mid-ECDF: P(X < x) + P(X = x)/2 -- fair to the atoms of a discrete estimator."""
+    import bisect
+    lo = bisect.bisect_left(sorted_vals, x - 1e-9)
+    hi = bisect.bisect_right(sorted_vals, x + 1e-9)
+    return (lo + 0.5 * (hi - lo)) / len(sorted_vals)
+
+
+def table_frequency(n_true, p11, p10, p01, target, reps, seed):
+    """How often site-by-site multinomial capture yields exactly `target` = (n1, n2, m)."""
+    rng = random.Random(seed)
+    c1, c2 = p11 + p10, p11 + p10 + p01
+    hit = 0
+    for _ in range(reps):
+        n1 = n2 = m = 0
+        for _s in range(n_true):
+            u = rng.random()
+            if u < p11:
+                n1 += 1; n2 += 1; m += 1
+            elif u < c1:
+                n1 += 1
+            elif u < c2:
+                n2 += 1
+        hit += (n1, n2, m) == target
+    return hit / reps
+
+
 def gamma_two_point(cv):
     """The analytic gamma of the heterogeneity mechanism alone: 1 + CV^2.
 
@@ -1668,8 +1782,15 @@ def write_md(est, estimable, env_rows, thr, swaps, nonid, od, ctrl, zero_m,
       'one. The one guard against that here is external: review 3\'s own event-by-event '
       'simulation of 500,000 sites at four settings agreed with the law used here to '
       'within 2.9 standard errors, and rejected a mutated survival model by 25.6. '
-      'Closing the remaining gap needs a generative test in the suite itself, which is '
-      'the highest-value follow-up this report leaves behind.')
+      'A generative test now sits in the suite itself (H5221, 21-09-2026): `--selftest` '
+      'simulates sites and per-error correction events from the mechanism\'s definition, '
+      'scores Chapman from its textbook formula, and counts how often the profile '
+      'parameters produce the observed table — and '
+      '`scripts/recapture_mutation_check.py` re-applies the three mutations named above '
+      'and confirms the selftest now FAILS on each. The other seven survivors of review 3 '
+      'are not named in this report and have not been re-tested, so the suite is still '
+      'no proof that the model is right; it is proof that these three errors would no '
+      'longer pass unnoticed.')
     A('7. The overdispersion of §6 is computed on the operating linkage key, so it '
       'inherits that key\'s measured false-match rate. It is a descriptive comparison '
       'against a family\'s variance ceiling, with no sampling distribution attached — '
@@ -1770,7 +1891,8 @@ def write_md(est, estimable, env_rows, thr, swaps, nonid, od, ctrl, zero_m,
     A('## 10. Reproduce')
     A('')
     A('```sh')
-    A('python scripts/recapture_sensitivity.py --selftest   # arithmetic invariants')
+    A('python scripts/recapture_sensitivity.py --selftest   # arithmetic invariants + generative acceptance')
+    A('python scripts/recapture_mutation_check.py        # selftest must FAIL on the §9 item 6 mutations')
     A('python scripts/recapture_sensitivity.py              # the full grid')
     A('```')
     A('')
@@ -2017,6 +2139,76 @@ def selftest():
     chk('and under 1 - exp(-theta) they nonetheless disagree, so the identity is '
         'kernel-dependent', abs(g_a - g_b) > 1e-6,
         f'gamma {g_a:.6f} vs {g_b:.6f} at equal moments')
+
+    # ---- generative acceptance (H5221, 20-09-2026) ----
+    # Review 3 of H5072 showed the invariants above check the analytic path against
+    # itself. These check it against the mechanism's DEFINITION, simulated one site
+    # and one correction event at a time (see `simulate_sites`).
+    #
+    # (1) the joint model, both derivations, and the sequential-only model.
+    gen_settings = ((0.30, 0.40, 1.5, 0.00), (0.30, 0.40, 2.5, 0.50),
+                    (0.20, 0.50, 4.0, 0.85), (0.40, 0.30, 1.5, 0.85))
+    n_gen = 200000
+    worst_z = 0.0
+    worst_power = float('inf')
+    for i, (q1, q2, kbar, cv) in enumerate(gen_settings):
+        emp = simulate_sites(q1, q2, kbar, cv, n_gen, GEN_SEED + i)
+        derivs = [joint_cells(q1, q2, kbar, cv), joint_cells_closed(q1, q2, kbar, cv)]
+        if cv == 0.0:
+            derivs.append(sequential_cells(q1, q2, kbar))
+        for d in derivs:
+            worst_z = max(worst_z, generative_z(d, emp, n_gen))
+        # power: a survival model that forgets era 1 fixed what it found (b = q2*theta
+        # instead of (1 - a) q2 theta) must be rejected by the same statistic.
+        a_, b_bad = q1 * (1 - cv), q2 * (1 - cv)
+        a2, b2 = q1 * (1 + cv), q2 * (1 + cv)
+        lam = ztp_lambda_for_mean(kbar)
+        z = 1.0 - math.exp(-lam)
+        bad = [0.0, 0, 0, 0.0, 0.0]
+        for a, b in ((a_, b_bad), (a2, b2)):
+            ea, eb = 1.0 - math.exp(-lam * a), 1.0 - math.exp(-lam * b)
+            bad[3] += 0.5 * ea / z; bad[4] += 0.5 * eb / z; bad[0] += 0.5 * ea * eb / z
+        worst_power = min(worst_power, generative_z(bad, emp, n_gen))
+    chk('GENERATIVE: joint, closed-form and sequential cells match an event-by-event '
+        'simulation of the mechanism', worst_z < GEN_Z_MAX,
+        f'{len(gen_settings)} settings x {n_gen:,} sites, worst |z| = {worst_z:.2f}')
+    chk('GENERATIVE: that simulation REJECTS a survival model that ignores removal',
+        worst_power > 3 * GEN_Z_MAX, f'weakest rejection |z| = {worst_power:.1f}')
+
+    # (2) the simulated point estimate: `run_cells` (cells -> draw_table -> ER.chapman)
+    # must give the same sampling distribution as site-by-site capture scored with
+    # Chapman's formula written out by hand. Small N, so Chapman and Petersen differ
+    # by ~10% and a substitution cannot hide inside Monte Carlo noise.
+    n_small, pp1, pp2, r_small = 300, 0.15, 0.15, 3000
+    c11, c10, c01 = hetero_cells(pp1, pp2, 0.0)
+    rc = run_cells(n_small, c11, c10, c01, r_small, GEN_SEED)
+    tb = textbook_chapman_medians(n_small, pp1, pp2, r_small, GEN_SEED + 100)
+    worst_q = 0.0
+    for key, q in (('p25', 0.25), ('median', 0.50), ('p75', 0.75)):
+        f = midrank_cdf(tb, rc[key])
+        se = math.sqrt(q * (1 - q) * (1 / rc['n_reps'] + 1 / len(tb)))
+        worst_q = max(worst_q, abs(f - q) / se)
+    chk('GENERATIVE: simulated point estimates follow the textbook Chapman '
+        'distribution (quartiles)', worst_q < GEN_Z_MAX,
+        f"N={n_small}, median {rc['median']:.1f} vs textbook "
+        f"{tb[len(tb) // 2]:.1f}, worst |z| = {worst_q:.2f}")
+
+    # (3) the likelihood is the log-PROBABILITY of the table: exp(ll) must equal the
+    # frequency with which site-by-site capture at the profile parameters produces
+    # exactly that table. Integer-N profiles only, so the population is simulable.
+    worst_l = 0.0
+    for (tn1, tn2, tm, tg) in ((12, 10, 3, 1.0), (12, 10, 3, 1.5)):
+        (_, n_prof, ll, _res), = nonidentification_check(tn1, tn2, tm, (tg,))
+        n_int = int(round(n_prof))
+        pr1, pr2 = tn1 / n_prof, tn2 / n_prof
+        q11 = pr1 * pr2 * tg
+        freq = table_frequency(n_int, q11, pr1 - q11, pr2 - q11, (tn1, tn2, tm),
+                               40000, GEN_SEED + int(tg * 10))
+        pl = math.exp(ll) if ll < 700 else float('inf')
+        se = math.sqrt(max(pl * (1 - pl), 1e-300) / 40000) if pl <= 1 else 1e-300
+        worst_l = max(worst_l, abs(pl - freq) / se)
+    chk('GENERATIVE: exp(log-likelihood) equals the simulated frequency of the table',
+        worst_l < GEN_Z_MAX, f'worst |z| = {worst_l:.2f}')
 
     # published counts reproduce from the events CSV (the arithmetic half)
     if os.path.exists(EVENTS) and os.path.exists(PUBLISHED):
