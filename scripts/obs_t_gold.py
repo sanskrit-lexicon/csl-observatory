@@ -13,6 +13,14 @@ Two modes:
            per-component precision/recall/F1, and the confusion matrix. If a
            second annotator filled `gold_component_2`, also report Cohen's kappa.
 
+  --ingest apply a second-annotator decisions file (downloaded from the blind
+           review sheet built by scripts/obs_t_second_sheet.py) onto the sheet's
+           `gold_component_2` column. Validates the schema, the location
+           vocabulary and the row ids, and refuses to clobber any existing
+           gold_component_2 value without --force. Never touches gold_component
+           or notes. `--sheet PATH` redirects the target (fixture round-trips
+           run against a sandbox copy, never the real instrument).
+
 Stratifying by (component x evidence) guarantees enough *inferred* rows to test
 whether the heuristic fallback labels are materially worse than the derived ones.
 
@@ -27,16 +35,19 @@ would discard them); pass --force to draw a fresh sample anyway.
 
 Usage:  python scripts/obs_t_gold.py --make [N_PER_CELL] [--force]
         python scripts/obs_t_gold.py --score
+        python scripts/obs_t_gold.py --ingest DECISIONS.json [--sheet PATH] [--force]
 """
 import csv, json, os, random, sys
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
+from typing import NoReturn
 sys.stdout.reconfigure(encoding='utf-8'); sys.stderr.reconfigure(encoding='utf-8')
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 DATA = os.path.join(ROOT, 'observatory', 'site', 'src', 'data')
 FINAL = os.path.join(DATA, 'correction_events_final.csv')
+CROSSWALK = os.path.join(DATA, 'event_id_crosswalk_v1.csv')
 VDIR = os.path.join(ROOT, 'validation')
 SHEET = os.path.join(VDIR, 'gold_sample.csv')
 GUIDE = os.path.join(VDIR, 'COMPONENT_GUIDE.md')
@@ -156,15 +167,122 @@ def cohen_kappa(pairs):
     return (po - pe) / (1 - pe) if pe != 1 else 1.0
 
 
+# Second-annotator decisions files (H5312) — produced by the blind sheet
+# validation/second_annotator_sheet.html (built by scripts/obs_t_second_sheet.py).
+DECISIONS_SCHEMA = 'obs-t-second-annotator-decisions-v1'
+SHEET_ID = 'obs-t-gold-second-annotator-v1'
+EDIT_TYPES = ['spelling', 'diacritic', 'case', 'spacing', 'punctuation',
+              'digit', 'transposition', 'source-raw', 'none']
+
+
+def _fail(msg) -> NoReturn:
+    sys.exit(f'ingest refused: {msg}')
+
+
+def ingest(decisions_path, sheet_path=SHEET, force=False):
+    """Apply a blind-sheet decisions file onto the sheet's gold_component_2 column.
+
+    Fail-closed: schema/vocabulary/row-id mismatches abort WITHOUT writing.
+    Existing gold_component_2 values are never clobbered without --force; the
+    first-annotator columns (gold_component, notes) are never touched.
+    """
+    try:
+        with open(decisions_path, encoding='utf-8') as f:
+            dec = json.load(f)
+    except (OSError, json.JSONDecodeError) as e:
+        _fail(f'cannot read decisions file {decisions_path}: {e}')
+    if not isinstance(dec, dict) or not isinstance(dec.get('decisions'), list):
+        _fail('decisions file must be an object with a "decisions" list')
+    if dec.get('schema') != DECISIONS_SCHEMA:
+        _fail(f'schema mismatch: expected {DECISIONS_SCHEMA!r}, '
+              f'got {dec.get("schema")!r}')
+    if dec.get('sheet_id') != SHEET_ID:
+        _fail(f'sheet_id mismatch: expected {SHEET_ID!r}, got {dec.get("sheet_id")!r}')
+
+    try:
+        with open(sheet_path, encoding='utf-8') as f:
+            rows = list(csv.DictReader(f))
+    except OSError as e:
+        _fail(f'cannot read sheet {sheet_path}: {e}')
+    by_id = {r['row_id']: r for r in rows}
+
+    seen, would_clobber = set(), []
+    for d in dec['decisions']:
+        if not isinstance(d, dict):
+            _fail('decision entry is not an object')
+        rid = str(d.get('row_id', '')).strip()
+        if rid not in by_id:
+            _fail(f'row_id {rid!r} is not in the sheet')
+        if rid in seen:
+            _fail(f'duplicate row_id {rid!r} in decisions file')
+        seen.add(rid)
+        loc = (d.get('location') or '').strip()
+        if loc not in COMPONENTS:
+            _fail(f'row {rid}: location {loc!r} not in the axis-A vocabulary {COMPONENTS}')
+        et = (d.get('edit_type') or '').strip()
+        if et and et not in EDIT_TYPES:
+            _fail(f'row {rid}: edit_type {et!r} not in the axis-B vocabulary {EDIT_TYPES}')
+        if by_id[rid]['gold_component_2'].strip() and rid not in would_clobber:
+            would_clobber.append(rid)
+    if not seen:
+        _fail('decisions file carries zero decided rows')
+
+    if would_clobber and not force:
+        _fail(f'{len(would_clobber)} row(s) already carry a gold_component_2 value '
+              f'(first: {would_clobber[0]}). Re-running --ingest with --force '
+              f'overwrites them knowingly.')
+    if dec.get('fixture'):
+        print('  WARNING: decisions file is marked fixture:true — synthetic '
+              'round-trip data, NOT annotations.')
+    stale_labels = Counter(r['gold_component'].strip() for r in rows
+                           if r['gold_component'].strip() not in COMPONENTS)
+    if stale_labels:
+        print('  WARNING: the sheet\'s gold_component column carries RETIRED '
+              f'one-axis labels ({dict(stale_labels)}) — the kappa this enables '
+              'is NOT interpretable until that column is re-based (H5312 '
+              'follow-up decision).')
+
+    applied = 0
+    for d in dec['decisions']:
+        rid = str(d['row_id'])
+        by_id[rid]['gold_component_2'] = d['location'].strip()
+        applied += 1
+    with open(sheet_path, 'w', encoding='utf-8', newline='') as f:
+        w = csv.DictWriter(f, fieldnames=SHEET_COLS); w.writeheader()
+        w.writerows(rows)
+    print(f'ingested {applied} decision(s) into '
+          f'{os.path.relpath(sheet_path, ROOT)} '
+          f'(clobbered {len(would_clobber)} existing value(s))')
+    print('  -> run --score to see the kappa')
+
+
 def score():
     with open(FINAL, encoding='utf-8') as f:
         auto = {r['event_id']: (r['error_component'], r['evidence_level'])
                 for r in csv.DictReader(f)}
+    # H1494 migrated correction_events*.csv event_ids to the obst:v1 scheme; the
+    # gold sheet still carries the OLD hex ids. Resolve old->new at read time via
+    # the migration crosswalk so the auto-join (accuracy / evidence split) keeps
+    # working; ids already obst:v1 and unresolvable ids pass through unchanged.
+    xwalk = {}
+    if os.path.exists(CROSSWALK):
+        with open(CROSSWALK, encoding='utf-8') as f:
+            xwalk = {r['old_event_id']: r['new_event_id'] for r in csv.DictReader(f)}
     with open(SHEET, encoding='utf-8') as f:
         sheet = [r for r in csv.DictReader(f) if r['gold_component'].strip()]
     if not sheet:
         sys.exit('no annotated rows yet — fill gold_component in '
                  f'{os.path.relpath(SHEET, ROOT)} and re-run --score')
+    unresolved_join = sum(1 for r in sheet
+                          if xwalk.get(r['event_id'], r['event_id']) not in auto)
+    # H5312 finding: a gold_component value outside the Phase-8 location axis
+    # (e.g. 'encoding' / 'orthography') proves the first-annotator column still
+    # carries the RETIRED one-axis typology. Kappa between that column and a
+    # current-axis gold_component_2 is arithmetically computable but NOT
+    # interpretable — flag it wherever the numbers go.
+    stale_labels = Counter(r['gold_component'].strip() for r in sheet
+                           if r['gold_component'].strip() not in COMPONENTS)
+    stale_axis = bool(stale_labels)
 
     n = correct = 0
     by_ev = defaultdict(lambda: [0, 0])      # evidence -> [correct, total]
@@ -172,7 +290,8 @@ def score():
     confusion = Counter()
     for r in sheet:
         gold = r['gold_component'].strip()
-        a_comp, ev = auto.get(r['event_id'], ('?', '?'))
+        eid = xwalk.get(r['event_id'], r['event_id'])
+        a_comp, ev = auto.get(eid, ('?', '?'))
         n += 1
         ok = a_comp == gold
         correct += ok
@@ -199,6 +318,11 @@ def score():
         'annotated': n, 'accuracy': round(correct / n, 3),
         'accuracyByEvidence': {ev: round(c / t, 3) for ev, (c, t) in by_ev.items()},
         'countsByEvidence': {ev: t for ev, (c, t) in by_ev.items()},
+        'eventIdJoin': {'resolved': n - unresolved_join, 'unresolved': unresolved_join},
+        'firstAnnotatorColumn': (
+            {'status': 'stale-axis (retired one-axis labels)',
+             'labelsOutsideLocationAxis': dict(stale_labels)}
+            if stale_axis else {'status': 'ok (location axis)'}),
         'perComponent': f1s,
         'iaa': {'pairs': len(iaa_pairs), 'cohen_kappa': kappa},
         'topConfusions': [{'auto': a, 'gold': g, 'n': c}
@@ -215,6 +339,25 @@ def score():
       'events (blind stratified sample). Accuracy = agreement of the automatic '
       '`error_component` with the human gold label._')
     A('')
+    if stale_axis:
+        A('> 🔴 **KAPPA NOT INTERPRETABLE AS-IS:** the sheet\'s `gold_component` '
+          'column still carries the RETIRED one-axis labels ('
+          + ', '.join(f'`{k}`×{v}' for k, v in stale_labels.most_common()) +
+          ') — it predates the Phase-8 location axis. A kappa between this column '
+          'and a current-axis `gold_component_2` measures a vocabulary mismatch, '
+          'not annotator agreement. Re-base the first-annotator column (adopt the '
+          'H1385 pass-A labels, or a fresh human pass) before quoting any kappa '
+          'from this table. Tracked as a follow-up decision.')
+        A('')
+    if unresolved_join:
+        A(f'> ⚠️ **Partial auto-join:** {unresolved_join} of {n} sheet event_ids no '
+          'longer resolve to `correction_events_final.csv` (the H1494 obst:v1 id '
+          'migration left the gold sheet on old hex ids; the crosswalk recovers '
+          f'only {n - unresolved_join}). Accuracy and the evidence split cover the '
+          'resolved subset only; **the kappa below is unaffected** — it compares '
+          'the two annotator columns on the sheet itself. Re-keying the sheet is '
+          'a tracked follow-up.')
+        A('')
     A('| metric | value |')
     A('|---|---:|')
     A(f'| annotated events | {n} |')
@@ -253,6 +396,15 @@ def score():
     print(f'wrote {OUT_JSON}')
     print(f'  accuracy {metrics["accuracy"]} (n={n})  byEvidence {metrics["accuracyByEvidence"]}'
           + (f'  kappa {kappa}' if kappa is not None else '  (no 2nd annotator yet)'))
+    if unresolved_join:
+        print(f'  WARNING: {unresolved_join}/{n} event_ids did not join to the final '
+              f'csv (obst:v1 migration desync) — accuracy/evidence cover the resolved '
+              f'subset only; kappa is unaffected.')
+    if stale_axis:
+        print(f'  WARNING: gold_component carries RETIRED one-axis labels '
+              f'({dict(stale_labels)}) — any kappa vs gold_component_2 is NOT '
+              f'interpretable until the first-annotator column is re-based '
+              f'(H5312 follow-up decision).')
 
 
 def main():
@@ -262,8 +414,17 @@ def main():
         make(cap, force='--force' in sys.argv)
     elif '--score' in sys.argv:
         score()
+    elif '--ingest' in sys.argv:
+        i = sys.argv.index('--ingest')
+        if len(sys.argv) <= i + 1:
+            sys.exit('usage: obs_t_gold.py --ingest DECISIONS.json [--sheet PATH] [--force]')
+        sheet_path = SHEET
+        if '--sheet' in sys.argv:
+            sheet_path = sys.argv[sys.argv.index('--sheet') + 1]
+        ingest(sys.argv[i + 1], sheet_path=sheet_path, force='--force' in sys.argv)
     else:
-        sys.exit('usage: obs_t_gold.py --make [N_PER_CELL] | --score')
+        sys.exit('usage: obs_t_gold.py --make [N_PER_CELL] | --score | '
+                 '--ingest DECISIONS.json [--sheet PATH] [--force]')
 
 
 if __name__ == '__main__':

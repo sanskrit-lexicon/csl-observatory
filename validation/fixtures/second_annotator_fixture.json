@@ -1,0 +1,22 @@
+{
+ "sheet_id": "obs-t-gold-second-annotator-v1",
+ "schema": "obs-t-second-annotator-decisions-v1",
+ "fixture": true,
+ "purpose": "H5312 round-trip proof only — SYNTHETIC labels, never human annotations. Ingest this ONLY against a sandbox copy of the sheet (scripts/obs_t_gold_roundtrip_check.py does exactly that); against the real validation/gold_sample.csv it must be run with --force and would still be junk. Do not cite any metric computed from this file.",
+ "generated": "2026-09-24",
+ "blind_input": "validation/gold_sample_blind.json",
+ "annotated": 10,
+ "total": 390,
+ "decisions": [
+  {"row_id": 1, "location": "headword", "edit_type": "spelling", "note": "FIXTURE"},
+  {"row_id": 2, "location": "grammar", "edit_type": "diacritic", "note": "FIXTURE"},
+  {"row_id": 3, "location": "citation", "edit_type": "case", "note": "FIXTURE"},
+  {"row_id": 4, "location": "sense", "edit_type": "spacing", "note": "FIXTURE"},
+  {"row_id": 5, "location": "crossref", "edit_type": "punctuation", "note": "FIXTURE"},
+  {"row_id": 6, "location": "meta", "edit_type": "digit", "note": "FIXTURE"},
+  {"row_id": 7, "location": "markup", "edit_type": "transposition", "note": "FIXTURE"},
+  {"row_id": 8, "location": "unattributed", "edit_type": "source-raw", "note": "FIXTURE"},
+  {"row_id": 9, "location": "headword", "edit_type": "none", "note": "FIXTURE"},
+  {"row_id": 10, "location": "grammar", "edit_type": "spelling", "note": "FIXTURE"}
+ ]
+}
