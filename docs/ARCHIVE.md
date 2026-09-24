@@ -35,7 +35,7 @@ moved out of the GitHub/org observatory on 2026-06-03. The files below are
 - [`LEXICOGRAPHY_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/LEXICOGRAPHY_ROADMAP.md), [`METALEXICOGRAPHY_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/METALEXICOGRAPHY_ROADMAP.md) — lexicography roadmaps
 - [`MICROSTRUCTURE-MACROSTRUCTURE.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/MICROSTRUCTURE-MACROSTRUCTURE.md), [`MICROSTRUCTURE_AND_CAREER_PLAN.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/MICROSTRUCTURE_AND_CAREER_PLAN.md) — micro/macrostructure notes
 - [`R2_FINDINGS.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/R2_FINDINGS.md), [`PAPER_SENSE_ALIGNMENT.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/PAPER_SENSE_ALIGNMENT.md) — R2 sense-alignment / sense-granularity work
-- [`RESEARCH_LAYER_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/RESEARCH_LAYER_ROADMAP.md) — research/practitioner layer plan
+- [`RESEARCH_LAYER_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/archive/RESEARCH_LAYER_ROADMAP.md) — research/practitioner layer plan; archived 25-09-2026 (H5362) into `docs/archive/`
 - [`PUBLICATIONS.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/PUBLICATIONS.md) — dictionary-paper publication plan
 
 ## Completed implementation plans
