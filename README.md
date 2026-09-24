@@ -3,7 +3,7 @@
 _Created: 07-05-2026 · Last updated: 11-07-2026_
 
 > **Live observatory for 13 years of Cologne Digital Sanskrit Lexicon (CDSL).**
-> Tracking 76 repos, 5,413 issues+PRs, 9,877 commits, and 16 contributors since 2014.
+> Tracking 86 repos, 9,931 issues+PRs, 13,317 commits, and 73 contributors since 2014.
 
 ## What this is
 

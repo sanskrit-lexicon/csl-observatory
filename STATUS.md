@@ -2,7 +2,7 @@ _Created: 07-05-2026 · Last updated: 05-09-2026_
 
 # Status
 
-> **Current status (2026-06).** The observatory is live and reproducible.
+> **Current status (2026-09).** The observatory is live and reproducible.
 > Five org-process findings + a synthesis are on the
 > [dashboard](https://sanskrit-lexicon.github.io/csl-observatory/), and the
 > standalone **OBS-T error-typology** track (a 52,498-event correction corpus,
@@ -17,16 +17,16 @@ _Created: 07-05-2026 · Last updated: 05-09-2026_
 3. **[`reports/synthesis.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/synthesis.md)** — *State of the observatory*, the findings tied into one picture.
 4. **[Dashboard](https://sanskrit-lexicon.github.io/csl-observatory/)** — the live, downloadable charts.
 
-## Headline numbers (snapshot 2026-06)
+## Headline numbers (snapshot 2026-09)
 
 | Metric | Value |
 |---|---:|
-| Repositories tracked | 76 |
-| Issues + PRs (lifetime) | 5,413 |
-| Commits since 2014 | 9,877 |
-| Distinct human contributors | 16 |
+| Repositories tracked | 86 |
+| Issues + PRs (lifetime) | 9,931 |
+| Commits since 2014 | 13,317 |
+| Distinct human contributors | 73 |
 | Span | 13 years (2014–2026) |
-| OBS-T correction corpus | 50,953 events across 43 dictionaries |
+| OBS-T correction corpus | 52,498 events across 43 dictionaries |
 
 These are computed from the committed snapshot; the dashboard and
 [`data/manifest.json`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/data/manifest.json) are the source of truth.
