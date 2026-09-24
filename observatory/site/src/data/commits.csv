@@ -1,4 +1,7 @@
 repo,sha,date,author_login,author_name,author_email,subject
+ACC,b5456092ce8b,2026-09-07T05:08:22Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions (7/7 vote approve)
+ACC,75a71530d8f1,2026-09-05T11:36:48Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions (7/7 vote approve)
+ACC,725d8a0d86db,2026-09-05T06:56:00Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 10}) + relative-link upgrades (4)"
 ACC,71d7e78a97ed,2026-08-28T08:42:53Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: chore: normalize index.html line endings (CRLF to LF) + _Generated marker (#29)
 ACC,8e74ae247720,2026-07-31T20:26:40Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(changelog): add minimal Keep-a-Changelog (H2012 Phase F residual) (#28)
 ACC,06a5acbb6781,2026-07-31T13:07:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .gitattributes (eol=lf line-ending policy) (#26)
@@ -27,6 +30,8 @@ ACC,6a349af264c5,2026-05-15T09:24:51Z,gasyoun,Mārcis Gasūns,gasyoun@users.nore
 ACC,324e7e0627bd,2026-05-15T09:24:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: update README.md with issue taxonomy
 ACC,6524cbfb74b1,2026-05-15T07:38:40Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 ACC,0287cf231518,2017-05-28T18:26:15Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+AMAR,a6481144a427,2026-09-05T11:33:46Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions (7/7 vote approve)
+AMAR,6fad9b0101ed,2026-09-05T06:57:31Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 4}) + relative-link upgrades (0)"
 AMAR,f5575c3a7742,2026-08-26T01:14:18Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"chore: rename changelog.md to CHANGELOG.md, update references (#15)"
 AMAR,9656170ecaad,2026-08-03T05:17:17Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/checkout from 5 to 7 (#12)
 AMAR,0ebf3fc7fd30,2026-08-03T05:14:04Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/setup-python from 6 to 7 (#13)
@@ -53,6 +58,7 @@ AMAR,b32522acb934,2024-01-30T05:16:43Z,drdhaval2785,drdhaval2785,drdhaval2785@gm
 AMAR,5a0b37adacc5,2024-01-30T04:11:43Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,amar1 converted to amar.txt
 AMAR,9c1ac6fc71cb,2024-01-30T04:10:41Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,initial commit
 AMAR,7d064f3640c9,2024-01-30T03:54:09Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+AP,929701c9e47a,2026-09-05T06:52:58Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 15}) + relative-link upgrades (1)"
 AP,0ad28955c150,2026-08-26T01:14:14Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"chore: rename changelog.md to CHANGELOG.md, update references (#52)"
 AP,3aed8dcc41b0,2026-07-31T12:37:32Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#50)
 AP,38f587dffbf3,2026-07-30T13:17:21Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(changelog): drop the duplicated scaffold line (#49)
@@ -226,6 +232,8 @@ AP,e367c106da00,2025-07-06T20:54:23Z,funderburkjim,funderburkjim,funderburkjim@g
 AP,3eb244c4d4a6,2025-07-06T20:14:16Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,initialize issues and issues/issue1. #1
 AP,090dd4101e28,2025-07-06T20:07:47Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initialize .gitignore
 AP,ca4b6efeb3ee,2025-07-06T20:04:17Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+AP90,5d0c050a8a96,2026-09-05T11:35:58Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions (7/7 vote approve)
+AP90,c9f58f94cf65,2026-09-05T06:56:05Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 10}) + relative-link upgrades (1)"
 AP90,7385177e5fc3,2026-07-31T13:07:21Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .gitattributes (eol=lf line-ending policy) (#50)
 AP90,bfd2f0b3ea86,2026-07-31T12:37:23Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#51)
 AP90,a2a14beeec75,2026-07-20T05:12:44Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/setup-python from 6 to 7 (#48)
@@ -307,6 +315,7 @@ AP90,2c30e42dfc90,2020-03-16T01:06:23Z,funderburkjim,funderburkjim,funderburkjim
 AP90,654a0781729a,2020-03-16T01:05:35Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,additional verbs found by comparison to 1957ap
 AP90,b96fa717ea4c,2020-03-14T19:06:57Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,initial commit. verbs01
 AP90,1f2709b23b87,2020-03-14T19:00:33Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+ApteES,b476929782c5,2026-09-05T06:56:28Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 8}) + relative-link upgrades (3)"
 ApteES,865d2cbe2b53,2026-07-31T13:07:17Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .gitattributes (eol=lf line-ending policy) (#29)
 ApteES,3850cf3179d9,2026-07-31T12:37:17Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#30)
 ApteES,dc772049ae39,2026-07-20T05:12:42Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/setup-python from 6 to 7 (#27)
@@ -376,6 +385,7 @@ ApteES,0e41b11535ff,2016-10-14T20:56:54Z,funderburkjim,funderburkjim,funderburkj
 ApteES,48cfa8930c43,2014-11-04T00:12:45Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,spellcheck headwords
 ApteES,4b98c272ad0f,2014-07-15T19:03:49Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Update README.md
 ApteES,d72c534454eb,2014-07-15T18:59:03Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+ArabicInSanskrit,d6b005b7fce8,2026-09-05T06:58:42Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 2}) + relative-link upgrades (0)"
 ArabicInSanskrit,009f08ca438d,2026-07-31T20:28:09Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(changelog): add minimal Keep-a-Changelog (H2012 Phase F residual) (#21)
 ArabicInSanskrit,9e8876ee45ab,2026-07-31T12:49:50Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .gitattributes (eol=lf line-ending policy) (#19)
 ArabicInSanskrit,0f01ec4f6c99,2026-07-31T12:37:10Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#20)
@@ -388,6 +398,8 @@ ArabicInSanskrit,cea540cb49e9,2026-05-15T07:38:41Z,gasyoun,Mārcis Gasūns,gasyo
 ArabicInSanskrit,c5fa9d890639,2015-01-18T20:52:01Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Update README.md
 ArabicInSanskrit,c70b152f25c1,2015-01-18T20:44:50Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Update README.md
 ArabicInSanskrit,307099937e86,2015-01-18T20:43:43Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+BEN,6a293d5e44e2,2026-09-07T05:09:49Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions (7/7 vote approve)
+BEN,a68a6881d18b,2026-09-05T06:51:49Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 23}) + relative-link upgrades (6)"
 BEN,172012a284e8,2026-07-31T20:25:18Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(changelog): add minimal Keep-a-Changelog (H2012 Phase F residual) (#37)
 BEN,257a03d9b374,2026-07-31T12:49:57Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .gitattributes (eol=lf line-ending policy) (#35)
 BEN,761d71107442,2026-07-31T12:36:58Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#36)
@@ -553,6 +565,8 @@ BEN,ba4ba612ad05,2021-09-04T17:28:09Z,funderburkjim,funderburkjim,funderburkjim@
 BEN,f6149480654b,2021-08-16T03:12:28Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,eng_error_lang work on identifying possible english word errors
 BEN,32ec22cc2fe5,2020-04-30T21:33:21Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,verbs01. Initial commit
 BEN,021299f459d6,2020-04-30T21:22:17Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+BHS,66dd943ff291,2026-09-06T16:10:36Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions (7/7 vote approve)
+BHS,38162d48fc87,2026-09-05T06:49:03Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 40}) + relative-link upgrades (39)"
 BHS,33d47654c8b2,2026-08-28T08:42:56Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: chore: normalize index.html line endings (CRLF to LF) + _Generated marker (#22)
 BHS,c3d5da077a96,2026-08-26T01:14:09Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"chore: rename changelog.md to CHANGELOG.md, update references (#21)"
 BHS,9112631cefb5,2026-07-31T12:49:46Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .gitattributes (eol=lf line-ending policy) (#18)
@@ -620,6 +634,7 @@ BHS,7693d4f8e52d,2021-08-19T20:14:43Z,funderburkjim,funderburkjim,funderburkjim@
 BHS,a3962b63bbe6,2016-01-02T04:16:54Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,Correction issue 216
 BHS,aaf232301c6e,2016-01-02T03:47:54Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,Initial unaltered commit
 BHS,21df15923ae0,2016-01-02T03:42:33Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+BOP,eeec951d4642,2026-09-05T06:51:02Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 28}) + relative-link upgrades (23)"
 BOP,02915831d755,2026-08-28T08:42:59Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: chore: normalize index.html line endings (CRLF to LF) + _Generated marker (#23)
 BOP,10814b2ed4cf,2026-08-03T05:17:46Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/setup-python from 6 to 7 (#21)
 BOP,483317a5333b,2026-08-03T05:15:17Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/checkout from 5 to 7 (#20)
@@ -685,6 +700,7 @@ BOP,184959b657ca,2022-05-23T21:21:30Z,funderburkjim,funderburkjim,funderburkjim@
 BOP,e107de0f2a97,2022-05-23T17:31:49Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,punctuation after greek text. #1
 BOP,4465d3a1ac6c,2022-05-04T21:58:33Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Greek text addition. #1
 BOP,8ffbd8512411,2022-05-02T16:46:21Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+BOR,29a2d013b6d2,2026-09-05T06:34:51Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave2): mechanical byline/header pass ({""add-both"": 82}) + relative-link upgrades (114)"
 BOR,9bf20fdff0c9,2026-07-31T12:49:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .gitattributes (eol=lf line-ending policy) (#12)
 BOR,203001a97062,2026-07-31T12:44:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#13)
 BOR,7ff04f28d770,2026-07-19T18:45:11Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,Merge remote-tracking branch 'origin/main'
@@ -728,6 +744,9 @@ BOR,d877742df320,2021-09-14T11:19:51Z,drdhaval2785,Dhaval Patel,drdhaval2785@gma
 BOR,45224e31f8c8,2021-09-14T04:54:03Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,removed space
 BOR,7d25470b9310,2021-09-14T04:52:48Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,initial try
 BOR,75af7dab0858,2021-09-14T04:47:08Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,first commit
+BUR,92a2d69b6412,2026-09-18T14:00:21Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add root AGENTS.md agent-entrypoint stub (H4634) (#19)
+BUR,d8a52feb3ffd,2026-09-05T09:55:32Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions (7/7 vote approve) — rewrites/strips per approved families
+BUR,7801e3475141,2026-09-05T06:34:30Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave2): mechanical byline/header pass ({""add-both"": 96}) + relative-link upgrades (7)"
 BUR,ee81715098a6,2026-08-18T05:46:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,feat(prefaces): BUR 28-page front matter OCR FR+EN+RU + consolidated pref_all editions (#17)
 BUR,7925bc9a542b,2026-07-31T12:44:31Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#16)
 BUR,111ce61b545a,2026-07-12T03:33:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: land README H548 refresh + SEO landing page + changelog v1 (recovered unpushed work) (#12)
@@ -781,6 +800,8 @@ BUR,75bfafe8a566,2022-05-10T02:10:08Z,funderburkjim,funderburkjim,funderburkjim@
 BUR,df0e76aa7ce8,2020-04-18T00:48:48Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,revise readme.md
 BUR,4919ee117534,2020-04-09T18:37:43Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,verbs01 initial commit
 BUR,38f0d7872a8f,2020-04-09T17:26:55Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+CAE,6b0b1ccd779d,2026-09-06T15:55:32Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions (7/7 vote approve)
+CAE,deec6d0314a5,2026-09-05T06:51:55Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 23}) + relative-link upgrades (17)"
 CAE,8c48a638f1a7,2026-08-26T01:14:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"chore: rename changelog.md to CHANGELOG.md, update references (#14)"
 CAE,f2661233a127,2026-07-31T12:44:35Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#13)
 CAE,591f058545e2,2026-07-13T19:37:20Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(prefaces): restore Cyrillic yo (e -> jo) in RU preface translations (#11)
@@ -873,6 +894,9 @@ CCS,d3ab8313ad13,2026-05-15T07:38:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.nore
 CCS,07eb4dad8829,2020-04-18T00:44:52Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Update README.md
 CCS,9d2f4fb5556d,2020-04-15T02:25:26Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,verbs01 inital commit
 CCS,44b9187e01cf,2020-04-15T01:40:12Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+COLOGNE,e1e8aef5ec8d,2026-09-15T06:17:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,enhancements/code/dictionary_init.sh: quoting and cd guard (#489)
+COLOGNE,0d4e7ef11d7d,2026-09-06T15:55:02Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions (7/7 vote approve)
+COLOGNE,5cc9d86fbc81,2026-09-05T06:52:40Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 18}) + relative-link upgrades (7)"
 COLOGNE,ece273d218e4,2026-08-30T07:19:13Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,chore(release): cut v0.1.0 (backfill [Unreleased])
 COLOGNE,093f596f357e,2026-08-25T09:50:09Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(cleanup): fill ratified human_decision for all 464 taxonomy rows; open 9 slice issues (#488)
 COLOGNE,facb43fe5b18,2026-07-23T09:40:32Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): CodeQL triggers on main (H1522 / H1245) (#473)
@@ -1115,6 +1139,9 @@ COLOGNE,73a7502fe900,2014-12-11T23:28:17Z,funderburkjim,funderburkjim,funderburk
 COLOGNE,b28f2dd555b4,2014-12-11T23:21:14Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,intro to aws S3 command line interface
 COLOGNE,0c194addcaea,2014-10-01T10:43:45Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Bibliography for 37 books added
 COLOGNE,d263eac05a9f,2014-01-14T14:14:31Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Initial commit
+CORRECTIONS,8bbd14826d00,2026-09-15T06:17:50Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Quote grep pattern in nonalph.sh; quoting fixes in nochange.sh (#453)
+CORRECTIONS,5585657fae9f,2026-09-05T06:51:09Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 28}) + relative-link upgrades (0)"
+CORRECTIONS,10427f7e0d28,2026-09-04T09:12:06Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ci: add Semgrep SAST (CodeQL has no PHP analyzer) (H3488) (#452)
 CORRECTIONS,1e04b2341c1b,2026-08-12T08:03:50Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .gitattributes (eol=lf line-ending policy) (#450)
 CORRECTIONS,86dd5cda97be,2026-08-12T08:03:47Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#451)
 CORRECTIONS,643fd6df920b,2026-07-11T11:04:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): purpose-first rewrite + recover stranded CHANGELOG (H548) (#449)
@@ -1816,6 +1843,7 @@ CORRECTIONS,fc6425eef0c8,2014-10-02T22:32:10Z,funderburkjim,funderburkjim,funder
 CORRECTIONS,c25d7de00947,2014-09-30T01:23:48Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initial commit
 CORRECTIONS,e1ccb24221a0,2014-09-30T01:19:25Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Update README.md
 CORRECTIONS,fed7c9d9b720,2014-09-30T01:17:52Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+DCS,ca0d5a94a8b5,2026-09-05T06:57:35Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 4}) + relative-link upgrades (1)"
 DCS,916520e04cb0,2026-07-31T12:32:25Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#13)
 DCS,fddd7a42d9ec,2026-07-20T05:12:25Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/setup-python from 6 to 7 (#12)
 DCS,87ecef54e82f,2026-07-12T12:21:31Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): reconcile H548 refresh with best-standard version (#10) (#11)
@@ -1850,6 +1878,7 @@ DCS,2962b125c7d8,2014-10-19T08:51:04Z,gasyoun,Marcis Gasuns,gasyoun@users.norepl
 DCS,3d15595736f0,2014-10-06T15:25:37Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Renamed abbreviations
 DCS,e676a72be5ae,2014-10-06T15:12:27Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Lexical Data
 DCS,01637b5b703e,2014-01-17T07:47:11Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Initial commit
+FRI,d2a37197974e,2026-09-05T06:56:45Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 7}) + relative-link upgrades (1)"
 FRI,5a93da155283,2026-08-26T01:13:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"chore: rename changelog.md to CHANGELOG.md, update references (#23)"
 FRI,579eb37fd8e7,2026-07-31T12:32:21Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#22)
 FRI,032604bbfb76,2026-07-30T13:17:16Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(changelog): drop the duplicated scaffold line (#21)
@@ -1888,6 +1917,24 @@ FRI,596f26b84c3b,2025-02-02T03:24:29Z,funderburkjim,funderburkjim,funderburkjim@
 FRI,c0d6bf299037,2024-01-26T20:49:53Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,"Initial version of fri.txt, named as fri_00.txt. #1"
 FRI,b82479ccb71e,2024-01-26T20:40:17Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Add .gitignore
 FRI,56219ea8adbb,2024-01-26T12:33:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Initial commit
+GRA,c382ce47eea9,2026-09-20T07:02:50Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H5174: inline provenance note for §3.6 gra-dev runbook (authored 20-09 from code reading) (#68)
+GRA,f4062dde8859,2026-09-20T06:46:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"H5174: gra-dev runbook section, KASSA doc moved out with stub, CHANGELOG ghost row fixed (#67)"
+GRA,ccafd0af86cd,2026-09-20T06:43:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore: add .github/CODEOWNERS (default @gasyoun) (#66)
+GRA,a58f25f3b487,2026-09-19T19:29:05Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #65 from sanskrit-lexicon/h5147-vidyut-eval
+GRA,8df5c9e76774,2026-09-19T19:28:36Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,H5147: vidyut vs verbs01 lemmatization eval — adopt-for-verbs-only verdict
+GRA,3efbaa967fc5,2026-09-19T18:58:48Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #63 from sanskrit-lexicon/h5148-drain
+GRA,7d417a9eab62,2026-09-19T18:32:59Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #64 from sanskrit-lexicon/h5146-drain
+GRA,059688b932ba,2026-09-19T06:32:27Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: changelog entry for ocr-pilot H5146 (CER 0.986 page-level, no replacement verdict)"
+GRA,474e9ccd7cdb,2026-09-19T00:58:36Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"ocr-pilot: H5146 — Hellwig OCR premise disproven; page-0587 pilot with Sanskrit fine-tuned Qwen2.5-VL: CER 0.986 page-level, verdict: no manual-transcription replacement"
+GRA,95d1523d1f7c,2026-09-19T00:57:24Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,docs: stale git-HEAD comments in difftest/engine (verifier round-2 cosmetic findings)
+GRA,2fb0b4c70f73,2026-09-19T00:50:37Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,H5148 verifier findings (H4235): fix difftest legacy materialization + engine cache scoping
+GRA,e8e1175b4648,2026-09-19T00:39:13Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,H5148: migrate transcoder to indic_transliteration 2.3.82 — duplicate FSM copies retired
+GRA,336213c13664,2026-09-18T16:49:39Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,docs: kassa — fix-price/unlimited-checks premium not justified (worst-case overage 2269 RUB/mo still below 2457; hike-to-parity needs +51%)
+GRA,f74103241b11,2026-09-18T16:41:15Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: kassa competitor analysis — DigitalKassa new leader 1769 RUB/mo (-28% vs partner rent), Initpro 2nd; verdict + open questions updated"
+GRA,d37432710ffa,2026-09-18T16:25:08Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: kassa verdict flip per MG ruling 18-09 — Tochka cloud sub real 5-15k RUB/mo, excluded; winner: partner rent 36mo upfront, TCO 2457 RUB/mo"
+GRA,bf664554ac31,2026-09-18T15:59:32Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,docs: kassa 54-FZ TCO compare — Tochka (kit purchase / cloud sub) vs partner rent; changelog row for it + recall lock fix (7ba6d566b)
+GRA,3701b634d72b,2026-09-16T14:36:27Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,memory note: arXiv 2609.11873 RSI roadmap read-through + estate mapping
+GRA,2c7e03747601,2026-09-05T06:50:26Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 29}) + relative-link upgrades (33)"
 GRA,9bfc177719c1,2026-08-26T01:13:50Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"chore: rename changelog.md to CHANGELOG.md, update references (#61)"
 GRA,6bf8d6555042,2026-07-31T12:50:33Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .gitattributes (eol=lf line-ending policy) (#59)
 GRA,5e33293fe996,2026-07-30T13:17:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(changelog): drop the duplicated scaffold line (#58)
@@ -1990,6 +2037,7 @@ GRA,1331cbe336ea,2020-04-28T22:51:19Z,funderburkjim,funderburkjim,funderburkjim@
 GRA,1cd7331fcd2c,2020-01-07T23:03:10Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Dmitri
 GRA,8caae9251cbf,2018-06-28T03:07:36Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,translations of forward
 GRA,7119f0a7ba62,2015-01-04T22:07:54Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Literarisches Centralblatt für Deutschland (1873)
+GreekInSanskrit,6afbd44f1480,2026-09-05T06:58:02Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 3}) + relative-link upgrades (0)"
 GreekInSanskrit,bf88bda76899,2026-07-31T20:27:30Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(changelog): add minimal Keep-a-Changelog (H2012 Phase F residual) (#49)
 GreekInSanskrit,42720a918ce1,2026-07-31T12:48:32Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .gitattributes (eol=lf line-ending policy) (#47)
 GreekInSanskrit,1d72e5e0f505,2026-07-31T12:32:02Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#48)
@@ -2006,6 +2054,7 @@ GreekInSanskrit,982b78a5418e,2026-05-15T13:57:11Z,gasyoun,Mārcis Gasūns,gasyou
 GreekInSanskrit,3ec1f87e992b,2026-05-15T07:38:47Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 GreekInSanskrit,05dfd404909d,2015-09-09T17:05:09Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,"Place of accents, word structure, word endings, praefixoid list"
 GreekInSanskrit,b1955c3ac34a,2015-04-15T01:46:39Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+INM,62aa72c60ffa,2026-09-05T06:50:21Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 30}) + relative-link upgrades (26)"
 INM,23a5a5fe80c9,2026-08-28T08:43:06Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: chore: normalize index.html line endings (CRLF to LF) + _Generated marker (#23)
 INM,619097502626,2026-07-31T12:47:06Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .gitattributes (eol=lf line-ending policy) (#21)
 INM,c1a10f637ea8,2026-07-31T12:31:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#22)
@@ -2047,6 +2096,7 @@ INM,1bcf101577ae,2021-12-15T02:49:36Z,funderburkjim,funderburkjim,funderburkjim@
 INM,783d282d803c,2021-12-11T03:13:49Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,greek folder contains details of insertion of Greek text into
 INM,187bd4c66e72,2021-12-04T03:20:40Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Add Andhrabharati's version of the concordance. #1
 INM,7ac4e606c9af,2021-12-03T23:44:57Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+KNA,81c4a86e93b7,2026-09-05T06:58:06Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 3}) + relative-link upgrades (0)"
 KNA,cc1ae485155f,2026-08-26T01:13:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"chore: rename changelog.md to CHANGELOG.md, update references (#12)"
 KNA,4df505292d7f,2026-08-03T05:18:00Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/checkout from 5 to 7 (#10)
 KNA,a2de324480d8,2026-08-03T05:15:24Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/setup-python from 6 to 7 (#11)
@@ -2065,6 +2115,7 @@ KNA,9c12fb46f4f7,2026-05-29T05:13:40Z,gasyoun,Mārcis Gasūns,gasyoun@users.nore
 KNA,3bf341fd06aa,2026-05-16T04:09:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1893, Friedrich Knauer)"
 KNA,765fd43d12c8,2026-05-15T07:20:05Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 KNA,dfb870ad0351,2026-02-21T14:10:52Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Initial commit
+KOW,a175fe3d3e6d,2026-09-05T06:57:39Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 4}) + relative-link upgrades (0)"
 KOW,78ff09d989d3,2026-08-27T01:11:48Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"chore: rename changelog.md to CHANGELOG.md, update references (#10)"
 KOW,47b9d1308067,2026-07-31T12:50:21Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .gitattributes (eol=lf line-ending policy) (#8)
 KOW,fa485e7b6603,2026-07-31T12:31:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#9)
@@ -2083,6 +2134,8 @@ KOW,4f1f06c6adf2,2026-05-29T05:13:23Z,gasyoun,Mārcis Gasūns,gasyoun@users.nore
 KOW,9ac6017ede40,2026-05-16T04:09:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(cff): enrich with publication-year + author from inventory (1854, Каэтан Коссович (1815-1883))"
 KOW,3f223a8d4fe1,2026-05-15T07:20:06Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 KOW,bf0d64a8e670,2026-02-21T14:29:22Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Initial commit
+KRM,a2b2d17ac1a5,2026-09-05T09:55:55Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions (7/7 vote approve) — rewrites/strips per approved families
+KRM,66f817c81322,2026-09-05T06:35:50Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave2): mechanical byline/header pass ({""add-both"": 60}) + relative-link upgrades (56)"
 KRM,5321e2ab857b,2026-08-28T08:43:09Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: chore: normalize index.html line endings (CRLF to LF) + _Generated marker (#16)
 KRM,6f90ef701954,2026-07-31T12:46:21Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .gitattributes (eol=lf line-ending policy) (#14)
 KRM,a1e6d9f4ce26,2026-07-31T12:31:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#15)
@@ -2124,6 +2177,9 @@ KRM,0d47b59df01d,2020-04-18T00:53:53Z,funderburkjim,funderburkjim,funderburkjim@
 KRM,d6b8f367bc1c,2020-03-31T19:01:41Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,note on unfinished work re Westergaard Dhatupatha
 KRM,c9d844038768,2020-03-31T18:55:19Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initial commit
 KRM,24ca2b5cf65c,2020-03-31T18:37:43Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+LRV,a5b82a7c93a3,2026-09-06T15:41:37Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions (7/7 vote approve)
+LRV,2dc6fb304e85,2026-09-05T11:31:33Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions (7/7 vote approve)
+LRV,1c4b097e7704,2026-09-05T06:56:10Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 9}) + relative-link upgrades (0)"
 LRV,370d6c139499,2026-08-26T01:14:22Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"chore: rename changelog.md to CHANGELOG.md, update references (#45)"
 LRV,3a8345435078,2026-07-31T12:46:07Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .gitattributes (eol=lf line-ending policy) (#42)
 LRV,2482857218fa,2026-07-31T12:31:24Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#43)
@@ -2282,6 +2338,8 @@ LRV,1d284e8b032c,2022-09-20T12:04:33Z,drdhaval2785,drdhaval2785,drdhaval2785@gma
 LRV,f54fa998c691,2022-09-20T11:24:04Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,copied to lrv_0.txt for further processing
 LRV,6f4be44ef21a,2022-09-20T11:04:05Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,Added files received from @Andhrabharati
 LRV,7ae43a71821f,2022-09-20T10:53:08Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+MCI,589f7433847a,2026-09-05T09:55:44Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions (7/7 vote approve) — rewrites/strips per approved families
+MCI,49a3179053b7,2026-09-05T06:35:08Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave2): mechanical byline/header pass ({""add-both"": 66}) + relative-link upgrades (63)"
 MCI,c0ebb63435f1,2026-08-28T08:43:12Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: chore: normalize index.html line endings (CRLF to LF) + _Generated marker (#11)
 MCI,8c84f3d0142c,2026-07-31T12:46:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .gitattributes (eol=lf line-ending policy) (#8)
 MCI,e871d4cf1f4d,2026-07-31T12:31:17Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#9)
@@ -2315,6 +2373,7 @@ MCI,ef25cdab4d2c,2026-05-15T09:31:18Z,gasyoun,Mārcis Gasūns,gasyoun@users.nore
 MCI,3dbe54909e85,2026-05-15T09:24:27Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: update CLAUDE.md
 MCI,c761419ac636,2026-05-15T09:24:24Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: update README.md with issue taxonomy
 MCI,1ae1f310e349,2026-05-15T07:38:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
+MD,dcae0560c200,2026-09-05T06:49:29Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 34}) + relative-link upgrades (25)"
 MD,cf1c5a513f80,2026-08-26T01:13:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"chore: rename changelog.md to CHANGELOG.md, update references (#30)"
 MD,03dfa91c24c1,2026-07-31T12:45:58Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .gitattributes (eol=lf line-ending policy) (#27)
 MD,e6d3a582cec3,2026-07-31T12:31:09Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#28)
@@ -2426,6 +2485,7 @@ MD,ce260770698f,2022-01-03T03:20:09Z,funderburkjim,funderburkjim,funderburkjim@g
 MD,4b49b176d26b,2020-04-18T00:35:20Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Update README.md
 MD,f0a25fe30f73,2020-04-17T21:42:10Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,verbs01 initial commit
 MD,48ad31cc87f3,2020-04-17T21:09:32Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+MW72,2ecd60ceff3e,2026-09-05T06:35:38Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave2): mechanical byline/header pass ({""add-both"": 61}) + relative-link upgrades (58)"
 MW72,861717d707c5,2026-07-31T12:45:53Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .gitattributes (eol=lf line-ending policy) (#14)
 MW72,c0f9ff368c7f,2026-07-31T12:31:03Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#15)
 MW72,ad9815bbebb5,2026-07-11T11:04:52Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): refresh status claims + fix branch/HTML defects (H548) (#12)
@@ -2457,6 +2517,23 @@ MW72,5cf4de93d91c,2016-11-19T03:15:45Z,funderburkjim,funderburkjim,funderburkjim
 MW72,6152839e897d,2016-11-18T20:02:16Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,revise for corrections to mw72
 MW72,407551355822,2016-11-16T00:18:12Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,20161107 initial commit
 MW72,1f9d6101296f,2014-08-24T21:07:18Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+MWS,c66e0bf934c6,2026-09-24T02:40:33Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,A18: five period/comma-inside-quote fixes (H5326 verifier round 2) (#307)
+MWS,c5c76dc26695,2026-09-24T02:35:56Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"A18: verifier round-1 fixes (H5326) — neighbor/traveled/New ed., period inside quote, siglum-pass qualifier, narrowed byte-identity claim (#306)"
+MWS,14a5242f508b,2026-09-24T02:30:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore(release): cut v1.0.10 (#305)
+MWS,407d8641a3af,2026-09-24T02:29:30Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"changelog: A18 re-sync + Dictionaries venue fit (H5326, PR #303) (#304)"
+MWS,94cf44ce6ba3,2026-09-24T02:26:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,A18: re-sync atlas figures to csl-atlas #266 + Dictionaries venue fit (H5326) (#303)
+MWS,2b6298ef3719,2026-09-20T09:00:19Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(claude): H5176 agent-docs SLA refresh — transcode + issue-dir workflow paths re-verified current, header bumped 20-09-2026"
+MWS,f934d57e8fa3,2026-09-18T14:00:25Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add root AGENTS.md agent-entrypoint stub (H4634) (#302)
+MWS,0d400d9f788a,2026-09-07T05:04:43Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions (7/7 vote approve)
+MWS,9f19561c2cbe,2026-09-06T17:20:43Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"A16: author-voice pass (H3857, Fable 5.1 claude-fable-5-1) (#300)"
+MWS,9048d8ee021d,2026-09-06T17:00:41Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"A39: author-voice pass (H3857, Fable 5.1 claude-fable-5-1) (#299)"
+MWS,5d225b51a423,2026-09-06T12:33:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"A45: author-voice pass (H3857, Fable 5.1 claude-fable-5-1) (#298)"
+MWS,8e1bab422f00,2026-09-06T12:16:57Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"A18: author-voice pass (H3857, Fable 5.1 claude-fable-5-1) (#297)"
+MWS,b36a659d6c9d,2026-09-06T12:16:14Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"A17: author-voice pass (H3857, Fable 5.1 claude-fable-5-1) (#296)"
+MWS,c582e9de3677,2026-09-05T13:26:15Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(claude): H4147 agent-docs SLA refresh — dated header bump, content verified accurate"
+MWS,bb80e559ab8a,2026-09-05T09:53:18Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions (7/7 vote approve) — rewrites/strips per approved families
+MWS,f28b1b9b4513,2026-09-05T06:33:29Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave2): mechanical byline/header pass ({""add-both"": 162, ""add-byline"": 2, ""add-header"": 3}) + relative-link upgrades (657)"
+MWS,a2886382f480,2026-09-02T09:51:36Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(roadmap): dated truth-pass banner, drained but still living (H3775) (#295)"
 MWS,bdbf8870519f,2026-08-27T19:30:10Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(roadmap): regularise the date line into the house header form (H3002 slice 4) (#294)
 MWS,c92a92f98f2c,2026-08-26T01:13:29Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"chore: rename changelog.md to CHANGELOG.md, update references (#293)"
 MWS,0018775ea8fc,2026-08-20T20:46:37Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(claude): drop false mwsxml path; date header (H3048) (#292)
@@ -3021,6 +3098,7 @@ MWS,5192ab9002b9,2014-10-04T21:45:21Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Unique
 MWS,3ae269a730d5,2014-09-23T01:37:51Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,"Transcoder example, re issue #5"
 MWS,fcb6185f7723,2014-01-22T21:41:25Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,missing1.html
 MWS,8798269ddbf9,2014-01-16T19:34:16Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Initial commit
+MWinflect,0afa39841c78,2026-09-05T06:53:02Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 14, ""add-byline"": 1}) + relative-link upgrades (0)"
 MWinflect,8ef6fc6f269c,2026-07-31T12:30:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#59)
 MWinflect,c47b15a0376f,2026-07-27T17:55:51Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#57)
 MWinflect,bacd4df61dc5,2026-07-12T03:33:23Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: metadoc template v2 backfill (H663) (#55)
@@ -3138,6 +3216,7 @@ MWinflect,b598f126ec37,2018-10-16T21:37:32Z,funderburkjim,funderburkjim,funderbu
 MWinflect,035bd6fa64f5,2018-10-16T21:34:35Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,initial lexnorm-all2.txt
 MWinflect,8c5f17cf6e1f,2018-10-16T20:29:54Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,initial repository description
 MWinflect,62cec0aa6bb1,2018-10-16T20:28:08Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+PUI,b5fa8ade8e80,2026-09-05T06:57:43Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 4}) + relative-link upgrades (0)"
 PUI,9445b656de41,2026-08-30T07:19:53Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,chore(release): cut v1.0.1 (backfill [Unreleased])
 PUI,0785ce6439b0,2026-08-26T01:13:24Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"chore: rename changelog.md to CHANGELOG.md, update references (#11)"
 PUI,46dc6e86de61,2026-07-31T12:45:48Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .gitattributes (eol=lf line-ending policy) (#10)
@@ -3231,6 +3310,14 @@ PUI,3899675e4762,2026-04-05T04:28:18Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785
 PUI,28ae8d0bc1a9,2026-04-05T03:54:10Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,started issue #1
 PUI,b6bcff376a5d,2026-04-05T03:29:33Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,init
 PUI,18f13c5a4a72,2026-04-05T03:28:50Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,first commit
+PWG,05a023a18459,2026-09-20T08:59:43Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(claude): H5176 agent-docs SLA refresh — abbrvwork pipeline + converter paths re-verified current, header bumped 20-09-2026"
+PWG,e4ec7f576569,2026-09-18T14:00:29Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add root AGENTS.md agent-entrypoint stub (H4634) (#237)
+PWG,6c8661a2a1b0,2026-09-15T06:18:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,makeabbrv.sh: plain test syntax and quoting (#238)
+PWG,a35f3c056625,2026-09-06T15:47:25Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions (7/7 vote approve)
+PWG,755e68888a47,2026-09-06T00:01:40Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,pwg_ru_coverage: scheduled refresh 2026-09-06 (#235)
+PWG,0dfdabd7a823,2026-09-05T13:26:15Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(claude): H4147 agent-docs SLA refresh — dated header bump, content verified accurate"
+PWG,4e004ed9cd99,2026-09-05T09:55:14Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions (7/7 vote approve) — rewrites/strips per approved families
+PWG,a6b4b52bbd58,2026-09-05T06:34:24Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave2): mechanical byline/header pass ({""add-both"": 101, ""add-header"": 3}) + relative-link upgrades (118)"
 PWG,71ea4fe25e3a,2026-08-30T07:18:47Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,chore(release): cut v1.0.1 (backfill [Unreleased])
 PWG,6e50ecf432f3,2026-08-26T01:13:19Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"chore: rename changelog.md to CHANGELOG.md, update references (#234)"
 PWG,038bae50929e,2026-08-23T00:00:56Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,pwg_ru_coverage: scheduled refresh 2026-08-23 (#233)
@@ -3707,6 +3794,9 @@ PWG,087a677e9362,2014-11-06T21:09:00Z,funderburkjim,funderburkjim,funderburkjim@
 PWG,5221d87ec45e,2014-10-05T10:49:24Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Stat added
 PWG,200cd2073f4f,2014-10-04T21:29:49Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Update to Jim's PWG Accents
 PWG,a6b29a2159b7,2014-09-25T09:57:25Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,3/52 Russian etymologies fixed
+PWK,dd10025cdc2f,2026-09-15T06:18:06Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,makeabbrv.sh: plain test syntax and quoting (#147)
+PWK,f7844af12016,2026-09-06T15:54:02Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions (7/7 vote approve)
+PWK,bc143652b460,2026-09-05T06:49:24Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 37}) + relative-link upgrades (38)"
 PWK,4eb4b3848355,2026-08-30T07:19:27Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,chore(release): cut v1.0.1 (backfill [Unreleased])
 PWK,602dd27d4293,2026-08-26T01:13:15Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"chore: rename changelog.md to CHANGELOG.md, update references (#146)"
 PWK,f92d49f9de11,2026-07-31T12:45:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .gitattributes (eol=lf line-ending policy) (#142)
@@ -4022,6 +4112,8 @@ PWK,c945e3fa4bd1,2015-11-16T21:33:36Z,funderburkjim,funderburkjim,funderburkjim@
 PWK,f220be5dc89f,2015-11-16T21:22:10Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Moved from https://github.com/sanskrit-lexicon/CORRECTIONS/
 PWK,aa8c1730fe61,2015-11-16T21:16:37Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Moved to https://github.com/sanskrit-lexicon/CORRECTIONS/
 PWK,573cc6ee6787,2014-11-08T02:51:31Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,construction of pw_orig_utf8_slp1.txt
+SCH,67a3efd98212,2026-09-05T11:34:20Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions (7/7 vote approve)
+SCH,af4900c585bf,2026-09-05T06:51:30Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 26}) + relative-link upgrades (24)"
 SCH,144e75ae095d,2026-07-31T20:26:30Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(changelog): add minimal Keep-a-Changelog (H2012 Phase F residual) (#25)
 SCH,bc661c2d12de,2026-07-31T12:40:05Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#23)
 SCH,491c2850952e,2026-07-31T12:29:06Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .gitattributes (eol=lf line-ending policy) (#24)
@@ -4082,6 +4174,9 @@ SCH,e9aee0778daa,2014-01-22T00:47:37Z,funderburkjim,funderburkjim,funderburkjim@
 SCH,82d48efdf10a,2014-01-16T02:45:49Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,first schmidt change file
 SCH,d27e0ea65d14,2014-01-16T00:04:41Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,"original schmidt, and initial changes"
 SCH,f78bc1015d35,2014-01-15T18:51:50Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initial commit
+SHS,da7b320a06bf,2026-09-07T05:36:04Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions pass-2 (relative-target class now handled)
+SHS,ee14995ff0e7,2026-09-06T15:58:14Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions (7/7 vote approve)
+SHS,f69ff4ec5680,2026-09-05T06:53:12Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 12}) + relative-link upgrades (8)"
 SHS,340c42165b84,2026-07-31T20:26:19Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(changelog): add minimal Keep-a-Changelog (H2012 Phase F residual) (#12)
 SHS,16ba1d5835d7,2026-07-31T12:40:00Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#10)
 SHS,8d4a36cf1e83,2026-07-31T12:29:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .gitattributes (eol=lf line-ending policy) (#11)
@@ -4128,6 +4223,8 @@ SHS,db5eaca3dc75,2026-05-16T04:09:36Z,gasyoun,Mārcis Gasūns,gasyoun@users.nore
 SHS,197503cc1479,2026-05-15T07:20:17Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 SHS,accd301e25b0,2025-12-22T02:01:13Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,"init .gitignore, README.md"
 SHS,ade8c77eabcb,2025-12-22T01:57:08Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+SKD,b6bc8c3987ac,2026-09-06T15:57:40Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions (7/7 vote approve)
+SKD,b93f37ba6514,2026-09-05T06:57:00Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 5}) + relative-link upgrades (1)"
 SKD,6379ca3d5cc7,2026-07-31T20:26:07Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(changelog): add minimal Keep-a-Changelog (H2012 Phase F residual) (#27)
 SKD,03cd47fc4071,2026-07-31T12:28:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .gitattributes (eol=lf line-ending policy) (#26)
 SKD,a333bb95c27a,2026-07-24T02:11:07Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #25 from sanskrit-lexicon/h1523-jquery-skd-23904
@@ -4208,6 +4305,8 @@ SKD,988f09de31ea,2014-07-19T20:19:45Z,funderburkjim,funderburkjim,funderburkjim@
 SKD,0778863106e8,2014-07-19T19:46:06Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Sort errors in SKD headwords
 SKD,e6a0cb0c60db,2014-07-19T19:02:02Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Update README.md
 SKD,94844f2ce6d9,2014-07-19T18:58:18Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+STC,3f3055544b42,2026-09-06T15:57:05Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions (7/7 vote approve)
+STC,eb67cfa4ad8f,2026-09-05T06:51:44Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 24}) + relative-link upgrades (28)"
 STC,0461f682308d,2026-08-26T01:13:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"chore: rename changelog.md to CHANGELOG.md, update references (#11)"
 STC,86ad4a0600b8,2026-07-31T12:30:02Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#9)
 STC,62d685c89d34,2026-07-31T12:28:51Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .gitattributes (eol=lf line-ending policy) (#10)
@@ -4243,6 +4342,7 @@ STC,06751fc084cd,2026-05-15T09:25:16Z,gasyoun,Mārcis Gasūns,gasyoun@users.nore
 STC,b53b989d51e3,2026-05-15T07:38:51Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 STC,f5cfee0f359d,2020-04-19T20:59:15Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,verbs01 initial commit
 STC,ad8172120944,2020-04-19T20:55:40Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+VCP,b8b5f387f794,2026-09-05T06:49:13Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 40}) + relative-link upgrades (30)"
 VCP,9a240e2093be,2026-07-31T20:25:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(changelog): add minimal Keep-a-Changelog (H2012 Phase F residual) (#47)
 VCP,f3beb9dd116f,2026-07-31T12:45:35Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .gitattributes (eol=lf line-ending policy) (#45)
 VCP,96150a31691f,2026-07-31T12:29:27Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#46)
@@ -4399,6 +4499,8 @@ VCP,45136a2f84fc,2014-01-22T04:27:49Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,"Tirup
 VCP,b6afa94a2682,2014-01-22T04:24:59Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,List of 46938 words in WX encoding
 VCP,93ee78cbfff4,2014-01-22T04:20:49Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Tirupati edition in WX encoding
 VCP,7370a541c676,2014-01-22T04:12:21Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Initial commit
+VEI,ece1c329c8a0,2026-09-06T15:52:59Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions (7/7 vote approve)
+VEI,6cee8877799d,2026-09-05T06:48:58Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 42}) + relative-link upgrades (42)"
 VEI,594c65b28695,2026-08-28T08:43:15Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: chore: normalize index.html line endings (CRLF to LF) + _Generated marker (#12)
 VEI,9aaa88f650b2,2026-07-31T12:45:31Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .gitattributes (eol=lf line-ending policy) (#9)
 VEI,021afc9eabda,2026-07-31T12:29:18Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#10)
@@ -4439,6 +4541,7 @@ VEI,ad6ecb776bb7,2016-01-02T10:33:26Z,drdhaval2785,drdhaval2785,drdhaval2785@gma
 VEI,1bdf92e1bf80,2016-01-02T10:29:29Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,vei.xml without alterations
 VEI,4fc8228932e0,2016-01-02T10:26:11Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,initial commit
 VEI,f354d4e0cb58,2016-01-02T10:19:41Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+WIL,f58ee5e04bc1,2026-09-05T06:35:44Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave2): mechanical byline/header pass ({""add-both"": 60, ""add-header"": 1}) + relative-link upgrades (3)"
 WIL,aa14f920e273,2026-08-30T07:20:07Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,chore(release): cut v0.1.1 (backfill [Unreleased])
 WIL,f1547e479e81,2026-08-06T05:00:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,prefaces: second-copy collation of 1819 Devanagari flags; preface ends unsigned (H2213 follow-up) (#26)
 WIL,ed53f586e84b,2026-08-05T21:29:47Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,prefaces: WIL 1819 first-edition front-matter OCR — 53 pages + consolidated EN edition (H2213) (#25)
@@ -4540,6 +4643,8 @@ WIL,8b7d60986956,2014-12-29T20:19:27Z,funderburkjim,funderburkjim,funderburkjim@
 WIL,48d39d36108b,2014-12-28T22:19:52Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Update README.md
 WIL,41f0fee0aafa,2014-12-28T22:12:52Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,working documents uploaded
 WIL,508662243c7a,2014-12-28T21:05:00Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+Wil-YAT,104c4c74d9d5,2026-09-06T16:07:57Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions (7/7 vote approve)
+Wil-YAT,5d34e57a0a87,2026-09-05T06:51:25Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 27}) + relative-link upgrades (27)"
 Wil-YAT,c1cba38b0cd4,2026-08-26T01:13:03Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"chore: rename changelog.md to CHANGELOG.md, update references (#12)"
 Wil-YAT,b445233c1cb9,2026-07-31T12:45:23Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .gitattributes (eol=lf line-ending policy) (#11)
 Wil-YAT,4777cd3a9361,2026-07-11T10:17:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,README refresh + main/master reconciliation (H548) (#9)
@@ -4558,6 +4663,7 @@ Wil-YAT,8a821a454d24,2015-03-13T18:28:53Z,funderburkjim,funderburkjim,funderburk
 Wil-YAT,fe66e9b76e57,2015-03-10T20:00:44Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Create LICENSE.md
 Wil-YAT,c63a5c154fc4,2015-03-10T19:21:22Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Create README.md
 Wil-YAT,d4495c4d93ac,2015-03-10T19:18:05Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initial commit
+alternateheadwords,aef239bae311,2026-09-05T06:57:05Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 5}) + relative-link upgrades (0)"
 alternateheadwords,f02a82445a34,2026-07-31T12:37:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#32)
 alternateheadwords,72898643dae6,2026-07-27T17:56:48Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#31)
 alternateheadwords,c4710d3e8b6d,2026-07-15T00:08:12Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"fix: repair 2 broken link(s) (org-wide link audit, auto-fix pass) (#30)"
@@ -4686,6 +4792,7 @@ alternateheadwords,27de5532a2a9,2016-10-01T08:54:37Z,drdhaval2785,drdhaval2785,d
 alternateheadwords,7d37062c78f0,2016-10-01T08:49:42Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,vcpahw1.txt added
 alternateheadwords,78a712e38bbc,2016-10-01T08:48:58Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,edit-distance method added
 alternateheadwords,3ab62a8f4ca0,2016-10-01T08:25:27Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,initial commit
+avlinks,ddff1fd326e2,2026-09-05T06:59:06Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 2}) + relative-link upgrades (0)"
 avlinks,8940179eeff7,2026-07-31T12:37:03Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#7)
 avlinks,75ac9cbacd00,2026-07-27T18:00:51Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#6)
 avlinks,8fff7ba2a0e1,2026-07-13T17:42:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): rewrite to describe the AV linking pipeline accurately (H548) (#5)
@@ -4709,6 +4816,7 @@ avlinks,915e66495009,2021-04-09T01:28:23Z,funderburkjim,funderburkjim,funderburk
 avlinks,a3f97d5397ef,2021-04-08T20:24:32Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Change tab character to space
 avlinks,35a653d0e33b,2021-04-08T20:08:42Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,newline at end.  unix line endings
 avlinks,743350606e39,2021-04-08T19:46:14Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initial commit -- Atharva veda html file
+cologne-hugo,207afdacf91d,2026-09-05T07:08:45Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 1}) + relative-link upgrades (0)"
 cologne-hugo,74de0d5f1a0c,2026-07-31T12:35:56Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#6)
 cologne-hugo,c024b3a680f0,2026-07-27T18:01:25Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#5)
 cologne-hugo,dadf3610bdb8,2026-07-13T17:43:19Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): refresh to currently-true build-meta scaffold state (H549) (#4)
@@ -4720,6 +4828,9 @@ cologne-hugo,bc9c9f8041ce,2026-06-14T04:48:44Z,gasyoun,Mārcis Gasūns,gasyoun@u
 cologne-hugo,33e04b625b7e,2026-05-29T05:11:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): refresh tooling-repo README with live counts (2026-05-29)
 cologne-hugo,27567866a9e7,2026-05-15T07:39:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 cologne-hugo,17af959d4467,2021-01-20T04:59:40Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+cologne-stardict,daf919ce7718,2026-09-15T06:38:48Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: note redo.sh needs bash and stops on failure (#53)
+cologne-stardict,01973c1815ca,2026-09-15T06:17:25Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"redo.sh: pull main (master branch is gone), guard cd (#52)"
+cologne-stardict,8eacb8689453,2026-09-05T06:59:16Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 2}) + relative-link upgrades (0)"
 cologne-stardict,0590b83d6d3f,2026-08-04T13:30:17Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit b7297b97cf9f7112277ea98f7969291eb1d5f495
 cologne-stardict,83a7cd78daaf,2026-08-04T13:24:36Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit a0a2dd49c81ff4f4178970e1a336a77f78127ed9
 cologne-stardict,2bd7df811de8,2026-08-04T13:12:27Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 921c1c7868a1ad9a69bc57b8b8f117401c66b814
@@ -5589,6 +5700,17 @@ cologne-stardict,5d3eac3f589c,2017-04-04T16:05:41Z,drdhaval2785,drdhaval2785,drd
 cologne-stardict,82cf5cf8ca13,2017-04-04T15:39:46Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,GST added
 cologne-stardict,d7f4222e9a19,2017-04-04T10:51:20Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,CCS GRA added
 cologne-stardict,9e7133046729,2017-04-04T06:45:28Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,added CAE
+csl-apidev,7d56d467a637,2026-09-18T14:00:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add root AGENTS.md agent-entrypoint stub (H4634) (#170)
+csl-apidev,d7880082a2fe,2026-09-07T05:07:18Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions (7/7 vote approve)
+csl-apidev,90d3739efda9,2026-09-06T13:11:59Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(H4212): journal the jsonp-consolidation + P1/P2 hardening close-out (#166)
+csl-apidev,11de781a382b,2026-09-06T13:02:50Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(H4212): consolidate 17 JSONP guards; servepdf 400 contract; per-record batch degradation; fork-sync drift tool (#165)
+csl-apidev,4f80b071abb3,2026-09-05T20:29:54Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(listhier): revive dead prefix fallback in list1b - #153 root cause ($more typo)
+csl-apidev,89a15e263e2c,2026-09-05T11:30:08Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions (7/7 vote approve)
+csl-apidev,7b553e7f196c,2026-09-05T06:51:14Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 28}) + relative-link upgrades (97)"
+csl-apidev,ac601077a039,2026-09-04T09:35:44Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore: re-vendor sanskrit-util v0.11.0 (H3488 follow-up) (#164)
+csl-apidev,7bfb74707666,2026-09-04T09:11:52Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore: re-vendor sanskrit-util v0.10.0 (H3488) (#163)
+csl-apidev,58b54a07d79a,2026-09-01T19:59:39Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,release: 0.4.2 - listhier empty-key dead-link fix (H3853)
+csl-apidev,7c3c3e8a25f6,2026-09-01T19:48:43Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix(listhier): fail loud on empty/unmatchable keys - no more empty-key onclick dead links (H3853, #153)"
 csl-apidev,7196abfb0730,2026-08-30T07:18:16Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,chore(release): cut v0.4.1 (backfill [Unreleased])
 csl-apidev,4547c3020fd8,2026-08-29T10:41:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"fix(display): render skd <mark> H/P markers; version=1 fallback for dicts with no older scan (H3637, audit G7/A11+A20) (#162)"
 csl-apidev,e5ed207b6d21,2026-08-28T18:49:10Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(http): api0/getsuggest serves 404 on zero matches (H3636 live-validation followup) (#161)
@@ -6314,6 +6436,7 @@ csl-apidev,05921188eede,2018-07-15T21:33:50Z,funderburkjim,funderburkjim,funderb
 csl-apidev,e301d0de32f0,2018-04-18T22:38:55Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,xampp version of simple-search - only html file changed
 csl-apidev,65dd76fc5c62,2018-04-18T21:41:03Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,sample/basic-0.2 and list-0.2 for XAMPP. Uses local resources
 csl-apidev,c686084d3b31,2018-04-17T21:16:26Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initial commit. No changes from Cologne
+csl-app,f87ba978731a,2026-09-05T06:56:38Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 8}) + relative-link upgrades (0)"
 csl-app,a83014453345,2026-08-03T05:17:01Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,Bump actions/checkout from 5 to 7 (#60)
 csl-app,36c0119ec287,2026-08-03T05:14:10Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,Bump actions/setup-python from 6 to 7 (#59)
 csl-app,5cb03147225a,2026-07-31T12:43:46Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#58)
@@ -6527,6 +6650,35 @@ csl-app,3f5f02ce0114,2026-03-18T19:13:28Z,drdhaval2785,Dr. Dhaval Patel,drdhaval
 csl-app,41a87dfe9b1a,2026-03-18T17:59:44Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,v0.1.0
 csl-app,601df1e6d0c8,2026-03-18T17:25:31Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,app working
 csl-app,3827040885b1,2026-03-18T16:14:06Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,initial commit
+csl-corrections,4950dabe5e0b,2026-09-23T02:40:42Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-09-22
+csl-corrections,3cb692daf1a3,2026-09-22T02:40:06Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-09-21
+csl-corrections,7168d866e163,2026-09-21T02:38:21Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-09-20
+csl-corrections,f18dbc2662a2,2026-09-20T08:54:30Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(claude): H5176 agent-docs SLA refresh — updateByLine.py path corrected to per-batch vendored copy (batch_20250114), header bumped 20-09-2026"
+csl-corrections,b102896d6c2c,2026-09-20T06:43:50Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore: add .github/CODEOWNERS (default @gasyoun) (#406)
+csl-corrections,da77767d252f,2026-09-20T02:41:16Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-09-19
+csl-corrections,d6b523d4abc3,2026-09-19T02:30:01Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-09-18
+csl-corrections,786d833f3d9f,2026-09-18T02:30:52Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-09-17
+csl-corrections,f5c3eb09242a,2026-09-15T02:44:52Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-09-14
+csl-corrections,99825e5cbda1,2026-09-14T17:29:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,issue119: trial — pwk7 Nachträge headwords absent from MW (#400)
+csl-corrections,c7f12c6b91b8,2026-09-14T02:42:00Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-09-13
+csl-corrections,fb8ff210ac5b,2026-09-13T02:24:53Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-09-12
+csl-corrections,a3869b945158,2026-09-12T02:26:22Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-09-11
+csl-corrections,346d83039392,2026-09-11T02:19:14Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-09-10
+csl-corrections,7b2c54a66fa3,2026-09-10T02:24:04Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-09-09
+csl-corrections,70a167c10219,2026-09-08T05:40:05Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,add the pre-push silent-revert guard + CRLF-in-blob gate (H2280/H2289/H2301) (#393)
+csl-corrections,2e165f4f2cdf,2026-09-08T05:07:32Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add the pre-push silent-revert guard + CRLF-in-blob gate (H2280/H2289/H2301) (#392)
+csl-corrections,34dcfa73dfb6,2026-09-08T04:50:20Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,add the pre-push silent-revert guard + CRLF-in-blob gate (H2280/H2289/H2301) (#391)
+csl-corrections,55b2619ceb08,2026-09-06T02:12:32Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-09-05
+csl-corrections,91af648b2a35,2026-09-05T11:27:13Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions (7/7 vote approve)
+csl-corrections,d6bb89ebc3b9,2026-09-05T06:56:19Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 7, ""add-byline"": 1, ""add-header"": 1}) + relative-link upgrades (4)"
+csl-corrections,370fe74b8ef9,2026-09-05T02:16:46Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-09-04
+csl-corrections,947b332e8ed1,2026-09-04T20:43:15Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,agentsctx: regen AGENTS.md generated block from Uprava context_facts.yaml (weekly twin loop)
+csl-corrections,3250cb72afb0,2026-09-04T18:48:35Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"corrections: record H3486 AllvsPWG-pool pass ledger — 99 verdicts, 0 survivors queued"
+csl-corrections,2477c0b24cc2,2026-09-04T17:41:43Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #385 from sanskrit-lexicon/h4073-queue-rows34
+csl-corrections,992acd558343,2026-09-04T17:41:04Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,queue csl-orig rows R3-R4 (h3537-delta-redteam vote): etymology_stats patch — set-equality column + strict redefined to drop both inferred tiers
+csl-corrections,9f748ff06987,2026-09-04T17:07:43Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"queue csl-pyutil: decided_at field in decisions.json download payload (fatigue remedy 3, adopted 04-09-2026) — base 1e5e0b3, additive one-liner"
+csl-corrections,71c7de8aab8e,2026-09-04T02:16:01Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-09-03
+csl-corrections,c2b72a023818,2026-09-03T02:21:10Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-09-02
 csl-corrections,e36343945e10,2026-08-31T03:44:29Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,agentsctx: regen AGENTS.md generated block from Uprava context_facts.yaml (weekly twin loop)
 csl-corrections,9487f2616445,2026-08-31T02:41:24Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-08-30
 csl-corrections,4f5ef5b88bf9,2026-08-30T07:19:40Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,chore(release): cut v1.0.1 (backfill [Unreleased])
@@ -7613,6 +7765,15 @@ csl-corrections,03c38c194339,2019-12-16T23:50:54Z,,James Funderburk,jfunderb@dia
 csl-corrections,e23efa275d19,2019-12-16T22:28:35Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,initialization from Cologne /php
 csl-corrections,6fa5aa987701,2019-12-16T21:49:45Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initialize material from sanskrit-lexicon/CORRECTIONS repository
 csl-corrections,e854ffd2f3cc,2019-12-16T20:34:56Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+csl-devanagari,4a1816d86047,2026-09-20T06:54:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore: add .github/CODEOWNERS (default @gasyoun) (#68)
+csl-devanagari,54e9662062af,2026-09-15T06:38:53Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: note redo_all.sh stops if the csl-orig pull fails (#67)
+csl-devanagari,b50f049938a1,2026-09-15T06:17:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"scripts/redo_all.sh: pull main (master branch is gone), guard cd (#66)"
+csl-devanagari,1f057535b710,2026-09-08T05:40:08Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,add the pre-push silent-revert guard + CRLF-in-blob gate (H2280/H2289/H2301) (#64)
+csl-devanagari,1857cfe8de5e,2026-09-08T05:07:36Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add the pre-push silent-revert guard + CRLF-in-blob gate (H2280/H2289/H2301) (#63)
+csl-devanagari,553871df197f,2026-09-08T04:59:09Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,add the pre-push silent-revert guard + CRLF-in-blob gate (H2280/H2289/H2301) (#62)
+csl-devanagari,407ef915bfe5,2026-09-05T13:38:48Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(claude): H4147 agent-docs SLA refresh — dated header bump, content verified accurate"
+csl-devanagari,7ea749c6ef9f,2026-09-05T06:58:17Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 3}) + relative-link upgrades (1)"
+csl-devanagari,a7fbfe468b68,2026-09-04T20:43:28Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,agentsctx: regen AGENTS.md generated block from Uprava context_facts.yaml (weekly twin loop)
 csl-devanagari,cfd7e3b05074,2026-08-31T03:44:57Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,agentsctx: regen AGENTS.md generated block from Uprava context_facts.yaml (weekly twin loop)
 csl-devanagari,31e28869c517,2026-08-30T07:18:31Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,chore(release): cut v0.1.2 (backfill [Unreleased])
 csl-devanagari,0afaccb28331,2026-08-25T14:29:23Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"agentsctx: regen AGENTS.md generated block (opencode.db fact, tightened org_wide briefs, edge sync)"
@@ -7771,6 +7932,7 @@ csl-devanagari,2f1bb70e7788,2021-09-02T17:59:29Z,drdhaval2785,drdhaval2785,drdha
 csl-devanagari,d668287f4920,2021-09-02T17:55:59Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,VCP first commit
 csl-devanagari,fc84eb497570,2021-09-02T17:55:46Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,to_devanagari first commit
 csl-devanagari,2bfdf12026e3,2021-09-02T17:37:27Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,ignore slp1 folder
+csl-doc,129add61eebe,2026-09-05T06:57:53Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 4}) + relative-link upgrades (0)"
 csl-doc,36ecd8bdb4a1,2026-08-03T05:17:52Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,Bump actions/checkout from 5 to 7 (#19)
 csl-doc,e2cc9443cb60,2026-08-03T05:15:04Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,Bump actions/setup-python from 6 to 7 (#18)
 csl-doc,19c6d02ffe02,2026-07-31T12:34:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#17)
@@ -7828,6 +7990,7 @@ csl-doc,8ff154efb810,2018-10-24T21:17:56Z,funderburkjim,funderburkjim,funderburk
 csl-doc,bd14b74b4772,2018-10-24T20:14:08Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,build with just bhs
 csl-doc,765253c73da1,2018-10-24T20:08:17Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,bhs dictionary front matter
 csl-doc,ddedf4c08457,2018-10-23T02:06:19Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initial commit
+csl-homepage,a6581f97e1c5,2026-09-05T06:59:20Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 2}) + relative-link upgrades (0)"
 csl-homepage,416557465c51,2026-07-31T12:34:29Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#27)
 csl-homepage,c7ba8925a2f1,2026-07-27T18:03:19Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#26)
 csl-homepage,70974807c145,2026-07-23T17:41:22Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #25 from sanskrit-lexicon/h1523-wil-depremove-25596
@@ -7925,6 +8088,7 @@ csl-homepage,39824ee261fc,2019-01-17T21:00:54Z,,James Funderburk,jfunderb@dialog
 csl-homepage,1e2e3cdfff5e,2018-08-30T22:22:34Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,Changes. See https://github.com/sanskrit-lexicon/Cologne/issues/232
 csl-homepage,58b48fdb7833,2018-08-08T20:13:43Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Create readme.md
 csl-homepage,4fe451a1680a,2018-08-08T20:06:14Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,initial commit from Cologne /scans/awork/homepage
+csl-inflect,e9c11f563be6,2026-09-15T06:17:06Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Fix huetdata/redo_one.sh: ben/prf tenses never matched (#32)
 csl-inflect,14cd8021e6f0,2026-07-27T18:00:12Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#28)
 csl-inflect,20a77aff710d,2026-07-15T05:18:44Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,chore(release): 0.1.0
 csl-inflect,82d9f6c8c581,2026-07-14T09:22:05Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,Merge remote-tracking branch 'origin/main'
@@ -8012,6 +8176,9 @@ csl-inflect,874fa8b88f06,2019-11-27T19:15:06Z,,James Funderburk,jfunderb@dialog6
 csl-inflect,1a46abf2c5e2,2019-11-27T02:28:35Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,remove python transcode directory. It is not used.
 csl-inflect,3945e534a655,2019-11-27T02:23:40Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Create LICENSE
 csl-inflect,d49fe31a06bb,2019-11-27T02:19:14Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,"Initial commit, based upon zipped download of MWinflect repository"
+csl-json,e6a162115c07,2026-09-15T06:38:43Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: run redo.sh with bash; note stop-on-failure (#16)
+csl-json,3497fb135b08,2026-09-15T06:17:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"redo.sh: pull main (master branch is gone), guard cd (#15)"
+csl-json,314d83e8c5e9,2026-09-05T06:59:26Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 2}) + relative-link upgrades (0)"
 csl-json,c824e1e13c56,2026-07-31T20:27:09Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(changelog): add minimal Keep-a-Changelog (H2012 Phase F residual) (#14)
 csl-json,f5a5a92fee9a,2026-07-31T12:41:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#13)
 csl-json,de8b2d4f392c,2026-07-27T17:55:35Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#12)
@@ -8119,6 +8286,8 @@ csl-json,68bcaa26e92b,2021-08-16T04:56:19Z,drdhaval2785,drdhaval2785,drdhaval278
 csl-json,f9ee45a8f8a0,2021-08-16T04:38:38Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,yat json
 csl-json,1a666aac8ecd,2021-08-16T04:36:00Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,first generation of yat in ashtadhyayi.com format
 csl-json,7f8e85f197b5,2021-08-16T03:40:49Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,initial commit
+csl-kale,70694719dc09,2026-09-05T06:59:32Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 2}) + relative-link upgrades (0)"
+csl-kale,3e1b991b99f0,2026-09-04T09:12:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ci: add Semgrep SAST (CodeQL has no PHP analyzer) (H3488) (#10)
 csl-kale,eff3bb67a108,2026-07-31T12:41:09Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#9)
 csl-kale,c7757452b650,2026-07-27T17:56:20Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#8)
 csl-kale,ff72b90fe51c,2026-07-12T12:24:59Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): refresh to reflect actual scanned-book contents (H549) (#7)
@@ -8140,6 +8309,9 @@ csl-kale,092a0a38616b,2022-05-05T21:54:45Z,funderburkjim,funderburkjim,funderbur
 csl-kale,4e9d835691b6,2019-11-09T02:47:27Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,display code
 csl-kale,06ef1a0c5158,2019-11-09T02:45:27Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,scanned images
 csl-kale,523cfe5b651e,2019-11-09T00:43:46Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+csl-ldev,7fd7a49dccee,2026-09-15T06:39:03Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: note the redo_all.sh chain stops on failure (#27)
+csl-ldev,431e5187e6c1,2026-09-15T06:17:44Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"scripts/redo_all.sh: guard cd, quote array (#26)"
+csl-ldev,450581f3f720,2026-09-05T07:01:38Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 2}) + relative-link upgrades (0)"
 csl-ldev,5dda5dc101db,2026-07-31T12:40:59Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#25)
 csl-ldev,54133fab09f9,2026-07-27T17:59:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#24)
 csl-ldev,006dbc6bb34e,2026-07-14T04:33:09Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 1 broken link(s) (org-wide link audit, auto-fix pass)"
@@ -8220,6 +8392,10 @@ csl-ldev,d7cc88430dc8,2021-10-05T03:08:02Z,drdhaval2785,drdhaval2785,drdhaval278
 csl-ldev,b16fb7da9012,2021-10-05T03:06:26Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,print progress only after 10000 headwords
 csl-ldev,faf4d49dc2dd,2021-10-05T02:15:30Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,redo and txt_to_ldev init
 csl-ldev,71b35f176b4a,2021-10-05T02:14:54Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,readme init
+csl-lnum,75e0420bb678,2026-09-15T06:38:58Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: note redo_all.sh stops if the csl-orig pull fails (#12)
+csl-lnum,0f39d23dcc03,2026-09-15T06:17:38Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"scripts/redo_all.sh: pull main (master branch is gone), guard cd (#11)"
+csl-lnum,adbf54ad0581,2026-09-06T16:05:11Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions (7/7 vote approve)
+csl-lnum,03116421fc4f,2026-09-05T07:06:01Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 2}) + relative-link upgrades (0)"
 csl-lnum,a37ccb67b49a,2026-08-02T21:23:44Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix: drop legacy readme.md colliding with README.md on Windows (#9)
 csl-lnum,3eae2c526ee6,2026-07-31T12:34:14Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#8)
 csl-lnum,b00b64329e75,2026-07-27T18:01:19Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#7)
@@ -8287,6 +8463,8 @@ csl-lnum,5ffe5b4f1469,2021-10-02T09:31:01Z,drdhaval2785,drdhaval2785,drdhaval278
 csl-lnum,d511b856d73d,2021-10-02T09:25:42Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,snp added
 csl-lnum,2589782e07d3,2021-10-02T09:22:18Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,txt_to_lnum
 csl-lnum,0d0d66bfd466,2021-10-02T09:19:15Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,make MD files from csl-orig/v02/xxx/xxx.txt file
+csl-lslink,deb14cfaaad4,2026-09-05T07:08:07Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 2}) + relative-link upgrades (0)"
+csl-lslink,ae4ad5f0af3c,2026-09-04T09:32:02Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ci: add Semgrep SAST (CodeQL has no PHP analyzer) (H3488) (#7)
 csl-lslink,65c7d08f8183,2026-07-31T12:41:05Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#6)
 csl-lslink,3ca78d23e6b7,2026-07-12T12:25:09Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): rewrite to reflect actual state (H549) (#5)
 csl-lslink,70e92fe9aab0,2026-07-11T06:14:27Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): rewrite to reflect actual state (H549) (#4)
@@ -8318,6 +8496,8 @@ csl-lslink,2842b0274af8,2026-03-31T18:03:03Z,funderburkjim,funderburkjim,funderb
 csl-lslink,3de81a0a1a4f,2026-03-31T02:24:40Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,"created link files for gra, mw, pw, pwg"
 csl-lslink,077ec47bd51d,2026-03-31T02:12:42Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,"Initial commit, sch"
 csl-lslink,e36bec73e813,2026-03-31T01:43:07Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+csl-newsletter,c9c1b8d8d24a,2026-09-06T16:02:27Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions (7/7 vote approve)
+csl-newsletter,384fdb189f7e,2026-09-05T06:48:54Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 44, ""add-byline"": 1}) + relative-link upgrades (0)"
 csl-newsletter,174af4d1b109,2026-08-06T07:27:17Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore(release): 0.2.0 (#11)
 csl-newsletter,81200c67927d,2026-08-06T07:24:07Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #10 from sanskrit-lexicon/h1853-august-2026-edition
 csl-newsletter,765a4a528fc1,2026-08-06T07:20:37Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,newsletter: add August 2026 edition (H1853)
@@ -8384,13 +8564,53 @@ csl-newsletter,bced52b7f19f,2021-09-14T04:37:04Z,drdhaval2785,Dhaval Patel,drdha
 csl-newsletter,53c6fa85e014,2021-09-13T14:34:31Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,csl-orig commits taken into consideration
 csl-newsletter,b04b08d7e699,2021-09-13T13:28:15Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,addition
 csl-newsletter,5ab58ee2cd64,2021-09-13T12:33:30Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,september started
+csl-observatory,2e8fb850fca1,2026-09-24T08:19:13Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(H5424): also regenerate README's duplicate Headline numbers table (#232)
+csl-observatory,078e69f10ce9,2026-09-24T08:13:36Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"H5424: restore refresh.yml cron, regenerate README/STATUS numbers (#231)"
+csl-observatory,4725ebd79295,2026-09-24T08:11:43Z,github-actions[bot],github-actions[bot],41898282+github-actions[bot]@users.noreply.github.com,data: weekly snapshot 2026-09-24
+csl-observatory,3f0d700379bf,2026-09-21T15:06:19Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,test(recapture): generative acceptance test catches model mutations (H5221) (#226)
+csl-observatory,6025fb51c47f,2026-09-21T03:34:09Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,agentsctx: regen AGENTS.md generated block from Uprava context_facts.yaml (weekly twin loop)
+csl-observatory,1ea0c8561944,2026-09-20T20:40:52Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,analysis(recapture): bound the recapture conclusions under dependent sources and unequal detectability (H5072) (#225)
+csl-observatory,42b6922862d4,2026-09-20T08:55:15Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(claude): H5176 agent-docs SLA refresh — run commands + scripts/ paths re-verified current, header bumped 20-09-2026"
+csl-observatory,b500f9e461fa,2026-09-20T06:56:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #224 from sanskrit-lexicon/h5170-a15-dataset-doi
+csl-observatory,7b1a9c83bdba,2026-09-20T06:56:20Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"data(A15): wire the minted Zenodo analysis-inputs dataset DOI (concept 10.5281/zenodo.22853817, version 10.5281/zenodo.22853818)"
+csl-observatory,3b0a870ed5e7,2026-09-10T16:21:48Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: story scrollytelling storyboard for H4524 (#220)
+csl-observatory,411aa2f0b80b,2026-09-08T05:40:12Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,add the pre-push silent-revert guard + CRLF-in-blob gate (H2280/H2289/H2301) (#218)
+csl-observatory,cfef42de9365,2026-09-08T05:08:40Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add the pre-push silent-revert guard + CRLF-in-blob gate (H2280/H2289/H2301) (#217)
+csl-observatory,182ac5755015,2026-09-08T04:50:24Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,add the pre-push silent-revert guard + CRLF-in-blob gate (H2280/H2289/H2301) (#216)
+csl-observatory,c79727a8517a,2026-09-07T05:04:13Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions (7/7 vote approve)
+csl-observatory,e1930086c051,2026-09-06T18:32:43Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #215 from sanskrit-lexicon/audit-disposition-crosswalk
+csl-observatory,909fa56c1cfb,2026-09-06T18:31:37Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs: H3487 audit census disposition crosswalk — 71 sites at 06-09 tips, 20 open/partial found"
+csl-observatory,37f8507c515c,2026-09-06T18:25:54Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore(release): 1.13.5 (#214)
+csl-observatory,82151091206d,2026-09-06T18:24:19Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(A48): publish the five calibrated below-floor bands as their own table (#213)
+csl-observatory,39457cc58b24,2026-09-06T18:08:29Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(.ai_state): record H3986 — below-floor recapture verdict + the PYTHONHASHSEED seeding gotcha (#212)
+csl-observatory,b2488308bae8,2026-09-06T18:05:28Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore(release): 1.13.4 (#211)
+csl-observatory,980418417737,2026-09-06T17:21:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"A13: author-voice pass (H3857, Fable 5.1 claude-fable-5-1) (#210)"
+csl-observatory,14a8dccb97b6,2026-09-06T17:16:32Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"A14: author-voice pass (H3857, Fable 5.1 claude-fable-5-1) (#209)"
+csl-observatory,b876d7b148c9,2026-09-06T17:15:03Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"A12: author-voice pass (H3857, Fable 5.1 claude-fable-5-1) (#208)"
+csl-observatory,0558f5c47abb,2026-09-06T17:14:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,feat(recapture): can any estimator reach the 39 dictionaries below the m>=10 floor? (H3986) (#207)
+csl-observatory,43c9385bfdbe,2026-09-06T17:13:27Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"A15: author-voice pass (H3857, Fable 5.1 claude-fable-5-1) (#206)"
+csl-observatory,acd62281db49,2026-09-06T12:21:48Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"A69: author-voice pass (H3857, Fable 5.1 claude-fable-5-1) (#205)"
+csl-observatory,094f504f628a,2026-09-05T13:38:37Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(claude): H4147 agent-docs SLA refresh — dated header bump, content verified accurate"
+csl-observatory,55d2a3695e7d,2026-09-05T11:11:54Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions (7/7 vote approve)
+csl-observatory,584cc9430abe,2026-09-05T06:33:45Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave2): mechanical byline/header pass ({""add-both"": 146}) + relative-link upgrades (179)"
+csl-observatory,3d25923761fe,2026-09-04T20:43:41Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,agentsctx: regen AGENTS.md generated block from Uprava context_facts.yaml (weekly twin loop)
+csl-observatory,bdc116a655ed,2026-09-04T17:09:09Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #204 from sanskrit-lexicon/h4073-delta-apply
+csl-observatory,21edaebb0268,2026-09-04T17:08:43Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"A12+A69 (H4073, rows 8-9,13-14): density floor 4.48 (mwe) over full 43-row table; silver denominator 5,634; done-only 76.2% + re-rated top three; 40 Feb-Apr done; provenance/§5.3 refreshed; 36.3%/26.8"
+csl-observatory,bfcdff184e52,2026-09-02T17:26:41Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: reconcile COLOGNE #286 triage note as mislabel of #285 (H3883) (#203)
+csl-observatory,c0b89aaadce6,2026-09-02T06:44:58Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #202 from sanskrit-lexicon/h3884-release
+csl-observatory,600324298ce3,2026-09-02T06:44:28Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,chore(release): cut v1.13.3
+csl-observatory,d62794c0b620,2026-09-02T06:44:22Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,chore: changelog queue entry for #201 (H3884)
+csl-observatory,1cb04ed896d3,2026-09-02T06:44:03Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs: Cologne codebase improvement map 2026-09 — prior-art status sweep, 22 verified gaps, ranked roadmap (H3884) (#201)"
+csl-observatory,d2dea7a34b86,2026-09-01T18:22:50Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore(release): 1.13.2 — stats-census register row corrections + denominator of record (H3793) (#200)
+csl-observatory,c8b84fb938ae,2026-09-01T18:15:32Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(stats-census): correct three understated register rows + name the denominator of record (H3793) (#199)
+csl-observatory,98b84dd005b6,2026-08-31T09:17:44Z,actions-user,csl-observatory-bot,actions@github.com,data: monthly refresh (2026-08-31)
 csl-observatory,18836aaa3c85,2026-08-31T03:45:34Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,agentsctx: regen AGENTS.md generated block from Uprava context_facts.yaml (weekly twin loop)
 csl-observatory,7395e2df7987,2026-08-30T08:15:15Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"feat(pwg-scan-index): publish volunteer names per owner ruling (aging-audit vote 30-08-2026, card volunteer_names option b) (#198)"
 csl-observatory,76653c7953a1,2026-08-30T07:17:36Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,chore(release): cut v1.13.1 (backfill [Unreleased])
 csl-observatory,b7e24bbc7e13,2026-08-28T13:53:32Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,audit: H3487 adversarial tooling census - call graphs + 71 silent-failure sites + 11 gap specs (#197)
 csl-observatory,8b66004fe854,2026-08-27T19:17:19Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(roadmap): truth-pass RH statuses + next-session section (H3002 slice 4) (#196)
 csl-observatory,c96f2489536a,2026-08-25T14:28:19Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"agentsctx: regen AGENTS.md generated block (opencode.db fact, tightened org_wide briefs, edge sync)"
-csl-observatory,4059f5da1602,2026-08-24T12:53:25Z,Ox-Alpha,ox-alpha,ox-alpha@users.noreply.github.com,journal: H3400 executed - G18 re-proven cold (python3 alias fix); warm-dist-masking gotcha recorded
+csl-observatory,4059f5da1602,2026-08-24T12:53:25Z,,ox-alpha,ox-alpha@users.noreply.github.com,journal: H3400 executed - G18 re-proven cold (python3 alias fix); warm-dist-masking gotcha recorded
 csl-observatory,b243ef7eead9,2026-08-24T11:34:27Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"doi: sweep OBS-T citations to genuine concept DOI 10.5281/zenodo.21346705 (record 21965649, minted 2026-08-16)"
 csl-observatory,29cd7d92fd2b,2026-08-24T03:55:04Z,actions-user,csl-observatory-bot,actions@github.com,data: monthly refresh (2026-08-24)
 csl-observatory,c4026d6d38a2,2026-08-23T04:44:51Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,chore(twin): regenerate AGENTS.md org-context block (H3307 wave)
@@ -8926,6 +9146,10 @@ csl-observatory,eec8dc712aed,2026-05-07T19:29:28Z,gasyoun,Mārcis Gasūns,gasyou
 csl-observatory,c236fb5ac130,2026-05-07T19:28:08Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"feat: companion paper, headword counter, retry logic, templates"
 csl-observatory,1947ea3757ed,2026-05-07T17:04:56Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Create gasuns-cologne-30-report.md
 csl-observatory,e24574b2785a,2026-05-07T15:58:23Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"chore: bootstrap observatory — scripts, first data snapshot, dashboards, article scaffold"
+csl-orig,f4c08c578b33,2026-09-20T08:58:58Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(claude): H5176 agent-docs SLA refresh — CI inventory + fence wording re-verified current, header bumped 20-09-2026 (#2899)"
+csl-orig,3b9e0b31b510,2026-09-16T12:57:10Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #2898 from sanskrit-lexicon/rescue/h4872-h4227-o1-exit-status
+csl-orig,5801badf13fa,2026-09-06T14:31:56Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix(guard): fail the generate-dict hook on nonzero pipeline exit (H4227, audit O1)"
+csl-orig,785fc7e415aa,2026-09-05T06:53:08Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 14}) + relative-link upgrades (25)"
 csl-orig,30b2ae7b3c66,2026-08-29T20:03:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #2895 from sanskrit-lexicon/h3640-drain
 csl-orig,553c2f0fb6d3,2026-08-29T20:03:15Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"reorg: delete broken reorg1.sh/reorg1_all.sh, tombstone in README (H3640)"
 csl-orig,581060333cca,2026-08-29T09:40:36Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #2894 from sanskrit-lexicon/h3632-drain
@@ -11179,6 +11403,13 @@ csl-orig,ecc689a3a281,2019-07-20T05:43:47Z,drdhaval2785,drdhaval2785,drdhaval278
 csl-orig,661fb1081d4f,2019-07-20T05:21:21Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,copy to cologne web structure
 csl-orig,f325e2abde72,2019-07-20T05:15:30Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,added hwextra
 csl-orig,6f45dd5ce45d,2019-07-20T04:50:29Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,csl-orig initial commit
+csl-pywork,4943a6d67d46,2026-09-18T14:00:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add root AGENTS.md agent-entrypoint stub (H4634) (#90)
+csl-pywork,4d4b0e0f0a5a,2026-09-18T13:52:50Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(claude): H4576 truth refresh — verified all claims vs live clone, pinned vendored-script paths, header bump 13-09-2026 (#89)"
+csl-pywork,52ebb8ca70f3,2026-09-15T06:39:17Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs: v00 update instructions use main, note redo.sh stop-on-failure (#92)"
+csl-pywork,1cb14344d6ea,2026-09-15T06:15:15Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Fix v00/updateDistinctScripts.sh syntax error and redo.sh wrong-branch git pull (#91)
+csl-pywork,cc4fc138a971,2026-09-05T18:21:55Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Allow local xampp installation to proceed when
+csl-pywork,aae5da59848d,2026-09-05T13:29:08Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(claude): H4147 agent-docs SLA refresh — dated header bump, content verified accurate"
+csl-pywork,e1ddb1d164b2,2026-09-05T06:56:23Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 8, ""add-byline"": 1}) + relative-link upgrades (4)"
 csl-pywork,aefbdac55228,2026-08-29T10:23:02Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"feat(webtc2): generation-time search index built in the webtc2 stage (G3, H3633) (#87)"
 csl-pywork,e596cb337d5d,2026-08-29T01:11:50Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"fix(generation): fail-closed validation in the generation pipeline (G1, H3631) (#84)"
 csl-pywork,fcef81d2eda3,2026-08-28T18:06:14Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"fix(v02): G8 bookkeeping — refresh_csl aggregation, untracked-aware regen gate, junk row, debug cutoff (H3638) (#85)"
@@ -11750,6 +11981,7 @@ csl-pywork,85ce663e2269,2019-07-22T06:48:04Z,drdhaval2785,drdhaval2785,drdhaval2
 csl-pywork,39208cc59d43,2019-07-20T15:54:34Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,compare.sh compares between generated and cologne versions
 csl-pywork,68da950d5517,2019-07-20T05:54:26Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,make_xml of 2013 added
 csl-pywork,a0ca4a27bdb0,2019-07-20T04:08:01Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,first commit
+csl-sqlite,0d835dda61e7,2026-09-05T07:08:49Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 1}) + relative-link upgrades (0)"
 csl-sqlite,65e9b8de3e39,2026-07-31T12:33:13Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#6)
 csl-sqlite,0c3eeab7e7b7,2026-07-27T18:00:44Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#5)
 csl-sqlite,21ed5c3874e7,2026-07-12T12:25:24Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): rewrite to describe actual dual-channel SQLite distribution (H549) (#4)
@@ -11761,6 +11993,15 @@ csl-sqlite,a6a257a9a836,2026-05-29T05:10:13Z,gasyoun,Mārcis Gasūns,gasyoun@use
 csl-sqlite,299157791231,2026-05-15T06:00:57Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 csl-sqlite,fc82dcdff2e1,2026-04-11T06:00:27Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,README update
 csl-sqlite,fca7cdc9f757,2026-04-08T11:48:40Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+csl-websanlexicon,7a6960068c90,2026-09-20T08:57:09Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(claude): H5176 agent-docs SLA refresh — generator paths + fork-sync targets re-verified current, header bumped 20-09-2026"
+csl-websanlexicon,e071c4906d6e,2026-09-06T13:02:44Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(H4212): drop unreachable dead code after return in adjust_key2_mw (#157)
+csl-websanlexicon,1300fa448583,2026-09-05T13:26:15Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(claude): H4147 agent-docs SLA refresh — dated header bump, content verified accurate"
+csl-websanlexicon,c2eebae0af85,2026-09-05T11:32:59Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions (7/7 vote approve)
+csl-websanlexicon,79008b4b7531,2026-09-05T06:56:55Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 7}) + relative-link upgrades (6)"
+csl-websanlexicon,8acb979af108,2026-09-04T08:50:53Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #156 from sanskrit-lexicon/h3485-parity200
+csl-websanlexicon,cd1f579d9d09,2026-09-04T08:48:29Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,test(webtc2_parity): 200-query parity sample + memo closing H3485 evidence bar (audit D4)
+csl-websanlexicon,ebd2f53b8cf1,2026-09-03T21:06:33Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #155 from sanskrit-lexicon/h3950-dictyear-live-resync
+csl-websanlexicon,8597e74cac4e,2026-09-03T21:04:39Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(dictparms): resync dictyear + license links to live Cologne 2020 deployment (H3950)
 csl-websanlexicon,02b45aa7099a,2026-08-29T10:40:06Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"fix(basicdisplay): mark handler appends to this->row, not local row (H3637 twin of apidev fix, audit A11) (#154)"
 csl-websanlexicon,5a491a8bf436,2026-08-29T10:23:03Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"feat(webtc2): consult generation-time search index, flat file as fallback (G3, H3633) (#153)"
 csl-websanlexicon,bc1bf8fc903d,2026-08-28T18:19:32Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"fix(getword_data): twin sync of H3636 - fail-loud envelopes for malformed page-info/key2, surface BasicDisplay status (A10+A12) (#152)"
@@ -12369,6 +12610,8 @@ csl-websanlexicon,9dd72c0e9df0,2018-07-05T20:32:17Z,funderburkjim,funderburkjim,
 csl-websanlexicon,b66f40fb4704,2018-07-05T20:12:16Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,version 00 of installation python script
 csl-websanlexicon,01aa411e8151,2018-07-05T02:43:59Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initial template driven version v00
 csl-websanlexicon,70d100e4cf79,2018-07-02T22:07:39Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initial webinstall commit -- gra backup
+csl-westergaard,6bbfb84945b1,2026-09-05T07:08:11Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 2}) + relative-link upgrades (0)"
+csl-westergaard,99b870e27eb9,2026-09-04T15:42:32Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ci: add Semgrep SAST (CodeQL has no PHP analyzer) (H3488) (#8)
 csl-westergaard,bca786030678,2026-07-31T12:33:09Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#7)
 csl-westergaard,f6740ec5610d,2026-07-27T18:00:32Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#6)
 csl-westergaard,0901fa5d8b2a,2026-07-12T12:25:31Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): rewrite so every claim is currently true (H549) (#5)
@@ -12387,6 +12630,8 @@ csl-westergaard,b76ddd4bde96,2026-05-15T07:20:29Z,gasyoun,Mārcis Gasūns,gasyou
 csl-westergaard,1bbb460f5387,2022-11-11T01:59:02Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Minor corrections re php 8.1.
 csl-westergaard,10ce6fd814c3,2019-11-08T20:42:07Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,Initial commit
 csl-westergaard,725181b85f8c,2019-11-08T20:38:09Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+csl-whitroot,d40b6136c561,2026-09-05T07:08:54Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 1}) + relative-link upgrades (0)"
+csl-whitroot,0d347848886c,2026-09-04T09:12:14Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ci: add Semgrep SAST (CodeQL has no PHP analyzer) (H3488) (#8)
 csl-whitroot,4fbf30df4a88,2026-07-31T12:32:29Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#7)
 csl-whitroot,b0efe544343b,2026-07-27T18:01:02Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#6)
 csl-whitroot,225cbc3c7b53,2026-07-13T17:43:22Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: refresh README to reflect actual repo state (H549) (#5)
@@ -12403,6 +12648,9 @@ csl-whitroot,8cc498b236a4,2020-03-10T00:40:41Z,funderburkjim,funderburkjim,funde
 csl-whitroot,1ad3839f7ae5,2019-11-08T22:16:37Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Avoid PHP 'notice undefined index'
 csl-whitroot,50b959a5b934,2019-11-08T21:59:14Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,Initial commit
 csl-whitroot,0dcec9223ad0,2019-11-08T21:19:28Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+hwnorm1,93c2f8c1ea2c,2026-09-06T16:01:06Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions (7/7 vote approve)
+hwnorm1,5a27bcc7c19f,2026-09-05T06:57:09Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 5}) + relative-link upgrades (0)"
+hwnorm1,b43ffd07d46d,2026-09-04T09:12:10Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ci: add Semgrep SAST (CodeQL has no PHP analyzer) (H3488) (#25)
 hwnorm1,4a80a35376ab,2026-08-09T05:48:48Z,actions-user,HWNORM1 BOT,actions@github.com,Regenerated hwnorm1.sqlite as on 20260809-054846
 hwnorm1,0ca7287673e7,2026-07-29T12:15:24Z,actions-user,HWNORM1 BOT,actions@github.com,Regenerated hwnorm1.sqlite as on 20260729-121523
 hwnorm1,d52f08df4386,2026-07-26T14:04:44Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,regen after BEN subheadword addition
@@ -12610,6 +12858,7 @@ hwnorm1,d1624f255cc6,2015-11-21T12:17:04Z,drdhaval2785,Dr. Dhaval Patel,drdhaval
 hwnorm1,a9366009ac66,2015-11-21T05:48:32Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,no restrictions
 hwnorm1,44f02cbe0c06,2015-11-21T05:04:03Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Convention 1 raw files
 hwnorm1,0edc815b114a,2015-11-19T05:22:04Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+hwnorm2,5c73c2119f5d,2026-09-05T07:08:19Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 2}) + relative-link upgrades (0)"
 hwnorm2,7bb33a91fd43,2026-08-09T05:50:32Z,actions-user,HWNORM1 BOT,actions@github.com,Regenerated hwnorm2 repo as on 20260809-055032
 hwnorm2,d0a24053b764,2026-07-31T12:31:58Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#8)
 hwnorm2,a32e7174bdb6,2026-07-29T12:17:10Z,actions-user,HWNORM1 BOT,actions@github.com,Regenerated hwnorm2 repo as on 20260729-121710
@@ -12669,6 +12918,7 @@ hwnorm2,c414caee7610,2020-02-06T22:19:57Z,funderburkjim,funderburkjim,funderburk
 hwnorm2,f91a4f37bf9f,2020-02-02T23:11:34Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,improve by removing some duplicates
 hwnorm2,201db9a32025,2020-02-02T00:36:35Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,minor correction
 hwnorm2,f03c95b8acd6,2020-02-01T22:00:20Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,initial commit
+literarysource,0843da71aecc,2026-09-05T07:08:24Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 2}) + relative-link upgrades (0)"
 literarysource,75440e42b9f8,2026-07-31T12:31:29Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#7)
 literarysource,925ebce7945b,2026-07-27T17:55:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#6)
 literarysource,1a168e633db8,2026-07-10T22:29:26Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): refresh to reflect current state; resolve case-collision (H548) (#5)
@@ -12708,6 +12958,7 @@ literarysource,4b9f48e61e36,2022-02-15T02:14:19Z,drdhaval2785,drdhaval2785,drdha
 literarysource,645fc9a2cbb7,2022-02-14T16:30:53Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,mw72 init
 literarysource,ffb14d9add68,2022-02-14T16:30:34Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,PWG ls statistics as on 14 Feb 2022
 literarysource,29780111536b,2022-02-12T05:50:27Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,initial commit based on csl-pywork
+mw-dev,dd2b7ef6417f,2026-09-05T06:58:28Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 3}) + relative-link upgrades (0)"
 mw-dev,6fb10b16748e,2026-07-31T12:31:13Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#33)
 mw-dev,24e576a9c2fe,2026-07-27T17:56:25Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#32)
 mw-dev,39f6964e3ea0,2026-07-24T03:11:18Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #31 from sanskrit-lexicon/h1523-mwdev-jquery-28060
@@ -12773,6 +13024,7 @@ mw-dev,9013f68f18c8,2023-02-09T04:48:13Z,Andhrabharati,Andhrabharati,knbrao@gmai
 mw-dev,f7d9c0881b29,2023-02-08T17:18:35Z,Andhrabharati,Andhrabharati,knbrao@gmail.com,Create mw_AB.txt
 mw-dev,547bc0de0da5,2023-01-19T13:15:57Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,initial commit on 19 Jan 2023
 mw-dev,46c56bb52cfa,2023-01-19T13:10:48Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+rvlinks,27da346043bf,2026-09-05T06:58:33Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 3}) + relative-link upgrades (0)"
 rvlinks,6ee5b6c2a1ab,2026-07-31T12:30:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#7)
 rvlinks,1f17616ea5de,2026-07-27T17:57:10Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#6)
 rvlinks,1e82bf90c7fd,2026-07-10T22:29:35Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): rewrite with accurate repo description + current issue snapshot (H548) (#5)
@@ -12799,6 +13051,7 @@ rvlinks,427cb46fba9b,2018-08-29T22:48:19Z,funderburkjim,funderburkjim,funderburk
 rvlinks,f7ee4aeb4e49,2018-08-29T22:36:00Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,"The initial version, with rvhymns constructed"
 rvlinks,e4ebf1ead069,2018-08-29T22:30:53Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,begin populating with files
 rvlinks,4e17c11d5348,2018-08-29T22:21:10Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,first commit
+sanskrit-fonts,f4cebfd1c03d,2026-09-05T07:09:16Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 1}) + relative-link upgrades (0)"
 sanskrit-fonts,909c4cb14634,2026-07-31T12:30:33Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#4)
 sanskrit-fonts,394e118b29b3,2026-07-27T18:01:09Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#3)
 sanskrit-fonts,0af7e2dd2fcf,2026-07-11T06:17:23Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(README): rewrite to true facts — Siddhanta font, dual licensing, gh-pages hosting (H549) (#2)"
@@ -12811,6 +13064,7 @@ sanskrit-fonts,f79bfe4c48d1,2026-05-29T05:11:29Z,gasyoun,Mārcis Gasūns,gasyoun
 sanskrit-fonts,4a86c5b9f39d,2026-05-15T07:39:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 sanskrit-fonts,fee5ad4e5a29,2018-09-05T03:50:42Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,siddhanta font
 sanskrit-fonts,9432607282a6,2018-09-05T03:39:54Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+sanskrit-lexicon.github.io,97d6d1e974ce,2026-09-05T06:57:18Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 5}) + relative-link upgrades (0)"
 sanskrit-lexicon.github.io,621a49628164,2026-08-30T07:19:00Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,chore(release): cut v0.1.0 (backfill [Unreleased])
 sanskrit-lexicon.github.io,c09b3d5a8313,2026-07-31T12:30:37Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#11)
 sanskrit-lexicon.github.io,2d2bdc88633e,2026-07-27T17:58:58Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add .gitattributes (eol=lf line-ending policy) (#9)
@@ -12933,6 +13187,8 @@ temp_corrections_ae,70d107ed18e5,2021-01-13T20:52:27Z,funderburkjim,funderburkji
 temp_corrections_ae,6d92ee76dd3e,2021-01-11T14:47:04Z,invalid-email-address,Your Name,you@example.com,Sampada's first commit
 temp_corrections_ae,90089b43dd4f,2021-01-10T19:10:07Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initial commit
 temp_corrections_ae,f798458cba94,2021-01-10T19:01:51Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+temp_corrections_ap90,2db3ad916dad,2026-09-20T06:47:57Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H5173: declare data-only AI stance in README (#8)
+temp_corrections_ap90,61422da7c214,2026-09-05T07:09:20Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 1}) + relative-link upgrades (0)"
 temp_corrections_ap90,767157794420,2026-07-31T12:39:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#7)
 temp_corrections_ap90,9fb2e89f87c8,2026-07-13T17:43:25Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): refresh to accurate current status (H548) (#6)
 temp_corrections_ap90,78795a967239,2026-07-12T12:26:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): refresh to accurate current status (H548) (#5)
@@ -12970,6 +13226,8 @@ temp_corrections_ap90,97447aff2d36,2021-04-01T21:53:53Z,invalid-email-address,Yo
 temp_corrections_ap90,692a4d402a7d,2021-03-29T02:31:13Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Prepare md English Error for Sampada
 temp_corrections_ap90,4214b962e059,2021-01-13T21:56:11Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Potential english word corrections for AP90 dictionary
 temp_corrections_ap90,9f48e1fdb018,2021-01-13T21:29:26Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+temp_corrections_mw,9864a0f0c820,2026-09-20T06:48:56Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H5173: declare data-only AI stance in README (#8)
+temp_corrections_mw,2cd6be01d176,2026-09-05T07:09:24Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 1}) + relative-link upgrades (0)"
 temp_corrections_mw,12fe62a221d5,2026-07-31T12:39:44Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add/upgrade .pre-commit-config.yaml (mixed-line-ending lf) (#7)
 temp_corrections_mw,67d58912dff2,2026-07-13T17:43:30Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): refresh to accurate current status (H548) (#6)
 temp_corrections_mw,6bdf42e80498,2026-07-12T12:26:43Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(README): refresh to accurate current status (H548) (#5)
