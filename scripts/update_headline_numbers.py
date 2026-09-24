@@ -73,6 +73,36 @@ def main():
         f'and {contributors} contributors since 2014.',
         readme,
     )
+    # README's own "Headline numbers" table duplicates four of STATUS.md's
+    # rows (plus several report-sourced rows this script cannot derive from
+    # summary.json alone — bus-factor, most-active-repo, peak years, dominant
+    # work type — those come from the separate refresh-observatory.yml
+    # pipeline's reports and are left untouched here).
+    readme = re.sub(
+        r'## Headline numbers \(snapshot \d{4}-\d{2}\)',
+        f'## Headline numbers (snapshot {snapshot_month})',
+        readme,
+    )
+    readme = re.sub(
+        r'\| Repos tracked \| [\d,]+ \|',
+        f'| Repos tracked | {repos} |',
+        readme,
+    )
+    readme = re.sub(
+        r'\| Issues \+ PRs \(lifetime\) \| [\d,]+ \|',
+        f'| Issues + PRs (lifetime) | {issues_prs:,} |',
+        readme,
+    )
+    readme = re.sub(
+        r'\| Commits since 2014 \| [\d,]+ \|',
+        f'| Commits since 2014 | {commits:,} |',
+        readme,
+    )
+    readme = re.sub(
+        r'\| Distinct human contributors \| [\d,]+ \|',
+        f'| Distinct human contributors | {contributors} |',
+        readme,
+    )
     readme_path.write_text(readme, encoding='utf-8')
 
     status_path = ROOT / 'STATUS.md'
