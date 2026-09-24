@@ -190,6 +190,18 @@ CATALOG: dict[str, Entry] = {
         "Chapman capture-recapture estimates of error-prone records remaining per dictionary, from two-era overlap.",
         "Order-of-magnitude only: sequential occasions and heterogeneous catchability violate Chapman assumptions in opposite directions; estimates capped at record counts.",
     ),
+    "error_recapture_lowm.csv": Entry(
+        "obs-t recapture",
+        "scripts/lowm_estimators.py",
+        "Per candidate estimator x target dictionary (pw, mw, bur): leave-one-out and censoring-stress-test scores for whether an estimator can substitute for Chapman below the m >= 10 recapture floor (H3986).",
+        "Every strength-borrowing candidate fails the pre-registered verdict rule; a QUALIFIES/CONDITIONAL/DOES-NOT-QUALIFY verdict here says nothing about the 39 below-floor dictionaries themselves, only about whether the method transfers to them (see reports/error_recapture_lowm.md).",
+    ),
+    "error_recapture_calibrated.csv": Entry(
+        "obs-t recapture",
+        "scripts/lowm_estimators.py",
+        "Below-floor error-site estimates for dictionaries with 0 < m < 10, calibrated by the median shift measured in the lowm_estimators.py censoring stress test.",
+        "Bounded estimates for only 5 dictionaries (skd, stc, ae, mwe, inm); the other below-floor dictionaries remain unreachable (m = 0) and carry no row here.",
+    ),
     "recapture_sensitivity.csv": Entry(
         "obs-t recapture",
         "scripts/recapture_sensitivity.py",
