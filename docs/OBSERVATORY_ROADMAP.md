@@ -1,6 +1,8 @@
 # csl-observatory Implementation Roadmap
 
-_Created: 16-05-2026 · Last updated: 05-09-2026_
+_Created: 16-05-2026 · Last updated: 24-09-2026_
+
+> **Truth-pass 24-09-2026** (OxAlpha, GLM 5.3 Flash `opencode/z-ai/glm-5.3-flash`, [H5360](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5360-OxAlpha_csl-observatory_rm-verdict-observatory-roadmap_24.09.26.md)). **Verdict: REFRESH — the file stays alive, not archived.** Read end to end against repo state: Workstreams A/B/D/E tables are shipped or carried by standing scripts (A1/A2 closed by H1877 PR #132 and H1540; B1–B4, D1/D2/D5, E1–E3/E6 verified on disk); Workstream G is fully shipped (G1–G6 on 2026-07-03, H089–H092; G3 extended by H1477; G6 extension by H1478, PR #128). Live residue is exactly: one ungated agent item (A3 `consent` field — the only unminted prose work, so the verdict is refresh, not archive), five human gates (C1/A3 ORCID+consent fill · D3 Cologne credential · D4 Actions secrets/PAT · F2 annotation · G5 `/story` text-read), and three dated future triggers (E5 2027-04-15 · F2 2027-04-30 · F3 2027-06-15) — all rewritten as gated checkboxes in [What is left](#what-is-left-truth-pass-24-09-2026-h5360) below. E4 is already covered by the C3 page ([CONTRIBUTOR_ENTRY_PATH.md](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/CONTRIBUTOR_ENTRY_PATH.md)). Each human gate carries a dated GTD row in [Uprava/GTD_NEXT_ACTIONS.md](https://github.com/gasyoun/Uprava/blob/main/GTD_NEXT_ACTIONS.md); the item-by-item unminted-prose table lives in the H5360 PR body.
 
 Horizon: 2026-06 to 2027-06
 Primary audience: maintainer. Secondary audiences, added later in the year:
@@ -123,6 +125,29 @@ narrative story page); mode = **active monitor**, not passive dashboard.
 | G4 | Contributor–repo network page. | Codex | **shipped 2026-07-03** | 2026-08-31 | Commit `e9de36d`: `/network` — deterministic D3 force map (11 humans × 76 repos, 196 edges; bus-factor coloring; **zero repos at bus factor ≥ 3**) + Plot.cell adjacency-matrix accessible view. Cross-repo issue-reference graph stays API-gated (snapshot carries no issue bodies). |
 | G5 | Narrative story page. | Codex + MG | **shipped 2026-07-03** | 2026-09-30 | `observatory/site/src/story.md` (`/story`) — one scroll-through 13-year org history with annotated turning points (2014–16 cfr era → 2019 git era → 2021 volume peak → 2025 correction wave → 2026 taxonomy) + the four standing findings woven as narrative turns; every figure computed live from committed CSV/JSON (light-weight `obs_t_timeline.csv`, 42 kB payload). Registered first in nav + `PAGE_DESCRIPTIONS`, linked from home; build clean, sitemap refreshed. **MG text-read gate open** (GTD @DO). |
 | G6 | External impact & reach (scholar-framed). | Codex | **shipped 2026-07-03** | 2026-10-31 | [`scripts/external_reach.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/external_reach.py) (API tiers behind `--fetch`, committed JSON cache under `observatory/snapshots/2026-07/external_reach/`, regenerates offline) → [`reports/external_reach.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/external_reach.md) + `external_reach.csv` + new `/reach` page. **Four measured/estimated tiers**, provenance per line: stars/forks (103 stars total, 49/76 zero-star — a finding) · 14-day traffic (**6,923 clones** across the core sample vs 103 stars = the headline) · downstream dependents (10 curated consumers — PyCDSL, Ambuda, DPD, StarDict-Sanskrit, Ashtadhyayi.com … + 17 code-search repos, each URL-cited) · representative citations (5, no completeness claim). Traffic API needed no token — the agent's `gh` session (gasyoun, push) served it directly. **Zenodo tier RESOLVED 2026-08-24**: the genuine OBS-T record was minted 2026-08-16 (concept DOI `10.5281/zenodo.21346705`); the originally recorded DOI `10.5281/zenodo.15834721` had resolved to an unrelated topology preprint — the sweep (`scripts/fix_obs_t_doi.py`) repointed all authoritative files, `ZENODO_RECORD_ID` = 21965649, and the tier now measures OBS-T's own downloads (title/creator verification guard kept on). Build 76 links / smoke 30 plots / catalog 52 files green. **Extension:** systematic Scholar/OpenAlex citation sweep. |
+
+## What is left (truth-pass 24-09-2026, H5360)
+
+Everything above this section is the shipped record; the drain-relevant residue
+is exactly these gated checkboxes. Gate syntax: `human:MG` = the named person's
+action (each carries a dated row in
+[Uprava/GTD_NEXT_ACTIONS.md](https://github.com/gasyoun/Uprava/blob/main/GTD_NEXT_ACTIONS.md));
+`until:` = real future trigger; no token = ungated agent work.
+
+- [ ] A3 residual (ungated, agent): add a `consent` field to `data/contributors_map.json` and flag it in `scripts/contributor_identity.py` — the A3 acceptance names this gap and it is unminted as of 24-09-2026 (no live handoff carries it; verified 0 `consent` hits in map+script).
+- [ ] C1/A3 fill (human:MG): register ORCIDs for the 7 named contributors, identify the 9 unknown logins, record consent values — tracked upstream as [issue #20](https://github.com/sanskrit-lexicon/csl-observatory/issues/20); Gasūns' ORCID already registered → GTD row 24-09-2026.
+- [ ] D3 rehearsal (human:MG): grant (or decline) Cologne production-server credential 'C2' for the live-server rehearsal ([REFRESH_SCRIPT_MODERNIZATION_PLAN.md](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/REFRESH_SCRIPT_MODERNIZATION_PLAN.md) steps 7–9); a decline closes D3 as "blockers documented" → GTD row 24-09-2026.
+- [ ] D4 hardening (human:MG): provision GitHub Actions secrets/PAT for `refresh-observatory.yml` (the scheduled-workflow credential hardening D4 names) → GTD row 24-09-2026.
+- [ ] F2 samples (human:MG): gold/error validation samples annotated, scored, or explicitly deferred → GTD row, until 2027-04-30.
+- [ ] G5 text-read (human:MG): read the [`/story`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/observatory/site/src/story.md) page text — gate open since 03-07-2026 → GTD row 24-09-2026.
+- [ ] E5 release (until:2027-04-15): annual snapshot release — tag with generated reports, data snapshot, manifest, known caveats.
+- [ ] F3 artifact (until:2027-06-15): paper reviewer artifact — frozen corpus, reports, datasheet, license, reproduction instructions.
+
+Not carried forward: E4 (contributor guide page) — its deliverable already
+exists as the C3 page [CONTRIBUTOR_ENTRY_PATH.md](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/CONTRIBUTOR_ENTRY_PATH.md)
+(setup, safe work, AI policy, boundaries, decisions); A1–A5/B1–B4/C2–C4/D1–D2/D5/E1–E3/E6/G1–G6
+are shipped (per-item evidence in the H5360 PR body); F1 is a standing
+regression gate (`scripts/obs_t_regression.py`), not a discrete item.
 
 ## Review Cadence
 
