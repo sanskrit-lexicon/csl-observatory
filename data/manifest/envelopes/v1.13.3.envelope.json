@@ -1,0 +1,147 @@
+{
+  "schema": "release-envelope-v1",
+  "envelope_id": "csl-observatory/v1.13.3",
+  "hub": "OBS-T correction-event corpus — CDSL error-typology language resource",
+  "release_kind": "run",
+  "release_tag": "v1.13.3",
+  "created": "2026-09-09",
+  "authored_by": "H4257 (OxAlpha, opencode/z-ai/glm-5.3-flash) — release-envelope-v1 cross-repo adoption (csl-observatory); spec: Uprava docs/SPEC_RELEASE_ENVELOPE_V6_PORTFOLIO_2026.md",
+  "code_revision": {
+    "repo_url": "https://github.com/sanskrit-lexicon/csl-observatory",
+    "tag": "v1.13.3",
+    "commit": "600324298ce3e411fa7f898a502ea6bac7b5cf6c"
+  },
+  "pinned_artifacts": [
+    {
+      "path": "observatory/site/src/data/correction_events_release.csv",
+      "role": "OBS-T release table — the citable correction-event corpus consumers pin",
+      "sha256": "a27fec9e6a5b0a4d641d8c95078823c8606f8d5c31a85b88e5196a50abccfaaf",
+      "sha256_form": "raw file bytes (git-lfs oid — this file is filter=lfs; the digest equals its LFS pointer's `oid sha256:` and `git lfs ls-files`)"
+    },
+    {
+      "path": "observatory/site/src/data/correction_events_release.meta.json",
+      "role": "release manifest — record count, temporal-split stats, generation timestamp",
+      "sha256": "1dec6baf8dd0aaab60c91a889ce4e567d8fdea7f028aa32fa60e3f9fc1ddf1a5",
+      "sha256_form": "raw file bytes (no CRLF present)"
+    }
+  ],
+  "source_pins": [
+    {
+      "dataset": "obs-t-correction-events",
+      "source_repo": "https://github.com/sanskrit-lexicon/csl-observatory",
+      "source_path": "observatory/site/src/data/correction_events_final.csv",
+      "pin_commit": "600324298ce3e411fa7f898a502ea6bac7b5cf6c",
+      "pin_rule": "the code_revision.commit itself (source lives in this repo, self-pin per the kosha pilot convention)",
+      "sha256": "092528e4738f1ae1acebe06a6edc1863e4bea365de377b352b90ab3c2aa382be",
+      "sha256_form": "raw file bytes (git-lfs oid — this file is filter=lfs; the pin recomputes from the commit's LFS pointer, not a working-tree read)"
+    }
+  ],
+  "output_digests": {
+    "carried_in": "observatory/site/src/data/correction_events_release.meta.json",
+    "note": "The release asset's digest is restated here from a direct recompute of the pinned CSV, so a consumer can verify without trusting meta.json beyond its own pin digest.",
+    "datasets": {
+      "obs-t-correction-events": {
+        "release_asset": "correction_events_release.csv",
+        "sha256": "a27fec9e6a5b0a4d641d8c95078823c8606f8d5c31a85b88e5196a50abccfaaf",
+        "rows": 52498,
+        "size_bytes": 62140440
+      }
+    }
+  },
+  "config": {
+    "source_manifest": "observatory/site/src/data/correction_events_final.csv",
+    "pipeline": "scripts/obs_t_release.py",
+    "selection_rule": "all rows in correction_events_final.csv; a `split` column is assigned by calendar year (test >= 2025, dev = 2023-2024, train <= 2022)",
+    "tier_filter": "public-only; released identities are public canonical aliases or stable pseudonyms per DATA_LICENSE.md and docs/DATASHEET.md — raw form-submit email addresses are excluded (enforced by scripts/obs_t_regression.py's identity-redaction check)",
+    "digest_form": "correction_events_release.csv and correction_events_final.csv are git-lfs (filter=lfs -text) — their sha256 is the raw-byte LFS content oid, unaffected by any text/eol filter; correction_events_release.meta.json is a normal LF text file, digested as raw bytes (identical to lf-canonical for that file)",
+    "frozen_at": "2026-06-12T10:02:10.164698+00:00 (meta.json generatedAt; the pinned bytes are unchanged since commit 8f87b92df507239d8f40c645655ffec0184a66a1, 2026-07-27, and identical in the v1.13.3 tree)",
+    "checkout_warnings": "correction_events_release.csv and correction_events_final.csv contain literal CRLF byte sequences inside quoted data cells; irrelevant to their digest since both are git-lfs and pinned by raw-byte oid, not by an eol-normalised form",
+    "out_of_scope": "the underlying csl-orig git-history mining (2014-03-18 through the build's csl-orig snapshot; see docs/DATASHEET.md) is a multi-commit range mine, not a single-file/single-commit pin, and is not represented as a source_pins entry — only the immediate, self-contained input (correction_events_final.csv) is pinned"
+  },
+  "tool_versions": {
+    "builder": "scripts/obs_t_release.py at code_revision.commit",
+    "envelope_checker": "scripts/envelope_check.py — stdlib-only, Python >= 3.9",
+    "model_note": "OBS-T rows are mined/redacted by scripts/build_correction_events.py and the obs_t_* pipeline, not model-generated; the envelope's prose was authored by H4257 (OxAlpha, opencode/z-ai/glm-5.3-flash) and every number in it is recomputed by envelope_check.py"
+  },
+  "licence": {
+    "code": "GPL-3.0 (LICENSE)",
+    "data": "CC-BY-4.0 (DATA_LICENSE.md) — covers correction_events_release.csv, correction_events_release.meta.json, data/schema/correction-event.schema.json, obs_t_* aggregates, and validation/ samples",
+    "per_dataset": {
+      "obs-t-correction-events": "CC-BY-4.0"
+    },
+    "restricted_rows": "none — the OBS-T release excludes raw form-submit email addresses by design (identity redaction enforced by scripts/obs_t_regression.py); no restricted tier exists for this dataset"
+  },
+  "checks": [
+    {
+      "id": "CHK-1-schema",
+      "desc": "envelope carries every release-envelope-v1 required field with a non-empty value",
+      "result": "pass",
+      "ran_at": "2026-09-09",
+      "evidence": "scripts/envelope_check.py run on the authored envelope"
+    },
+    {
+      "id": "CHK-2-release-pin",
+      "desc": "sha256 of the pinned release CSV + meta.json recompute (LF-canonical / raw) to the recorded pin digests",
+      "result": "pass",
+      "ran_at": "2026-09-09",
+      "evidence": "scripts/envelope_check.py CHK-2 (2/2 pinned artifacts)"
+    },
+    {
+      "id": "CHK-3-output-parity",
+      "desc": "release_asset sha256/rows/size_bytes in output_digests match a direct recompute of the pinned CSV and meta.json's recordCount",
+      "result": "pass",
+      "ran_at": "2026-09-09",
+      "evidence": "scripts/envelope_check.py CHK-3 (1/1 dataset, 52,498 rows)"
+    },
+    {
+      "id": "CHK-4-source-pin",
+      "desc": "the self-referenced source (correction_events_final.csv) at code_revision.commit digests to the recorded sha256",
+      "result": "pass",
+      "ran_at": "2026-09-09",
+      "evidence": "scripts/envelope_check.py CHK-4 (1/1 resolved, 1/1 match)"
+    },
+    {
+      "id": "CHK-5-code-revision",
+      "desc": "code_revision.commit exists in this repo and matches the v1.13.3 tag",
+      "result": "pass",
+      "ran_at": "2026-09-09",
+      "evidence": "scripts/envelope_check.py CHK-5 / git rev-list -n1 v1.13.3"
+    },
+    {
+      "id": "CHK-6-release-regression",
+      "desc": "the repo's own release safety gate (schema drift, identity redaction, git-source-path accounting) passes independently of the envelope",
+      "result": "pass",
+      "ran_at": "2026-09-09",
+      "evidence": "python scripts/obs_t_regression.py — OK release rows: 52,498; OK git source paths: 28,057 entry-file rows; OK diff pairing counters present; OK no email-shaped released identities; OK schema columns match release CSV; OK human-gated validation commands documented"
+    }
+  ],
+  "review": [
+    {
+      "reviewer": "scripts/obs_t_regression.py release safety gate",
+      "verdict": "schema/identity/provenance invariants hold on the current v1.13.3 tree",
+      "date": "2026-09-09"
+    },
+    {
+      "reviewer": "docs/DATASHEET.md authoring + human-gated gold-sample scoring (validation/gold_sample.csv, validation/gold_metrics.json)",
+      "verdict": "390 annotated events scored, accuracy 0.29 overall (derived 0.486 / inferred 0.061) — recorded as the human-gated validation baseline, not a pass/fail gate",
+      "date": "2026-06-29"
+    },
+    {
+      "reviewer": "H4257 envelope authoring (OxAlpha, opencode/z-ai/glm-5.3-flash)",
+      "verdict": "envelope authored and mechanically verified; every digest recomputed from bytes, not copied from prose",
+      "date": "2026-09-09"
+    }
+  ],
+  "citation": {
+    "concept_doi": "10.5281/zenodo.21346705",
+    "version_doi": "10.5281/zenodo.21965649",
+    "cff": "CITATION.cff",
+    "policy": "DATA_LICENSE.md"
+  },
+  "publication_state": {
+    "state": "published",
+    "zenodo_archived": true,
+    "github_release": "https://github.com/sanskrit-lexicon/csl-observatory/releases/tag/v1.13.3",
+    "note": "the OBS-T dataset DOI (10.5281/zenodo.21346705) is versioned independently of the repo's vX.Y.Z code tags; this envelope pins the v1.13.3 code_revision under which the currently-committed release bytes live"
+  }
+}
