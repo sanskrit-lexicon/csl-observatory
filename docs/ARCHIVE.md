@@ -20,7 +20,7 @@ that is no longer in scope. Kept as reference; superseded by the active doc.
 | Archived | Superseded by (active) |
 |---|---|
 | [`OBSERVATORY_DESIGN_LEGACY_BROAD_METRICS.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/OBSERVATORY_DESIGN_LEGACY_BROAD_METRICS.md) | [`OBSERVATORY_DESIGN.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/OBSERVATORY_DESIGN.md) |
-| [`OBSERVATORY_ROADMAP_LEGACY_BROAD_METRICS.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/OBSERVATORY_ROADMAP_LEGACY_BROAD_METRICS.md) | [`OBSERVATORY_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/OBSERVATORY_ROADMAP.md) |
+| [`OBSERVATORY_ROADMAP_LEGACY_BROAD_METRICS.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/archive/OBSERVATORY_ROADMAP_LEGACY_BROAD_METRICS.md) | [`OBSERVATORY_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/OBSERVATORY_ROADMAP.md) |
 | [`PAPER_1_OUTLINE_LEGACY_BROAD_METRICS.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/PAPER_1_OUTLINE_LEGACY_BROAD_METRICS.md) | [`PAPER_1_OUTLINE.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/PAPER_1_OUTLINE.md) |
 
 ## Moved to `csl-atlas` (dictionary-structure research)
