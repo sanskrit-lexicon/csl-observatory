@@ -49,6 +49,21 @@ def write_json(path, obj):
         json.dump(obj, f, ensure_ascii=False, indent=1)
 
 
+def link_input(src, dst):
+    """Mirror a read-only input into the sandbox: symlink, else hardlink,
+    else copy. Windows without symlink privilege (no Dev Mode / elevation)
+    rejects os.symlink with WinError 1314; both inputs are read-only for
+    obs_t_gold.py, so a hardlink — or a plain copy as the last resort —
+    carries identical bytes and identical semantics."""
+    try:
+        os.symlink(src, dst)
+    except OSError:
+        try:
+            os.link(src, dst)
+        except OSError:
+            shutil.copy(src, dst)
+
+
 sandbox = ''  # set by main() before run() is ever called
 
 
@@ -63,12 +78,12 @@ def main():
         os.makedirs(os.path.join(sandbox, 'reports'))
         obs_data = os.path.join(sandbox, 'observatory', 'site', 'src', 'data')
         os.makedirs(obs_data)
-        os.symlink(os.path.join(ROOT, 'observatory', 'site', 'src', 'data',
+        link_input(os.path.join(ROOT, 'observatory', 'site', 'src', 'data',
                                 'correction_events_final.csv'),
                    os.path.join(obs_data, 'correction_events_final.csv'))
         # the H1494 id crosswalk too — --score's auto-join resolves old hex ids
         # through it, so the sandbox must carry the same bytes
-        os.symlink(os.path.join(ROOT, 'observatory', 'site', 'src', 'data',
+        link_input(os.path.join(ROOT, 'observatory', 'site', 'src', 'data',
                                 'event_id_crosswalk_v1.csv'),
                    os.path.join(obs_data, 'event_id_crosswalk_v1.csv'))
         shutil.copy(os.path.join(HERE, 'obs_t_gold.py'),
