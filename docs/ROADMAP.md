@@ -1,9 +1,12 @@
 # CDSL Observatory: One-Year Maintainer Roadmap
 
-_Created: 30-05-2026 · Last updated: 05-09-2026_
+_Created: 30-05-2026 · Last updated: 24-09-2026_
 
-Last updated: 2026-08-27
+Last updated: 2026-09-24
 Horizon: 2026-06 to 2027-06
+
+> **Truth-pass 24-09-2026 (OxAlpha `opencode/z-ai/glm-5.3-flash`, [H5363](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5363-OxAlpha_csl-observatory_rm-verdict-roadmap_24.09.26.md), roadmap close-out wave 1 / epic E015). Verdict: REFRESH.**
+> Live unminted work remains, so the file stays active: RH7 and SC1 are real, dated, unshipped and covered by no live H### (registry-checked 24-09-2026). Live probes 24-09: `csl-inflect`, `hwnorm2` and `sanskrit-lexicon.github.io` all still carry no repo description (RH7 live); `temp_corrections_ap90` and `temp_corrections_mw` still hold one open funderburkjim issue each (RH3 gate intact). The «Next Implementation Session» section is rewritten below as **What Is Left** gated checkboxes; each human gate has one dated `MG @DO`/`@WAITING` row in [Uprava GTD_NEXT_ACTIONS.md](https://github.com/gasyoun/Uprava/blob/main/GTD_NEXT_ACTIONS.md) and the checkbox points at it (rulings 9–10 of the 21-09-2026 close-out grill). Everything already `done` in the tables below stays as the shipped record.
 
 > **Truth-pass 27-08-2026 (Opus 5 `claude-opus-5`, [H3002](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3002-Opus_multi_stale-roadmap-s4-cologne-ask-replan_17.08.26.md), stale-roadmap slice 4).**
 > Statuses only — no new items, no re-scoping. Two Q3 rows (RH1, RH3) still read `blocked`
@@ -136,25 +139,52 @@ These are valuable but not first-year blockers:
 - Dictionary-content roadmaps in `csl-atlas` and standards/export work in
   `csl-standards`.
 
-## Next Implementation Session
+## What Is Left (gated — rewritten 24-09-2026, H5363)
 
-**Rewritten 27-08-2026.** Steps 1 and 2 previously asked for the license-matrix
-and cleanup-candidate approvals — both of which MG granted on **2026-06-17**, so
-the file's own opening instruction had been pointing the next session at a
-decision that already existed for two months. What is actually left:
+The 27-08 section below in the history asked for approvals MG had already
+granted; this rewrite keeps only what actually remains. Each gate is one dated
+`MG @DO` / `MG @WAITING` row in
+[GTD_NEXT_ACTIONS.md](https://github.com/gasyoun/Uprava/blob/main/GTD_NEXT_ACTIONS.md);
+the checkbox points at it. Registry check 24-09-2026: no live H### covers any
+row here; the five `done`/`shipped`-side rows (RH1/2/4/5/6, SC2–SC6, AR2/AR4,
+PR2/PR3/PR5) are closed in the tables above and stay as the record.
 
-1. **RH7 — three descriptions.** `gh repo edit sanskrit-lexicon/<repo> --description "…"`
-   for `csl-inflect`, `hwnorm2`, and `sanskrit-lexicon.github.io`, then re-run
-   `scripts/repo_health.py`. The smallest open item on this roadmap.
-2. **RH3 — nothing for us.** The two unarchived `temp_corrections_*` repos wait
-   on funderburkjim closing his own open issues; re-run `scripts/rh3_archive.py`
-   once they are clear. Do not force it.
-3. **AR1/AR3 — the real engineering.** Both are `active` and both stop at the
-   same wall: the live-server rehearsal (plan steps 7–9 of
-   `docs/REFRESH_SCRIPT_MODERNIZATION_PLAN.md`) and the scheduled-refresh
-   credential hardening need Cologne server access (C2), not more code.
-4. **Control surface** for the monthly review, unchanged:
-   `docs/WEEKLY_MAINTAINER_WORK_PLAN_2026-06-13.md`, `/ops-command`,
-   `/repository-risk`, `/taxonomy-triage`, `/community-continuity`.
+1. [ ] **RH7 — three repo descriptions** (owner MG, due 2026-09-30, probed live
+   24-09: still missing) → GTD @DO 24-09-2026. `gh repo edit
+   sanskrit-lexicon/csl-inflect --description "…"`, same for `hwnorm2` and
+   `sanskrit-lexicon.github.io`, then `python scripts/repo_health.py` and note
+   the regeneration date here.
+2. [ ] **SC1 — contributor identity worksheet** (owner MG, was due 2026-09-15,
+   overdue) → GTD @DO 24-09-2026. Confirm names/ORCIDs in
+   `scripts/contributors_map.json` / `reports/contributor_identity.md` only
+   where contributors consented; triage the unknowns.
+3. [ ] **RH3 — archive the last two `temp_corrections_*` repos** (gate:
+   funderburkjim, probed 24-09: one open issue each in
+   `temp_corrections_ap90` and `temp_corrections_mw`) → GTD @WAITING 24-09-2026.
+   Nothing to do until he closes his own issues; then re-run
+   `scripts/rh3_archive.py`. Do not force it (decision of 2026-06-19 stands).
+4. [ ] **AR1 — live-server rehearsal, plan steps 7–9 of
+   `docs/REFRESH_SCRIPT_MODERNIZATION_PLAN.md`** (gate: Cologne server access
+   C2, not yet granted) → GTD @WAITING 24-09-2026. Code side is shipped:
+   [csl-pywork#68](https://github.com/sanskrit-lexicon/csl-pywork/pull/68)
+   merged 14-07-2026. No more code — do not mint an agent unit for this.
+5. [ ] **AR3 — scheduled refresh + credential hardening** (same C2 wall) →
+   GTD @WAITING 24-09-2026. The local refresh runner exists (AR3 acceptance
+   first half); only the scheduled-workflow/credentials half waits on access.
+6. [ ] **2027 sections — PR1, PR4, OT1–OT4** stay `scheduled` at their own
+   dates in the tables above (real future triggers, not gates); no GTD rows
+   until their windows open. AR5 remains a standing practice (regression gates
+   exist — e.g. H5221's generative acceptance test, merged PR #226), not a
+   discrete deliverable.
+
+Control surface for the monthly review, unchanged:
+`docs/WEEKLY_MAINTAINER_WORK_PLAN_2026-06-13.md`, `/ops-command`,
+`/repository-risk`, `/taxonomy-triage`, `/community-continuity`.
+
+_History — «Next Implementation Session» as rewritten 27-08-2026:_ steps 1 and
+2 previously asked for the license-matrix and cleanup-candidate approvals —
+both of which MG granted on **2026-06-17**, so the file's own opening
+instruction had been pointing the next session at a decision that already
+existed for two months.
 
 _Dr. Mārcis Gasūns_
