@@ -5,7 +5,7 @@ _Created: 10-09-2026 · Last updated: 10-09-2026_
 **Surface:** [csl-observatory `/story`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/observatory/site/src/story.md)
 (Observable Framework) · G5 in [OBSERVATORY_ROADMAP.md](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/OBSERVATORY_ROADMAP.md) ·
 **Template:** [SCROLLYTELLING_STORYBOARD_TEMPLATE.md](https://github.com/gasyoun/Uprava/blob/main/docs/SCROLLYTELLING_STORYBOARD_TEMPLATE.md)
-**Status:** awaiting MG read. MG ruling 10-09-2026: **full scrolly** (sticky chart + steps).
+**Status:** storyboard approved (MG виза 14-09-2026) and implemented — sticky-figure scrolly shipped in H4524 (18-09-2026). Note: the page derives every number live from the CSVs, so figures drifted from this mint-time table (backlog now 1,743→807, silent 188, bus factor 39.3%, authors peak 2026:12 with 2021:11 the git-era high) — the QA column (number == cited CSV) is the binding check, and it passes by construction.
 
 ## Goal
 
