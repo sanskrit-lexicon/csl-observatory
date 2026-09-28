@@ -1,18 +1,18 @@
 {
   "commits_by_year": {
-    "2014": 75,
-    "2015": 168,
-    "2016": 204,
-    "2017": 240,
-    "2018": 148,
+    "2014": 84,
+    "2015": 177,
+    "2016": 376,
+    "2017": 276,
+    "2018": 152,
     "2019": 417,
-    "2020": 619,
-    "2021": 1566,
+    "2020": 631,
+    "2021": 1705,
     "2022": 707,
     "2023": 580,
     "2024": 620,
     "2025": 873,
-    "2026": 7100
+    "2026": 7212
   },
   "commits_by_year_per_repo": {
     "2014": {
@@ -20,6 +20,7 @@
       "COLOGNE": 13,
       "SCH": 11,
       "VCP": 10,
+      "MWS": 9,
       "WIL": 5,
       "PWG": 4,
       "DCS": 4,
@@ -32,6 +33,7 @@
       "hwnorm1": 45,
       "sanskrit-lexicon.github.io": 17,
       "WIL": 14,
+      "MWS": 9,
       "csl-santam": 8,
       "Wil-YAT": 6,
       "COLOGNE": 3,
@@ -41,6 +43,7 @@
       "GRA": 1
     },
     "2016": {
+      "CORRECTIONS": 168,
       "alternateheadwords": 66,
       "hwnorm1": 44,
       "PWK": 43,
@@ -48,6 +51,7 @@
       "VCP": 9,
       "WIL": 7,
       "VEI": 6,
+      "MWS": 4,
       "MW72": 4,
       "ApteES": 3,
       "BHS": 3,
@@ -55,12 +59,13 @@
       "sanskrit-lexicon.github.io": 2
     },
     "2017": {
+      "CORRECTIONS": 84,
       "cologne-stardict": 75,
-      "CORRECTIONS": 52,
       "alternateheadwords": 34,
       "COLOGNE": 29,
       "hwnorm1": 28,
       "PWG": 17,
+      "MWS": 4,
       "SCH": 3,
       "ApteES": 1,
       "ACC": 1
@@ -70,6 +75,7 @@
       "csl-apidev": 34,
       "CORRECTIONS": 22,
       "csl-doc": 15,
+      "MWS": 4,
       "rvlinks": 4,
       "PWG": 2,
       "PWK": 2,
@@ -104,6 +110,7 @@
       "SKD": 18,
       "hwnorm1": 15,
       "CAE": 15,
+      "MWS": 12,
       "VCP": 11,
       "rvlinks": 9,
       "cologne-stardict": 8,
@@ -128,6 +135,7 @@
     "2021": {
       "csl-orig": 392,
       "cologne-stardict": 260,
+      "MWS": 142,
       "csl-pywork": 106,
       "csl-devanagari": 101,
       "csl-json": 86,
@@ -157,7 +165,6 @@
       "csl-doc": 4,
       "hwnorm2": 4,
       "INM": 4,
-      "MWS": 3,
       "ApteES": 3,
       "BHS": 3,
       "csl-inflect": 2,
@@ -267,23 +274,23 @@
       "csl-doc": 1
     },
     "2026": {
-      "csl-orig": 767,
-      "csl-atlas": 671,
-      "csl-corrections": 602,
-      "csl-observatory": 579,
-      "cologne-stardict": 417,
+      "csl-orig": 775,
+      "csl-atlas": 725,
+      "csl-corrections": 615,
+      "csl-observatory": 594,
+      "cologne-stardict": 424,
       "MWS": 269,
+      "csl-standards": 258,
       "csl-apidev": 256,
-      "csl-standards": 255,
       "csl-guides": 220,
       "csl-app": 214,
-      "csl-pywork": 189,
+      "csl-pywork": 191,
       "AP": 167,
-      "PWG": 141,
+      "PWG": 144,
       "BEN": 139,
       "sanskrit-util": 118,
       "PUI": 94,
-      "csl-devanagari": 74,
+      "csl-devanagari": 79,
       "GRA": 72,
       "WIL": 67,
       "PWK": 62,
@@ -300,10 +307,10 @@
       "BOP": 42,
       "SCH": 41,
       "AP90": 41,
+      "MWinflect": 39,
       "KRM": 39,
       "CAE": 38,
       "VEI": 36,
-      "MWinflect": 36,
       "MCI": 35,
       "STC": 35,
       "INM": 35,
@@ -317,7 +324,7 @@
       "DCS": 31,
       "csl-newsletter": 31,
       "ACC": 30,
-      "mw-dev": 30,
+      "mw-dev": 28,
       "MW72": 27,
       "csl-inflect": 27,
       "sanskrit-lexicon.github.io": 26,
@@ -341,8 +348,8 @@
       "IEG": 14,
       "csl-whitroot": 13,
       "PD": 13,
+      "sanskrit-fonts": 12,
       "csl-sqlite": 12,
-      "sanskrit-fonts": 11,
       "cologne-hugo": 11,
       "ArabicInSanskrit": 10,
       "temp_corrections_ap90": 10,
@@ -366,7 +373,7 @@
     "2023": 534,
     "2024": 372,
     "2025": 1169,
-    "2026": 828
+    "2026": 832
   },
   "issues_closed_by_year": {
     "2014": 65,
@@ -381,6 +388,6 @@
     "2023": 542,
     "2024": 381,
     "2025": 213,
-    "2026": 1724
+    "2026": 1732
   }
 }

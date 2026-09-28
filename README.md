@@ -3,7 +3,7 @@
 _Created: 07-05-2026 · Last updated: 24-09-2026_
 
 > **Live observatory for 13 years of Cologne Digital Sanskrit Lexicon (CDSL).**
-> Tracking 86 repos, 9,931 issues+PRs, 13,317 commits, and 73 contributors since 2014.
+> Tracking 86 repos, 10,039 issues+PRs, 13,810 commits, and 72 contributors since 2014.
 
 ## What this is
 
@@ -106,9 +106,9 @@ Install: `git clone` that repo, then `cp .claude/commands/*.md ~/.claude/command
 | Metric | Value |
 |---|---|
 | Repos tracked | 86 |
-| Issues + PRs (lifetime) | 9,931 |
-| Commits since 2014 | 13,317 |
-| Distinct human contributors | 73 |
+| Issues + PRs (lifetime) | 10,039 |
+| Commits since 2014 | 13,810 |
+| Distinct human contributors | 72 |
 | Contribution concentration | core trio = 98.0%; 67/76 repos bus factor 1 |
 | Most active repo | `csl-orig` (the git-based correction workflow) |
 | Peak commit year | 2026 (2,519 commits) |

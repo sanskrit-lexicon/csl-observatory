@@ -22,9 +22,9 @@ _Created: 07-05-2026 · Last updated: 05-09-2026_
 | Metric | Value |
 |---|---:|
 | Repositories tracked | 86 |
-| Issues + PRs (lifetime) | 9,931 |
-| Commits since 2014 | 13,317 |
-| Distinct human contributors | 73 |
+| Issues + PRs (lifetime) | 10,039 |
+| Commits since 2014 | 13,810 |
+| Distinct human contributors | 72 |
 | Span | 13 years (2014–2026) |
 | OBS-T correction corpus | 52,498 events across 43 dictionaries |
 
