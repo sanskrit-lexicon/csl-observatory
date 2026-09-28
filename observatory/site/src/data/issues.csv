@@ -2206,6 +2206,9 @@ PWG,235,pwg_ru_coverage: scheduled refresh,closed,2026-09-06T00:01:37Z,2026-09-0
 PWG,236,"docs(claude): H4578 truth refresh — dead-pointer drop (pwgxml repo + Cologne zip), date 13-09-2026",open,2026-09-13T02:01:00Z,,gasyoun,,,0,PR
 PWG,237,Add root AGENTS.md agent-entrypoint stub (H4634),closed,2026-09-13T04:44:22Z,2026-09-18T14:00:30Z,gasyoun,,,0,PR
 PWG,238,makeabbrv.sh: plain test syntax and quoting,closed,2026-09-15T05:48:58Z,2026-09-15T06:18:01Z,gasyoun,,,0,PR
+PWG,239,handoffs: H5465+H5466 move in from Uprava,closed,2026-09-24T15:50:11Z,2026-09-24T15:50:17Z,gasyoun,,,0,PR
+PWG,240,PWG ls abbreviations: full-auto diff of the Andhrabharati update vs CDSL pwgbib (674 added / 832 removed / 215 unknowns),open,2026-09-24T15:59:22Z,,gasyoun,,,1,issue
+PWG,241,"H5465: execution record — 215 additions + defect doc + upstream PR landed, kosha pending",closed,2026-09-24T18:47:42Z,2026-09-24T18:48:31Z,gasyoun,,,0,PR
 PWK,1,Implement Fuzzy-Found Errors,open,2014-09-02T05:45:17Z,,gasyoun,content-enhancement|medium,Major Enhancements,3,issue
 PWK,2,Sigla,open,2014-09-16T00:26:22Z,,gasyoun,markup|minor,Structured Data,1,issue
 PWK,3,Sanskrit-Wörterbuch,closed,2014-09-16T00:27:38Z,2014-09-16T17:02:54Z,gasyoun,content-enhancement|medium,Major Enhancements,1,issue
@@ -2975,7 +2978,7 @@ csl-corrections,115,User emails - awk command,closed,2026-02-04T04:19:00Z,2026-0
 csl-corrections,116,List of hyphenated words,closed,2026-02-15T23:56:55Z,2026-05-01T14:10:15Z,drdhaval2785,deferred|text-correction|medium,Digitization Quality,0,issue
 csl-corrections,117,List of separate words - which Scott wants to join,closed,2026-02-16T05:31:28Z,2026-02-16T16:27:21Z,drdhaval2785,batch|text-correction|medium,Digitization Quality,5,issue
 csl-corrections,118,List of words where hyphen is suggested to be added,closed,2026-02-16T06:37:57Z,2026-05-01T14:10:15Z,drdhaval2785,deferred|text-correction|medium,Digitization Quality,0,issue
-csl-corrections,119,Sanskrit Questions for Andhrabharati (Part-7),open,2026-03-03T09:59:06Z,,aumsanskrit,question|minor,Structured Data,245,issue
+csl-corrections,119,Sanskrit Questions for Andhrabharati (Part-7),open,2026-03-03T09:59:06Z,,aumsanskrit,question|minor,Structured Data,253,issue
 csl-corrections,120,Missing vacana marks,open,2026-04-02T18:48:35Z,,drdhaval2785,deferred|markup|minor|tech-debt,Structured Data,1,issue
 csl-corrections,121,Scott 20260203 batch progress,closed,2026-04-02T18:49:28Z,2026-04-03T04:22:11Z,drdhaval2785,text-correction|medium,Digitization Quality,1,issue
 csl-corrections,122,A few uncertain entries,closed,2026-04-03T04:46:04Z,2026-04-03T04:47:25Z,drdhaval2785,question|minor,Structured Data,2,issue
@@ -3161,16 +3164,16 @@ csl-corrections,309,Daily Corrections - 2026-07-18,closed,2026-07-19T01:57:12Z,2
 csl-corrections,310,Daily Corrections - 2026-07-19,closed,2026-07-20T03:20:57Z,2026-08-04T13:17:48Z,github-actions[bot],daily-corrections|text-correction|minor,Digitization Quality,0,issue
 csl-corrections,311,H1393: AGENTS.md org-context block + operational-hazard pointer,closed,2026-07-20T13:33:44Z,2026-07-20T13:45:11Z,gasyoun,,,0,PR
 csl-corrections,312,Daily Corrections - 2026-07-20,closed,2026-07-21T01:56:08Z,2026-08-04T13:24:20Z,github-actions[bot],daily-corrections,,0,issue
-csl-corrections,313,Daily Corrections - 2026-07-21,open,2026-07-22T01:55:06Z,,github-actions[bot],daily-corrections,,0,issue
-csl-corrections,314,Daily Corrections - 2026-07-22,open,2026-07-23T02:03:16Z,,github-actions[bot],daily-corrections,,0,issue
-csl-corrections,315,Daily Corrections - 2026-07-23,open,2026-07-24T01:58:14Z,,github-actions[bot],daily-corrections,,0,issue
+csl-corrections,313,Daily Corrections - 2026-07-21,closed,2026-07-22T01:55:06Z,2026-09-26T04:46:41Z,github-actions[bot],daily-corrections,,0,issue
+csl-corrections,314,Daily Corrections - 2026-07-22,closed,2026-07-23T02:03:16Z,2026-09-26T04:54:31Z,github-actions[bot],daily-corrections,,0,issue
+csl-corrections,315,Daily Corrections - 2026-07-23,closed,2026-07-24T01:58:14Z,2026-09-26T05:23:44Z,github-actions[bot],daily-corrections,,0,issue
 csl-corrections,316,fix(security): CLI-only gate for app/testgit.php (H1523),closed,2026-07-24T02:08:49Z,2026-07-24T02:11:05Z,gasyoun,,,0,PR
 csl-corrections,317,ai-wip: batch_pending AP90/MW72/PWG change files,closed,2026-07-24T20:00:02Z,2026-07-24T20:00:28Z,gasyoun,,,0,PR
-csl-corrections,318,Daily Corrections - 2026-07-24,open,2026-07-25T01:57:21Z,,github-actions[bot],daily-corrections,,0,issue
-csl-corrections,319,Daily Corrections - 2026-07-25,open,2026-07-26T02:02:22Z,,github-actions[bot],daily-corrections,,0,issue
-csl-corrections,320,Daily Corrections - 2026-07-26,open,2026-07-27T02:09:36Z,,github-actions[bot],daily-corrections,,0,issue
-csl-corrections,321,Daily Corrections - 2026-07-27,open,2026-07-28T01:50:02Z,,github-actions[bot],daily-corrections,,0,issue
-csl-corrections,322,Daily Corrections - 2026-07-28,open,2026-07-29T01:53:22Z,,github-actions[bot],daily-corrections,,0,issue
+csl-corrections,318,Daily Corrections - 2026-07-24,closed,2026-07-25T01:57:21Z,2026-09-26T05:39:46Z,github-actions[bot],daily-corrections,,0,issue
+csl-corrections,319,Daily Corrections - 2026-07-25,closed,2026-07-26T02:02:22Z,2026-09-26T12:38:58Z,github-actions[bot],daily-corrections,,0,issue
+csl-corrections,320,Daily Corrections - 2026-07-26,closed,2026-07-27T02:09:36Z,2026-09-26T12:51:34Z,github-actions[bot],daily-corrections,,0,issue
+csl-corrections,321,Daily Corrections - 2026-07-27,closed,2026-07-28T01:50:02Z,2026-09-26T12:56:39Z,github-actions[bot],daily-corrections,,0,issue
+csl-corrections,322,Daily Corrections - 2026-07-28,closed,2026-07-29T01:53:22Z,2026-09-26T12:58:41Z,github-actions[bot],daily-corrections,,0,issue
 csl-corrections,323,add changelog duplicate-entry guard (CI),closed,2026-07-29T18:50:55Z,2026-07-30T13:19:33Z,gasyoun,,,0,PR
 csl-corrections,324,Daily Corrections - 2026-07-29,open,2026-07-30T01:45:48Z,,github-actions[bot],daily-corrections,,0,issue
 csl-corrections,325,Daily Corrections - 2026-07-30,open,2026-07-31T02:03:33Z,,github-actions[bot],daily-corrections,,0,issue
@@ -3258,6 +3261,9 @@ csl-corrections,406,chore: add .github/CODEOWNERS (default @gasyoun),closed,2026
 csl-corrections,407,Daily Corrections - 2026-09-20,open,2026-09-21T02:38:23Z,,github-actions[bot],daily-corrections,,0,issue
 csl-corrections,408,Daily Corrections - 2026-09-21,open,2026-09-22T02:40:09Z,,github-actions[bot],daily-corrections,,0,issue
 csl-corrections,409,Daily Corrections - 2026-09-22,open,2026-09-23T02:40:44Z,,github-actions[bot],daily-corrections,,0,issue
+csl-corrections,410,Daily Corrections - 2026-09-24,open,2026-09-25T02:47:00Z,,github-actions[bot],daily-corrections,,0,issue
+csl-corrections,411,Daily Corrections - 2026-09-25,open,2026-09-26T02:50:21Z,,github-actions[bot],daily-corrections,,0,issue
+csl-corrections,412,Daily Corrections - 2026-09-27,open,2026-09-28T02:52:04Z,,github-actions[bot],daily-corrections,,0,issue
 csl-devanagari,1,MW72 questions,closed,2021-09-02T18:53:28Z,2021-09-03T04:57:55Z,drdhaval2785,enhancement|minor,,27,issue
 csl-devanagari,2,LAN issues,open,2021-09-02T19:14:06Z,,drdhaval2785,question|trivial|domain:transcoding,Community,5,issue
 csl-devanagari,3,CAE issues,open,2021-09-02T19:16:32Z,,drdhaval2785,enhancement|minor|domain:transcoding,User Experience,5,issue
@@ -3710,18 +3716,24 @@ csl-observatory,218,add the pre-push silent-revert guard + CRLF-in-blob gate (H2
 csl-observatory,219,feat(release-envelope): adopt release-envelope-v1 for the OBS-T corpus (H4257),open,2026-09-09T00:15:49Z,,gasyoun,,,0,PR
 csl-observatory,220,docs: /story scrollytelling storyboard (H4524),closed,2026-09-10T16:21:30Z,2026-09-10T16:21:49Z,gasyoun,,,0,PR
 csl-observatory,221,chore(memory): scaffold committed memory store (H4547),open,2026-09-15T05:03:57Z,,gasyoun,,,0,PR
-csl-observatory,222,"feat(story): full scrollytelling upgrade — sticky figure panel, 8 beats (H4524)",open,2026-09-18T15:42:38Z,,gasyoun,,,0,PR
+csl-observatory,222,"feat(story): full scrollytelling upgrade — sticky figure panel, 8 beats (H4524)",closed,2026-09-18T15:42:38Z,2026-09-27T15:52:05Z,gasyoun,,,0,PR
 csl-observatory,223,"fix(reach): /reach Zenodo tier reports record-verified state, not stale BLOCKED boilerplate (H5164)",open,2026-09-19T19:36:48Z,,gasyoun,,,0,PR
 csl-observatory,224,A15: wire the minted Zenodo analysis-inputs dataset DOI (H5170),closed,2026-09-20T06:56:40Z,2026-09-20T06:56:43Z,gasyoun,,,0,PR
 csl-observatory,225,analysis(recapture): bound the recapture conclusions under dependent sources and unequal detectability (H5072),closed,2026-09-20T19:11:26Z,2026-09-20T20:40:53Z,gasyoun,,,0,PR
 csl-observatory,226,test(recapture): generative acceptance test catches model mutations,closed,2026-09-21T14:56:24Z,2026-09-21T15:06:20Z,gasyoun,,,0,PR
-csl-observatory,227,feat(obs-t): H5312 — blind second-annotator sheet + decisions ingest for the gold sample,open,2026-09-24T01:48:26Z,,gasyoun,,,0,PR
+csl-observatory,227,feat(obs-t): H5312 — blind second-annotator sheet + decisions ingest for the gold sample,closed,2026-09-24T01:48:26Z,2026-09-27T15:52:11Z,gasyoun,,,0,PR
 csl-observatory,228,docs(archive): archive METALEXICOGRAPHY_ROADMAP moved-tombstone into docs/archive/ (H5359),open,2026-09-24T02:58:12Z,,gasyoun,,,0,PR
 csl-observatory,229,docs(roadmap): H5360 truth-pass verdict refresh on OBSERVATORY_ROADMAP (banner + gated what-is-left),open,2026-09-24T03:02:41Z,,gasyoun,,,0,PR
-csl-observatory,230,docs(roadmap): H5363 verdict pass — REFRESH (truth-pass banner + gated what-is-left),open,2026-09-24T03:12:47Z,,gasyoun,,,0,PR
+csl-observatory,230,docs(roadmap): H5363 verdict pass — REFRESH (truth-pass banner + gated what-is-left),closed,2026-09-24T03:12:47Z,2026-09-27T15:52:21Z,gasyoun,,,0,PR
 csl-observatory,231,"H5424: restore refresh.yml cron, regenerate README/STATUS numbers",closed,2026-09-24T08:13:25Z,2026-09-24T08:13:37Z,gasyoun,,,0,PR
 csl-observatory,232,H5424 follow-up: fix README's duplicate stale Headline numbers table,closed,2026-09-24T08:19:04Z,2026-09-24T08:19:14Z,gasyoun,,,0,PR
-csl-observatory,233,fix: register missing error_recapture_lowm/calibrated catalog entries,open,2026-09-24T09:05:56Z,,gasyoun,,,0,PR
+csl-observatory,233,fix: register missing error_recapture_lowm/calibrated catalog entries,closed,2026-09-24T09:05:56Z,2026-09-24T09:13:28Z,gasyoun,,,0,PR
+csl-observatory,234,"docs(archive): H5361 verdict pass - ARCHIVE re-confirmed (moved by H2999), zero unminted prose",open,2026-09-24T09:10:07Z,,gasyoun,,,0,PR
+csl-observatory,235,data(H5465): Andhrabharati ls update vs CDSL pwgbib full-auto diff,closed,2026-09-24T15:33:04Z,2026-09-24T15:33:27Z,gasyoun,,,0,PR
+csl-observatory,236,data(H5465): 215 [Cologne Addition] pwgbib entries for the true-unknown ls strings,closed,2026-09-24T18:30:47Z,2026-09-24T18:31:35Z,gasyoun,,,0,PR
+csl-observatory,237,docs(archive): archive AGENT_ROADMAP into docs/archive/ (H5357),open,2026-09-24T21:33:20Z,,gasyoun,,,0,PR
+csl-observatory,238,docs(archive): archive LEXICOGRAPHY_ROADMAP moved-tombstone into docs/archive/ (H5358),open,2026-09-24T21:41:16Z,,gasyoun,,,0,PR
+csl-observatory,239,docs(archive): archive RESEARCH_LAYER_ROADMAP moved-tombstone into docs/archive/ (H5362),open,2026-09-24T21:43:34Z,,gasyoun,,,0,PR
 csl-orig,1,AP and PD data,closed,2019-07-23T13:37:39Z,2020-12-29T02:35:30Z,drdhaval2785,doc|question|minor,Structured Data,14,issue
 csl-orig,2,why hwextra here,closed,2019-09-10T00:20:23Z,2019-12-23T09:34:49Z,funderburkjim,text-correction|minor,Digitization Quality,7,issue
 csl-orig,3,digitization update workflow,closed,2019-09-10T00:42:05Z,2023-12-15T15:21:52Z,funderburkjim,doc|question|minor,Structured Data,6,issue
@@ -6693,6 +6705,8 @@ csl-pywork,90,Add root AGENTS.md agent-entrypoint stub (H4634),closed,2026-09-13
 csl-pywork,91,Fix v00/updateDistinctScripts.sh syntax error and redo.sh wrong-branch git pull,closed,2026-09-15T05:48:18Z,2026-09-15T06:15:15Z,gasyoun,,,0,PR
 csl-pywork,92,"docs: v00 update instructions use main, note redo.sh stop-on-failure",closed,2026-09-15T06:37:56Z,2026-09-15T06:39:17Z,gasyoun,,,0,PR
 csl-pywork,93,Update scripts now pull `main` and stop on failure (11 script fixes merged 15-09-2026),open,2026-09-15T07:01:04Z,,gasyoun,,,0,issue
+csl-pywork,94,data(pwgauth): append 215 [Cologne Addition] entries for the true-unknown PWG ls strings (H5465),closed,2026-09-24T18:32:53Z,2026-09-24T18:32:58Z,gasyoun,,,0,PR
+csl-pywork,95,"docs(changelog): 215 [Cologne Addition] pwgbib append (H5465, #94)",closed,2026-09-24T19:19:53Z,2026-09-24T19:21:15Z,gasyoun,,,0,PR
 csl-sqlite,1,[docs-pass] Add documentation files (infrastructure),open,2026-05-22T13:55:43Z,,gasyoun,documentation|minor,Developer Experience,1,issue
 csl-sqlite,2,build(deps): bump dependabot/fetch-metadata from 2 to 3,closed,2026-06-14T04:51:17Z,2026-06-14T04:52:02Z,dependabot[bot],major|dependencies|github_actions,,0,PR
 csl-sqlite,3,docs(README): describe actual dual-channel SQLite distribution (H549),closed,2026-07-10T23:47:05Z,2026-07-11T06:14:20Z,gasyoun,,,0,PR
@@ -6858,6 +6872,7 @@ csl-websanlexicon,156,"test(webtc2_parity): 200-query parity evidence for the se
 csl-websanlexicon,157,fix(H4212): drop unreachable dead code in adjust_key2_mw,closed,2026-09-06T13:01:40Z,2026-09-06T13:02:45Z,gasyoun,,,0,PR
 csl-websanlexicon,158,"docs(claude): H4577 agent-docs SLA refresh — content re-verified, dated header bump",open,2026-09-13T00:14:04Z,,gasyoun,,,0,PR
 csl-websanlexicon,159,Add root AGENTS.md agent-entrypoint stub (H4634),open,2026-09-13T04:46:13Z,,gasyoun,,,0,PR
+csl-websanlexicon,160,[bug] WIL - some definitions not being shown,open,2026-09-26T12:37:50Z,,drdhaval2785,bug|minor,,0,issue
 csl-westergaard,1,व्रथादयः -> क्र्यादयः,open,2025-08-18T17:30:34Z,,shenyileirob,enhancement|minor|domain:metadata,User Experience,0,issue
 csl-westergaard,2,build(deps): bump dependabot/fetch-metadata from 2 to 3,closed,2026-06-14T04:49:46Z,2026-06-14T04:51:08Z,dependabot[bot],major|dependencies|github_actions,,0,PR
 csl-westergaard,3,security: prevent reflected XSS via page parameter (disp/index.php),closed,2026-06-14T08:52:23Z,2026-06-14T09:02:55Z,gasyoun,,,0,PR
@@ -6958,6 +6973,7 @@ sanskrit-fonts,1,build(deps): bump dependabot/fetch-metadata from 2 to 3,closed,
 sanskrit-fonts,2,docs(README): rewrite to currently-true facts (H549),closed,2026-07-11T00:16:55Z,2026-07-11T06:17:24Z,gasyoun,,,0,PR
 sanskrit-fonts,3,add .gitattributes (eol=lf line-ending policy),closed,2026-07-27T17:51:58Z,2026-07-27T18:01:10Z,gasyoun,,,0,PR
 sanskrit-fonts,4,add/upgrade .pre-commit-config.yaml (mixed-line-ending lf),closed,2026-07-31T11:19:15Z,2026-07-31T12:30:33Z,gasyoun,,,0,PR
+sanskrit-fonts,5,H5510: README crossrow — Scharf 2023 12-font conjunct-coverage comparison as coverage authority,closed,2026-09-26T18:12:32Z,2026-09-26T18:12:53Z,gasyoun,,,0,PR
 sanskrit-lexicon.github.io,1,ci: README manual-block guard,closed,2026-06-11T09:39:41Z,2026-06-11T09:53:15Z,gasyoun,,,0,PR
 sanskrit-lexicon.github.io,2,Bump dependabot/fetch-metadata from 2 to 3,closed,2026-06-14T04:48:26Z,2026-06-14T04:48:43Z,dependabot[bot],major|dependencies|github_actions,,0,PR
 sanskrit-lexicon.github.io,3,Bump actions/checkout from 4 to 6,closed,2026-06-14T04:48:29Z,2026-06-14T04:48:59Z,dependabot[bot],major|dependencies|github_actions,,0,PR
