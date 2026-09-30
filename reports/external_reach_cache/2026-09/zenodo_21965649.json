@@ -1,0 +1,23 @@
+{
+  "id": 21965649,
+  "doi": "10.5281/zenodo.21965649",
+  "conceptdoi": "10.5281/zenodo.21346705",
+  "title": "OBS-T: CDSL Correction-Event Corpus — A Twelve-Year Longitudinal Error-Typology Dataset for Sanskrit Historical Dictionaries",
+  "created": "2026-08-16T11:24:13.472016+00:00",
+  "creators": [
+    "Gasūns, Mārcis"
+  ],
+  "files": [
+    "sanskrit-lexicon/csl-observatory-v1.13.0.zip"
+  ],
+  "stats": {
+    "downloads": 10,
+    "unique_downloads": 10,
+    "views": 70,
+    "unique_views": 63,
+    "version_downloads": 1,
+    "version_unique_downloads": 1,
+    "version_unique_views": 11,
+    "version_views": 12
+  }
+}
