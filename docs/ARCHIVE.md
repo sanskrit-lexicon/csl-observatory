@@ -46,6 +46,7 @@ roadmaps stay focused on future work.
 | Archived | Outcome |
 |---|---|
 | [`archive/OBS_T_FIX_PLAN_2026-06-12.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/archive/OBS_T_FIX_PLAN_2026-06-12.md) | OBS-T post-Codex-review fixes implemented, full pipeline rerun, regression checks passed. |
+| [`archive/AGENT_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/archive/AGENT_ROADMAP.md) | Issue-automation wave drained 2026-09-25 (verdict H5357): all four skills it planned are built; residual open items are maintainer merges / human issue closes tracked in the `sanskrit-lexicon` issue trackers. |
 
 ## Still active (not archived)
 
