@@ -190,6 +190,30 @@ CATALOG: dict[str, Entry] = {
         "Chapman capture-recapture estimates of error-prone records remaining per dictionary, from two-era overlap.",
         "Order-of-magnitude only: sequential occasions and heterogeneous catchability violate Chapman assumptions in opposite directions; estimates capped at record counts.",
     ),
+    "error_recapture_lowm.csv": Entry(
+        "obs-t recapture",
+        "scripts/lowm_estimators.py",
+        "Per candidate estimator x target dictionary (pw, mw, bur): leave-one-out and censoring-stress-test scores for whether an estimator can substitute for Chapman below the m >= 10 recapture floor (H3986).",
+        "Every strength-borrowing candidate fails the pre-registered verdict rule; a QUALIFIES/CONDITIONAL/DOES-NOT-QUALIFY verdict here says nothing about the 39 below-floor dictionaries themselves, only about whether the method transfers to them (see reports/error_recapture_lowm.md).",
+    ),
+    "error_recapture_calibrated.csv": Entry(
+        "obs-t recapture",
+        "scripts/lowm_estimators.py",
+        "Below-floor error-site estimates for dictionaries with 0 < m < 10, calibrated by the median shift measured in the lowm_estimators.py censoring stress test.",
+        "Bounded estimates for only 5 dictionaries (skd, stc, ae, mwe, inm); the other below-floor dictionaries remain unreachable (m = 0) and carry no row here.",
+    ),
+    "recapture_sensitivity.csv": Entry(
+        "obs-t recapture",
+        "scripts/recapture_sensitivity.py",
+        "Per dictionary x dependence factor gamma: the Chapman estimate re-evaluated across the preregistered gamma grid, flagged for whether it still falls inside the published 95% CI and whether it exceeds the dictionary's record count.",
+        "An ENVELOPE, not a fit: gamma is not identifiable from a two-list table, so no row here is better supported by the data than any other. The gamma = 1 row is the published estimate. Values are floored at the observed site count.",
+    ),
+    "recapture_sensitivity_controls.csv": Entry(
+        "obs-t recapture",
+        "scripts/recapture_sensitivity.py",
+        "Simulation controls behind the sensitivity envelope: independent-source recovery, heterogeneity-induced positive dependence (two mixing families), sequential removal, and the composition of the last two, each with its analytic gamma, simulated gamma, Chapman bias and nominal-95% CI coverage.",
+        "Seeded (5072), 400 replicates per cell, exact multinomial sampling. The coverage column describes the STATISTICAL interval only; its collapse under heterogeneity is the finding of the table, not a defect in it. The 'E mechanism composition' rows carry gamma_naive_product beside the true joint gamma to show the two mechanisms' factors must NOT be multiplied -- the product can invert the sign of the net bias. Control B rows carry cv_realised, which is below the nominal cv for the clipped-Gamma family; the identity holds at the realised value.",
+    ),
     "headword_key_collisions.csv": Entry(
         "dictionary inventory",
         "scripts/headword_linkage.py",

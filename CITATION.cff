@@ -31,3 +31,13 @@ keywords:
   - error typology
   - digital humanities
   - build-meta
+identifiers:
+  - identifier: "10.5281/zenodo.22853817"
+    type: "doi"
+    description: "A15 analysis-inputs dataset (GitHub maintenance ecosystem): concept DOI"
+  - identifier: "10.5281/zenodo.22853818"
+    type: "doi"
+    description: "A15 analysis-inputs dataset v1.0.0 (2026-09-20; 67-file data_index.csv catalog): version DOI"
+  - identifier: "10.5281/zenodo.21346705"
+    type: "doi"
+    description: "OBS-T correction-event corpus: concept DOI (repo-archive releases)"

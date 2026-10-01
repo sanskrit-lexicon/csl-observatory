@@ -1,9 +1,9 @@
 # csl-observatory
 
-_Created: 07-05-2026 · Last updated: 11-07-2026_
+_Created: 07-05-2026 · Last updated: 24-09-2026_
 
 > **Live observatory for 13 years of Cologne Digital Sanskrit Lexicon (CDSL).**
-> Tracking 76 repos, 5,413 issues+PRs, 9,877 commits, and 16 contributors since 2014.
+> Tracking 86 repos, 10,039 issues+PRs, 13,810 commits, and 72 contributors since 2014.
 
 ## What this is
 
@@ -28,6 +28,7 @@ The 2026-06-04 boundary cleanup is merged: dictionary-structure research belongs
 - **[Design document](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/OBSERVATORY_DESIGN.md)** — boundary-safe architecture and KPI scope
 - **[Docs archive index](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/ARCHIVE.md)** — legacy and moved-to-`csl-atlas` documents in one place
 - **[Data downloads](https://github.com/sanskrit-lexicon/csl-observatory/tree/main/observatory/site/src/data)** — every chart's source as CSV
+- **A15 analysis-inputs dataset (Zenodo)** — archived, versioned snapshot of the analysis inputs (76-repo snapshot, issue/commit ledgers, 52,498-event correction ledger): concept DOI [10.5281/zenodo.22853817](https://doi.org/10.5281/zenodo.22853817), version DOI [10.5281/zenodo.22853818](https://doi.org/10.5281/zenodo.22853818)
 - **[Runbooks](https://github.com/sanskrit-lexicon/csl-observatory/tree/main/runbook)** — the issue-taxonomy procedures applied to all active repos
 - **[Maintenance skills](https://github.com/sanskrit-lexicon/cologne-skills)** — portable Claude Code skills for org-wide security & maintenance (PHP XSS sweep · security audit · alert triage)
 - **[Contributor & work statistics](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/CONTRIBUTOR_STATS.md)** — per-contributor & per-repo commits, churn, tenure, and issues (2014–2026)
@@ -43,10 +44,10 @@ The headline picture is in **[`reports/synthesis.md`](https://github.com/sanskri
 
 | Finding | Report | Headline |
 |---|---|---|
-| Contributor concentration | [`bus_factor.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/bus_factor.md) | Core trio = 98.0%; 67/76 repos have bus factor 1; Gini 0.856 |
-| Repository health | [`repo_health.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/repo_health.md) | 41/76 repos unlicensed; 46/76 default to `master`; 5 fully clean |
-| Issue-taxonomy adoption | [`taxonomy_adoption.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/taxonomy_adoption.md) | 89% typed, 63% conformant; 92% peak in 2025; 54 stray labels |
-| Velocity & health timeline | [`velocity_timeline.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/velocity_timeline.md) | 9,877 commits; peak 11 authors/yr; backlog 1,742 (2025) → 913 (2026) |
+| Contributor concentration | [`bus_factor.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/bus_factor.md) | Core trio = 98.5%; 63/77 repos have bus factor 1; Gini 0.822 |
+| Repository health | [`repo_health.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/repo_health.md) | 6/77 repos with no license (RH3 temp/archive candidates); 1/77 default to `master`; 65/77 fully clean |
+| Issue-taxonomy adoption | [`taxonomy_adoption.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/taxonomy_adoption.md) | 86% typed, 64% fully conformant; 92% peak in 2025; 1,190 issues (21%) carry a stray label |
+| Velocity & health timeline | [`velocity_timeline.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/velocity_timeline.md) | 13,299 commits; peak 12 authors/yr (2026); backlog 1,743 (2025) → 822 (2026) |
 | Contributor identity | [`contributor_identity.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/contributor_identity.md) | 0/16 authors have a registered ORCID |
 | **Error typology (OBS-T)** | [`obs_t_typology.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_t_typology.md) | 52,498 corrections, two axes — location (sense 52.7% · markup 17.5% · headword 17.3%) × edit-type (median edit distance 2; 63% ≤2 chars); cross-dict V=0.432 |
 
@@ -100,19 +101,29 @@ Reusable [Claude Code](https://claude.com/claude-code) skills for security and m
 
 Install: `git clone` that repo, then `cp .claude/commands/*.md ~/.claude/commands/` (or symlink). These complement the issue-taxonomy [runbooks](https://github.com/sanskrit-lexicon/csl-observatory/tree/main/runbook) above.
 
-## Headline numbers (snapshot 2026-06)
+## Headline numbers (snapshot 2026-09)
 
 | Metric | Value |
 |---|---|
-| Repos tracked | 76 |
-| Issues + PRs (lifetime) | 5,413 |
-| Commits since 2014 | 9,877 |
-| Distinct human contributors | 16 |
-| Contribution concentration | core trio = 98.0%; 67/76 repos bus factor 1 |
+| Repos tracked | 86 |
+| Issues + PRs (lifetime) | 10,039 |
+| Commits since 2014 | 13,810 |
+| Distinct human contributors | 72 |
+| Contribution concentration | core trio = 98.5%; 63/77 repos bus factor 1 |
 | Most active repo | `csl-orig` (the git-based correction workflow) |
 | Peak commit year | 2026 (2,519 commits) |
 | Peak issue year | 2025 (1,178 opened) |
 | Dominant work type | `text-correction` (4,000+ across 13 years) |
+
+_The first four rows above are regenerated from `data/summary.json` by
+[`scripts/update_headline_numbers.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/update_headline_numbers.py)
+on every `refresh.yml` run. The last five (concentration, most active repo,
+peak years, dominant work type) come from `reports/bus_factor.md` /
+`reports/velocity_timeline.md`, generated by the separate
+`refresh-observatory.yml` pipeline — last successful run 2026-09-28, the first clean run since commit
+`8428ce3` (2026-09-24) registered the previously missing
+`error_recapture_lowm/calibrated` catalog entries; the bus-factor-derived
+rows now reflect the 77-repo snapshot._
 
 ## Refresh cadence
 
