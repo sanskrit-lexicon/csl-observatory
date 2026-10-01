@@ -712,9 +712,10 @@ archived 2026-05-07 snapshot.
 
 A weekly scheduled workflow
 (`.github/workflows/refresh-observatory.yml`) re-runs the pipeline on
-Monday mornings (03:00 UTC) and commits any changes; the original
-`refresh.yml` workflow is retained for manually dispatched runs of the
-legacy report tables.
+Monday mornings (03:00 UTC) and commits any changes; the legacy
+`refresh.yml` pipeline runs on its own weekly schedule (Mondays 06:00 UTC,
+queued behind the canonical refresh) and refreshes the legacy report tables
+plus the README/STATUS headline numbers.
 
 The complete data dictionary, contributor map, and reproduction instructions
 are in the repository's `README.md` and `CONTRIBUTING.md`.

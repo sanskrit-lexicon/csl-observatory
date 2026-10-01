@@ -216,7 +216,7 @@ GitHub Pages workflows after reviewing generated data and reports.
 |---|---|---|
 | `.github/workflows/refresh-observatory.yml` | Scheduled/monthly or manual fetch, transform, report regeneration, site build, Pages deploy. | Needs sufficient token permissions to fetch org data and push refresh commits. |
 | `.github/workflows/deploy.yml` | Build and deploy committed dashboard data on push/manual dispatch. | Does not fetch fresh data. |
-| `.github/workflows/refresh.yml` | Legacy manual-only `pull_data.py` / `compute_metrics.py` / `render_reports.py` path. | Kept for legacy report tables; do not schedule alongside the canonical refresh. |
+| `.github/workflows/refresh.yml` | Legacy `pull_data.py` / `compute_metrics.py` / `render_reports.py` path, re-scheduled 2026-09-24 (H5424). | Weekly cron Mondays 06:00 UTC — 3h after refresh-observatory.yml; queues behind it via the `observatory-data` concurrency group; also regenerates README/STATUS headline numbers via `update_headline_numbers.py` and commits `data reports README.md STATUS.md`. |
 | `.github/workflows/tooling-audit.yml` | Weekly Tooling Roadmap audit. | Needs `TOOLING_AUDIT_TOKEN` with `read:project` and repo access. |
 
 If automation fails because credentials are missing, update
