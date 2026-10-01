@@ -1,13 +1,15 @@
-_Created: 16-05-2026 · Last updated: 05-09-2026_
+# Lexicography Roadmap — Archived
 
-# Lexicography Roadmap Moved
+_Created: 25-09-2026 · Last updated: 25-09-2026_
 
-Date: 2026-06-03
+Archived 25-09-2026 (H5358, roadmap close-out wave 1). This path held a
+'Moved' tombstone from the 03-06-2026 boundary cleanup — the dictionary-structure
+content itself had already moved to `csl-atlas`; the moved notice is now
+preserved under `docs/archive/`.
 
-This dictionary-structure document moved to `csl-atlas` during the boundary cleanup.
+Archived copy: [docs/archive/LEXICOGRAPHY_ROADMAP.md](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/archive/LEXICOGRAPHY_ROADMAP.md)
 
-New home: https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/LEXICOGRAPHY_ROADMAP.md
+The live lexicography roadmap:
+https://github.com/sanskrit-lexicon/csl-atlas/blob/main/docs/LEXICOGRAPHY_ROADMAP.md
 
-`csl-observatory` is now reserved for GitHub/org observatory work: repositories, issues, pull requests, contributors, workflows, runbooks, and digitisation-work metrics.
-
-_Dr. Mārcis Gasūns_
+_Gasūns_
