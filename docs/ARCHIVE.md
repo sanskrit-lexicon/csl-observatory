@@ -20,7 +20,7 @@ that is no longer in scope. Kept as reference; superseded by the active doc.
 | Archived | Superseded by (active) |
 |---|---|
 | [`OBSERVATORY_DESIGN_LEGACY_BROAD_METRICS.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/OBSERVATORY_DESIGN_LEGACY_BROAD_METRICS.md) | [`OBSERVATORY_DESIGN.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/OBSERVATORY_DESIGN.md) |
-| [`OBSERVATORY_ROADMAP_LEGACY_BROAD_METRICS.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/OBSERVATORY_ROADMAP_LEGACY_BROAD_METRICS.md) | [`OBSERVATORY_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/OBSERVATORY_ROADMAP.md) |
+| [`OBSERVATORY_ROADMAP_LEGACY_BROAD_METRICS.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/archive/OBSERVATORY_ROADMAP_LEGACY_BROAD_METRICS.md) | [`OBSERVATORY_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/OBSERVATORY_ROADMAP.md) |
 | [`PAPER_1_OUTLINE_LEGACY_BROAD_METRICS.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/PAPER_1_OUTLINE_LEGACY_BROAD_METRICS.md) | [`PAPER_1_OUTLINE.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/PAPER_1_OUTLINE.md) |
 
 ## Moved to `csl-atlas` (dictionary-structure research)
@@ -32,10 +32,10 @@ moved out of the GitHub/org observatory on 2026-06-03. The files below are
 [`csl-atlas`](https://github.com/sanskrit-lexicon/csl-atlas).
 
 - [`L0_DESIGN.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/L0_DESIGN.md), [`L0_HANDOFF.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/L0_HANDOFF.md), [`L0_RESULTS.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/L0_RESULTS.md), [`L0_PATEL_ANNOTATION.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/L0_PATEL_ANNOTATION.md) — L0 convention-cladogram pipeline
-- [`LEXICOGRAPHY_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/LEXICOGRAPHY_ROADMAP.md) — lexicography roadmap; [`METALEXICOGRAPHY_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/archive/METALEXICOGRAPHY_ROADMAP.md) — archived 24-09-2026 (H5359) into `docs/archive/`
+- [`LEXICOGRAPHY_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/archive/LEXICOGRAPHY_ROADMAP.md) — archived 25-09-2026 (H5358) into `docs/archive/`; [`METALEXICOGRAPHY_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/archive/METALEXICOGRAPHY_ROADMAP.md) — archived 24-09-2026 (H5359) into `docs/archive/`
 - [`MICROSTRUCTURE-MACROSTRUCTURE.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/MICROSTRUCTURE-MACROSTRUCTURE.md), [`MICROSTRUCTURE_AND_CAREER_PLAN.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/MICROSTRUCTURE_AND_CAREER_PLAN.md) — micro/macrostructure notes
 - [`R2_FINDINGS.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/R2_FINDINGS.md), [`PAPER_SENSE_ALIGNMENT.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/PAPER_SENSE_ALIGNMENT.md) — R2 sense-alignment / sense-granularity work
-- [`RESEARCH_LAYER_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/RESEARCH_LAYER_ROADMAP.md) — research/practitioner layer plan
+- [`RESEARCH_LAYER_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/archive/RESEARCH_LAYER_ROADMAP.md) — research/practitioner layer plan; archived 25-09-2026 (H5362) into `docs/archive/`
 - [`PUBLICATIONS.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/PUBLICATIONS.md) — dictionary-paper publication plan
 
 ## Completed implementation plans
@@ -46,6 +46,7 @@ roadmaps stay focused on future work.
 | Archived | Outcome |
 |---|---|
 | [`archive/OBS_T_FIX_PLAN_2026-06-12.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/archive/OBS_T_FIX_PLAN_2026-06-12.md) | OBS-T post-Codex-review fixes implemented, full pipeline rerun, regression checks passed. |
+| [`archive/AGENT_ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/archive/AGENT_ROADMAP.md) | Issue-automation wave drained 2026-09-25 (verdict H5357): all four skills it planned are built; residual open items are maintainer merges / human issue closes tracked in the `sanskrit-lexicon` issue trackers. |
 
 ## Still active (not archived)
 

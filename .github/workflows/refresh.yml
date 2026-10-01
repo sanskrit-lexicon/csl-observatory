@@ -1,11 +1,21 @@
 name: Refresh data snapshot (legacy pipeline)
 
-# Manual-only. The canonical scheduled refresh is refresh-observatory.yml,
-# which feeds the dashboard + findings. This older pull_data/compute_metrics/
-# render_reports pipeline is kept for the legacy report tables; its schedule
-# was removed to avoid two crons racing to commit data/.
+# The canonical scheduled refresh is refresh-observatory.yml, which feeds the
+# dashboard + findings. This older pull_data/compute_metrics/render_reports
+# pipeline is kept for the legacy report tables (data/summary.json, the
+# README/STATUS headline numbers). Its schedule was removed at some point
+# between the 2026-05-07 bootstrap and 2026-06-01 to avoid two crons racing
+# to commit data/ (no removal commit/PR found in git history — the file was
+# never touched again after the initial `git log -S cron` hit, so the
+# schedule block itself was deleted by hand outside a tracked commit).
+# Restored 24-09-2026 (H5424, MG ruling: "I don't know why the cron was
+# removed, bring it back, is still show it, no need to freeze") at an offset
+# from refresh-observatory.yml's Monday 03:00 UTC slot; the shared
+# concurrency group below queues instead of racing either way.
 
 on:
+  schedule:
+    - cron: '0 6 * * 1'  # Mondays 06:00 UTC — 3h after refresh-observatory.yml
   workflow_dispatch:
 
 permissions:
@@ -43,12 +53,13 @@ jobs:
           python scripts/retry_via_clone.py
           python scripts/compute_metrics.py
           python scripts/render_reports.py
+          python scripts/update_headline_numbers.py
 
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data reports
+          git add data reports README.md STATUS.md
           if git diff --staged --quiet; then
             echo "No changes."
           else
