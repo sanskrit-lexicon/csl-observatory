@@ -5,7 +5,9 @@ Operates offline on the already-extracted observatory data
 (`observatory/site/src/data/contributors.csv`) joined with the canonical
 identity map (`scripts/contributors_map.json`). Produces a fill-in table
 that makes the attribution gap explicit: who has a confirmed real name, who
-has only a placeholder ORCID, and who is entirely unidentified.
+has only a placeholder ORCID, whose public-display consent is not yet
+recorded (`consent` field in the map; only `'yes'` counts), and who is
+entirely unidentified.
 
 The bus-factor finding showed all human contributors lack a registered
 ORCID (`reports/bus_factor.md`); this table is the worksheet for fixing
@@ -37,6 +39,11 @@ def is_real_orcid(orcid):
     return bool(o) and not o.upper().startswith('PLACEHOLDER')
 
 
+def has_recorded_consent(consent):
+    """Only an explicit 'yes' counts as recorded public-display consent."""
+    return (consent or '').strip().lower() == 'yes'
+
+
 def main():
     cmap = json.load(open(CMAP, encoding='utf-8'))
 
@@ -57,6 +64,7 @@ def main():
         bot = bool(m.get('is_bot')) or is_bot_type.get(login, False)
         real_name = (m.get('real_name') or '').strip()
         orcid = (m.get('orcid') or '').strip()
+        consent = (m.get('consent') or '').strip().lower()
         has_orcid = is_real_orcid(orcid)
         if bot:
             status = 'bot'
@@ -64,6 +72,8 @@ def main():
             status = 'needs-name-and-orcid'
         elif not has_orcid:
             status = 'needs-orcid'
+        elif not has_recorded_consent(consent):
+            status = 'needs-consent'
         else:
             status = 'complete'
         rows.append({
@@ -74,6 +84,7 @@ def main():
             'real_name': real_name,
             'affiliation': (m.get('affiliation') or '').strip(),
             'orcid': orcid if has_orcid else '',
+            'consent': consent,
             'status': status,
         })
 
@@ -82,12 +93,13 @@ def main():
     humans = [r for r in rows if r['status'] != 'bot']
     needs_name = [r for r in humans if r['status'] == 'needs-name-and-orcid']
     needs_orcid = [r for r in humans if r['status'] == 'needs-orcid']
+    needs_consent = [r for r in humans if r['status'] == 'needs-consent']
     complete = [r for r in humans if r['status'] == 'complete']
 
     # ---- CSV ----
     with open(OUT_CSV, 'w', encoding='utf-8', newline='') as f:
         w = csv.DictWriter(f, fieldnames=['login', 'contributions', 'repos',
-            'role', 'real_name', 'affiliation', 'orcid', 'status'])
+            'role', 'real_name', 'affiliation', 'orcid', 'consent', 'status'])
         w.writeheader()
         w.writerows(rows)
 
@@ -102,34 +114,43 @@ def main():
     A('')
     A('Purpose: close the attribution gap the bus-factor finding surfaced — '
       'every human contributor currently lacks a **registered** ORCID '
-      '(`reports/bus_factor.md`). Fill the blank `Real name` / `ORCID` cells '
-      'below, then update `scripts/contributors_map.json` and re-run. ORCIDs '
-      'shown as blank are either missing or still `PLACEHOLDER-*` in the map.')
+      '(`reports/bus_factor.md`). Fill the blank `Real name` / `ORCID` / '
+      '`Consent` cells below, then update `scripts/contributors_map.json` '
+      'and re-run. ORCIDs shown as blank are either missing or still '
+      '`PLACEHOLDER-*` in the map; blank `Consent` means public-display '
+      'consent is not yet recorded (only an explicit `yes` counts).')
     A('')
     A('## Status summary')
     A('')
     A('| Status | Contributors |')
     A('|---|---:|')
-    A(f'| Confirmed name **and** registered ORCID | {len(complete)} |')
+    A(f'| Confirmed name, registered ORCID, consent recorded | {len(complete)} |')
+    A(f'| Confirmed name, registered ORCID, consent not yet recorded | {len(needs_consent)} |')
     A(f'| Confirmed name, ORCID still a placeholder | {len(needs_orcid)} |')
     A(f'| No confirmed name (and no ORCID) | {len(needs_name)} |')
     A(f'| Bots (excluded) | {len(rows) - len(humans)} |')
     A('')
-    A(f'**Bottom line: 0 of {len(humans)} human contributors have a registered '
-      'ORCID.** The core group already has confirmed names; the gap is ORCID '
-      'registration for them plus identification of the occasional contributors.')
+    registered_orcid = len(complete) + len(needs_consent)
+    consented = len(complete)
+    A(f'**Bottom line: {registered_orcid} of {len(humans)} human contributors '
+      f'have a registered ORCID; {consented} have consent recorded.** The '
+      'core group already has confirmed names; the gap is ORCID registration '
+      'plus recorded public-display consent for them, and identification of '
+      'the occasional contributors.')
     A('')
     A('## Worksheet (commit authors, by contribution volume)')
     A('')
-    A('Fill `Real name` and `ORCID` where blank. `—` in ORCID means none on '
-      'file (or placeholder).')
+    A('Fill `Real name`, `ORCID` and `Consent` where blank. `—` in ORCID '
+      'means none on file (or placeholder); `—` in Consent means consent is '
+      'not yet recorded in the map.')
     A('')
-    A('| GitHub login | Contributions | Repos | Role | Real name | Affiliation | ORCID |')
-    A('|---|---:|---:|---|---|---|---|')
+    A('| GitHub login | Contributions | Repos | Role | Real name | Affiliation | ORCID | Consent |')
+    A('|---|---:|---:|---|---|---|---|---|')
     for r in humans:
         A(f'| `{r["login"]}` | {r["contributions"]:,} | {r["repos"]} | '
           f'{r["role"] or "—"} | {r["real_name"] or "**?**"} | '
-          f'{r["affiliation"] or "—"} | {r["orcid"] or "—"} |')
+          f'{r["affiliation"] or "—"} | {r["orcid"] or "—"} | '
+          f'{r["consent"] or "—"} |')
     A('')
     A('## Priority: confirmed names awaiting ORCID registration')
     A('')
@@ -165,7 +186,7 @@ def main():
     print(f'wrote {OUT_CSV}')
     print(f'  commit authors: {len(rows)} ({len(humans)} human, {len(rows)-len(humans)} bot)')
     print(f'  complete: {len(complete)}   needs-orcid: {len(needs_orcid)}   '
-          f'needs-name: {len(needs_name)}')
+          f'needs-consent: {len(needs_consent)}   needs-name: {len(needs_name)}')
 
 
 if __name__ == '__main__':
