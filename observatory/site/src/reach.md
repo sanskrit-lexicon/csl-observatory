@@ -119,7 +119,7 @@ Plot.plot({
 })
 ```
 
-## Zenodo OBS-T stats — blocked (DOI mismatch)
+## Zenodo OBS-T stats — ${zenodo && zenodo.value === "mismatch" ? "blocked (DOI mismatch)" : zenodo && zenodo.value === "ok" ? "record verified" : "unavailable"}
 
 ```js
 const zBad = zenodo && zenodo.value === "mismatch";
