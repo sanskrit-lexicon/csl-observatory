@@ -1,0 +1,91 @@
+name: Project sync (milestone → project board)
+
+# One-off repair lane for the taxonomy audit's project axis (dict_runbook.py
+# gaps(): an issue whose milestone maps to a project must BE a member of that
+# project). The nightly agent's gh token lacks read:project, so the membership
+# side can only be repaired from CI. ADDITIONS ONLY — this never removes a
+# board item; board pruning stays a human action.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  projects: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Add milestone-mapped missing project items (dictionaries)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import sys, json, subprocess
+          sys.stdout.reconfigure(encoding='utf-8')
+
+          ORG = "sanskrit-lexicon"
+          PROJ = {"Dictionary to Book": 1, "Digitization Quality": 2,
+                  "Structured Data": 3, "Major Enhancements": 4}
+          REPOS = ["ACC","AMAR","AP","AP90","ApteES","BEN","BHS","BOP","BOR","BUR",
+                   "CAE","CCS","DCS","FRI","GRA","INM","KNA","KOW","KRM","LRV","MCI",
+                   "MD","MWS","PUI","PWG","PWK","SCH","SHS","SKD","STC","VCP","VEI",
+                   "WIL","Wil-YAT"]
+          EXEMPT = {"daily-corrections"}
+
+          def gh_json(args):
+              r = subprocess.run(["gh"] + args, capture_output=True, text=True)
+              if r.returncode != 0:
+                  raise SystemExit(f"gh {args[0]} failed: {r.stderr[:300]}")
+              return json.loads(r.stdout)
+
+          # org project ids by number
+          q = '{organization(login:"%s"){projectsV2(first:20){nodes{id number title}}}}' % ORG
+          nodes = gh_json(["api", "graphql", "-f", f"query={q}"])[
+              "data"]["organization"]["projectsV2"]["nodes"]
+          proj_id = {p["number"]: p["id"] for p in nodes}
+
+          added = skipped = 0
+          for repo in REPOS:
+              cur = None
+              while True:
+                  after = f', after:"{cur}"' if cur else ""
+                  q = ('query($o:String!,$n:String!,$c:String){repository(owner:$o,name:$n){'
+                       'issues(first:100,after:$c,states:[OPEN]){pageInfo{hasNextPage endCursor}'
+                       'nodes{number labels(first:30){nodes{name}} milestone{title}'
+                       ' projectItems(first:10){nodes{project{number}}}}}}}')
+                  d = gh_json(["api", "graphql", "-f", f"query={q}",
+                               "-f", f"o={ORG}", "-f", f"n={repo}", "-f", f"c={cur or ''}"])
+                  conn = d["data"]["repository"]["issues"]
+                  for x in conn["nodes"]:
+                      lbls = {l["name"] for l in x["labels"]["nodes"]}
+                      if lbls & EXEMPT or (lbls and lbls <= {"handoff"}):
+                          continue
+                      ms = (x["milestone"] or {}).get("title")
+                      tgt = PROJ.get(ms)
+                      if not tgt:
+                          continue
+                      if tgt in [p["project"]["number"] for p in x["projectItems"]["nodes"]]:
+                          skipped += 1
+                          continue
+                      iid = gh_json(["api", "graphql", "-f",
+                          f'query={{repository(owner:"{ORG}",name:"{repo}"){{issue(number:{x["number"]}){{id}}}}}}']
+                      )["data"]["repository"]["issue"]["id"]
+                      gh_json(["api", "graphql", "-f",
+                          f'mutation{{addProjectV2ItemById(input:{{projectId:"{proj_id[tgt]}",contentId:"{iid}"}}){{item{{id}}}}}}'])
+                      added += 1
+                      print(f"+ {repo}#{x['number']} -> project {tgt}")
+                  if conn["pageInfo"]["hasNextPage"]:
+                      cur = conn["pageInfo"]["endCursor"]
+                  else:
+                      break
+          print(f"added={added} already-members={skipped}")
+          PY
+      - name: Report
+        if: always()
+        run: echo "Re-run the Dictionary taxonomy audit to verify the project axis."
