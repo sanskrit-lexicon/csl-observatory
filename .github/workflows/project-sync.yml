@@ -44,11 +44,18 @@ jobs:
                   raise SystemExit(f"gh {args[0]} failed: {r.stderr[:300]}")
               return json.loads(r.stdout)
 
-          # org project ids by number
-          q = '{organization(login:"%s"){projectsV2(first:20){nodes{id number title}}}}' % ORG
-          nodes = gh_json(["api", "graphql", "-f", f"query={q}"])[
-              "data"]["organization"]["projectsV2"]["nodes"]
-          proj_id = {p["number"]: p["id"] for p in nodes}
+          # org project ids, direct lookup by number (the org has >20 v2
+          # projects — a first:20 listing silently misses the dictionary
+          # boards)
+          proj_id = {}
+          for num in sorted(set(PROJ.values())):
+              q = '{organization(login:"%s"){projectV2(number:%d){id number}}}' % (ORG, num)
+              node = gh_json(["api", "graphql", "-f", f"query={q}"])[
+                  "data"]["organization"]["projectV2"]
+              if node:
+                  proj_id[node["number"]] = node["id"]
+          if set(PROJ.values()) - set(proj_id):
+              raise SystemExit(f"projects not found: {sorted(set(PROJ.values()) - set(proj_id))}")
 
           added = skipped = 0
           for repo in REPOS:
