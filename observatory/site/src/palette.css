@@ -9,6 +9,12 @@
  *   --obs-seq-1 … -7      sequential ramp, low → high (heatmap fills)
  *   --obs-good / -warn / -bad   status colors
  *   --obs-muted           de-emphasized marks (unselected, "other" bins)
+ *   --obs-flag/-era/-sand/-text-soft/-github/-neutral/-locus/-etym/
+ *   --obs-primary/-est    page-level semantic tokens (H5747 wire-up; hexes
+ *                         live only here, never in pages)
+ *   --mw-chart-element-*, --mw-fullness-tier-*, --mw-dictionary-*
+ *                         house dataviz standard copied from csl-atlas
+ *                         (provenance + rules in the block below)
  */
 
 :root {
@@ -46,5 +52,82 @@
     --obs-good: #3fb950;
     --obs-warn: #d29922;
     --obs-bad: #f85149;
+
+    /* page-level semantic tokens, dark variants */
+    --obs-flag: #f2715e;
+    --obs-era: #c9a75f;
+    --obs-sand: #4d4639;
+    --obs-text-soft: #b0bac4;
+    --obs-github: #58a6ff;
+    --obs-neutral: #6e7781;
+    --obs-locus: #ab7df8;
+    --obs-etym: #ffa657;
+    --obs-primary: #58a6ff;
+    --obs-est: #afd9ff;
   }
+}
+
+/* ---- House dataviz standard tokens (copied) ----------------------------
+ * Provenance: copied from csl-atlas src/palette.css
+ * @ 1059973e85992a2a31af556ad35bc22f65c38378 (2026-07-04), per the
+ * viz-estate ruling 3 (H5747, 03-10-2026). Observatory keeps its own copy —
+ * different org, no cross-org consumption of the github-spine asset.
+ * Source generated from palette-tokens.json v1.0.0 (ColorBrewer 2.0;
+ * WCAG-checked, deuteranopia/protanopia-safe). DO NOT EDIT — changes go
+ * upstream in csl-atlas (and the spine shared/dataviz asset).
+ * Intentionally NOT copied: --mw-article-type-* and --mw-semantic-block-*
+ * families (MW1899-microanalysis-specific semantics, no observatory
+ * consumer). Upstream also ships font + Observable layout fixes; the
+ * observatory keeps Framework defaults here — tokens only.
+ */
+:root {
+  /* chart-element (house baseline for any chart) */
+  --mw-chart-element-background: #fafafa;
+  --mw-chart-element-panel: #ffffff;
+  --mw-chart-element-grid: #eaeaea;
+  --mw-chart-element-axis: #333333;
+  --mw-chart-element-text: #222222;
+  --mw-chart-element-muted: #666666;
+  --mw-chart-element-accent: #d62728;
+  --mw-chart-element-highlight: #fdae61;
+  /* fullness-tier (5-step sequential ramp, WCAG-safe) */
+  --mw-fullness-tier-T1-vestigial: #e0e0e0;
+  --mw-fullness-tier-T2-skeletal: #bbdefb;
+  --mw-fullness-tier-T3-typical: #64b5f6;
+  --mw-fullness-tier-T4-rich: #1976d2;
+  --mw-fullness-tier-T5-elaborate: #0d47a1;
+  /* dictionary (CDSL dictionary identity colors) */
+  --mw-dictionary-mw: #1f78b4;
+  --mw-dictionary-pwg: #33a02c;
+  --mw-dictionary-pw: #b2df8a;
+  --mw-dictionary-ap: #ff7f00;
+  --mw-dictionary-wil: #e31a1c;
+  --mw-dictionary-skd: #6a3d9a;
+  --mw-dictionary-vcp: #cab2d6;
+  --mw-dictionary-armh: #fb9a99;
+  --mw-dictionary-abch: #a6cee3;
+  --mw-dictionary-acph: #fdbf6f;
+  --mw-dictionary-acsj: #cccccc;
+}
+
+/* Page-level semantic tokens added for H5747 wire-up: every chart hex that
+ * used to live in a page now lives here (light values = the hexes the pages
+ * already rendered with, so light-mode pixels are unchanged). */
+:root {
+  --obs-flag: #b03a2e;      /* red emphasis: risk bars, silent backlog, first-PR markers */
+  --obs-era: #8a6d3b;       /* era highlight (form-era bars, 2021 peak) */
+  --obs-sand: #c9c2b6;      /* neutral context bars */
+  --obs-text-soft: #57606a; /* soft label text / thin rules on light bg */
+  --obs-github: #0075ca;    /* GitHub brand blue (author counts) */
+  --obs-neutral: #8c959f;   /* unknown / other status */
+  --obs-locus: #5319e7;     /* GitHub label purple (error locations) */
+  --obs-etym: #fb8c00;      /* orange (etymology-type components) */
+  --obs-primary: #0969da;   /* GitHub blue (corrected series) */
+  --obs-est: #9cc7f5;       /* light blue (estimated-remaining series) */
+
+  /* theme-bridging tokens (H5747): story-page UI chrome previously carried
+   * inline var() fallback hexes; the hexes now live only here. Values defer
+   * to the live Observable theme variable and fall back only if absent. */
+  --obs-rule: var(--theme-foreground-faint, #ddd);
+  --obs-panel: var(--theme-background, #fff);
 }
