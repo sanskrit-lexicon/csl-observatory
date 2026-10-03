@@ -44,25 +44,22 @@ jobs:
                   raise SystemExit(f"gh {args[0]} failed: {r.stderr[:300]}")
               return json.loads(r.stdout)
 
-          # org project ids — paginate the FULL v2 listing (the org has >20
-          # projects; a first:20 page missed the dictionary boards, and
-          # projectV2(number:N) does not resolve for them)
+          # project ids — the dictionary boards #1-4 are USER projects
+          # (gasyoun), not org projects: the full org v2 listing does not
+          # contain them while issue projectItems reports those numbers.
+          # Look up each mapped number under the user, fall back to the org.
           proj_id = {}
-          cur = None
-          while True:
-              after = f', after:"{cur}"' if cur else ""
-              q = ('{organization(login:"%s"){projectsV2(first:100%s){'
-                   'pageInfo{hasNextPage endCursor} nodes{id number}}}}' % (ORG, after))
-              conn = gh_json(["api", "graphql", "-f", f"query={q}"])[
-                  "data"]["organization"]["projectsV2"]
-              for p in conn["nodes"]:
-                  proj_id.setdefault(p["number"], p["id"])
-              if conn["pageInfo"]["hasNextPage"]:
-                  cur = conn["pageInfo"]["endCursor"]
-              else:
-                  break
+          for num in sorted(set(PROJ.values())):
+              for kind, expr in (("user", 'user(login:"gasyoun")'),
+                                 ("org", 'organization(login:"%s")' % ORG)):
+                  q = '{%s{projectV2(number:%d){id number}}}' % (expr, num)
+                  node = gh_json(["api", "graphql", "-f", f"query={q}"]).get(
+                      "data", {}).get(kind, {}).get("projectV2")
+                  if node:
+                      proj_id[node["number"]] = node["id"]
+                      break
           if set(PROJ.values()) - set(proj_id):
-              raise SystemExit(f"projects not found after full listing: {sorted(set(PROJ.values()) - set(proj_id))}")
+              raise SystemExit(f"projects not found (user + org): {sorted(set(PROJ.values()) - set(proj_id))}")
 
           added = skipped = 0
           for repo in REPOS:
