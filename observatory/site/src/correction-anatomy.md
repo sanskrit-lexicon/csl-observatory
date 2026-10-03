@@ -285,6 +285,17 @@ display(Plot.plot({
 
 > **Conclusion:** Correction labor is long-tenure, few-hands: the core pair's spans run 2014–2026 while most of the top 20 are short, bounded engagements. Sustainability of the correction corpus therefore depends on the same two-person continuity the community pages flag at repo level.
 
+## Trust Block
+
+- Source artifact: `observatory/site/src/data/obs_t_confusion.csv` (5,019 confusion-pair rows), `obs_t_corrector.csv` (60 corrector-span rows), `obs_t_corrector_component.csv` (54 corrector×component rows) — produced by the OBS-T release pipeline ([`scripts/obs_t_release.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/obs_t_release.py)).
+- n: 52,498 released correction events attributed to 208 distinct correctors; per-corrector table covers the top 60 by volume; confusion pairs 5,019.
+- Data date: pipeline run **2026-06-12** (`obs_t_summary.json` `generatedAt`); event spans run 2014-07-17 → 2026-05-30.
+- Evidence: derived — deterministic attribution of each released event to a GitHub login and a microstructure component; no sampling.
+- Limitations: corrector identity is GitHub-login based (one person may hold several logins, shared accounts are invisible); the "unattributed" bucket (18,743 events) bounds every attribution claim; tenure spans measure activity windows, not continuous effort.
+- Validation: `npm run build` (Observable Framework) exits 0; per-corrector event sums reconcile against the 52,498-event total in `obs_t_summary.json`; annotation quality gate κ = 0.906 on the location axis (PR #102).
+- Owner repo: csl-observatory
+- Next use: re-run after each campaign release to extend tenure spans; read together with the Community bus-factor page when weighing two-person-continuity risk.
+
 [Back to overview](/)
 
 _Dr. Mārcis Gasūns_
