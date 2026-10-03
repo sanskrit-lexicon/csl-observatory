@@ -4,6 +4,7 @@ _Created: 26-06-2026 · Last updated: 25-09-2026_
 
 Archived 2026-09-25 (verdict pass H5357): the full copy now lives at
 [docs/archive/AGENT_ROADMAP.md](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/archive/AGENT_ROADMAP.md).
+Live companion in this repo: [docs/OBSERVATORY_ROADMAP.md](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/OBSERVATORY_ROADMAP.md) (agent/ops roadmap, edge `p1-obs-roadmap-vs-agent`).
 
 The 2026-06 issue-automation wave it planned is drained — every skill it called
 for (`cologne-text-correction-pr`, `cologne-question-research`, `cologne-bug-triage`,
