@@ -124,4 +124,10 @@
   --obs-etym: #fb8c00;      /* orange (etymology-type components) */
   --obs-primary: #0969da;   /* GitHub blue (corrected series) */
   --obs-est: #9cc7f5;       /* light blue (estimated-remaining series) */
+
+  /* theme-bridging tokens (H5747): story-page UI chrome previously carried
+   * inline var() fallback hexes; the hexes now live only here. Values defer
+   * to the live Observable theme variable and fall back only if absent. */
+  --obs-rule: var(--theme-foreground-faint, #ddd);
+  --obs-panel: var(--theme-background, #fff);
 }

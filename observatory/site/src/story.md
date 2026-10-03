@@ -624,13 +624,13 @@ The same month moved the research pipeline without a single new figure needing t
 .scrolly-figure { margin: 1.5rem 0; padding: 0; }
 .scrolly-figure figcaption.trust { font-size: 0.78rem; opacity: 0.75; margin-top: 0.5rem; line-height: 1.45; }
 
-.proves { border-left: 3px solid var(--theme-foreground-faint, #ddd); padding-left: 0.8rem; opacity: 0.85; font-size: 0.92em; }
+.proves { border-left: 3px solid var(--obs-rule); padding-left: 0.8rem; opacity: 0.85; font-size: 0.92em; }
 
 .findings-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 .finding { min-width: 0; }
 .finding-note { display: block; font-size: 0.72rem; opacity: 0.75; margin-top: 0.3rem; line-height: 1.4; }
 
-.start-here { border: 1px solid var(--theme-foreground-faint, #ddd); border-radius: 8px; padding: 1rem 1.25rem; }
+.start-here { border: 1px solid var(--obs-rule); border-radius: 8px; padding: 1rem 1.25rem; }
 .start-here ul { margin: 0.5rem 0 0; padding-left: 1.2rem; }
 
 /* Scrolly mode. */
@@ -682,7 +682,7 @@ The same month moved the research pipeline without a single new figure needing t
   .scrolly.js-on .scrolly-figures {
     order: -1; /* sticky top panel must precede the steps in flow to pin */
     position: sticky; top: 2.75rem; z-index: 5;
-    background: var(--theme-background, #fff);
+    background: var(--obs-panel);
     padding: 0.5rem 0;
     height: auto;
   }
