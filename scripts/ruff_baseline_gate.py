@@ -55,9 +55,11 @@ def main() -> int:
     ruff_bin = find_ruff()
     count, raw = count_violations(ruff_bin)
     # Fail closed on a broken probe: zero violations is only believable when
-    # ruff itself says so ("Found 0 errors"). A dead/missing ruff must never
+    # ruff itself says so — "Found 0 errors" (with violations-mode wording) or
+    # "All checks passed!" (the wording ruff actually prints on a clean repo,
+    # confirmed live against ruff 0.16.10). A dead/missing ruff must never
     # read as a clean repo.
-    if count == 0 and not re.search(r"Found 0 errors", raw or ""):
+    if count == 0 and not re.search(r"Found 0 errors|All checks passed", raw or ""):
         print(f"ruff_baseline_gate: ruff produced no parsable output — FAIL\n{(raw or '')[-2000:]}")
         return 2
 

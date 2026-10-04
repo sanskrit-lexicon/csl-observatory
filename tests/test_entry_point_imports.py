@@ -41,27 +41,33 @@ def _import_module(path: Path, idx: int):
     return module
 
 
+# Discovery happens ONCE at module level — the same list feeds args, ids and
+# the census floor, so pytest can never mis-parametrize against a divergent
+# re-discovery (verifier finding F4, H5800 round 1).
+SCRIPTS = script_files()
+
+
 @pytest.mark.parametrize(
-    "path", script_files(), ids=[str(p.relative_to(REPO_ROOT)) for p in script_files()]
+    "path", SCRIPTS, ids=[str(p.relative_to(REPO_ROOT)) for p in SCRIPTS]
 )
 def test_script_imports_cleanly(path):
     rel = str(path.relative_to(REPO_ROOT))
     if rel in IMPORT_SKIP:
         pytest.skip(f"named skip: {IMPORT_SKIP[rel]}")
-    module = _import_module(path, script_files().index(path))
+    module = _import_module(path, SCRIPTS.index(path))
     assert module is not None
 
 
 def test_smoke_census_is_not_empty():
     """The suite must stay honest: if discovery breaks and finds nothing, fail."""
-    assert len(script_files()) >= 90, (
-        f"import-smoke discovery found only {len(script_files())} scripts — "
+    assert len(SCRIPTS) >= 90, (
+        f"import-smoke discovery found only {len(SCRIPTS)} scripts — "
         "the census at H5800 was ~99; discovery is broken"
     )
 
 
 def test_named_skips_still_exist():
     """A named skip must point at a real file — dead skip entries rot silently."""
-    all_rel = {str(p.relative_to(REPO_ROOT)) for p in script_files()}
+    all_rel = {str(p.relative_to(REPO_ROOT)) for p in SCRIPTS}
     for rel in IMPORT_SKIP:
         assert rel in all_rel, f"IMPORT_SKIP entry {rel} no longer exists — drop it"
