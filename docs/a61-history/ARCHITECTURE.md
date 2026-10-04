@@ -58,6 +58,10 @@ GitHub snapshot, an OBS-T cutoff of 30 May 2026, and cross-repository statistics
 verified in July. Future corrections produce v1.2 or v2.0; they do not rewrite
 the meaning of v1.1. The preceding v1.0 directory remains immutable.
 
+A sister release, [`a61-mwpwg-sense-seq-2026-10-04`](https://github.com/sanskrit-lexicon/csl-observatory/tree/main/data/publication/a61-mwpwg-sense-seq-2026-10-04),
+carries the October 2026 MW↔PWG sense-sequence concordance that closes A61 §7.2's
+open measurement; it is versioned separately and leaves v1.1 untouched.
+
 ## v1.1 ruling layers
 
 - **Evidence:** `claim_registry.csv` inventories A61 empirical/project numbers
