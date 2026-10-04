@@ -1,4 +1,4 @@
-_Created: 18-07-2026 · Last updated: 05-09-2026_
+_Created: 18-07-2026 · Last updated: 04-10-2026_
 
 # Evidence architecture for A61 and A13
 
@@ -60,7 +60,11 @@ the meaning of v1.1. The preceding v1.0 directory remains immutable.
 
 A sister release, [`a61-mwpwg-sense-seq-2026-10-04`](https://github.com/sanskrit-lexicon/csl-observatory/tree/main/data/publication/a61-mwpwg-sense-seq-2026-10-04),
 carries the October 2026 MW↔PWG sense-sequence concordance that closes A61 §7.2's
-open measurement; it is versioned separately and leaves v1.1 untouched.
+open measurement; it is versioned separately and leaves v1.1 untouched. A second
+sister release, [`a61-sixdict-sense-seq-matrix-2026-10-04`](https://github.com/sanskrit-lexicon/csl-observatory/tree/main/data/publication/a61-sixdict-sense-seq-matrix-2026-10-04),
+extends the same protocol to all 15 pairs of the six-dictionary verification base
+(PWG/PW/MW/SCH/ACC/PWKVN), reproducing the H5916 anchors and adding the supplement-
+saturation and ACC structural-null readings; likewise separately versioned.
 
 ## v1.1 ruling layers
 
