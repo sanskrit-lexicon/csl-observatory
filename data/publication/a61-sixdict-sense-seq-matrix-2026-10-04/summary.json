@@ -1,0 +1,374 @@
+{
+ "method": "citation-siglum first-occurrence rank concordance over k1-exact common headwords; >=3 shared works per pair; extends a61-mwpwg-sense-seq-2026-10-04 (H5916) to all 15 pairs",
+ "dictionaries": {
+  "PWG": {
+   "entries_k1": 106082,
+   "label": "Böhtlingk & Roth 1855–1875"
+  },
+  "PW": {
+   "entries_k1": 151349,
+   "label": "Böhtlingk kürzerer Fassung 1879–1889"
+  },
+  "MW": {
+   "entries_k1": 194083,
+   "label": "Monier-Williams 1899"
+  },
+  "SCH": {
+   "entries_k1": 28455,
+   "label": "Schmidt Nachträge 1928"
+  },
+  "ACC": {
+   "entries_k1": 32585,
+   "label": "Aufrecht Catalogus Catalogorum"
+  },
+  "PWKVN": {
+   "entries_k1": 14995,
+   "label": "PW kürzerer Fassung, Nachträge und Verbesserungen"
+  }
+ },
+ "pairs": {
+  "PWGxPW": {
+   "n_common_k1": 99455,
+   "observed": {
+    "label": "PWG x PW",
+    "n_pairs": 487,
+    "rho_median": 0.3,
+    "rho_mean": 0.1807,
+    "rho_q25": -0.4286,
+    "rho_q75": 0.6429,
+    "share_rho_gt_0.5": 0.2793,
+    "share_rho_lt_neg0.5": 0.117,
+    "tau_median": 0.2143
+   },
+   "null_permutation": {
+    "n": 487,
+    "rho_mean": 0.0281
+   },
+   "null_crosspair": {
+    "n": 487,
+    "rho_median": 0.0526,
+    "rho_mean": 0.0436,
+    "note": "PWG lemma X vs PW lemma Y!=X; detects global siglum-order conventions"
+   },
+   "semis_pearson": 0.6772
+  },
+  "PWGxMW": {
+   "n_common_k1": 94779,
+   "observed": {
+    "label": "PWG x MW",
+    "n_pairs": 4943,
+    "rho_median": 0.9,
+    "rho_mean": 0.6622,
+    "rho_q25": 0.5,
+    "rho_q75": 1.0,
+    "share_rho_gt_0.5": 0.6787,
+    "share_rho_lt_neg0.5": 0.0216,
+    "tau_median": 0.8
+   },
+   "null_permutation": {
+    "n": 4943,
+    "rho_mean": 0.0683
+   },
+   "null_crosspair": {
+    "n": 4943,
+    "rho_median": 0.5,
+    "rho_mean": 0.2584,
+    "note": "PWG lemma X vs MW lemma Y!=X; detects global siglum-order conventions"
+   },
+   "semis_pearson": 0.7036
+  },
+  "PWGxSCH": {
+   "n_common_k1": 7782,
+   "observed": {
+    "label": "PWG x SCH",
+    "n_pairs": 20,
+    "rho_median": -0.5,
+    "rho_mean": -0.1961,
+    "rho_q25": -0.5,
+    "rho_q75": 0.5,
+    "share_rho_gt_0.5": 0.1,
+    "share_rho_lt_neg0.5": 0.25,
+    "tau_median": -0.3333
+   },
+   "null_permutation": {
+    "n": 20,
+    "rho_mean": -0.0821
+   },
+   "null_crosspair": {
+    "n": 20,
+    "rho_median": 0.1643,
+    "rho_mean": 0.0214,
+    "note": "PWG lemma X vs SCH lemma Y!=X; detects global siglum-order conventions"
+   },
+   "semis_pearson": 0.1646
+  },
+  "PWGxACC": {
+   "n_common_k1": 4929,
+   "observed": {
+    "label": "PWG x ACC",
+    "n_pairs": 0
+   },
+   "null_permutation": {
+    "n": 0,
+    "rho_mean": null
+   },
+   "null_crosspair": {
+    "n": 0,
+    "rho_median": null,
+    "rho_mean": null,
+    "note": "PWG lemma X vs ACC lemma Y!=X; detects global siglum-order conventions"
+   },
+   "semis_pearson": -0.3333
+  },
+  "PWGxPWKVN": {
+   "n_common_k1": 4041,
+   "observed": {
+    "label": "PWG x PWKVN",
+    "n_pairs": 14,
+    "rho_median": -0.3,
+    "rho_mean": -0.1214,
+    "rho_q25": -0.6,
+    "rho_q75": 0.5,
+    "share_rho_gt_0.5": 0.0714,
+    "share_rho_lt_neg0.5": 0.2857,
+    "tau_median": -0.2666
+   },
+   "null_permutation": {
+    "n": 14,
+    "rho_mean": -0.3357
+   },
+   "null_crosspair": {
+    "n": 14,
+    "rho_median": -0.5,
+    "rho_mean": -0.2714,
+    "note": "PWG lemma X vs PWKVN lemma Y!=X; detects global siglum-order conventions"
+   },
+   "semis_pearson": 0.5908
+  },
+  "PWxMW": {
+   "n_common_k1": 129005,
+   "observed": {
+    "label": "PW x MW",
+    "n_pairs": 268,
+    "rho_median": 0.8,
+    "rho_mean": 0.5305,
+    "rho_q25": 0.4,
+    "rho_q75": 1.0,
+    "share_rho_gt_0.5": 0.5448,
+    "share_rho_lt_neg0.5": 0.0485,
+    "tau_median": 0.6667
+   },
+   "null_permutation": {
+    "n": 268,
+    "rho_mean": 0.0754
+   },
+   "null_crosspair": {
+    "n": 268,
+    "rho_median": 0.4,
+    "rho_mean": 0.1551,
+    "note": "PW lemma X vs MW lemma Y!=X; detects global siglum-order conventions"
+   },
+   "semis_pearson": 0.6472
+  },
+  "PWxSCH": {
+   "n_common_k1": 18289,
+   "observed": {
+    "label": "PW x SCH",
+    "n_pairs": 182,
+    "rho_median": 1.0,
+    "rho_mean": 0.6148,
+    "rho_q25": 0.5,
+    "rho_q75": 1.0,
+    "share_rho_gt_0.5": 0.6758,
+    "share_rho_lt_neg0.5": 0.044,
+    "tau_median": 1.0
+   },
+   "null_permutation": {
+    "n": 182,
+    "rho_mean": 0.0393
+   },
+   "null_crosspair": {
+    "n": 182,
+    "rho_median": 0.5,
+    "rho_mean": 0.1673,
+    "note": "PW lemma X vs SCH lemma Y!=X; detects global siglum-order conventions"
+   },
+   "semis_pearson": 0.1698
+  },
+  "PWxACC": {
+   "n_common_k1": 9368,
+   "observed": {
+    "label": "PW x ACC",
+    "n_pairs": 0
+   },
+   "null_permutation": {
+    "n": 0,
+    "rho_mean": null
+   },
+   "null_crosspair": {
+    "n": 0,
+    "rho_median": null,
+    "rho_mean": null,
+    "note": "PW lemma X vs ACC lemma Y!=X; detects global siglum-order conventions"
+   },
+   "semis_pearson": null
+  },
+  "PWxPWKVN": {
+   "n_common_k1": 14973,
+   "observed": {
+    "label": "PW x PWKVN",
+    "n_pairs": 381,
+    "rho_median": 1.0,
+    "rho_mean": 0.9293,
+    "rho_q25": 1.0,
+    "rho_q75": 1.0,
+    "share_rho_gt_0.5": 0.9265,
+    "share_rho_lt_neg0.5": 0.0,
+    "tau_median": 1.0
+   },
+   "null_permutation": {
+    "n": 381,
+    "rho_mean": 0.0798
+   },
+   "null_crosspair": {
+    "n": 381,
+    "rho_median": 0.5,
+    "rho_mean": 0.2328,
+    "note": "PW lemma X vs PWKVN lemma Y!=X; detects global siglum-order conventions"
+   },
+   "semis_pearson": 0.3013
+  },
+  "MWxSCH": {
+   "n_common_k1": 14523,
+   "observed": {
+    "label": "MW x SCH",
+    "n_pairs": 7,
+    "rho_median": 1.0,
+    "rho_mean": 0.9286,
+    "rho_q25": 1.0,
+    "rho_q75": 1.0,
+    "share_rho_gt_0.5": 0.8571,
+    "share_rho_lt_neg0.5": 0.0,
+    "tau_median": 1.0
+   },
+   "null_permutation": {
+    "n": 7,
+    "rho_mean": -0.1429
+   },
+   "null_crosspair": {
+    "n": 7,
+    "rho_median": -0.5,
+    "rho_mean": -0.5,
+    "note": "MW lemma X vs SCH lemma Y!=X; detects global siglum-order conventions"
+   },
+   "semis_pearson": 0.159
+  },
+  "MWxACC": {
+   "n_common_k1": 17060,
+   "observed": {
+    "label": "MW x ACC",
+    "n_pairs": 0
+   },
+   "null_permutation": {
+    "n": 0,
+    "rho_mean": null
+   },
+   "null_crosspair": {
+    "n": 0,
+    "rho_median": null,
+    "rho_mean": null,
+    "note": "MW lemma X vs ACC lemma Y!=X; detects global siglum-order conventions"
+   },
+   "semis_pearson": -0.544
+  },
+  "MWxPWKVN": {
+   "n_common_k1": 9758,
+   "observed": {
+    "label": "MW x PWKVN",
+    "n_pairs": 7,
+    "rho_median": 1.0,
+    "rho_mean": 0.9286,
+    "rho_q25": 1.0,
+    "rho_q75": 1.0,
+    "share_rho_gt_0.5": 0.8571,
+    "share_rho_lt_neg0.5": 0.0,
+    "tau_median": 1.0
+   },
+   "null_permutation": {
+    "n": 7,
+    "rho_mean": 0.0
+   },
+   "null_crosspair": {
+    "n": 7,
+    "rho_median": -0.5,
+    "rho_mean": -0.5,
+    "note": "MW lemma X vs PWKVN lemma Y!=X; detects global siglum-order conventions"
+   },
+   "semis_pearson": 0.1603
+  },
+  "SCHxACC": {
+   "n_common_k1": 865,
+   "observed": {
+    "label": "SCH x ACC",
+    "n_pairs": 0
+   },
+   "null_permutation": {
+    "n": 0,
+    "rho_mean": null
+   },
+   "null_crosspair": {
+    "n": 0,
+    "rho_median": null,
+    "rho_mean": null,
+    "note": "SCH lemma X vs ACC lemma Y!=X; detects global siglum-order conventions"
+   },
+   "semis_pearson": null
+  },
+  "SCHxPWKVN": {
+   "n_common_k1": 13901,
+   "observed": {
+    "label": "SCH x PWKVN",
+    "n_pairs": 204,
+    "rho_median": 1.0,
+    "rho_mean": 0.7285,
+    "rho_q25": 0.7,
+    "rho_q75": 1.0,
+    "share_rho_gt_0.5": 0.7696,
+    "share_rho_lt_neg0.5": 0.0147,
+    "tau_median": 1.0
+   },
+   "null_permutation": {
+    "n": 204,
+    "rho_mean": -0.0529
+   },
+   "null_crosspair": {
+    "n": 204,
+    "rho_median": 0.1,
+    "rho_mean": 0.0529,
+    "note": "SCH lemma X vs PWKVN lemma Y!=X; detects global siglum-order conventions"
+   },
+   "semis_pearson": 0.4659
+  },
+  "ACCxPWKVN": {
+   "n_common_k1": 817,
+   "observed": {
+    "label": "ACC x PWKVN",
+    "n_pairs": 0
+   },
+   "null_permutation": {
+    "n": 0,
+    "rho_mean": null
+   },
+   "null_crosspair": {
+    "n": 0,
+    "rho_median": null,
+    "rho_mean": null,
+    "note": "ACC lemma X vs PWKVN lemma Y!=X; detects global siglum-order conventions"
+   },
+   "semis_pearson": null
+  }
+ },
+ "condensation_control": "PWxPWG — same-author abridgement; H5916 anchor median rho 0.30",
+ "structural_null": "ACC carries no <ls> markup (bio-bibliographic catalog, plain-text citations): every ACC pair has 0 measurable rows under this protocol",
+ "seed": 20261004
+}
