@@ -1,13 +1,17 @@
 # Indexing 29,000 pages so a dictionary can cite them: the PWG scan-index campaign, 2025–2026
 
-_Created: 05-08-2026 · Last updated: 06-09-2026_
+_Created: 05-08-2026 · Last updated: 05-10-2026_
 
 **Status:** full draft (A69, readiness 3/5) — complete prose, needs human revision, byline
 and venue decisions. Drafted by Fable 5 (`claude-fable-5`) under
 [H1863](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1863-Fable_csl-observatory_pwg-scan-index-campaign-paper-draft_29.07.26.md);
 every number in this draft is traced to committed campaign data in this repository (§ Data
 availability), none is newly computed here. Author-voice pass 06-09-2026
-([SIGNOFF_A69_author_pass.md](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/article/SIGNOFF_A69_author_pass.md)).
+([PR #205](https://github.com/sanskrit-lexicon/csl-observatory/pull/205); the sign-off
+file itself moved to the private papers store with the paper-priv sweep, 04-10-2026).
+Related-work section (§2) and References added 05-10-2026 — acl-uplift pass, GLM-5.3
+(`zai-individual-coding-plan/GLM-5.3`, ZCode); every citation live-verified (URL or DOI
+fetched and title/authors confirmed the same day).
 
 Mārcis Gasūns, independent scholar
 ([ORCID 0000-0003-4513-884X](https://orcid.org/0000-0003-4513-884X)), gasyoun@ya.ru
@@ -55,9 +59,46 @@ number below can be traced to it. The campaign is complete in its kāvya and ko�
 portion; the account is written against committed, cross-validated data rather than
 against recollection.
 
-## 2 · Data and methods
+## 2 · Related work
 
-### 2.1 Sources
+The campaign sits where two literatures meet and rarely have: crowdsourcing as studied in
+cultural heritage, and citation resolution as studied in digital classics and
+lexicography.
+
+Crowdsourcing in the cultural heritage domain has a canonical analysis in Oomen and Aroyo
+(2011), who classify such initiatives by the tasks they distribute and the motivations
+they draw on. The closest measured relative of this campaign is Transcribe Bentham, whose
+volunteer-community results and findings are reported by Causer and Wallace (2012): a
+manuscript-transcription project that built a bespoke interface, cultivated a public
+community, and published the measurement. The PWG campaign differs from it in
+instrumentation, not in kind — it ran on unmodified GitHub issues, with no dedicated
+interface beyond a spreadsheet and a template — and it confirms, in a lexicographic
+setting, the pattern their measurements made familiar: a small core of volunteers carries
+most of the work, and the submitted work is overwhelmingly sound, so review effort goes
+elsewhere (here, into the dictionaries themselves, §5.2).
+
+In lexicography, crowdsourcing has been surveyed as an integral part of the dictionary
+workflow by Čibej, Fišer and Kosem (2015), and the European Lexicographic Infrastructure
+programme (Krek et al. 2018) frames the field's infrastructure needs at large. The Cologne
+Digital Sanskrit Dictionaries — the project whose citation apparatus this campaign
+indexes — have their project report in Kapp and Malten (1997). What the lexicographic
+crowdsourcing literature gathers is usually lexical material or validation judgements;
+here the crowd produced a bibliographic substrate — page indexes of cited printed
+editions — which is why the campaign's unplanned by-product was dictionary proofreading
+rather than lexical data (§5.2).
+
+Citation itself, as an object of design in networked scholarship, has its
+classical-studies treatment in Smith (2009): what it means for a reference to a text to
+be resolvable by a machine. This campaign works on the target side of that problem — the
+indexes that make a printed page addressable — while the resolver wiring audit (§4.4)
+reports what breaks at the seam between reference string and target. None of this
+literature supplies what follows: a measured, post-hoc account of one completed campaign
+over a committed registry. Supplying that for the Sanskrit case is this paper's
+contribution.
+
+## 3 · Data and methods
+
+### 3.1 Sources
 
 Three committed artifacts ground every claim:
 
@@ -84,7 +125,7 @@ Three committed artifacts ground every claim:
    [sanskrit-lexicon-scans](https://github.com/sanskrit-lexicon-scans) GitHub
    organization.
 
-### 2.2 Why citation mass, not page count
+### 3.2 Why citation mass, not page count
 
 The campaign's natural size metric is pages indexed (28,963), but pages measure effort,
 not payoff. A 159-page *Kumārasaṃbhava* and a 2,420-page *Taittirīyabrāhmaṇa* are not
@@ -95,7 +136,7 @@ through this paper: the tracking sheet's citation-count column has undocumented
 provenance (§6.1) and is used only as a consistent internal ranking, never as a share of
 the dictionary's total.
 
-### 2.3 Cross-validation
+### 3.3 Cross-validation
 
 Two independent checks tie the human work-log to the dictionary's own data. Every tracked
 abbreviation was resolved against the PWG abbreviation bibliography
@@ -108,16 +149,16 @@ then compared against the full-dictionary `<ls>` extraction
 §6.1 reports why that comparison shows the two count different objects and cannot be
 reconciled row by row.
 
-### 2.4 Privacy
+### 3.4 Privacy
 
 The snapshot's `Team` tab maps volunteers' real personal names to their GitHub handles.
 The handles are public — they appear on every coordinating issue — but the name-to-handle
 linkage is not, and the repository is. The name column was redacted at fetch time; every
 credit and count below uses handles only.
 
-## 3 · Results: what got built
+## 4 · Results: what got built
 
-### 3.1 Coverage
+### 4.1 Coverage
 
 | metric | value |
 |---|--:|
@@ -149,7 +190,7 @@ linked by a constant offset from a single anchor, so "no full indexing (for the 
 book) is required" ([PWG#86](https://github.com/sanskrit-lexicon/PWG/issues/86)). A
 coverage figure that counts those seventeen works as remaining misreads the campaign.
 
-### 3.2 What remains
+### 4.2 What remains
 
 Seven works are unclaimed, carrying 10,998 citations (4.1% of tracked mass) across 6,033
 pages. Ranked by citation payoff: Āśvalāyana-Śrautasūtra (1,835 citations),
@@ -164,7 +205,7 @@ citation and awkward reference schemes. The kāvya and kośa material, which ind
 is essentially finished. This is the expected shape of a volunteer campaign: work sorts
 itself by tractability, and what remains at the end is precisely what no volunteer chose.
 
-### 3.3 Throughput and velocity
+### 4.3 Throughput and velocity
 
 Eight volunteers carried very unequal loads — the top three by done-status mass (15, 11
 and 7 works; 58,955, 58,820 and 33,004 citation mass) account for **76.2%** of indexed
@@ -176,7 +217,7 @@ of the scan directory is a separate pipeline (upload, review, publish) with its 
 queue; the median lag from index posted to scan public was **12 days**, range 1–177,
 over 56 works.
 
-### 3.4 The frontier: published, wired, and what the audit found
+### 4.4 The frontier: published, wired, and what the audit found
 
 An index pays off only after three gates: the index is finished, the scan directory is
 public, and the citation resolver emits a link to it. As of 27-07-2026 all 55 finished
@@ -207,7 +248,7 @@ specific tracker cell*, not a heuristic guess:
   an audit pass that initially read it as a defect.
 - **Shared-limitation partial wiring** (`pancar`, above).
 
-### 3.5 The e-text dividend
+### 4.5 The e-text dividend
 
 Every finished index is a candidate for full-text extraction: the per-page index is
 exactly the segmentation anchor a page-image OCR pass needs, and 11.2 GB of page images
@@ -221,13 +262,13 @@ Staatsbibliothek already publishes per-page hOCR of the same edition at 43.8% �
 head of the queue is re-scoped to harvest-and-correct
 ([`reports/pwg_kosa_etext_pilot.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/pwg_kosa_etext_pilot.md)).
 
-## 4 · Results: how the work was organized
+## 5 · Results: how the work was organized
 
 The organizational findings are drawn from the forty-issue trail; the full reconstruction
 with verbatim quotations is committed as
 [`docs/PWG_SCAN_INDEX_CAMPAIGN_HISTORY_2025_2026.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/PWG_SCAN_INDEX_CAMPAIGN_HISTORY_2025_2026.md).
 
-### 4.1 A four-beat ritual with no standing specification
+### 5.1 A four-beat ritual with no standing specification
 
 Every work followed the same in-thread pipeline: **open** (templated issue with the
 bibliography line), **claim and deliver** (reservation by announcement — "Will handle
@@ -238,7 +279,7 @@ range → PDF page — was never written down as a standing specification; it wa
 a template, as a corrective rule issued after a violation, and as a volunteer's question
 that the coordinators confirmed. The format survived by imitation, not documentation.
 
-### 4.2 The review loop caught dictionary errors, not volunteer errors
+### 5.2 The review loop caught dictionary errors, not volunteer errors
 
 The first process finding: across the whole trail, only a handful of submitted indexes
 needed revision — one full redo, one systematic off-by-40, one surplus column, one
@@ -249,7 +290,7 @@ changes in the source edition. Indexing every citation of a work against its pri
 pages is, operationally, a proofreading pass over that work's citation apparatus — an
 instrument nobody designed but the campaign's most transferable by-product.
 
-### 4.3 The expensive failure was edition identity
+### 5.3 The expensive failure was edition identity
 
 The long threads are not the ones with sloppy indexes but the ones where the dictionary's
 citations turned out to follow a different printed edition than the one indexed. The
@@ -258,7 +299,7 @@ the exact source PDF not being identified ("Where is the pdf from which the inde
 created?" is asked repeatedly), and citations pointing at a commentary rather than the
 main text — a problem discussed across three dictionary repositories and never solved.
 
-### 4.4 Two single points of failure
+### 5.4 Two single points of failure
 
 Review concentrated in one person, and waits from submitted index to clearance ran 10–22
 days and once three months — while the indexes themselves usually arrived within minutes
@@ -270,7 +311,7 @@ written procedure ("We have to use your time ONLY in essential matters"), the co
 answered candidly — "Working on the transition from 'do it all myself' -- Requires a
 different mindset."
 
-### 4.5 The extreme case
+### 5.5 The extreme case
 
 The Mahābhārata thread ([PWK#84](https://github.com/sanskrit-lexicon/PWK/issues/84)): 80
 comments, opened February 2022, still open as of 27-07-2026 — even though all six volumes
@@ -280,9 +321,9 @@ true. Closure lagged completion by up to ten months elsewhere in the trail too, 
 go-live dates were never systematically recorded — the committed registry is the first
 place the sheet's `Public Link` dates exist outside the sheet.
 
-## 5 · Limitations
+## 6 · Limitations
 
-### 5.1 The citation counts' provenance — recovered; a contract replaces the ban
+### 6.1 The citation counts' provenance — recovered; a contract replaces the ban
 
 At draft freeze the sheet's citation-count column had open provenance: it reproduced
 neither the bare-string counts of the dictionary's own `<ls>` extraction nor a
@@ -298,18 +339,18 @@ them apart: a percentage is meaningful only against the `ALL` of the same snapsh
 percentage in this paper therefore still has the tracked set, not the dictionary, as its
 denominator, and the 73.7% headline cannot be restated as "73.7% of PWG's citations now
 resolve" (the dictionary-level shares on the shared base are ≈36.3% tracked / ≈26.8%
-indexed, see §2).
+indexed, see §4.1).
 
-### 5.2 Per-volume masses are floors
+### 6.2 Per-volume masses are floors
 
 Fifteen tracked rows carry no citation count of their own (multi-volume works whose count
 sits on the first volume), so per-volume mass figures are floors, not exact values.
 
-### 5.3 One committed artifact disagreed with another — recorded, then regenerated
+### 6.3 One committed artifact disagreed with another — recorded, then regenerated
 
 At draft freeze the dashboard summary
 ([`observatory/site/src/data/pwg_scan_index_summary.json`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/observatory/site/src/data/pwg_scan_index_summary.json))
-recorded `scan_dirs_observed_wired: 32`, while the report's frontier table (§3.4 here)
+recorded `scan_dirs_observed_wired: 32`, while the report's frontier table (§4.4 here)
 counted 35 fully wired directories (both artifacts dated 27-07-2026). The explanation was
 sequencing, not measurement: the resolver fixes that flipped `rvps`, `taittiriyas` and
 `taittiriyabr` to fully wired landed the same day
@@ -320,9 +361,9 @@ since been regenerated and now records **35**, matching the report. The case is 
 the worked example of the convention: a recorded disagreement is a finding, and its
 resolution is a regeneration, not a silent overwrite.
 
-### 5.4 What the issue trail cannot show
+### 6.4 What the issue trail cannot show
 
-The reconstruction in §4 is grounded in what forty issue threads literally say. Work
+The reconstruction in §5 is grounded in what forty issue threads literally say. Work
 coordinated off-GitHub — the Russian volunteer group's internal channel, private handoffs
 of column headers ("I gave those names to Olga") — enters the record only where the trail
 mentions it. Status vocabulary beyond `page-wise` (`to do/open`, the two `NR` variants)
@@ -330,16 +371,16 @@ appears nowhere in the trail and is taken from the sheet without inventing defin
 Attribution follows the sheet's `Reserved/Indexed by` column (first handle where a row
 carries two), which slightly under-credits paired work.
 
-### 5.5 What this paper does not claim
+### 6.5 What this paper does not claim
 
 I claim no novelty for crowd-sourced indexing as such, nor for linking dictionary
-citations to facsimiles; both exist elsewhere in digital lexicography. The contribution
+citations to facsimiles; both exist in the related literature (§2). The contribution
 is descriptive and infrastructural: a measured, cross-validated account of one completed
 campaign over a citation apparatus of unusual density, its committed registry, and the
-process findings (§4.2, §4.3) that a successor campaign — for the PW, the MW, or the
+process findings (§5.2, §5.3) that a successor campaign — for the PW, the MW, or the
 remaining Vedic backlog — would otherwise rediscover at full price.
 
-## 6 · Future work
+## 7 · Future work
 
 The introduction asked what the resulting infrastructure cannot yet do. Four items are
 open and committed as such: (i) the seven-work Vedic backlog (10,998
@@ -347,8 +388,34 @@ citations); (ii) the retroactive exhaustive cross-check — generating every dic
 reference to every linked work and listing the misses — proposed after it drove the
 Mahābhārata's 69 unmatched references to zero, but never run campaign-wide; (iii) the
 commentary-citation problem, open across three dictionary repositories with no agreed
-design; (iv) the e-text extraction queue (§3.5), where the indexes themselves become the
+design; (iv) the e-text extraction queue (§4.5), where the indexes themselves become the
 segmentation scaffold for OCR-correction work.
+
+## References
+
+Causer, Tim, and Valerie Wallace. 2012. "Building A Volunteer Community: Results and
+Findings from Transcribe Bentham." *Digital Humanities Quarterly* 6 (2).
+https://dhq.digitalhumanities.org/vol/6/2/000125/000125.html
+
+Čibej, Jaka, Darja Fišer, and Iztok Kosem. 2015. "The Role of Crowdsourcing in
+Lexicography." In *Electronic Lexicography in the 21st Century: Linking Lexical Data in
+the Digital Age — Proceedings of the eLex 2015 Conference*, Herstmonceux Castle, United
+Kingdom. https://elex.link/elex2015/proceedings/eLex_2015_05_Cibej+Fiser+Kosem.pdf
+
+Kapp, Dieter B., and Thomas Malten. 1997. "Report on the Cologne Sanskrit Dictionary
+Project." 10th International Sanskrit Conference, Bangalore.
+https://www.sanskrit-lexicon.uni-koeln.de/CDSL.pdf
+
+Krek, Simon, Iztok Kosem, John P. McCrae, et al. 2018. "European Lexicographic
+Infrastructure (ELEXIS)." In *Proceedings of the XVIII EURALEX International Congress*.
+
+Oomen, Johan, and Lora Aroyo. 2011. "Crowdsourcing in the Cultural Heritage Domain:
+Opportunities and Challenges." In *Proceedings of the 5th International Conference on
+Communities and Technologies (C&T '11)*, 138–149. New York: ACM.
+https://doi.org/10.1145/2103354.2103373
+
+Smith, Neel. 2009. "Citation in Classical Studies." *Digital Humanities Quarterly* 3 (1).
+https://dhq.digitalhumanities.org/vol/3/1/000028/000028.html
 
 ## Data availability
 
