@@ -1,0 +1,20 @@
+{
+  "what": "NWS (Nachtragswörterbuch des Sanskrit, Halle) novelty against the six-dictionary base, pinned numbers",
+  "measured": "2026-10-04, csl-orig @ f4c08c5",
+  "repro": "scripts/nws_halle_intersections.py --selftest in this repo (open PR #259; SELFTEST PASS 2026-10-05); base layer pwg-ru-data/layers/nws.tar.gz (167,991 lemmas) is private pending the MLU Halle-Wittenberg accession decision (H5939)",
+  "provenance": "H5932 (Uprava PR #4231, merged 2026-10-04); analysis doc papers/A61_wsc/NWS_HALLE_ANALYSIS_2026-10-04.md",
+  "values": {
+    "total_lemmas": 167991,
+    "outside_six_base": 138976,
+    "outside_six_base_share": 0.827,
+    "outside_pwg_pw_mw": 140316,
+    "outside_pwg_pw_mw_share": 0.835,
+    "intersect_pwg": 20268,
+    "intersect_pwg_share": 0.121,
+    "intersect_pw": 26508,
+    "intersect_pw_share": 0.158,
+    "intersect_mw": 23144,
+    "intersect_mw_share": 0.138,
+    "sch_removes": 1340
+  }
+}
