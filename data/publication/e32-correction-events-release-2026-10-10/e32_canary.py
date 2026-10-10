@@ -183,15 +183,19 @@ def read_pins():
     pins["edit_distance_pct_le2"] = str(me["pct_le2"])
     pins["edit_distance_p90"] = str(me["p90"])
     rates = rigor["h1_micro_edit"]["minor_rate_by_location"]
-    for loc in ("headword", "sense", "grammar"):
+    for loc in ("headword", "sense", "grammar", "citation", "markup", "meta"):
         pins[f"minor_rate_{loc}"] = str(rates[loc]["minor_rate"])
+    pins["cramers_v_ci_lo"] = str(h2["block_bootstrap_v_ci95"][0])
+    pins["cramers_v_ci_hi"] = str(h2["block_bootstrap_v_ci95"][1])
     # AED baselines (committed)
     base = json.load(open(BASELINES_PATH))
     pins["loccls_accuracy"] = str(base["location_classification"]["accuracy"])
     pins["loccls_macro_f1"] = str(base["location_classification"]["macro_f1"])
     pins["loccls_majority"] = str(base["location_classification"]["majority_baseline_accuracy"])
     pins["detection_pairwise"] = str(base["detection"]["pairwise_accuracy"])
+    pins["detection_tie_rate"] = str(base["detection"]["tie_rate"])
     pins["correction_acc1"] = str(base["correction"]["accuracy_at_1"])
+    pins["correction_dist1_share"] = str(base["correction"]["dist1_share"])
     # NWS pins (private base, frozen at the 04-10 run)
     nws = json.load(open(NWS_PIN_PATH))
     for k, v in nws["values"].items():
