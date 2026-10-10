@@ -1,0 +1,18 @@
+# H5800 smoke-test bootstrap: pin the ruff ruleset so local runs and CI agree
+# byte-for-byte regardless of any ambient user-level ruff config. This ruleset
+# is the exact set of families that fired at bootstrap (see docs/RUFF_BASELINE.md):
+# pyflakes/pycodestyle-4/7/9 + isort + bugbear + bandit + flake8-comprehensions.
+#
+# The gate is scripts/ruff_baseline_gate.py: CI fails only when the live count
+# EXCEEDS the documented baseline in .ruff-baseline (never silently zero).
+line-length = 100
+
+[lint]
+select = ["E4", "E7", "E9", "F", "I", "B", "S", "C4"]
+
+[lint.per-file-ignores]
+# Tests live on asserts and run fixed-argv subprocesses (--help smoke).
+"tests/**" = ["S101", "S603"]
+# The gate script's whole job is invoking the repo's own ruff with a fixed
+# argument list — the S603 audit comment is discharged here.
+"scripts/ruff_baseline_gate.py" = ["S603"]
