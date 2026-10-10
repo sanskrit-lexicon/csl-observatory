@@ -1,0 +1,14 @@
+NWS tar        : /Users/mac/Documents/GitHub/pwg-ru-data/layers/nws.tar.gz
+tar sha256     : 054b05da96df2f1af2c95c02b7e15d87f8a616d4eaa339f93e3ed7430e07f00c
+csl-orig HEAD  : f4c08c5 (pin f4c08c5)
+NWS lemmas     : 167991
+
+NWS ∩ PWG :  20,268  (12.1% of NWS)
+NWS ∩ PW  :  26,508  (15.8% of NWS)
+NWS ∩ MW  :  23,144  (13.8% of NWS)
+
+∪pwg∪pw∪mw: union=219,778  absent=140,316  (83.5%)
+∪sch   : union=228,933  absent=138,977  (82.7%)
+∪acc   : union=243,137  absent=138,977  (82.7%)
+∪pwkvn : union=243,157  absent=138,976  (82.7%)
+SELFTEST PASS: all pinned H5932 numbers reproduce exactly.
