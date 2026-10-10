@@ -103,7 +103,7 @@ jobs:
                           f'query={{repository(owner:"{ORG}",name:"{repo}"){{issue(number:{x["number"]}){{id}}}}}}']
                       )["data"]["repository"]["issue"]["id"]
                       gh_json(["api", "graphql", "-f",
-                          f'mutation{{addProjectV2ItemById(input:{{projectId:"{proj_id[tgt]}",contentId:"{iid}"}}){{item{{id}}}}}}'])
+                          f'query=mutation{{addProjectV2ItemById(input:{{projectId:"{proj_id[tgt]}",contentId:"{iid}"}}){{item{{id}}}}}}'])
                       added += 1
                       print(f"+ {repo}#{x['number']} -> project {tgt}")
                   if conn["pageInfo"]["hasNextPage"]:
