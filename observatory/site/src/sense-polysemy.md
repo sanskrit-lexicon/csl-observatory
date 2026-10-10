@@ -221,6 +221,17 @@ display(Inputs.table(byYear, {
 }))
 ```
 
+## Trust Block
+
+- Source artifact: [`data/sense_polysemy_per_dict.tsv`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/data/sense_polysemy_per_dict.tsv), served to this page via the read-only loader `observatory/site/src/data/sense_polysemy_per_dict.csv.py`; upstream per-row `source` column points into csl-atlas `data/lexico/r2_h1.json`; report in [`reports/sense_polysemy_per_dict.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/sense_polysemy_per_dict.md).
+- n: 11 dictionaries with structural sense marking (of 44 CDSL); entry counts summed per dictionary in the page's totals card.
+- Data date: **13-07-2026** (H817 analysis); the CSV is regenerated from the TSV at every site build, so page and source cannot drift.
+- Evidence: observed — sense-unit counts are read directly from digitised structural sense markup; no proxy is invented for the 33 dictionaries that lack machine-readable sense boundaries (H817 dead end, documented).
+- Limitations: coverage ceiling 11/44 — dictionaries without structural sense markup are absent by construction, so cross-dictionary means describe only the sense-marked subset; expanding n requires markup work, not a denser chart.
+- Validation: `npm run build` (Observable Framework) exits 0, regenerating `sense_polysemy_per_dict.csv` from the loader; totals card renders n and the entry sum live from the loaded CSV.
+- Owner repo: csl-observatory
+- Next use: revisit if any of the 33 unmarked dictionaries gains structural sense markup; otherwise stable — the census of the unmarked tail is the L1 Lexicon census's job.
+
 Download source TSV:
 [`sense_polysemy_per_dict.tsv`](https://raw.githubusercontent.com/sanskrit-lexicon/csl-observatory/main/data/sense_polysemy_per_dict.tsv)
 · report:
