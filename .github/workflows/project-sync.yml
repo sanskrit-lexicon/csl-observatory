@@ -23,8 +23,18 @@ jobs:
           python-version: "3.12"
       - name: Add milestone-mapped missing project items (dictionaries)
         env:
-          GH_TOKEN: ${{ github.token }}
+          # Required: PAT with project access. The default GITHUB_TOKEN
+          # cannot see org-level projectV2 at all (run 38084475884:
+          # "Could not resolve to a ProjectV2 with the number 1" under
+          # organization(), while an admin token resolves it fine) —
+          # same reason dict-audit/tooling-audit use this secret. The PAT
+          # must carry write access for addProjectV2ItemById.
+          GH_TOKEN: ${{ secrets.TOOLING_AUDIT_TOKEN }}
         run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::error::TOOLING_AUDIT_TOKEN secret not set. Add a PAT with project (read+write) + repo scopes."
+            exit 1
+          fi
           python - <<'PY'
           import sys, json, subprocess
           sys.stdout.reconfigure(encoding='utf-8')
