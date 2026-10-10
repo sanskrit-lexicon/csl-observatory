@@ -23,8 +23,18 @@ jobs:
           python-version: "3.12"
       - name: Add milestone-mapped missing project items (dictionaries)
         env:
-          GH_TOKEN: ${{ github.token }}
+          # Required: PAT with project access. The default GITHUB_TOKEN
+          # cannot see org-level projectV2 at all (run 38084475884:
+          # "Could not resolve to a ProjectV2 with the number 1" under
+          # organization(), while an admin token resolves it fine) —
+          # same reason dict-audit/tooling-audit use this secret. The PAT
+          # must carry write access for addProjectV2ItemById.
+          GH_TOKEN: ${{ secrets.TOOLING_AUDIT_TOKEN }}
         run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::error::TOOLING_AUDIT_TOKEN secret not set. Add a PAT with project (read+write) + repo scopes."
+            exit 1
+          fi
           python - <<'PY'
           import sys, json, subprocess
           sys.stdout.reconfigure(encoding='utf-8')
@@ -44,22 +54,27 @@ jobs:
                   raise SystemExit(f"gh {args[0]} failed: {r.stderr[:300]}")
               return json.loads(r.stdout)
 
-          # project ids — the dictionary boards #1-4 are USER projects
-          # (gasyoun), not org projects: the full org v2 listing does not
-          # contain them while issue projectItems reports those numbers.
-          # Look up each mapped number under the user, fall back to the org.
+          # project ids — the dictionary boards #1-4 are ORG projects
+          # (sanskrit-lexicon), verified 10-10-2026: issue projectItems on
+          # PWG/MWS reference org boards #1-4 ("Dictionary to Book" #1,
+          # "Digitization Quality" #2, "Structured Data" #3, "Major
+          # Enhancements" #4; a parallel #5-8 set serves the tooling repos).
+          # The original "they are USER (gasyoun) projects" read was an
+          # artifact of the nightly agent's token lacking read:project — its
+          # org listing came back empty. gasyoun's real user boards are
+          # unrelated (BookIndex backlog #1, Handoffs Kanban #2), and a repo
+          # GITHUB_TOKEN cannot see the private one anyway, which is what
+          # killed every run at "Could not resolve to a ProjectV2 with the
+          # number 2" (run 37099088210 et al.).
           proj_id = {}
           for num in sorted(set(PROJ.values())):
-              for kind, expr in (("user", 'user(login:"gasyoun")'),
-                                 ("org", 'organization(login:"%s")' % ORG)):
-                  q = '{%s{projectV2(number:%d){id number}}}' % (expr, num)
-                  node = gh_json(["api", "graphql", "-f", f"query={q}"]).get(
-                      "data", {}).get(kind, {}).get("projectV2")
-                  if node:
-                      proj_id[node["number"]] = node["id"]
-                      break
+              q = '{organization(login:"%s"){projectV2(number:%d){id number}}}' % (ORG, num)
+              node = gh_json(["api", "graphql", "-f", f"query={q}"]).get(
+                  "data", {}).get("organization", {}).get("projectV2")
+              if node:
+                  proj_id[node["number"]] = node["id"]
           if set(PROJ.values()) - set(proj_id):
-              raise SystemExit(f"projects not found (user + org): {sorted(set(PROJ.values()) - set(proj_id))}")
+              raise SystemExit(f"projects not found (org {ORG}): {sorted(set(PROJ.values()) - set(proj_id))}")
 
           added = skipped = 0
           for repo in REPOS:
@@ -88,7 +103,7 @@ jobs:
                           f'query={{repository(owner:"{ORG}",name:"{repo}"){{issue(number:{x["number"]}){{id}}}}}}']
                       )["data"]["repository"]["issue"]["id"]
                       gh_json(["api", "graphql", "-f",
-                          f'mutation{{addProjectV2ItemById(input:{{projectId:"{proj_id[tgt]}",contentId:"{iid}"}}){{item{{id}}}}}}'])
+                          f'query=mutation{{addProjectV2ItemById(input:{{projectId:"{proj_id[tgt]}",contentId:"{iid}"}}){{item{{id}}}}}}'])
                       added += 1
                       print(f"+ {repo}#{x['number']} -> project {tgt}")
                   if conn["pageInfo"]["hasNextPage"]:
