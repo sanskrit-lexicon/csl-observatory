@@ -36,13 +36,13 @@ e32_canary.py --recompute` rather than quoting drifted numbers.
 ## Numeric canary
 
 Every number the A73 paper quotes re-derives from committed artifacts by one
-command (25 corpus numbers recomputed live from the CSV + 58 pins read from the
+command (25 corpus numbers recomputed live from the CSV + 65 pins read from the
 committed OBS-T rigor/baseline tables, the a61-sixdict matrix release and the
 NWS pin):
 
 ```bash
 python3 data/publication/e32-correction-events-release-2026-10-10/e32_canary.py
-# ALL PASS — 25 corpus + 58 pinned numbers verified against the frozen cut
+# ALL PASS — 25 corpus + 65 pinned numbers verified against the frozen cut
 ```
 
 Status at cut: **ALL PASS (2026-10-10)**, see `expected.json` for the frozen
