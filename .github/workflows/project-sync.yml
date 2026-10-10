@@ -44,22 +44,27 @@ jobs:
                   raise SystemExit(f"gh {args[0]} failed: {r.stderr[:300]}")
               return json.loads(r.stdout)
 
-          # project ids — the dictionary boards #1-4 are USER projects
-          # (gasyoun), not org projects: the full org v2 listing does not
-          # contain them while issue projectItems reports those numbers.
-          # Look up each mapped number under the user, fall back to the org.
+          # project ids — the dictionary boards #1-4 are ORG projects
+          # (sanskrit-lexicon), verified 10-10-2026: issue projectItems on
+          # PWG/MWS reference org boards #1-4 ("Dictionary to Book" #1,
+          # "Digitization Quality" #2, "Structured Data" #3, "Major
+          # Enhancements" #4; a parallel #5-8 set serves the tooling repos).
+          # The original "they are USER (gasyoun) projects" read was an
+          # artifact of the nightly agent's token lacking read:project — its
+          # org listing came back empty. gasyoun's real user boards are
+          # unrelated (BookIndex backlog #1, Handoffs Kanban #2), and a repo
+          # GITHUB_TOKEN cannot see the private one anyway, which is what
+          # killed every run at "Could not resolve to a ProjectV2 with the
+          # number 2" (run 37099088210 et al.).
           proj_id = {}
           for num in sorted(set(PROJ.values())):
-              for kind, expr in (("user", 'user(login:"gasyoun")'),
-                                 ("org", 'organization(login:"%s")' % ORG)):
-                  q = '{%s{projectV2(number:%d){id number}}}' % (expr, num)
-                  node = gh_json(["api", "graphql", "-f", f"query={q}"]).get(
-                      "data", {}).get(kind, {}).get("projectV2")
-                  if node:
-                      proj_id[node["number"]] = node["id"]
-                      break
+              q = '{organization(login:"%s"){projectV2(number:%d){id number}}}' % (ORG, num)
+              node = gh_json(["api", "graphql", "-f", f"query={q}"]).get(
+                  "data", {}).get("organization", {}).get("projectV2")
+              if node:
+                  proj_id[node["number"]] = node["id"]
           if set(PROJ.values()) - set(proj_id):
-              raise SystemExit(f"projects not found (user + org): {sorted(set(PROJ.values()) - set(proj_id))}")
+              raise SystemExit(f"projects not found (org {ORG}): {sorted(set(PROJ.values()) - set(proj_id))}")
 
           added = skipped = 0
           for repo in REPOS:
