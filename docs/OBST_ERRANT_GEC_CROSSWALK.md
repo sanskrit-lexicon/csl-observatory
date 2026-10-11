@@ -73,7 +73,7 @@ the defect class this handoff removes.
 ## 3. The two axes and what maps
 
 - **Axis B (edit-type)** maps, cell-by-cell, to the table below: nine values,
-  four PLACEABLE, four PARTIAL (nearest category carries a named caveat), two
+  three PLACEABLE, four PARTIAL (nearest category carries a named caveat), two
   UNPLACEABLE (`source-raw`, `none`).
 - **Axis A (location)** has **no published analogue** in ERRANT, the GEC shared
   tasks, or historical text normalization — all three annotate sentence-internal
