@@ -452,7 +452,8 @@ A companion report,
 [`obs_t_baselines_field_metrics.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_t_baselines_field_metrics.md),
 adds the field-standard metrics reviewers expect, each with its stated
 denominator: on the detection flagging decisions, per-class precision 0.521 /
-recall 0.515 / F0.5 0.519 for the erroneous class, FPR 0.976, and
+recall 0.515 / F0.5 0.519 for the erroneous class (mirror class 0.520/0.526/0.521),
+FPR 0.474, and
 chance-corrected model–gold agreement Krippendorff's α = 0.041 (Cohen's
 κ = 0.041 on non-tie tokens) — near chance by construction, which is the
 headroom statement; on the location classifier, α = 0.464 (κ = 0.473). The

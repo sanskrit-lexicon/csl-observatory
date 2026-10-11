@@ -175,17 +175,19 @@ def detection(form_rows):
     token of the pair; a tie abstains (neither token flagged). Predicted
     `erroneous` = flagged, predicted `correct` = unflagged, so per token:
 
-        pairwise correct -> TP (erroneous flagged) + TN (correct unflagged)
-        pairwise wrong   -> FN (erroneous unflagged) + FP (correct flagged)
-        tie              -> FN (erroneous unflagged) + TN (correct unflagged)
+        pairwise correct -> old flagged (TP) + new unflagged (TN)
+        pairwise wrong   -> old unflagged (FN) + new flagged (FP)
+        tie              -> old unflagged (FN) + new unflagged (TN)
 
-    hence TP = #correct, FP = #wrong, FN = #wrong+#ties, TN = #ties. Every
-    per-class P/R/F0.5/FPR below is arithmetic on those four counts with its
-    denominator stated. Krippendorff's alpha treats the two raters as gold and
-    the model; tie tokens carry a missing model label and drop out of the
-    alpha denominator per the pairable-unit rule. Cohen's kappa is the
-    pre-existing chance-corrected agreement, computed on non-tie tokens only
-    (its denominator is stated)."""
+    hence TP = #correct, FP = #wrong, FN = #wrong+#ties, TN = #correct+#ties,
+    and TP+FP+FN+TN = 2n exactly (H6388 verifier finding: the first cut set
+    TN = #ties, losing the TN contribution of correct pairs — the confusion
+    matrix must always sum to 2n). Every per-class P/R/F0.5/FPR below is
+    arithmetic on those four counts with its denominator stated. Krippendorff's
+    alpha treats the two raters as gold and the model; tie tokens carry a
+    missing model label and drop out of the alpha denominator per the
+    pairable-unit rule. Cohen's kappa is the pre-existing chance-corrected
+    agreement, computed on non-tie tokens only (its denominator is stated)."""
     train, _dev, test = chrono_split(form_rows)
     score, _ = build_charlm([r['new_iast'].strip() for r in train])
     n = correct = ties = 0
@@ -206,7 +208,8 @@ def detection(form_rows):
             gold_vs_model += [('erroneous', 'correct'), ('correct', 'erroneous')]
     wrong = n - correct - ties
     tp, fp = correct, wrong
-    fn, tn = wrong + ties, ties
+    fn, tn = wrong + ties, correct + ties          # TN: correct pairs' unflagged
+    assert tp + fp + fn + tn == 2 * n, 'confusion must sum to 2n'  # H6388 verifier gate
 
     def prf(tp_, fp_, fn_):
         p = tp_ / (tp_ + fp_) if tp_ + fp_ else 0.0
@@ -429,15 +432,20 @@ def selftest():
     ok.append(('cohen kappa perfect=1',
                cohen_kappa([('x', 'x'), ('y', 'y'), ('x', 'x')]) == 1.0))
 
-    # 7. detection flagging-view identity: from (correct, wrong, ties),
-    #    pairwise accuracy must equal recall(erroneous)
+    # 7. detection flagging-view identities (H6388 verifier finding: the first
+    #    cut set TN=#ties and the confusion matrix failed to sum to 2n):
+    #    from (correct, wrong, ties) the counts are tp=c, fp=w, fn=w+t,
+    #    tn=c+t, they must sum to 2n, and FPR = fp/(fp+tn) = w/(w+c+t).
     c, w, t = 1609, 1482, 36
     n = c + w + t
+    tp_, fp_, fn_, tn_ = c, w, w + t, c + t
+    ok.append(('flagging view: confusion sums to 2n',
+               tp_ + fp_ + fn_ + tn_ == 2 * n))
+    ok.append(('flagging view: fpr = wrong/(wrong+correct+ties)',
+               abs(fp_ / (fp_ + tn_) - w / (w + c + t)) < 1e-15))
+    #    recall(erroneous) must equal the pairwise accuracy
     ok.append(('flagging view: pairwise acc == recall(erroneous)',
-               abs(c / n - c / (c + w + t)) < 1e-15))
-    #    and FPR must equal wrong/(wrong+ties)
-    ok.append(('flagging view: fpr = wrong/(wrong+ties)',
-               abs(w / (w + t) - w / (w + t)) < 1e-15))
+               abs(c / n - tp_ / (tp_ + fn_)) < 1e-15))
 
     for name, passed in ok:
         print(f'  {"PASS" if passed else "FAIL"}  {name}')
