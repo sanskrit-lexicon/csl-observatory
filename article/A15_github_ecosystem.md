@@ -466,6 +466,41 @@ underlying human redundancy is. An observatory that counts only commits and
 closures will read an agent-amplified ecosystem as flourishing; the
 concentration instruments are what keep the reading honest.
 
+### 4.5 The same findings in CHAOSS and MSR community-reporting terms (H6389, added 11-10-2026)
+
+Sections 3.1–3.7 were measured with house instruments. This section re-expresses
+the findings in the community-reporting vocabulary of CHAOSS (the Linux
+Foundation's Community Health Analytics Open Source Software project) and the
+software-ecosystem-health literature of the Mining Software Repositories (MSR)
+family, so that readers — and the venue decision recorded for this article —
+compare like with like. Every CHAOSS metric name below was verified against the
+live CHAOSS knowledge base on 11-10-2026; where no published metric name fits,
+that is said rather than papered over.
+
+| A15 finding | CHAOSS/MSR term | A15 measured value | reading in the reporting vocabulary |
+|---|---|---|---|
+| §3.1 bus factor of 1 in 67/76 repositories | CHAOSS **Contributor Absence Factor** (the metric "previously called Bus Factor"; smallest contributor set covering 50 % of contributions) | 65 repositories at factor 1; core trio carries 98.0 % | an extreme absence-risk profile: a one-person absence event halts most of the organisation |
+| §3.1 Gini 0.856 over contributions | no verified CHAOSS analogue (inequality is computed, not standardised, in the KB pages verified here) | 0.856 | reported as-is; the concentration finding does not depend on the coefficient |
+| §3.4 lifecycle 6-day median vs 349-day p90; 620 issues open 4+ years | CHAOSS **Time to Close** (a.k.a. Issue Resolution Duration) | heavy-tailed closure | bimodal responsiveness: inside the maintainers' attention, days; outside it, years |
+| §3.4 silent backlog of 178 never-commented issues | CHAOSS **Issue Response Time** (time to first response from a contributor other than the author) | never | the first-response metric is the exact instrument that exposes the backlog |
+| §3.5 velocity: 2,519 commits in 2026 on ≤11 distinct authors | commit-frequency reporting (CHAOSS commit family) | rising volume on flat shoulders | volume-per-person, not community growth — the per-capita framing is the point |
+| §3.6 103 stars vs 6,923 clones/14 days | no verified CHAOSS analogue; ecosystem-consumption reading per Jansen (2014) | consumption-as-infrastructure | project-popularity metrics underrate data ecosystems consumed by cloning |
+| §3.2 hygiene (licensing, branch defaults, staleness) | partial fit only | 6→70/76 licensed; zero stale | recovered by a bounded campaign; no single CHAOSS metric verified to name this bundle |
+| §3.3 issue-taxonomy conformance 63 % (39 % in 2026) | no CHAOSS analogue verified | retroactive order, fragile at the edge | process-adoption metric, house-defined; named as such |
+| §3.7 data-layer bus factor (correction throughput) | **Contributor Absence Factor applied to a content stream** — an extension of the CHAOSS definition (which is stated for project contributions), flagged here as ours | no year with >4 distinct correctors; lead share 64–100 % | the extension is natural but not part of the published metric; stated as an application |
+
+Two framing consequences. First, in the ecosystem-health terms of Jansen (2014)
+— who argues health must be measured "beyond the scope of project health" — and
+the systematic literature review of Manikas & Hansen (2013), CDSL reads as a
+**healthy-but-fragile supply-side ecosystem**: repository hygiene and throughput
+look recovered or rising precisely because a concentrated trio (plus, since
+2026, its agent fleet) compensates; the absence-risk instruments, not the
+volume instruments, are what reveal the fragility. Second, for the venue
+decision parked as `@DECIDE` (LREC/JOHD family): this section makes the article
+legible to the MSR/IST/JSS reporting family as well, since its findings are now
+stated in that family's own vocabulary; the CHAOSS/MSR-terms section travels
+with the paper whichever venue is chosen.
+
 ## 5. Discussion
 
 **What the profile says.** The introduction asked what it costs to keep the
@@ -576,12 +611,25 @@ Program Comprehension (ICPC)*, 1–10.
 Böhtlingk, O., & Roth, R. (1855–1875). *Sanskrit-Wörterbuch* (7 vols.). St.
 Petersburg: Kaiserliche Akademie der Wissenschaften.
 
+CHAOSS (2022–2026). Metric definitions: Contributor Absence Factor (previously
+"Bus Factor") <https://chaoss.community/kb/metric-bus-factor/>; Time to Close
+<https://chaoss.community/kb/metric-time-to-close/>; Issue Response Time
+<https://chaoss.community/kb/metric-issue-response-time/>. CHAOSS knowledge base
+(all URLs live-verified 2026-10-11).
+
 Eghbal, N. (2020). *Working in Public: The Making and Maintenance of Open Source
 Software*. San Francisco: Stripe Press.
+
+Jansen, S. (2014). Measuring the health of open source software ecosystems: Beyond
+the scope of project health. *Information and Software Technology*, 56(11),
+1508–1519.
 
 Kalliamvakou, E., Gousios, G., Blincoe, K., Singer, L., German, D. M., & Damian, D.
 (2014). The promises and perils of mining GitHub. *Proceedings of the 11th Working
 Conference on Mining Software Repositories (MSR)*, 92–101.
+
+Manikas, K., & Hansen, K. M. (2013). Software ecosystems — A systematic literature
+review. *Journal of Systems and Software*, 86(5), 1294–1306.
 
 Monier-Williams, M. (1899). *A Sanskrit–English Dictionary*. Oxford: Clarendon
 Press.
