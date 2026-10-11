@@ -1,0 +1,64 @@
+{
+  "generatedAt": "2026-10-11T14:00:54.981140+00:00",
+  "provenance": {
+    "executor_tier": "OxAlpha (opencode, z-ai-coding-plan/glm-5.3-flash)",
+    "handoff": "H6388",
+    "batch_type": "deterministic stdlib recomputation from correction_events_release.csv; no batch in these baselines is model-generated or model-judged, so there is no model annotation batch to stamp",
+    "script": "scripts/obs_t_baselines.py"
+  },
+  "detection_field_metrics": {
+    "flagging_confusion": {
+      "tp": 1609,
+      "fp": 1482,
+      "fn": 1518,
+      "tn": 36
+    },
+    "per_class": {
+      "erroneous": {
+        "precision": 0.521,
+        "recall": 0.515,
+        "f0_5": 0.519,
+        "precision_denominator": "all flagged tokens (tp+fp=3,091)",
+        "recall_denominator": "all gold-erroneous tokens (tp+fn=3,127)"
+      },
+      "correct": {
+        "precision": 0.023,
+        "recall": 0.024,
+        "f0_5": 0.023,
+        "precision_denominator": "all flagged tokens (tp+fp=1,554)",
+        "recall_denominator": "all gold-correct tokens (tp+fn=1,518)"
+      }
+    },
+    "fpr_erroneous_flag": 0.976,
+    "fpr_denominator": "all gold-correct tokens (fp+tn=1,518)",
+    "krippendorff_alpha_nominal": 0.041,
+    "krippendorff_alpha_pairable_values": 6182,
+    "krippendorff_alpha_note": "nominal alpha, gold vs model rater over the 6,254 test tokens; 72 tie tokens carry a missing model label and are not pairable",
+    "cohen_kappa_non_tie": 0.041,
+    "cohen_kappa_units": 6182,
+    "pairwise_accuracy_recomputed": 0.515
+  },
+  "location_classification_agreement": {
+    "krippendorff_alpha_nominal": 0.464,
+    "krippendorff_alpha_pairable_values": 9729,
+    "cohen_kappa": 0.473,
+    "agreement_denominator": "all test rows, gold label vs model prediction (n=9,729)"
+  },
+  "anchors": {
+    "release_of_record_e32": {
+      "detection_pairwise": "0.516",
+      "correction_acc1": "0.059",
+      "loccls_accuracy": "0.638",
+      "loccls_macro_f1": "0.453",
+      "loccls_majority": "0.402"
+    },
+    "recomputed_current_release": {
+      "detection_pairwise": 0.515,
+      "correction_acc1": 0.058,
+      "loccls_accuracy": 0.638,
+      "loccls_macro_f1": 0.453,
+      "loccls_majority": 0.402
+    },
+    "drift_note": "the H1494 event-ID re-keying (27-07-2026) perturbed the (date, event_id) tie-order of the chronological split; the form-layer anchors moved by one unit in the third decimal and reproduce with the UNCHANGED pre-H6388 script — a pre-existing staleness this regeneration surfaced, not a metric change. The E32-pinned canonical obs_t_baselines.json is untouched by this unit; re-cut the release to adopt the recomputed anchors."
+  }
+}

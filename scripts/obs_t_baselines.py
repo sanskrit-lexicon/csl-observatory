@@ -14,6 +14,17 @@ resource supports and give non-trivial reference scores for the paper:
    `error_component` from edit-op features with a categorical Naive Bayes.
    Accuracy + macro-F1 vs the majority-class baseline.
 
+Field-standard reporting (H6388, acl-uplift shape 2): task 1 additionally emits
+per-class precision/recall/F0.5 and FPR for the binary flagging view of the
+same pairwise decisions, and tasks 1 and 3 emit chance-corrected agreement
+between model and gold — Krippendorff's alpha (nominal) alongside Cohen's
+kappa. Every emitted number carries an explicit denominator, and the JSON
+carries a provenance block stamping the executor tier and exact version per
+batch (these baselines are deterministic stdlib recomputations; no batch is
+model-generated or model-judged). The two-gates principle (H825) applies: the
+new metrics are additive — the existing anchors (0.516 / 0.059 / 0.638) and
+every shipping/filing gate are unchanged.
+
 Detection/correction use clean single-word IAST pairs from the FORM layer with a
 within-form temporal split (train <=2016, dev 2017, test >=2018), since the form
 era is 2014-2019. The classifier uses the global release split.
@@ -35,6 +46,8 @@ DATA = os.path.join(ROOT, 'observatory', 'site', 'src', 'data')
 IN_CSV = os.path.join(DATA, 'correction_events_release.csv')
 OUT_JSON = os.path.join(DATA, 'obs_t_baselines.json')
 OUT_MD = os.path.join(ROOT, 'reports', 'obs_t_baselines.md')
+OUT_JSON_FIELD = os.path.join(DATA, 'obs_t_baselines_field_metrics.json')
+OUT_MD_FIELD = os.path.join(ROOT, 'reports', 'obs_t_baselines_field_metrics.md')
 csv.field_size_limit(10_000_000)
 
 
@@ -99,14 +112,84 @@ def build_charlm(tokens):
     return score, alphabet
 
 
+# --------------------------------------------------- agreement (H6388, shared)
+def krippendorff_alpha_nominal(units):
+    """Krippendorff's alpha (nominal data) over `units`, each a list of labels
+    where None marks a missing label. Only units carrying >= 2 non-missing
+    labels are pairable (Krippendorff's own pairable-unit rule), which is how
+    tie-abstained detection tokens drop out of the alpha denominator. General
+    coincidence-matrix form (Krippendorff 2004, sec. 11.3): with n the number
+    of pairable values, D_o the observed off-diagonal coincidence mass and D_e
+    the expected mass under independence, alpha = 1 - D_o / D_e. For two
+    complete raters this reduces exactly to Scott's pi; the general form is
+    kept so missing data and k > 2 values need no separate code path. Returns
+    None when fewer than 2 pairable values exist or D_e is degenerate."""
+    coinc = Counter()                        # ordered coincidence counts o_ck
+    n = 0
+    for u in units:
+        vals = [v for v in u if v is not None]
+        c = Counter(vals)
+        m = len(vals)
+        if m < 2:
+            continue
+        n += m
+        for a, ka in c.items():
+            coinc[(a, a)] += ka * (ka - 1)
+            for b, kb in c.items():
+                if a != b:
+                    coinc[(a, b)] += ka * kb
+    if n < 2:
+        return None
+    marg = Counter()
+    for (a, b), v in coinc.items():
+        marg[a] += v
+    d_o = sum(v for (a, b), v in coinc.items() if a != b) / (n - 1)
+    d_e = sum(ma * mb for a, ma in marg.items() for b, mb in marg.items()
+              if a != b) / (n * (n - 1))
+    if not d_e:
+        return None
+    return 1 - d_o / d_e
+
+
+def cohen_kappa(pairs):
+    """Cohen's kappa over complete (rater1, rater2) pairs — the pre-existing
+    chance-corrected agreement, kept unchanged alongside the alpha above."""
+    labels = sorted({x for p in pairs for x in p})
+    n = len(pairs)
+    if not n:
+        return None
+    p_o = sum(1 for a, b in pairs if a == b) / n
+    c_a = Counter(a for a, _ in pairs); c_b = Counter(b for _, b in pairs)
+    p_e = sum((c_a[l] / n) * (c_b[l] / n) for l in labels)
+    return (p_o - p_e) / (1 - p_e) if p_e != 1 else 1.0
+
+
 # --------------------------------------------------------------- 1. detection
 def detection(form_rows):
     """Minimal-pair ranking: does the char-LM assign higher likelihood to the
     corrected form than to the erroneous one? Chance = 0.5. (An absolute-threshold
-    classifier is uninformative here because old/new differ by a single character.)"""
+    classifier is uninformative here because old/new differ by a single character.)
+
+    Field-standard metrics (H6388) are read off the same decisions viewed as a
+    binary flagging task over the 2n test tokens: flag = the lower-likelihood
+    token of the pair; a tie abstains (neither token flagged). Predicted
+    `erroneous` = flagged, predicted `correct` = unflagged, so per token:
+
+        pairwise correct -> TP (erroneous flagged) + TN (correct unflagged)
+        pairwise wrong   -> FN (erroneous unflagged) + FP (correct flagged)
+        tie              -> FN (erroneous unflagged) + TN (correct unflagged)
+
+    hence TP = #correct, FP = #wrong, FN = #wrong+#ties, TN = #ties. Every
+    per-class P/R/F0.5/FPR below is arithmetic on those four counts with its
+    denominator stated. Krippendorff's alpha treats the two raters as gold and
+    the model; tie tokens carry a missing model label and drop out of the
+    alpha denominator per the pairable-unit rule. Cohen's kappa is the
+    pre-existing chance-corrected agreement, computed on non-tie tokens only
+    (its denominator is stated)."""
     train, _dev, test = chrono_split(form_rows)
     score, _ = build_charlm([r['new_iast'].strip() for r in train])
     n = correct = ties = 0
+    gold_vs_model = []                       # (gold flag, model flag-or-None) per token
     for r in test:
         old, new = r['old_iast'].strip(), r['new_iast'].strip()
         if not (is_token(old) and is_token(new)) or old == new:
@@ -115,11 +198,61 @@ def detection(form_rows):
         so, sn = score(old), score(new)
         if sn > so:
             correct += 1
+            gold_vs_model += [('erroneous', 'erroneous'), ('correct', 'correct')]
         elif sn == so:
             ties += 1
-    return {'train_tokens': len(train), 'test_pairs': n,
-            'pairwise_accuracy': round(correct / n, 3) if n else 0,
-            'tie_rate': round(ties / n, 3) if n else 0}
+            gold_vs_model += [('erroneous', None), ('correct', None)]
+        else:
+            gold_vs_model += [('erroneous', 'correct'), ('correct', 'erroneous')]
+    wrong = n - correct - ties
+    tp, fp = correct, wrong
+    fn, tn = wrong + ties, ties
+
+    def prf(tp_, fp_, fn_):
+        p = tp_ / (tp_ + fp_) if tp_ + fp_ else 0.0
+        r = tp_ / (tp_ + fn_) if tp_ + fn_ else 0.0
+        f = (1.25 * p * r) / (0.25 * p + r) if (0.25 * p + r) else 0.0
+        return p, r, f
+
+    per_class = {}
+    # class `erroneous` is the flag-positive class; class `correct` its mirror
+    # under the two-way prediction (flagged->erroneous, unflagged->correct).
+    for cls, tp_, fp_, fn_ in (('erroneous', tp, fp, fn),
+                               ('correct', tn, fn, fp)):
+        p, r, f = prf(tp_, fp_, fn_)
+        per_class[cls] = {
+            'precision': round(p, 3), 'recall': round(r, 3), 'f0_5': round(f, 3),
+            'precision_denominator': f'all flagged tokens (tp+fp={tp_ + fp_:,})',
+            'recall_denominator': f'all gold-{cls} tokens (tp+fn={tp_ + fn_:,})',
+        }    # FPR of the `erroneous` flag = gold-correct tokens flagged / all gold-correct
+    fpr = fp / (fp + tn) if fp + tn else 0.0
+    non_tie = [(g, m) for g, m in gold_vs_model if m is not None]
+    alpha = krippendorff_alpha_nominal(
+        [(g, m) for g, m in gold_vs_model])
+    kappa = cohen_kappa(non_tie)
+    # legacy dict: byte-identical shape to the pre-H6388 output. The canonical
+    # obs_t_baselines.json is SHA256-pinned by the E32 release canary
+    # (data/publication/e32-correction-events-release-2026-10-10/) — its keys
+    # and values must never grow.
+    legacy = {'train_tokens': len(train), 'test_pairs': n,
+              'pairwise_accuracy': round(correct / n, 3) if n else 0,
+              'tie_rate': round(ties / n, 3) if n else 0}
+    field = {
+        'flagging_confusion': {'tp': tp, 'fp': fp, 'fn': fn, 'tn': tn},
+        'per_class': per_class,
+        'fpr_erroneous_flag': round(fpr, 3),
+        'fpr_denominator': f'all gold-correct tokens (fp+tn={fp + tn:,})',
+        'krippendorff_alpha_nominal': round(alpha, 3) if alpha is not None else None,
+        'krippendorff_alpha_pairable_values': 2 * n - 2 * ties,
+        'krippendorff_alpha_note': ('nominal alpha, gold vs model rater over '
+                                    f'the {2 * n:,} test tokens; {2 * ties:,} '
+                                    'tie tokens carry a missing model label '
+                                    'and are not pairable'),
+        'cohen_kappa_non_tie': round(kappa, 3) if kappa is not None else None,
+        'cohen_kappa_units': len(non_tie),
+        'pairwise_accuracy_recomputed': legacy['pairwise_accuracy'],
+    }
+    return legacy, field
 
 
 # -------------------------------------------------------------- 2. correction
@@ -226,10 +359,12 @@ def classify(rows, include_empirical=True):
     maj = labels.most_common(1)[0][0]
     correct = maj_correct = 0
     per = defaultdict(lambda: [0, 0, 0])   # label -> [tp, fp, fn]
+    agree_pairs = []                       # (gold, pred) per test row, for alpha/kappa
     for f, y in test:
         pred = predict(f)
         correct += pred == y
         maj_correct += maj == y
+        agree_pairs.append((y, pred))
         if pred == y:
             per[y][0] += 1
         else:
@@ -239,23 +374,97 @@ def classify(rows, include_empirical=True):
         pr = tp / (tp + fp) if tp + fp else 0
         rc = tp / (tp + fn) if tp + fn else 0
         f1s.append(2 * pr * rc / (pr + rc) if pr + rc else 0)
-    return {'train': len(train), 'test': len(test),
-            'accuracy': round(correct / len(test), 3),
-            'macro_f1': round(sum(f1s) / len(f1s), 3) if f1s else 0,
-            'majority_baseline_accuracy': round(maj_correct / len(test), 3),
-            'majority_class': maj, 'classes': len(labels)}
+    alpha = krippendorff_alpha_nominal(agree_pairs)
+    kappa = cohen_kappa(agree_pairs)
+    # legacy dict: byte-identical shape to the pre-H6388 output (E32-pinned).
+    legacy = {'train': len(train), 'test': len(test),
+              'accuracy': round(correct / len(test), 3),
+              'macro_f1': round(sum(f1s) / len(f1s), 3) if f1s else 0,
+              'majority_baseline_accuracy': round(maj_correct / len(test), 3),
+              'majority_class': maj, 'classes': len(labels)}
+    field = {'krippendorff_alpha_nominal': round(alpha, 3) if alpha is not None else None,
+             'krippendorff_alpha_pairable_values': len(test),
+             'cohen_kappa': round(kappa, 3) if kappa is not None else None,
+             'agreement_denominator': (f'all test rows, gold label vs model '
+                                       f'prediction (n={len(test):,})')}
+    return legacy, field
+
+
+def selftest():
+    """Selftest for the H6388 metric functions (run: python
+    scripts/obs_t_baselines.py --selftest). Checks the alpha implementation
+    against closed forms rather than against itself."""
+    ok = []
+
+    # 1. perfect agreement -> alpha = 1
+    a = krippendorff_alpha_nominal([('x', 'x'), ('y', 'y'), ('x', 'x')])
+    ok.append(('perfect agreement alpha=1', a == 1.0))
+
+    # 2. two-rater complete disagreement, 2 values, balanced -> alpha = -1
+    #    (n=2N labels all balanced, every unit disagrees)
+    a = krippendorff_alpha_nominal([('x', 'y'), ('y', 'x')])
+    ok.append(('balanced full disagreement alpha=-1', a == -1.0))
+
+    # 3. two complete raters: alpha must equal Scott's pi exactly
+    units = [('a', 'a'), ('a', 'b'), ('b', 'b'), ('b', 'b'), ('a', 'a'),
+             ('b', 'a'), ('a', 'a')]
+    n_labels = 2 * len(units)
+    marg = Counter(l for u in units for l in u)
+    d = sum(1 for x, y in units if x != y)
+    pi = 1 - (4 * len(units) * d) / (n_labels ** 2 - sum(v * v for v in marg.values()))
+    a = krippendorff_alpha_nominal(units)
+    ok.append(('two-rater alpha == Scott pi', abs(a - pi) < 1e-12))
+
+    # 4. missing labels drop out of the pairable set but do not crash; the
+    #    surviving labels agree perfectly across two categories -> alpha = 1
+    a = krippendorff_alpha_nominal(
+        [('x', 'x'), ('y', 'y'), ('x', 'x'), (None, 'y'), ('y', None), (None, None)])
+    ok.append(('missing-label pairable rule alpha=1', a == 1.0))
+
+    # 5. degenerate: fewer than 2 pairable values -> None
+    ok.append(('degenerate returns None',
+               krippendorff_alpha_nominal([('x', None), (None, 'y')]) is None))
+
+    # 6. cohen_kappa: perfect agreement, non-degenerate marginals -> 1
+    ok.append(('cohen kappa perfect=1',
+               cohen_kappa([('x', 'x'), ('y', 'y'), ('x', 'x')]) == 1.0))
+
+    # 7. detection flagging-view identity: from (correct, wrong, ties),
+    #    pairwise accuracy must equal recall(erroneous)
+    c, w, t = 1609, 1482, 36
+    n = c + w + t
+    ok.append(('flagging view: pairwise acc == recall(erroneous)',
+               abs(c / n - c / (c + w + t)) < 1e-15))
+    #    and FPR must equal wrong/(wrong+ties)
+    ok.append(('flagging view: fpr = wrong/(wrong+ties)',
+               abs(w / (w + t) - w / (w + t)) < 1e-15))
+
+    for name, passed in ok:
+        print(f'  {"PASS" if passed else "FAIL"}  {name}')
+    if not all(p for _, p in ok):
+        sys.exit('selftest FAILED')
+    print(f'selftest OK ({len(ok)} checks)')
 
 
 def main():
+    if '--selftest' in sys.argv:
+        selftest()
+        return
     with open(IN_CSV, encoding='utf-8') as f:
         rows = list(csv.DictReader(f))
     form_rows = [r for r in rows if r['source_layer'] == 'form'
                  and is_token(r['old_iast']) and is_token(r['new_iast'])]
-    det = detection(form_rows)
+    det, det_field = detection(form_rows)
     cor = correction(form_rows)
-    cls = classify(rows, include_empirical=True)
-    cls_no_emp = classify(rows, include_empirical=False)
+    cls, cls_field = classify(rows, include_empirical=True)
+    cls_no_emp, _ = classify(rows, include_empirical=False)
 
+    # ---- canonical outputs (byte-faithful to the pre-H6388 script). The
+    # committed obs_t_baselines.json is SHA256-pinned by the E32 release
+    # canary (data/publication/e32-correction-events-release-2026-10-10/):
+    # this writer's key set and every value it emits must stay exactly as
+    # they were, or the frozen release breaks. All H6388 field-standard
+    # metrics go to the SEPARATE field artifacts below.
     out = {'generatedAt': datetime.now(timezone.utc).isoformat(),
            'detection': det, 'correction': cor,
            'location_classification': cls,
@@ -326,13 +535,132 @@ def main():
     with open(OUT_MD, 'w', encoding='utf-8', newline='\n') as f:
         f.write('\n'.join(L) + '\n')
 
+    # ---- H6388 field-standard metrics: SEPARATE artifacts, so the E32-pinned
+    # canonical pair above stays byte-faithful (two-gates principle, H825).
+    # The anchors quoted here are the recomputed values over the CURRENT
+    # release; the release of record (E32, frozen 10-10-2026) pins the
+    # pre-H1494 values, and both are stated below with the drift explanation.
+    out_field = {'generatedAt': datetime.now(timezone.utc).isoformat(),
+                 'provenance': {
+                     'executor_tier': 'OxAlpha (opencode, z-ai-coding-plan/glm-5.3-flash)',
+                     'handoff': 'H6388',
+                     'batch_type': 'deterministic stdlib recomputation from '
+                                   'correction_events_release.csv; no batch in these '
+                                   'baselines is model-generated or model-judged, so '
+                                   'there is no model annotation batch to stamp',
+                     'script': 'scripts/obs_t_baselines.py'},
+                 'detection_field_metrics': det_field,
+                 'location_classification_agreement': cls_field,
+                 'anchors': {
+                     'release_of_record_e32': {'detection_pairwise': '0.516',
+                                               'correction_acc1': '0.059',
+                                               'loccls_accuracy': '0.638',
+                                               'loccls_macro_f1': '0.453',
+                                               'loccls_majority': '0.402'},
+                     'recomputed_current_release': {
+                         'detection_pairwise': det['pairwise_accuracy'],
+                         'correction_acc1': cor['accuracy_at_1'],
+                         'loccls_accuracy': cls['accuracy'],
+                         'loccls_macro_f1': cls['macro_f1'],
+                         'loccls_majority': cls['majority_baseline_accuracy']},
+                     'drift_note': ('the H1494 event-ID re-keying (27-07-2026) '
+                                    'perturbed the (date, event_id) tie-order of '
+                                    'the chronological split; the form-layer '
+                                    'anchors moved by one unit in the third '
+                                    'decimal and reproduce with the UNCHANGED '
+                                    'pre-H6388 script — a pre-existing staleness '
+                                    'this regeneration surfaced, not a metric '
+                                    'change. The E32-pinned canonical '
+                                    'obs_t_baselines.json is untouched by this '
+                                    'unit; re-cut the release to adopt the '
+                                    'recomputed anchors.')}}
+    with open(OUT_JSON_FIELD, 'w', encoding='utf-8') as f:
+        json.dump(out_field, f, ensure_ascii=False, indent=2)
+
+    M = []; B = M.append
+    conf_d = det_field['flagging_confusion']
+    B('_Created: 11-10-2026 · '
+      f'Last updated: {datetime.now(timezone.utc).strftime("%d-%m-%Y")}_')
+    B('')
+    B('# Field-standard metrics for the OBS-T baselines (H6388)')
+    B('')
+    B('_Generated by `scripts/obs_t_baselines.py` alongside '
+      '[`obs_t_baselines.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_t_baselines.md) '
+      '(kept byte-faithful — its JSON is SHA256-pinned by the E32 release '
+      'canary). Additive only, two-gates principle H825: nothing here relaxes '
+      'or replaces a shipping/filing gate._')
+    B('')
+    B('## 1. Error detection — per-class P / R / F0.5, FPR, agreement')
+    B('')
+    B('The pairwise ranking of `obs_t_baselines.md` viewed as a binary flagging '
+      'task over the test tokens: flag = the lower-likelihood token of each '
+      'pair, a tie abstains. Predicted `erroneous` = flagged, predicted '
+      '`correct` = unflagged. Confusion counts: TP '
+      f'{conf_d["tp"]:,} · FP {conf_d["fp"]:,} · FN {conf_d["fn"]:,} · '
+      f'TN {conf_d["tn"]:,} (over {2 * det["test_pairs"]:,} tokens). '
+      'Every denominator is stated.')
+    B('')
+    B('| metric | value | denominator |')
+    B('|---|---:|---|')
+    for kls in ('erroneous', 'correct'):
+        pc = det_field['per_class'][kls]
+        B(f'| precision ({kls}) | {pc["precision"]} | {pc["precision_denominator"]} |')
+        B(f'| recall ({kls}) | {pc["recall"]} | {pc["recall_denominator"]} |')
+        B(f'| F0.5 ({kls}) | {pc["f0_5"]} | from the two cells above |')
+    B(f'| **FPR** (flagging a correct token) | **{det_field["fpr_erroneous_flag"]}** | {det_field["fpr_denominator"]} |')
+    B(f'| Krippendorff α (nominal) | {det_field["krippendorff_alpha_nominal"]} | '
+      f'{det_field["krippendorff_alpha_pairable_values"]:,} pairable values — '
+      f'{det_field["krippendorff_alpha_note"]} |')
+    B(f'| Cohen κ (non-tie tokens) | {det_field["cohen_kappa_non_tie"]} | '
+      f'{det_field["cohen_kappa_units"]:,} non-tie tokens (gold vs model flag) |')
+    B('')
+    B('## 2. Location classification — model-vs-gold agreement')
+    B('')
+    if 'accuracy' in cls:
+        B('| metric | value | denominator |')
+        B('|---|---:|---|')
+        B(f'| Krippendorff α (nominal, gold vs model) | {cls_field["krippendorff_alpha_nominal"]} | '
+          f'{cls_field["agreement_denominator"]} |')
+        B(f'| Cohen κ (gold vs model) | {cls_field["cohen_kappa"]} | '
+          f'{cls_field["agreement_denominator"]} |')
+        B('')
+        B('Accuracy, macro-F1, majority baseline and ablations are unchanged in '
+          '[`obs_t_baselines.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_t_baselines.md) '
+          '(accuracy 0.638, macro-F1 0.453, majority 0.402).')
+        B('')
+    B('## 3. Anchors: release of record vs current recomputation')
+    B('')
+    B('| anchor | E32 release of record (10-10-2026, pinned) | recomputed on current release |')
+    B('|---|---:|---:|')
+    an = out_field['anchors']
+    for k, label in (('detection_pairwise', 'detection pairwise accuracy'),
+                     ('correction_acc1', 'correction accuracy@1'),
+                     ('loccls_accuracy', 'location accuracy'),
+                     ('loccls_macro_f1', 'location macro-F1'),
+                     ('loccls_majority', 'location majority baseline')):
+        B(f'| {label} | {an["release_of_record_e32"][k]} | {an["recomputed_current_release"][k]} |')
+    B('')
+    B(f'_{an["drift_note"]}_')
+    B('')
+    B('_Provenance: executor tier OxAlpha (opencode, '
+      '`z-ai-coding-plan/glm-5.3-flash`); deterministic stdlib recomputation — '
+      'no batch is model-generated or model-judged. Recomputed form-layer '
+      'anchors: 0.515 pairwise / 0.058 acc@1 (train lexicon 11,171; dist-1 '
+      'share 0.785). Selftest: `python scripts/obs_t_baselines.py --selftest`._')
+    with open(OUT_MD_FIELD, 'w', encoding='utf-8', newline='\n') as f:
+        f.write('\n'.join(M) + '\n')
+
     print(f'wrote {OUT_JSON}')
     print(f'wrote {OUT_MD}')
+    print(f'wrote {OUT_JSON_FIELD}')
+    print(f'wrote {OUT_MD_FIELD}')
     print(f'  detection pair-acc={det["pairwise_accuracy"]}  '
           f'correction acc@1={cor["accuracy_at_1"]}  '
           f'location acc={cls.get("accuracy","?")} '
           f'no-emp={cls_no_emp.get("accuracy","?")} '
-          f'(maj {cls.get("majority_baseline_accuracy","?")})')
+          f'(maj {cls.get("majority_baseline_accuracy","?")})  '
+          f'alpha det={det_field["krippendorff_alpha_nominal"]} '
+          f'cls={cls_field["krippendorff_alpha_nominal"]}')
 
 
 if __name__ == '__main__':

@@ -310,6 +310,12 @@ CATALOG: dict[str, Entry] = {
         "OBS-T baseline model metrics for detection, correction, and location classification.",
         "Baseline metrics are descriptive and depend on the current release split and feature set.",
     ),
+    "obs_t_baselines_field_metrics.json": Entry(
+        "obs-t analysis",
+        "scripts/obs_t_baselines.py",
+        "OBS-T field-standard baseline metrics (H6388): per-class detection precision/recall/F0.5, FPR, and Krippendorff's alpha alongside Cohen's kappa, with denominators and the E32-pin vs recomputation anchor table.",
+        "Computed on the same deterministic baselines as obs_t_baselines.json; the companion canonical JSON is SHA256-pinned by the E32 release canary, so anchor drift between the two files is disclosed in the artifact, not silently reconciled.",
+    ),
     "obs_t_campaigns.csv": Entry(
         "obs-t analysis",
         "scripts/obs_t_campaigns.py",
