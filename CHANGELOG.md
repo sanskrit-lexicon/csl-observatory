@@ -102,7 +102,7 @@ All notable changes to this repository are documented here, following [Keep a Ch
   in place of the ban** (H2874, Opus 5 `claude-opus-5`). H1706 committed the column
   as having unresolved provenance and barred it from any denominator. It is the
   per-abbreviation total of
-  [`pwgissues/issue74/lsextract_all.txt`](https://github.com/sanskrit-lexicon/PWG/blob/master/pwgissues/issue74/lsextract_all.txt)
+  [`pwgissues/issue74/lsextract_all.txt`](https://github.com/sanskrit-lexicon/PWG/blob/main/pwgissues/issue74/lsextract_all.txt)
   dated 2024-09-11 (`ALL = 739,056`) — every `<ls>` element attributed to the longest
   bibliography abbreviation that prefixes it. 66 of the 67 valued rows match digit for
   digit; `NAIGH.` is carried as a near-miss, not corrected. New:
