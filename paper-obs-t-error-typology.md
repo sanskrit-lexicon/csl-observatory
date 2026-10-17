@@ -448,6 +448,22 @@ the past, test on recent edits) under **CC-BY-4.0**. It supports three tasks, fo
    component at accuracy **0.638** (macro-F1 0.453; majority baseline 0.402), evidence the
    location axis is *learnable* from surface features alone.
 
+A companion report,
+[`obs_t_baselines_field_metrics.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_t_baselines_field_metrics.md),
+adds the field-standard metrics reviewers expect, each with its stated
+denominator: on the detection flagging decisions, per-class precision 0.521 /
+recall 0.515 / F0.5 0.519 for the erroneous class (mirror class 0.520/0.526/0.521),
+FPR 0.474, and
+chance-corrected model–gold agreement Krippendorff's α = 0.041 (Cohen's
+κ = 0.041 on non-tie tokens) — near chance by construction, which is the
+headroom statement; on the location classifier, α = 0.464 (κ = 0.473). The
+same report quantifies a regeneration drift the frozen release pins predate:
+recomputing on the current release moves the two form-layer anchors by one
+unit in the third decimal (0.516 → 0.515, 0.059 → 0.058) because the H1494
+event-ID re-keying perturbed the `(date, event_id)` tie-order of the
+chronological split; the drift reproduces with the unchanged baseline script,
+and the released pins stand until the release is re-cut.
+
 These low numbers are the point of a baseline: they establish headroom for the neural
 sequence models the resource is meant to enable.
 
