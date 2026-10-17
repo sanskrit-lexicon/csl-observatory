@@ -263,6 +263,15 @@ lineage prescribes. Naming the lineage here does not itself change what OBS-T re
 cross-dictionary sense-alignment dataset is ever emitted from this corpus, the alignment
 content routes to *csl-atlas*, with OBS-T keeping only the process metrics.
 
+The lineage extends to a reporting transform as well (11-10-2026): every occupied
+(location × edit-type) cell is re-expressed in nearest ERRANT/GEC and
+historical-text-normalization terms
+([`docs/OBST_ERRANT_GEC_CROSSWALK.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/OBST_ERRANT_GEC_CROSSWALK.md)),
+with each anchor claim carrying live-verified citations and the mismatched cells —
+all `source-raw` edits, empty-op events, and the location axis itself, for which
+ERRANT and the GEC shared tasks have no analogue — flagged UNPLACEABLE rather
+than forced into a borrowed vocabulary.
+
 ### 4.6 Validation: the gold sample and cross-model agreement
 
 The validation instrument is a frozen, stratified 390-event sample
