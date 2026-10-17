@@ -1,0 +1,13 @@
+# H5800: dev/test dependencies for the smoke-test suite + ruff gate.
+# The main observatory pipeline stays stdlib-only (scripts/requirements-validation.txt
+# documents the single validation-only runtime dep); these are CI/dev-only.
+pytest>=8
+ruff>=0.8
+pyyaml
+pillow
+matplotlib
+GitPython
+indic-transliteration
+# Shared org package imported by recapture/linkage scripts at module level
+# (they fall back to a sibling checkout; CI installs it from the org repo).
+cdsl-sanskrit-util @ git+https://github.com/sanskrit-lexicon/sanskrit-util.git#subdirectory=py
