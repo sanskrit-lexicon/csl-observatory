@@ -1,27 +1,49 @@
 {
-  "generatedAt": "2026-06-29T05:51:31.112314+00:00",
+  "generatedAt": "2026-10-11T13:14:51.221225+00:00",
   "annotated": 390,
-  "accuracy": 0.29,
+  "accuracy": 0.221,
   "accuracyByEvidence": {
-    "derived": 0.486,
-    "inferred": 0.061
+    "derived": 0.45,
+    "inferred": 0.0,
+    "?": 0.0
   },
   "countsByEvidence": {
-    "derived": 210,
-    "inferred": 180
+    "derived": 191,
+    "inferred": 186,
+    "?": 13
+  },
+  "eventIdJoin": {
+    "resolved": 377,
+    "unresolved": 13,
+    "rekeyRegister": {
+      "joinedByVerdict": {
+        "rehash_exact": 164
+      },
+      "leftUnresolved": {
+        "unresolved_no_candidate": 8,
+        "sha_proven_no_current_row": 5
+      }
+    }
+  },
+  "firstAnnotatorColumn": {
+    "status": "stale-axis (retired one-axis labels)",
+    "labelsOutsideLocationAxis": {
+      "encoding": 149,
+      "orthography": 105
+    }
   },
   "perComponent": {
     "meta": [
-      0.9,
-      0.9,
-      0.9
+      0.913,
+      0.7,
+      0.792
     ],
     "citation": [
-      0.5,
+      0.938,
       0.732,
-      0.594
+      0.822
     ],
-    "unknown": [
+    "unattributed": [
       0.0,
       0,
       0
@@ -31,15 +53,10 @@
       0.308,
       0.11
     ],
-    "markup": [
-      0.05,
-      0.214,
-      0.081
-    ],
     "encoding": [
-      0.067,
-      0.013,
-      0.022
+      0,
+      0.0,
+      0
     ],
     "grammar": [
       0.867,
@@ -47,14 +64,24 @@
       0.897
     ],
     "orthography": [
-      0.283,
-      0.162,
-      0.206
+      0,
+      0.0,
+      0
+    ],
+    "markup": [
+      0.08,
+      0.143,
+      0.103
     ],
     "headword": [
-      0.133,
-      0.4,
-      0.2
+      0.143,
+      0.3,
+      0.194
+    ],
+    "?": [
+      0.0,
+      0,
+      0
     ]
   },
   "iaa": {
@@ -63,59 +90,59 @@
   },
   "topConfusions": [
     {
-      "auto": "orthography",
+      "auto": "unattributed",
       "gold": "encoding",
-      "n": 38
+      "n": 104
+    },
+    {
+      "auto": "unattributed",
+      "gold": "orthography",
+      "n": 80
     },
     {
       "auto": "sense",
-      "gold": "encoding",
-      "n": 29
-    },
-    {
-      "auto": "encoding",
-      "gold": "orthography",
-      "n": 28
-    },
-    {
-      "auto": "citation",
       "gold": "encoding",
       "n": 27
     },
     {
-      "auto": "markup",
-      "gold": "encoding",
-      "n": 24
+      "auto": "sense",
+      "gold": "orthography",
+      "n": 15
     },
     {
       "auto": "sense",
-      "gold": "orthography",
-      "n": 18
-    },
-    {
-      "auto": "unknown",
-      "gold": "orthography",
-      "n": 16
+      "gold": "markup",
+      "n": 11
     },
     {
       "auto": "headword",
       "gold": "encoding",
-      "n": 14
-    },
-    {
-      "auto": "headword",
-      "gold": "orthography",
-      "n": 12
-    },
-    {
-      "auto": "unknown",
-      "gold": "encoding",
-      "n": 12
+      "n": 11
     },
     {
       "auto": "markup",
-      "gold": "orthography",
+      "gold": "citation",
       "n": 9
+    },
+    {
+      "auto": "?",
+      "gold": "meta",
+      "n": 8
+    },
+    {
+      "auto": "headword",
+      "gold": "orthography",
+      "n": 7
+    },
+    {
+      "auto": "markup",
+      "gold": "sense",
+      "n": 5
+    },
+    {
+      "auto": "markup",
+      "gold": "headword",
+      "n": 4
     }
   ]
 }
