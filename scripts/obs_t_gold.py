@@ -49,6 +49,7 @@ DATA = os.path.join(ROOT, 'observatory', 'site', 'src', 'data')
 FINAL = os.path.join(DATA, 'correction_events_final.csv')
 CROSSWALK = os.path.join(DATA, 'event_id_crosswalk_v1.csv')
 VDIR = os.path.join(ROOT, 'validation')
+REKEY_REGISTER = os.path.join(VDIR, 'event_id_rekey_register.csv')
 SHEET = os.path.join(VDIR, 'gold_sample.csv')
 GUIDE = os.path.join(VDIR, 'COMPONENT_GUIDE.md')
 OUT_MD = os.path.join(ROOT, 'reports', 'obs_t_validation.md')
@@ -268,6 +269,25 @@ def score():
     if os.path.exists(CROSSWALK):
         with open(CROSSWALK, encoding='utf-8') as f:
             xwalk = {r['old_event_id']: r['new_event_id'] for r in csv.DictReader(f)}
+    # H6384 re-key register: the 177 git-layer sheet ids the H1494 crosswalk does
+    # not cover, resolved and PER-ROW VERDICTED by scripts/obs_t_gold_rekey.py.
+    # Only verdicts whose proof re-derived the sheet id (or a unique-content
+    # match, honestly graded) join; everything else stays unresolved and is
+    # reported, never silently promoted.
+    REKEY_JOINABLE = ('rehash_exact', 'sha_proven_current_unique',
+                      'sha_proven_current_same_commit',
+                      'content_unique_sha_unproven')
+    rekey_join_verdicts = Counter()
+    rekey_left = Counter()
+    if os.path.exists(REKEY_REGISTER):
+        with open(REKEY_REGISTER, encoding='utf-8') as f:
+            for r in csv.DictReader(f):
+                if r['verdict'] in REKEY_JOINABLE and r['new_event_id']:
+                    if r['old_event_id'] not in xwalk:   # crosswalk wins if present
+                        xwalk[r['old_event_id']] = r['new_event_id']
+                    rekey_join_verdicts[r['verdict']] += 1
+                else:
+                    rekey_left[r['verdict']] += 1
     with open(SHEET, encoding='utf-8') as f:
         sheet = [r for r in csv.DictReader(f) if r['gold_component'].strip()]
     if not sheet:
@@ -318,7 +338,9 @@ def score():
         'annotated': n, 'accuracy': round(correct / n, 3),
         'accuracyByEvidence': {ev: round(c / t, 3) for ev, (c, t) in by_ev.items()},
         'countsByEvidence': {ev: t for ev, (c, t) in by_ev.items()},
-        'eventIdJoin': {'resolved': n - unresolved_join, 'unresolved': unresolved_join},
+        'eventIdJoin': {'resolved': n - unresolved_join, 'unresolved': unresolved_join,
+                        'rekeyRegister': {'joinedByVerdict': dict(rekey_join_verdicts),
+                                          'leftUnresolved': dict(rekey_left)}},
         'firstAnnotatorColumn': (
             {'status': 'stale-axis (retired one-axis labels)',
              'labelsOutsideLocationAxis': dict(stale_labels)}
@@ -353,10 +375,15 @@ def score():
         A(f'> ⚠️ **Partial auto-join:** {unresolved_join} of {n} sheet event_ids no '
           'longer resolve to `correction_events_final.csv` (the H1494 obst:v1 id '
           'migration left the gold sheet on old hex ids; the crosswalk recovers '
-          f'only {n - unresolved_join}). Accuracy and the evidence split cover the '
-          'resolved subset only; **the kappa below is unaffected** — it compares '
-          'the two annotator columns on the sheet itself. Re-keying the sheet is '
-          'a tracked follow-up.')
+          f'{n - unresolved_join}, and the H6384 re-key register extends that)')
+        if rekey_left:
+            A(f'> with verdict-graded joins for '
+              f'{sum(rekey_join_verdicts.values())} rows ('
+              + ', '.join(f'`{k}`×{v}' for k, v in
+                          sorted(rekey_join_verdicts.items())) + ')')
+        A(f'> — accuracy and the evidence split cover the resolved subset only; '
+          '**the kappa below is unaffected** — it compares the two annotator '
+          'columns on the sheet itself.')
         A('')
     A('| metric | value |')
     A('|---|---:|')

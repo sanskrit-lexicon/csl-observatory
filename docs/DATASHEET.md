@@ -1,10 +1,68 @@
-_Created: 11-06-2026 · Last updated: 05-09-2026_
+_Created: 11-06-2026 · Last updated: 11-10-2026_
 
 # Datasheet - CDSL Correction-Event Corpus (OBS-T)
 
-Following Gebru et al., *Datasheets for Datasets* (2021). Describes the released
+Following Gebru et al., *Datasheets for Datasets* (2021), and — for the
+data-statement sections below — Bender & Friedman, *Data Statements for NLP with
+Emphasis on Training Set Development and Evaluation* (2018), as the statement
+form the JOHD / LREC resource-publication family expects. Describes the released
 resource `observatory/site/src/data/correction_events_release.csv` and its
 derivation. Snapshot: 2026-06-12. Regenerate with the OBS-T pipeline below.
+**Upgrade note (H6390, 11-10-2026):** the datasheet was extended from skeleton to
+the full two-form statement — every B&F data-statement section is now present,
+with honest N/A where a section does not apply to a corpus of written dictionary
+corrections; no released fact changed.
+
+## Data Statement (Bender & Friedman 2018 form; JOHD/LREC family)
+
+- **Curation Rationale.** The corpus exists to make the maintenance history of a
+  retro-digitised lexicographic collection measurable. It was curated because the
+  two correction channels (community web form; git commits) had never been joined
+  into one event stream, and error typology, correction-remaining estimation
+  (A48), and maintenance studies all require exactly that join. Curation decisions
+  — entry-files-only mining, bulk-reformat exclusion, deterministic-with-route
+  location attribution — are those of the `csl-observatory` pipeline and are
+  documented in the sections above and in `docs/OBSERVATORY_DESIGN.md`.
+- **Language Variety(s).** Sanskrit (a written classical language, spanning Epic
+  and classical registers in the dictionary headword/lemma stock) and, as meta-
+  language, English and German (source dictionaries' apparatus) plus Russian-era
+  form fields. The corpus contains no speech data; language variety is
+  register-neutral at the correction-event level — what is recorded is a repaired
+  string, not running prose. Romanisation spaces are explicit: released Sanskrit
+  strings are IAST/NFC; source-side SLP1 and markup remain in `old_raw`/`new_raw`.
+- **Speaker / Demographic Characteristics.** N/A — the corpus is corrections to
+  written dictionary entries; no speakers, no speech, and no demographic data of
+  any kind exist at the event level.
+- **Annotator / Corrector Demographics.** Not collected and not released. The
+  "annotators" are the CDSL correction community (208 released corrector aliases).
+  Identities are public canonical aliases from project metadata or stable
+  pseudonyms for form-only email identities; raw form-submitted email addresses
+  are never released. No demographic attributes (age, gender, nationality,
+  expertise level) are recorded, inferred, or derivable from the release; the
+  release deliberately contains no personal data. Corrector-identity handling is
+  documented in `reports/contributor_identity.md`.
+- **Speech Situation.** N/A — written, asynchronous, non-interactive text repair
+  events over 2014–2026.
+- **Text Characteristics.** Instances are dictionary entry fragments: headword
+  lines, grammar codes, sense lines, citations, cross-references, and markup in
+  the Cologne `<k1>`-keyed plain-text entry format (SLP1 raw / IAST normalised).
+  Vocabulary is Sanskrit lexicographic apparatus; genre is reference-work
+  microstructure. Text is machine-clean on the git layer and hand-typed on the
+  form layer (the source of the era-specific orthographic noise the A48 linkage
+  ladder measures). Known text characteristics that affect use: correction events
+  are not independent per dictionary-year (campaigns cluster); `unattributed`
+  locations are a real label, not missing data.
+- **Ethics and consent.** All released identities are either public project
+  aliases (git authorship is public by construction of the MIT/GPL-published
+  upstream repositories) or stable pseudonyms for form-only identities; no
+  consent-sensitive content is present. The corpus records scholarly corrections
+  to public dictionaries, not communications; no downstream use is expected to
+  identify individuals, and per-person performance analysis is an explicitly
+  discouraged use (see Uses).
+- **Version and citation.** Citable snapshot: 2026-06-12 release, archived as
+  Zenodo concept DOI [10.5281/zenodo.21346705](https://doi.org/10.5281/zenodo.21346705)
+  (minted 16-08-2026). New releases bump the version and require a regenerated
+  release CSV with count-delta inspection before publication (see Maintenance).
 
 ## Motivation
 
@@ -110,7 +168,9 @@ derivation. Snapshot: 2026-06-12. Regenerate with the OBS-T pipeline below.
 
 ## Distribution
 
-- **Where.** In `csl-observatory`, with intended archival deposit for paper use.
+- **Where.** In `csl-observatory` (working tree), with the citable snapshot
+  archived at Zenodo concept DOI
+  [10.5281/zenodo.21346705](https://doi.org/10.5281/zenodo.21346705).
 - **Data license.** OBS-T released data is CC-BY-4.0; see `DATA_LICENSE.md`.
 - **Code license.** Repository code remains GPL-3.0; see `LICENSE` and
   `CITATION.cff`.
