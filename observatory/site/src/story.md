@@ -7,8 +7,26 @@ _Created: 03-07-2026 · Last updated: 18-09-2026_
 
 # Thirteen years, one scroll
 
+<link rel="stylesheet" href="./palette.css">
+
 _The Cologne Digital Sanskrit Lexicon (CDSL) began in 1994, two decades before its public GitHub record. This page tells the narrower story that the committed 2014–2026 correction and repository snapshots can support: documented dictionary edits, issues, and commits. Earlier institutional and email history requires different evidence. Read it start to finish; it takes about seven minutes, in two chapters: the thirteen-year arc (told as a sticky-figure scrolly — one chart panel that changes as you scroll), then the first fully-measured month under the observatory._
 
+```js
+// Chart colors come from palette.css tokens (light + dark), never hard-coded here.
+const paletteStyles = getComputedStyle(document.documentElement);
+const token = (name) => paletteStyles.getPropertyValue(name).trim();
+const OBS_ACCENT = token("--obs-accent");
+const OBS_MUTED = token("--obs-muted");
+const OBS_GOOD = token("--obs-good");
+const OBS_WARN = token("--obs-warn");
+const OBS_BAD = token("--obs-bad");
+const OBS_FLAG = token("--obs-flag");
+const OBS_ERA = token("--obs-era");
+const OBS_SAND = token("--obs-sand");
+const OBS_TEXT_SOFT = token("--obs-text-soft");
+const OBS_GITHUB = token("--obs-github");
+const OBS_NEUTRAL = token("--obs-neutral");
+```
 ```js
 const velocity = await FileAttachment("data/velocity_timeline.csv").csv({typed: true});
 // Per-year/layer/component correction counts (77 rows) — sums to the same
@@ -82,8 +100,8 @@ const figArc = resize((width) => Plot.plot({
   x: {label: "Year", tickFormat: "d"},
   y: {label: "Corrections recorded", grid: true},
   marks: [
-    Plot.barY(corrPerYear, {x: "year", y: "count", fill: "#3a5f7d", tip: true}),
-    Plot.text([corrPeak], {x: "year", y: "count", text: d => `${d.year}: ${d.count.toLocaleString()}`, dy: -8, fontWeight: 600, fill: "#3a5f7d"}),
+    Plot.barY(corrPerYear, {x: "year", y: "count", fill: OBS_ACCENT, tip: true}),
+    Plot.text([corrPeak], {x: "year", y: "count", text: d => `${d.year}: ${d.count.toLocaleString()}`, dy: -8, fontWeight: 600, fill: OBS_ACCENT}),
     Plot.ruleY([0])
   ]
 }));
@@ -95,8 +113,8 @@ const figForm = resize((width) => Plot.plot({
   x: {label: "Year", tickFormat: "d"},
   y: {label: "Corrections recorded", grid: true},
   marks: [
-    Plot.barY(corrPerYear, {x: "year", y: "count", fill: d => d.year <= 2016 ? "#8a6d3b" : "#c9c2b6", tip: true}),
-    Plot.text([formPeak], {x: "year", y: "count", text: d => `form-era peak: ${d.count.toLocaleString()}`, dy: -8, fontWeight: 600, fill: "#8a6d3b"}),
+    Plot.barY(corrPerYear, {x: "year", y: "count", fill: d => d.year <= 2016 ? OBS_ERA : OBS_SAND, tip: true}),
+    Plot.text([formPeak], {x: "year", y: "count", text: d => `form-era peak: ${d.count.toLocaleString()}`, dy: -8, fontWeight: 600, fill: OBS_ERA}),
     Plot.ruleY([0])
   ]
 }));
@@ -108,10 +126,10 @@ const figGit = resize((width) => Plot.plot({
   x: {label: "Year", tickFormat: "d"},
   y: {label: "Distinct active authors", grid: true, domain: [0, Math.ceil(1.15 * d3.max(backlogByYear, d => d.authors))]},
   marks: [
-    Plot.areaY(backlogByYear, {x: "year", y: "authors", fill: "#3a5f7d", fillOpacity: 0.12, curve: "monotone-x"}),
-    Plot.lineY(backlogByYear, {x: "year", y: "authors", stroke: "#3a5f7d", strokeWidth: 2, curve: "monotone-x"}),
-    Plot.dot([row2019], {x: "year", y: "authors", fill: "#b03a2e", r: 5}),
-    Plot.text([row2019], {x: "year", y: "authors", text: d => `first pull requests (${d.year}): ${d.prs_opened} opened`, dy: -16, dx: 10, fontWeight: 600, fill: "#b03a2e"}),
+    Plot.areaY(backlogByYear, {x: "year", y: "authors", fill: OBS_ACCENT, fillOpacity: 0.12, curve: "monotone-x"}),
+    Plot.lineY(backlogByYear, {x: "year", y: "authors", stroke: OBS_ACCENT, strokeWidth: 2, curve: "monotone-x"}),
+    Plot.dot([row2019], {x: "year", y: "authors", fill: OBS_FLAG, r: 5}),
+    Plot.text([row2019], {x: "year", y: "authors", text: d => `first pull requests (${d.year}): ${d.prs_opened} opened`, dy: -16, dx: 10, fontWeight: 600, fill: OBS_FLAG}),
     Plot.ruleY([0])
   ]
 }));
@@ -123,9 +141,9 @@ const figPeak = resize((width) => Plot.plot({
   x: {label: "Year", tickFormat: "d"},
   y: {label: "Commits", grid: true},
   marks: [
-    Plot.barY(velocity, {x: "year", y: "commits", fill: d => d.year === 2021 ? "#8a6d3b" : d.year === peakAuthorsRow.year ? "#1a7f37" : "#c9c2b6", tip: true}),
-    Plot.text([row2021], {x: "year", y: "commits", text: d => `${d.active_authors} authors`, dy: -8, fontWeight: 600, fill: "#8a6d3b"}),
-    Plot.text([peakAuthorsRow], {x: "year", y: "commits", text: d => `${d.active_authors} authors`, dy: -8, fontWeight: 600, fill: "#1a7f37"}),
+    Plot.barY(velocity, {x: "year", y: "commits", fill: d => d.year === 2021 ? OBS_ERA : d.year === peakAuthorsRow.year ? OBS_GOOD : OBS_SAND, tip: true}),
+    Plot.text([row2021], {x: "year", y: "commits", text: d => `${d.active_authors} authors`, dy: -8, fontWeight: 600, fill: OBS_ERA}),
+    Plot.text([peakAuthorsRow], {x: "year", y: "commits", text: d => `${d.active_authors} authors`, dy: -8, fontWeight: 600, fill: OBS_GOOD}),
     Plot.ruleY([0])
   ]
 }));
@@ -137,11 +155,11 @@ const figWave = resize((width) => Plot.plot({
   x: {label: "Year", tickFormat: "d"},
   y: {label: "Open issues carried into year", grid: true},
   marks: [
-    Plot.areaY(backlogByYear, {x: "year", y: "open", fill: "#3a5f7d", fillOpacity: 0.12, curve: "monotone-x"}),
-    Plot.lineY(backlogByYear, {x: "year", y: "open", stroke: "#3a5f7d", strokeWidth: 2, curve: "monotone-x"}),
-    Plot.dot(backlogByYear, {x: "year", y: "open", fill: "#3a5f7d", r: 2.5}),
-    Plot.text([backlogPeakRow], {x: "year", y: "cumulative_open", text: d => `${d.year} peak: ${d.cumulative_open.toLocaleString()}`, dy: -12, fontWeight: 600, fill: "#b03a2e"}),
-    Plot.text([row2026], {x: "year", y: "cumulative_open", text: d => `2026: ${d.cumulative_open.toLocaleString()}`, dy: -12, dx: 4, fontWeight: 600, fill: "#1a7f37"}),
+    Plot.areaY(backlogByYear, {x: "year", y: "open", fill: OBS_ACCENT, fillOpacity: 0.12, curve: "monotone-x"}),
+    Plot.lineY(backlogByYear, {x: "year", y: "open", stroke: OBS_ACCENT, strokeWidth: 2, curve: "monotone-x"}),
+    Plot.dot(backlogByYear, {x: "year", y: "open", fill: OBS_ACCENT, r: 2.5}),
+    Plot.text([backlogPeakRow], {x: "year", y: "cumulative_open", text: d => `${d.year} peak: ${d.cumulative_open.toLocaleString()}`, dy: -12, fontWeight: 600, fill: OBS_FLAG}),
+    Plot.text([row2026], {x: "year", y: "cumulative_open", text: d => `2026: ${d.cumulative_open.toLocaleString()}`, dy: -12, dx: 4, fontWeight: 600, fill: OBS_GOOD}),
     Plot.ruleY([0])
   ]
 }));
@@ -153,9 +171,9 @@ const figTax = resize((width) => Plot.plot({
   x: {label: "Year", tickFormat: "d"},
   y: {label: "Taxonomy-conformant issues (%)", grid: true, domain: [0, 100]},
   marks: [
-    Plot.lineY(taxonomy, {x: "year", y: "pct_conformant", stroke: "#3a5f7d", strokeWidth: 2, curve: "monotone-x", marker: "circle"}),
-    Plot.ruleY([conformShare * 100], {stroke: "#1a7f37", strokeDasharray: "4,3", strokeWidth: 1.5}),
-    Plot.text([{}], {frameAnchor: "bottom-right", dx: -8, dy: -18, text: `pooled: ${conformPooled}%`, fontWeight: 600, fill: "#1a7f37"}),
+    Plot.lineY(taxonomy, {x: "year", y: "pct_conformant", stroke: OBS_ACCENT, strokeWidth: 2, curve: "monotone-x", marker: "circle"}),
+    Plot.ruleY([conformShare * 100], {stroke: OBS_GOOD, strokeDasharray: "4,3", strokeWidth: 1.5}),
+    Plot.text([{}], {frameAnchor: "bottom-right", dx: -8, dy: -18, text: `pooled: ${conformPooled}%`, fontWeight: 600, fill: OBS_GOOD}),
     Plot.ruleY([0])
   ]
 }));
@@ -168,9 +186,9 @@ const figBus = resize((width) => Plot.plot({
   x: {label: null, domain: [0, 100], grid: true, tickFormat: d => `${d}%`},
   y: {label: null, domain: ["top"]},
   marks: [
-    Plot.barX([{cat: "top", share: 100}], {x: "share", y: "cat", fill: "#c9c2b6"}),
-    Plot.barX(busData, {x: "share", y: "cat", fill: "#b03a2e", tip: true}),
-    Plot.text(busData, {x: "share", y: "cat", text: d => `${d.share.toFixed(0)}% · ${d.who}`, dx: busData[0].share > 55 ? -8 : 8, textAnchor: busData[0].share > 55 ? "end" : "start", fill: busData[0].share > 55 ? "white" : "#57606a", fontWeight: 600, fontSize: 11}),
+    Plot.barX([{cat: "top", share: 100}], {x: "share", y: "cat", fill: OBS_SAND}),
+    Plot.barX(busData, {x: "share", y: "cat", fill: OBS_FLAG, tip: true}),
+    Plot.text(busData, {x: "share", y: "cat", text: d => `${d.share.toFixed(0)}% · ${d.who}`, dx: busData[0].share > 55 ? -8 : 8, textAnchor: busData[0].share > 55 ? "end" : "start", fill: busData[0].share > 55 ? "white" : OBS_TEXT_SOFT, fontWeight: 600, fontSize: 11}),
     Plot.ruleX([0])
   ]
 }));
@@ -182,8 +200,8 @@ const figSilent = resize((width) => Plot.plot({
   x: {label: "Open issues", grid: true},
   y: {label: null, domain: backlog.map(d => d.bucket)},
   marks: [
-    Plot.barX(backlog, {x: "count", y: "bucket", fill: "#c9c2b6"}),
-    Plot.barX(backlog, {x: "silent", y: "bucket", fill: "#b03a2e", tip: true}),
+    Plot.barX(backlog, {x: "count", y: "bucket", fill: OBS_SAND}),
+    Plot.barX(backlog, {x: "silent", y: "bucket", fill: OBS_FLAG, tip: true}),
     Plot.ruleX([0])
   ]
 }));
@@ -195,8 +213,8 @@ const figSurv = resize((width) => Plot.plot({
   x: {label: "Days after opening", type: "log", domain: [30, 1460], ticks: [30, 90, 180, 365, 730, 1460], tickFormat: d => d >= 365 ? `${Math.round(d/365)}y` : `${d}d`},
   y: {label: "Still open (%)", domain: [0, 100], grid: true},
   marks: [
-    Plot.lineY(survival.filter(d => d.cohort === 2014), {x: "horizon_days", y: "pct_open", stroke: "#b03a2e", strokeWidth: 2, marker: "circle"}),
-    Plot.text([cohort2014_4yr], {x: "horizon_days", y: "pct_open", text: d => `${d.pct_open}% at 4y`, frameAnchor: "top-right", dy: -10, fontWeight: 600, fill: "#b03a2e", fontSize: 11}),
+    Plot.lineY(survival.filter(d => d.cohort === 2014), {x: "horizon_days", y: "pct_open", stroke: OBS_FLAG, strokeWidth: 2, marker: "circle"}),
+    Plot.text([cohort2014_4yr], {x: "horizon_days", y: "pct_open", text: d => `${d.pct_open}% at 4y`, frameAnchor: "top-right", dy: -10, fontWeight: 600, fill: OBS_FLAG, fontSize: 11}),
     Plot.ruleY([0])
   ]
 }));
@@ -208,7 +226,7 @@ const figLic = resize((width) => Plot.plot({
   x: {label: "Repos without a license", grid: true},
   y: {label: null, domain: licenseData.map(d => d.era)},
   marks: [
-    Plot.barX(licenseData, {x: "n", y: "era", fill: d => d.era === "today" ? "#1a7f37" : "#b03a2e", tip: true}),
+    Plot.barX(licenseData, {x: "n", y: "era", fill: d => d.era === "today" ? OBS_GOOD : OBS_FLAG, tip: true}),
     Plot.text(licenseData, {x: "n", y: "era", text: d => `${d.n}`, dx: 14, fontWeight: 600}),
     Plot.ruleX([0])
   ]
@@ -442,8 +460,8 @@ Plot.plot({
   x: {label: null, tickRotate: -40},
   y: {label: "Commits, org-wide", grid: true},
   marks: [
-    Plot.barY(monthWindow, {x: "ym", y: "commits", fill: d => d.ym === "2026-07" ? "#1a7f37" : "#c9c2b6", tip: true, channels: {opened: "opened", closed: "closed", repos: "repos"}}),
-    Plot.text(monthWindow.filter(d => d.ym === "2026-07"), {x: "ym", y: "commits", text: d => d.commits.toLocaleString(), dy: -8, fontWeight: 600, fill: "#1a7f37"}),
+    Plot.barY(monthWindow, {x: "ym", y: "commits", fill: d => d.ym === "2026-07" ? OBS_GOOD : OBS_SAND, tip: true, channels: {opened: "opened", closed: "closed", repos: "repos"}}),
+    Plot.text(monthWindow.filter(d => d.ym === "2026-07"), {x: "ym", y: "commits", text: d => d.commits.toLocaleString(), dy: -8, fontWeight: 600, fill: OBS_GOOD}),
     Plot.ruleY([0])
   ]
 })
@@ -483,9 +501,9 @@ Plot.plot({
   marks: [
     Plot.barX(scanByStatus, {
       x: "mass", y: "status",
-      fill: d => d.status === "done" ? "#1a7f37"
-             : d.status === "on-going" ? "#bf8700"
-             : d.status === "to-do" ? "#cf222e" : "#8c959f",
+      fill: d => d.status === "done" ? OBS_GOOD
+             : d.status === "on-going" ? OBS_WARN
+             : d.status === "to-do" ? OBS_BAD : OBS_NEUTRAL,
       tip: true, channels: {works: "works", pages: "pages"}
     }),
     Plot.ruleX([0])
@@ -522,8 +540,8 @@ Plot.plot({
   x: {label: "Estimated total error sites (Chapman, 95% CI)", grid: true},
   y: {label: null, domain: recaptureEst.map(d => d.dict)},
   marks: [
-    Plot.ruleY(recaptureEst, {y: "dict", x1: "ci_low", x2: "ci_high", stroke: "#57606a", strokeWidth: 2}),
-    Plot.dot(recaptureEst, {x: "n_hat", y: "dict", fill: "#0075ca", r: 5, tip: true, channels: {observed: "s_observed", remaining: "remaining_hat"}}),
+    Plot.ruleY(recaptureEst, {y: "dict", x1: "ci_low", x2: "ci_high", stroke: OBS_TEXT_SOFT, strokeWidth: 2}),
+    Plot.dot(recaptureEst, {x: "n_hat", y: "dict", fill: OBS_GITHUB, r: 5, tip: true, channels: {observed: "s_observed", remaining: "remaining_hat"}}),
     Plot.ruleX([0])
   ]
 })
@@ -562,7 +580,7 @@ Plot.plot({
   marks: [
     Plot.barX(sweepByTier, {
       x: "works", y: "tier",
-      fill: d => d.code === "C1" ? "#1a7f37" : d.code === "C2" ? "#bf8700" : "#8c959f",
+      fill: d => d.code === "C1" ? OBS_GOOD : d.code === "C2" ? OBS_WARN : OBS_NEUTRAL,
       tip: true
     }),
     Plot.text(sweepByTier, {x: "works", y: "tier", text: d => d.works.toLocaleString(), dx: 12, fontWeight: 600}),
@@ -606,13 +624,13 @@ The same month moved the research pipeline without a single new figure needing t
 .scrolly-figure { margin: 1.5rem 0; padding: 0; }
 .scrolly-figure figcaption.trust { font-size: 0.78rem; opacity: 0.75; margin-top: 0.5rem; line-height: 1.45; }
 
-.proves { border-left: 3px solid var(--theme-foreground-faint, #ddd); padding-left: 0.8rem; opacity: 0.85; font-size: 0.92em; }
+.proves { border-left: 3px solid var(--obs-rule); padding-left: 0.8rem; opacity: 0.85; font-size: 0.92em; }
 
 .findings-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 .finding { min-width: 0; }
 .finding-note { display: block; font-size: 0.72rem; opacity: 0.75; margin-top: 0.3rem; line-height: 1.4; }
 
-.start-here { border: 1px solid var(--theme-foreground-faint, #ddd); border-radius: 8px; padding: 1rem 1.25rem; }
+.start-here { border: 1px solid var(--obs-rule); border-radius: 8px; padding: 1rem 1.25rem; }
 .start-here ul { margin: 0.5rem 0 0; padding-left: 1.2rem; }
 
 /* Scrolly mode. */
@@ -653,10 +671,10 @@ The same month moved the research pipeline without a single new figure needing t
 .scrolly.js-on .scrolly-rail li {
   font-size: 0; /* decorative progress dots only — labels stay out of the layout */
   width: 7px; height: 7px; border-radius: 50%;
-  background: #c9c2b6; opacity: 0.8;
+  background: var(--obs-sand); opacity: 0.8;
   transition: background 0.2s, transform 0.2s;
 }
-.scrolly.js-on .scrolly-rail li.active { background: #3a5f7d; transform: scale(1.35); opacity: 1; }
+.scrolly.js-on .scrolly-rail li.active { background: var(--obs-accent); transform: scale(1.35); opacity: 1; }
 
 @media (max-width: 899px) {
   .scrolly.js-on { display: flex; flex-direction: column; }
@@ -664,7 +682,7 @@ The same month moved the research pipeline without a single new figure needing t
   .scrolly.js-on .scrolly-figures {
     order: -1; /* sticky top panel must precede the steps in flow to pin */
     position: sticky; top: 2.75rem; z-index: 5;
-    background: var(--theme-background, #fff);
+    background: var(--obs-panel);
     padding: 0.5rem 0;
     height: auto;
   }
@@ -682,5 +700,16 @@ The same month moved the research pipeline without a single new figure needing t
   .scrolly.js-on .scrolly-rail { display: none; }
 }
 </style>
+
+## Trust Block
+
+- Source artifact: 14 committed datasets under `observatory/site/src/data/` — headline: `velocity_timeline.csv` (13 annual rows), `obs_t_timeline.csv` (77 rows), `obs_t_summary.json`, `issue_lifecycle_survival.csv` (78 rows), `contributor_identity.csv` (19 rows), `repo_health.csv` (77 rows), `error_recapture.csv` (42 rows), `citation_sweep.csv` (512 works screened), `pwg_scan_index_summary.json`; each figure names its CSV/JSON inline.
+- n: 52,498 correction events across 43 dictionaries (2014-03-18 → 2026-05-30); 76–77 repositories × 13 years; 512 scholarly works screened for citations.
+- Data date: mixed by family — timeseries/velocity family snapshot **2026-09** (`data/manifest.json`); correction-event family generated **2026-06-12** (events through 2026-05-30); PWG scan-index and citation-sweep figures from the July-2026 reports (PR #107, PR #128).
+- Evidence: derived (deterministic counts, rollups, and joins from the committed datasets) plus observed (volunteer scan-index registry rows); the "how much is left" chapter is model-based (two-era Chapman capture–recapture) and labelled as estimates with CIs.
+- Limitations: covers only the public GitHub record from 2014 — earlier institutional history is explicitly out of scope; recapture estimates inherit the era-partition and record-linkage assumptions documented in `reports/corrector_recapture.md`; the citation count is a documented lower bound, not a total.
+- Validation: `npm run build` (Observable Framework) exits 0; every narrative number is computed live from the committed datasets at render time (see the in-file comment), so figures cannot drift from the CSVs without breaking the page.
+- Owner repo: csl-observatory
+- Next use: refresh after each monthly data pack; hand to new volunteers as the onboarding narrative; re-run the capture–recapture chapter after the next correction campaign closes.
 
 _Dr. Mārcis Gasūns_

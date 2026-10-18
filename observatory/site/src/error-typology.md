@@ -7,12 +7,24 @@ toc: true
 
 # Error typology of digital Sanskrit dictionaries
 
+<link rel="stylesheet" href="./palette.css">
+
 What kinds of errors are corrected in the Cologne Digital Sanskrit Lexicon, where
 in the entry they occur, and how the profile changes over twelve years. Each of
 the **52,498** released correction events (2014–2026, 43 dictionaries) is normalized to IAST
 and attributed to the dictionary *microstructure component* it repairs. See the
 finding [`reports/obs_t_typology.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_t_typology.md)
 and the [design spec](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/ERROR_TYPOLOGY_DESIGN.md).
+
+```js
+// Chart colors come from palette.css tokens (light + dark), never hard-coded here.
+const paletteStyles = getComputedStyle(document.documentElement);
+const token = (name) => paletteStyles.getPropertyValue(name).trim();
+const OBS_LOCUS = token("--obs-locus");
+const OBS_ETYM = token("--obs-etym");
+const OBS_PRIMARY = token("--obs-primary");
+const OBS_EST = token("--obs-est");
+```
 
 ```js
 const summary  = await FileAttachment("data/obs_t_summary.json").json();
@@ -53,7 +65,7 @@ Plot.plot({
   x: {label: "events (derived)", grid: true},
   y: {label: null, domain: locTotals.map(d => d.location)},
   marks: [
-    Plot.barX(locTotals, {x: "count", y: "location", fill: "#5319e7", tip: true}),
+    Plot.barX(locTotals, {x: "count", y: "location", fill: OBS_LOCUS, tip: true}),
     Plot.ruleX([0])
   ]
 })
@@ -77,7 +89,7 @@ Plot.plot({
   x: {label: "events", grid: true},
   y: {label: null, domain: etTotals.map(d => d.type)},
   marks: [
-    Plot.barX(etTotals, {x: "count", y: "type", fill: "#fb8c00", tip: true}),
+    Plot.barX(etTotals, {x: "count", y: "type", fill: OBS_ETYM, tip: true}),
     Plot.ruleX([0])
   ]
 })
@@ -126,7 +138,7 @@ Plot.plot({
   x: {label: "events", grid: true},
   y: {label: null, domain: yearData.map(d => d.component)},
   marks: [
-    Plot.barX(yearData, {x: "count", y: "component", fill: "#fb8c00", tip: true}),
+    Plot.barX(yearData, {x: "count", y: "component", fill: OBS_ETYM, tip: true}),
     Plot.ruleX([0])
   ]
 })
@@ -260,7 +272,7 @@ Plot.plot({
   marginLeft: 60,
   x: {label: "Records (estimated error-prone population)", grid: true},
   y: {label: null, domain: recapEst.map(d => d.dict)},
-  color: {domain: ["Corrected", "Estimated remaining"], range: ["#0969da", "#9cc7f5"], legend: true},
+  color: {domain: ["Corrected", "Estimated remaining"], range: [OBS_PRIMARY, OBS_EST], legend: true},
   marks: [
     Plot.barX(recapLong, {x: "value", y: "dict", fill: "part", inset: 1, tip: true}),
     Plot.ruleY(recapEst, {y: "dict", x1: "ci_low", x2: "ci_high", stroke: "black", strokeWidth: 1.5}),
@@ -270,6 +282,17 @@ Plot.plot({
 ```
 
 > **Conclusion:** The two correction eras overlap so little that, under mark–recapture logic, the corrected record set must be a minority of the error population: roughly **5–16% of the estimated correction work is done** in the four estimable dictionaries (pw, mw, bur, cae), with the heterogeneity scenario implying even less. For the other 39 dictionaries the overlap is too thin to estimate at all — itself evidence of how era-partitioned and concentrated correction effort has been. That thinness is a fact about the eras, not about the join: the measured linkage recovers real recaptures the exact-string join was dropping (bur 23 → 44, which takes it off the record-count ceiling) and still lifts only one dictionary over the estimability threshold.
+
+## Trust Block
+
+- Source artifact: `observatory/site/src/data/obs_t_summary.json` + `obs_t_timeline.csv` (77 rows), `obs_t_timeline_monthly.csv` (504 rows), `obs_t_dict.csv` (43 rows), `obs_t_confusion.csv` (5,019 rows), `obs_t_crosswalk.csv` (84 rows), `obs_t_baselines.json`, `error_recapture.csv` (42 rows) — produced by the OBS-T release pipeline ([`scripts/obs_t_release.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/obs_t_release.py)); recapture panel by [`scripts/error_recapture.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/error_recapture.py).
+- n: **52,498** released correction events, 43 dictionaries, 2014–2026; double-annotated sample κ = 0.906 [0.872–0.938] on the location axis (PR #102).
+- Data date: pipeline run **2026-06-12** (`obs_t_summary.json` `generatedAt`); events span 2014-03-18 → 2026-05-30.
+- Evidence: derived (deterministic normalization and attribution of every released correction event to a microstructure component); the recapture chapter is inferred/model-based (two-era Chapman estimator) and reported with CIs.
+- Limitations: covers only released, git-visible corrections — the estimated remaining-error population is model output, not a count; 39 of 43 dictionaries fall below the recapture estimability threshold; inter-annotator agreement was measured on a sample, not the full corpus.
+- Validation: `npm run build` (Observable Framework) exits 0; gold-roundtrip check `scripts/obs_t_gold_roundtrip_check.py` guards the annotation corpus; the totals card (52,498 events / 43 dictionaries / 208 correctors / 64.3% derived) is rendered live from `obs_t_summary.json`.
+- Owner repo: csl-observatory
+- Next use: re-run `scripts/obs_t_release.py` after each correction campaign to extend the timeline; sample the remaining-error estimates against fresh manual review before treating any single dictionary's CI as actionable.
 
 ---
 

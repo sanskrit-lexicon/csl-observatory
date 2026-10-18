@@ -4,7 +4,7 @@ _Created: 05-08-2026 · Last updated: 05-10-2026_
 
 **Status:** full draft (A69, readiness 3/5) — complete prose, needs human revision, byline
 and venue decisions. Drafted by Fable 5 (`claude-fable-5`) under
-[H1863](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1863-Fable_csl-observatory_pwg-scan-index-campaign-paper-draft_29.07.26.md);
+[H1863](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1863-Fable_csl-observatory_pwg-scan-index-campaign-paper-draft_29.07.26.md);
 every number in this draft is traced to committed campaign data in this repository (§ Data
 availability), none is newly computed here. Author-voice pass 06-09-2026
 ([PR #205](https://github.com/sanskrit-lexicon/csl-observatory/pull/205); the sign-off
@@ -329,7 +329,7 @@ At draft freeze the sheet's citation-count column had open provenance: it reprod
 neither the bare-string counts of the dictionary's own `<ls>` extraction nor a
 leading-abbreviation rollup of them, and supported internal ranking only. That is now
 resolved — the column is the per-abbreviation total of
-[`lsextract_all.txt`](https://github.com/sanskrit-lexicon/PWG/blob/master/pwgissues/issue74/lsextract_all.txt)
+[`lsextract_all.txt`](https://github.com/sanskrit-lexicon/PWG/blob/main/pwgissues/issue74/lsextract_all.txt)
 (the 2024-09-11 table, `ALL = 739,056`); of the 67 tracked rows carrying a value, 66 match
 exactly and 1 is a near-miss, provenance and denominator contract committed as
 [`reports/pwg_citation_count_provenance.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/pwg_citation_count_provenance.md)
