@@ -5,7 +5,7 @@ _Created: 30-05-2026 · Last updated: 24-09-2026_
 Last updated: 2026-09-24
 Horizon: 2026-06 to 2027-06
 
-> **Truth-pass 24-09-2026 (OxAlpha `opencode/z-ai/glm-5.3-flash`, [H5363](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5363-OxAlpha_csl-observatory_rm-verdict-roadmap_24.09.26.md), roadmap close-out wave 1 / epic E015). Verdict: REFRESH.**
+> **Truth-pass 24-09-2026 (OxAlpha `opencode/z-ai/glm-5.3-flash`, [H5363](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H5363-OxAlpha_csl-observatory_rm-verdict-roadmap_24.09.26.md), roadmap close-out wave 1 / epic E015). Verdict: REFRESH.**
 > Live unminted work remains, so the file stays active: RH7 and SC1 are real, dated, unshipped and covered by no live H### (registry-checked 24-09-2026). Live probes 24-09: `csl-inflect`, `hwnorm2` and `sanskrit-lexicon.github.io` all still carry no repo description (RH7 live); `temp_corrections_ap90` and `temp_corrections_mw` still hold one open funderburkjim issue each (RH3 gate intact). The «Next Implementation Session» section is rewritten below as **What Is Left** gated checkboxes; each human gate has one dated `MG @DO`/`@WAITING` row in [Uprava GTD_NEXT_ACTIONS.md](https://github.com/gasyoun/Uprava/blob/main/GTD_NEXT_ACTIONS.md) and the checkbox points at it (rulings 9–10 of the 21-09-2026 close-out grill). Everything already `done` in the tables below stays as the shipped record.
 
 > **Truth-pass 27-08-2026 (Opus 5 `claude-opus-5`, [H3002](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3002-Opus_multi_stale-roadmap-s4-cologne-ask-replan_17.08.26.md), stale-roadmap slice 4).**

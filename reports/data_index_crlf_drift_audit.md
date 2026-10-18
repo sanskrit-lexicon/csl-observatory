@@ -13,7 +13,7 @@ than the bytes recorded in
 files` — those files only appear in the site data dir after the refresh workflow's "Copy data into
 site" step. Both failure modes share one root: **the check measured environment state, not committed
 content.** Audited and fixed 18-07-2026 by Fable 5 (`claude-fable-5`), handoff
-[H1223](https://github.com/gasyoun/Uprava/blob/main/handoffs/H1223-Fable_csl-observatory_g17-data-index-bytecount-drift_18.07.26.md).
+[H1223](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1223-Fable_csl-observatory_g17-data-index-bytecount-drift_18.07.26.md).
 
 ## Verdict — CONFIRMED: CRLF inflation, one byte per line, no content loss
 
