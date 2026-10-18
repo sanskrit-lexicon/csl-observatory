@@ -205,6 +205,17 @@ display(Plot.plot({
 
 > **Conclusion:** The backlog is overwhelmingly issues (~98% of open items), and that split barely moves between snapshots: the org's backlog ages in place rather than churning. Combined with the drift panels above, the picture is a stable, slowly growing issue mountain tended by a small, diversified core — the org-shape context in which the correction labor of the Correction Anatomy page happens.
 
+## Trust Block
+
+- Source artifact: [`data/contributor_repo_heatmap.csv`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/data/contributor_repo_heatmap.csv) (202 login×repo commit cells), [`data/contributor_specialisation.csv`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/data/contributor_specialisation.csv) (17 contributors), and `data/snapshots/<date>/summary.json` (7 weekly org snapshots) — served to this page via the read-only loaders `contributor_repo_heatmap.csv.py`, `contributor_specialisation.csv.py`, `snapshot_drift.csv.py`; generator [`observatory/contributor_specialisation.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/observatory/contributor_specialisation.py) (Phase-3 V9/V10, hypotheses H4/H7).
+- n: 15 contributor logins × 77 repositories on the heatmap; 17 contributors in the specialisation/capture tables; 7 weekly snapshots (2026-05-07 → 2026-09-28) in the drift panels.
+- Data date: contributor tables computed **2026-06** from the full commit history; latest snapshot **2026-09-28** (regenerated at every site build from the canonical snapshots, read-only).
+- Evidence: derived — deterministic commit-count aggregation, normalized-entropy computation, and snapshot-total reads; no sampling or estimation.
+- Limitations: contributor identity is GitHub-login based (one person may hold several logins); the heatmap and specialisation tables are a June-2026 computation and do NOT accrue with weekly snapshots — only the drift panels do; the H7 drift verdict is deliberately deferred (registered Mann-Kendall tests need ≥10 snapshots; 7 exist), so drift views are descriptive; the intro prose's "78 repositories" predates the current 77-repo heatmap harvest.
+- Validation: `npm run build` (Observable Framework) exits 0, regenerating `snapshot_drift.csv` from canonical `data/snapshots/`; the rendered entropy figures (funderburkjim 0.69, drdhaval2785 0.78) reconcile against the committed `contributor_specialisation.csv`; chart colors read from `palette.css` tokens, never hard-coded.
+- Owner repo: csl-observatory
+- Next use: re-run the contributor tables on the next quarterly harvest so the heatmap accrues like the snapshots do; run the registered Mann-Kendall H7 test once ≥10 weekly snapshots accumulate.
+
 [Back to overview](/)
 
 _Dr. Mārcis Gasūns_
