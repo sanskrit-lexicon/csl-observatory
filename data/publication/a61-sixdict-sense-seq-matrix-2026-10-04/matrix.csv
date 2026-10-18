@@ -1,0 +1,16 @@
+pair_a,pair_b,label_a,label_b,n_common_k1,n_pairs_ge3,rho_median,rho_mean,rho_q25,rho_q75,share_rho_gt_0.5,share_rho_lt_neg0.5,tau_median,perm_null_mean,cross_null_n,cross_null_median,cross_null_mean,semis_pearson
+PWG,PW,"Böhtlingk & Roth 1855–1875","Böhtlingk kürzerer Fassung 1879–1889",99455,487,0.3,0.1807,-0.4286,0.6429,0.2793,0.117,0.2143,0.0281,487,0.0526,0.0436,0.6772
+PWG,MW,"Böhtlingk & Roth 1855–1875","Monier-Williams 1899",94779,4943,0.9,0.6622,0.5,1.0,0.6787,0.0216,0.8,0.0683,4943,0.5,0.2584,0.7036
+PWG,SCH,"Böhtlingk & Roth 1855–1875","Schmidt Nachträge 1928",7782,20,-0.5,-0.1961,-0.5,0.5,0.1,0.25,-0.3333,-0.0821,20,0.1643,0.0214,0.1646
+PWG,ACC,"Böhtlingk & Roth 1855–1875","Aufrecht Catalogus Catalogorum",4929,0,,,,,,,,None,0,None,None,-0.3333
+PWG,PWKVN,"Böhtlingk & Roth 1855–1875","PW kürzerer Fassung, Nachträge und Verbesserungen",4041,14,-0.3,-0.1214,-0.6,0.5,0.0714,0.2857,-0.2666,-0.3357,14,-0.5,-0.2714,0.5908
+PW,MW,"Böhtlingk kürzerer Fassung 1879–1889","Monier-Williams 1899",129005,268,0.8,0.5305,0.4,1.0,0.5448,0.0485,0.6667,0.0754,268,0.4,0.1551,0.6472
+PW,SCH,"Böhtlingk kürzerer Fassung 1879–1889","Schmidt Nachträge 1928",18289,182,1.0,0.6148,0.5,1.0,0.6758,0.044,1.0,0.0393,182,0.5,0.1673,0.1698
+PW,ACC,"Böhtlingk kürzerer Fassung 1879–1889","Aufrecht Catalogus Catalogorum",9368,0,,,,,,,,None,0,None,None,
+PW,PWKVN,"Böhtlingk kürzerer Fassung 1879–1889","PW kürzerer Fassung, Nachträge und Verbesserungen",14973,381,1.0,0.9293,1.0,1.0,0.9265,0.0,1.0,0.0798,381,0.5,0.2328,0.3013
+MW,SCH,"Monier-Williams 1899","Schmidt Nachträge 1928",14523,7,1.0,0.9286,1.0,1.0,0.8571,0.0,1.0,-0.1429,7,-0.5,-0.5,0.159
+MW,ACC,"Monier-Williams 1899","Aufrecht Catalogus Catalogorum",17060,0,,,,,,,,None,0,None,None,-0.544
+MW,PWKVN,"Monier-Williams 1899","PW kürzerer Fassung, Nachträge und Verbesserungen",9758,7,1.0,0.9286,1.0,1.0,0.8571,0.0,1.0,0.0,7,-0.5,-0.5,0.1603
+SCH,ACC,"Schmidt Nachträge 1928","Aufrecht Catalogus Catalogorum",865,0,,,,,,,,None,0,None,None,
+SCH,PWKVN,"Schmidt Nachträge 1928","PW kürzerer Fassung, Nachträge und Verbesserungen",13901,204,1.0,0.7285,0.7,1.0,0.7696,0.0147,1.0,-0.0529,204,0.1,0.0529,0.4659
+ACC,PWKVN,"Aufrecht Catalogus Catalogorum","PW kürzerer Fassung, Nachträge und Verbesserungen",817,0,,,,,,,,None,0,None,None,

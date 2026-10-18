@@ -6,7 +6,7 @@ Companion to [CODEBASE_ADVERSARIAL_AUDIT_2026-08.md](CODEBASE_ADVERSARIAL_AUDIT_
 
 ## 1. Why this exists
 
-The H3487 remediation claimed completion twice — once by the fix waves (H3631–H3641, all ✅ in the registry), once by the residual pass ([H4227](https://github.com/gasyoun/Uprava/blob/main/handoffs/H4227-OxAlpha_multi_audit-residuals-a1-a15-o1-p8_06.09.26.md), «four still-standing residuals»). A per-finding crosswalk had never been written. This doc is that crosswalk. Headline corrections it establishes:
+The H3487 remediation claimed completion twice — once by the fix waves (H3631–H3641, all ✅ in the registry), once by the residual pass ([H4227](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H4227-OxAlpha_multi_audit-residuals-a1-a15-o1-p8_06.09.26.md), «four still-standing residuals»). A per-finding crosswalk had never been written. This doc is that crosswalk. Headline corrections it establishes:
 
 1. **H4227's «9 of 11 gap specs shipped» undercounts.** Per the H3884 sweep plus this pass: **G2–G11 (10 of 11) shipped merged**; only **G1 is partial** — its csl-pywork leg landed ([PR #84](https://github.com/sanskrit-lexicon/csl-pywork/pull/84)), but the csl-orig leg (O1, `check_generate_dict.sh` `|| true`) stayed broken until [PR #2896](https://github.com/sanskrit-lexicon/csl-orig/pull/2896) (open at this writing).
 2. **The census residue is larger than four sites.** Verifying every one of the 71 census rows at tips finds **~20 sites still open or partial** (§3), concentrated in: the websan twins of already-fixed apidev findings (servepdf/listhier/dictinfo are twin-drift *allowlisted*, so apidev fixes never propagated), dal.php exception-surfacing, and the pywork downloads/test scripts that no gap spec ever covered.

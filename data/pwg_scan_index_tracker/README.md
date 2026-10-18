@@ -97,7 +97,7 @@ Campaign history: [`docs/PWG_SCAN_INDEX_CAMPAIGN_HISTORY_2025_2026.md`](https://
 1. **`citation_count` is the 2024-09-11 `lsextract_all.txt` rollup — divide only by its
    own snapshot.** Open under H1706, recovered in H2874: the column is the
    per-abbreviation total of
-   [`pwgissues/issue74/lsextract_all.txt`](https://github.com/sanskrit-lexicon/PWG/blob/master/pwgissues/issue74/lsextract_all.txt)
+   [`pwgissues/issue74/lsextract_all.txt`](https://github.com/sanskrit-lexicon/PWG/blob/main/pwgissues/issue74/lsextract_all.txt)
    (`ALL = 739,056`), every `<ls>` element attributed to the longest bibliography
    abbreviation that prefixes it; 66 of the 67 valued rows match digit for digit and
    `NAIGH.` is a near-miss. Consume **`citation_count_safe`**, not `citation_count` —
