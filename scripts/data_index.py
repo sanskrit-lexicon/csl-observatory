@@ -184,6 +184,18 @@ CATALOG: dict[str, Entry] = {
         "<L> record count and distinct-<k1> headword count for every csl-orig v02 dictionary — the physical denominator and cap for population estimates.",
         "Counted from the sibling csl-orig checkout at refresh time; four dictionaries carrying correction events (pd, abch, apes, pwg2013) have no v02 entry file and so no row.",
     ),
+    "manadanda_census.csv": Entry(
+        "corpus census",
+        "scripts/manadanda_census.py",
+        "Corpus-wide mānadaṇḍa census over the DCS flatten (H6052): one row per attestation of the kāvya compound māna-…-daṇḍa ('measuring rod'), token-level Cpd-run detection, with DCS time slot and era per chapter.",
+        "Exactly 2 attestations in the 2026-10-03 pin (5,688,416 tokens): Kumārasaṃbhava 1.1 and Bhāmaha Kāvyālaṃkāra 3.36 — both DCS slot 3, both Nom Sg Masc. Depends on the sibling VisualDCS dcs_full.sqlite; rerun after any corpus re-pin.",
+    ),
+    "manadanda_danda_family.csv": Entry(
+        "corpus census",
+        "scripts/manadanda_census.py",
+        "Context family for the mānadaṇḍa census: every compound-final daṇḍa token in DCS (489 tokens, 212 distinct compounds), reconstructed member runs with text, ref, slot and era.",
+        "Counts compound FINAL members only (feat_case != Cpd preceded by a Cpd run); sandhi-fused plain daṇḍa (e.g. tasmāt+daṇḍaḥ) and non-final members are excluded by construction. Same sibling-sqlite dependency as manadanda_census.csv.",
+    ),
     "error_recapture.csv": Entry(
         "obs-t recapture",
         "scripts/error_recapture.py",
