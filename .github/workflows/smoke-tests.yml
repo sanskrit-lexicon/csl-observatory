@@ -1,0 +1,37 @@
+name: Smoke tests (pytest + ruff)
+
+# H5800 smoke-test bootstrap: additive CI. The bespoke audit workflows
+# (tooling-audit, dict-audit, encoding-guard, …) are untouched — this workflow
+# runs ONLY the pytest smoke suite and the documented ruff baseline gate.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - name: Install dev dependencies
+        run: pip install -r requirements-dev.txt
+
+      # Documented baseline, never silently zero: the gate fails when the live
+      # ruff count EXCEEDS .ruff-baseline (see docs/RUFF_BASELINE.md).
+      - name: Ruff baseline gate
+        run: python scripts/ruff_baseline_gate.py
+
+      - name: Pytest smoke tests
+        run: python -m pytest tests/ -v
