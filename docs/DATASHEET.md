@@ -156,6 +156,15 @@ corrections; no released fact changed.
   `csl-atlas`, with `csl-observatory` keeping only the process metrics (κ, P/R/F1).
 - **Sources.** ELEXIS MWSA shared task: <https://elex.is/mwsa2020/> · data/format:
   <https://github.com/elexis-eu/MWSA>.
+- **Benchmark-fit extension (H6389, 11-10-2026).** The same lineage now extends to a
+  *reporting* transform: every occupied (location × edit-type) cell of the two-axis
+  typology is re-expressed in nearest ERRANT/GEC and historical-text-normalization
+  terms in
+  [`docs/OBST_ERRANT_GEC_CROSSWALK.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/OBST_ERRANT_GEC_CROSSWALK.md)
+  (generator `scripts/obs_t_errant_gec_crosswalk.py --check`, byte-identical
+  regen; unplaceable cells flagged, never forced; citation log with ≥2
+  live-verified sources per anchor claim:
+  [`docs/OBST_CROSSWALK_CITATION_LOG.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/OBST_CROSSWALK_CITATION_LOG.md)).
 
 ## Distribution
 
