@@ -6,13 +6,13 @@ H1706 committed the PWG scan-index tracker as data and recorded its `Citation co
 
 ## 1 · The verdict
 
-The column is the per-abbreviation total of [`pwgissues/issue74/lsextract_all.txt`](https://github.com/sanskrit-lexicon/PWG/blob/master/pwgissues/issue74/lsextract_all.txt) in sanskrit-lexicon/PWG, the count table dated **2024-09-11** with `ALL = 739,056`. Of the 67 tracked rows that carry a value, **66 match that table exactly**, 1 is a near-miss, 0 are unresolved. The remaining 15 rows carry no value of their own because the sheet writes a family's count once and `- - -` on its sibling volumes.
+The column is the per-abbreviation total of [`pwgissues/issue74/lsextract_all.txt`](https://github.com/sanskrit-lexicon/PWG/blob/main/pwgissues/issue74/lsextract_all.txt) in sanskrit-lexicon/PWG, the count table dated **2024-09-11** with `ALL = 739,056`. Of the 67 tracked rows that carry a value, **66 match that table exactly**, 1 is a near-miss, 0 are unresolved. The remaining 15 rows carry no value of their own because the sheet writes a family's count once and `- - -` on its sibling volumes.
 
 The table is committed here as the input of record, so this claim is checkable offline: [`ls_counts/pwg_ls_counts_2024-09-11.tsv`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/data/pwg_scan_index_tracker/ls_counts/pwg_ls_counts_2024-09-11.tsv).
 
 ## 2 · What the number counts
 
-Per [`lsextract_all.py`](https://github.com/sanskrit-lexicon/PWG/blob/master/pwgissues/issue94/lsextract_all.py), for every `<ls …>…</ls>` element in the PWG digitization:
+Per [`lsextract_all.py`](https://github.com/sanskrit-lexicon/PWG/blob/main/pwgissues/issue94/lsextract_all.py), for every `<ls …>…</ls>` element in the PWG digitization:
 
 1. an `n="…"` attribute value, where present, is prepended to the element text;
 2. text beginning with a digit counts as `NUMBER`;

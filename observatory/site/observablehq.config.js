@@ -49,6 +49,7 @@ const PAGE_DESCRIPTIONS = {
   "/census-l3-corpus": "L3 census: DCS full-corpus tokens/sentences, SamudraManthanam parallel corpus, and frequency-layer statistics.",
   "/census-l4-translation": "L4 census: the Sa-Ru alignment corpus, 3-layer glossary, mw_ru translation cards, and per-dict RU coverage.",
   "/census-l5-roots": "L5 census: the MW verbal-root inventory, etymology derivation tables, root-oracle agreement, and the Whitney x DCS audit.",
+  "/research-measurements": "The A61 measurement wave (H6071): sense-sequence ρ matrix across the six dictionaries auto-surfaced from data/publication/a61-* releases, plus the register of pending families (mānadaṇḍa, NWS, WSD) that appear as their releases land.",
   "/pos-by-text": "UD part-of-speech shares across 270 DCS texts: stacked profiles, text×UPOS heatmap, outlier ranks for NOUN% and VERB% — genre/register skew beyond the corpus mean.",
   "/paradigm-cell-coverage": "Finite-verb paradigm-cell coverage for 8,054 DCS roots: cell-count histogram, tokens×cells scatter, top roots, and the most frequent cell labels — with the unaccented-DCS class I/VI caveat.",
   "/sense-polysemy": "Mean sense units per entry for the 11 CDSL dictionaries with structural sense marking (year, family, entry volume) — n=11/44 ceiling stated honestly."
@@ -158,7 +159,8 @@ export default {
     {name: "Stats Census — L5 Roots", path: "/census-l5-roots"},
     {name: "POS by text", path: "/pos-by-text"},
     {name: "Paradigm-cell coverage", path: "/paradigm-cell-coverage"},
-    {name: "Sense polysemy", path: "/sense-polysemy"}
+    {name: "Sense polysemy", path: "/sense-polysemy"},
+    {name: "Research measurements (A61)", path: "/research-measurements"}
   ],
   theme: ["air", "alt", "wide"],
   header: `<a href="/" style="display: flex; align-items: center; gap: 0.5rem; color: inherit; text-decoration: none;">

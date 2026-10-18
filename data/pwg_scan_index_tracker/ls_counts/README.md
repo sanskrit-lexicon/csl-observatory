@@ -30,7 +30,7 @@ dictionary-wide denominator for these numbers, and only against its own snapshot
 ## Three things that will bite you
 
 1. **The number is a work family, not a citation string.** The cleaned-string extraction
-   in [`sortedcrefs.txt`](https://github.com/sanskrit-lexicon/PWG/blob/master/pwg_ls/pwg_dhaval/abbrvwork/abbrvoutput/sortedcrefs.txt)
+   in [`sortedcrefs.txt`](https://github.com/sanskrit-lexicon/PWG/blob/main/pwg_ls/pwg_dhaval/abbrvwork/abbrvoutput/sortedcrefs.txt)
    counts a different object and disagrees by 1.2×–433×. Neither is wrong; they are not
    comparable.
 2. **Siblings of a family share one total.** `AK. Deslongchamps ed.` and
@@ -60,7 +60,7 @@ a recount — so a silent refresh would rewrite the campaign's own history.
 ## Provenance
 
 Ported from `lsextract_all.py` in
-[sanskrit-lexicon/PWG](https://github.com/sanskrit-lexicon/PWG/blob/master/pwgissues/issue94/lsextract_all.py)
+[sanskrit-lexicon/PWG](https://github.com/sanskrit-lexicon/PWG/blob/main/pwgissues/issue94/lsextract_all.py)
 (E. Fitzgerald), which is also the generator of the 2024-09-11 table. The port is held to
 byte-identical output by `--verify-port`. Analysis:
 [`reports/pwg_citation_count_provenance.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/pwg_citation_count_provenance.md)

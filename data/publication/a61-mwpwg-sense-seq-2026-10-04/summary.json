@@ -1,0 +1,42 @@
+{
+ "method": "citation-siglum first-occurrence rank concordance over k1-exact common headwords; >=3 shared works per pair",
+ "counts": {
+  "mw_entries": 194083,
+  "pwg_entries": 106082,
+  "pw_entries": 151349,
+  "common_k1": 94779,
+  "pairs_ge3_shared": 4943
+ },
+ "mwpwg": {
+  "label": "MW(1899) x PWG",
+  "n_pairs": 4943,
+  "rho_median": 0.9,
+  "rho_mean": 0.6622,
+  "rho_q25": 0.5,
+  "rho_q75": 1.0,
+  "share_rho_gt_0.5": 0.6787,
+  "share_rho_lt_neg0.5": 0.0216
+ },
+ "control_same_dict_editions": {
+  "label": "PW(1879) x PWG — same-author condensation control",
+  "n_pairs": 487,
+  "rho_median": 0.3,
+  "rho_mean": 0.1807,
+  "rho_q25": -0.4286,
+  "rho_q75": 0.6429,
+  "share_rho_gt_0.5": 0.2793,
+  "share_rho_lt_neg0.5": 0.117
+ },
+ "null_permutation": {
+  "n": 4943,
+  "rho_mean": 0.033
+ },
+ "null_crosspair": {
+  "n": 4943,
+  "rho_median": 0.5,
+  "rho_mean": 0.2818,
+  "note": "MW lemma X vs PWG lemma Y!=X; detects global siglum-order conventions"
+ },
+ "semis_pearson_mwpwg": 0.7036,
+ "seed": 20261004
+}
