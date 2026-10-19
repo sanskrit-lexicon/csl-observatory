@@ -28,6 +28,11 @@ IMPORT_SKIP = {
     # must stay side-effect-free, so this stays skipped until the writer is
     # moved under main().
     "observatory/site/scripts/make_sitemap.py": "writes sitemap.xml at import (module-level side effect, H5800 finding)",
+    # sys.exit()s at module level when no csl-orig sibling checkout exists —
+    # which is ALWAYS the case on CI. Found 19-10-2026 (bughunt §19) only after
+    # the ruff gate above stopped failing first: this workflow had never reached
+    # the pytest step. Deliberate fail-closed CLI behaviour, not an import bug.
+    "scripts/obs_t_gold_rekey.py": "sys.exit()s at import without a csl-orig checkout (never present on CI)",
 }
 
 

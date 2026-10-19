@@ -2,15 +2,13 @@
 
 _Created: 19-10-2026 · /bughunt interactive day hunt · executor DeepSeek Flash (`deepseek-flash`) · fresh worktree off `origin/main`, never the shared main tree_
 
-Hunted on `origin/main` **[96db6e1](https://github.com/sanskrit-lexicon/csl-observatory/commit/96db6e1)**. Elapsed ~95 min, including two independent scoped audit passes run in parallel (measurement layer; validation/κ pipeline), every reported finding re-run by hand here. First `BUGHUNT-FINDINGS` report for this repo — the rotation had it queued next.
+Hunted on `origin/main` **[96db6e1](https://github.com/sanskrit-lexicon/csl-observatory/commit/96db6e1)**. Elapsed ~95 min, including two independent scoped audit passes run in parallel (measurement layer; validation/κ pipeline), every reported finding re-run by hand here. First report for this repo.
 
 ## Verdict first
 
-**Seventeen defects: three HIGH, seven MEDIUM, seven LOW.** The three HIGH are fixed in this run (§1–§3). The repeating pattern is the one this repo's own design notes keep naming — **a gate is correct about the artifact it was written for and wrong about the artifact it is pointed at**: a lint gate whose baseline predates the ruleset it ships with, so its CI workflow has **never passed** (§1); a commit guard whose protected path is a hard-coded `C:/Users/user/...` string, so here it **never fires** (§2); a scorer that `round()`s a value its own helper documents as possibly `None`, so a degenerate sheet **loses the whole scoring run** (§3).
+**Eighteen defects: four HIGH, seven MEDIUM, seven LOW.** The four HIGH are fixed here (§1–§3, §18 — the last surfaced only when §1's fix let CI reach the next step). The repeating pattern is the one this repo's own design notes keep naming — **a gate is correct about the artifact it was written for and wrong about the artifact it is pointed at**: a lint gate whose baseline predates the ruleset it ships with, so its CI workflow has **never passed** (§1); a commit guard whose protected path is a hard-coded `C:/Users/user/...` string, so here it **never fires** (§2); a scorer that `round()`s a value its own helper documents as possibly `None`, so a degenerate sheet **loses the whole scoring run** (§3).
 
 Then a family where **the number is right and the stated population is not** (§4, §7, §10), two **fail-open paths in the κ driver** that publish a statistic at exit 0 after an input went missing (§8, §9), and one **mis-named statistic**: `krippendorff_alpha_nominal` computes Scott's π — on Krippendorff's published example it returns 0.8935 where the paper says 0.743 (§5).
-
-**What is NOT broken matters too.** κ = **0.906 [0.872–0.938]** was re-derived twice (hand arithmetic + `sklearn`), the blind sample rebuilds byte-identically, `data_index.py`'s post-#127 LFS guard is genuinely fail-closed, and the token gate refuses a 20 001-byte staged file end-to-end — recorded below so no later session re-derives them.
 
 ## What verified green (baseline)
 
@@ -100,17 +98,17 @@ $ python3 /tmp/kalpha_canon.py
   standard (o/n, /(m_u-1)) : 0.7434
 ```
 
-**Honest scope.** Both production call sites pass 2-tuples, where the only difference is the `n` vs `n−1` factor (≈(1−α)/n, ~1e-4 here), so **no published 3-dp value changes today**; what is wrong is the name, the general-k claim and the self-test pinning the wrong identity — a future k>2 call would return a badly wrong number with no test catching it. **Fix.** Divide `D_o` by `n`, divide each unit's contribution by `(m_u−1)`, replace the π-identity assertion with an asymptotic check plus the 0.743 fixture.
+**Honest scope.** Both production call sites pass 2-tuples, where only the `n` vs `n−1` factor differs (~1e-4 here), so **no published 3-dp value changes today**; wrong are the name, the general-k docstring and the self-test pinning the wrong identity. **Fix.** Divide `D_o` by `n`, divide each unit by `(m_u−1)`, replace the π-identity assertion with an asymptotic check plus the 0.743 fixture.
 
 ## §6 — MEDIUM · `workflow_health.py` fail-open: an unknown `--repo` overwrites the published CSV with a header and exits 0
 
 [`scripts/workflow_health.py:293`](https://github.com/sanskrit-lexicon/csl-observatory/blob/96db6e1/scripts/workflow_health.py#L293) filters metadata by `set(args.repo or [])`; a name matching nothing yields `rows = []`, which the writer at `:449` serialises over the committed `observatory/site/src/data/workflow_health.csv` while printing success. No unknown-name validation, no empty-set refusal.
 
 ```
-$ python3 scripts/workflow_health.py --offline --repo notarepo --out /tmp/wf_probe.csv --report /tmp/wf_probe.md; echo exit=$?; wc -l /tmp/wf_probe.csv
+$ python3 scripts/workflow_health.py --offline --repo notarepo --out /tmp/wf.csv --report /tmp/wf.md; echo exit=$?; wc -l /tmp/wf.csv
   repos: 0
 exit=0
-       1 /tmp/wf_probe.csv        # header only
+       1 /tmp/wf.csv              # header only
 ```
 
 **Fix.** Refuse unknown names (`selected - {m['repo'] for m in metadata}`) and refuse to write an empty row set.
@@ -171,7 +169,7 @@ $ python3 -c "import json;print(repr(json.load(open('component_kappa_stats.json'
 
 ## §13 — LOW · The duplicate-`row_id` guard in the κ driver cannot fire for string ids
 
-[`validation/compute_component_kappa.py:67`](https://github.com/sanskrit-lexicon/csl-observatory/blob/96db6e1/validation/compute_component_kappa.py#L67) asserts `r["row_id"] not in out` while `out` is keyed by `int(r["row_id"])`. An exporter emitting `"row_id": "1"` walks past the guard; verified in /tmp — a conflicting duplicate row-1 label was accepted, κ moved 0.906 → 0.903, exit 0. Fix: normalise once and assert on `rid`.
+[`validation/compute_component_kappa.py:67`](https://github.com/sanskrit-lexicon/csl-observatory/blob/96db6e1/validation/compute_component_kappa.py#L67) asserts `r["row_id"] not in out` while `out` is keyed by `int(r["row_id"])`. An exporter emitting `"row_id": "1"` walks past it; verified in /tmp — a duplicate row-1 label was accepted, κ moved 0.906 → 0.903, exit 0. Fix: normalise once, assert on `rid`.
 
 ## §14 — LOW · The blind-batch builder never clears stale batches
 
@@ -185,11 +183,7 @@ $ python3 -c "import json;print(repr(json.load(open('component_kappa_stats.json'
 
 [`validation/COMPONENT_GUIDE.md:9`](https://github.com/sanskrit-lexicon/csl-observatory/blob/96db6e1/validation/COMPONENT_GUIDE.md#L9) tells annotators to write `gold_component`, `notes`, `gold_component_2`; the artifact they receive carries none of the three (`BLIND_COLS` strips them) and the HTML sheet exports `location`/`edit_type`/`note`. Fix: state the write-back per path.
 
-## §17 — LOW · Token gate reports the wrong Russian plural for 1 and 3+
-
-`.githooks/token_size_gate.py` passes `('файла', 'файлов', 'файлов')` to `plural_ru` in the `TOKEN_GATE_ALLOW=1` message: one file reads "1 файла", three "3 файлов". Cosmetic.
-
-## §18 — MEDIUM · The new token gate has no grandfathering: 42 already-committed files become unmaintainable
+## §17 — MEDIUM · The new token gate has no grandfathering: 42 already-committed files become unmaintainable
 
 `.githooks/token_size_gate.py` (shipped 19-10-2026) measures **staged** blobs, which is right for new files but also refuses any edit to a file that was already over budget before the gate existed. Found the hard way — this hunt's own two-line fix to `obs_t_gold.py` was refused:
 
@@ -199,12 +193,24 @@ $ python3 .githooks/token_size_gate.py --staged
     24 819 Б ≈ 6 205 токенов · превышение ×1.2 · нужно ≥ 2 части по ≤ 20 000 Б
 ```
 
-42 tracked text files are over the 20 000 B budget and outside `.token-gate-ignore` — `scripts/recapture_sensitivity.py` 118 KB, `pre_push_stale_base_check.py` 107 KB, `obs_t_gold.py` 24.8 KB, plus docs and `CHANGELOG.md`. Each is now edit-blocked unless the agent splits it mid-fix, adds an ignore entry, or takes the `TOKEN_GATE_ALLOW=1` hatch (which this commit did, logged to `.git/token-size-gate.log`). **Fix.** Grandfather by HEAD — skip a staged file whose HEAD blob is already over budget; the gate's job is to stop *growth*, not to tax the code the hunt just proved needs fixing.
+42 tracked text files are over the 20 000 B budget and outside `.token-gate-ignore` — `scripts/recapture_sensitivity.py` 118 KB, `pre_push_stale_base_check.py` 107 KB, `obs_t_gold.py` 24.8 KB, plus docs and `CHANGELOG.md`. Each is now edit-blocked unless the agent splits it mid-fix, adds an ignore entry, or takes the `TOKEN_GATE_ALLOW=1` hatch (which this commit did, logged). **Fix.** Grandfather by HEAD — skip a staged file whose HEAD blob is already over budget; the gate's job is to stop *growth*.
+
+## §18 — HIGH · Fixing §1 exposed a second CI blocker the workflow had never reached: an import-smoke test that cannot pass on CI
+
+`tests/test_entry_point_imports.py` imports every script; `scripts/obs_t_gold_rekey.py:91` `sys.exit()`s at module level when no `csl-orig` sibling checkout exists — always true on CI. The file's own named-skip census exists for exactly this, but this script was never added. It was invisible until now because the ruff step runs first and always failed, so pytest never executed.
+
+```
+FAILED tests/test_entry_point_imports.py::test_script_imports_cleanly[scripts/obs_t_gold_rekey.py]
+SystemExit: csl-orig not found (looked: env OBS_T_CSL_ORIG, sibling, ~/Documents/GitHub/csl-orig)
+==================== 1 failed, 122 passed, 2 skipped in 1.62s ====================
+```
+
+**Fix (applied).** A named skip with its reason; `test_named_skips_still_exist` keeps the entry honest. With it, the workflow's ruff gate and pytest step both pass for the first time.
 
 ---
 
 ## Fixed in this run
 
-§1 (`ruff==0.17.1` + baseline 731), §2 (`$HOME`-derived guard path) and §3 (round only a non-`None` alpha) are fixed in this commit; each carries its verification inline above. Not applied deliberately: §4, §7, §8, §9, §10 are reporting-contract decisions (which sentence/population is true) and belong to the owner; §5 changes a published statistic's definition; §6 and §11–§18 are report-only per the night ruling.
+§1, §2, §3 and §18 are fixed in this commit, each with its verification inline above. Not applied deliberately: §4, §7, §8, §9, §10 are reporting-contract decisions (which sentence/population is true) and belong to the owner; §5 changes a published statistic's definition; §6 and §11–§17 are report-only per the night ruling.
 
 _Every finding here was re-executed by hand; audit-pass candidates that failed re-run are excluded rather than repeated. Severities: HIGH = wrong published number / data loss / crash; MEDIUM = misleading but bounded; LOW = cosmetic or latent._
