@@ -31,7 +31,13 @@ if [ -n "${ALLOW_MAIN_TREE_COMMIT:-}" ]; then
     exit 0
 fi
 
-CANONICAL_MAIN_TREE="C:/Users/user/Documents/GitHub/csl-observatory"
+# Portable default (2026-10-19 bughunt fix): this was a literal
+# "C:/Users/user/..." string, so on any clone at another path the comparison
+# never matched and the guard silently allowed commits in the shared main
+# tree — the exact intermix it exists to prevent. $HOME/Documents/GitHub/<repo>
+# is that same location on Windows Git Bash and on macOS/Linux. Override with
+# CANONICAL_MAIN_TREE for a non-standard layout.
+CANONICAL_MAIN_TREE="${CANONICAL_MAIN_TREE:-$HOME/Documents/GitHub/csl-observatory}"
 toplevel="$(git rev-parse --show-toplevel 2>/dev/null || true)"
 norm_toplevel="$(printf '%s' "$toplevel" | tr 'A-Z' 'a-z' | tr '\\' '/')"
 norm_canonical="$(printf '%s' "$CANONICAL_MAIN_TREE" | tr 'A-Z' 'a-z' | tr '\\' '/')"

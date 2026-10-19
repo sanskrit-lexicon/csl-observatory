@@ -2,7 +2,12 @@
 # The main observatory pipeline stays stdlib-only (scripts/requirements-validation.txt
 # documents the single validation-only runtime dep); these are CI/dev-only.
 pytest>=8
-ruff>=0.8
+# Pinned, not floored: the ruff gate compares a violation COUNT against
+# .ruff-baseline, and that count moves when ruff adds or retires rules. An
+# unpinned floor let a runner upgrade alone redden the gate (2026-10-19:
+# ruff 0.17.1 counted 731 against a documented 685). Bump this and refresh
+# .ruff-baseline in the SAME commit, never one without the other.
+ruff==0.17.1
 pyyaml
 pillow
 matplotlib
