@@ -2,7 +2,7 @@
 
 _Created: 19-10-2026 · /bughunt interactive day hunt · executor DeepSeek Flash (`deepseek-flash`) · fresh worktree off `origin/main`, never the shared main tree_
 
-Hunted on `origin/main` **[96db6e1](https://github.com/sanskrit-lexicon/csl-observatory/commit/96db6e1)**. Elapsed ~95 min, including two independent scoped audit passes run in parallel (measurement layer; validation/κ pipeline), every reported finding re-run by hand here. First report for this repo.
+Hunted on `origin/main` **[96db6e1](https://github.com/sanskrit-lexicon/csl-observatory/commit/96db6e1)**. Elapsed 13 min (16:16–16:29 MSK), including two independent scoped audit passes run in parallel (measurement layer; validation/κ pipeline), every reported finding re-run by hand here. First report for this repo.
 
 ## Verdict first
 
