@@ -5,15 +5,33 @@ H5800 bootstrapped pytest + ruff into CI. Bootstrapping with the whole legacy
 surface clean was out of scope, so ruff starts from a **documented baseline
 count that can only move down** — never a silent zero.
 
-## The numbers at bootstrap
+## The numbers (baseline as recorded)
 
 | Fact | Value |
 |---|---|
-| Baseline violation count | **685** (machine mirror: `.ruff-baseline`) |
+| Baseline violation count | **731** (machine mirror: `.ruff-baseline`) — was 685 at bootstrap, see *Re-record 2026-10-19* below |
 | Ruleset | `ruff.toml`: `E4, E7, E9, F, I, B, S, C4` (+ per-file-ignores for `tests/**` and the gate script) |
-| Ruff version | 0.16.10 (any ≥0.8 per requirements-dev.txt) |
+| Ruff version | **pinned 0.17.1** (`requirements-dev.txt`); the count is version-sensitive, so the pin and the baseline move together |
 | Command | `ruff check . --output-format concise` |
-| Live census | 2026-10-04, worktree off `origin/main` @ `844046a`, verified in a CI-equivalent venv |
+| Live census | 2026-10-19, worktree off `origin/main` @ `96db6e1`, 731 violations |
+
+### Re-record 2026-10-19 (bughunt §1)
+
+The 685 recorded here was measured **before** this repo's own `ruff.toml` landed
+(it arrived in the same commit as the baseline, `41eac8f`, PR #250), so the gate
+has failed on every run it ever made — measured on that commit the count was
+already 716, and 731 on today's `main`. Two lessons, both now enforced:
+
+1. re-measure with the ruleset you ship, and
+2. pin the ruff version — at `844046a` ruff 0.16.5 counts 694 where 0.16.10
+   counted 685, so an unpinned runner upgrade can redden the gate with no
+   commit at all (`ruff>=0.8` → `ruff==0.17.1`).
+
+The 731 is a **re-record, not a regression budget**: the delta is the 46
+violations the bootstrap window itself introduced, mostly `I001`/`E401`/`E702`
+in the legacy surface. Fixing them is a separate, reviewable sweep — the gate's
+job until then is to stop new ones from landing.
+
 
 Top offenders at bootstrap: `I001` unsorted imports (66), `F541` f-string
 without placeholders (48), `F401` unused imports (12), `S110` try-except-pass

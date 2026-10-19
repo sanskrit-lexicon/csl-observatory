@@ -373,7 +373,12 @@ def score():
     iaa_pairs = [(r['gold_component'].strip(), r['gold_component_2'].strip())
                  for r in sheet if r['gold_component_2'].strip()]
     kappa = round(cohen_kappa(iaa_pairs), 3) if iaa_pairs else None
-    alpha = round(krippendorff_alpha_nominal(iaa_pairs), 3) if iaa_pairs else None
+    # krippendorff_alpha_nominal returns None when D_e is degenerate (a second
+    # annotator who used ONE label across the sample, or <2 pairable values);
+    # round(None) used to abort the whole --score run before any artifact was
+    # written. Round only a number, and say "undefined" if there is none.
+    alpha_raw = krippendorff_alpha_nominal(iaa_pairs) if iaa_pairs else None
+    alpha = round(alpha_raw, 3) if alpha_raw is not None else None
 
     metrics = {
         'generatedAt': datetime.now(timezone.utc).isoformat(),
