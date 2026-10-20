@@ -2,7 +2,7 @@ _Created: 07-05-2026 · Last updated: 05-09-2026_
 
 # Status
 
-> **Current status (2026-09).** The observatory is live and reproducible.
+> **Current status (2026-09 · snapshot csl-obs/org-live@1.0.0, as of 2026-09-28).** The observatory is live and reproducible.
 > Five org-process findings + a synthesis are on the
 > [dashboard](https://sanskrit-lexicon.github.io/csl-observatory/), and the
 > standalone **OBS-T error-typology** track (a 52,498-event correction corpus,
@@ -17,7 +17,7 @@ _Created: 07-05-2026 · Last updated: 05-09-2026_
 3. **[`reports/synthesis.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/synthesis.md)** — *State of the observatory*, the findings tied into one picture.
 4. **[Dashboard](https://sanskrit-lexicon.github.io/csl-observatory/)** — the live, downloadable charts.
 
-## Headline numbers (snapshot 2026-09)
+## Headline numbers (snapshot csl-obs/org-live@1.0.0, as of 2026-09-28)
 
 | Metric | Value |
 |---|---:|

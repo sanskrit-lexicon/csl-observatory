@@ -11,6 +11,10 @@ calls — and is mirrored on the [Observable dashboard](https://sanskrit-lexicon
 **Start here:** [`synthesis.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/synthesis.md) ties the four findings into one
 picture.
 
+Which snapshot a given surface quotes (live-API pipeline vs offline transform):
+[`../docs/SNAPSHOT_AUTHORITY.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/SNAPSHOT_AUTHORITY.md).
+The numbers themselves are verified in CI by `scripts/update_headline_numbers.py --check`.
+
 Reviewer reproduction path: [`../docs/REVIEWER_REPRODUCIBILITY.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/REVIEWER_REPRODUCIBILITY.md)
 and the dashboard [Reproducibility](https://sanskrit-lexicon.github.io/csl-observatory/reproducibility)
 page.
@@ -19,12 +23,13 @@ page.
 
 | Report | Script | Site page | Headline |
 |---|---|---|---|
-| [`bus_factor.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/bus_factor.md) | `bus_factor.py` | [Community](https://sanskrit-lexicon.github.io/csl-observatory/community) | Core trio = 98.0% of contributions; 67/76 repos have bus factor 1; Gini 0.856 |
-| [`repo_health.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/repo_health.md) | `repo_health.py` | [Repo Health](https://sanskrit-lexicon.github.io/csl-observatory/repo-health) | 41/76 repos unlicensed; 46/76 default to `master`; only 5 fully clean |
-| [`workflow_health.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/workflow_health.md) | `workflow_health.py` | [Workflow Health](https://sanskrit-lexicon.github.io/csl-observatory/workflow-health) | 28/76 active repos have workflows; 11 scheduled; 13 artifact/refresh; 18 Dependabot; 8 CodeQL; 1 release |
-| [`taxonomy_adoption.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/taxonomy_adoption.md) | `taxonomy_adoption.py` | [Issue Taxonomy](https://sanskrit-lexicon.github.io/csl-observatory/coverage) | 89% of issues typed, 63% fully conformant; 92% peak in 2025; 54 stray labels |
+| [`bus_factor.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/bus_factor.md) | `bus_factor.py` | [Community](https://sanskrit-lexicon.github.io/csl-observatory/community) | Core trio = 98.5% of contributions; 63/77 repos have bus factor 1; Gini 0.822 |
+| [`repo_health.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/repo_health.md) | `repo_health.py` | [Repo Health](https://sanskrit-lexicon.github.io/csl-observatory/repo-health) | 6/77 repos unlicensed; 1/77 default to `master`; 65/77 fully clean |
+| [`workflow_health.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/workflow_health.md) | `workflow_health.py` | [Workflow Health](https://sanskrit-lexicon.github.io/csl-observatory/workflow-health) | 71/73 active repos have workflows; 10 scheduled; 51 artifact/refresh; 69 Dependabot; 6 CodeQL; 5 with releases |
+| [`taxonomy_adoption.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/taxonomy_adoption.md) | `taxonomy_adoption.py` | [Issue Taxonomy](https://sanskrit-lexicon.github.io/csl-observatory/coverage) | 86% of issues typed, 64% fully conformant; 92% peak in 2025; 1,190 carry a stray label |
 | [`devanagari_token_penalty.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/devanagari_token_penalty.md) | `token_penalty_h6049.py` + `token_penalty_report_h6049.py` | — | Devanagari token penalty vs SLP1 on MW articles (n=9,438) and DCS prose (n=1,961): 1.07× under GPT o200k but 2.0–2.2× under cl100k and GLM-4; HK near-free (1.02–1.04) everywhere; all p<10⁻⁴ |
-| [`velocity_timeline.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/velocity_timeline.md) | `velocity_timeline.py` | [Activity](https://sanskrit-lexicon.github.io/csl-observatory/activity) | 9,877 commits over 13 yrs; peak 11 distinct authors/yr; backlog 1,742 (2025) → 913 (2026) |
+| [`snapshot_divergence.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/snapshot_divergence.md) | `headline_claims.py` | — | The repo publishes two organisation snapshots that disagree; every quoted number is now registered against the one it must match |
+| [`velocity_timeline.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/velocity_timeline.md) | `velocity_timeline.py` | [Activity](https://sanskrit-lexicon.github.io/csl-observatory/activity) | 13,299 commits over 13 yrs; peak 12 distinct authors/yr; backlog 1,743 (2025) → 822 (2026) |
 | [`contributor_identity.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/contributor_identity.md) | `contributor_identity.py` | — | 0/16 authors have a registered ORCID; 7 named await registration, 9 to identify |
 | [`obs_q_correction_sustainability.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_q_correction_sustainability.md) | _(probe; `obs_q_correction.py` is next)_ | — | Content corrections are single-person-burst-driven: ≤4 correctors/yr, lead 51–100%; resolution median 6 d but a tail to 6.4 yr |
 | [`pwg_citation_coverage.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/pwg_citation_coverage.md) | _(external: [`build_citation_index.py`](https://github.com/gasyoun/SanskritLexicography/blob/master/RussianTranslation/src/build_citation_index.py))_ | — | PWG `<ls>` link coverage (translated subset): 83.2% of 50,065 citation occurrences resolve (69% scan / 14% HTML); 446 works un-digitised |

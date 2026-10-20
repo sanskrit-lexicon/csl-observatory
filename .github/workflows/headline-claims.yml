@@ -1,0 +1,45 @@
+name: Headline claims gate
+
+# H7122: a merged doc must not be able to reintroduce a hand-typed headline
+# number. The repo publishes two organisation snapshots (live-API pipeline and
+# offline transform) whose counts differ; every quoted number must re-derive from
+# the snapshot registered for it in data/headline_claims.json.
+# Authority per surface: docs/SNAPSHOT_AUTHORITY.md
+# Divergence finding:    reports/snapshot_divergence.md
+#
+# Cheap by design: stdlib + pytest only, no network, no data refresh.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  headline-claims:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - name: Install pytest
+        run: pip install pytest
+
+      # The acceptance command. Exit 0 on the clean tree; exit 1 naming the exact
+      # claim, file, line and both values when a number does not match its snapshot.
+      - name: Verify every quoted headline number re-derives from its snapshot
+        run: python scripts/update_headline_numbers.py --check
+
+      # A gate that only ever passes proves nothing: this suite seeds mismatches
+      # (cross-snapshot contamination, unregistered number, rotted claim, stale
+      # exemption, unlabelled historical vintage) and asserts the refusal fires.
+      - name: Gate self-test (seeded mismatches must be refused)
+        run: python -m pytest tests/test_headline_claims.py -v

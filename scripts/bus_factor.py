@@ -29,6 +29,9 @@ sys.stdout.reconfigure(encoding='utf-8'); sys.stderr.reconfigure(encoding='utf-8
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
+sys.path.insert(0, HERE)
+import headline_claims as hc  # noqa: E402 — sibling module: snapshot ids + as-of
+
 DATA = os.path.join(ROOT, 'observatory', 'site', 'src', 'data')
 CONTRIB = os.path.join(DATA, 'contributors.csv')
 REPOS = os.path.join(DATA, 'repos.csv')
@@ -175,7 +178,7 @@ def main():
       'contributors.csv` plus the maintainer-reviewed bot overrides in '
       '`scripts/contributors_map.json` (offline, reproducible). Bots excluded '
       'from continuity risk; contributions = GitHub commit-contribution counts '
-      'per repo._')
+      f'per repo. Snapshot {hc.offline_stamp()}._')
     A('')
     A('## Headline')
     A('')

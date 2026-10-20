@@ -54,6 +54,9 @@ jobs:
           python scripts/compute_metrics.py
           python scripts/render_reports.py
           python scripts/update_headline_numbers.py
+          # H7122: the numbers just written must re-derive from their snapshots
+          # before anything is committed. A red step here blocks the refresh commit.
+          python scripts/update_headline_numbers.py --check
 
       - name: Commit if changed
         run: |
