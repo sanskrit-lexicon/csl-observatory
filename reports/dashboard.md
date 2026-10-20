@@ -1,6 +1,6 @@
 # CDSL ecosystem dashboard
 
-**Snapshot date**: 2026-09-28 · **Fetched**: 2026-09-28T13:16:01.269328Z
+**Snapshot date**: 2026-09-28 · **Fetched**: 2026-09-28T13:16:01.269328Z · **Snapshot**: `csl-obs/org-live@1.0.0` (as of 2026-09-28)
 
 ## Headline numbers
 

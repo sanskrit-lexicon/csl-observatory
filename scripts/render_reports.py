@@ -26,7 +26,8 @@ def render_dashboard(summary, repos_metrics, timeline, cross, contributors):
     L = []
     L.append('# CDSL ecosystem dashboard')
     L.append('')
-    L.append(f'**Snapshot date**: {summary["snapshot_date"]} · **Fetched**: {summary["fetched_at"]}\n')
+    L.append(f'**Snapshot date**: {summary["snapshot_date"]} · **Fetched**: {summary["fetched_at"]} '
+             f'· **Snapshot**: `csl-obs/org-live@1.0.0` (as of {summary["snapshot_date"]})\n')
 
     L.append('## Headline numbers\n')
     L.append('| Metric | Value |')

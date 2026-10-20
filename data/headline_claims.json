@@ -1,0 +1,491 @@
+{
+  "_comment": [
+    "Every headline number this repo quotes, and the snapshot it must re-derive from (H7122).",
+    "Checked by: python scripts/update_headline_numbers.py --check  (or python scripts/headline_claims.py)",
+    "Human-readable companion: docs/SNAPSHOT_AUTHORITY.md",
+    "snapshot ids: csl-obs/org-live@1.0.0 (live-API pipeline, data/summary.json) ·",
+    "csl-obs/org@1.0.0 (offline reproducible, data/manifest.json + site CSVs) ·",
+    "csl-obs/org@hist-YYYY-MM-DD (historical vintage quoted in narrative docs;",
+    "values are pinned below because the current data/ tree cannot re-derive them)."
+  ],
+  "claims": [
+    {
+      "id": "readme.summary_line",
+      "file": "README.md",
+      "snapshot": "csl-obs/org-live@1.0.0",
+      "pattern": "> Tracking (?P<repos>[\\d,]+) repos, (?P<issues_prs>[\\d,]+) issues\\+PRs, (?P<commits>[\\d,]+) commits, and (?P<contributors>[\\d,]+) contributors",
+      "note": "One-line summary: written by update_headline_numbers.py."
+    },
+    {
+      "id": "readme.headline.repos",
+      "file": "README.md",
+      "snapshot": "csl-obs/org-live@1.0.0",
+      "pattern": "\\| Repos tracked \\| (?P<repos>[\\d,]+) \\|"
+    },
+    {
+      "id": "readme.headline.issues_prs",
+      "file": "README.md",
+      "snapshot": "csl-obs/org-live@1.0.0",
+      "pattern": "\\| Issues \\+ PRs \\(lifetime\\) \\| (?P<issues_prs>[\\d,]+) \\|"
+    },
+    {
+      "id": "readme.headline.commits",
+      "file": "README.md",
+      "snapshot": "csl-obs/org-live@1.0.0",
+      "pattern": "\\| Commits since 2014 \\| (?P<commits>[\\d,]+) \\|"
+    },
+    {
+      "id": "readme.headline.contributors",
+      "file": "README.md",
+      "snapshot": "csl-obs/org-live@1.0.0",
+      "pattern": "\\| Distinct human contributors \\| (?P<contributors>[\\d,]+) \\|"
+    },
+    {
+      "id": "readme.findings.bus_factor_denominator",
+      "file": "README.md",
+      "snapshot": "csl-obs/org@1.0.0",
+      "pattern": "\\d+/(?P<repos>[\\d]+) repos have bus factor 1",
+      "note": "Findings table summarises the OFFLINE reports — its denominator is the 77-repo snapshot, not the 86 of the summary line above."
+    },
+    {
+      "id": "readme.findings.repo_health_denominator",
+      "file": "README.md",
+      "snapshot": "csl-obs/org@1.0.0",
+      "pattern": "(?P<repo_no_license>\\d+)/(?P<repos>\\d+) repos with no license.*?(?P<repo_clean>\\d+)/(?P<repos2>\\d+) fully clean",
+      "expected": {
+        "repos": 77,
+        "repos2": 77,
+        "repo_no_license": 6,
+        "repo_clean": 65
+      }
+    },
+    {
+      "id": "readme.findings.velocity_commits",
+      "file": "README.md",
+      "snapshot": "csl-obs/org@1.0.0",
+      "pattern": "(?P<commits>[\\d,]+) commits; peak \\d+ authors/yr"
+    },
+    {
+      "id": "readme.findings.obst_events",
+      "file": "README.md",
+      "snapshot": "csl-obs/org@1.0.0",
+      "pattern": "(?P<obst_events>[\\d,]+) corrections, two axes"
+    },
+    {
+      "id": "status.headline.repos",
+      "file": "STATUS.md",
+      "snapshot": "csl-obs/org-live@1.0.0",
+      "pattern": "\\| Repositories tracked \\| (?P<repos>[\\d,]+) \\|"
+    },
+    {
+      "id": "status.headline.issues_prs",
+      "file": "STATUS.md",
+      "snapshot": "csl-obs/org-live@1.0.0",
+      "pattern": "\\| Issues \\+ PRs \\(lifetime\\) \\| (?P<issues_prs>[\\d,]+) \\|"
+    },
+    {
+      "id": "status.headline.commits",
+      "file": "STATUS.md",
+      "snapshot": "csl-obs/org-live@1.0.0",
+      "pattern": "\\| Commits since 2014 \\| (?P<commits>[\\d,]+) \\|"
+    },
+    {
+      "id": "status.headline.contributors",
+      "file": "STATUS.md",
+      "snapshot": "csl-obs/org-live@1.0.0",
+      "pattern": "\\| Distinct human contributors \\| (?P<contributors>[\\d,]+) \\|"
+    },
+    {
+      "id": "status.headline.span",
+      "file": "STATUS.md",
+      "snapshot": "csl-obs/org-live@1.0.0",
+      "pattern": "\\| Span \\| (?P<span_years>\\d+) years \\(2014–(?P<span_end_year>\\d{4})\\) \\|"
+    },
+    {
+      "id": "status.headline.obst_corpus",
+      "file": "STATUS.md",
+      "snapshot": "csl-obs/org@1.0.0",
+      "pattern": "\\| OBS-T correction corpus \\| (?P<obst_events>[\\d,]+) events across (?P<obst_dicts>\\d+) dictionaries \\|",
+      "expected": {
+        "obst_dicts": 43
+      },
+      "note": "obst_events re-derives from data/manifest.json; obst_dicts needs the 62 MB LFS release CSV, so when CI checks out an LFS pointer the pinned value is used instead (a local or refresh-pipeline run re-derives it and wins)."
+    },
+    {
+      "id": "dashboard.headline.repos",
+      "file": "reports/dashboard.md",
+      "snapshot": "csl-obs/org-live@1.0.0",
+      "pattern": "\\| Repositories in `sanskrit-lexicon` \\| (?P<repos>[\\d,]+) \\|"
+    },
+    {
+      "id": "dashboard.headline.issues",
+      "file": "reports/dashboard.md",
+      "snapshot": "csl-obs/org-live@1.0.0",
+      "pattern": "\\| Total issues \\(incl\\. closed\\) \\| (?P<issues>[\\d,]+) \\|"
+    },
+    {
+      "id": "dashboard.headline.prs",
+      "file": "reports/dashboard.md",
+      "snapshot": "csl-obs/org-live@1.0.0",
+      "pattern": "\\| Total pull requests \\| (?P<prs>[\\d,]+) \\|"
+    },
+    {
+      "id": "dashboard.headline.commits",
+      "file": "reports/dashboard.md",
+      "snapshot": "csl-obs/org-live@1.0.0",
+      "pattern": "\\| Total commits in default branches \\| (?P<commits>[\\d,]+) \\|"
+    },
+    {
+      "id": "dashboard.headline.contributors_all",
+      "file": "reports/dashboard.md",
+      "snapshot": "csl-obs/org-live@1.0.0",
+      "pattern": "\\| Distinct contributors \\(commit authors \\+ issue authors\\) \\| (?P<contributors_all>[\\d,]+) \\|",
+      "note": "Third contributor definition: every row of contributors.json, bots included (72 = humans only)."
+    },
+    {
+      "id": "velocity.headline.commits",
+      "file": "reports/velocity_timeline.md",
+      "snapshot": "csl-obs/org@1.0.0",
+      "pattern": "\\| Commits \\(all repos, all years\\) \\| (?P<commits>[\\d,]+) \\|"
+    },
+    {
+      "id": "velocity.headline.issues",
+      "file": "reports/velocity_timeline.md",
+      "snapshot": "csl-obs/org@1.0.0",
+      "pattern": "\\| Issues opened / closed \\| (?P<issues>[\\d,]+) / [\\d,]+ \\|"
+    },
+    {
+      "id": "velocity.headline.prs",
+      "file": "reports/velocity_timeline.md",
+      "snapshot": "csl-obs/org@1.0.0",
+      "pattern": "\\| Pull requests opened / closed \\| (?P<prs>[\\d,]+) / [\\d,]+ \\|"
+    },
+    {
+      "id": "velocity.prose.throughput",
+      "file": "reports/velocity_timeline.md",
+      "snapshot": "csl-obs/org@1.0.0",
+      "pattern": "(?P<commits>[\\d,]+) commits and (?P<issues>[\\d,]+) issues over"
+    },
+    {
+      "id": "lifecycle.headline.counts",
+      "file": "reports/issue_lifecycle.md",
+      "snapshot": "csl-obs/org@1.0.0",
+      "pattern": "\\| Issues analysed \\(PRs\\) \\| (?P<issues>[\\d,]+) \\((?P<prs>\\d+)\\) \\|"
+    },
+    {
+      "id": "taxonomy.header.counts",
+      "file": "reports/taxonomy_adoption.md",
+      "snapshot": "csl-obs/org@1.0.0",
+      "pattern": "(?P<issues>[\\d,]+) issues across \\d+ years .*? (?P<prs>[\\d,]+) pull requests excluded"
+    },
+    {
+      "id": "taxonomy.headline.issues",
+      "file": "reports/taxonomy_adoption.md",
+      "snapshot": "csl-obs/org@1.0.0",
+      "pattern": "\\| Issues classified \\| (?P<issues>[\\d,]+) \\|"
+    },
+    {
+      "id": "taxonomy.prose.issues",
+      "file": "reports/taxonomy_adoption.md",
+      "snapshot": "csl-obs/org@1.0.0",
+      "pattern": "Of (?P<issues>[\\d,]+) issues, "
+    },
+    {
+      "id": "busfactor.headline.repos",
+      "file": "reports/bus_factor.md",
+      "snapshot": "csl-obs/org@1.0.0",
+      "pattern": "\\| Repositories with human contributors \\| (?P<repos>[\\d,]+) \\|"
+    },
+    {
+      "id": "busfactor.headline.contributors",
+      "file": "reports/bus_factor.md",
+      "snapshot": "csl-obs/org@1.0.0",
+      "pattern": "\\| Distinct human contributors \\| (?P<contributors>[\\d,]+) \\|"
+    },
+    {
+      "id": "busfactor.prose.repos",
+      "file": "reports/bus_factor.md",
+      "snapshot": "csl-obs/org@1.0.0",
+      "pattern": "\\d+ of (?P<repos>[\\d]+) repositories have a bus factor of 1"
+    },
+    {
+      "id": "roadmap.repo_health.historical",
+      "file": "docs/OBSERVATORY_ROADMAP.md",
+      "snapshot": "csl-obs/org@hist-2026-06-17",
+      "pattern": "(?P<repo_no_license>\\d+)/(?P<repos>\\d+) repos have no license",
+      "expected": {
+        "repo_no_license": 41,
+        "repos": 76
+      },
+      "note": "Historical vintage, as introduced at 6f573f1 (2026-06-17). Not re-derivable from data/: the current repo_health.md disagrees on method (6 declared-missing vs 41 incl. unrecognised) — see reports/snapshot_divergence.md.",
+      "label_required": true
+    },
+    {
+      "id": "roadmap.bus_factor.historical",
+      "file": "docs/OBSERVATORY_ROADMAP.md",
+      "snapshot": "csl-obs/org@hist-2026-07-18",
+      "pattern": "(?P<repo_bus_factor_1>\\d+)/(?P<repos>\\d+) repos have bus factor 1",
+      "expected": {
+        "repo_bus_factor_1": 67,
+        "repos": 76
+      },
+      "note": "Historical vintage, as introduced at dd3eaab (2026-07-18).",
+      "label_required": true
+    },
+    {
+      "id": "roadmap.g4.network.historical",
+      "file": "docs/OBSERVATORY_ROADMAP.md",
+      "snapshot": "csl-obs/org@hist-2026-07-03",
+      "pattern": "(?P<humans>\\d+) humans × (?P<repos>\\d+) repos",
+      "expected": {
+        "humans": 11,
+        "repos": 76
+      },
+      "note": "G4 entry describing the shipped /network page at commit e9de36d (2026-07-03).",
+      "label_required": true
+    },
+    {
+      "id": "alignment.quoted.live",
+      "file": "docs/ANTHOLOGY_ALIGNMENT_2026Q4.md",
+      "snapshot": "csl-obs/org-live@1.0.0",
+      "pattern": "(?P<repos>\\d+) repos, (?P<issues_prs>[\\d,]+) issues\\+PRs, (?P<commits>[\\d,]+) commits, (?P<contributors>[\\d,]+) contributors",
+      "note": "The alignment memo quotes BOTH snapshots side by side, each labelled — the honest mixed-reference pattern."
+    },
+    {
+      "id": "alignment.quoted.live_split",
+      "file": "docs/ANTHOLOGY_ALIGNMENT_2026Q4.md",
+      "snapshot": "csl-obs/org-live@1.0.0",
+      "pattern": "(?P<issues>[\\d,]+) issues \\+ (?P<prs>[\\d,]+) PRs, (?P<commits>[\\d,]+) commits"
+    },
+    {
+      "id": "alignment.quoted.offline",
+      "file": "docs/ANTHOLOGY_ALIGNMENT_2026Q4.md",
+      "snapshot": "csl-obs/org@1.0.0",
+      "pattern": "(?P<repos>[\\d]+) repos, (?P<issues>[\\d,]+) issues \\+ (?P<prs>[\\d,]+) PRs = (?P<issues_prs>[\\d,]+), (?P<commits>[\\d,]+) commits"
+    },
+    {
+      "id": "alignment.pr_vintage",
+      "file": "docs/ANTHOLOGY_ALIGNMENT_2026Q4.md",
+      "snapshot": "csl-obs/org@1.0.0",
+      "pattern": "holds (?P<prs>[\\d,]+) PRs, "
+    },
+    {
+      "id": "divergence.live_row",
+      "file": "reports/snapshot_divergence.md",
+      "snapshot": "csl-obs/org-live@1.0.0",
+      "pattern": "\\| `csl-obs/org-live@1\\.0\\.0` \\| [\\d-]+ \\| (?P<repos>[\\d,]+) \\| (?P<issues>[\\d,]+) \\| (?P<prs>[\\d,]+) \\| (?P<issues_prs>[\\d,]+) \\| (?P<commits>[\\d,]+) \\| (?P<contributors>[\\d,]+) \\|"
+    },
+    {
+      "id": "divergence.offline_row",
+      "file": "reports/snapshot_divergence.md",
+      "snapshot": "csl-obs/org@1.0.0",
+      "pattern": "\\| `csl-obs/org@1\\.0\\.0` \\| [\\d-]+ \\| (?P<repos>[\\d,]+) \\| (?P<issues>[\\d,]+) \\| (?P<prs>[\\d,]+) \\| (?P<issues_prs>[\\d,]+) \\| (?P<commits>[\\d,]+) \\| (?P<contributors>[\\d,]+) \\|"
+    },
+    {
+      "id": "velocity.prose.prs",
+      "file": "reports/velocity_timeline.md",
+      "pattern": "Only (?P<prs>[\\d,]+) PRs in \\d+ years",
+      "snapshot": "csl-obs/org@1.0.0"
+    },
+    {
+      "id": "synthesis.bus_factor",
+      "file": "reports/synthesis.md",
+      "pattern": "\\*\\*(?P<repo_bus_factor_1>\\d+)/(?P<repos>\\d+) repos have bus factor 1\\*\\*",
+      "snapshot": "csl-obs/org@1.0.0",
+      "expected": {
+        "repo_bus_factor_1": 63
+      }
+    },
+    {
+      "id": "synthesis.velocity",
+      "file": "reports/synthesis.md",
+      "pattern": "(?P<commits>[\\d,]+) commits / (?P<issues>[\\d,]+) issues",
+      "snapshot": "csl-obs/org@1.0.0"
+    },
+    {
+      "id": "reports_index.bus_factor",
+      "file": "reports/README.md",
+      "pattern": "(?P<repo_bus_factor_1>\\d+)/(?P<repos>\\d+) repos have bus factor 1",
+      "snapshot": "csl-obs/org@1.0.0",
+      "expected": {
+        "repo_bus_factor_1": 63
+      }
+    },
+    {
+      "id": "reports_index.repo_health",
+      "file": "reports/README.md",
+      "pattern": "(?P<repo_no_license>\\d+)/(?P<repos>\\d+) repos unlicensed; (?P<legacy_master>\\d+)/(?P<repos2>\\d+) default",
+      "snapshot": "csl-obs/org@1.0.0",
+      "expected": {
+        "repo_no_license": 6,
+        "legacy_master": 1,
+        "repos2": 77
+      }
+    },
+    {
+      "id": "external_reach.vintage",
+      "file": "reports/external_reach.md",
+      "pattern": "whole org, (?P<repos>\\d+) repos",
+      "snapshot": "csl-obs/org@hist-2026-06",
+      "expected": {
+        "repos": 76
+      },
+      "note": "Star/fork reach was measured over the 2026-06 transform; GitHub only exposes these counters live."
+    },
+    {
+      "id": "external_reach.vintage_prose",
+      "file": "reports/external_reach.md",
+      "pattern": "all (?P<repos>\\d+) repos",
+      "snapshot": "csl-obs/org@hist-2026-06",
+      "expected": {
+        "repos": 76
+      }
+    },
+    {
+      "id": "readme.findings.bus_factor_ratio",
+      "file": "README.md",
+      "snapshot": "csl-obs/org@1.0.0",
+      "pattern": "(?P<repo_bus_factor_1>\\d+)/(?P<repos>\\d+) repos bus factor 1",
+      "expected": {
+        "repo_bus_factor_1": 63
+      }
+    },
+    {
+      "id": "article.a15.bus_factor_vintage",
+      "file": "article/A15_github_ecosystem.md",
+      "snapshot": "csl-obs/org@hist-2026-06",
+      "pattern": "Bus factor 1 in (?P<repo_bus_factor_1>\\d+)/(?P<repos>\\d+) repos",
+      "expected": {
+        "repo_bus_factor_1": 67,
+        "repos": 76
+      }
+    },
+    {
+      "id": "reports_index.velocity",
+      "file": "reports/README.md",
+      "snapshot": "csl-obs/org@1.0.0",
+      "pattern": "(?P<commits>[\\d,]+) commits over 13 yrs; peak (?P<authors>\\d+) distinct authors/yr",
+      "expected": {
+        "authors": 12
+      }
+    },
+    {
+      "id": "issuelabel.vintage",
+      "file": "reports/obs_t_issuelabel.md",
+      "snapshot": "csl-obs/org@hist-2026-06",
+      "pattern": "\\((?P<issues_prs>[\\d,]+) issues, (?P<typed>[\\d,]+) carrying",
+      "expected": {
+        "issues_prs": 5413,
+        "typed": 5017
+      },
+      "note": "Frozen 2026-06 vintage: re-running the generator today would update the numbers but drop the dated header and byline. See reports/snapshot_divergence.md residual work."
+    },
+    {
+      "id": "article.a13.issues_prs_vintage",
+      "file": "article/A13_review_fable5.md",
+      "snapshot": "csl-obs/org@hist-2026-06",
+      "pattern": "manifest\\.json` records \\*\\*(?P<issues_prs>[\\d,]+) issues\\*\\* \\((?P<issues>[\\d,]+) excluding PRs\\)",
+      "expected": {
+        "issues_prs": 5413,
+        "issues": 5324
+      }
+    },
+    {
+      "id": "article.a15.manifest_table",
+      "file": "article/A15_github_ecosystem.md",
+      "snapshot": "csl-obs/org@hist-2026-06",
+      "pattern": "\\| `issues\\.csv` \\| (?P<issues_prs>[\\d,]+) \\|",
+      "expected": {
+        "issues_prs": 5413
+      },
+      "note": "A15 data-inventory table: frozen 2026-06 values for issues.csv (5,413) and commits.csv (9,877)."
+    },
+    {
+      "id": "article.a15.manifest_table.commits",
+      "file": "article/A15_github_ecosystem.md",
+      "snapshot": "csl-obs/org@hist-2026-06",
+      "pattern": "\\| `commits\\.csv` \\| (?P<commits>[\\d,]+) \\|",
+      "expected": {
+        "commits": 9877
+      }
+    },
+    {
+      "id": "article.01.records",
+      "file": "article/01-empirical-companion.md",
+      "snapshot": "csl-obs/org@hist-2026-06",
+      "pattern": "counts (?P<issues_prs>[\\d,]+) issue-and-pull-request records",
+      "expected": {
+        "issues_prs": 5413
+      }
+    },
+    {
+      "id": "article.01.transformation",
+      "file": "article/01-empirical-companion.md",
+      "snapshot": "csl-obs/org@hist-2026-06",
+      "pattern": "transformation pass \\((?P<issues_prs>[\\d,]+) records",
+      "expected": {
+        "issues_prs": 5413
+      }
+    },
+    {
+      "id": "article.01.commits",
+      "file": "article/01-empirical-companion.md",
+      "snapshot": "csl-obs/org@hist-2026-06",
+      "pattern": "captured (?P<commits>[\\d,]+) commits",
+      "expected": {
+        "commits": 9877
+      }
+    },
+    {
+      "id": "article.a15.typed_share",
+      "file": "article/A15_github_ecosystem.md",
+      "snapshot": "csl-obs/org@hist-2026-06",
+      "pattern": "of the (?P<issues>[\\d,]+) issues carry a type label",
+      "expected": {
+        "issues": 5324
+      }
+    },
+    {
+      "id": "article.a15.prose_totals",
+      "file": "article/A15_github_ecosystem.md",
+      "snapshot": "csl-obs/org@hist-2026-06",
+      "pattern": "recorded (?P<commits>[\\d,]+) commits and (?P<issues>[\\d,]+) issues",
+      "expected": {
+        "commits": 9877,
+        "issues": 5324
+      }
+    },
+    {
+      "id": "article.a15.issues_locale",
+      "file": "article/A15_github_ecosystem.md",
+      "snapshot": "csl-obs/org@hist-2026-06",
+      "pattern": "organisation's (?P<issues>[\\d,]+) issues \\(\\d+%\\) live there",
+      "expected": {
+        "issues": 5324
+      }
+    }
+  ],
+  "allow_uncovered": [],
+  "allow_file_snapshot": [
+    {
+      "file": "article/00-report-narrative.md",
+      "snapshot": "csl-obs/org@hist-2026-06",
+      "reason": "frozen narrative of the 2026-06 analysis; regenerating it is a rewrite, not a refresh"
+    },
+    {
+      "file": "article/01-empirical-companion.md",
+      "snapshot": "csl-obs/org@hist-2026-06",
+      "reason": "empirical companion to the 2026-06 analysis"
+    },
+    {
+      "file": "article/A13_review_fable5.md",
+      "snapshot": "csl-obs/org@hist-2026-06",
+      "reason": "referee report on the 2026-06 submission"
+    },
+    {
+      "file": "article/A15_github_ecosystem.md",
+      "snapshot": "csl-obs/org@hist-2026-06",
+      "reason": "A15 describes the 2026-06 snapshot explicitly; its data-inventory table is separately claim-pinned"
+    }
+  ]
+}
