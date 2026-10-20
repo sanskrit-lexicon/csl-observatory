@@ -105,7 +105,11 @@
       "id": "status.headline.obst_corpus",
       "file": "STATUS.md",
       "snapshot": "csl-obs/org@1.0.0",
-      "pattern": "\\| OBS-T correction corpus \\| (?P<obst_events>[\\d,]+) events across (?P<obst_dicts>\\d+) dictionaries \\|"
+      "pattern": "\\| OBS-T correction corpus \\| (?P<obst_events>[\\d,]+) events across (?P<obst_dicts>\\d+) dictionaries \\|",
+      "expected": {
+        "obst_dicts": 43
+      },
+      "note": "obst_events re-derives from data/manifest.json; obst_dicts needs the 62 MB LFS release CSV, so when CI checks out an LFS pointer the pinned value is used instead (a local or refresh-pipeline run re-derives it and wins)."
     },
     {
       "id": "dashboard.headline.repos",

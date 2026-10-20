@@ -107,10 +107,19 @@ def _issue_kind_split(path: Path) -> tuple[int, int]:
     return issues, prs
 
 
-def _correction_corpus(root: Path) -> tuple[int, int, str]:
+def _correction_corpus(root: Path) -> tuple[int, int | None, str]:
+    """(event rows, distinct dictionaries, dataset id).
+
+    The release CSV is a 62 MB Git LFS object. CI checkouts that skip LFS get the
+    pointer file, so the dictionary count comes back as None and the registry's
+    pinned value is used instead — never a crash, never a fabricated count.
+    """
     manifest = _load_json(root / 'data/manifest.json')
     entry = manifest['dataset_ids']['correction-events']
     csv_path = root / entry['file']
+    head = csv_path.read_text(encoding='utf-8', errors='replace')[:80]
+    if head.startswith('version https://git-lfs'):
+        return entry['rows'], None, entry['id']
     with csv_path.open(newline='', encoding='utf-8') as f:
         dictionaries = {row['dict'] for row in csv.DictReader(f)}
     return entry['rows'], len(dictionaries), entry['id']
@@ -169,8 +178,9 @@ def live_snapshot(root: Path = ROOT) -> Snapshot:
         'span_years': int(as_of[:4]) - 2014 + 1,
         'span_end_year': int(as_of[:4]),
         'obst_events': obst_events,
-        'obst_dicts': obst_dicts,
     }
+    if obst_dicts is not None:
+        values['obst_dicts'] = obst_dicts
     return Snapshot(LIVE_ID, as_of, values)
 
 
@@ -189,10 +199,11 @@ def offline_snapshot(root: Path = ROOT) -> Snapshot:
         'commits': files['commits.csv'],
         'contributors': _offline_contributors(root),
         'obst_events': obst_events,
-        'obst_dicts': obst_dicts,
         'span_end_year': int(as_of[:4]),
         'span_years': int(as_of[:4]) - 2014 + 1,
     }
+    if obst_dicts is not None:
+        values['obst_dicts'] = obst_dicts
     # The manifest's own row counts must agree with the CSVs they describe.
     if values['issues'] + values['prs'] != values['issues_prs']:
         raise ValueError('issues.csv kind split does not match manifest.files[issues.csv]')
@@ -251,12 +262,12 @@ def _as_int(text: str) -> int:
 
 
 def _expected_value(claim: Claim, metric: str, snaps: dict[str, Snapshot]) -> int | None:
-    if metric in claim.expected:
-        return claim.expected[metric]
+    """A derived snapshot value always beats a pinned one; pins are for metrics the
+    current tree cannot derive (historical vintages) or cannot see (LFS pointers)."""
     snap = snaps.get(claim.snapshot)
-    if snap is None:
-        return None
-    return snap.values.get(metric)
+    if snap is not None and metric in snap.values:
+        return snap.values[metric]
+    return claim.expected.get(metric)
 
 
 def check(root: Path = ROOT) -> list[Finding]:
