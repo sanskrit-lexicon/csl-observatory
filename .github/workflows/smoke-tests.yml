@@ -33,5 +33,13 @@ jobs:
       - name: Ruff baseline gate
         run: python scripts/ruff_baseline_gate.py
 
+      # H7123 agent-lane regression gate: every published agent-lane number
+      # must re-derive offline from the committed pulls.csv snapshot; the
+      # selftest covers the attribution rule + metric arithmetic on fixtures.
+      - name: Agent-lane gate
+        run: |
+          python scripts/agent_lane.py --selftest
+          python scripts/agent_lane.py --check
+
       - name: Pytest smoke tests
         run: python -m pytest tests/ -v

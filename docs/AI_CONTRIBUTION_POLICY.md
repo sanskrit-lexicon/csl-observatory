@@ -27,6 +27,9 @@ Maintainers have flagged that high-volume bot/AI-attributed commits and comments
 
 Applies to all automation and AI agents operating on the org — Claude Code / Agent SDK runs, CI bots, and the daily-corrections updater.
 
+## Measurement
+
+These norms are now measured, not just asserted: [`reports/agent_lane.md`](../reports/agent_lane.md) (H7123) splits every org PR into human / agent / bot lanes with a marker-based attribution rule (0.0% measured misclassification on a hand-checked 30-PR sample) and reports per-lane merge, follow-up-defect, and thread-cleanliness outcomes against this policy.
 ---
 *Roadmap item Q6. See [`ROADMAP.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/ROADMAP.md).*
 
