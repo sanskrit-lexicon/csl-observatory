@@ -1,0 +1,10 @@
+{
+  "file": "pulls.csv",
+  "rows": 1481,
+  "source": "github rest: repos/sanskrit-lexicon/<repo>/pulls?state=all via gh api",
+  "fetched_at": "2026-10-22T13:55:57Z",
+  "purpose": "H7123 agent-lane census: merged_at/merged distinction + head branch for attribution",
+  "warnings": [
+    "142 pulls.csv rows absent from issues.csv (e.g. [('ACC', '30'), ('ACC', '31'), ('AMAR', '16')])"
+  ]
+}

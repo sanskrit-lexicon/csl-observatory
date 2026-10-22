@@ -1,0 +1,31 @@
+repo,number,predicted_initial,adjudicated_lane,predicted_final,agree_initial,agree_final,evidence
+rvlinks,5,human,agent,agent,false,true,"body: ""Part of H548 … Handoff: Uprava link"" — handoff-driven session"
+csl-observatory,129,human,agent,agent,false,true,"body: ""Closes #127. Handoff [H1845]"""
+CAE,9,human,agent,agent,false,true,"branch h543-yo-sweep + title ""H543"" (3-digit handoff)"
+csl-orig,2846,human,human,human,true,true,typo fix from issue report; no agent marker anywhere
+csl-devanagari,66,human,agent,agent,false,true,"full body ends ""Generated with Claude Code"" (beyond first check 180-char preview)"
+AP90,50,human,agent,agent,false,true,branch cologne-batch-deploy/ = scripted org-wide agent deploy wave
+AP90,47,human,agent,agent,false,true,"branch chore/link-audit-fix-h663 + body ""Auto-fixed … org-wide link audit"""
+CCS,6,human,agent,agent,false,true,"body: ""🤖 Generated with Claude Code"""
+MWS,225,human,agent,agent,false,true,"full body: ""Session: Fable 5 (claude-fable-5)"" - first check missed it, body marker caught it"
+MWS,251,human,agent,agent,false,true,"branch h966-packets… + body ""Executed H966"""
+csl-websanlexicon,130,agent,agent,agent,true,true,clear marker: branch h1523-notfound-escape-8448
+BOP,24,agent,agent,agent,true,true,clear marker: branch eol-renormalize-01-10-26
+csl-apidev,105,agent,agent,agent,true,true,clear marker: branch feat/fix-i-dcs-wf1-frequencies
+temp_corrections_ap90,8,agent,agent,agent,true,true,clear marker: branch h5173-ai-surface
+csl-observatory,264,agent,agent,agent,true,true,clear marker: branch h6202-g18-index-regen
+csl-apidev,127,agent,agent,agent,true,true,clear marker: branch h1695/rowslp1-iast-case-fold
+csl-pywork,79,agent,agent,agent,true,true,clear marker: branch docs/h2012-res-pywork-main-377
+csl-corrections,427,agent,agent,agent,true,true,clear marker: branch h5885-fix1
+AMAR,16,agent,agent,agent,true,true,clear marker: branch doi-badge-h6121
+VCP,37,agent,agent,agent,true,true,clear marker: branch codex/landing-page
+csl-observatory,46,bot,bot,bot,true,true,clear marker: dependabot bump body
+BOP,20,bot,bot,bot,true,true,clear marker: dependabot bump body
+AP,33,bot,bot,bot,true,true,clear marker: dependabot bump body
+csl-westergaard,2,bot,bot,bot,true,true,clear marker: dependabot bump body
+MD,18,bot,bot,bot,true,true,clear marker: dependabot bump body
+KNA,10,bot,bot,bot,true,true,clear marker: dependabot bump body
+GRA,49,bot,bot,bot,true,true,clear marker: dependabot bump body
+COLOGNE,457,bot,bot,bot,true,true,clear marker: dependabot bump body
+csl-sqlite,2,bot,bot,bot,true,true,clear marker: dependabot bump body
+BHS,8,bot,bot,bot,true,true,clear marker: dependabot bump body

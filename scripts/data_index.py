@@ -280,6 +280,14 @@ CATALOG: dict[str, Entry] = {
         "Snapshot manifest with data row counts and the current observatory snapshot date.",
         "Counts describe the committed transformed files; rerun the refresh pipeline before citing newer live GitHub state.",
     ),
+    "pulls.csv": Entry(
+        "github snapshot",
+        "scripts/build_pulls_snapshot.py",
+        "Enriched pull-request snapshot: merged_at + merged boolean (merged vs closed-unmerged), "
+        "head branch, agent body-marker boolean — the input to scripts/agent_lane.py.",
+        "Live-fetched at build time, so it may run ahead of issues.csv (weekly snapshot); "
+        "row-count differences vs issues.csv PR rows are new PRs, not schema drift.",
+    ),
     "obs_q_annual.csv": Entry(
         "correction sustainability",
         "scripts/obs_q_correction.py",

@@ -1,0 +1,4 @@
+lane,n_prs,merged,merge_rate,median_hours_to_merge,p90_hours_to_merge,revert_rate,followup_rate,n_review_sample,median_hours_to_first_review,n_ci_sample,ci_first_run_failure_rate
+human,129,108,0.8372,0.76,22.7,0.0,0.0185,2,27.36,5,0.0
+agent,1144,1074,0.9388,0.06,17.6,0.0,0.0065,0,,9,0.0
+bot,208,201,0.9663,0.02,135.9,0.0,0.0,9,0.01,10,0.0

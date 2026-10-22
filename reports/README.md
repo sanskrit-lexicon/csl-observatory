@@ -38,6 +38,7 @@ page.
 | [`pwg_kosa_etext_pilot.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/pwg_kosa_etext_pilot.md) | `pwg_kosa_ocr_probe.py` | — | Measured NO-GO on OCR-from-scratch for the two heaviest PWG kośa scans: local tesseract 5 `san` 17.8% valid tokens vs 43.8% for the hOCR the Bayerische Staatsbibliothek already publishes — 2.5×, free. Re-scoped to ingest-and-correct |
 | [`external_reach.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/external_reach.md) | `external_reach.py` | [External Reach](https://sanskrit-lexicon.github.io/csl-observatory/reach) | The stars-vs-clones gap: ~112 stars org-wide against 6,923 clones in a single 14-day window — CDSL is consumed as infrastructure, not favourited; 10 named consumers + 17 code-search dependents |
 | [`citation_sweep.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/citation_sweep.md) | `citation_sweep.py` | [External Reach](https://sanskrit-lexicon.github.io/csl-observatory/reach) | The G6 citation extension: a systematic OpenAlex sweep replaces Tier 4's five hand-picked citations with a documented **lower bound** — 36 works demonstrably naming/citing the *digital* resource, with a separately-fenced 228-work print-dictionary envelope and four stated recall bounds |
+| [`agent_lane.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/agent_lane.md) | `agent_lane.py` (snapshot: `build_pulls_snapshot.py`) | — | The regime change, measured (H7123): 1,481 org PRs — 36 in 2014–2025, 1,445 in 2026 — split human 129 / agent 1,144 / bot 208 by a marker rule with 0.0% measured misclassification on a hand-checked 30-PR sample; agent PRs merge at 93.9% (median 0.06 h) with a 0.7% follow-up-defect rate; 19/30 sampled PRs carry zero reviews — no peer-review step exists |
 
 ## OBS-T — error typology (language-resource track, Phases 1–8)
 
@@ -122,6 +123,8 @@ python scripts/workflow_health.py
 python scripts/data_index.py
 python scripts/pwg_scan_index.py          # add --fetch to re-snapshot the upstream sheet
 python scripts/pwg_citation_count_provenance.py   # --check for the denominator gate alone
+python scripts/build_pulls_snapshot.py    # add --samples 10 for review/CI stratified samples (live gh api, cached)
+python scripts/agent_lane.py              # offline; --selftest / --check for the gates
 python scripts/pwg_ls_counts.py --recount # rebuild the CURRENT <ls> count table only
 python scripts/pwg_kosa_ocr_probe.py      # OCR engine comparison; --sweep for the parameter sweep
 ```
