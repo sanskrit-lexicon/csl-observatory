@@ -290,15 +290,36 @@ def build_row(
     return row
 
 
+def select_metadata(metadata: list[dict[str, str]],
+                    requested: list[str] | None) -> list[dict[str, str]]:
+    """Filter `metadata` by the `--repo` names, refusing unknown ones (H7108).
+
+    The pre-fix path filtered silently: a typo'd name matched nothing, the
+    caller then wrote a header-only CSV over the published artifact and exited
+    0. An empty selection is never a legitimate health report, so it is a
+    user error, not an empty result.
+    """
+    selected = set(requested or [])
+    if not selected:
+        return metadata
+    known = {meta["repo"] for meta in metadata}
+    unknown = sorted(selected - known)
+    if unknown:
+        raise SystemExit(
+            "workflow_health: unknown --repo name(s): " + ", ".join(unknown)
+            + f" (known: {len(known)} repositories in {METADATA_CSV.name})")
+    return [meta for meta in metadata if meta["repo"] in selected]
+
+
 def build_rows(args: argparse.Namespace) -> list[dict[str, str]]:
     metadata = read_csv(args.metadata)
-    selected = set(args.repo or [])
+    chosen = select_metadata(metadata, args.repo)
     fetched_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
-    rows = [
-        build_row(meta, args, fetched_at)
-        for meta in metadata
-        if not selected or meta["repo"] in selected
-    ]
+    rows = [build_row(meta, args, fetched_at) for meta in chosen]
+    if not rows:
+        raise SystemExit(
+            "workflow_health: refusing to write an empty row set "
+            f"(metadata {args.metadata} produced 0 repositories)")
     return sorted(rows, key=lambda row: (-int(row["workflow_health_score"]), row["repo"]))
 
 

@@ -23,6 +23,7 @@ Outputs:
 
 Pure stdlib; deterministic.
 """
+import argparse
 import csv
 import json
 import random
@@ -63,9 +64,14 @@ def load_pass(name):
     out = {}
     for r in rows:
         lab = str(r["label"]).strip().lower()
-        assert lab in L0, f"{name}: illegal label {lab!r} on row {r['row_id']}"
-        assert r["row_id"] not in out, f"{name}: duplicate row_id {r['row_id']}"
-        out[int(r["row_id"])] = lab
+        # Normalise the id ONCE and key/assert on the same value (H7108,
+        # bughunt §13): a string-id exporter ("row_id": "1") walked past the
+        # old guard because `out` was keyed by int while the assert compared
+        # the raw value.
+        rid = int(r["row_id"])
+        assert lab in L0, f"{name}: illegal label {lab!r} on row {rid}"
+        assert rid not in out, f"{name}: duplicate row_id {rid}"
+        out[rid] = lab
     return out
 
 
@@ -86,12 +92,21 @@ def kappa_block(pairs, cats):
 
 
 def flip_rate(files, subsample_ids):
-    """Fraction of (row x run-pair) label changes across the runs of one annotator."""
+    """Fraction of (row x run-pair) label changes across the runs of one annotator.
+
+    A missing flip-run file is a BROKEN INSTRUMENT, not a missing measurement:
+    the runs are committed artifacts defining the stability statistic, so the
+    pre-H7108 behaviour of storing "missing <file>" in a numeric 0..1 field
+    (bughunt §9) is now a hard stop.
+    """
     runs = []
     for f in files:
         p = HERE / f
         if not p.exists():
-            return None, f"missing {f}"
+            raise SystemExit(
+                f"ERROR: flip-rate instrument is incomplete — {f} is missing. "
+                "The flip runs are committed artifacts; restore the file "
+                "instead of publishing a stats JSON without a flip rate.")
         runs.append(load_pass(f))
     flips = total = 0
     for rid in subsample_ids:
@@ -101,16 +116,45 @@ def flip_rate(files, subsample_ids):
                 total += 1
                 if labs[i] != labs[j]:
                     flips += 1
-    return round(flips / total, 3) if total else None, None
+    return round(flips / total, 3) if total else None
 
 
-def main():
+def check_denominator(a, b, allow_partial=False):
+    """Rows present in exactly one pass; stop unless the loss was accepted.
+
+    The pre-registered instrument is n=390. A dropped annotation batch used to
+    shrink the kappa denominator silently (a WARN line and exit 0), so a
+    partial run was indistinguishable from a clean one in the artifact
+    (H7108, bughunt §8). `--allow-partial` is the explicit opt-in, and the
+    loss is then recorded in the JSON by the caller.
+    """
+    missing = sorted(set(a) ^ set(b))
+    if missing and not allow_partial:
+        raise SystemExit(
+            f"ERROR: {len(missing)} rows are present in only one pass: "
+            f"{missing[:10]}{' …' if len(missing) > 10 else ''}. "
+            "A dropped annotation batch shrinks the kappa denominator; re-run "
+            "with --allow-partial to publish a knowingly partial denominator.")
+    return missing
+
+
+def parse_args(argv=None):
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--allow-partial", action="store_true",
+                    help="publish even when rows are missing from one pass; "
+                         "the loss is recorded as n_missing/missing_row_ids")
+    return ap.parse_args(argv)
+
+
+def main(argv=None):
+    args = parse_args(argv)
     a = load_pass("component_passA.json")
     b = load_pass("component_passB.json")
     ids = sorted(set(a) & set(b))
-    missing = sorted(set(a) ^ set(b))
+    missing = check_denominator(a, b, args.allow_partial)
     if missing:
-        print(f"WARN: {len(missing)} rows present in only one pass: {missing[:10]}")
+        print(f"WARN: {len(missing)} rows present in only one pass "
+              f"(accepted via --allow-partial): {missing[:10]}")
     pairs0 = [(a[i], b[i]) for i in ids]
     pairs1 = [(L1_MAP[x], L1_MAP[y]) for x, y in pairs0]
 
@@ -126,6 +170,8 @@ def main():
         "L0_8label": kappa_block(pairs0, L0),
         "L1_4group": kappa_block(pairs1, L1),
         "bootstrap": {"resamples": N_BOOT, "seed": SEED},
+        "n_missing": len(missing),
+        "missing_row_ids": missing,
         "label_distribution": {"A": dict(Counter(a[i] for i in ids).most_common()),
                                "B": dict(Counter(b[i] for i in ids).most_common())},
     }
@@ -145,10 +191,9 @@ def main():
     sub_ids = [int(r["row_id"]) for r in json.loads(
         (HERE / "blind_batches" / "batch_01.json").read_text(encoding="utf-8"))]
     for ann, main_file in (("A", "component_passA.json"), ("B", "component_passB.json")):
-        fr, err = flip_rate(
+        stats[f"flip_rate_{ann}"] = flip_rate(
             [main_file, f"flip_runs/pass{ann}_run2.json", f"flip_runs/pass{ann}_run3.json"],
             sub_ids)
-        stats[f"flip_rate_{ann}"] = fr if err is None else err
 
     (HERE / "component_kappa_stats.json").write_text(
         json.dumps(stats, ensure_ascii=False, indent=1), encoding="utf-8")
