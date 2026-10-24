@@ -22,7 +22,7 @@ check fails and a new benchmark version is cut — v1 stays fixed.
 
 | task | rows | input | submission | primary metric |
 |---|---|---|---|---|
-| `detection` | 3,127 test pairs (6,254 tokens) | `form_a`, `form_b` of one correction event (order frozen by seed, so position carries no signal) | `pair_id<TAB>A\|B\|tie` — which form is the erroneous (pre-correction) one | per-class P/R/F0.5 on the erroneous flag, FPR, Krippendorff's α |
+| `detection` | 3,127 test pairs (6,254 tokens) | `form_a`, `form_b` of one correction event (order frozen by seed, so position carries no signal); no `event_id` | `pair_id<TAB>A\|B\|tie` — which form is the erroneous (pre-correction) one | per-class P/R/F0.5 on the erroneous flag, FPR, Krippendorff's α |
 | `location` | 9,729 test rows | edit-op features of one derived event (`op=… / unit=… / dist=… / script=… / edit_space=… / cl=…`) | `row_id<TAB><error_component class>` | accuracy, macro-F1, per-class P/R/F0.5, α |
 
 Both tasks come from the task definitions the published OBS-T baselines
@@ -35,9 +35,9 @@ the numbers are comparable across entrants.
 |---|---:|---|
 | `detection/train.tsv` | 14,670 | form-layer pairs, gold included — the chronological 70 % head |
 | `detection/dev.tsv` | 3,144 | next 15 % — the tuning split; **tune here, never on test** |
-| `detection/test.tsv` | 3,127 | last 15 %, inputs only; identity pairs (`old == new`, 17) are excluded because they are unscorable |
+| `detection/test.tsv` | 3,127 | last 15 %, inputs only (no `event_id`, no gold); identity pairs (`old == new`, 17) are excluded because they are unscorable |
 | `location/train.tsv` | 15,788 | release `split=train` rows, gold included |
-| `location/test.tsv` | 9,729 | release `split=test` rows, inputs only |
+| `location/test.tsv` | 9,729 | release `split=test` rows, inputs only (no `event_id`, no gold) |
 | `scoring_only/detection_test_gold.tsv` | 3,127 | test gold — **scoring only** |
 | `scoring_only/location_test_gold.tsv` | 9,729 | test gold — **scoring only** |
 | `SPLITS.json` | — | source pin, split rule, per-file SHA-256 + row counts |
@@ -56,6 +56,21 @@ copy**: the inputs are public (they are view rows of a CC BY 4.0 release), the
 gold lives in `scoring_only/` and every file's SHA-256 is in `SPLITS.json`, so
 a leaked, edited or silently re-cut gold is detectable rather than trusted.
 
+Two deliberate non-leaks in the test inputs: the release's `event_id` — a
+foreign key into the public `correction_events_release.csv` — is **not**
+published on test rows (a one-line join on it would return the gold), and row
+ids are prefixed per split (`DTR`/`DDV`/`DTE`, `LTR`/`LTE`) so a bare `D00001`
+cannot silently cross-join train onto test.
+
+**Honour code, stated plainly.** Because the corpus itself is public (CC BY
+4.0), the gold of any v1 test row is still *derivable* by matching the two
+surface forms against the release — no version of a view over a public corpus
+can hide it. obst-bench v1 is therefore an *enterable but not sealed*
+benchmark: a score is meaningful only under the rule "do not look up the
+release (or any of its derivatives) at test time". Submissions that follow the
+rule are comparable; one that joins the release gets 1.0 and has measured
+nothing. Every published score should say which side of that line it is on.
+
 ## Run the scorer
 
 ```bash
@@ -69,7 +84,8 @@ python scripts/obst_bench.py baselines
 # 3. canary: rebuild the split from the pinned release and re-score the baselines
 python scripts/obst_bench.py check
 
-# 4. metric arithmetic on fixtures
+# 4. metric arithmetic on fixtures (`--selftest` is accepted too, as in
+#    scripts/obs_t_baselines.py)
 python scripts/obst_bench.py selftest
 ```
 

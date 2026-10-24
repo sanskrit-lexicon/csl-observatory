@@ -65,7 +65,11 @@ SITE_JSON = os.path.join(ROOT, 'observatory', 'site', 'src', 'data',
 E32_PIN = 'a27fec9e6a5b0a4d641d8c95078823c8606f8d5c31a85b88e5196a50abccfaaf'
 
 DET_COLS = ['pair_id', 'event_id', 'date', 'form_a', 'form_b']
+# Test inputs carry no event_id: it is a foreign key into the public E32
+# CSV and would hand any reader the gold by one lookup (H7124 verifier).
+DET_TEST_COLS = ['pair_id', 'date', 'form_a', 'form_b']
 LOC_COLS = ['row_id', 'event_id', 'date', 'features']
+LOC_TEST_COLS = ['row_id', 'date', 'features']
 TASKS = ('detection', 'location')
 
 
@@ -134,15 +138,16 @@ def side_order(event_id):
     return int(h[:8], 16) % 2 == 0  # True -> old form is form_a
 
 
-def pair_row(rid, r, with_gold):
+def pair_fields(rid, r):
+    """One detection row as a field dict; the caller writes only the columns its
+    split publishes (test inputs omit `event_id`, see DET_TEST_COLS)."""
     old, new = r['old_iast'].strip(), r['new_iast'].strip()
     a_first = side_order(r['event_id'])
     form_a, form_b = (old, new) if a_first else (new, old)
-    gold = ('A' if a_first else 'B') if old != new else 'A'
-    row = [rid, r['event_id'], r['date'], form_a, form_b]
-    if with_gold:
-        row.append(gold)
-    return row
+    # '-' = identity pair (old == new): uninformative, kept in train/dev only
+    gold = ('A' if a_first else 'B') if old != new else '-'
+    return {'pair_id': rid, 'event_id': r['event_id'], 'date': r['date'],
+            'form_a': form_a, 'form_b': form_b, 'gold': gold}
 
 
 def build(out_dir=None):
@@ -160,20 +165,26 @@ def build(out_dir=None):
     form = form_rows(rows)
     train, dev, test = otb.chrono_split(form)
     scorable_test = [r for r in test if r['old_iast'].strip() != r['new_iast'].strip()]
+    # ids are prefixed per split (DTR/DDV/DTE, LTR/LTE): a bare D00001 repeats in
+    # every file and would let an entrant silently cross-join train onto test.
     det_specs = [
-        ('detection/train.tsv', train, True),
-        ('detection/dev.tsv', dev, True),
-        ('detection/test.tsv', scorable_test, False),
+        ('detection/train.tsv', train, True, 'DTR'),
+        ('detection/dev.tsv', dev, True, 'DDV'),
+        ('detection/test.tsv', scorable_test, False, 'DTE'),
     ]
-    for rel, rs, with_gold in det_specs:
+    for rel, rs, with_gold, prefix in det_specs:
+        cols = DET_COLS if with_gold else DET_TEST_COLS
+        if with_gold:
+            cols = cols + ['gold']
         out = []
         for i, r in enumerate(rs, 1):
-            out.append(pair_row(f'D{i:05d}', r, with_gold))
+            f = pair_fields(f'{prefix}{i:05d}', r)
+            out.append([f[c] for c in cols])
         path = os.path.join(bench, rel)
-        counts[rel] = write_tsv(path, DET_COLS + (['gold'] if with_gold else []), out)
+        counts[rel] = write_tsv(path, cols, out)
         files[rel] = {'sha256': true_digest(path), 'rows': counts[rel],
                       'bytes': os.path.getsize(path)}
-    gold_rows = [[f'D{i:05d}', pair_row(f'D{i:05d}', r, True)[-1]]
+    gold_rows = [[f'DTE{i:05d}', pair_fields(f'DTE{i:05d}', r)['gold']]
                  for i, r in enumerate(scorable_test, 1)]
     path = os.path.join(bench, 'scoring_only', 'detection_test_gold.tsv')
     counts['scoring_only/detection_test_gold.tsv'] = write_tsv(path, ['pair_id', 'gold'], gold_rows)
@@ -185,21 +196,24 @@ def build(out_dir=None):
     loc = loc_rows(rows)
     loc_train = [r for r in loc if r['split'] == 'train']
     loc_test = [r for r in loc if r['split'] == 'test']
-    for rel, rs, with_gold in (('location/train.tsv', loc_train, True),
-                               ('location/test.tsv', loc_test, False)):
+    for rel, rs, with_gold, prefix in (('location/train.tsv', loc_train, True, 'LTR'),
+                                       ('location/test.tsv', loc_test, False, 'LTE')):
         out = []
+        cols = LOC_COLS if with_gold else LOC_TEST_COLS
         for i, r in enumerate(rs, 1):
-            rid = f'L{i:05d}'
-            row = [rid, r['event_id'], r['date'], '|'.join(otb.feats(r))]
+            row = [f'{prefix}{i:05d}']
+            if with_gold:                     # traceability stays on train only
+                row.append(r['event_id'])
+            row += [r['date'], '|'.join(otb.feats(r))]
             if with_gold:
                 row.append(r['error_component'])
             out.append(row)
         path = os.path.join(bench, rel)
-        counts[rel] = write_tsv(path, LOC_COLS + (['gold'] if with_gold else []), out)
+        counts[rel] = write_tsv(path, cols + (['gold'] if with_gold else []), out)
         files[rel] = {'sha256': true_digest(path), 'rows': counts[rel],
                       'bytes': os.path.getsize(path)}
     path = os.path.join(bench, 'scoring_only', 'location_test_gold.tsv')
-    gold_rows = [[f'L{i:05d}', r['error_component']] for i, r in enumerate(loc_test, 1)]
+    gold_rows = [[f'LTE{i:05d}', r['error_component']] for i, r in enumerate(loc_test, 1)]
     counts['scoring_only/location_test_gold.tsv'] = write_tsv(path, ['row_id', 'gold'], gold_rows)
     files['scoring_only/location_test_gold.tsv'] = {
         'sha256': true_digest(path), 'rows': len(gold_rows), 'bytes': os.path.getsize(path)}
@@ -228,7 +242,7 @@ def build(out_dir=None):
         'counts': {k: counts[k] for k in sorted(counts)},
         'files': {k: files[k] for k in sorted(files)},
     }
-    path = os.path.join(BENCH, 'SPLITS.json')
+    path = os.path.join(bench, 'SPLITS.json')
     with open(path, 'w', encoding='utf-8', newline='\n') as f:
         json.dump(manifest, f, ensure_ascii=False, indent=2, sort_keys=False)
         f.write('\n')
@@ -393,8 +407,12 @@ def read_train_labels():
 
 def cmd_score(args):
     gold = read_gold(args.task)
+    if args.task == 'location':
+        valid = set(read_train_labels()) | set(gold.values())
+    else:
+        valid = {'A', 'B', 'tie'}
     preds = load_predictions(args.pred, 'pair_id' if args.task == 'detection' else 'row_id',
-                             {'A', 'B', 'tie'} if args.task == 'detection' else None)
+                             valid)
     if args.task == 'location':
         metrics = score_location(preds, gold, read_train_labels())
     else:
@@ -513,15 +531,17 @@ def cmd_check(args):
         print('OK source release digest (E32 pin)')
 
     import tempfile
+    rebuild_ok = True
     with tempfile.TemporaryDirectory() as tmp:
         rebuilt = os.path.join(tmp, 'v1')
         build(out_dir=rebuilt)
         for rel, meta in sorted(committed['files'].items()):
             got = true_digest(os.path.join(rebuilt, rel))
             if got != meta['sha256']:
+                rebuild_ok = False
                 ok = False
                 print(f'FAIL rebuild {rel}: {got[:12]} != {meta["sha256"][:12]}')
-        if ok:
+        if rebuild_ok:
             print('OK rebuild reproduces every split digest')
 
     for rel, task in (('baselines/b1_charlm_detection.scores.json', 'detection'),
@@ -625,6 +645,13 @@ def selftest():
 
 
 def main(argv=None):
+    argv = list(sys.argv[1:] if argv is None else argv)
+    # The handoff contract and the repo convention both spell this `--selftest`
+    # (scripts/obs_t_baselines.py --selftest); accept it as a flag as well as a
+    # subcommand so the documented command cannot silently become an argparse
+    # error.
+    if '--selftest' in argv:
+        argv = [a for a in argv if a != '--selftest'] or ['selftest']
     ap = argparse.ArgumentParser(
         prog='obst_bench.py', description='obst-bench v1 build/score/canary')
     sub = ap.add_subparsers(dest='cmd', required=True)

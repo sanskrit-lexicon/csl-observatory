@@ -2,7 +2,9 @@
 
 _Created: 24-10-2026 · Last updated: 24-10-2026_
 
-Describes the benchmark `obst-bench/v1/` — a frozen train/dev/test view over
+Describes the benchmark [`obst-bench/v1/`](../obst-bench/v1/README.md) (split
+manifest: [`obst-bench/v1/SPLITS.json`](../obst-bench/v1/SPLITS.json)) — a
+frozen train/dev/test view over
 the released corpus
 [`observatory/site/src/data/correction_events_release.csv`](../observatory/site/src/data/correction_events_release.csv)
 and its derivation. Snapshot: **2026-10-24**, pinned to the E32 release of
@@ -112,7 +114,11 @@ record (2026-10-10, SHA-256 `a27fec9e…faaf`). Regenerate with the pipeline in
 - **Caveats.** The source repositories are public git history, so the corpus is
   **contamination-exposed**: a model may have memorised the corrected lines. A
   score is not a clean generalisation estimate. Report it as "obst-bench v1,
-  contamination-exposed".
+  contamination-exposed". The gold is also *derivable* from the public release
+  by matching the two surface forms, so v1 is enterable but not sealed: the
+  scores are comparable only under the documented no-lookup honour code (the
+  test inputs publish no `event_id` to make the join one step cheaper than
+  string matching, but they cannot hide the corpus).
 - **Discouraged.** Do not treat a v1 score as evidence of real-world
   proofreading ability; do not tune on `detection/test.tsv` gold (use
   `dev.tsv`); do not compare v1 scores across an E32 re-cut (the digests move).
