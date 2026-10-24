@@ -33,7 +33,7 @@ the numbers are comparable across entrants.
 
 | file | rows | contents |
 |---|---:|---|
-| `detection/train.tsv` | 14,670 | form-layer pairs, gold included — the chronological 70 % head |
+| `detection/train.tsv` | 14,670 | form-layer pairs, gold included (`-` marks the 79 identity pairs) — the chronological 70 % head |
 | `detection/dev.tsv` | 3,144 | next 15 % — the tuning split; **tune here, never on test** |
 | `detection/test.tsv` | 3,127 | last 15 %, inputs only (no `event_id`, no gold); identity pairs (`old == new`, 17) are excluded because they are unscorable |
 | `location/train.tsv` | 15,788 | release `split=train` rows, gold included |
@@ -63,8 +63,9 @@ ids are prefixed per split (`DTR`/`DDV`/`DTE`, `LTR`/`LTE`) so a bare `D00001`
 cannot silently cross-join train onto test.
 
 **Honour code, stated plainly.** Because the corpus itself is public (CC BY
-4.0), the gold of any v1 test row is still *derivable* by matching the two
-surface forms against the release — no version of a view over a public corpus
+4.0), the gold of any v1 test row is still *derivable* by matching the row
+against the release — the two surface forms for `detection`, the
+`(date, features)` pair for `location` — no version of a view over a public corpus
 can hide it. obst-bench v1 is therefore an *enterable but not sealed*
 benchmark: a score is meaningful only under the rule "do not look up the
 release (or any of its derivatives) at test time". Submissions that follow the

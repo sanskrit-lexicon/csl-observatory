@@ -40,11 +40,14 @@ record (2026-10-10, SHA-256 `a27fec9e…faaf`). Regenerate with the pipeline in
 - **Source edition + page range.** Not applicable — the corpus derives from
   digitized dictionaries (CDSL) with citation references, not a single printed
   edition with page ranges.
-- **Fields.** `detection` rows: `pair_id`, `event_id`, `date`, `form_a`,
-  `form_b` (+ `gold` in train/dev and in `scoring_only/`); `location` rows:
-  `row_id`, `event_id`, `date`, `features` (+ `gold` in train and
-  `scoring_only/`). Per-file digests and counts in `SPLITS.json`; the corpus
-  schema is [`data/schema/correction-event.schema.json`](../data/schema/correction-event.schema.json).
+- **Fields.** `detection` rows: `pair_id`, `date`, `form_a`, `form_b` — plus
+  `event_id` and `gold` in train/dev only (test inputs publish neither);
+  `location` rows: `row_id`, `date`, `features` — plus `event_id` and `gold` in
+  train only. `gold` is `A`/`B` for scorable detection pairs and `-` for the 79
+  identity pairs (`old == new`) kept in train/dev for the language model.
+  Gold lives under `scoring_only/` for both test sets. Per-file digests and
+  counts in `SPLITS.json`; the corpus schema is
+  [`data/schema/correction-event.schema.json`](../data/schema/correction-event.schema.json).
 - **Labels.** `detection`: which of the two forms is the erroneous
   (pre-correction) one — mechanical, read off the correction event's old/new
   side. `location`: `error_component` ∈ {sense, headword, markup, citation,
