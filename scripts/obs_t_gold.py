@@ -180,7 +180,7 @@ def krippendorff_alpha_nominal(units):
     where None marks a missing label. Only units carrying >= 2 non-missing
     labels are pairable. General coincidence-matrix form (Krippendorff 2004,
     sec. 11.3): alpha = 1 - D_o / D_e over pairable values; for two complete
-    raters this reduces exactly to Scott's pi. Returns None when fewer than 2
+    raters alpha = 1 - (n-1)/n * (1 - pi). Returns None when fewer than 2
     pairable values exist or D_e is degenerate."""
     coinc = Counter()
     n = 0
@@ -191,17 +191,19 @@ def krippendorff_alpha_nominal(units):
         if m < 2:
             continue
         n += m
+        # 1/(m_u - 1) per ordered value pair — see the obs_t_baselines.py copy
+        # and bughunt §5 (H7108): without it this is not Krippendorff's alpha.
         for a, ka in c.items():
-            coinc[(a, a)] += ka * (ka - 1)
+            coinc[(a, a)] += ka * (ka - 1) / (m - 1)
             for b, kb in c.items():
                 if a != b:
-                    coinc[(a, b)] += ka * kb
+                    coinc[(a, b)] += ka * kb / (m - 1)
     if n < 2:
         return None
     marg = Counter()
     for (a, b), v in coinc.items():
         marg[a] += v
-    d_o = sum(v for (a, b), v in coinc.items() if a != b) / (n - 1)
+    d_o = sum(v for (a, b), v in coinc.items() if a != b) / n
     d_e = sum(ma * mb for a, ma in marg.items() for b, mb in marg.items()
               if a != b) / (n * (n - 1))
     if not d_e:
