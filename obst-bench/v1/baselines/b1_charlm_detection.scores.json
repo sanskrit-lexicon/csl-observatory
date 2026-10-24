@@ -1,0 +1,36 @@
+{
+  "task": "detection",
+  "test_pairs": 3127,
+  "test_tokens": 6254,
+  "pairwise_accuracy": 0.515,
+  "tie_pairs": 36,
+  "tie_rate": 0.012,
+  "flagging_confusion": {
+    "tp": 1609,
+    "fp": 1482,
+    "fn": 1518,
+    "tn": 1645
+  },
+  "per_class": {
+    "erroneous": {
+      "precision": 0.521,
+      "recall": 0.515,
+      "f0_5": 0.519,
+      "precision_denominator": "all flagged tokens (tp+fp=3,091)",
+      "recall_denominator": "all gold-erroneous tokens (tp+fn=3,127)"
+    },
+    "correct": {
+      "precision": 0.52,
+      "recall": 0.526,
+      "f0_5": 0.521,
+      "precision_denominator": "all flagged tokens (tp+fp=3,163)",
+      "recall_denominator": "all gold-correct tokens (tp+fn=3,127)"
+    }
+  },
+  "fpr_erroneous_flag": 0.474,
+  "fpr_denominator": "all gold-correct tokens (fp+tn=3,127)",
+  "krippendorff_alpha_nominal": 0.041,
+  "krippendorff_alpha_pairable_values": 6182,
+  "cohen_kappa_non_tie": 0.041,
+  "cohen_kappa_units": 6182
+}

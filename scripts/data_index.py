@@ -280,6 +280,12 @@ CATALOG: dict[str, Entry] = {
         "Snapshot manifest with data row counts and the current observatory snapshot date.",
         "Counts describe the committed transformed files; rerun the refresh pipeline before citing newer live GitHub state.",
     ),
+    "pulls.meta.json": Entry(
+        "github snapshot",
+        "scripts/build_pulls_snapshot.py",
+        "Fetch provenance for pulls.csv: GitHub REST endpoint, row count at fetch time and the fetcher's warnings.",
+        "Provenance, not data: the row count describes one point-in-time fetch (see fetched_at), not a census.",
+    ),
     "pulls.csv": Entry(
         "github snapshot",
         "scripts/build_pulls_snapshot.py",
@@ -323,6 +329,12 @@ CATALOG: dict[str, Entry] = {
         "scripts/obs_t_baselines.py",
         "OBS-T field-standard baseline metrics (H6388): per-class detection precision/recall/F0.5, FPR, and Krippendorff's alpha alongside Cohen's kappa, with denominators and the E32-pin vs recomputation anchor table.",
         "Computed on the same deterministic baselines as obs_t_baselines.json; the companion canonical JSON is SHA256-pinned by the E32 release canary, so anchor drift between the two files is disclosed in the artifact, not silently reconciled.",
+    ),
+    "obst_bench_v1.json": Entry(
+        "obs-t analysis",
+        "scripts/obst_bench.py",
+        "obst-bench v1: the frozen benchmark view over the E32 correction-event release — source pin, per-file split digests and row counts, and the two reference-baseline numbers (detection P/R/F0.5/FPR/alpha, location accuracy/macro-F1).",
+        "A pinned view over the E32 release, not a re-cut: the build refuses a changed source digest. Contamination-exposed (the source repositories are public git history), so a score is not a clean generalisation estimate. The test gold is scoring-only and digest-pinned in obst-bench/v1/SPLITS.json.",
     ),
     "obs_t_campaigns.csv": Entry(
         "obs-t analysis",
