@@ -1,0 +1,62 @@
+{
+  "benchmark": "obst-bench",
+  "version": "v1",
+  "frozen_at": "24-10-2026",
+  "source_release": {
+    "path": "observatory/site/src/data/correction_events_release.csv",
+    "sha256": "a27fec9e6a5b0a4d641d8c95078823c8606f8d5c31a85b88e5196a50abccfaaf",
+    "release": "e32-correction-events-release-2026-10-10",
+    "rows": 52498
+  },
+  "seed": "obst-bench-v1",
+  "split_rule": {
+    "detection": "form layer (source_layer=form, both sides single tokens); chronological 70/15/15 over (date, event_id) as in scripts/obs_t_baselines.py; A/B presentation order = sha256(seed|event_id) parity; test rows are the scorable pairs (old != new)",
+    "location": "release 'split' column unchanged (train/test); evidence_level=derived and error_component != unknown, as in obs_t_baselines.classify()"
+  },
+  "counts": {
+    "detection/dev.tsv": 3144,
+    "detection/test.tsv": 3127,
+    "detection/train.tsv": 14670,
+    "location/test.tsv": 9729,
+    "location/train.tsv": 15788,
+    "scoring_only/detection_test_gold.tsv": 3127,
+    "scoring_only/location_test_gold.tsv": 9729
+  },
+  "files": {
+    "detection/dev.tsv": {
+      "sha256": "1ea2a3f1d91b82cdc28540a0f15c4be148d1dbfbb7b5a850ecbf36bb9b49ffa5",
+      "rows": 3144,
+      "bytes": 247855
+    },
+    "detection/test.tsv": {
+      "sha256": "06955a179b973f8d275838a19aa4933915ca44954a42728e340f9cfb7113cc83",
+      "rows": 3127,
+      "bytes": 227835
+    },
+    "detection/train.tsv": {
+      "sha256": "41ff6eb3ddeb84d45ecaf13f05e41909e5ca761dd146d42a2412eb39ed96a4e3",
+      "rows": 14670,
+      "bytes": 1173721
+    },
+    "location/test.tsv": {
+      "sha256": "b4a765b5890971050b5b0c78cb6b3d40a519ed275cb2dc9eaf784aedfa23e537",
+      "rows": 9729,
+      "bytes": 1138556
+    },
+    "location/train.tsv": {
+      "sha256": "3de163b936acbb2553839c5a322c741b544ea380513f036e4a9b57872af76390",
+      "rows": 15788,
+      "bytes": 1940947
+    },
+    "scoring_only/detection_test_gold.tsv": {
+      "sha256": "969aed2d792b095d9077991fa14912243f9b6285eb6c593883661760ecd087d9",
+      "rows": 3127,
+      "bytes": 28156
+    },
+    "scoring_only/location_test_gold.tsv": {
+      "sha256": "38a1d2097ff0b42ef726ca00030dd5c40408dab16b38de3dd8d7545ba5d3723b",
+      "rows": 9729,
+      "bytes": 138280
+    }
+  }
+}
