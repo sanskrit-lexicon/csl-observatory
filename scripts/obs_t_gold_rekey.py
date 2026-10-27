@@ -155,7 +155,6 @@ def census():
         sheet_git = [r for r in csv.DictReader(f) if r['source_layer'] == 'git']
     with open(FINAL, encoding='utf-8') as f:
         final_git = [r for r in csv.DictReader(f) if r['source_layer'] == 'git']
-    final_ids = {r['event_id'] for r in final_git}
 
     # R1: re-hash every current final git row under both legacy recipes.
     rehash = {}
