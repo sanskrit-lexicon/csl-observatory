@@ -57,7 +57,6 @@ def inspect(repo):
         return repo, None, "(no license endpoint / not found)", 0, "", ""
     j = json.loads(out)
     name = j.get("name", "?")
-    spdx = (j.get("license") or {}).get("spdx_id", "?")
     raw = base64.b64decode(j.get("content", "")).decode("utf-8", "replace")
     sha = hashlib.sha256(raw.encode("utf-8", "replace")).hexdigest()[:10]
     lines = [ln.strip() for ln in raw.splitlines() if ln.strip()]

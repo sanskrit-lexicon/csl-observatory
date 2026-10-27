@@ -105,7 +105,6 @@ def load_repo_meta():
 
 def main():
     per_repo, is_bot = load_contrib()
-    meta = load_repo_meta()
 
     # Per-repo metrics (human contributors only — bots aren't a continuity risk).
     rows = []

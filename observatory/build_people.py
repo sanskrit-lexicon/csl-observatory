@@ -98,7 +98,9 @@ def fetch_contributors(repo):
         return []
     try:
         return json.loads(out)
-    except:
+    except json.JSONDecodeError as e:
+        print(f"warning: {repo}: contributors jq output is not JSON: {e}",
+              file=sys.stderr)
         return []
 
 def main():

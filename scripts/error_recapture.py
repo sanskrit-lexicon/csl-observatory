@@ -521,7 +521,6 @@ def main():
     A('## Reading')
     A('')
     if est_rows:
-        top = est_rows[0]
         A(f'- The two eras overlap remarkably little: of {total_obs:,} observed '
           'error sites org-wide, only a few hundred were touched in both eras. '
           'Under mark-recapture logic, low overlap between two substantial '

@@ -8,9 +8,9 @@ Usage: python scripts/rh1_infra_probe.py [repo ...]
 """
 import json
 import re
-import subprocess
 import sys
-import time
+
+from _common import gh_api
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
@@ -25,17 +25,7 @@ FLAG = re.compile(r"(?i)(licen[cs]e|ofl|copying|notice|font|vendor|node_modules|
 
 
 def gh(path, jq=None, tries=5):
-    args = ["gh", "api", path] + (["--jq", jq] if jq else [])
-    last = ""
-    for i in range(tries):
-        r = subprocess.run(args, capture_output=True, encoding="utf-8")
-        if r.returncode == 0:
-            return 0, r.stdout
-        last = (r.stderr or "").strip()
-        if "Not Found" in last or '"status":"404"' in last:
-            return 1, "404"
-        time.sleep(2 * (i + 1))
-    return 2, f"TRANSIENT:{last[:80]}"
+    return gh_api([path] + (["--jq", jq] if jq else []), tries=tries, err_max=80)
 
 
 def main():

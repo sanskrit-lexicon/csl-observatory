@@ -70,7 +70,7 @@ def parse_dict(path: Path) -> dict[str, dict]:
 
 
 def first_ranks(tokens: list[str]) -> dict[str, float]:
-    r, seen = {}, {}
+    seen = {}
     for i, t in enumerate(tokens):
         if t not in seen:
             seen[t] = i
