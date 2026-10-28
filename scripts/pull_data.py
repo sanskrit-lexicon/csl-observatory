@@ -18,8 +18,10 @@ bounded number of times before giving up and logging the failure.
 
 Run: python scripts/pull_data.py
 """
-import json, sys, datetime, subprocess, time
+import json, sys, datetime, time
 from pathlib import Path
+
+from _common import gh_api_harvest as gh
 
 sys.stdout.reconfigure(encoding='utf-8')
 sys.stderr.reconfigure(encoding='utf-8')
@@ -30,51 +32,6 @@ DATA = Path(__file__).resolve().parent.parent / 'data'
 # Tooling Roadmap project #9 (org project) — see .ai_state.md for how this
 # node id / field-value shape was discovered.
 PROJECT_NODE_ID = 'PVT_kwDOAGGnOc4BXy9n'
-
-
-def _rate_limit_wait_seconds(cap=120.0):
-    """Read the primary rate-limit reset time off GitHub; cap the wait so a
-    single call never blocks the script for a full hour."""
-    r = subprocess.run(['gh', 'api', 'rate_limit', '--jq', '.rate.reset'],
-                        capture_output=True, encoding='utf-8')
-    try:
-        reset_epoch = int(r.stdout.strip())
-        return max(1.0, min(reset_epoch - time.time() + 1, cap))
-    except (ValueError, AttributeError):
-        return cap
-
-
-def gh(*args, retries=3, backoff=2.0, rate_limit_retries=3):
-    """Run a gh api call with retry-on-5xx backoff and explicit rate-limit handling.
-
-    Rate-limit hits (primary "API rate limit exceeded" or GitHub's secondary
-    rate limit) have their own retry budget, separate from the 5xx/backoff
-    one, since waiting for a reset is a different failure mode than a
-    transient server error.
-    """
-    attempt = 0
-    rl_attempt = 0
-    while True:
-        r = subprocess.run(['gh', 'api', *args], capture_output=True, encoding='utf-8')
-        if r.returncode == 0:
-            return r.stdout
-        stderr = r.stderr or ''
-        if 'rate limit' in stderr.lower() and rl_attempt < rate_limit_retries:
-            rl_attempt += 1
-            wait = _rate_limit_wait_seconds()
-            print(f'  ! rate limit hit — waiting {wait:.0f}s for reset '
-                  f'(rate-limit retry {rl_attempt}/{rate_limit_retries})', file=sys.stderr)
-            time.sleep(wait)
-            continue
-        # GitHub HTTP 5xx errors and timeouts → retry
-        retriable = any(s in stderr for s in ['HTTP 502', 'HTTP 503', 'HTTP 504', 'timeout', 'EOF'])
-        if not retriable or attempt >= retries - 1:
-            print(f'  ! gh api error: {stderr[:200].strip()}', file=sys.stderr)
-            return None
-        wait = backoff ** (attempt + 1)
-        print(f'  … retrying in {wait:.1f}s (attempt {attempt+2}/{retries})', file=sys.stderr)
-        time.sleep(wait)
-        attempt += 1
 
 
 def parse_jsonl(out):

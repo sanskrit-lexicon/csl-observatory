@@ -36,9 +36,10 @@ import argparse
 import base64
 import json
 import re
-import subprocess
 import sys
 from collections import Counter
+
+from _common import gh as _gh
 
 sys.stdout.reconfigure(encoding='utf-8')
 sys.stderr.reconfigure(encoding='utf-8')
@@ -119,7 +120,7 @@ EXEMPT_LABELS = {"daily-corrections"}
 
 
 def gh(args, **kw):
-    return subprocess.run(["gh"] + args, capture_output=True, encoding="utf-8", **kw)
+    return _gh(*args, **kw)
 
 
 def setup(repo, category):

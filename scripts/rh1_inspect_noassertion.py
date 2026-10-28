@@ -8,8 +8,9 @@ Read-only: makes no changes.
 import base64
 import hashlib
 import json
-import subprocess
 import sys
+
+from _common import run as _run
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
@@ -23,10 +24,7 @@ SOURCE = ["csl-orig"]
 
 
 def gh(path, jq=None):
-    args = ["gh", "api", path]
-    if jq:
-        args += ["--jq", jq]
-    r = subprocess.run(args, capture_output=True, encoding="utf-8")
+    r = _run(["gh", "api", path] + (["--jq", jq] if jq else []))
     return r.returncode, r.stdout, r.stderr
 
 

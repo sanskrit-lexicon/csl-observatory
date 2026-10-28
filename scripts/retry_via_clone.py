@@ -14,8 +14,10 @@ Usage:
     python scripts/retry_via_clone.py             # auto-detect failed repos
     python scripts/retry_via_clone.py csl-orig    # specific repo(s)
 """
-import json, sys, datetime, subprocess, tempfile, shutil, argparse
+import json, sys, datetime, tempfile, shutil, argparse
 from pathlib import Path
+
+from _common import run
 
 sys.stdout.reconfigure(encoding='utf-8')
 sys.stderr.reconfigure(encoding='utf-8')
@@ -26,9 +28,6 @@ ORG = 'sanskrit-lexicon'
 DELIM = '<<<CSL_FIELD>>>'  # safe, unlikely-to-collide field separator
 
 
-def run(cmd, cwd=None, timeout=600):
-    return subprocess.run(cmd, cwd=cwd, capture_output=True,
-                          encoding='utf-8', errors='replace', timeout=timeout)
 
 
 def fetch_commits_via_clone(repo, max_commits=200000):
