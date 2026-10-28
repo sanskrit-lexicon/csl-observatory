@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-_Created: 15-05-2026 · Last updated: 20-09-2026 (H5176 SLA review: run commands + scripts/ paths re-verified current)_
+_Created: 15-05-2026 · Last updated: 28-10-2026 (H7360: shared subprocess retry contract registered)_
 
 `csl-observatory` is the **build-meta / org-observability** repo for the
 Cologne Digital Sanskrit Lexicon: it measures the `sanskrit-lexicon` GitHub
@@ -39,6 +39,15 @@ sheets are human-gated (`obs_t_gold.py --make` / `--score`). Live dashboard:
 
 CI that matters: `deploy.yml` (Pages), `refresh.yml` / `refresh-observatory.yml`
 (data refresh), `dict-audit.yml`, `tooling-audit.yml`, `encoding-guard.yml`.
+
+## Shared subprocess contract
+
+[`scripts/_common.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/_common.py)
+owns the shared `run` / GitHub CLI retry and rate-limit helpers. New git/GitHub
+subprocess call sites must delegate to it rather than adding another private
+wrapper. Genuinely different semantics stay local only as documented exceptions
+in the module docstring; changing that contract means updating the exceptions
+and their tests in the same PR (H7360).
 
 ## PWG citation counts — the non-obvious rule
 

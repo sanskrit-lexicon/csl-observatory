@@ -1,0 +1,231 @@
+{
+  "tool": "tools/document_check.py",
+  "skill": "/document",
+  "legacy_name": "/artifact-propagate",
+  "generated": "2026-10-28 17:22:10",
+  "artifacts": [
+    {
+      "artifact": "/Users/mac/Documents/GitHub/csl-observatory/scripts/_common.py",
+      "repo": "/Users/mac/Documents/GitHub/csl-observatory",
+      "kind": "interface",
+      "surfaces": [
+        {
+          "id": "readme",
+          "phase": 1,
+          "label": "README.md",
+          "scope": "repo",
+          "status": "n/a",
+          "evidence": "Internal agent-facing subprocess module; no user-facing workflow or README contract changed"
+        },
+        {
+          "id": "claude_md",
+          "phase": 1,
+          "label": "CLAUDE.md",
+          "scope": "repo",
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/csl-observatory-document-h7360-2810/CLAUDE.md:45: [`scripts/_common.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/_common.py)"
+        },
+        {
+          "id": "cold_start",
+          "phase": 1,
+          "label": "Cold-start doc (GEMINI.md / equivalent)",
+          "scope": "repo",
+          "status": "n/a",
+          "evidence": "CLAUDE.md now carries the agent rule; the generated AGENTS.md orientation block needs no module-level entry"
+        },
+        {
+          "id": "sibling_domain_docs",
+          "phase": 1,
+          "label": "Sibling domain docs (manual/roadmap/method docs)",
+          "scope": "repo",
+          "status": "n/a",
+          "evidence": "The governing documentation was already updated in PR #292: scripts/_common.py docstring and docs/RUFF_BASELINE.md"
+        },
+        {
+          "id": "metadoc",
+          "phase": 1,
+          "label": "Metadoc (<name>.meta.md)",
+          "scope": "repo",
+          "status": "n/a",
+          "evidence": "Python module, not a prose document requiring a companion metadoc"
+        },
+        {
+          "id": "changelog",
+          "phase": 1,
+          "label": "CHANGELOG.md -> release (/cut-release)",
+          "scope": "repo",
+          "status": "n/a",
+          "evidence": "changelog_queue/2026-10-28-unified-retry-contract.md already records the change; CHANGELOG.md was not edited, so no release promotion is due"
+        },
+        {
+          "id": "ai_state",
+          "phase": 1,
+          "label": ".ai_state.md",
+          "scope": "repo",
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/csl-observatory-document-h7360-2810/.ai_state.md:77: - [x] **H7360 — unified subprocess retry contract (28-10-2026, GLM 5.3 Flash `glm-5.3-flash`, [PR #292](https://github.com/sanskrit-lexicon/csl-observatory/pull"
+        },
+        {
+          "id": "issues",
+          "phase": 1,
+          "label": "Issues (per-person task issues)",
+          "scope": "repo",
+          "status": "n/a",
+          "evidence": "H7360 has no tracking-issue metadata; no issue comment is owed"
+        },
+        {
+          "id": "gtd",
+          "phase": 2,
+          "label": "Uprava/GTD_NEXT_ACTIONS.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "The H7360 merge @DO row is already marked RESOLVED with PR #292 evidence"
+        },
+        {
+          "id": "handoffs_registry",
+          "phase": 2,
+          "label": "Uprava/handoffs/README.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "H7360 is closed and lives in the archive shard; absence from the active README is correct"
+        },
+        {
+          "id": "features_index",
+          "phase": 2,
+          "label": "SanskritLexicography/FEATURES_INDEX.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "Internal retry plumbing, not a new user-facing feature; registered in REUSE_INDEX instead"
+        },
+        {
+          "id": "reuse_index",
+          "phase": 2,
+          "label": "Uprava/REUSE_INDEX.md (reusable assets)",
+          "scope": "org",
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/.document-h7360-root/Uprava/REUSE_INDEX.md:36: | [`csl-observatory/scripts/_common.py`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/scripts/_common.py) (H7360, 28-10-2026) | Shared subproce"
+        },
+        {
+          "id": "kosha_manifest",
+          "phase": 2,
+          "label": "kosha/data/manifest/datasets.json",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "not a derived dataset"
+        },
+        {
+          "id": "data_layers_census",
+          "phase": 2,
+          "label": "Uprava/DATA_LAYERS_CENSUS.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "not large/local-only data (risk) and no open statistics cell to close"
+        },
+        {
+          "id": "project_interlinks",
+          "phase": 2,
+          "label": "Uprava/PROJECT_INTERLINKS.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "No repository ownership, dependency, or data-flow edge changed"
+        },
+        {
+          "id": "skills_index",
+          "phase": 2,
+          "label": "root SKILLS_INDEX.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "artifact is not itself a skill/command"
+        },
+        {
+          "id": "articles",
+          "phase": 2,
+          "label": "Uprava/ARTICLES.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "artifact is not a paper (delegate to /articles-update when it is)"
+        },
+        {
+          "id": "danger_facts",
+          "phase": 2,
+          "label": "Uprava/DANGER_FACTS.md + context_facts.yaml",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "No destructive-risk fact surfaced; this is a behavior-preserving retry-contract refactor"
+        },
+        {
+          "id": "questions_log",
+          "phase": 2,
+          "label": "Uprava/QUESTIONS_LOG.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "No research question was opened or answered"
+        },
+        {
+          "id": "megabook",
+          "phase": 2,
+          "label": "Uprava/MEGABOOK.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "Routine engineering refactor, not thesis-level synthesis"
+        },
+        {
+          "id": "skills_manual_ru",
+          "phase": 2,
+          "label": "Uprava/SKILLS_MANUAL_RU.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "no skill/tool contract changed"
+        },
+        {
+          "id": "hooks_index",
+          "phase": 2,
+          "label": "claude-config HOOKS_INDEX.md",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "No hook, guard, or enforcement wiring changed"
+        },
+        {
+          "id": "repo_status_rollup",
+          "phase": 2,
+          "label": "Uprava/REPO_STATUS_ROLLUP.md",
+          "scope": "org",
+          "status": "present",
+          "evidence": "/Users/mac/Documents/GitHub/.document-h7360-root/Uprava/REPO_STATUS_ROLLUP.md:1355: - **H064 EXECUTED — SPEC-3 C-SALT MW parity report** (Sonnet 5 `claude-sonnet-5`, handoff [H064](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H0"
+        },
+        {
+          "id": "hub_manifest",
+          "phase": 2,
+          "label": "Uprava/tools/hub_manifest.json",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "No hub or registry file was added or removed"
+        },
+        {
+          "id": "auto_derived_views",
+          "phase": 2,
+          "label": "Auto-derived views (NEXT_UP/BOTTLENECKS/kanban/dashboards/HUB_STALENESS_REPORT)",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "auto -- never hand-edit; verify their SOURCES carry the change instead"
+        },
+        {
+          "id": "epistemic_registries",
+          "phase": 2,
+          "label": "FINDINGS x2 + 7 epistemic registries (ASSUMPTIONS/CONTRADICTIONS/GAPS/DEAD_ENDS/RECIPES/STALENESS/GLOSSARY, Uprava + SanskritLexicography)",
+          "scope": "org",
+          "status": "n/a",
+          "evidence": "No separate research finding, premise, disagreement, known-unknown, dead end, recipe, staleness, or coined term beyond the registered code contract"
+        }
+      ],
+      "worktree_artifact": "/Users/mac/Documents/GitHub/csl-observatory-document-h7360-2810/scripts/_common.py",
+      "worktree": "/Users/mac/Documents/GitHub/csl-observatory-document-h7360-2810"
+    }
+  ],
+  "provenance": {
+    "host": "MacBook-Air.local",
+    "git_head": "5367e37bbb6225f5a521461c9af526fd01b87834",
+    "git_branch": "document-h7360-2810",
+    "handoff": "H7360"
+  }
+}
