@@ -8,7 +8,7 @@ never mistaken for 'no license' / 'repo not found'.
 import json
 import sys
 
-from _common import gh_api
+from _common import gh_api_state
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
@@ -29,21 +29,14 @@ REPOS = [
 ]
 
 
-def gh(path, jq=None, tries=5):
-    code, out = gh_api([path] + (["--jq", jq] if jq else []), tries=tries, err_max=80)
-    if code == 0:
-        return True, out
-    return False, ("404" if code == 1 else "FAIL:" + out.replace("TRANSIENT:", "", 1))
-
-
 def repo_state(repo):
-    ok, out = gh(f"repos/{OWNER}/{repo}", ".license.spdx_id // \"NONE\"")
+    ok, out = gh_api_state(f"repos/{OWNER}/{repo}", ".license.spdx_id // \"NONE\"")
     spdx = out.strip() if ok else f"<{out}>"
-    ok2, br = gh(f"repos/{OWNER}/{repo}", ".default_branch")
+    ok2, br = gh_api_state(f"repos/{OWNER}/{repo}", ".default_branch")
     branch = br.strip() if ok2 else "?"
     files = []
     for name in ("LICENSE", "LICENSE.md", "LICENSE.txt", "COPYING"):
-        okf, _ = gh(f"repos/{OWNER}/{repo}/contents/{name}", ".sha")
+        okf, _ = gh_api_state(f"repos/{OWNER}/{repo}/contents/{name}", ".sha")
         if okf:
             files.append(name)
     return spdx, branch, files

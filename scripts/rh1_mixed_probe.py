@@ -19,25 +19,22 @@ DEFAULT_REPOS = ["MWinflect", "mw-dev", "csl-devanagari", "csl-json",
 REPOS = sys.argv[1:] or DEFAULT_REPOS
 
 
-def gh(path, jq=None, tries=5):
-    return gh_api([path] + (["--jq", jq] if jq else []), tries=tries, err_max=80)
-
-
 def has(repo, path):
-    code, _ = gh(f"repos/{OWNER}/{repo}/contents/{path}", ".sha")
+    code, _ = gh_api([f"repos/{OWNER}/{repo}/contents/{path}", "--jq", ".sha"],
+                     err_max=80)
     return code == 0
 
 
 def main():
     for repo in REPOS:
-        code, meta = gh(f"repos/{OWNER}/{repo}",
-                        "{spdx:(.license.spdx_id // \"NONE\"), br:.default_branch, "
-                        "lang:.language, size:.size}")
+        code, meta = gh_api([f"repos/{OWNER}/{repo}",
+                             "--jq", "{spdx:(.license.spdx_id // \"NONE\"), br:.default_branch, "
+                             "lang:.language, size:.size}"], err_max=80)
         if code != 0:
             print(f"\n{repo}: <{meta}>")
             continue
         m = json.loads(meta)
-        _, langs = gh(f"repos/{OWNER}/{repo}/languages")
+        _, langs = gh_api([f"repos/{OWNER}/{repo}/languages"], err_max=80)
         try:
             lj = json.loads(langs)
             total = sum(lj.values()) or 1

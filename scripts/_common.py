@@ -13,6 +13,8 @@ The shared subprocess contract (H7356-class):
 - gh()             — one-shot `gh` CLI through run()
 - gh_api()         — `gh api` bounded retry, 404-terminal, linear backoff,
                      returns (code, text); err_max bounds the error text
+- gh_api_state()   — gh_api() reshaped for state probes (rh1_state 404-edge):
+                     (True, stdout) or (False, "404" | "FAIL:<stderr>")
 - gh_cli_retry()   — `gh` CLI with fast no-sleep retries, returns the LAST
                      CompletedProcess (runbook-style callers)
 - gh_api_harvest() — bulk-harvest `gh api` (pull_data semantics, verbatim):
@@ -107,6 +109,19 @@ def gh_api(args: list, tries: int = 5, err_max: int = 100) -> tuple[int, str]:
             return 1, "404"
         time.sleep(2 * (i + 1))
     return 2, f"TRANSIENT:{last[:err_max]}"
+
+
+def gh_api_state(path: str, jq: str | None = None, tries: int = 5) -> tuple[bool, str]:
+    """gh_api() reshaped for state probes: (ok, stdout-or-status).
+
+    The rh1_state 404-edge contract, moved verbatim: ok=True carries stdout
+    unchanged; a terminal miss collapses to "404", anything else to
+    "FAIL:<stderr>" (the TRANSIENT: marker stripped).
+    """
+    code, out = gh_api([path] + (["--jq", jq] if jq else []), tries=tries, err_max=80)
+    if code == 0:
+        return True, out
+    return False, ("404" if code == 1 else "FAIL:" + out.replace("TRANSIENT:", "", 1))
 
 
 def gh_cli_retry(args: list, tries: int = 3) -> subprocess.CompletedProcess:
