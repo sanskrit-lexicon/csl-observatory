@@ -23,8 +23,10 @@ This is the conservative default; pass `--force` to overwrite.
 Each target repo is expected to be cloned at ../<REPO>/ (sibling to
 csl-observatory). The script aborts if a repo is missing.
 """
-import shutil, subprocess, sys, argparse
+import shutil, sys, argparse
 from pathlib import Path
+
+from _common import run as _run
 
 sys.stdout.reconfigure(encoding='utf-8')
 sys.stderr.reconfigure(encoding='utf-8')
@@ -45,7 +47,7 @@ def files_to_copy():
 
 
 def run(cmd, cwd):
-    r = subprocess.run(cmd, cwd=str(cwd), capture_output=True, encoding='utf-8')
+    r = _run(cmd, cwd=cwd)
     return r.returncode, r.stdout, r.stderr
 
 

@@ -9,11 +9,11 @@ count that can only move down** — never a silent zero.
 
 | Fact | Value |
 |---|---|
-| Baseline violation count | **702** (machine mirror: `.ruff-baseline`) — was 731 at the 2026-10-19 re-record, see *Re-record 2026-10-27* below |
+| Baseline violation count | **690** (machine mirror: `.ruff-baseline`) — was 702 at the 2026-10-27 re-record, see *Re-record 2026-10-28* below |
 | Ruleset | `ruff.toml`: `E4, E7, E9, F, I, B, S, C4` (+ per-file-ignores for `tests/**` and the gate script) |
 | Ruff version | **pinned 0.17.1** (`requirements-dev.txt`); the count is version-sensitive, so the pin and the baseline move together |
 | Command | `ruff check . --output-format concise` |
-| Live census | 2026-10-27, worktree off `origin/main` @ `83bbb2b`, 702 violations |
+| Live census | 2026-10-28, worktree off `origin/main` @ `adfb8a6`, 690 violations |
 
 ### Re-record 2026-10-19 (bughunt §1)
 
@@ -52,6 +52,19 @@ S607 ×1, S110 ×5) died with the four byte-identical `gh api` retry helpers in
 share `scripts/_common.py::gh_api()` — the retry core lives in one place; the
 15 remaining private `gh`/`git`/`run` wrappers are semantic variants, not
 copies (distinct retry/rate-limit/return contracts), and stay local by design.
+Measured with the pinned 0.17.1.
+
+### Re-record 2026-10-28 (unified retry contract)
+
+702 → 690: twelve private subprocess wrappers now delegate to the shared
+`scripts/_common.py` contract (`gh_api` / new `gh_cli_retry` / new
+`gh_api_harvest` with pull_data's rate-limit semantics moved verbatim / `run`
+/ `git`), each migration a behaviour-preserving delegate or a
+strictly-protective timeout gain; per-wrapper body diffs + import probes +
+pytest smoke are the proofs. The delta is pure subprocess-call-site attrition:
+S603 −9, S607 −2, F401 −1. Three wrappers stay LOCAL as documented exceptions
+(obs_t_gold_roundtrip sandbox harness; pre_push_stale_base_check stdout-only
+git pair; envelope_check bytes-mode git) — named in the `_common` docstring.
 Measured with the pinned 0.17.1.
 
 ## The gate

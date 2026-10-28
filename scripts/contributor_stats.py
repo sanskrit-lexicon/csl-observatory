@@ -15,9 +15,11 @@ extended period across a 77-repo burst, so they are not relied on here.
 
 Usage:  python scripts/contributor_stats.py      (requires an authenticated `gh`)
 """
-import subprocess, json, os, sys, re, shutil
+import subprocess, json, os, sys, shutil
 from collections import defaultdict
 from datetime import datetime, timezone
+
+from _common import gh
 sys.stdout.reconfigure(encoding='utf-8'); sys.stderr.reconfigure(encoding='utf-8')
 
 ORG = 'sanskrit-lexicon'
@@ -51,8 +53,6 @@ if os.path.exists(_cmap):
     except Exception as _e:
         print(f'warning: could not load {_cmap}: {_e}', file=sys.stderr)
 
-def gh(p):
-    return subprocess.run(['gh', 'api', p], capture_output=True, encoding='utf-8')
 
 def who_of(login, name):
     if login:

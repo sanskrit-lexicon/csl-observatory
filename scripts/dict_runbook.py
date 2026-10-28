@@ -25,8 +25,9 @@ GraphQL `issues` connection (PRs excluded by construction; paginates fully).
 """
 import argparse
 import json
-import subprocess
 import sys
+
+from _common import gh_cli_retry
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
@@ -62,11 +63,7 @@ def is_exempt(labels):
 
 
 def gh(args):
-    for _ in range(3):
-        r = subprocess.run(["gh"] + args, capture_output=True, encoding="utf-8")
-        if r.returncode == 0:
-            return r
-    return r
+    return gh_cli_retry(args, tries=3)
 
 
 def pmap(repo):

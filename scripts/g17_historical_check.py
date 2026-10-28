@@ -14,6 +14,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+from _common import git as _git
+
 sys.stdout.reconfigure(encoding="utf-8")
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -22,9 +24,7 @@ COMMIT = "6f573f1"
 
 
 def git(args: list[str]) -> subprocess.CompletedProcess:
-    return subprocess.run(
-        ["git", "-C", str(ROOT), *args], capture_output=True, encoding="utf-8", errors="replace"
-    )
+    return _git(str(ROOT), *args)
 
 
 def main() -> int:

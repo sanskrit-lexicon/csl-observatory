@@ -4,9 +4,27 @@
 Adapted from the Uprava tools/_common.py (H3283): before this module existed,
 scripts carried their own private git()/gh() subprocess wrappers, many with NO
 timeout (one hung git/gh call blocked the whole tool forever). New code routes
-subprocess work through run(); existing private wrappers migrate opportunistically
-when they are TRUE duplicates — retry/rate-limit variants with their own semantics
-stay local until a shared contract is agreed.
+subprocess work through run(); existing private wrappers migrate onto the
+shared contract when their call-site behaviour is provably identical.
+
+The shared subprocess contract (H7356-class):
+- run()            — any command, MANDATORY timeout, utf-8 text I/O
+- git()            — git -C <repo> through run()
+- gh()             — one-shot `gh` CLI through run()
+- gh_api()         — `gh api` bounded retry, 404-terminal, linear backoff,
+                     returns (code, text); err_max bounds the error text
+- gh_cli_retry()   — `gh` CLI with fast no-sleep retries, returns the LAST
+                     CompletedProcess (runbook-style callers)
+- gh_api_harvest() — bulk-harvest `gh api` (pull_data semantics, verbatim):
+                     rate-limit resets have their own capped retry budget,
+                     5xx/timeout/EOF retry exponentially, a 404 fails now,
+                     returns stdout-or-None
+
+Known LOCAL exceptions (semantics deliberately not shared): the sandbox
+test-harness runner in obs_t_gold_roundtrip_check.py, the stdout-only
+git/git_ok pair in pre_push_stale_base_check.py (hot gate, own contract), and
+the bytes-mode git() in envelope_check.py (blob-exact output, text mode would
+corrupt it).
 """
 from __future__ import annotations
 
@@ -89,6 +107,65 @@ def gh_api(args: list, tries: int = 5, err_max: int = 100) -> tuple[int, str]:
             return 1, "404"
         time.sleep(2 * (i + 1))
     return 2, f"TRANSIENT:{last[:err_max]}"
+
+
+def gh_cli_retry(args: list, tries: int = 3) -> subprocess.CompletedProcess:
+    """`gh` CLI with fast retries (NO sleep between attempts); returns the
+    LAST CompletedProcess either way — callers that only check .returncode
+    keep their shape.
+    """
+    r = subprocess.run(["gh", *args], capture_output=True, encoding="utf-8")
+    for _ in range(tries - 1):
+        if r.returncode == 0:
+            return r
+        r = subprocess.run(["gh", *args], capture_output=True, encoding="utf-8")
+    return r
+
+
+def rate_limit_wait_seconds(cap: float = 120.0) -> float:
+    """Read the primary rate-limit reset time off GitHub; cap the wait so a
+    single call never blocks the script for a full hour."""
+    r = subprocess.run(["gh", "api", "rate_limit", "--jq", ".rate.reset"],
+                       capture_output=True, encoding="utf-8")
+    try:
+        reset_epoch = int(r.stdout.strip())
+        return max(1.0, min(reset_epoch - time.time() + 1, cap))
+    except (ValueError, AttributeError):
+        return cap
+
+
+def gh_api_harvest(args: list, retries: int = 3, backoff: float = 2.0,
+                   rate_limit_retries: int = 3) -> str | None:
+    """`gh api` for bulk harvests (pull_data semantics, moved verbatim).
+
+    Rate-limit hits (primary or secondary) get their OWN retry budget —
+    waiting out a reset is a different failure mode than a transient server
+    error, so the two counters never mix. 5xx/timeout/EOF retry on
+    exponential backoff; everything else, including a 404, fails immediately.
+    Returns stdout or None.
+    """
+    attempt = 0
+    rl_attempt = 0
+    while True:
+        r = subprocess.run(["gh", "api", *args], capture_output=True, encoding="utf-8")
+        if r.returncode == 0:
+            return r.stdout
+        stderr = r.stderr or ""
+        if "rate limit" in stderr.lower() and rl_attempt < rate_limit_retries:
+            rl_attempt += 1
+            wait = rate_limit_wait_seconds()
+            print(f"  ! rate limit hit — waiting {wait:.0f}s for reset "
+                  f"(rate-limit retry {rl_attempt}/{rate_limit_retries})", file=sys.stderr)
+            time.sleep(wait)
+            continue
+        retriable = any(s in stderr for s in ["HTTP 502", "HTTP 503", "HTTP 504", "timeout", "EOF"])
+        if not retriable or attempt >= retries - 1:
+            print(f"  ! gh api error: {stderr[:200].strip()}", file=sys.stderr)
+            return None
+        wait = backoff ** (attempt + 1)
+        print(f"  … retrying in {wait:.1f}s (attempt {attempt+2}/{retries})", file=sys.stderr)
+        time.sleep(wait)
+        attempt += 1
 
 
 def force_utf8_stdio() -> None:

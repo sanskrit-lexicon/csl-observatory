@@ -6,9 +6,9 @@ exists, retrying through the session's flaky TLS so transient failures are
 never mistaken for 'no license' / 'repo not found'.
 """
 import json
-import subprocess
 import sys
-import time
+
+from _common import gh_api
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
@@ -30,18 +30,10 @@ REPOS = [
 
 
 def gh(path, jq=None, tries=5):
-    args = ["gh", "api", path] + (["--jq", jq] if jq else [])
-    last = ""
-    for i in range(tries):
-        r = subprocess.run(args, capture_output=True, encoding="utf-8")
-        if r.returncode == 0:
-            return True, r.stdout
-        last = (r.stderr or "").strip()
-        # a genuine 404 is terminal; anything else is transient -> retry
-        if "Not Found" in last or "404" in last:
-            return False, "404"
-        time.sleep(2 * (i + 1))
-    return False, f"FAIL:{last[:80]}"
+    code, out = gh_api([path] + (["--jq", jq] if jq else []), tries=tries, err_max=80)
+    if code == 0:
+        return True, out
+    return False, ("404" if code == 1 else "FAIL:" + out.replace("TRANSIENT:", "", 1))
 
 
 def repo_state(repo):
