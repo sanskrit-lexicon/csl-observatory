@@ -62,10 +62,6 @@ def is_exempt(labels):
     return bool(lbls & EXEMPT_LABELS) or (bool(lbls) and lbls <= BARE_TRACKING_LABELS)
 
 
-def gh(args):
-    return gh_cli_retry(args, tries=3)
-
-
 def pmap(repo):
     return PROJ_MWS if repo == "MWS" else PROJ
 
@@ -94,7 +90,7 @@ def fetch_issues(repo):
         a = ["api", "graphql", "-f", "query=" + _ALL, "-f", "o=" + ORG, "-f", "n=" + repo]
         if cur:
             a += ["-f", "c=" + cur]
-        r = gh(a)
+        r = gh_cli_retry(a)
         if r.returncode:
             raise SystemExit(f"ERROR querying {repo}: {r.stderr[:200]}")
         repo_data = json.loads(r.stdout)["data"]["repository"]
@@ -164,7 +160,7 @@ def audit(repos):
 
 
 def issue(repo, number, check_project=True):
-    r = gh(["api", "graphql", "-f", "query=" + _ONE, "-f", "o=" + ORG,
+    r = gh_cli_retry(["api", "graphql", "-f", "query=" + _ONE, "-f", "o=" + ORG,
             "-f", "n=" + repo, "-F", "num=" + str(number)])
     if r.returncode:
         raise SystemExit(f"ERROR querying {repo}#{number}: {r.stderr[:200]}")

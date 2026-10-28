@@ -22,13 +22,9 @@ sys.stderr.reconfigure(encoding="utf-8")
 OWNER = "sanskrit-lexicon"
 
 
-def gh(args, tries=5):
-    return gh_api(args, tries=tries, err_max=120)
-
-
 def state(repo):
-    code, out = gh([f"repos/{OWNER}/{repo}",
-                    "--jq", "{arch:.archived, open:.open_issues_count}"])
+    code, out = gh_api([f"repos/{OWNER}/{repo}",
+                        "--jq", "{arch:.archived, open:.open_issues_count}"], err_max=120)
     if code != 0:
         return None
     return json.loads(out)

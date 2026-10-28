@@ -24,21 +24,17 @@ FLAG = re.compile(r"(?i)(licen[cs]e|ofl|copying|notice|font|vendor|node_modules|
                   r"third[_-]?party|\.ttf$|\.otf$|\.woff2?$|\.eot$)")
 
 
-def gh(path, jq=None, tries=5):
-    return gh_api([path] + (["--jq", jq] if jq else []), tries=tries, err_max=80)
-
-
 def main():
     for repo in REPOS:
-        code, meta = gh(f"repos/{OWNER}/{repo}",
-                        "{spdx:(.license.spdx_id // \"NONE\"), br:.default_branch, "
-                        "lang:.language, size:.size}")
+        code, meta = gh_api([f"repos/{OWNER}/{repo}",
+                             "--jq", "{spdx:(.license.spdx_id // \"NONE\"), br:.default_branch, "
+                             "lang:.language, size:.size}"], err_max=80)
         print(f"\n===== {repo} =====")
         if code != 0:
             print(f"  <{meta}>")
             continue
         m = json.loads(meta)
-        _, langs = gh(f"repos/{OWNER}/{repo}/languages")
+        _, langs = gh_api([f"repos/{OWNER}/{repo}/languages"], err_max=80)
         try:
             lj = json.loads(langs); t = sum(lj.values()) or 1
             langstr = ", ".join(f"{k} {v*100//t}%" for k, v in
@@ -49,7 +45,8 @@ def main():
               f"size={m['size']}KB")
         print(f"  languages: {langstr}")
         # root tree listing
-        code, tree = gh(f"repos/{OWNER}/{repo}/contents", ".[].name")
+        code, tree = gh_api([f"repos/{OWNER}/{repo}/contents", "--jq", ".[].name"],
+                            err_max=80)
         if code != 0:
             print(f"  root listing: <{tree}>")
             continue
@@ -60,8 +57,8 @@ def main():
         print(f"  >>> third-party/license markers at root: "
               f"{', '.join(flagged) if flagged else 'none at root'}")
         # search the repo for Open Font License text (catches fonts in subdirs)
-        code, hits = gh(f"search/code?q=repo:{OWNER}/{repo}+%22Open+Font+License%22",
-                        ".total_count")
+        code, hits = gh_api([f"search/code?q=repo:{OWNER}/{repo}+%22Open+Font+License%22",
+                             "--jq", ".total_count"], err_max=80)
         if code == 0:
             print(f"  >>> 'Open Font License' code-search hits: {hits.strip()}")
 

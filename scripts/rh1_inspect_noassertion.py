@@ -23,11 +23,6 @@ DICT = ["AP", "ApteES", "BOP", "BOR", "BUR", "DCS", "FRI", "GRA", "INM", "MD",
 SOURCE = ["csl-orig"]
 
 
-def gh(path, jq=None):
-    r = _run(["gh", "api", path] + (["--jq", jq] if jq else []))
-    return r.returncode, r.stdout, r.stderr
-
-
 def classify(text):
     t = text.lower()
     if "gnu general public license" in t and "version 3" in t:
@@ -50,7 +45,8 @@ def classify(text):
 
 
 def inspect(repo):
-    code, out, err = gh(f"repos/{OWNER}/{repo}/license")
+    r = _run(["gh", "api", f"repos/{OWNER}/{repo}/license"])
+    code, out = r.returncode, r.stdout
     if code != 0:
         return repo, None, "(no license endpoint / not found)", 0, "", ""
     j = json.loads(out)

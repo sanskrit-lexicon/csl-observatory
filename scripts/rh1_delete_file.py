@@ -24,20 +24,16 @@ sys.stderr.reconfigure(encoding="utf-8")
 OWNER = "sanskrit-lexicon"
 
 
-def gh(args, tries=5):
-    code, out = gh_api(args, tries=tries, err_max=120)
-    return code, (out if code == 0 else ""), ("" if code == 0 else out)
-
-
 def file_meta(repo, path):
-    code, out, _ = gh([f"repos/{OWNER}/{repo}/contents/{path}", "--jq", "{sha:.sha}"])
+    code, out = gh_api([f"repos/{OWNER}/{repo}/contents/{path}", "--jq", "{sha:.sha}"],
+                       err_max=120)
     if code != 0:
         return None  # 404 => already gone; transient handled by retries above
     return json.loads(out).get("sha")
 
 
 def default_branch(repo):
-    code, out, _ = gh([f"repos/{OWNER}/{repo}", "--jq", ".default_branch"])
+    code, out = gh_api([f"repos/{OWNER}/{repo}", "--jq", ".default_branch"], err_max=120)
     return out.strip() if code == 0 else None
 
 
