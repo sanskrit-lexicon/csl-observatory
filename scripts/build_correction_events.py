@@ -223,7 +223,6 @@ def edit_ops(old, new):
     a = list(unicodedata.normalize('NFD', old))
     b = list(unicodedata.normalize('NFD', new))
     la, lb = len(a), len(b)
-    INF = la + lb + 1
     d = [[0] * (lb + 1) for _ in range(la + 1)]
     for i in range(la + 1):
         d[i][0] = i
@@ -403,7 +402,7 @@ def main():
     n_in = n_bad = 0
     with open(CFR, encoding='utf-8', newline='') as f:
         reader = csv.reader(f, delimiter='\t')
-        header = next(reader, None)
+        next(reader, None)  # skip header row
         for ln, parts in enumerate(reader, start=2):
             n_in += 1
             if len(parts) != 8:

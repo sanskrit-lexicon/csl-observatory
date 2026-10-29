@@ -14,28 +14,17 @@ import subprocess
 import sys
 import time
 
+from _common import gh_api
+
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
 
 OWNER = "sanskrit-lexicon"
 
 
-def gh(args, tries=5):
-    last = ""
-    for i in range(tries):
-        r = subprocess.run(["gh", "api", *args], capture_output=True, encoding="utf-8")
-        if r.returncode == 0:
-            return 0, r.stdout
-        last = (r.stderr or "").strip()
-        if "Not Found" in last or '"status":"404"' in last:
-            return 1, "404"
-        time.sleep(2 * (i + 1))
-    return 2, f"TRANSIENT:{last[:120]}"
-
-
 def state(repo):
-    code, out = gh([f"repos/{OWNER}/{repo}",
-                    "--jq", "{arch:.archived, open:.open_issues_count}"])
+    code, out = gh_api([f"repos/{OWNER}/{repo}",
+                        "--jq", "{arch:.archived, open:.open_issues_count}"], err_max=120)
     if code != 0:
         return None
     return json.loads(out)

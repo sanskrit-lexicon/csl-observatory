@@ -6,9 +6,9 @@ sensible dual-license layout (which SPDX is primary) can be proposed per repo.
 Read-only, retried against the flaky network.
 """
 import json
-import subprocess
 import sys
-import time
+
+from _common import gh_api
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
@@ -19,35 +19,22 @@ DEFAULT_REPOS = ["MWinflect", "mw-dev", "csl-devanagari", "csl-json",
 REPOS = sys.argv[1:] or DEFAULT_REPOS
 
 
-def gh(path, jq=None, tries=5):
-    args = ["gh", "api", path] + (["--jq", jq] if jq else [])
-    last = ""
-    for i in range(tries):
-        r = subprocess.run(args, capture_output=True, encoding="utf-8")
-        if r.returncode == 0:
-            return 0, r.stdout
-        last = (r.stderr or "").strip()
-        if "Not Found" in last or '"status":"404"' in last:
-            return 1, "404"
-        time.sleep(2 * (i + 1))
-    return 2, f"TRANSIENT:{last[:80]}"
-
-
 def has(repo, path):
-    code, _ = gh(f"repos/{OWNER}/{repo}/contents/{path}", ".sha")
+    code, _ = gh_api([f"repos/{OWNER}/{repo}/contents/{path}", "--jq", ".sha"],
+                     err_max=80)
     return code == 0
 
 
 def main():
     for repo in REPOS:
-        code, meta = gh(f"repos/{OWNER}/{repo}",
-                        "{spdx:(.license.spdx_id // \"NONE\"), br:.default_branch, "
-                        "lang:.language, size:.size}")
+        code, meta = gh_api([f"repos/{OWNER}/{repo}",
+                             "--jq", "{spdx:(.license.spdx_id // \"NONE\"), br:.default_branch, "
+                             "lang:.language, size:.size}"], err_max=80)
         if code != 0:
             print(f"\n{repo}: <{meta}>")
             continue
         m = json.loads(meta)
-        _, langs = gh(f"repos/{OWNER}/{repo}/languages")
+        _, langs = gh_api([f"repos/{OWNER}/{repo}/languages"], err_max=80)
         try:
             lj = json.loads(langs)
             total = sum(lj.values()) or 1

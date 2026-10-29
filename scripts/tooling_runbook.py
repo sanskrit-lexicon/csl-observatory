@@ -36,9 +36,10 @@ import argparse
 import base64
 import json
 import re
-import subprocess
 import sys
 from collections import Counter
+
+from _common import gh
 
 sys.stdout.reconfigure(encoding='utf-8')
 sys.stderr.reconfigure(encoding='utf-8')
@@ -118,31 +119,27 @@ SEV_SET = {"trivial", "minor", "major", "critical"}
 EXEMPT_LABELS = {"daily-corrections"}
 
 
-def gh(args, **kw):
-    return subprocess.run(["gh"] + args, capture_output=True, encoding="utf-8", **kw)
-
-
 def setup(repo, category):
     domain_labels = [(f"domain:{n}", "5319e7", d) for n, d in DOMAIN_MAP.get(category, [])]
     for name, color, desc in CORE_LABELS + domain_labels:
-        r = gh(["api", f"repos/{ORG}/{repo}/labels", "-X", "POST",
+        r = gh(*["api", f"repos/{ORG}/{repo}/labels", "-X", "POST",
                 "-f", f"name={name}", "-f", f"color={color}", "-f", f"description={desc}"])
         if r.returncode == 0:
             print(f"+ {name}", flush=True)
             continue
-        r2 = gh(["api", f"repos/{ORG}/{repo}/labels/{name}", "-X", "PATCH",
+        r2 = gh(*["api", f"repos/{ORG}/{repo}/labels/{name}", "-X", "PATCH",
                  "-f", f"new_name={name}", "-f", f"color={color}", "-f", f"description={desc}"])
         if r2.returncode == 0:
             print(f"~ {name}", flush=True)
         else:
             print(f"! {name}: {r.stderr[:80]} / {r2.stderr[:80]}", flush=True)
     for title in MILESTONES:
-        gh(["api", f"repos/{ORG}/{repo}/milestones", "-X", "POST", "-f", f"title={title}"])
+        gh(*["api", f"repos/{ORG}/{repo}/milestones", "-X", "POST", "-f", f"title={title}"])
     print("DONE")
 
 
 def _fetch_issues(repo, state="open"):
-    r = gh(["api", f"repos/{ORG}/{repo}/issues?state={state}&per_page=100", "--paginate",
+    r = gh(*["api", f"repos/{ORG}/{repo}/issues?state={state}&per_page=100", "--paginate",
             "--jq", "[.[] | select(.pull_request==null) | "
                     "{n:.number, id:.node_id, labels:[.labels[].name], milestone:.milestone.title}]"])
     issues = []
@@ -167,17 +164,17 @@ def classify(repo, plan_path, domain=None):
     for n_str, spec in plan.items():
         n = int(n_str)
         for stale in spec.get("strip", []):
-            gh(["api", f"repos/{ORG}/{repo}/issues/{n}/labels/{stale}", "-X", "DELETE"])
+            gh(*["api", f"repos/{ORG}/{repo}/issues/{n}/labels/{stale}", "-X", "DELETE"])
         labels_to_add = [spec["type"], spec["sev"]]
         if domain:
             labels_to_add.append(domain)
         for label in labels_to_add:
-            r = gh(["api", f"repos/{ORG}/{repo}/issues/{n}/labels", "-X", "POST",
+            r = gh(*["api", f"repos/{ORG}/{repo}/issues/{n}/labels", "-X", "POST",
                     "-f", f"labels[]={label}"])
             if r.returncode != 0 and "422" not in r.stderr:
                 errors.append(f"add {label} on #{n}: {r.stderr[:80].strip()}")
         if spec.get("ms"):
-            r = gh(["api", f"repos/{ORG}/{repo}/issues/{n}", "-X", "PATCH",
+            r = gh(*["api", f"repos/{ORG}/{repo}/issues/{n}", "-X", "PATCH",
                     "-F", f"milestone={spec['ms']}"])
             if r.returncode != 0:
                 errors.append(f"milestone #{n}: {r.stderr[:80].strip()}")
@@ -221,7 +218,7 @@ def project(repo):
     for i in issues:
         q = (f'mutation {{ addProjectV2ItemById(input: '
              f'{{projectId: "{PROJECT_ID}", contentId: "{i["id"]}"}}) {{ item {{ id }} }} }}')
-        r = gh(["api", "graphql", "-f", f"query={q}"])
+        r = gh(*["api", "graphql", "-f", f"query={q}"])
         if r.returncode != 0:
             errors.append(f"#{i['n']}: {r.stderr[:120].strip()}")
     print(f"added {len(issues) - len(errors)}/{len(issues)}")
@@ -231,7 +228,7 @@ def project(repo):
 
 
 def _fetch_milestones(repo):
-    r = gh(["api", f"repos/{ORG}/{repo}/milestones?state=all",
+    r = gh(*["api", f"repos/{ORG}/{repo}/milestones?state=all",
             "--jq", "[.[] | {n:.number, title, open:.open_issues, closed:.closed_issues}]"])
     try:
         return json.loads(r.stdout)
@@ -240,7 +237,7 @@ def _fetch_milestones(repo):
 
 
 def _fetch_repo_meta(repo):
-    r = gh(["api", f"repos/{ORG}/{repo}",
+    r = gh(*["api", f"repos/{ORG}/{repo}",
             "--jq", "{description, language, default_branch}"])
     try:
         return json.loads(r.stdout)
@@ -249,9 +246,9 @@ def _fetch_repo_meta(repo):
 
 
 def _fetch_total_counts(repo):
-    r_open = gh(["api", f"repos/{ORG}/{repo}/issues?state=open&per_page=100", "--paginate",
+    r_open = gh(*["api", f"repos/{ORG}/{repo}/issues?state=open&per_page=100", "--paginate",
                  "--jq", "[.[] | select(.pull_request==null)] | length"])
-    r_closed = gh(["api", f"repos/{ORG}/{repo}/issues?state=closed&per_page=100", "--paginate",
+    r_closed = gh(*["api", f"repos/{ORG}/{repo}/issues?state=closed&per_page=100", "--paginate",
                    "--jq", "[.[] | select(.pull_request==null)] | length"])
     o = sum(int(x) for x in re.findall(r"\d+", r_open.stdout) or ["0"])
     c = sum(int(x) for x in re.findall(r"\d+", r_closed.stdout) or ["0"])
@@ -260,7 +257,7 @@ def _fetch_total_counts(repo):
 
 def _fetch_readme_info(repo):
     for path in README_PATHS:
-        r = gh(["api", f"repos/{ORG}/{repo}/contents/{path}"])
+        r = gh(*["api", f"repos/{ORG}/{repo}/contents/{path}"])
         if r.returncode != 0:
             continue
         try:
@@ -304,7 +301,7 @@ def _extract_manual_blocks(readme_text):
 
 
 def _validate_mermaid(block_text):
-    r = gh(["api", "markdown", "-X", "POST", "-f", f"text={block_text}", "-f", "mode=markdown"])
+    r = gh(*["api", "markdown", "-X", "POST", "-f", f"text={block_text}", "-f", "mode=markdown"])
     return "highlight-source-mermaid" in r.stdout
 
 
@@ -392,7 +389,7 @@ def refresh(repo, category):
     if sha:
         args += ["-f", f"sha={sha}"]
     args += ["--jq", ".commit.sha"]
-    r = gh(args)
+    r = gh(*args)
     if r.returncode == 0:
         print(f"  committed {r.stdout.strip()[:8]} ({len(issues)} open)")
         return True
@@ -422,7 +419,7 @@ def audit(repos):
             }}
           }}
         }}'''
-        r = gh(["api", "graphql", "-f", f"query={q}"])
+        r = gh(*["api", "graphql", "-f", f"query={q}"])
         d = json.loads(r.stdout)
         page = d["data"]["organization"]["projectV2"]["items"]
         items += page["nodes"]

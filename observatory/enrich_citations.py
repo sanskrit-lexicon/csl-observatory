@@ -65,7 +65,7 @@ def push_file(repo, filepath, content, message, branch):
         return '"sha"' in out and '"path"' in out
     finally:
         try: os.unlink(temp_path)
-        except: pass
+        except OSError: pass
 
 def parse_authors(author_str):
     """Parse 'V.S. Apte (rev. P.K. Gode et al.)' or 'Böhtlingk + Roth' into list."""

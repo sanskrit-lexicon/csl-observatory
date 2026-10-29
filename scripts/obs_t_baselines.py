@@ -121,10 +121,11 @@ def krippendorff_alpha_nominal(units):
     coincidence-matrix form (Krippendorff 2004, sec. 11.3): with n the number
     of pairable values, D_o the observed off-diagonal coincidence mass and D_e
     the expected mass under independence, alpha = 1 - D_o / D_e. For two
-    complete raters this reduces exactly to Scott's pi; the general form is
-    kept so missing data and k > 2 values need no separate code path. Returns
-    None when fewer than 2 pairable values exist or D_e is degenerate."""
-    coinc = Counter()                        # ordered coincidence counts o_ck
+    complete raters it relates to Scott's pi by alpha = 1 - (n-1)/n * (1 - pi);
+    the general form is kept so missing data and k > 2 values need no separate
+    code path. Returns None when fewer than 2 pairable values exist or D_e is
+    degenerate."""
+    coinc = Counter()                        # coincidence counts o_ck, sec. 11.3
     n = 0
     for u in units:
         vals = [v for v in u if v is not None]
@@ -133,17 +134,20 @@ def krippendorff_alpha_nominal(units):
         if m < 2:
             continue
         n += m
+        # Each unit contributes 1/(m_u - 1) per ordered value pair: without
+        # that normalisation units with > 2 labels are overweighted and the
+        # result is Scott's-pi-shaped rather than alpha (H7108, bughunt §5).
         for a, ka in c.items():
-            coinc[(a, a)] += ka * (ka - 1)
+            coinc[(a, a)] += ka * (ka - 1) / (m - 1)
             for b, kb in c.items():
                 if a != b:
-                    coinc[(a, b)] += ka * kb
+                    coinc[(a, b)] += ka * kb / (m - 1)
     if n < 2:
         return None
     marg = Counter()
     for (a, b), v in coinc.items():
         marg[a] += v
-    d_o = sum(v for (a, b), v in coinc.items() if a != b) / (n - 1)
+    d_o = sum(v for (a, b), v in coinc.items() if a != b) / n
     d_e = sum(ma * mb for a, ma in marg.items() for b, mb in marg.items()
               if a != b) / (n * (n - 1))
     if not d_e:
@@ -403,20 +407,37 @@ def selftest():
     a = krippendorff_alpha_nominal([('x', 'x'), ('y', 'y'), ('x', 'x')])
     ok.append(('perfect agreement alpha=1', a == 1.0))
 
-    # 2. two-rater complete disagreement, 2 values, balanced -> alpha = -1
-    #    (n=2N labels all balanced, every unit disagrees)
+    # 2. two-rater complete disagreement, 2 values, balanced -> alpha = -0.5
+    #    (n=4 pairable values all balanced, every unit disagrees; the -1 value
+    #    is Scott's pi, not alpha — alpha = 1 - (n-1)/n * (1-pi))
     a = krippendorff_alpha_nominal([('x', 'y'), ('y', 'x')])
-    ok.append(('balanced full disagreement alpha=-1', a == -1.0))
+    ok.append(('balanced full disagreement alpha=-0.5', a == -0.5))
 
-    # 3. two complete raters: alpha must equal Scott's pi exactly
+    # 3. two complete raters: alpha relates to Scott's pi by the exact
+    #    finite-sample identity alpha = 1 - (n-1)/n * (1 - pi), NOT alpha == pi
+    #    (the pre-H7108 self-test pinned the wrong identity, bughunt §5).
     units = [('a', 'a'), ('a', 'b'), ('b', 'b'), ('b', 'b'), ('a', 'a'),
              ('b', 'a'), ('a', 'a')]
     n_labels = 2 * len(units)
     marg = Counter(l for u in units for l in u)
     d = sum(1 for x, y in units if x != y)
     pi = 1 - (4 * len(units) * d) / (n_labels ** 2 - sum(v * v for v in marg.values()))
+    expected = 1 - (n_labels - 1) / n_labels * (1 - pi)
     a = krippendorff_alpha_nominal(units)
-    ok.append(('two-rater alpha == Scott pi', abs(a - pi) < 1e-12))
+    ok.append(('two-rater alpha == 1-(n-1)/n*(1-Scott pi)',
+               abs(a - expected) < 1e-12))
+
+    # 3b. Krippendorff's own published worked example (nominal, 12 units,
+    #     2-4 coders, alpha = 0.743). The pre-fix implementation returns
+    #     0.8935 on it — an anchor against a published number, not against us.
+    canon = [
+        (1, 1, None, 1), (2, 2, 3, 2), (3, 3, 3, 3), (3, 3, 3, 3),
+        (2, 2, 2, 2), (1, 2, 3, 4), (4, 4, 4, 4), (1, 1, 2, 1),
+        (2, 2, 2, 2), (None, 5, 5, 5), (None, None, 1, 1), (None, 3, None, None),
+    ]
+    a = krippendorff_alpha_nominal(canon)
+    ok.append(('published Krippendorff example alpha=0.743',
+               round(a, 3) == 0.743))
 
     # 4. missing labels drop out of the pairable set but do not crash; the
     #    surviving labels agree perfectly across two categories -> alpha = 1

@@ -133,9 +133,11 @@ def fetch_repo_metadata(repo):
     if ok and out:
         try:
             return json.loads(out)
-        except:
-            pass
+        except json.JSONDecodeError as e:
+            print(f"warning: {repo}: repo meta jq output is not JSON: {e}",
+                  file=sys.stderr)
     return None
+
 
 def fetch_repo_languages(repo):
     """Fetch language byte counts."""
@@ -143,9 +145,11 @@ def fetch_repo_languages(repo):
     if ok and out:
         try:
             return json.loads(out)
-        except:
-            pass
+        except json.JSONDecodeError as e:
+            print(f"warning: {repo}: languages jq output is not JSON: {e}",
+                  file=sys.stderr)
     return {}
+
 
 def fetch_repo_contributors(repo):
     """Fetch contributors."""
@@ -155,9 +159,11 @@ def fetch_repo_contributors(repo):
         try:
             data = json.loads(out)
             return data if isinstance(data, list) else []
-        except:
-            pass
+        except json.JSONDecodeError as e:
+            print(f"warning: {repo}: contributors jq output is not JSON: {e}",
+                  file=sys.stderr)
     return []
+
 
 def fetch_repo_releases(repo):
     """Fetch releases / tags."""
@@ -167,8 +173,9 @@ def fetch_repo_releases(repo):
         try:
             data = json.loads(out)
             return data if isinstance(data, list) else []
-        except:
-            pass
+        except json.JSONDecodeError as e:
+            print(f"warning: {repo}: releases jq output is not JSON: {e}",
+                  file=sys.stderr)
     return []
 
 def slim_issue(issue):

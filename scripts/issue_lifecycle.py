@@ -190,6 +190,12 @@ def main():
                      'p90_days_to_close', 'open_median_age_days', 'silent_open'], repo_rows)
 
     # ---- write report ----
+    def _pct(part, whole):
+        return f"{100*part/whole:.0f}%" if whole else "n/a"
+    med_close = (f"{pctl(closed_all, 0.5):,} days" if closed_all
+                 else "n/a (no closed issues)")
+    p90_close = f"{pctl(closed_all, 0.9):,}" if closed_all else "n/a"
+    p90d = f"{pctl(closed_all, 0.9)}d" if closed_all else "n/a"
     L = []; A = L.append
     A('# Issue lifecycle & responsiveness')
     A('')
@@ -204,11 +210,11 @@ def main():
     A('|---|---:|')
     A(f'| Issues analysed (PRs) | {len(issues):,} ({len(prs)}) |')
     A(f'| Open issues at snapshot | {len(open_issues):,} |')
-    A(f'| Median time-to-close (all closed issues) | {pctl(closed_all, 0.5)} days |')
-    A(f'| 90th-percentile time-to-close | {pctl(closed_all, 0.9):,} days |')
-    A(f'| Issues still open 1 year after opening (pooled, observable) | {100*open1y/len(obs1y):.0f}% |')
-    A(f'| **Open issues older than 2 years** | **{old2y} / {len(open_issues)}** ({100*old2y/len(open_issues):.0f}%) |')
-    A(f'| **Silent backlog (open, zero comments)** | **{silent_total}** ({100*silent_total/len(open_issues):.0f}% of open) |')
+    A(f'| Median time-to-close (all closed issues) | {med_close} |')
+    A(f'| 90th-percentile time-to-close | {p90_close} days |')
+    A(f'| Issues still open 1 year after opening (pooled, observable) | {_pct(open1y, len(obs1y))} |')
+    A(f'| **Open issues older than 2 years** | **{old2y} / {len(open_issues)}** ({_pct(old2y, len(open_issues))}) |')
+    A(f'| **Silent backlog (open, zero comments)** | **{silent_total}** ({_pct(silent_total, len(open_issues))} of open) |')
     A('')
     A('## Cohort survival — % of each opening year still open after N days')
     A('')
@@ -258,12 +264,12 @@ def main():
     A('')
     med = pctl(closed_all, 0.5)
     A(f'- Half of all issues that get closed are closed within **{med} days** — '
-      f'but the distribution has a very long tail (p90 = {pctl(closed_all, 0.9):,} '
+      f'but the distribution has a very long tail (p90 = {p90_close} '
       'days): what is not handled quickly tends to sit for years.')
-    A(f'- **{100*open1y/len(obs1y):.0f}% of issues are still open one year after '
+    A(f'- **{_pct(open1y, len(obs1y))} of issues are still open one year after '
       'opening** (pooled cohorts, censoring-adjusted); the survival table shows '
       'whether recent cohorts fare better or worse than the 2014–2018 era.')
-    A(f'- The backlog is old: {100*old2y/len(open_issues):.0f}% of currently-open '
+    A(f'- The backlog is old: {_pct(old2y, len(open_issues))}% of currently-open '
       f'issues are more than two years old, and **{silent_total} open issues have '
       'never received a single comment** — the silent backlog is the natural '
       'first target for triage (close, label, or answer).')
@@ -281,8 +287,8 @@ def main():
     for p in (OUT_SURV, OUT_BACK, OUT_CLOSE, OUT_REPO):
         print(f'wrote {p}')
     print(f'  as_of {as_of.date()}  issues {len(issues)}  open {len(open_issues)}')
-    print(f'  median close {med}d  p90 {pctl(closed_all, 0.9)}d  '
-          f'1y-open {100*open1y/len(obs1y):.0f}%  silent {silent_total}')
+    print(f'  median close {med}d  p90 {p90d}  '
+          f'1y-open {_pct(open1y, len(obs1y))}%  silent {silent_total}')
 
 
 if __name__ == '__main__':

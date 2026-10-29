@@ -1,0 +1,140 @@
+{
+  "benchmark": "obst-bench",
+  "version": "v1",
+  "frozen_at": "24-10-2026",
+  "source_release": {
+    "path": "observatory/site/src/data/correction_events_release.csv",
+    "sha256": "a27fec9e6a5b0a4d641d8c95078823c8606f8d5c31a85b88e5196a50abccfaaf",
+    "release": "e32-correction-events-release-2026-10-10",
+    "rows": 52498
+  },
+  "split_digests": {
+    "detection/dev.tsv": "f2470e9e2396988166a15c3d2080074bee36cbc39b2acebdb1b872cd133cd6c6",
+    "detection/test.tsv": "e1cd4ebc95d4813cb93b1269c235b9afd4f056d667a9f23c917d996c59b50dc1",
+    "detection/train.tsv": "2f3b2e512c2fc752b4bb9879a9de9a5cedd595bcefab7b239e981fa0216b43d5",
+    "location/test.tsv": "2bdbe3209666dd873856f194a6c67fe37eb739bbcd411dc3e7d3b93b7bb89abd",
+    "location/train.tsv": "aaf6ce048c0ec654ac0516fdf940b243cb463062057dfd4bc26793d0a4abd253",
+    "scoring_only/detection_test_gold.tsv": "a624d782a2d83727d682015b1cc0e51539177ae3db5a75383c5f2cc07ea9309c",
+    "scoring_only/location_test_gold.tsv": "98060753edec8fd232152708b412bfde50161816c7b2d0b0d14282c17058e3eb"
+  },
+  "counts": {
+    "detection/dev.tsv": 3144,
+    "detection/test.tsv": 3127,
+    "detection/train.tsv": 14670,
+    "location/test.tsv": 9729,
+    "location/train.tsv": 15788,
+    "scoring_only/detection_test_gold.tsv": 3127,
+    "scoring_only/location_test_gold.tsv": 9729
+  },
+  "baselines": {
+    "b1_charlm_detection": {
+      "description": "pairwise char-trigram LM (the published OBS-T pairwise baseline)",
+      "predictions": "obst-bench/v1/baselines/b1_charlm_detection.predictions.tsv",
+      "numbers": {
+        "task": "detection",
+        "test_pairs": 3127,
+        "test_tokens": 6254,
+        "pairwise_accuracy": 0.515,
+        "tie_pairs": 36,
+        "tie_rate": 0.012,
+        "flagging_confusion": {
+          "tp": 1609,
+          "fp": 1482,
+          "fn": 1518,
+          "tn": 1645
+        },
+        "per_class": {
+          "erroneous": {
+            "precision": 0.521,
+            "recall": 0.515,
+            "f0_5": 0.519,
+            "precision_denominator": "all flagged tokens (tp+fp=3,091)",
+            "recall_denominator": "all gold-erroneous tokens (tp+fn=3,127)"
+          },
+          "correct": {
+            "precision": 0.52,
+            "recall": 0.526,
+            "f0_5": 0.521,
+            "precision_denominator": "all flagged tokens (tp+fp=3,163)",
+            "recall_denominator": "all gold-correct tokens (tp+fn=3,127)"
+          }
+        },
+        "fpr_erroneous_flag": 0.474,
+        "fpr_denominator": "all gold-correct tokens (fp+tn=3,127)",
+        "krippendorff_alpha_nominal": 0.041,
+        "krippendorff_alpha_pairable_values": 6182,
+        "cohen_kappa_non_tie": 0.041,
+        "cohen_kappa_units": 6182
+      }
+    },
+    "b2_majority_location": {
+      "description": "trivial majority/prior classifier on location",
+      "predictions": "obst-bench/v1/baselines/b2_majority_location.predictions.tsv",
+      "numbers": {
+        "task": "location",
+        "test_rows": 9729,
+        "accuracy": 0.402,
+        "macro_f1": 0.096,
+        "classes": 6,
+        "per_class": {
+          "citation": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f0_5": 0.0,
+            "support": 2638,
+            "precision_denominator": "all predicted citation (tp+fp=0)",
+            "recall_denominator": "all gold citation (tp+fn=2,638)"
+          },
+          "grammar": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f0_5": 0.0,
+            "support": 77,
+            "precision_denominator": "all predicted grammar (tp+fp=0)",
+            "recall_denominator": "all gold grammar (tp+fn=77)"
+          },
+          "headword": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f0_5": 0.0,
+            "support": 546,
+            "precision_denominator": "all predicted headword (tp+fp=0)",
+            "recall_denominator": "all gold headword (tp+fn=546)"
+          },
+          "markup": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f0_5": 0.0,
+            "support": 2321,
+            "precision_denominator": "all predicted markup (tp+fp=0)",
+            "recall_denominator": "all gold markup (tp+fn=2,321)"
+          },
+          "meta": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f0_5": 0.0,
+            "support": 236,
+            "precision_denominator": "all predicted meta (tp+fp=0)",
+            "recall_denominator": "all gold meta (tp+fn=236)"
+          },
+          "sense": {
+            "precision": 0.402,
+            "recall": 1.0,
+            "f0_5": 0.457,
+            "support": 3911,
+            "precision_denominator": "all predicted sense (tp+fp=9,729)",
+            "recall_denominator": "all gold sense (tp+fn=3,911)"
+          }
+        },
+        "krippendorff_alpha_nominal": -0.259,
+        "krippendorff_alpha_pairable_values": 9729,
+        "cohen_kappa": 0.0,
+        "agreement_denominator": "all test rows, gold vs prediction (n=9,729)",
+        "train_majority_class": "sense",
+        "majority_baseline_accuracy": 0.402
+      }
+    }
+  },
+  "scorer": "scripts/obst_bench.py",
+  "submission_format": "pair_id<TAB>A|B|tie (detection); row_id<TAB>error_component (location)"
+}

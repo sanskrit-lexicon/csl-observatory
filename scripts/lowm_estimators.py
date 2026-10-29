@@ -342,7 +342,7 @@ def censor_scores(panel, truth, reps=REPS, seed=SEED, exp_m=None):
             q = statistics.quantiles(vals, n=4) if len(vals) >= 4 else [vals[0]] * 3
             med = statistics.median(vals)
             ratios = sorted(v / truth_n for v in vals)
-            def pq(f):
+            def pq(f, ratios=ratios):
                 return ratios[min(len(ratios) - 1, max(0, int(f * len(ratios))))]
             out.append({'candidate': cand, 'target': name, 'n_ok': len(vals),
                         'exp_m': exp_m, 'median': med, 'p25': q[0], 'p75': q[2],
@@ -374,7 +374,7 @@ def calibrate(panel, truth, ms, reps=REPS, seed=SEED):
         if not pooled:
             continue
 
-        def pq(f):
+        def pq(f, pooled=pooled):
             return pooled[min(len(pooled) - 1, max(0, int(f * len(pooled))))]
         per_dict = {r['target']: r['ratio'] for r in rows}
         cal[m] = {'median': statistics.median(pooled), 'p05': pq(0.05),

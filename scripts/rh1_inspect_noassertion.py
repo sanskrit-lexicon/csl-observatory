@@ -8,8 +8,9 @@ Read-only: makes no changes.
 import base64
 import hashlib
 import json
-import subprocess
 import sys
+
+from _common import run as _run
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
@@ -20,14 +21,6 @@ CODE = ["csl-pywork", "csl-websanlexicon"]
 DICT = ["AP", "ApteES", "BOP", "BOR", "BUR", "DCS", "FRI", "GRA", "INM", "MD",
         "MW72", "MWS", "PWG", "PWK", "SCH", "VCP", "Wil-YAT"]
 SOURCE = ["csl-orig"]
-
-
-def gh(path, jq=None):
-    args = ["gh", "api", path]
-    if jq:
-        args += ["--jq", jq]
-    r = subprocess.run(args, capture_output=True, encoding="utf-8")
-    return r.returncode, r.stdout, r.stderr
 
 
 def classify(text):
@@ -52,12 +45,12 @@ def classify(text):
 
 
 def inspect(repo):
-    code, out, err = gh(f"repos/{OWNER}/{repo}/license")
+    r = _run(["gh", "api", f"repos/{OWNER}/{repo}/license"])
+    code, out = r.returncode, r.stdout
     if code != 0:
         return repo, None, "(no license endpoint / not found)", 0, "", ""
     j = json.loads(out)
     name = j.get("name", "?")
-    spdx = (j.get("license") or {}).get("spdx_id", "?")
     raw = base64.b64decode(j.get("content", "")).decode("utf-8", "replace")
     sha = hashlib.sha256(raw.encode("utf-8", "replace")).hexdigest()[:10]
     lines = [ln.strip() for ln in raw.splitlines() if ln.strip()]

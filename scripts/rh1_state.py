@@ -6,9 +6,9 @@ exists, retrying through the session's flaky TLS so transient failures are
 never mistaken for 'no license' / 'repo not found'.
 """
 import json
-import subprocess
 import sys
-import time
+
+from _common import gh_api_state
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
@@ -29,29 +29,14 @@ REPOS = [
 ]
 
 
-def gh(path, jq=None, tries=5):
-    args = ["gh", "api", path] + (["--jq", jq] if jq else [])
-    last = ""
-    for i in range(tries):
-        r = subprocess.run(args, capture_output=True, encoding="utf-8")
-        if r.returncode == 0:
-            return True, r.stdout
-        last = (r.stderr or "").strip()
-        # a genuine 404 is terminal; anything else is transient -> retry
-        if "Not Found" in last or "404" in last:
-            return False, "404"
-        time.sleep(2 * (i + 1))
-    return False, f"FAIL:{last[:80]}"
-
-
 def repo_state(repo):
-    ok, out = gh(f"repos/{OWNER}/{repo}", ".license.spdx_id // \"NONE\"")
+    ok, out = gh_api_state(f"repos/{OWNER}/{repo}", ".license.spdx_id // \"NONE\"")
     spdx = out.strip() if ok else f"<{out}>"
-    ok2, br = gh(f"repos/{OWNER}/{repo}", ".default_branch")
+    ok2, br = gh_api_state(f"repos/{OWNER}/{repo}", ".default_branch")
     branch = br.strip() if ok2 else "?"
     files = []
     for name in ("LICENSE", "LICENSE.md", "LICENSE.txt", "COPYING"):
-        okf, _ = gh(f"repos/{OWNER}/{repo}/contents/{name}", ".sha")
+        okf, _ = gh_api_state(f"repos/{OWNER}/{repo}/contents/{name}", ".sha")
         if okf:
             files.append(name)
     return spdx, branch, files

@@ -37,6 +37,22 @@ BATCH_N = 60
 BLIND_COLS = ["row_id", "source_layer", "dict", "headword_iast",
               "old_iast", "new_iast", "old_raw", "new_raw", "comment_raw"]
 
+def write_batches(out_dir: Path, batches: list[list[dict[str, str]]]) -> None:
+    """Write batch_NN.json files, clearing stale batches from an earlier draw.
+
+    The builder used to leave higher-numbered batches behind when a smaller
+    re-draw wrote fewer files, so anything globbing blind_batches/batch_*.json
+    silently mixed two populations (H7108, bughunt §14). `gap_*.json` is a
+    different artifact and is deliberately left alone.
+    """
+    out_dir.mkdir(exist_ok=True)
+    for stale in out_dir.glob("batch_*.json"):
+        stale.unlink()
+    for i, b in enumerate(batches, 1):
+        (out_dir / f"batch_{i:02d}.json").write_text(
+            json.dumps(b, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
 def main():
     csv.field_size_limit(10_000_000)
     with SHEET.open(encoding="utf-8", newline="") as fh:
@@ -48,14 +64,11 @@ def main():
 
     OUT_ALL.write_text(json.dumps(blind, ensure_ascii=False, indent=1),
                        encoding="utf-8")
-    OUT_DIR.mkdir(exist_ok=True)
     batches = [blind[:FLIP_N]]
     rest = blind[FLIP_N:]
     for i in range(0, len(rest), BATCH_N):
         batches.append(rest[i:i + BATCH_N])
-    for i, b in enumerate(batches, 1):
-        (OUT_DIR / f"batch_{i:02d}.json").write_text(
-            json.dumps(b, ensure_ascii=False, indent=1), encoding="utf-8")
+    write_batches(OUT_DIR, batches)
     print(f"blind rows: {len(blind)}  batches: {len(batches)} "
           f"(batch_01={len(batches[0])} = flip subsample; rest "
           f"{[len(b) for b in batches[1:]]})")

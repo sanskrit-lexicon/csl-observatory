@@ -5,7 +5,9 @@ empty-fixture green: wrong behaviour must actually fail these.
 """
 from __future__ import annotations
 
+import io
 import sys
+from unittest import mock
 
 from conftest import REPO_ROOT
 
@@ -29,11 +31,35 @@ def test_pyfloor_satisfied_verdicts():
 
 def test_pyfloor_write_read_roundtrip_preserves_newlines(tmp_path):
     p = tmp_path / "roundtrip.txt"
-    body = "a\r\nb\r\nc\r\n"
+    # A bare \n next to a literal \r\n: on a platform whose os.linesep is \r\n
+    # a translating write turns the bare \n into \r\n, so the byte assertion
+    # fails unless write_text passes newline="\n" (H7108, bughunt §15 — the
+    # old all-CRLF body round-tripped identically with and without the kwarg).
+    body = "a\r\nb\nc\r\n"
     pyfloor.write_text(p, body, newline="\n")
+    assert p.read_bytes() == b"a\r\nb\nc\r\n", (
+        "pyfloor.write_text must not translate line endings"
+    )
     assert pyfloor.read_text(p, newline="") == body, (
         "pyfloor.write_text/read_text must preserve line endings byte-for-byte "
         "(the F3541 CRLF-protection contract)"
+    )
+
+
+def test_pyfloor_write_text_passes_newline_kwarg(tmp_path):
+    """Platform-independent pin for the same contract: the kwarg must reach io.open."""
+    p = tmp_path / "kwarg.txt"
+    seen: dict = {}
+    real_open = io.open
+
+    def spy(*args, **kwargs):
+        seen.update(kwargs)
+        return real_open(*args, **kwargs)
+
+    with mock.patch("io.open", side_effect=spy):
+        pyfloor.write_text(p, "a\r\nb\n", newline="")
+    assert seen.get("newline") == "", (
+        "pyfloor.write_text dropped the newline= kwarg (F3541 CRLF contract)"
     )
 
 

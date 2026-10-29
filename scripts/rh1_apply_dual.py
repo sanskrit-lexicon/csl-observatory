@@ -21,6 +21,8 @@ import subprocess
 import sys
 import time
 
+from _common import gh_api as gh
+
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
 
@@ -46,19 +48,6 @@ licensed separately:
   Attribution-ShareAlike 4.0 International (CC-BY-SA-4.0)** — see
   [`LICENSE`](LICENSE).
 """
-
-
-def gh(args, tries=5):
-    last = ""
-    for i in range(tries):
-        r = subprocess.run(["gh", "api", *args], capture_output=True, encoding="utf-8")
-        if r.returncode == 0:
-            return 0, r.stdout
-        last = (r.stderr or "").strip()
-        if "Not Found" in last or '"status":"404"' in last:
-            return 1, "404"
-        time.sleep(2 * (i + 1))
-    return 2, f"TRANSIENT:{last[:100]}"
 
 
 def license_text(key):

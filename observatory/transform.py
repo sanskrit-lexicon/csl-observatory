@@ -262,7 +262,6 @@ def main():
     # ────────────────────────────────────────────────────────────────
     print("\nAnnual aggregates:")
     annual = defaultdict(lambda: defaultdict(int))
-    annual_authors = defaultdict(lambda: defaultdict(set))
 
     for ym, repo, io, ic, po, pc, cm, ua in ts_rows:
         year = ym[:4]

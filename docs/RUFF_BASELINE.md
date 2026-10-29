@@ -9,11 +9,11 @@ count that can only move down** — never a silent zero.
 
 | Fact | Value |
 |---|---|
-| Baseline violation count | **731** (machine mirror: `.ruff-baseline`) — was 685 at bootstrap, see *Re-record 2026-10-19* below |
+| Baseline violation count | **690** (machine mirror: `.ruff-baseline`) — was 702 at the 2026-10-27 re-record, see *Re-record 2026-10-28* below |
 | Ruleset | `ruff.toml`: `E4, E7, E9, F, I, B, S, C4` (+ per-file-ignores for `tests/**` and the gate script) |
 | Ruff version | **pinned 0.17.1** (`requirements-dev.txt`); the count is version-sensitive, so the pin and the baseline move together |
 | Command | `ruff check . --output-format concise` |
-| Live census | 2026-10-19, worktree off `origin/main` @ `96db6e1`, 731 violations |
+| Live census | 2026-10-28, worktree off `origin/main` @ `adfb8a6`, 690 violations |
 
 ### Re-record 2026-10-19 (bughunt §1)
 
@@ -38,6 +38,34 @@ without placeholders (48), `F401` unused imports (12), `S110` try-except-pass
 (10), `F841` unused locals (6), `E722` bare except (6), `B023` loop-variable
 binding (6). The H5800 test suite and gate script themselves ship lint-clean —
 the baseline covers the legacy surface only.
+
+### Re-record 2026-10-27 (dedup + bug-class hygiene)
+
+731 → 702. The three bug-class rules the bootstrap census called out are
+emptied: `E722` bare except (6 — narrowed to `json.JSONDecodeError`/`OSError`,
+with a stderr warning where jq output was silently swallowed), `B023`
+loop-variable binding (6 — the two `pq()` closures in `lowm_estimators.py` now
+bind via default args, same-iteration behaviour preserved), `F841` unused
+locals (8 — dead assignments removed). The other 9 of the delta (S603 ×3,
+S607 ×1, S110 ×5) died with the four byte-identical `gh api` retry helpers in
+`rh1_put_file`/`rh1_apply_dual`/`rh1_infra_probe`/`rh1_mixed_probe`, which now
+share `scripts/_common.py::gh_api()` — the retry core lives in one place; the
+15 remaining private `gh`/`git`/`run` wrappers are semantic variants, not
+copies (distinct retry/rate-limit/return contracts), and stay local by design.
+Measured with the pinned 0.17.1.
+
+### Re-record 2026-10-28 (unified retry contract)
+
+702 → 690: twelve private subprocess wrappers now delegate to the shared
+`scripts/_common.py` contract (`gh_api` / new `gh_cli_retry` / new
+`gh_api_harvest` with pull_data's rate-limit semantics moved verbatim / `run`
+/ `git`), each migration a behaviour-preserving delegate or a
+strictly-protective timeout gain; per-wrapper body diffs + import probes +
+pytest smoke are the proofs. The delta is pure subprocess-call-site attrition:
+S603 −9, S607 −2, F401 −1. Three wrappers stay LOCAL as documented exceptions
+(obs_t_gold_roundtrip sandbox harness; pre_push_stale_base_check stdout-only
+git pair; envelope_check bytes-mode git) — named in the `_common` docstring.
+Measured with the pinned 0.17.1.
 
 ## The gate
 
