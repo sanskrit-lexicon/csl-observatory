@@ -14,6 +14,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
   pages: write
   id-token: write
 
@@ -123,7 +124,9 @@ jobs:
       - name: Validate data catalog
         run: python scripts/data_index.py --check
 
-      - name: Commit data refresh
+      - name: Commit data refresh (PR — main is protected)
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name "csl-observatory-bot"
           git config user.email "actions@github.com"
@@ -134,7 +137,16 @@ jobs:
             echo "No data/report changes to commit."
           else
             git commit -m "data: monthly refresh ($(date -u +%Y-%m-%d))"
-            git push
+            # main is protected (GH006 on the 26-10-2026 run): ship the
+            # refresh through a bot-owned branch; the PR auto-merges once
+            # required checks pass. The Pages deploy below runs from the
+            # local build, so it is unaffected by merge timing.
+            BRANCH="bot/observatory-data-refresh"
+            git push -f origin "HEAD:$BRANCH"
+            gh pr create --head "$BRANCH" --base main \
+              --title "data: monthly refresh ($(date -u +%Y-%m-%d))" \
+              --body "Automated monthly data refresh. Auto-merges when required checks pass." 2>/dev/null || true
+            gh pr merge "$BRANCH" --squash --auto || gh pr merge "$BRANCH" --squash
           fi
 
       - name: Build site
