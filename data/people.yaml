@@ -17,7 +17,7 @@ people:
     name: null
     orcid: null
     affiliation: null
-    repos_authored: ["ACC", "AMAR", "AP", "AP90", "ApteES", "BEN", "BHS", "BOP", "BOR", "BUR", "CAE", "CCS", "CORRECTIONS", "DCS", "FRI", "GRA", "INM", "KNA", "KOW", "KRM", "LRV", "MCI", "MD", "MW72", "MWS", "PUI", "PWG", "PWK", "SCH", "SHS", "SKD", "STC", "VCP", "VEI", "WIL"]
+    repos_authored: ["ACC", "AMAR", "AP", "AP90", "ApteES", "ArabicInSanskrit", "BEN", "BHS", "BOP", "BOR", "BUR", "CAE", "CCS", "CORRECTIONS", "DCS", "FRI", "GRA", "INM", "KNA", "KOW", "KRM", "LRV", "MCI", "MD", "MW72", "MWS", "PUI", "PWG", "PWK", "SCH", "SHS", "SKD", "STC", "VCP", "VEI", "WIL"]
     repos_contributed: []
     enrichment_status: needs_name_and_orcid
   - login: actions-user
@@ -59,7 +59,7 @@ people:
     name: "Dhaval Patel"
     orcid: null
     affiliation: null
-    repos_authored: ["csl-websanlexicon"]
+    repos_authored: ["csl-sqlite", "csl-websanlexicon"]
     repos_contributed: []
     enrichment_status: needs_orcid
   - login: DmitriSKT
@@ -122,7 +122,7 @@ people:
     name: "M\u0101rcis Gas\u016bns"
     orcid: "https://orcid.org/0000-0003-4513-884X"
     affiliation: null
-    repos_authored: ["csl-inflect", "csl-observatory", "csl-websanlexicon"]
+    repos_authored: ["csl-inflect", "csl-observatory", "csl-sqlite", "csl-websanlexicon"]
     repos_contributed: []
     enrichment_status: needs_affiliation
   - login: sanskritisampada
