@@ -149,16 +149,19 @@ the checkbox points at it. Registry check 24-09-2026: no live H### covers any
 row here; the five `done`/`shipped`-side rows (RH1/2/4/5/6, SC2–SC6, AR2/AR4,
 PR2/PR3/PR5) are closed in the tables above and stay as the record.
 
-1. [ ] **RH7 — three repo descriptions** (owner MG, due 2026-09-30, probed live
-   24-09: still missing) → GTD @DO 24-09-2026. `gh repo edit
+1. [ ] **RH7 — three repo descriptions** (owner-only: MG, due 2026-09-30 — overdue; probed
+   live 24-09 and re-probed 31-10: still missing) → GTD @DO 24-09-2026. The wording
+   of public sanskrit-lexicon org descriptions is MG's authorship call (21-09 grill
+   ruling 9–10: this row maps to his GTD card). `gh repo edit
    sanskrit-lexicon/csl-inflect --description "…"`, same for `hwnorm2` and
    `sanskrit-lexicon.github.io`, then `python scripts/repo_health.py` and note
-   the regeneration date here.
-2. [ ] **SC1 — contributor identity worksheet** (owner MG, was due 2026-09-15,
+   the regeneration date here. Once MG sets the three descriptions, the residual
+   (repo_health regen + tick) is mechanical and any lane may finish it.
+2. [ ] **SC1 — contributor identity worksheet** (owner-only: MG, was due 2026-09-15,
    overdue) → GTD @DO 24-09-2026. Confirm names/ORCIDs in
    `scripts/contributors_map.json` / `reports/contributor_identity.md` only
    where contributors consented; triage the unknowns.
-3. [ ] **RH3 — archive the last two `temp_corrections_*` repos** (gate:
+3. [ ] **RH3 — archive the last two `temp_corrections_*` repos** (human-only gate:
    funderburkjim, probed 24-09: one open issue each in
    `temp_corrections_ap90` and `temp_corrections_mw`) → GTD @WAITING 24-09-2026.
    Nothing to do until he closes his own issues; then re-run
