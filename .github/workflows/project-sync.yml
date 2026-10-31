@@ -1,10 +1,13 @@
 name: Project sync (milestone → project board)
 
-# One-off repair lane for the taxonomy audit's project axis (dict_runbook.py
-# gaps(): an issue whose milestone maps to a project must BE a member of that
-# project). The nightly agent's gh token lacks read:project, so the membership
-# side can only be repaired from CI. ADDITIONS ONLY — this never removes a
-# board item; board pruning stays a human action.
+# One-off repair lane for both audits' project axes:
+#   * dict_runbook.py gaps() — an issue whose milestone maps to a project must
+#     BE a member of that project (org boards #1-4);
+#   * tooling_runbook.py audit — every open, non-exempt tooling issue must be a
+#     member of the Tooling Roadmap (org board #9, PVT_kwDOAGGnOc4BXy9n).
+# The nightly agent's gh token lacks read:project, so the membership side can
+# only be repaired from CI. ADDITIONS ONLY — this never removes a board item;
+# board pruning stays a human action.
 
 on:
   workflow_dispatch:
@@ -112,6 +115,77 @@ jobs:
                       break
           print(f"added={added} already-members={skipped}")
           PY
+      - name: Add triageable missing project items (tooling)
+        env:
+          # Same PAT as the dict step; board membership for the tooling axis.
+          GH_TOKEN: ${{ secrets.TOOLING_AUDIT_TOKEN }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::error::TOOLING_AUDIT_TOKEN secret not set. Add a PAT with project (read+write) + repo scopes."
+            exit 1
+          fi
+          python - <<'PY'
+          import sys, json, subprocess
+          sys.stdout.reconfigure(encoding='utf-8')
+
+          ORG = "sanskrit-lexicon"
+          # Tooling Roadmap — pinned node id (tooling_runbook.py PROJECT_ID),
+          # id-compared on the issue side so an unrelated gasyoun USER board
+          # with a colliding project number can never satisfy the membership
+          # check the way a bare number-comparison would.
+          PROJ_ID = "PVT_kwDOAGGnOc4BXy9n"
+          PROJ_NUMBER = 9
+          REPOS = ["csl-observatory","MWinflect","alternateheadwords","hwnorm1",
+                   "csl-devanagari","mw-dev","csl-inflect","csl-ldev","csl-pywork",
+                   "csl-homepage","hwnorm2","csl-app","literarysource","csl-doc",
+                   "csl-newsletter","csl-westergaard","csl-kale","csl-lnum",
+                   "csl-lslink","csl-sqlite","avlinks","rvlinks","csl-whitroot",
+                   "csl-json","csl-atlas","csl-santam","sanskrit-fonts",
+                   "cologne-hugo","sanskrit-lexicon.github.io","csl-orig",
+                   "csl-apidev","csl-websanlexicon","csl-corrections",
+                   "cologne-stardict"]
+          # mirrors tooling_runbook.py EXEMPT_LABELS — keep the two in lockstep
+          EXEMPT = {"daily-corrections"}
+
+          def gh_json(args):
+              r = subprocess.run(["gh"] + args, capture_output=True, text=True)
+              if r.returncode != 0:
+                  raise SystemExit(f"gh {args[0]} failed: {r.stderr[:300]}")
+              return json.loads(r.stdout)
+
+          added = skipped = 0
+          for repo in REPOS:
+              cur = None
+              while True:
+                  after = f', after:"{cur}"' if cur else ""
+                  q = ('query($o:String!,$n:String!,$c:String){repository(owner:$o,name:$n){'
+                       'issues(first:100,after:$c,states:[OPEN]){pageInfo{hasNextPage endCursor}'
+                       'nodes{number labels(first:30){nodes{name}}'
+                       ' projectItems(first:20){nodes{project{id number}}}}}}}')
+                  d = gh_json(["api", "graphql", "-f", f"query={q}",
+                               "-f", f"o={ORG}", "-f", f"n={repo}", "-f", f"c={cur or ''}"])
+                  conn = d["data"]["repository"]["issues"]
+                  for x in conn["nodes"]:
+                      lbls = {l["name"] for l in x["labels"]["nodes"]}
+                      if lbls & EXEMPT:
+                          continue
+                      if any(p["project"]["id"] == PROJ_ID
+                             for p in x["projectItems"]["nodes"]):
+                          skipped += 1
+                          continue
+                      iid = gh_json(["api", "graphql", "-f",
+                          f'query={{repository(owner:"{ORG}",name:"{repo}"){{issue(number:{x["number"]}){{id}}}}}}']
+                      )["data"]["repository"]["issue"]["id"]
+                      gh_json(["api", "graphql", "-f",
+                          f'query=mutation{{addProjectV2ItemById(input:{{projectId:"{PROJ_ID}",contentId:"{iid}"}}){{item{{id}}}}}}'])
+                      added += 1
+                      print(f"+ {repo}#{x['number']} -> Tooling Roadmap #{PROJ_NUMBER}")
+                  if conn["pageInfo"]["hasNextPage"]:
+                      cur = conn["pageInfo"]["endCursor"]
+                  else:
+                      break
+          print(f"added={added} already-members={skipped}")
+          PY
       - name: Report
         if: always()
-        run: echo "Re-run the Dictionary taxonomy audit to verify the project axis."
+        run: echo "Re-run the Dictionary taxonomy audit and the Tooling Roadmap audit to verify both project axes."
