@@ -1,6 +1,6 @@
 # csl-observatory
 
-_Created: 07-05-2026 · Last updated: 24-09-2026_
+_Created: 07-05-2026 · Last updated: 05-11-2026_
 
 > **Live observatory for 13 years of Cologne Digital Sanskrit Lexicon (CDSL).**
 > Tracking 86 repos, 10,039 issues+PRs, 13,810 commits, and 72 contributors since 2014 — snapshot csl-obs/org-live@1.0.0, as of 2026-09-28.
@@ -35,6 +35,7 @@ The 2026-06-04 boundary cleanup is merged: dictionary-structure research belongs
 - **[Decisions needed](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/DECISIONS_NEEDED.md)** — open items blocked on a maintainer (decisions, credentials, confirmations)
 - **[AI / bot contribution policy](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/AI_CONTRIBUTION_POLICY.md)** — norms for AI-assisted commits, comments, and shared tooling changes
 - **[Contributor entry path](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/CONTRIBUTOR_ENTRY_PATH.md)** — safe setup, first tasks, taxonomy labels, and review expectations
+- **[README progress visuals](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/tools/render_readme_visuals.py)** — per-dictionary correction bars as committed static SVG for dictionary-repo READMEs (deterministic, regenerated monthly with the snapshot it cites; pilot: [MWS](https://github.com/sanskrit-lexicon/MWS))
 
 ## Findings
 
