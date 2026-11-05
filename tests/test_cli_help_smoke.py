@@ -25,6 +25,7 @@ HELP_SMOKE_TARGETS = [
     "scripts/repo_metadata_snapshot.py",
     "scripts/tooling_runbook.py",
     "scripts/lowm_estimators.py",
+    "tools/render_readme_visuals.py",
 ]
 
 
