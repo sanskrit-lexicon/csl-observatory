@@ -8,13 +8,13 @@ Purpose: close the attribution gap the bus-factor finding surfaced — every hum
 
 | Status | Contributors |
 |---|---:|
-| Confirmed name, registered ORCID, consent recorded | 0 |
+| Confirmed name, registered ORCID, consent recorded | 1 |
 | Confirmed name, registered ORCID, consent not yet recorded | 0 |
-| Confirmed name, ORCID still a placeholder | 7 |
+| Confirmed name, ORCID still a placeholder | 6 |
 | No confirmed name (and no ORCID) | 9 |
 | Bots (excluded) | 3 |
 
-**Bottom line: 0 of 16 human contributors have a registered ORCID; 0 have consent recorded.** The core group already has confirmed names; the gap is ORCID registration plus recorded public-display consent for them, and identification of the occasional contributors.
+**Bottom line: 1 of 16 human contributors have a registered ORCID; 1 have consent recorded.** The core group already has confirmed names; the gap is ORCID registration plus recorded public-display consent for them, and identification of the occasional contributors.
 
 ## Worksheet (commit authors, by contribution volume)
 
@@ -24,7 +24,7 @@ Fill `Real name`, `ORCID` and `Consent` where blank. `—` in ORCID means none o
 |---|---:|---:|---|---|---|---|---|
 | `funderburkjim` | 4,891 | 59 | maintainer | Jim Funderburk | Cologne Digital Sanskrit Dictionaries | — | — |
 | `drdhaval2785` | 3,851 | 41 | core | Dhaval Patel | Cologne Digital Sanskrit Dictionaries | — | — |
-| `gasyoun` | 3,369 | 77 | lead | Mārcis Gasūns | Cologne Digital Sanskrit Dictionaries | — | — |
+| `gasyoun` | 3,369 | 77 | lead | Mārcis Gasūns | Cologne Digital Sanskrit Dictionaries | 0000-0003-4513-884X | yes |
 | `AnnaRybakovaT` | 82 | 11 | occasional | Anna Rybakova | — | — | — |
 | `Andhrabharati` | 63 | 3 | core | Nagabhushana Rao | Andhrabharati | — | — |
 | `aumsanskrit` | 17 | 1 | contributor | Scott Rhodes | — | — | — |
@@ -47,7 +47,6 @@ These contributors are identified — they only need to register (or supply) an 
 |---|---|---|---:|
 | Jim Funderburk | `funderburkjim` | maintainer | 4,891 |
 | Dhaval Patel | `drdhaval2785` | core | 3,851 |
-| Mārcis Gasūns | `gasyoun` | lead | 3,369 |
 | Anna Rybakova | `AnnaRybakovaT` | occasional | 82 |
 | Nagabhushana Rao | `Andhrabharati` | core | 63 |
 | Scott Rhodes | `aumsanskrit` | contributor | 17 |
