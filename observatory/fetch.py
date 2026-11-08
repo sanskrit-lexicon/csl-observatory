@@ -196,6 +196,12 @@ def slim_issue(issue):
         "body_len": len(issue.get("body") or "")
     }
 
+def slim_pull(pull):
+    """Strip a pull request (REST /pulls item) into the issues-file shape."""
+    s = slim_issue(pull)
+    s["is_pr"] = True  # /pulls items carry no pull_request marker key
+    return s
+
 def slim_commit(c):
     """Strip a commit."""
     cm = c.get("commit") or {}
@@ -208,6 +214,117 @@ def slim_commit(c):
         "date": author.get("date"),
         "message_subject": (cm.get("message") or "").split("\n")[0][:200]
     }
+
+# Actions App-token pathology (2026-10-29 and 2026-11-02 refreshes): REST
+# /issues?state=all returned PRs for every repo while silently dropping all
+# 7,006 issues — same code, same URL works fine for a user token. When that
+# signature shows up, rebuild the dataset from REST /pulls + GraphQL issues
+# instead of shipping a PR-only issues.csv.
+_prev_issue_counts = None
+
+def previous_issue_count(repo):
+    """Issue count for repo in the last committed data/issues.csv; 0 when the
+    repo has no baseline there (new repo, or nothing committed yet)."""
+    global _prev_issue_counts
+    if _prev_issue_counts is None:
+        _prev_issue_counts = {}
+        path = REPO_ROOT.parent / "data" / "issues.csv"
+        if path.exists():
+            import csv as _csv
+            with open(path, encoding="utf-8") as f:
+                for row in _csv.DictReader(f):
+                    if row.get("kind") == "issue":
+                        _prev_issue_counts[row["repo"]] = \
+                            _prev_issue_counts.get(row["repo"], 0) + 1
+    return _prev_issue_counts.get(repo, 0)
+
+def fetch_graphql_issues(repo):
+    """Fetch all real issues via GraphQL, returning (slimmed, success).
+    Mirrors slim_issue's field shapes so transform.py sees one schema."""
+    items = []
+    cursor = None
+    while True:
+        query = (
+            "query($owner:String!,$name:String!,$cursor:String){"
+            "repository(owner:$owner,name:$name){"
+            "issues(first:100,after:$cursor,orderBy:{field:CREATED_AT,direction:ASC}){"
+            "pageInfo{hasNextPage endCursor}"
+            "nodes{number title state createdAt updatedAt closedAt"
+            " author{login} assignees(first:20){nodes{login}}"
+            " labels(first:50){nodes{name}} milestone{title}"
+            " comments{totalCount} body}}}}"
+        )
+        args = ["api", "graphql", "-f", f"query={query}",
+                "-f", f"owner={ORG}", "-f", f"name={repo}"]
+        if cursor:
+            args += ["-f", f"cursor={cursor}"]
+        out, ok, err = gh(*args)
+        if not ok:
+            log(f"  graphql issues err: {err[:100]}")
+            return items, False
+        try:
+            conn = json.loads(out)["data"]["repository"]["issues"]
+        except (json.JSONDecodeError, KeyError) as e:
+            log(f"  graphql issues parse err: {e}")
+            return items, False
+        for n in conn["nodes"]:
+            items.append({
+                "number": n.get("number"),
+                "title": n.get("title"),
+                "state": (n.get("state") or "").lower(),
+                "created_at": n.get("createdAt"),
+                "updated_at": n.get("updatedAt"),
+                "closed_at": n.get("closedAt"),
+                "user": (n.get("author") or {}).get("login"),
+                "assignees": [asg.get("login")
+                              for asg in (n.get("assignees") or {}).get("nodes") or []],
+                "labels": [lab.get("name")
+                           for lab in (n.get("labels") or {}).get("nodes") or []],
+                "milestone": (n.get("milestone") or {}).get("title"),
+                "comments": (n.get("comments") or {}).get("totalCount", 0),
+                "is_pr": False,
+                "body_len": len(n.get("body") or "")
+            })
+        if not conn["pageInfo"]["hasNextPage"]:
+            break
+        cursor = conn["pageInfo"]["endCursor"]
+    return items, True
+
+def fetch_issues_and_prs(repo, meta):
+    """Fetch issues + PRs into issues/<repo>.jsonl. Returns (success, reason).
+
+    REST /issues carries both kinds, but under the Actions App token it can
+    silently return PRs only. On that signature (PRs present, zero issues),
+    fall back to REST /pulls + GraphQL issues; refuse to write a PR-only
+    dataset when the repo has a committed history of real issues.
+    """
+    if meta.get("has_issues") is False:
+        log(f"  issues: skipped (has_issues=false)")
+        save_jsonl("issues", repo, [])
+        return True, ""
+    issues_raw, ok = fetch_paginated("issues", repo)
+    if not ok:
+        return False, "issues fetch failed"
+    slimmed = [slim_issue(i) for i in issues_raw]
+    n_issues = sum(1 for s in slimmed if not s["is_pr"])
+    n_prs = len(slimmed) - n_issues
+    if n_issues == 0 and n_prs > 0:
+        log("  issues: REST /issues returned PRs but zero issues — App-token "
+            "pathology; falling back to /pulls + GraphQL issues")
+        gql, gql_ok = fetch_graphql_issues(repo)
+        pulls_raw, pulls_ok = fetch_paginated("pulls", repo)
+        if not gql_ok or not pulls_ok:
+            return False, "issues fallback fetch failed"
+        slimmed = sorted(gql + [slim_pull(p) for p in pulls_raw],
+                         key=lambda s: s["number"] or 0)
+        n_issues = sum(1 for s in slimmed if not s["is_pr"])
+        n_prs = len(slimmed) - n_issues
+        if n_issues == 0 and n_prs > 0 and previous_issue_count(repo) > 0:
+            return False, ("issues pathology: PRs fetched but zero issues via "
+                           "REST and GraphQL (repo had issues in the last snapshot)")
+    save_jsonl("issues", repo, slimmed)
+    log(f"  issues: {n_issues} issues + {n_prs} PRs = {len(slimmed)} total")
+    return True, ""
 
 def fetch_repo_commits_since(repo, since="2014-01-01"):
     """Fetch commits since a date, returning (items, success)."""
@@ -265,19 +382,10 @@ def process_repo(repo, idx, total, since):
     save_jsonl("releases", repo, rels)
     log(f"  releases: {len(rels)}")
 
-    # Issues + PRs (both come from /issues endpoint)
-    if meta.get("has_issues") is False:
-        log(f"  issues: skipped (has_issues=false)")
-        save_jsonl("issues", repo, [])
-    else:
-        issues_raw, ok = fetch_paginated("issues", repo)
-        if not ok:
-            return False, "issues fetch failed"
-        slimmed = [slim_issue(i) for i in issues_raw]
-        save_jsonl("issues", repo, slimmed)
-        n_issues = sum(1 for s in slimmed if not s["is_pr"])
-        n_prs = sum(1 for s in slimmed if s["is_pr"])
-        log(f"  issues: {n_issues} issues + {n_prs} PRs = {len(slimmed)} total")
+    # Issues + PRs (both normally come from /issues endpoint)
+    ok, reason = fetch_issues_and_prs(repo, meta)
+    if not ok:
+        return False, reason
 
     # Commits
     commits_raw, ok = fetch_repo_commits_since(repo, since)
