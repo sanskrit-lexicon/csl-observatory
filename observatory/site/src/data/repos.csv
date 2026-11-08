@@ -49,7 +49,7 @@ csl-corrections,Replacement for sanskrit-lexicon/CORRECTIONS. User corrections t
 csl-devanagari,Convert SLP1 data from csl-orig into Devanagari for easy proofreading.,Python,303103,2021-09-02T18:18:17Z,2026-10-30T09:02:16Z,2026-10-30T09:02:12Z,main,0,1,19,false,CC-BY-SA-4.0,"Python,Shell"
 csl-doc,Development version of cologne sanskrit lexicon 'documentation' ,HTML,186112,2018-10-24T21:56:19Z,2026-10-26T23:40:26Z,2026-10-26T23:40:24Z,main,1,0,2,false,GPL-3.0,"HTML,JavaScript,CSS,Python,Batchfile,Makefile"
 csl-homepage,Code that generates the homepage of http://www.sanskrit-lexicon.uni-koeln.de/,Python,720,2019-03-21T01:18:14Z,2026-10-14T05:36:53Z,2026-10-14T05:36:49Z,main,0,0,1,false,CC-BY-SA-4.0,"Python,PHP,HTML,CSS,Shell"
-csl-inflect,,Python,5476,2019-11-28T01:01:33Z,2026-10-26T23:40:39Z,2026-10-26T23:40:37Z,main,3,2,13,false,LGPL-3.0,"Python,PHP,HTML,Shell,JavaScript,CSS"
+csl-inflect,Declension and conjugation table generator for Sanskrit headwords (CDSL processing tool),Python,5476,2019-11-28T01:01:33Z,2026-10-26T23:40:39Z,2026-10-26T23:40:37Z,main,3,2,13,false,LGPL-3.0,"Python,PHP,HTML,Shell,JavaScript,CSS"
 csl-json,Implementation of Json format of Cologne dictionary data.,Python,363269,2021-08-16T03:44:17Z,2026-10-26T23:40:46Z,2026-10-26T23:40:44Z,main,0,2,0,false,CC-BY-SA-4.0,"Python,Shell"
 csl-kale,Scanned edition of *Kale Higher Sanskrit Grammar*,JavaScript,489332,2019-11-09T00:43:45Z,2026-10-26T23:40:52Z,2026-10-26T23:40:50Z,main,2,0,2,false,GPL-3.0,"JavaScript,Python,PHP,CSS,Hack,HTML"
 csl-ldev,lnum wise entry for data in csl-devanagari for Devanagari correction submission.,,365235,2021-10-05T03:09:17Z,2026-10-26T23:40:58Z,2026-10-26T23:40:55Z,main,1,9,7,false,CC-BY-SA-4.0,
@@ -64,12 +64,12 @@ csl-websanlexicon,CDSL web frontend (PHP + SQLite) for the Cologne Digital Sansk
 csl-westergaard,Scanned image display for Westergaard roots,JavaScript,13777,2019-11-08T20:38:08Z,2026-10-27T00:04:20Z,2026-10-27T00:04:18Z,main,0,0,2,false,GPL-3.0,"JavaScript,CSS,PHP,Perl,HTML"
 csl-whitroot,"scanned eidtion of *The roots, verb-forms, and primary derivatives of the Sanskrit Language* by William Dwight Whitney.",JavaScript,54750,2019-11-08T21:19:27Z,2026-10-27T00:04:26Z,2026-10-27T00:04:23Z,main,1,1,1,false,GPL-3.0,"JavaScript,CSS,PHP,HTML"
 hwnorm1,Headword normalization for Cologne dictionaries,HTML,126435,2015-11-19T05:22:04Z,2026-10-27T00:04:46Z,2026-10-27T00:04:42Z,main,0,0,17,false,GPL-3.0,"HTML,Python,Shell,PHP"
-hwnorm2,,Python,7255,2020-02-01T21:58:15Z,2026-10-27T00:04:51Z,2026-10-27T00:04:48Z,main,0,0,4,false,GPL-3.0,"Python,Shell,PHP"
+hwnorm2,Cross-dictionary headword normalization for the Cologne Sanskrit lexicons (CDSL processing tool),Python,7255,2020-02-01T21:58:15Z,2026-10-27T00:04:51Z,2026-10-27T00:04:48Z,main,0,0,4,false,GPL-3.0,"Python,Shell,PHP"
 literarysource,A repository to study literary sources in CDSL and find their scanned copies to link in the display program.,,246,2022-02-15T02:12:03Z,2026-10-26T23:16:04Z,2026-10-26T23:16:00Z,main,2,0,3,false,CC-BY-SA-4.0,
 mw-dev,"Development version of MW dictionary, to collaborate with Andhrabharati",PHP,182582,2023-01-19T13:10:47Z,2026-10-27T00:04:58Z,2026-10-27T00:04:56Z,main,1,0,17,false,CC-BY-SA-4.0,"PHP,JavaScript,HTML,Python,CSS,Hack,Shell"
 rvlinks,Github pages repository for hosting links to verses of Rg Veda,HTML,13968,2018-08-29T22:07:20Z,2026-10-27T00:05:30Z,2026-10-27T00:05:27Z,gh-pages,0,3,1,false,GPL-3.0,"HTML,Python,CSS,Shell"
 sanskrit-fonts,Repository for hosting web fonts used with Sanskrit,,601,2018-09-05T03:39:54Z,2026-10-27T00:05:36Z,2026-10-27T00:05:33Z,gh-pages,1,1,0,false,CC-BY-SA-4.0,
-sanskrit-lexicon.github.io,,HTML,5470,2015-11-24T11:53:23Z,2026-10-27T00:05:41Z,2026-10-27T00:05:40Z,main,1,0,0,false,CC-BY-SA-4.0,"HTML,Python,JavaScript,CSS"
+sanskrit-lexicon.github.io,"Static project pages for the Sanskrit Lexicon org, served at sanskrit-lexicon.github.io",HTML,5470,2015-11-24T11:53:23Z,2026-10-27T00:05:41Z,2026-10-27T00:05:40Z,main,1,0,0,false,CC-BY-SA-4.0,"HTML,Python,JavaScript,CSS"
 santamlegacy,php version of Cologne-,,4,2022-12-08T17:17:29Z,2026-06-19T20:53:56Z,2026-06-14T04:52:32Z,main,0,0,0,true,,
 temp_corrections_acc,Temporary repository for english word corrections on acc dictionary,,19065,2021-01-23T01:15:04Z,2026-06-19T20:50:47Z,2026-06-14T04:52:46Z,main,0,0,0,true,,
 temp_corrections_ae,Temporary repository for Apte English-Sanskrit corrections,,15156,2021-01-10T19:01:49Z,2026-06-19T20:51:03Z,2026-06-14T04:51:28Z,main,0,0,0,true,,
