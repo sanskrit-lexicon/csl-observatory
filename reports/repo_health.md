@@ -46,8 +46,8 @@ Disposable-looking repositories that are still active. Consider archiving so the
 
 | Repository | Open issues | Days since push |
 |---|---:|---:|
-| temp_corrections_ap90 | 1 | 49 |
-| temp_corrections_mw | 1 | 49 |
+| temp_corrections_ap90 | 1 | 12 |
+| temp_corrections_mw | 1 | 12 |
 
 ## Staleness
 
@@ -57,82 +57,82 @@ No stale repositories — every repo was pushed within the last 180 days. The mo
 
 | Repository | Flags | License | Branch | Open issues | Days idle |
 |---|---|---|---|---:|---:|
-| temp_corrections_ap90 | no-license|cleanup-candidate | — | main | 1 | 49 |
-| temp_corrections_mw | no-license|cleanup-candidate | — | main | 1 | 49 |
-| MWS | legacy-branch | CC-BY-SA-4.0 | master | 38 | 45 |
-| rvlinks | branch:gh-pages | GPL-3.0 | gh-pages | 1 | 64 |
-| sanskrit-fonts | branch:gh-pages | CC-BY-SA-4.0 | gh-pages | 0 | 42 |
+| temp_corrections_ap90 | no-license|cleanup-candidate | — | main | 1 | 12 |
+| temp_corrections_mw | no-license|cleanup-candidate | — | main | 1 | 12 |
+| MWS | legacy-branch | CC-BY-SA-4.0 | master | 39 | 6 |
+| rvlinks | branch:gh-pages | GPL-3.0 | gh-pages | 1 | 12 |
+| sanskrit-fonts | branch:gh-pages | CC-BY-SA-4.0 | gh-pages | 0 | 12 |
 | santamlegacy | no-license | — | main | 0 | 147 |
 | temp_corrections_acc | no-license | — | main | 0 | 147 |
 | temp_corrections_ae | no-license | — | main | 0 | 147 |
 | test_cologne_push | no-license | — | main | 0 | 147 |
-| ACC | — | CC-BY-SA-4.0 | main | 9 | 62 |
-| AMAR | — | GPL-2.0 | main | 2 | 63 |
-| AP | — | CC-BY-SA-4.0 | main | 11 | 64 |
-| AP90 | — | GPL-3.0 | main | 16 | 63 |
-| ApteES | — | CC-BY-SA-4.0 | main | 2 | 64 |
-| ArabicInSanskrit | — | CC-BY-SA-4.0 | main | 0 | 64 |
-| BEN | — | CC-BY-SA-4.0 | main | 5 | 62 |
-| BHS | — | CC-BY-SA-4.0 | main | 4 | 62 |
-| BOP | — | CC-BY-SA-4.0 | main | 1 | 64 |
-| BOR | — | CC-BY-SA-4.0 | main | 3 | 64 |
-| BUR | — | CC-BY-SA-4.0 | main | 2 | 50 |
-| CAE | — | CC-BY-SA-4.0 | main | 3 | 62 |
-| CCS | — | CC-BY-SA-4.0 | main | 2 | 74 |
-| COLOGNE | — | GPL-3.0 | main | 187 | 54 |
-| CORRECTIONS | — | CC-BY-SA-4.0 | main | 83 | 54 |
-| DCS | — | CC-BY-SA-4.0 | main | 4 | 64 |
-| FRI | — | CC-BY-SA-4.0 | main | 3 | 64 |
-| GRA | — | CC-BY-SA-4.0 | main | 11 | 49 |
-| GreekInSanskrit | — | CC-BY-SA-4.0 | main | 1 | 64 |
-| INM | — | CC-BY-SA-4.0 | main | 3 | 64 |
-| KNA | — | CC-BY-SA-4.0 | main | 1 | 64 |
-| KOW | — | CC-BY-SA-4.0 | main | 1 | 64 |
-| KRM | — | CC-BY-SA-4.0 | main | 3 | 64 |
-| LRV | — | CC-BY-SA-4.0 | main | 3 | 62 |
-| MCI | — | CC-BY-SA-4.0 | main | 1 | 64 |
-| MD | — | CC-BY-SA-4.0 | main | 6 | 64 |
-| MW72 | — | CC-BY-SA-4.0 | main | 1 | 64 |
-| MWinflect | — | CC-BY-SA-4.0 | main | 48 | 64 |
-| PUI | — | CC-BY-SA-4.0 | main | 2 | 64 |
-| PWG | — | CC-BY-SA-4.0 | main | 33 | 44 |
-| PWK | — | CC-BY-SA-4.0 | main | 38 | 54 |
-| SCH | — | CC-BY-SA-4.0 | main | 4 | 63 |
-| SHS | — | CC-BY-SA-4.0 | main | 3 | 62 |
-| SKD | — | CC-BY-SA-4.0 | main | 11 | 62 |
-| STC | — | CC-BY-SA-4.0 | main | 2 | 62 |
-| VCP | — | CC-BY-SA-4.0 | main | 19 | 64 |
-| VEI | — | CC-BY-SA-4.0 | main | 1 | 62 |
-| WIL | — | CC-BY-SA-4.0 | main | 13 | 64 |
-| Wil-YAT | — | CC-BY-SA-4.0 | main | 0 | 62 |
-| alternateheadwords | — | CC-BY-SA-4.0 | main | 18 | 64 |
-| avlinks | — | GPL-3.0 | main | 1 | 64 |
-| cologne-hugo | — | GPL-3.0 | main | 0 | 64 |
-| cologne-stardict | — | MIT | main | 4 | 42 |
-| csl-apidev | — | GPL-3.0 | main | 19 | 44 |
-| csl-app | — | GPL-3.0 | main | 1 | 64 |
-| csl-corrections | — | GPL-3.0 | main | 55 | 41 |
-| csl-devanagari | — | CC-BY-SA-4.0 | main | 15 | 41 |
-| csl-doc | — | GPL-3.0 | main | 2 | 64 |
-| csl-homepage | — | CC-BY-SA-4.0 | main | 1 | 43 |
-| csl-inflect | — | LGPL-3.0 | main | 12 | 54 |
-| csl-json | — | CC-BY-SA-4.0 | main | 0 | 54 |
-| csl-kale | — | GPL-3.0 | main | 1 | 64 |
-| csl-ldev | — | CC-BY-SA-4.0 | main | 7 | 54 |
-| csl-lnum | — | CC-BY-SA-4.0 | main | 1 | 54 |
-| csl-lslink | — | CC-BY-SA-4.0 | main | 2 | 64 |
-| csl-newsletter | — | GPL-3.0 | main | 2 | 62 |
-| csl-observatory | — | GPL-3.0 | main | 27 | 41 |
-| csl-orig | — | CC-BY-SA-4.0 | main | 41 | 42 |
-| csl-pywork | — | GPL-3.0 | main | 6 | 44 |
-| csl-sqlite | — | GPL-3.0 | main | 1 | 64 |
-| csl-websanlexicon | — | GPL-3.0 | main | 17 | 44 |
-| csl-westergaard | — | GPL-3.0 | main | 1 | 64 |
-| csl-whitroot | — | GPL-3.0 | main | 0 | 64 |
-| hwnorm1 | — | GPL-3.0 | main | 17 | 62 |
-| hwnorm2 | — | GPL-3.0 | main | 4 | 64 |
-| literarysource | — | CC-BY-SA-4.0 | main | 3 | 64 |
-| mw-dev | — | CC-BY-SA-4.0 | main | 17 | 64 |
-| sanskrit-lexicon.github.io | — | CC-BY-SA-4.0 | main | 0 | 64 |
+| ACC | — | CC-BY-SA-4.0 | main | 9 | 12 |
+| AMAR | — | GPL-2.0 | main | 2 | 12 |
+| AP | — | CC-BY-SA-4.0 | main | 11 | 13 |
+| AP90 | — | GPL-3.0 | main | 15 | 20 |
+| ApteES | — | CC-BY-SA-4.0 | main | 2 | 12 |
+| ArabicInSanskrit | — | CC-BY-SA-4.0 | main | 0 | 12 |
+| BEN | — | CC-BY-SA-4.0 | main | 5 | 12 |
+| BHS | — | CC-BY-SA-4.0 | main | 4 | 12 |
+| BOP | — | CC-BY-SA-4.0 | main | 1 | 13 |
+| BOR | — | CC-BY-SA-4.0 | main | 3 | 13 |
+| BUR | — | CC-BY-SA-4.0 | main | 1 | 13 |
+| CAE | — | CC-BY-SA-4.0 | main | 3 | 12 |
+| CCS | — | CC-BY-SA-4.0 | main | 2 | 12 |
+| COLOGNE | — | GPL-3.0 | main | 187 | 12 |
+| CORRECTIONS | — | CC-BY-SA-4.0 | main | 84 | 12 |
+| DCS | — | CC-BY-SA-4.0 | main | 4 | 12 |
+| FRI | — | CC-BY-SA-4.0 | main | 3 | 13 |
+| GRA | — | CC-BY-SA-4.0 | main | 10 | 13 |
+| GreekInSanskrit | — | CC-BY-SA-4.0 | main | 1 | 12 |
+| INM | — | CC-BY-SA-4.0 | main | 3 | 13 |
+| KNA | — | CC-BY-SA-4.0 | main | 1 | 12 |
+| KOW | — | CC-BY-SA-4.0 | main | 1 | 12 |
+| KRM | — | CC-BY-SA-4.0 | main | 3 | 13 |
+| LRV | — | CC-BY-SA-4.0 | main | 3 | 12 |
+| MCI | — | CC-BY-SA-4.0 | main | 1 | 12 |
+| MD | — | CC-BY-SA-4.0 | main | 6 | 13 |
+| MW72 | — | CC-BY-SA-4.0 | main | 1 | 13 |
+| MWinflect | — | CC-BY-SA-4.0 | main | 48 | 12 |
+| PUI | — | CC-BY-SA-4.0 | main | 2 | 12 |
+| PWG | — | CC-BY-SA-4.0 | main | 32 | 7 |
+| PWK | — | CC-BY-SA-4.0 | main | 38 | 7 |
+| SCH | — | CC-BY-SA-4.0 | main | 4 | 12 |
+| SHS | — | CC-BY-SA-4.0 | main | 3 | 12 |
+| SKD | — | CC-BY-SA-4.0 | main | 11 | 12 |
+| STC | — | CC-BY-SA-4.0 | main | 2 | 12 |
+| VCP | — | CC-BY-SA-4.0 | main | 19 | 12 |
+| VEI | — | CC-BY-SA-4.0 | main | 1 | 12 |
+| WIL | — | CC-BY-SA-4.0 | main | 13 | 12 |
+| Wil-YAT | — | CC-BY-SA-4.0 | main | 0 | 12 |
+| alternateheadwords | — | CC-BY-SA-4.0 | main | 18 | 12 |
+| avlinks | — | GPL-3.0 | main | 1 | 12 |
+| cologne-hugo | — | GPL-3.0 | main | 0 | 12 |
+| cologne-stardict | — | MIT | main | 3 | 12 |
+| csl-apidev | — | GPL-3.0 | main | 19 | 12 |
+| csl-app | — | GPL-3.0 | main | 1 | 12 |
+| csl-corrections | — | GPL-3.0 | main | 62 | 6 |
+| csl-devanagari | — | CC-BY-SA-4.0 | main | 19 | 9 |
+| csl-doc | — | GPL-3.0 | main | 2 | 12 |
+| csl-homepage | — | CC-BY-SA-4.0 | main | 1 | 25 |
+| csl-inflect | — | LGPL-3.0 | main | 13 | 12 |
+| csl-json | — | CC-BY-SA-4.0 | main | 0 | 12 |
+| csl-kale | — | GPL-3.0 | main | 2 | 12 |
+| csl-ldev | — | CC-BY-SA-4.0 | main | 7 | 12 |
+| csl-lnum | — | CC-BY-SA-4.0 | main | 1 | 12 |
+| csl-lslink | — | CC-BY-SA-4.0 | main | 2 | 12 |
+| csl-newsletter | — | GPL-3.0 | main | 2 | 12 |
+| csl-observatory | — | GPL-3.0 | main | 20 | 6 |
+| csl-orig | — | CC-BY-SA-4.0 | main | 44 | 7 |
+| csl-pywork | — | GPL-3.0 | main | 7 | 6 |
+| csl-sqlite | — | GPL-3.0 | main | 1 | 12 |
+| csl-websanlexicon | — | GPL-3.0 | main | 15 | 7 |
+| csl-westergaard | — | GPL-3.0 | main | 2 | 12 |
+| csl-whitroot | — | GPL-3.0 | main | 1 | 12 |
+| hwnorm1 | — | GPL-3.0 | main | 17 | 12 |
+| hwnorm2 | — | GPL-3.0 | main | 4 | 12 |
+| literarysource | — | CC-BY-SA-4.0 | main | 3 | 12 |
+| mw-dev | — | CC-BY-SA-4.0 | main | 17 | 12 |
+| sanskrit-lexicon.github.io | — | CC-BY-SA-4.0 | main | 0 | 12 |
 
 *Object of analysis: GitHub repositories — in scope per `docs/BOUNDARY_RULES.md`.*
