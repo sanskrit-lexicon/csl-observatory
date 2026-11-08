@@ -6,7 +6,7 @@ Last updated: 2026-09-24
 Horizon: 2026-06 to 2027-06
 
 > **Truth-pass 24-09-2026 (OxAlpha `opencode/z-ai/glm-5.3-flash`, [H5363](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H5363-OxAlpha_csl-observatory_rm-verdict-roadmap_24.09.26.md), roadmap close-out wave 1 / epic E015). Verdict: REFRESH.**
-> Live unminted work remains, so the file stays active: RH7 and SC1 are real, dated, unshipped and covered by no live H### (registry-checked 24-09-2026). Live probes 24-09: `csl-inflect`, `hwnorm2` and `sanskrit-lexicon.github.io` all still carry no repo description (RH7 live); `temp_corrections_ap90` and `temp_corrections_mw` still hold one open funderburkjim issue each (RH3 gate intact). The «Next Implementation Session» section is rewritten below as **What Is Left** gated checkboxes; each human gate has one dated `MG @DO`/`@WAITING` row in [Uprava GTD_NEXT_ACTIONS.md](https://github.com/gasyoun/Uprava/blob/main/GTD_NEXT_ACTIONS.md) and the checkbox points at it (rulings 9–10 of the 21-09-2026 close-out grill). Everything already `done` in the tables below stays as the shipped record.
+> Live unminted work remains, so the file stays active: RH7 and SC1 are real, dated, unshipped and covered by no live H### (registry-checked 24-09-2026). Live probes 24-09: `csl-inflect`, `hwnorm2` and `sanskrit-lexicon.github.io` all still carry no repo description (RH7 live); `temp_corrections_ap90` and `temp_corrections_mw` still hold one open funderburkjim issue each (RH3 gate intact). The «Next Implementation Session» section is rewritten below as **What Is Left** gated checkboxes; each human gate has one dated `MG @DO`/`@WAITING` row in [Uprava GTD_NEXT_ACTIONS.md](https://github.com/gasyoun/Uprava/blob/main/GTD_NEXT_ACTIONS.md) and the checkbox points at it (rulings 9–10 of the 21-09-2026 close-out grill). Everything already `done` in the tables below stays as the shipped record. **Update 08-11-2026: RH7 shipped** (three org descriptions applied live from MG-approved wording; `repo_health.py` regenerated — missing-description 3 → 0; see What-Is-Left checkbox 1) — **SC1 is now the only unminted work in this file.**
 
 > **Truth-pass 27-08-2026 (Opus 5 `claude-opus-5`, [H3002](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H3002-Opus_multi_stale-roadmap-s4-cologne-ask-replan_17.08.26.md), stale-roadmap slice 4).**
 > Statuses only — no new items, no re-scoping. Two Q3 rows (RH1, RH3) still read `blocked`
@@ -66,7 +66,7 @@ belong in sibling projects or archived planning docs.
 | RH4 | Add a standard `.gitattributes` / line-ending policy to active tooling repos. | Codex | done | 2026-07-31 | All 34 repos in `.github/workflows/tooling-audit.yml` REPOS carry `eol=lf` `.gitattributes` — verified and rolled out 2026-07-27 via [H1542](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H1542-Sonnet_csl-observatory_rh4-gitattributes-lf-rollout_23.07.26.md). |
 | RH5 | Add no-BOM, UTF-8, NFC, and XML parse guards for dictionary-source change paths. | Codex | done | 2026-08-15 | CI template exists and is piloted on `csl-orig` or the owning tooling repo. |
 | RH6 | Finish issue-taxonomy rollout across remaining repos. | MG + Codex | done | 2026-08-31 | Rollout is verified complete; ongoing taxonomy/project drift is handled by the monthly maintainer review checklist. |
-| RH7 | Normalize missing descriptions and basic metadata for the top flagged repos. | MG | active | 2026-09-30 | `reports/repo_health.md` missing-description list is empty or justified. **Target re-dated 27-08-2026** — the 2026-07-31 target passed unmet. Nearly there: the 2026-08-24 regeneration shows **3 / 77** repos still without a description (`csl-inflect`, `hwnorm2`, `sanskrit-lexicon.github.io`), so this is three one-line `gh repo edit --description` calls plus a report refresh, not a project. |
+| RH7 | Normalize missing descriptions and basic metadata for the top flagged repos. | MG | done | 2026-11-08 | `reports/repo_health.md` missing-description list is empty or justified. **DONE 08-11-2026:** the three one-line `gh repo edit --description` calls applied (MG-approved wording) and `repo_health.py` regenerated — missing-description list empty (0 / 77; clean 65 → 68). *(History: target re-dated 27-08-2026 after the 2026-07-31 target passed unmet; the 2026-08-24 regeneration showed 3 / 77 repos still without a description — `csl-inflect`, `hwnorm2`, `sanskrit-lexicon.github.io`.)* |
 
 Evidence to keep current: `reports/repo_health.md`,
 `docs/hygiene_issues_draft.md`, `docs/RUNBOOK_NOTES.md`,
@@ -149,14 +149,20 @@ the checkbox points at it. Registry check 24-09-2026: no live H### covers any
 row here; the five `done`/`shipped`-side rows (RH1/2/4/5/6, SC2–SC6, AR2/AR4,
 PR2/PR3/PR5) are closed in the tables above and stay as the record.
 
-1. [ ] **RH7 — three repo descriptions** (owner-only: MG, due 2026-09-30 — overdue; probed
-   live 24-09 and re-probed 31-10: still missing) → GTD @DO 24-09-2026. The wording
-   of public sanskrit-lexicon org descriptions is MG's authorship call (21-09 grill
-   ruling 9–10: this row maps to his GTD card). `gh repo edit
-   sanskrit-lexicon/csl-inflect --description "…"`, same for `hwnorm2` and
-   `sanskrit-lexicon.github.io`, then `python scripts/repo_health.py` and note
-   the regeneration date here. Once MG sets the three descriptions, the residual
-   (repo_health regen + tick) is mechanical and any lane may finish it.
+1. [x] **RH7 — three repo descriptions** — **DONE 08-11-2026.** MG approved the three
+   one-liners (08-11-2026 drain session, wording draft approved by his go); applied
+   live via `gh repo edit sanskrit-lexicon/<repo> --description "…"` and re-verified
+   via `gh repo view` the same day for `csl-inflect` ("Declension and conjugation
+   table generator for Sanskrit headwords (CDSL processing tool)"), `hwnorm2`
+   ("Cross-dictionary headword normalization for the Cologne Sanskrit lexicons
+   (CDSL processing tool)") and `sanskrit-lexicon.github.io` ("Static project pages
+   for the Sanskrit Lexicon org, served at sanskrit-lexicon.github.io").
+   `observatory/site/src/data/repos.csv` descriptions patched from the live values,
+   then `python scripts/repo_health.py` regenerated 08-11-2026: **no-description
+   3 → 0** (clean 65 → 68) — the RH7 done-condition ("missing-description list is
+   empty or justified") is met empty. *(was: owner-only: MG, due 2026-09-30 —
+   overdue; probed live 24-09 and re-probed 31-10: still missing; GTD @DO
+   24-09-2026 — closed by this tick.)*
 2. [ ] **SC1 — contributor identity worksheet** (owner-only: MG, was due 2026-09-15,
    overdue) → GTD @DO 24-09-2026. Confirm names/ORCIDs in
    `scripts/contributors_map.json` / `reports/contributor_identity.md` only
