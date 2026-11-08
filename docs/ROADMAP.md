@@ -167,6 +167,15 @@ PR2/PR3/PR5) are closed in the tables above and stay as the record.
    overdue) → GTD @DO 24-09-2026. Confirm names/ORCIDs in
    `scripts/contributors_map.json` / `reports/contributor_identity.md` only
    where contributors consented; triage the unknowns.
+   **Progress 08-11-2026:** lead row confirmed (MG's own ORCID
+   `0000-0003-4513-884X` + explicit consent, recorded in
+   `scripts/contributors_map.json`; report regenerated — complete 0 → 1,
+   needs-orcid 7 → 6). Consent/identity request posted to all 15 remaining
+   contributors as [issue
+   #306](https://github.com/sanskrit-lexicon/csl-observatory/issues/306)
+   (reply + name + ORCID + explicit yes/no; deadline 2026-12-08, then the
+   triage rule records *accepted unidentified / consent not given*). This
+   checkbox closes when the 15 rows resolve via replies or the dated triage.
 3. [ ] **RH3 — archive the last two `temp_corrections_*` repos** (human-only gate:
    funderburkjim, probed 24-09: one open issue each in
    `temp_corrections_ap90` and `temp_corrections_mw`) → GTD @WAITING 24-09-2026.
