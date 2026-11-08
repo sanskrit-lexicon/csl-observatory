@@ -2,6 +2,7 @@
 mutated one. A gate that only ever passes proves nothing, so every refusal path
 gets a positive control here."""
 import json
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -63,13 +64,24 @@ def test_snapshots_disagree_which_is_why_the_gate_exists():
 
 def test_mutated_number_is_refused_and_named(mutate):
     """Cross-snapshot contamination: the offline report quoting the live commit count."""
+    # Anchor on whatever the committed report currently says — the monthly
+    # refresh rewrites this number, so a literal anchor here would rot every
+    # month (it did, on the 2026-11-08 refresh).
+    text = (ROOT / 'reports/velocity_timeline.md').read_text(encoding='utf-8')
+    current = re.search(
+        r'\| Commits \(all repos, all years\) \| (?P<commits>[\d,]+) \|',
+        text).group('commits')
+    live = hc.snapshots(ROOT)[hc.LIVE_ID].values['commits']
+    other = f'{live:,}'
+    if other == current:  # snapshots converged for this value — perturb instead
+        other = f'{int(current.replace(",", "")) + 1:,}'
     mutate('reports/velocity_timeline.md',
-           '| Commits (all repos, all years) | 13,299 |',
-           '| Commits (all repos, all years) | 13,810 |')
+           f'| Commits (all repos, all years) | {current} |',
+           f'| Commits (all repos, all years) | {other} |')
     findings = hc.check(ROOT)
     assert any(f.claim_id == 'velocity.headline.commits' and f.line == 9 for f in findings), findings
     message = str(next(f for f in findings if f.claim_id == 'velocity.headline.commits'))
-    assert '13,810' in message and '13,299' in message
+    assert other in message and current in message
     assert 'csl-obs/org@1.0.0' in message
 
 

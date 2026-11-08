@@ -35,9 +35,9 @@ metadata** (licenses and scholarly identifiers largely absent).
 | Lens | Headline | What it says |
 |---|---|---|
 | **Concentration** (`bus_factor`) | 3 people = 98.5% of contributions; **63/77 repos have bus factor 1**; Gini 0.822 | The work is carried by a tiny core; most repos have no second author for the majority of their history. |
-| **Activity** (`velocity_timeline`) | 13,299 commits / 5,667 issues; peak year drew only **12 distinct authors**; PRs negligible until 2026; backlog peaked 1,743 (2025) → 822 (2026) | Throughput is volume-per-person, not a growing base. Work comes in **correction campaigns**, not steady-state maintenance. |
+| **Activity** (`velocity_timeline`) | 13,834 commits / 5,738 issues; peak year drew only **12 distinct authors**; PRs negligible until 2026; backlog peaked 1,743 (2025) → 847 (2026) | Throughput is volume-per-person, not a growing base. Work comes in **correction campaigns**, not steady-state maintenance. |
 | **Process** (`taxonomy_adoption`) | **86% of issues typed, 64% fully conformant**; adoption climbed to a 92% peak in 2025 | Governance was retrofitted across the whole corpus and is now strong — with a tail of cleanup debt (324 over-typed issues, 54 stray labels). |
-| **Hygiene** (`repo_health` + `contributor_identity`) | **53% of repos have no license**; 46/76 default to `master`; **0 of 16 authors have a registered ORCID** | The metadata layer that makes the work FAIR and citable is thin. |
+| **Hygiene** (`repo_health` + `contributor_identity`) | **53% of repos have no license**; 46/76 default to `master`; **1 of 16 authors have a registered ORCID** | The metadata layer that makes the work FAIR and citable is thin. |
 
 ## The cross-cutting tension: productive but fragile
 
