@@ -124,15 +124,24 @@ jobs:
       - name: Validate data catalog
         run: python scripts/data_index.py --check
 
+      - name: Sync quoted headline numbers (README.md, STATUS.md)
+        run: |
+          # Last data step, per update_headline_numbers.py's own contract
+          # ("run as the last step of the refresh pipeline"): re-quote README
+          # and STATUS from the snapshot committed below, so the merged state
+          # passes the headline-claims gate instead of drifting from it.
+          python scripts/update_headline_numbers.py
+
       - name: Commit data refresh (PR — main is protected)
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name "csl-observatory-bot"
           git config user.email "actions@github.com"
-          # Commit the transformed CSVs, the copied site data, and the
-          # regenerated finding reports/CSVs. Raw JSONL snapshots are gitignored.
-          git add data/ observatory/site/src/data/ reports/
+          # Commit the transformed CSVs, the copied site data, the
+          # regenerated finding reports/CSVs, and the headline-synced
+          # README/STATUS. Raw JSONL snapshots are gitignored.
+          git add data/ observatory/site/src/data/ reports/ README.md STATUS.md
           if git diff --staged --quiet; then
             echo "No data/report changes to commit."
           else
