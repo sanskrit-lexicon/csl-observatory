@@ -46,10 +46,10 @@ The headline picture is in **[`reports/synthesis.md`](https://github.com/sanskri
 | Finding | Report | Headline |
 |---|---|---|
 | Contributor concentration | [`bus_factor.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/bus_factor.md) | Core trio = 98.5%; 63/77 repos have bus factor 1; Gini 0.822 |
-| Repository health | [`repo_health.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/repo_health.md) | 6/77 repos with no license (RH3 temp/archive candidates); 1/77 default to `master`; 65/77 fully clean |
+| Repository health | [`repo_health.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/repo_health.md) | 6/77 repos with no license (RH3 temp/archive candidates); 1/77 default to `master`; 68/77 fully clean |
 | Issue-taxonomy adoption | [`taxonomy_adoption.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/taxonomy_adoption.md) | 86% typed, 64% fully conformant; 92% peak in 2025; 1,190 issues (21%) carry a stray label |
-| Velocity & health timeline | [`velocity_timeline.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/velocity_timeline.md) | 13,299 commits; peak 12 authors/yr (2026); backlog 1,743 (2025) → 822 (2026) |
-| Contributor identity | [`contributor_identity.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/contributor_identity.md) | 0/16 authors have a registered ORCID |
+| Velocity & health timeline | [`velocity_timeline.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/velocity_timeline.md) | 13,834 commits; peak 12 authors/yr (2026); backlog 1,743 (2025) → 847 (2026) |
+| Contributor identity | [`contributor_identity.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/contributor_identity.md) | 1/16 authors have a registered ORCID |
 | **Error typology (OBS-T)** | [`obs_t_typology.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_t_typology.md) | 52,498 corrections, two axes — location (sense 52.7% · markup 17.5% · headword 17.3%) × edit-type (median edit distance 2; 63% ≤2 chars); cross-dict V=0.432 |
 
 Actionable follow-ups are filed on the [Tooling Roadmap](https://github.com/orgs/sanskrit-lexicon/projects/9)
