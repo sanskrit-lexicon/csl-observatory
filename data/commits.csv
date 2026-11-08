@@ -1,4 +1,5 @@
 repo,sha,date,author_login,author_name,author_email,subject
+ACC,8b0fc1b0c3ad,2026-11-04T21:15:02Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(README): truth-pass 05-11-2026 — contributors 32/2 commits (was 8/1), Created corrected to git first-commit 28-05-2017, issue-count as-of date bumped; milestone/pie/issue tables re-verified uncha"
 ACC,46bfe173d80e,2026-10-26T22:50:41Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: add SECURITY.md (security policy, org contact) (#35)"
 ACC,2eee7d4be426,2026-10-26T05:35:47Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/setup-python from 6.3.0 to 7.1.0 (#34)
 ACC,df153f882399,2026-10-26T05:28:43Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/checkout from 5.1.0 to 7.0.1 (#33)
@@ -251,6 +252,7 @@ AP,e367c106da00,2025-07-06T20:54:23Z,funderburkjim,funderburkjim,funderburkjim@g
 AP,3eb244c4d4a6,2025-07-06T20:14:16Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,initialize issues and issues/issue1. #1
 AP,090dd4101e28,2025-07-06T20:07:47Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initialize .gitignore
 AP,ca4b6efeb3ee,2025-07-06T20:04:17Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+AP90,6d0a7a834065,2026-11-07T05:16:37Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"Guard cd against failure at 4 sites (SC2164, H7788) (#55)"
 AP90,7f25b8c72ec6,2026-10-17T12:47:57Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 3 of 3 broken link(s) (org-wide link audit, auto-fix pass)"
 AP90,af0a7b1a22eb,2026-10-05T07:47:19Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add Zenodo concept DOI 10.5281/zenodo.23151282 (CITATION.cff) and README badge (#54)
 AP90,5d0c050a8a96,2026-09-05T11:35:58Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions (7/7 vote approve)
@@ -677,6 +679,7 @@ BHS,7693d4f8e52d,2021-08-19T20:14:43Z,funderburkjim,funderburkjim,funderburkjim@
 BHS,a3962b63bbe6,2016-01-02T04:16:54Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,Correction issue 216
 BHS,aaf232301c6e,2016-01-02T03:47:54Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,Initial unaltered commit
 BHS,21df15923ae0,2016-01-02T03:42:33Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+BOP,5e15f16606eb,2026-11-07T05:15:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"Guard cd against failure at 3 sites (SC2164, H7788) (#30)"
 BOP,13b281f04dbf,2026-10-26T05:32:16Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/checkout from 5.1.0 to 7.0.1 (#29)
 BOP,f2f888f44e33,2026-10-26T05:25:01Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/setup-python from 6.3.0 to 7.1.0 (#28)
 BOP,f5a5dec5baed,2026-10-24T15:40:52Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,add changelog duplicate-entry guard (CI) (#27)
@@ -964,6 +967,8 @@ CCS,d3ab8313ad13,2026-05-15T07:38:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.nore
 CCS,07eb4dad8829,2020-04-18T00:44:52Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Update README.md
 CCS,9d2f4fb5556d,2020-04-15T02:25:26Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,verbs01 inital commit
 CCS,44b9187e01cf,2020-04-15T01:40:12Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+COLOGNE,e20b770656ac,2026-11-07T05:15:26Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"Guard cd against failure at 3 sites (SC2164, H7788) (#496)"
+COLOGNE,802f6f1bf3ca,2026-11-04T21:15:08Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(README): truth-pass 05-11-2026 — issues 187 open/284 closed/471 total (was 199/259/458), exhibit re-run 485 proposals with repo-relative paths (Windows paths removed), CSV row claim split: 485 re"
 COLOGNE,bf80a46d1190,2026-10-26T20:33:21Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: add SECURITY.md (security policy, org contact) (#494)"
 COLOGNE,a214a94faad4,2026-10-26T05:35:54Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/checkout from 5.1.0 to 7.0.1 (#493)
 COLOGNE,fefa509af861,2026-10-26T05:25:44Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/setup-python from 6.3.0 to 7.1.0 (#492)
@@ -1215,6 +1220,7 @@ COLOGNE,73a7502fe900,2014-12-11T23:28:17Z,funderburkjim,funderburkjim,funderburk
 COLOGNE,b28f2dd555b4,2014-12-11T23:21:14Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,intro to aws S3 command line interface
 COLOGNE,0c194addcaea,2014-10-01T10:43:45Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Bibliography for 37 books added
 COLOGNE,d263eac05a9f,2014-01-14T14:14:31Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Initial commit
+CORRECTIONS,23398889a626,2026-11-07T05:16:25Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"Guard cd against failure at 1 sites (SC2164, H7788) (#458)"
 CORRECTIONS,79941bb4d09f,2026-10-26T05:35:12Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,Bump actions/checkout from 5.1.0 to 7.0.1 (#456)
 CORRECTIONS,d752b2622aec,2026-10-26T05:28:26Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,Bump actions/setup-python from 6.3.0 to 7.1.0 (#455)
 CORRECTIONS,4acd2e655503,2026-10-24T16:18:54Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,add changelog duplicate-entry guard (CI) (#454)
@@ -1922,6 +1928,7 @@ CORRECTIONS,fc6425eef0c8,2014-10-02T22:32:10Z,funderburkjim,funderburkjim,funder
 CORRECTIONS,c25d7de00947,2014-09-30T01:23:48Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initial commit
 CORRECTIONS,e1ccb24221a0,2014-09-30T01:19:25Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Update README.md
 CORRECTIONS,fed7c9d9b720,2014-09-30T01:17:52Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+DCS,0f39520f9fb5,2026-11-04T22:13:27Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,README truth-pass 05-11-2026: refresh claims to live state (#15)
 DCS,147dd8a6ec23,2026-10-27T00:04:27Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: add SECURITY.md (security policy, org contact) (#14)"
 DCS,450412c4b1ee,2026-10-17T12:47:58Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"fix: repair 1 of 1 broken link(s) (org-wide link audit, auto-fix pass)"
 DCS,ca0d5a94a8b5,2026-09-05T06:57:35Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 4}) + relative-link upgrades (1)"
@@ -2002,6 +2009,7 @@ FRI,596f26b84c3b,2025-02-02T03:24:29Z,funderburkjim,funderburkjim,funderburkjim@
 FRI,c0d6bf299037,2024-01-26T20:49:53Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,"Initial version of fri.txt, named as fri_00.txt. #1"
 FRI,b82479ccb71e,2024-01-26T20:40:17Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Add .gitignore
 FRI,56219ea8adbb,2024-01-26T12:33:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Initial commit
+GRA,671369a691dd,2026-11-07T05:16:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"Guard cd against failure at 8 sites (SC2164, H7788) (#74)"
 GRA,af5f68c1bb1f,2026-10-26T05:33:25Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/checkout from 5.1.0 to 7.0.1 (#73)
 GRA,41326135e9ab,2026-10-26T05:22:42Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/setup-python from 6.3.0 to 7.1.0 (#72)
 GRA,b3af2faf73ff,2026-10-24T16:19:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,add changelog duplicate-entry guard (CI) (#71)
@@ -2652,6 +2660,8 @@ MW72,5cf4de93d91c,2016-11-19T03:15:45Z,funderburkjim,funderburkjim,funderburkjim
 MW72,6152839e897d,2016-11-18T20:02:16Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,revise for corrections to mw72
 MW72,407551355822,2016-11-16T00:18:12Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,20161107 initial commit
 MW72,1f9d6101296f,2014-08-24T21:07:18Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+MWS,06b3f1378d7e,2026-11-07T05:15:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"Guard cd against failure at 9 sites (SC2164, H7788) (#328)"
+MWS,92f9a525df83,2026-11-05T09:47:17Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: 'Join the proofreading' enthusiast on-ramp + three README visuals (H7720) (#326)
 MWS,05323d1024fe,2026-11-02T05:18:31Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/setup-python from 5 to 7 (#325)
 MWS,7c8947b590c2,2026-10-26T05:25:48Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/checkout from 4 to 7 (#322)
 MWS,6c7dd6fe3ad4,2026-10-24T15:41:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,add changelog duplicate-entry guard (CI) (#321)
@@ -3246,6 +3256,7 @@ MWS,5192ab9002b9,2014-10-04T21:45:21Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Unique
 MWS,3ae269a730d5,2014-09-23T01:37:51Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,"Transcoder example, re issue #5"
 MWS,fcb6185f7723,2014-01-22T21:41:25Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,missing1.html
 MWS,8798269ddbf9,2014-01-16T19:34:16Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Initial commit
+MWinflect,77ca13113403,2026-11-07T05:14:14Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"Guard cd against failure at 9 sites (SC2164, H7788) (#66)"
 MWinflect,2266c6dee8a1,2026-10-27T00:04:59Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: add SECURITY.md (security policy, org contact) (#65)"
 MWinflect,4afb8303091c,2026-10-26T05:36:15Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,Bump actions/checkout from 5.1.0 to 7.0.1 (#64)
 MWinflect,f7d24dbdb55b,2026-10-26T05:29:27Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,Bump actions/setup-python from 6.3.0 to 7.1.0 (#63)
@@ -3468,6 +3479,8 @@ PUI,3899675e4762,2026-04-05T04:28:18Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785
 PUI,28ae8d0bc1a9,2026-04-05T03:54:10Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,started issue #1
 PUI,b6bcff376a5d,2026-04-05T03:29:33Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,init
 PUI,18f13c5a4a72,2026-04-05T03:28:50Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,first commit
+PWG,569527282f0b,2026-11-07T05:16:47Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"Guard cd against failure at 19 sites (SC2164, H7788) (#254)"
+PWG,8e58462216d8,2026-11-05T00:08:44Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"bughunt: nightly code hunt 05-11-2026 — no HIGH, 3 MEDIUM + 1 LOW reported (#253)"
 PWG,3602cc8a0bd2,2026-11-01T06:18:09Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(CLAUDE.md): H7274 verified-no-change pass (freshness SLA) (#252)
 PWG,ffdfb849dd65,2026-10-31T15:26:24Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: repoint PD COMPARISON_PWG_OCR_A_VS_B.md link — PD root restructure moved it to docs/ (#251)
 PWG,fac32b98a8f4,2026-10-26T05:34:21Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/checkout from 5.1.0 to 7.0.1 (#250)
@@ -3968,6 +3981,7 @@ PWG,087a677e9362,2014-11-06T21:09:00Z,funderburkjim,funderburkjim,funderburkjim@
 PWG,5221d87ec45e,2014-10-05T10:49:24Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Stat added
 PWG,200cd2073f4f,2014-10-04T21:29:49Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,Update to Jim's PWG Accents
 PWG,a6b29a2159b7,2014-09-25T09:57:25Z,gasyoun,Marcis Gasuns,gasyoun@ya.ru,3/52 Russian etymologies fixed
+PWK,d280b6415159,2026-11-07T05:15:07Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"Guard cd against failure at 30 sites (SC2164, H7788) (#156)"
 PWK,701dd869e3ce,2026-10-31T15:26:30Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: repoint PD COMPARISON_PWG_OCR_A_VS_B.md link — PD root restructure moved it to docs/ (#155)
 PWK,62c6cd13f007,2026-10-26T05:34:17Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/checkout from 4 to 7 (#154)
 PWK,d3bfe9e592dd,2026-10-26T05:23:41Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/setup-python from 5 to 7 (#153)
@@ -4295,6 +4309,7 @@ PWK,c945e3fa4bd1,2015-11-16T21:33:36Z,funderburkjim,funderburkjim,funderburkjim@
 PWK,f220be5dc89f,2015-11-16T21:22:10Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Moved from https://github.com/sanskrit-lexicon/CORRECTIONS/
 PWK,aa8c1730fe61,2015-11-16T21:16:37Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Moved to https://github.com/sanskrit-lexicon/CORRECTIONS/
 PWK,573cc6ee6787,2014-11-08T02:51:31Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,construction of pw_orig_utf8_slp1.txt
+SCH,cbd0bc0a7dcc,2026-11-07T05:15:37Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"Guard cd against failure at 2 sites (SC2164, H7788) (#31)"
 SCH,4b16d22e3efe,2026-10-27T00:05:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: add SECURITY.md (security policy, org contact) (#30)"
 SCH,dba96568380c,2026-10-26T05:32:24Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/setup-python from 6.3.0 to 7.1.0 (#29)
 SCH,8410f4138ce5,2026-10-26T05:21:31Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/checkout from 5.1.0 to 7.0.1 (#28)
@@ -5058,6 +5073,8 @@ cologne-hugo,bc9c9f8041ce,2026-06-14T04:48:44Z,gasyoun,Mārcis Gasūns,gasyoun@u
 cologne-hugo,33e04b625b7e,2026-05-29T05:11:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): refresh tooling-repo README with live counts (2026-05-29)
 cologne-hugo,27567866a9e7,2026-05-15T07:39:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 cologne-hugo,17af959d4467,2021-01-20T04:59:40Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+cologne-stardict,05d29bbd273f,2026-11-07T10:21:24Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 773925ad553b1c048bd2382b3e28ba3dfbbd76f9
+cologne-stardict,436a681a439a,2026-11-07T07:35:38Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit ca5ae563c53300286d692160f2417fdd0c166cb7
 cologne-stardict,a8810c43b3c4,2026-10-26T23:39:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: add SECURITY.md (security policy, org contact) (#55)"
 cologne-stardict,08ab1146aee5,2026-10-19T04:56:41Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit e4742e12cde786b1a2d10e0507808620a4f2c8eb
 cologne-stardict,97ee6b9a5bf3,2026-10-19T04:48:00Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 741c9f02d351f53a58cb79c09351477105df08e2
@@ -5945,6 +5962,9 @@ cologne-stardict,5d3eac3f589c,2017-04-04T16:05:41Z,drdhaval2785,drdhaval2785,drd
 cologne-stardict,82cf5cf8ca13,2017-04-04T15:39:46Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,GST added
 cologne-stardict,d7f4222e9a19,2017-04-04T10:51:20Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,CCS GRA added
 cologne-stardict,9e7133046729,2017-04-04T06:45:28Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,added CAE
+csl-apidev,8a10475fec1b,2026-11-07T07:49:03Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore (h7802): refresh two stale /csl-apidev/app/ URLs to the live awork base (#186)
+csl-apidev,c7784cb3f761,2026-11-07T05:08:09Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,release: 0.4.3 - H227 §8 deploy request doc (H7785) + unreleased batch
+csl-apidev,9fe96f42d744,2026-11-07T05:05:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"doc (ux-redesign): DEPLOY_REQUEST_JIM — H227 §8 steps 2-5 host deploy request (sitemap build, robots merge, rewrite-verified canonical flip; live before-state recorded 07-11-2026) (#185)"
 csl-apidev,e6224149e46a,2026-10-26T23:39:48Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: add SECURITY.md (security policy, org contact) (#184)"
 csl-apidev,89b2075de039,2026-10-26T05:34:59Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,chore(deps): bump actions/checkout from 5.1.0 to 7.0.1 (#183)
 csl-apidev,0236d3f0585b,2026-10-26T05:27:07Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,chore(deps): bump actions/setup-python from 6.3.0 to 7.1.0 (#182)
@@ -6914,6 +6934,10 @@ csl-app,3f5f02ce0114,2026-03-18T19:13:28Z,drdhaval2785,Dr. Dhaval Patel,drdhaval
 csl-app,41a87dfe9b1a,2026-03-18T17:59:44Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,v0.1.0
 csl-app,601df1e6d0c8,2026-03-18T17:25:31Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,app working
 csl-app,3827040885b1,2026-03-18T16:14:06Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,initial commit
+csl-corrections,99d5ea1bdde0,2026-11-07T05:14:26Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"Guard cd against failure at 3 sites (SC2164, H7788) (#456)"
+csl-corrections,dffdc7e15984,2026-11-07T03:56:30Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-11-06
+csl-corrections,a886aff2e85b,2026-11-06T04:29:34Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-11-05
+csl-corrections,2e02182869d1,2026-11-03T04:47:10Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-11-02
 csl-corrections,80c141ac6dac,2026-11-02T03:43:02Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-11-01
 csl-corrections,1298e4824311,2026-11-01T06:32:41Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(CLAUDE.md): H7274 verification pass - claims re-verified, header stamped (#451)"
 csl-corrections,6326573a61e9,2026-11-01T06:04:18Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(CLAUDE.md): H7274 verified-no-change pass (freshness SLA) (#450)
@@ -8933,6 +8957,13 @@ csl-newsletter,bced52b7f19f,2021-09-14T04:37:04Z,drdhaval2785,Dhaval Patel,drdha
 csl-newsletter,53c6fa85e014,2021-09-13T14:34:31Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,csl-orig commits taken into consideration
 csl-newsletter,b04b08d7e699,2021-09-13T13:28:15Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,addition
 csl-newsletter,5ab58ee2cd64,2021-09-13T12:33:30Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,september started
+csl-observatory,b53f88f9ce9b,2026-11-08T11:49:05Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,chore(deps): bump actions/setup-python from 5 to 7 (#302)
+csl-observatory,2703e595aa6d,2026-11-08T11:48:54Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(refresh): issues fetch survives the App-token PRs-only pathology (#308)
+csl-observatory,73881bf1b906,2026-11-08T11:23:20Z,github-actions[bot],github-actions[bot],41898282+github-actions[bot]@users.noreply.github.com,data: monthly refresh (2026-11-02) (#298)
+csl-observatory,6fc1a8b723fc,2026-11-08T10:59:41Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,chore(deps): bump actions/checkout from 4 to 7 (#260)
+csl-observatory,544748528cd8,2026-11-08T10:57:06Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,feat(identity): lead row confirmed (ORCID + consent) — report regen complete 0→1; consent request posted as issue #306 (SC1 progress) (#307)
+csl-observatory,3a4f571986d8,2026-11-08T10:11:00Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(roadmap): RH7 done — three org descriptions applied live, repo_health regen no-description 3→0 (#305)"
+csl-observatory,61eb965199aa,2026-11-05T09:30:37Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,feat(readme-visuals): per-dictionary progress SVG renderer + committed mw card (H7720) (#303)
 csl-observatory,0270db64caf8,2026-10-31T17:04:22Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(roadmap): RH7/SC1/RH3 gated at exec time — census markers on the checkbox lines (#301)
 csl-observatory,acc921d42405,2026-10-31T08:18:59Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ci: project-sync gains the tooling half — additions-only membership repair for Tooling Roadmap #9 (#300)
 csl-observatory,de20f3b93004,2026-10-29T04:26:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ci(H7243): add pinned F821 undefined-name gate (#285)
@@ -9602,6 +9633,16 @@ csl-observatory,eec8dc712aed,2026-05-07T19:29:28Z,gasyoun,Mārcis Gasūns,gasyou
 csl-observatory,c236fb5ac130,2026-05-07T19:28:08Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"feat: companion paper, headword counter, retry logic, templates"
 csl-observatory,1947ea3757ed,2026-05-07T17:04:56Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Create gasuns-cologne-30-report.md
 csl-observatory,e24574b2785a,2026-05-07T15:58:23Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"chore: bootstrap observatory — scripts, first data snapshot, dashboards, article scaffold"
+csl-orig,ac4ef52e5f58,2026-11-07T14:14:07Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ci(H7243): add pinned F821 undefined-name gate (#2903)
+csl-orig,6c402bb9b517,2026-11-07T14:13:44Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(claude): document guard-backstop workflow (H4575) (#2897)
+csl-orig,773925ad553b,2026-11-07T10:16:25Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(bor): move ellipsis outside Devanagari delimiters at L=11063 (closes #606) (#2874)
+csl-orig,09fcd3838013,2026-11-07T10:15:59Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,add changelog duplicate-entry guard (CI) (#2883)
+csl-orig,585ea493c92a,2026-11-07T10:14:25Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"fix(hooks): gate check_generate_dict.sh on pipeline exit status (G1, H3631) (#2893)"
+csl-orig,90fbf5ee3e90,2026-11-07T07:31:47Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(lrv): add <h>1/<h>2 discriminators to homonymous fjvI entries [closes csl-orig#2824] (#2867)
+csl-orig,ca5ae563c533,2026-11-07T07:30:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix: STC s.v. split across lines — join 4 instances (closes csl-orig#2821) (#2865)
+csl-orig,cc3a78079b9a,2026-11-07T07:29:35Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"Guard cd against failure at 1 sites (SC2164, H7788) (#2908)"
+csl-orig,2bbbb7e5c146,2026-11-06T00:06:50Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"bughunt: nightly csl-orig code hunt 06-11-2026 — 0 HIGH / 1 MEDIUM / 3 LOW, report + CHANGELOG bullet (#2907)"
+csl-orig,fc1f5da4f45e,2026-11-05T07:10:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(README): truth-pass 05-11-2026 — 46 v02 subfolders (was 45), endpoint abch->yat, issues 33 open/2783 closed as of 05-11-2026 (was 30/2777 as of 11-07), Created header corrected to git first-commi"
 csl-orig,de482943ea72,2026-11-01T06:17:03Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(CLAUDE.md): H7274 verified-no-change pass (freshness SLA) (#2905)
 csl-orig,e9411e0770e7,2026-10-30T09:10:05Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(claude): H7474 agent-docs SLA refresh — guard-backstop added to CI inventory, header bumped 30-10-2026 (#2904)"
 csl-orig,e4742e12cde7,2026-10-19T04:50:28Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,DC 10 August 2026. See https://github.com/sanskrit-lexicon/csl-corrections/issues/353
@@ -11879,6 +11920,8 @@ csl-orig,ecc689a3a281,2019-07-20T05:43:47Z,drdhaval2785,drdhaval2785,drdhaval278
 csl-orig,661fb1081d4f,2019-07-20T05:21:21Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,copy to cologne web structure
 csl-orig,f325e2abde72,2019-07-20T05:15:30Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,added hwextra
 csl-orig,6f45dd5ce45d,2019-07-20T04:50:29Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,csl-orig initial commit
+csl-pywork,adcd7d11e872,2026-11-07T05:16:14Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"Guard cd against failure at 10 sites (SC2164, H7788) (#108)"
+csl-pywork,cb18b05dcb98,2026-11-04T21:34:51Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(readme): truth pass 05-11-2026 — live issue snapshot (7 open/53 closed), vendored-scripts pointer fix (#107)"
 csl-pywork,3408057c8e99,2026-11-02T00:12:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #106 from sanskrit-lexicon/bughunt-report-1102
 csl-pywork,a5468016e77e,2026-11-02T00:12:29Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"bughunt: nightly csl-pywork 02-11-2026 report — 0 HIGH, 2 MEDIUM, 3 LOW, 1 refuted lead"
 csl-pywork,23b379167874,2026-11-01T06:42:58Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(CLAUDE.md): measured test runtime correction (H7274 verification wave) (#105)
@@ -12491,6 +12534,13 @@ csl-sqlite,a6a257a9a836,2026-05-29T05:10:13Z,gasyoun,Mārcis Gasūns,gasyoun@use
 csl-sqlite,299157791231,2026-05-15T06:00:57Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 csl-sqlite,fc82dcdff2e1,2026-04-11T06:00:27Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,README update
 csl-sqlite,fca7cdc9f757,2026-04-08T11:48:40Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+csl-websanlexicon,596b94e3646a,2026-11-07T05:16:32Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"Guard cd against failure at 1 sites (SC2164, H7788) (#170)"
+csl-websanlexicon,b728d41c4f09,2026-11-07T04:32:59Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(v02+tests): bug-hunt 03.11.2026 MED-1..4 residue lane + LOW triage (#169)
+csl-websanlexicon,bd41952f64fb,2026-11-04T21:34:57Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(readme): truth pass 05-11-2026 — live label counts, Mako docs link fix (#168)"
+csl-websanlexicon,f76e9e13d5ef,2026-11-03T00:17:33Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #167 from sanskrit-lexicon/bughunt-fix-h1-crash-envelope-20261103
+csl-websanlexicon,7db36f3b8b1d,2026-11-03T00:16:26Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(webtc): catch getword_data RuntimeException at the GetwordClass chokepoint (bughunt 03.11.2026 HIGH-1)
+csl-websanlexicon,aeb477de920f,2026-11-03T00:14:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #166 from sanskrit-lexicon/bughunt-findings-20261103
+csl-websanlexicon,973ebbfad155,2026-11-03T00:12:36Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(bughunt): nightly findings report 03.11.2026 — 1 HIGH (uncaught RuntimeException blank-500), 4 MED, 6 LOW"
 csl-websanlexicon,55f8b71b81c3,2026-11-01T06:22:30Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(CLAUDE.md): H7274 verified-no-change pass (freshness SLA) (#165)
 csl-websanlexicon,cf44a1ba40ad,2026-10-30T09:04:37Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(claude): H7474 agent-docs SLA refresh — verified-no-change, header bumped 30-10-2026"
 csl-websanlexicon,b61667b57ea7,2026-10-22T01:32:19Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(twins): sync H4227 A1 error-reporting header into apidev twins (basicadjust/basicdisplay/getword_data) (#164)
@@ -13157,6 +13207,7 @@ csl-whitroot,8cc498b236a4,2020-03-10T00:40:41Z,funderburkjim,funderburkjim,funde
 csl-whitroot,1ad3839f7ae5,2019-11-08T22:16:37Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Avoid PHP 'notice undefined index'
 csl-whitroot,50b959a5b934,2019-11-08T21:59:14Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,Initial commit
 csl-whitroot,0dcec9223ad0,2019-11-08T21:19:28Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+hwnorm1,1d06bcd5c34b,2026-11-07T05:14:36Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"Guard cd against failure at 3 sites (SC2164, H7788) (#27)"
 hwnorm1,777486db8ea9,2026-10-27T00:04:40Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: add SECURITY.md (security policy, org contact) (#26)"
 hwnorm1,93c2f8c1ea2c,2026-09-06T16:01:06Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(H4092): judgment-link dispositions (7/7 vote approve)
 hwnorm1,5a27bcc7c19f,2026-09-05T06:57:09Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 5}) + relative-link upgrades (0)"
@@ -13471,6 +13522,7 @@ literarysource,4b9f48e61e36,2022-02-15T02:14:19Z,drdhaval2785,drdhaval2785,drdha
 literarysource,645fc9a2cbb7,2022-02-14T16:30:53Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,mw72 init
 literarysource,ffb14d9add68,2022-02-14T16:30:34Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,PWG ls statistics as on 14 Feb 2022
 literarysource,29780111536b,2022-02-12T05:50:27Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,initial commit based on csl-pywork
+mw-dev,fd73add1d767,2026-11-07T05:14:47Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"Guard cd against failure at 17 sites (SC2164, H7788) (#37)"
 mw-dev,1a83f694be73,2026-10-27T00:04:53Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: add SECURITY.md (security policy, org contact) (#36)"
 mw-dev,55eef0c54e5b,2026-10-12T20:17:59Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore(gitignore): ignore *.sqlite3 probe residue (H5605) (#35)
 mw-dev,e49256e181eb,2026-10-01T08:10:10Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore(eol): renormalize to LF per org .gitattributes policy (H2004) — clears perpetual dirty status; no content change (#34)
@@ -13585,6 +13637,8 @@ sanskrit-fonts,f79bfe4c48d1,2026-05-29T05:11:29Z,gasyoun,Mārcis Gasūns,gasyoun
 sanskrit-fonts,4a86c5b9f39d,2026-05-15T07:39:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 sanskrit-fonts,fee5ad4e5a29,2018-09-05T03:50:42Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,siddhanta font
 sanskrit-fonts,9432607282a6,2018-09-05T03:39:54Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+sanskrit-lexicon.github.io,d9001e02c1d5,2026-11-07T06:59:05Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H7786 follow-up (MG yes 07-11): add 3 card-less Zenodo dictionaries to llms.txt (#18)
+sanskrit-lexicon.github.io,aea06a2e7433,2026-11-07T05:11:50Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H7786: add llms.txt + JSON-LD (Organization/WebSite) for LLM/GEO extractability (#17)
 sanskrit-lexicon.github.io,6684cd1e0619,2026-10-27T00:05:37Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: add SECURITY.md (security policy, org contact) (#16)"
 sanskrit-lexicon.github.io,f0c41d15c3bb,2026-10-26T05:35:34Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/setup-python from 6.3.0 to 7.1.0 (#14)
 sanskrit-lexicon.github.io,a4a84f026913,2026-10-26T05:27:34Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/checkout from 5.1.0 to 7.0.1 (#15)
