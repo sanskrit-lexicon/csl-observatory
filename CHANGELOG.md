@@ -1,4 +1,4 @@
-_Created: 07-05-2026 · Last updated: 05-09-2026_
+_Created: 07-05-2026 · Last updated: 09-11-2026_
 
 # Changelog
 
@@ -7,6 +7,9 @@ All notable changes to this repository are documented here, following [Keep a Ch
 ## [Unreleased]
 <!-- entries land in changelog_queue/ -- appended via tools/changelog_queue_consume.py, consumed by cut_release.py at release-cut (H3355); direct bullets here are hook-blocked -->
 
+## [1.15.1] - 2026-11-09
+
+- H7947: OBS-T gold sample first-annotator column re-based onto the location axis. The 254/390 `gold_component` rows labelled `encoding` (x149) / `orthography` (x105) are re-based onto the Phase-8 8-value location axis using the committed H1385 pass-A labels in `validation/component_passA.json` (Opus blind, kappa=0.906) - the adoption path `obs_t_gold.py --score` already names. The 136 already-on-axis rows are preserved verbatim (31 of them disagree with pass A and are kept as first-annotator judgment, audited in the mapping); the hybrid provenance is documented in `validation/gold_component_rebase_2026-11-09.md` with the machine companion `validation/gold_component_rebase_mapping_2026-11-09.csv` (390 rows, old/new/rule). The 4 pre-H5312 `gold_component_2` legacy stragglers are cleared (values archived in the note), so `validation/gold_metrics.json` now reports `firstAnnotatorColumn.status = ok`, `iaa.pairs = 0` and `cohen_kappa = null` / `krippendorff_alpha_nominal = null` - kappa stays None with the "no 2nd annotator yet" reason until MG supplies a real decisions file (no second-annotator value invented). The H5312 sandbox canary now asserts 0 filled `gold_component_2` rows on the real sheet and still round-trips the synthetic fixture to a kappa; repair for the H5313 verifier FAIL (precondition + retired-label findings).
 ## [1.15.0] - 2026-10-29
 
 - feat(nws): reproducible NWS×Cologne intersection evidence script (H5939) — `scripts/nws_halle_intersections.py` ports the H5932 session measurement (`tar` filename-stem keys × `<L>`-line `<k1>` sets over csl-orig @ f4c08c5) into a stdlib-only, deterministic script: prints the pinned table (NWS∩PWG 20,268 · NWS∩PW 26,508 · NWS∩MW 23,144 · outside PWG∪PW∪MW 140,316 (83.5%) · outside +SCH+ACC+PWKVN 138,976 (82.7%), union 243,157), `--selftest` fails on any drift from the pinned numbers or the tar sha256 (054b05da…), `--json` emits machine-readable results so the H5938 fuzzy-normalization pass can diff its delta against this exact-match baseline. Method caveat documented in the docstring: NWS keys are tar member filename stems, NOT the JSON `key1` field (a key1-based comparison gives ~90% overlap and is not the pinned vintage). Evidence run: `reports/nws_halle_intersections_h5932_2026-10-05.txt`; consumed by A61 `NWS_HALLE_ANALYSIS_2026-10-04.md` («Воспроизведение» row replaces «в истории сессии»).
