@@ -1,5 +1,7 @@
 # csl-observatory
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24055368.svg)](https://doi.org/10.5281/zenodo.24055368)
+
 _Created: 07-05-2026 · Last updated: 05-11-2026_
 
 > **Live observatory for 13 years of Cologne Digital Sanskrit Lexicon (CDSL).**
@@ -28,6 +30,7 @@ The 2026-06-04 boundary cleanup is merged: dictionary-structure research belongs
 - **[Design document](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/OBSERVATORY_DESIGN.md)** — boundary-safe architecture and KPI scope
 - **[Docs archive index](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/ARCHIVE.md)** — legacy and moved-to-`csl-atlas` documents in one place
 - **[Data downloads](https://github.com/sanskrit-lexicon/csl-observatory/tree/main/observatory/site/src/data)** — every chart's source as CSV
+- **Code release (Zenodo)** — archived, citable snapshots of this repository: concept DOI [10.5281/zenodo.24055368](https://doi.org/10.5281/zenodo.24055368), first archived version (code v1.15.0, 2026-10-29) DOI [10.5281/zenodo.24055369](https://doi.org/10.5281/zenodo.24055369). Cite the concept DOI for the software itself; the dataset DOIs below are for the data releases.
 - **A15 analysis-inputs dataset (Zenodo)** — archived, versioned snapshot of the analysis inputs (76-repo snapshot, issue/commit ledgers, 52,498-event correction ledger): concept DOI [10.5281/zenodo.22853817](https://doi.org/10.5281/zenodo.22853817), version DOI [10.5281/zenodo.22853818](https://doi.org/10.5281/zenodo.22853818)
 - **[Runbooks](https://github.com/sanskrit-lexicon/csl-observatory/tree/main/runbook)** — the issue-taxonomy procedures applied to all active repos
 - **[Maintenance skills](https://github.com/sanskrit-lexicon/cologne-skills)** — portable Claude Code skills for org-wide security & maintenance (PHP XSS sweep · security audit · alert triage)
@@ -150,7 +153,9 @@ contributor, workflow, project, or organization-process evidence.
 
 If you use these data in published work:
 
-> Gasūns, M. et al. (2026). *CSL Observatory: 13 years of Cologne Digital Sanskrit Lexicon* [Data set]. `sanskrit-lexicon/csl-observatory` (no Zenodo DOI minted yet).
+> Gasūns, M. et al. (2026). *CSL Observatory: 13 years of Cologne Digital Sanskrit Lexicon* [Software + data set]. Code: [10.5281/zenodo.24055368](https://doi.org/10.5281/zenodo.24055368).
+
+Cite the code concept DOI for the software and the OBS-T concept DOI for the data (`10.5281/zenodo.21346705`).
 
 Plus the snapshot date for reproducibility. The dataset's Zenodo concept DOI is [`10.5281/zenodo.21346705`](https://doi.org/10.5281/zenodo.21346705) (version `10.5281/zenodo.21965649`, published 2026-08-16). `10.5281/zenodo.15834721`, previously cited here, was a false DOI — it resolves to an unrelated topology preprint, confirmed by a live check 20-07-2026 (H1364; see [SanskritLexicography CONTRADICTIONS §8](https://github.com/gasyoun/SanskritLexicography/blob/master/CONTRADICTIONS.md)).
 

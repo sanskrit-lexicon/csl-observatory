@@ -2,8 +2,10 @@ cff-version: 1.2.0
 type: software
 title: csl-observatory
 message: >
-  If you use this software, please cite using the metadata below. The OBS-T
-  dataset has its own Zenodo concept DOI: 10.5281/zenodo.21346705 (version
+  If you use this software, please cite using the metadata below; the code
+  concept DOI is 10.5281/zenodo.24055368 (first archived version
+  10.5281/zenodo.24055369, code v1.15.0, 2026-10-29). The OBS-T dataset has
+  its own Zenodo concept DOI: 10.5281/zenodo.21346705 (version
   10.5281/zenodo.21965649, published 2026-08-16) — cite that for the data.
   (An earlier identifiers entry here, 10.5281/zenodo.15834721, was a false
   DOI resolving to an unrelated topology preprint; removed 20-07-2026,
@@ -32,6 +34,12 @@ keywords:
   - digital humanities
   - build-meta
 identifiers:
+  - identifier: "10.5281/zenodo.24055368"
+    type: "doi"
+    description: "Code release (repo archive): concept DOI"
+  - identifier: "10.5281/zenodo.24055369"
+    type: "doi"
+    description: "Code v1.15.0 (2026-10-29): version DOI"
   - identifier: "10.5281/zenodo.22853817"
     type: "doi"
     description: "A15 analysis-inputs dataset (GitHub maintenance ecosystem): concept DOI"
