@@ -386,8 +386,8 @@ def score():
         'generatedAt': datetime.now(timezone.utc).isoformat(),
         'provenance': {
             'scoredBy': 'scripts/obs_t_gold.py --score (deterministic stdlib)',
-            'handoff': 'H6388',
-            'executor_tier': 'OxAlpha (opencode, z-ai-coding-plan/glm-5.3-flash)'},
+            'handoff': 'H7947 (re-base; previous scoring H6388)',
+            'executor_tier': 'OxAlpha (Crouton Alpha Free, opencode-go/crouton-alpha-free)'},
         'annotated': n, 'accuracy': round(correct / n, 3),
         'accuracyByEvidence': {ev: round(c / t, 3) for ev, (c, t) in by_ev.items()},
         'countsByEvidence': {ev: t for ev, (c, t) in by_ev.items()},
