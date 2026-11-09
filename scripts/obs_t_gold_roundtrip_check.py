@@ -98,8 +98,9 @@ def main():
                                'second_annotator_fixture.json')
         shutil.copy(fixture_src, fixture)
         # legacy stragglers: rows already carrying a gold_component_2 value in
-        # the pristine sheet (pre-H5312 debris). They ride along in --score's
-        # iaa pair count, so the expected pairs = fixture + legacy.
+        # the pristine sheet (pre-H5312 debris). H7947 cleared them, so legacy
+        # is 0 on the repaired sheet; it rides along in --score's iaa pair
+        # count, so expected pairs = fixture + legacy (= 10).
         import csv as _csv
         with open(os.path.join(sandbox, 'validation', 'gold_sample.csv'),
                   encoding='utf-8') as f:
@@ -168,9 +169,9 @@ def main():
             real = list(_csv.DictReader(f))
         filled2 = sum(1 for r in real if r['gold_component_2'].strip())
         print(f'real sheet check: gold_component_2 still has {filled2} filled row(s) '
-              f'(pre-existing legacy stragglers; sandbox wrote nothing here)')
-        if filled2 != 4:
-            failures.append(f'real sheet gold_component_2 count changed: {filled2} != 4')
+              f'(H7947 cleared the 4 pre-H5312 legacy stragglers; sandbox wrote nothing here)')
+        if filled2 != 0:
+            failures.append(f'real sheet gold_component_2 count changed: {filled2} != 0')
     finally:
         shutil.rmtree(sandbox, ignore_errors=True)
 

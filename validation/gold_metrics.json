@@ -1,10 +1,15 @@
 {
-  "generatedAt": "2026-10-11T13:14:51.221225+00:00",
+  "generatedAt": "2026-11-09T20:24:03.698980+00:00",
+  "provenance": {
+    "scoredBy": "scripts/obs_t_gold.py --score (deterministic stdlib)",
+    "handoff": "H7947 (re-base; previous scoring H6388)",
+    "executor_tier": "OxAlpha (Crouton Alpha Free, opencode-go/crouton-alpha-free)"
+  },
   "annotated": 390,
-  "accuracy": 0.221,
+  "accuracy": 0.359,
   "accuracyByEvidence": {
-    "derived": 0.45,
-    "inferred": 0.0,
+    "derived": 0.717,
+    "inferred": 0.016,
     "?": 0.0
   },
   "countsByEvidence": {
@@ -26,98 +31,81 @@
     }
   },
   "firstAnnotatorColumn": {
-    "status": "stale-axis (retired one-axis labels)",
-    "labelsOutsideLocationAxis": {
-      "encoding": 149,
-      "orthography": 105
-    }
+    "status": "ok (location axis)"
   },
   "perComponent": {
     "meta": [
       0.913,
-      0.7,
-      0.792
+      0.677,
+      0.778
     ],
     "citation": [
-      0.938,
-      0.732,
-      0.822
+      0.969,
+      0.263,
+      0.413
     ],
     "unattributed": [
-      0.0,
-      0,
-      0
+      0.016,
+      0.75,
+      0.032
     ],
     "sense": [
-      0.067,
-      0.308,
-      0.11
-    ],
-    "encoding": [
-      0,
-      0.0,
-      0
+      0.6,
+      0.632,
+      0.615
     ],
     "grammar": [
-      0.867,
-      0.929,
-      0.897
+      0.933,
+      0.778,
+      0.848
     ],
-    "orthography": [
-      0,
-      0.0,
-      0
+    "headword": [
+      0.905,
+      0.178,
+      0.297
     ],
     "markup": [
       0.08,
-      0.143,
-      0.103
-    ],
-    "headword": [
-      0.143,
-      0.3,
-      0.194
+      0.062,
+      0.07
     ],
     "?": [
       0.0,
       0,
       0
+    ],
+    "crossref": [
+      0,
+      0.0,
+      0
     ]
   },
   "iaa": {
-    "pairs": 4,
-    "cohen_kappa": 0.0
+    "pairs": 0,
+    "cohen_kappa": null,
+    "krippendorff_alpha_nominal": null,
+    "agreement_denominator": "annotated rows carrying both annotator columns (n=0)"
   },
   "topConfusions": [
     {
       "auto": "unattributed",
-      "gold": "encoding",
-      "n": 104
+      "gold": "citation",
+      "n": 75
     },
     {
       "auto": "unattributed",
-      "gold": "orthography",
-      "n": 80
+      "gold": "headword",
+      "n": 74
     },
     {
-      "auto": "sense",
-      "gold": "encoding",
-      "n": 27
-    },
-    {
-      "auto": "sense",
-      "gold": "orthography",
-      "n": 15
+      "auto": "unattributed",
+      "gold": "markup",
+      "n": 17
     },
     {
       "auto": "sense",
       "gold": "markup",
-      "n": 11
-    },
-    {
-      "auto": "headword",
-      "gold": "encoding",
-      "n": 11
+      "n": 12
     },
     {
       "auto": "markup",
@@ -125,24 +113,29 @@
       "n": 9
     },
     {
+      "auto": "unattributed",
+      "gold": "sense",
+      "n": 8
+    },
+    {
       "auto": "?",
       "gold": "meta",
       "n": 8
     },
     {
-      "auto": "headword",
-      "gold": "orthography",
+      "auto": "sense",
+      "gold": "headword",
       "n": 7
     },
     {
       "auto": "markup",
       "gold": "sense",
-      "n": 5
+      "n": 7
     },
     {
       "auto": "markup",
       "gold": "headword",
-      "n": 4
+      "n": 5
     }
   ]
 }
