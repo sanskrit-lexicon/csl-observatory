@@ -1,0 +1,57 @@
+name: Deployed-copy drift gate (H7963)
+
+# The drift gate from the 10-11-2026 audit-finding-#5 ruling ("drift gate now,
+# csl-pyutil extraction when the pair is next touched"): asserts that every
+# EXISTING deployed copy of the cologne_batch_deploy units is byte-identical to
+# its canonical ship content.  Single-sourced from
+# Uprava/tools/cologne_batch_deploy.py; deferred pairs are declared, cited data
+# in Uprava/tools/deployed_copy_drift_check.py (the ruling's extraction
+# material), never silence.
+#
+# Scope note: CI covers the ruling's pair + csl-guides (the clones listed
+# below); the dev-box form (no --repos) is the full-estate census and currently
+# reports the wider changelog-guard backlog as routed follow-up.
+
+on:
+  schedule:
+    # Weekly Tuesday 04:00 UTC
+    - cron: '0 4 * * 2'
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'scripts/**'
+      - '.github/workflows/changelog-lint.yml'
+      - '.githooks/**'
+
+permissions:
+  contents: read
+
+jobs:
+  drift:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: repos/csl-observatory
+      - uses: actions/checkout@v4
+        with:
+          repository: gasyoun/Uprava
+          path: repos/Uprava
+      - uses: actions/checkout@v4
+        with:
+          repository: gasyoun/github-spine
+          path: repos/github-spine
+      - uses: actions/checkout@v4
+        with:
+          repository: sanskrit-lexicon/csl-atlas
+          path: repos/csl-atlas
+      - uses: actions/checkout@v4
+        with:
+          repository: sanskrit-lexicon/csl-guides
+          path: repos/csl-guides
+      - name: deployed-copy drift check (published origin/<default> state)
+        run: >
+          python repos/Uprava/tools/deployed_copy_drift_check.py
+          --github-root repos
+          --repos csl-observatory,csl-atlas,csl-guides
