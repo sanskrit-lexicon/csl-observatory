@@ -106,12 +106,14 @@ def _candidates(minimum):
                 [p, "-c", "import sys;print('%d.%d.%d' % sys.version_info[:3])"],
                 stderr=subprocess.STDOUT,
             )
-        except Exception:
+        except Exception as exc:
+            print(f"warn: interpreter candidate {p} probe failed: {exc}", file=sys.stderr)
             continue
         try:
             txt = out.decode("utf-8", "replace").strip().splitlines()[-1]
             parts = tuple(int(x) for x in txt.split("."))
-        except Exception:
+        except Exception as exc:
+            print(f"warn: version output unparsable for {p}: {exc}", file=sys.stderr)
             continue
         if satisfied(parts, minimum) and (p, txt) not in good:
             good.append((p, txt))
@@ -121,13 +123,13 @@ def _candidates(minimum):
 def explain(minimum=None, tool=None):
     """The named, actionable below-floor message. Returns a string; prints nothing."""
     lo = minimum or _env_minimum() or FLOOR
-    running = "%d.%d.%d" % sys.version_info[:3]
+    running = f"{sys.version_info[0]}.{sys.version_info[1]}.{sys.version_info[2]}"
     who = tool or os.path.basename(sys.argv[0] or "this tool")
     lines = []
     lines.append("")
     lines.append("PYTHON FLOOR NOT MET -- refusing to run " + who)
     lines.append("")
-    lines.append("  required : Python >= %d.%d  (declared in tools/pyfloor.py, FLOOR)" % (lo[0], lo[1]))
+    lines.append(f"  required : Python >= {lo[0]}.{lo[1]}  (declared in tools/pyfloor.py, FLOOR)")
     lines.append("  found    : Python " + running)
     lines.append("  from     : " + (sys.executable or "<unknown interpreter>"))
     lines.append("")
@@ -144,8 +146,8 @@ def explain(minimum=None, tool=None):
                 lines.append("      " + p + "   (" + v + ")")
             lines.append("")
     else:
-        lines.append("  No interpreter >= %d.%d was found on PATH." % (lo[0], lo[1]))
-        lines.append("  Install one, e.g.:   brew install python@%d.%d" % (lo[0], lo[1]))
+        lines.append(f"  No interpreter >= {lo[0]}.{lo[1]} was found on PATH.")
+        lines.append(f"  Install one, e.g.:   brew install python@{lo[0]}.{lo[1]}")
         lines.append("")
     lines.append("  Why this guard exists: below the floor these tools fail mid-run")
     lines.append("  (registry half-rewritten) instead of failing at startup. H3541.")
@@ -163,8 +165,8 @@ def require(minimum=None, tool=None):
     try:
         sys.stderr.write(explain(minimum, tool) + "\n")
         sys.stderr.flush()
-    except Exception:
-        pass
+    except Exception as exc:
+        print(f"warn: pyfloor explanation write failed: {exc}", file=sys.stdout)
     raise SystemExit(3)
 
 
@@ -200,7 +202,7 @@ if __name__ == "__main__":
             print(v + "\t" + p)
         raise SystemExit(0)
     print("floor      : Python >= " + FLOOR_STR)
-    print("running    : %d.%d.%d" % sys.version_info[:3])
+    print(f"running    : {sys.version_info[0]}.{sys.version_info[1]}.{sys.version_info[2]}")
     print("executable : " + (sys.executable or "?"))
     print("verdict    : OK (this interpreter satisfies the declared floor)")
     raise SystemExit(0)
