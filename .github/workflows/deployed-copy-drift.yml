@@ -38,10 +38,14 @@ jobs:
         with:
           repository: gasyoun/Uprava
           path: repos/Uprava
+          # Cross-org (gasyoun) checkout: the default GITHUB_TOKEN cannot see
+          # private gasyoun repos — same PAT pattern as tooling-audit.yml.
+          token: ${{ secrets.TOOLING_AUDIT_TOKEN }}
       - uses: actions/checkout@v4
         with:
           repository: gasyoun/github-spine
           path: repos/github-spine
+          token: ${{ secrets.TOOLING_AUDIT_TOKEN }}
       - uses: actions/checkout@v4
         with:
           repository: sanskrit-lexicon/csl-atlas
