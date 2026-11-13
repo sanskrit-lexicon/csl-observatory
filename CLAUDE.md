@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-_Created: 15-05-2026 · Last updated: 28-10-2026 (H7360: shared subprocess retry contract registered)_
+_Created: 15-05-2026 · Last updated: 13-11-2026 (YCP agent-docs SLA refresh: run commands + scripts re-verified, CI list gains the f821/deployed-copy-drift/changelog-lint/scorecard gates — H7360 contract unchanged)_
 
 `csl-observatory` is the **build-meta / org-observability** repo for the
 Cologne Digital Sanskrit Lexicon: it measures the `sanskrit-lexicon` GitHub
@@ -38,7 +38,12 @@ sheets are human-gated (`obs_t_gold.py --make` / `--score`). Live dashboard:
 [sanskrit-lexicon.github.io/csl-observatory](https://sanskrit-lexicon.github.io/csl-observatory/).
 
 CI that matters: `deploy.yml` (Pages), `refresh.yml` / `refresh-observatory.yml`
-(data refresh), `dict-audit.yml`, `tooling-audit.yml`, `encoding-guard.yml`.
+(data refresh), `dict-audit.yml`, `tooling-audit.yml`, `encoding-guard.yml`,
+plus the newer gates `f821-gate.yml` (undefined names), `deployed-copy-drift.yml`
+(H7963), `changelog-lint.yml`, `scorecard-weekly.yml`.
+
+Landings are PR-first: `main` is protected — a direct push fails with GH006
+(#295), so refreshes land as a branch + PR like this one.
 
 ## Shared subprocess contract
 
