@@ -2204,6 +2204,7 @@ INM,1bcf101577ae,2021-12-15T02:49:36Z,funderburkjim,funderburkjim,funderburkjim@
 INM,783d282d803c,2021-12-11T03:13:49Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,greek folder contains details of insertion of Greek text into
 INM,187bd4c66e72,2021-12-04T03:20:40Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Add Andhrabharati's version of the concordance. #1
 INM,7ac4e606c9af,2021-12-03T23:44:57Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+KNA,ce9d76870846,2026-11-08T14:58:56Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,readme+cff: KNA concept DOI badge + cff doi/identifiers; year corrected 1893->1908 Leipzig per repo timeline (H7887) (#19)
 KNA,4a5e56a1b90e,2026-10-26T23:15:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: add SECURITY.md (security policy, org contact) (#18)"
 KNA,0fb1e785291d,2026-10-26T05:35:33Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/setup-python from 5 to 7 (#17)
 KNA,81144a57822a,2026-10-26T05:27:12Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/checkout from 4 to 7 (#16)
@@ -2660,6 +2661,7 @@ MW72,5cf4de93d91c,2016-11-19T03:15:45Z,funderburkjim,funderburkjim,funderburkjim
 MW72,6152839e897d,2016-11-18T20:02:16Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,revise for corrections to mw72
 MW72,407551355822,2016-11-16T00:18:12Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,20161107 initial commit
 MW72,1f9d6101296f,2014-08-24T21:07:18Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+MWS,970a8b9e3f21,2026-11-08T12:48:50Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(CLAUDE.md): Y6Y freshness truth-pass — v1.0.10 re-verified latest, CI additions (#319/#320/#321), H7720 proofreading on-ramp #326, SC2164 #328 (H7871; STALE_21d repair, no rewrite) (#329)"
 MWS,06b3f1378d7e,2026-11-07T05:15:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"Guard cd against failure at 9 sites (SC2164, H7788) (#328)"
 MWS,92f9a525df83,2026-11-05T09:47:17Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: 'Join the proofreading' enthusiast on-ramp + three README visuals (H7720) (#326)
 MWS,05323d1024fe,2026-11-02T05:18:31Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,build(deps): bump actions/setup-python from 5 to 7 (#325)
@@ -3479,6 +3481,7 @@ PUI,3899675e4762,2026-04-05T04:28:18Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785
 PUI,28ae8d0bc1a9,2026-04-05T03:54:10Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,started issue #1
 PUI,b6bcff376a5d,2026-04-05T03:29:33Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,init
 PUI,18f13c5a4a72,2026-04-05T03:28:50Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,first commit
+PWG,d9043d6cef17,2026-11-08T12:48:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(CLAUDE.md): Y6Y freshness truth-pass — state paragraph to live main #254 (kosha-side H5465 landed #645, Zenodo DOI 10.5281/zenodo.22170439 pinned, CI additions #247/#248) (H7871; STALE_21d repair"
 PWG,569527282f0b,2026-11-07T05:16:47Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"Guard cd against failure at 19 sites (SC2164, H7788) (#254)"
 PWG,8e58462216d8,2026-11-05T00:08:44Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"bughunt: nightly code hunt 05-11-2026 — no HIGH, 3 MEDIUM + 1 LOW reported (#253)"
 PWG,3602cc8a0bd2,2026-11-01T06:18:09Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(CLAUDE.md): H7274 verified-no-change pass (freshness SLA) (#252)
@@ -5962,6 +5965,8 @@ cologne-stardict,5d3eac3f589c,2017-04-04T16:05:41Z,drdhaval2785,drdhaval2785,drd
 cologne-stardict,82cf5cf8ca13,2017-04-04T15:39:46Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,GST added
 cologne-stardict,d7f4222e9a19,2017-04-04T10:51:20Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,CCS GRA added
 cologne-stardict,9e7133046729,2017-04-04T06:45:28Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,added CAE
+csl-apidev,748589e39fe5,2026-11-09T10:26:54Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(H7901 sweep): .ai_state — Completed entry + maintainer-pull @WAITING for the og pair (#188)
+csl-apidev,dfcb66637fbc,2026-11-09T09:43:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H7901: og:/twitter: meta on apidev surfaces + og_meta.php twin + WEB_BACKEND_MANUAL 14/14a (#187)
 csl-apidev,8a10475fec1b,2026-11-07T07:49:03Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore (h7802): refresh two stale /csl-apidev/app/ URLs to the live awork base (#186)
 csl-apidev,c7784cb3f761,2026-11-07T05:08:09Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,release: 0.4.3 - H227 §8 deploy request doc (H7785) + unreleased batch
 csl-apidev,9fe96f42d744,2026-11-07T05:05:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"doc (ux-redesign): DEPLOY_REQUEST_JIM — H227 §8 steps 2-5 host deploy request (sitemap build, robots merge, rewrite-verified canonical flip; live before-state recorded 07-11-2026) (#185)"
@@ -8362,6 +8367,9 @@ csl-doc,8ff154efb810,2018-10-24T21:17:56Z,funderburkjim,funderburkjim,funderburk
 csl-doc,bd14b74b4772,2018-10-24T20:14:08Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,build with just bhs
 csl-doc,765253c73da1,2018-10-24T20:08:17Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,bhs dictionary front matter
 csl-doc,ddedf4c08457,2018-10-23T02:06:19Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initial commit
+csl-homepage,dd1426bab987,2026-11-09T09:18:02Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H7901: og:/twitter: meta on the generated homepage (site constants + live indexdirs count) (#31)
+csl-homepage,6e4f9b290b46,2026-11-08T15:14:27Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,add standalone uni-koeln Cite & DOI page (cite.html); guard it too (H7887) (#30)
+csl-homepage,4dc2f9f7994f,2026-11-08T15:12:59Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,restore umbrella DOI in How-to-cite GENERATORS + guard: fix PR #28 regression class (H7887) (#29)
 csl-homepage,a11695a2357c,2026-10-14T05:36:46Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Android app link correction
 csl-homepage,819eba7afff8,2026-10-13T14:17:30Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,"NYBJ added, patch reset, Android app now live"
 csl-homepage,450d24a96a41,2026-10-05T07:46:37Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add corpus umbrella DOI to the How-to-cite bibliographic reference (#28)
@@ -8464,6 +8472,7 @@ csl-homepage,39824ee261fc,2019-01-17T21:00:54Z,,James Funderburk,jfunderb@dialog
 csl-homepage,1e2e3cdfff5e,2018-08-30T22:22:34Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,Changes. See https://github.com/sanskrit-lexicon/Cologne/issues/232
 csl-homepage,58b48fdb7833,2018-08-08T20:13:43Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Create readme.md
 csl-homepage,4fe451a1680a,2018-08-08T20:06:14Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,initial commit from Cologne /scans/awork/homepage
+csl-inflect,dd9fe83fa29f,2026-11-09T09:18:06Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H7901: og:/twitter: meta on the lookup page (vendored og_meta.php twin copy) (#40)
 csl-inflect,4a6e7af27320,2026-10-26T23:40:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: add SECURITY.md (security policy, org contact) (#39)"
 csl-inflect,6f93e2b155c3,2026-10-26T05:35:17Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,Bump actions/checkout from 5.1.0 to 7.0.1 (#38)
 csl-inflect,cee13f284b8a,2026-10-26T05:27:13Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,Bump actions/setup-python from 6.3.0 to 7.1.0 (#37)
@@ -8671,6 +8680,7 @@ csl-json,68bcaa26e92b,2021-08-16T04:56:19Z,drdhaval2785,drdhaval2785,drdhaval278
 csl-json,f9ee45a8f8a0,2021-08-16T04:38:38Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,yat json
 csl-json,1a666aac8ecd,2021-08-16T04:36:00Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,first generation of yat in ashtadhyayi.com format
 csl-json,7f8e85f197b5,2021-08-16T03:40:49Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,initial commit
+csl-kale,ea27b43c7ea8,2026-11-09T09:18:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H7901: og:/twitter: meta on the disp landing (vendored og_meta.php twin copy) (#13)
 csl-kale,75e10d9b0227,2026-10-26T23:40:47Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: add SECURITY.md (security policy, org contact) (#12)"
 csl-kale,70694719dc09,2026-09-05T06:59:32Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 2}) + relative-link upgrades (0)"
 csl-kale,3e1b991b99f0,2026-09-04T09:12:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ci: add Semgrep SAST (CodeQL has no PHP analyzer) (H3488) (#10)
@@ -8957,6 +8967,9 @@ csl-newsletter,bced52b7f19f,2021-09-14T04:37:04Z,drdhaval2785,Dhaval Patel,drdha
 csl-newsletter,53c6fa85e014,2021-09-13T14:34:31Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,csl-orig commits taken into consideration
 csl-newsletter,b04b08d7e699,2021-09-13T13:28:15Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,addition
 csl-newsletter,5ab58ee2cd64,2021-09-13T12:33:30Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,september started
+csl-observatory,6be21ca7469f,2026-11-09T07:12:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(citation): surface the code-release DOI on README + CITATION.cff (H7887) (#311)
+csl-observatory,6bfe46ad4734,2026-11-08T13:37:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(quotes): sync every registered headline surface to the 2026-11-08 snapshot (#310)
+csl-observatory,be92fa5be565,2026-11-08T12:13:21Z,github-actions[bot],github-actions[bot],41898282+github-actions[bot]@users.noreply.github.com,data: monthly refresh (2026-11-08) (#309)
 csl-observatory,b53f88f9ce9b,2026-11-08T11:49:05Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,chore(deps): bump actions/setup-python from 5 to 7 (#302)
 csl-observatory,2703e595aa6d,2026-11-08T11:48:54Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(refresh): issues fetch survives the App-token PRs-only pathology (#308)
 csl-observatory,73881bf1b906,2026-11-08T11:23:20Z,github-actions[bot],github-actions[bot],41898282+github-actions[bot]@users.noreply.github.com,data: monthly refresh (2026-11-02) (#298)
@@ -9633,6 +9646,8 @@ csl-observatory,eec8dc712aed,2026-05-07T19:29:28Z,gasyoun,Mārcis Gasūns,gasyou
 csl-observatory,c236fb5ac130,2026-05-07T19:28:08Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"feat: companion paper, headword counter, retry logic, templates"
 csl-observatory,1947ea3757ed,2026-05-07T17:04:56Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Create gasuns-cologne-30-report.md
 csl-observatory,e24574b2785a,2026-05-07T15:58:23Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"chore: bootstrap observatory — scripts, first data snapshot, dashboards, article scaffold"
+csl-orig,776f75662b80,2026-11-09T05:19:55Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,Bump actions/checkout from 4 to 7 (#2910)
+csl-orig,c00c39aeb629,2026-11-09T05:17:29Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,Bump actions/setup-python from 5 to 7 (#2909)
 csl-orig,ac4ef52e5f58,2026-11-07T14:14:07Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ci(H7243): add pinned F821 undefined-name gate (#2903)
 csl-orig,6c402bb9b517,2026-11-07T14:13:44Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(claude): document guard-backstop workflow (H4575) (#2897)
 csl-orig,773925ad553b,2026-11-07T10:16:25Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(bor): move ellipsis outside Devanagari delimiters at L=11063 (closes #606) (#2874)
@@ -12534,6 +12549,9 @@ csl-sqlite,a6a257a9a836,2026-05-29T05:10:13Z,gasyoun,Mārcis Gasūns,gasyoun@use
 csl-sqlite,299157791231,2026-05-15T06:00:57Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 csl-sqlite,fc82dcdff2e1,2026-04-11T06:00:27Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,README update
 csl-sqlite,fca7cdc9f757,2026-04-08T11:48:40Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+csl-websanlexicon,d090a1076bcd,2026-11-09T10:50:17Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"H7901 document sweep receipt: present=7 missing=0 n/a=19 (exit gate green, 09-11-2026) (#173)"
+csl-websanlexicon,3e194dacdce2,2026-11-09T10:26:51Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(H7901 sweep): README/CLAUDE/manual 7 sync rule for og_meta.php + apidev_copy.sh line + .ai_state entry (#172)
+csl-websanlexicon,4afaf3a5d022,2026-11-09T09:18:16Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H7901: og:/twitter: meta on all generated web surfaces (canonical og_meta.php twin) (#171)
 csl-websanlexicon,596b94e3646a,2026-11-07T05:16:32Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"Guard cd against failure at 1 sites (SC2164, H7788) (#170)"
 csl-websanlexicon,b728d41c4f09,2026-11-07T04:32:59Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(v02+tests): bug-hunt 03.11.2026 MED-1..4 residue lane + LOW triage (#169)
 csl-websanlexicon,bd41952f64fb,2026-11-04T21:34:57Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(readme): truth pass 05-11-2026 — live label counts, Mako docs link fix (#168)"
@@ -13166,6 +13184,7 @@ csl-websanlexicon,9dd72c0e9df0,2018-07-05T20:32:17Z,funderburkjim,funderburkjim,
 csl-websanlexicon,b66f40fb4704,2018-07-05T20:12:16Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,version 00 of installation python script
 csl-websanlexicon,01aa411e8151,2018-07-05T02:43:59Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initial template driven version v00
 csl-websanlexicon,70d100e4cf79,2018-07-02T22:07:39Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initial webinstall commit -- gra backup
+csl-westergaard,9e1f60f7f25d,2026-11-09T09:18:20Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H7901: og:/twitter: meta on the disp landing (vendored og_meta.php twin copy) (#12)
 csl-westergaard,9645954e928c,2026-10-27T00:04:15Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: add SECURITY.md (security policy, org contact) (#11)"
 csl-westergaard,6d509b7f565d,2026-10-12T20:18:00Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(security): explicit Content-Type + nosniff on serveimg.php (H5536) (#9)
 csl-westergaard,6bbfb84945b1,2026-09-05T07:08:11Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 2}) + relative-link upgrades (0)"
@@ -13188,6 +13207,7 @@ csl-westergaard,b76ddd4bde96,2026-05-15T07:20:29Z,gasyoun,Mārcis Gasūns,gasyou
 csl-westergaard,1bbb460f5387,2022-11-11T01:59:02Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Minor corrections re php 8.1.
 csl-westergaard,10ce6fd814c3,2019-11-08T20:42:07Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,Initial commit
 csl-westergaard,725181b85f8c,2019-11-08T20:38:09Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+csl-whitroot,ba09bd480848,2026-11-09T09:18:25Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H7901: og:/twitter: meta on the disp landing (vendored og_meta.php twin copy) (#11)
 csl-whitroot,5fec17f4e3eb,2026-10-27T00:04:21Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: add SECURITY.md (security policy, org contact) (#10)"
 csl-whitroot,d40b6136c561,2026-09-05T07:08:54Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 1}) + relative-link upgrades (0)"
 csl-whitroot,0d347848886c,2026-09-04T09:12:14Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ci: add Semgrep SAST (CodeQL has no PHP analyzer) (H3488) (#8)
@@ -13637,6 +13657,7 @@ sanskrit-fonts,f79bfe4c48d1,2026-05-29T05:11:29Z,gasyoun,Mārcis Gasūns,gasyoun
 sanskrit-fonts,4a86c5b9f39d,2026-05-15T07:39:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 sanskrit-fonts,fee5ad4e5a29,2018-09-05T03:50:42Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,siddhanta font
 sanskrit-fonts,9432607282a6,2018-09-05T03:39:54Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+sanskrit-lexicon.github.io,21da94ff8be0,2026-11-08T15:07:17Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,add standalone Cite & DOI page (cite.html) + generator with drift check; sitemap entry (H7887) (#19)
 sanskrit-lexicon.github.io,d9001e02c1d5,2026-11-07T06:59:05Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H7786 follow-up (MG yes 07-11): add 3 card-less Zenodo dictionaries to llms.txt (#18)
 sanskrit-lexicon.github.io,aea06a2e7433,2026-11-07T05:11:50Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H7786: add llms.txt + JSON-LD (Organization/WebSite) for LLM/GEO extractability (#17)
 sanskrit-lexicon.github.io,6684cd1e0619,2026-10-27T00:05:37Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: add SECURITY.md (security policy, org contact) (#16)"

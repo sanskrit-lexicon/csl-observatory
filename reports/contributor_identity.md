@@ -24,7 +24,7 @@ Fill `Real name`, `ORCID` and `Consent` where blank. `—` in ORCID means none o
 |---|---:|---:|---|---|---|---|---|
 | `funderburkjim` | 4,891 | 59 | maintainer | Jim Funderburk | Cologne Digital Sanskrit Dictionaries | — | — |
 | `drdhaval2785` | 3,882 | 41 | core | Dhaval Patel | Cologne Digital Sanskrit Dictionaries | — | — |
-| `gasyoun` | 3,734 | 77 | lead | Mārcis Gasūns | Cologne Digital Sanskrit Dictionaries | 0000-0003-4513-884X | yes |
+| `gasyoun` | 3,752 | 77 | lead | Mārcis Gasūns | Cologne Digital Sanskrit Dictionaries | 0000-0003-4513-884X | yes |
 | `AnnaRybakovaT` | 82 | 11 | occasional | Anna Rybakova | — | — | — |
 | `Andhrabharati` | 63 | 3 | core | Nagabhushana Rao | Andhrabharati | — | — |
 | `aumsanskrit` | 17 | 1 | contributor | Scott Rhodes | — | — | — |
