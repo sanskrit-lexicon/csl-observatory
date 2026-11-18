@@ -1,0 +1,51 @@
+{
+  "instrument": "OBS-T external-validity stratified sample",
+  "handoff": "H8444",
+  "created": "18-11-2026",
+  "status": "INSTRUMENT_ONLY \u2014 awaiting human adjudication",
+  "source_file": "observatory/site/src/data/correction_events_release.csv",
+  "source_sha256": "a27fec9e6a5b0a4d641d8c95078823c8606f8d5c31a85b88e5196a50abccfaaf",
+  "sample_file": "validation/external_validity_sample.csv",
+  "seed": 20261118,
+  "n": 400,
+  "n_band": [
+    300,
+    500
+  ],
+  "stratum_rule": "proportional to error_component with floor 20, stdlib random.Random in sorted event_id order",
+  "quota": {
+    "citation": 25,
+    "grammar": 20,
+    "headword": 44,
+    "markup": 45,
+    "meta": 20,
+    "sense": 123,
+    "unattributed": 123
+  },
+  "input_columns": [
+    "sample_id",
+    "ev_key",
+    "event_id",
+    "dict",
+    "date",
+    "headword_iast",
+    "old_iast",
+    "new_iast",
+    "error_component",
+    "edit_type",
+    "source_layer",
+    "stratum"
+  ],
+  "annotation_columns": [
+    "human_error",
+    "human_component",
+    "human_notes"
+  ],
+  "channel_labels": {
+    "human_error": "human only \u2014 never model-generated",
+    "human_component": "human only \u2014 never model-generated",
+    "model pass": "separate file, labeled model x release, never relabeled human x human"
+  },
+  "note": "Sample ids are positional (EV####) and carry no label signal; annotation columns are empty by construction. E32 event_id is not a primary key: the frozen cut has 52,498 rows but 44,550 distinct event_id values (1,935 ids repeat, max 912 occurrences). The unit key is event_id#row-ordinal; event_id remains a source foreign key.",
+  "sample_input_sha256": "c284d263539bf560c661b148777e9f47cac96351eda3f1f2fcdc11e263eedd23"
+}

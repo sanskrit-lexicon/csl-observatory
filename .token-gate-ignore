@@ -2,4 +2,5 @@
 # Code, docs and reports stay under the 5000-token limit.
 data/**
 validation/blind_batches/**
+validation/external_validity_sample.csv
 observatory/site/**
