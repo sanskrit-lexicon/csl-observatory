@@ -79,7 +79,21 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data reports README.md STATUS.md
+          # docs/ANTHOLOGY_ALIGNMENT_2026Q4.md is requoted by
+          # update_headline_numbers.py's requote_live_claims() (H7879): the
+          # 2026-11-18 snapshot PR #335 omitted it from this list, so the PR
+          # carried a stale live row past the in-run --check (which sees the
+          # runner's working tree) and reddened the PR-side headline gate.
+          git add data reports README.md STATUS.md docs/ANTHOLOGY_ALIGNMENT_2026Q4.md
+          # Fail loudly if the pipeline dirtied any OTHER tracked file: a
+          # requoted surface that ships outside this list is exactly the #335
+          # red-merge failure mode, and silence here means a stale surface on
+          # main that only the next human PR discovers.
+          if ! git diff --quiet; then
+            echo "::error::refresh left unshipped tracked changes:"
+            git diff --name-only
+            exit 1
+          fi
           if git diff --staged --quiet; then
             echo "No changes."
           else

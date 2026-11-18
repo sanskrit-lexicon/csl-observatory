@@ -250,7 +250,8 @@ def requote_live_claims(root: Path = ROOT, claims=None, snaps=None) -> list[str]
                 touched = True
         if touched:
             path.write_text('\n'.join(lines) + '\n', encoding='utf-8')
-            changed.append(claim.file)
+            if claim.file not in changed:
+                changed.append(claim.file)
 
     # The divergence report's delta line restates the two rows above it; it is
     # derived by definition (live − offline), so it is recomputed rather than
