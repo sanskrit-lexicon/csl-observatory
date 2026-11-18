@@ -5,15 +5,15 @@
     "default_branch": "main",
     "description": "Boehtlingk und Roth  Sanskrit Wörterbuch, 7 Bände Petersburg 1855-1875",
     "fork": false,
-    "forks_count": 0,
+    "forks_count": 1,
     "full_name": "sanskrit-lexicon/PWG",
     "has_issues": true,
     "language": "Python",
     "license": "CC-BY-SA-4.0",
     "name": "PWG",
-    "open_issues_count": 33,
-    "pushed_at": "2026-09-24T18:48:32Z",
-    "size": 119238,
+    "open_issues_count": 32,
+    "pushed_at": "2026-11-09T05:30:13Z",
+    "size": 119294,
     "stargazers_count": 1,
     "topics": [
       "cdsl",
@@ -22,7 +22,7 @@
       "lexicography",
       "sanskrit"
     ],
-    "updated_at": "2026-09-24T18:48:36Z"
+    "updated_at": "2026-11-08T12:48:50Z"
   },
   {
     "archived": false,
@@ -30,15 +30,15 @@
     "default_branch": "main",
     "description": "Sanskrit-Wörterbuch in kürzerer Fassung, 7 Bände Petersburg 1879-1889",
     "fork": false,
-    "forks_count": 1,
+    "forks_count": 2,
     "full_name": "sanskrit-lexicon/PWK",
     "has_issues": true,
     "language": "HTML",
     "license": "CC-BY-SA-4.0",
     "name": "PWK",
     "open_issues_count": 38,
-    "pushed_at": "2026-09-15T06:18:08Z",
-    "size": 86683,
+    "pushed_at": "2026-11-07T05:15:10Z",
+    "size": 86727,
     "stargazers_count": 3,
     "topics": [
       "cdsl",
@@ -47,7 +47,7 @@
       "lexicography",
       "sanskrit"
     ],
-    "updated_at": "2026-09-15T06:18:11Z"
+    "updated_at": "2026-11-07T05:15:13Z"
   },
   {
     "archived": false,
@@ -55,18 +55,18 @@
     "default_branch": "main",
     "description": "Development of http://www.sanskrit-lexicon.uni-koeln.de/",
     "fork": false,
-    "forks_count": 4,
+    "forks_count": 5,
     "full_name": "sanskrit-lexicon/COLOGNE",
     "has_issues": true,
     "language": "HTML",
     "license": "GPL-3.0",
     "name": "COLOGNE",
-    "open_issues_count": 187,
-    "pushed_at": "2026-09-15T06:17:57Z",
-    "size": 8205,
-    "stargazers_count": 19,
+    "open_issues_count": 188,
+    "pushed_at": "2026-11-07T05:15:28Z",
+    "size": 8234,
+    "stargazers_count": 20,
     "topics": [],
-    "updated_at": "2026-09-15T06:18:00Z"
+    "updated_at": "2026-11-15T00:05:59Z"
   },
   {
     "archived": false,
@@ -81,8 +81,8 @@
     "license": "CC-BY-SA-4.0",
     "name": "SCH",
     "open_issues_count": 4,
-    "pushed_at": "2026-09-05T11:34:38Z",
-    "size": 5502,
+    "pushed_at": "2026-11-07T05:15:38Z",
+    "size": 5510,
     "stargazers_count": 0,
     "topics": [
       "cdsl",
@@ -91,7 +91,7 @@
       "lexicography",
       "sanskrit"
     ],
-    "updated_at": "2026-09-05T11:34:42Z"
+    "updated_at": "2026-11-07T05:15:41Z"
   },
   {
     "archived": false,
@@ -105,9 +105,9 @@
     "language": "HTML",
     "license": "CC-BY-SA-4.0",
     "name": "MWS",
-    "open_issues_count": 38,
-    "pushed_at": "2026-09-24T02:40:36Z",
-    "size": 267623,
+    "open_issues_count": 39,
+    "pushed_at": "2026-11-09T05:30:06Z",
+    "size": 272267,
     "stargazers_count": 11,
     "topics": [
       "cdsl",
@@ -116,7 +116,7 @@
       "lexicography",
       "sanskrit"
     ],
-    "updated_at": "2026-09-24T02:40:38Z"
+    "updated_at": "2026-11-08T12:48:55Z"
   },
   {
     "archived": false,
@@ -131,8 +131,8 @@
     "license": "CC-BY-SA-4.0",
     "name": "DCS",
     "open_issues_count": 4,
-    "pushed_at": "2026-09-05T06:57:38Z",
-    "size": 472,
+    "pushed_at": "2026-11-04T22:13:30Z",
+    "size": 476,
     "stargazers_count": 0,
     "topics": [
       "cdsl",
@@ -141,7 +141,7 @@
       "lexicography",
       "sanskrit"
     ],
-    "updated_at": "2026-09-05T06:57:41Z"
+    "updated_at": "2026-11-04T22:13:33Z"
   },
   {
     "archived": false,
@@ -156,8 +156,8 @@
     "license": "CC-BY-SA-4.0",
     "name": "VCP",
     "open_issues_count": 19,
-    "pushed_at": "2026-09-05T06:49:16Z",
-    "size": 183859,
+    "pushed_at": "2026-10-27T00:27:22Z",
+    "size": 183891,
     "stargazers_count": 2,
     "topics": [
       "cdsl",
@@ -166,7 +166,7 @@
       "lexicography",
       "sanskrit"
     ],
-    "updated_at": "2026-09-05T06:49:33Z"
+    "updated_at": "2026-10-27T00:27:24Z"
   },
   {
     "archived": false,
@@ -181,8 +181,8 @@
     "license": "CC-BY-SA-4.0",
     "name": "ApteES",
     "open_issues_count": 2,
-    "pushed_at": "2026-09-05T06:56:30Z",
-    "size": 13694,
+    "pushed_at": "2026-10-26T22:51:13Z",
+    "size": 13725,
     "stargazers_count": 5,
     "topics": [
       "cdsl",
@@ -191,7 +191,7 @@
       "lexicography",
       "sanskrit"
     ],
-    "updated_at": "2026-09-05T06:56:34Z"
+    "updated_at": "2026-10-26T22:51:16Z"
   },
   {
     "archived": false,
@@ -206,11 +206,11 @@
     "license": "CC-BY-SA-4.0",
     "name": "SKD",
     "open_issues_count": 11,
-    "pushed_at": "2026-09-06T15:57:53Z",
-    "size": 13492,
+    "pushed_at": "2026-10-27T00:06:04Z",
+    "size": 13518,
     "stargazers_count": 0,
     "topics": [],
-    "updated_at": "2026-09-06T15:57:57Z"
+    "updated_at": "2026-10-27T00:06:07Z"
   },
   {
     "archived": false,
@@ -225,8 +225,8 @@
     "license": "CC-BY-SA-4.0",
     "name": "MW72",
     "open_issues_count": 1,
-    "pushed_at": "2026-09-05T06:35:40Z",
-    "size": 30076,
+    "pushed_at": "2026-10-26T05:34:25Z",
+    "size": 30098,
     "stargazers_count": 0,
     "topics": [
       "cdsl",
@@ -235,7 +235,7 @@
       "lexicography",
       "sanskrit"
     ],
-    "updated_at": "2026-09-05T06:35:45Z"
+    "updated_at": "2026-10-26T05:34:21Z"
   },
   {
     "archived": false,
@@ -250,8 +250,8 @@
     "license": "CC-BY-SA-4.0",
     "name": "MCI",
     "open_issues_count": 1,
-    "pushed_at": "2026-09-05T09:55:46Z",
-    "size": 5124,
+    "pushed_at": "2026-10-26T23:16:17Z",
+    "size": 5152,
     "stargazers_count": 0,
     "topics": [
       "cdsl",
@@ -260,7 +260,7 @@
       "lexicography",
       "sanskrit"
     ],
-    "updated_at": "2026-09-05T09:55:50Z"
+    "updated_at": "2026-10-26T23:16:20Z"
   },
   {
     "archived": false,
@@ -274,9 +274,9 @@
     "language": "Python",
     "license": "CC-BY-SA-4.0",
     "name": "GRA",
-    "open_issues_count": 11,
-    "pushed_at": "2026-09-20T07:02:52Z",
-    "size": 27630,
+    "open_issues_count": 10,
+    "pushed_at": "2026-11-07T05:16:06Z",
+    "size": 27665,
     "stargazers_count": 3,
     "topics": [
       "cdsl",
@@ -285,7 +285,7 @@
       "lexicography",
       "sanskrit"
     ],
-    "updated_at": "2026-09-20T07:02:55Z"
+    "updated_at": "2026-11-07T05:16:10Z"
   },
   {
     "archived": false,
@@ -299,9 +299,9 @@
     "language": "HTML",
     "license": "CC-BY-SA-4.0",
     "name": "CORRECTIONS",
-    "open_issues_count": 83,
-    "pushed_at": "2026-09-15T06:17:52Z",
-    "size": 184975,
+    "open_issues_count": 84,
+    "pushed_at": "2026-11-07T05:16:27Z",
+    "size": 184996,
     "stargazers_count": 10,
     "topics": [
       "cdsl",
@@ -310,7 +310,7 @@
       "lexicography",
       "sanskrit"
     ],
-    "updated_at": "2026-09-15T06:17:55Z"
+    "updated_at": "2026-11-07T05:16:30Z"
   },
   {
     "archived": false,
@@ -325,11 +325,11 @@
     "license": "CC-BY-SA-4.0",
     "name": "WIL",
     "open_issues_count": 13,
-    "pushed_at": "2026-09-05T06:35:47Z",
-    "size": 17398,
+    "pushed_at": "2026-10-26T22:25:36Z",
+    "size": 17385,
     "stargazers_count": 3,
     "topics": [],
-    "updated_at": "2026-09-05T06:35:51Z"
+    "updated_at": "2026-10-26T22:25:39Z"
   },
   {
     "archived": false,
@@ -340,15 +340,15 @@
     "forks_count": 2,
     "full_name": "sanskrit-lexicon/ArabicInSanskrit",
     "has_issues": true,
-    "language": null,
+    "language": "Python",
     "license": "CC-BY-SA-4.0",
     "name": "ArabicInSanskrit",
     "open_issues_count": 0,
-    "pushed_at": "2026-09-05T06:58:44Z",
-    "size": 19,
+    "pushed_at": "2026-10-26T23:39:24Z",
+    "size": 44,
     "stargazers_count": 0,
     "topics": [],
-    "updated_at": "2026-09-05T06:58:48Z"
+    "updated_at": "2026-10-26T23:39:27Z"
   },
   {
     "archived": false,
@@ -363,8 +363,8 @@
     "license": "CC-BY-SA-4.0",
     "name": "Wil-YAT",
     "open_issues_count": 0,
-    "pushed_at": "2026-09-06T16:08:10Z",
-    "size": 7633,
+    "pushed_at": "2026-10-26T22:25:46Z",
+    "size": 7656,
     "stargazers_count": 0,
     "topics": [
       "cdsl",
@@ -373,7 +373,7 @@
       "lexicography",
       "sanskrit"
     ],
-    "updated_at": "2026-09-06T16:08:13Z"
+    "updated_at": "2026-10-26T22:25:49Z"
   },
   {
     "archived": false,
@@ -384,15 +384,15 @@
     "forks_count": 1,
     "full_name": "sanskrit-lexicon/GreekInSanskrit",
     "has_issues": true,
-    "language": null,
+    "language": "Python",
     "license": "CC-BY-SA-4.0",
     "name": "GreekInSanskrit",
     "open_issues_count": 1,
-    "pushed_at": "2026-09-05T06:58:04Z",
-    "size": 277,
+    "pushed_at": "2026-10-27T00:04:35Z",
+    "size": 301,
     "stargazers_count": 0,
     "topics": [],
-    "updated_at": "2026-09-05T06:58:08Z"
+    "updated_at": "2026-10-27T00:04:38Z"
   },
   {
     "archived": false,
@@ -403,15 +403,15 @@
     "forks_count": 2,
     "full_name": "sanskrit-lexicon/csl-santam",
     "has_issues": true,
-    "language": "Perl",
+    "language": "Python",
     "license": "NOASSERTION",
     "name": "csl-santam",
     "open_issues_count": 0,
-    "pushed_at": "2026-09-07T05:07:27Z",
-    "size": 18468,
+    "pushed_at": "2026-10-26T05:34:57Z",
+    "size": 18508,
     "stargazers_count": 9,
     "topics": [],
-    "updated_at": "2026-09-07T05:07:31Z"
+    "updated_at": "2026-10-26T05:35:01Z"
   },
   {
     "archived": false,
@@ -426,17 +426,17 @@
     "license": "GPL-3.0",
     "name": "hwnorm1",
     "open_issues_count": 17,
-    "pushed_at": "2026-09-06T16:01:24Z",
-    "size": 126432,
+    "pushed_at": "2026-11-07T05:14:38Z",
+    "size": 126437,
     "stargazers_count": 0,
     "topics": [],
-    "updated_at": "2026-09-06T16:01:28Z"
+    "updated_at": "2026-11-07T05:14:41Z"
   },
   {
     "archived": false,
     "created_at": "2015-11-24T11:53:23Z",
     "default_branch": "main",
-    "description": null,
+    "description": "Static project pages for the Sanskrit Lexicon org, served at sanskrit-lexicon.github.io",
     "fork": false,
     "forks_count": 0,
     "full_name": "sanskrit-lexicon/sanskrit-lexicon.github.io",
@@ -445,11 +445,11 @@
     "license": "CC-BY-SA-4.0",
     "name": "sanskrit-lexicon.github.io",
     "open_issues_count": 0,
-    "pushed_at": "2026-09-05T06:57:21Z",
-    "size": 5442,
-    "stargazers_count": 1,
+    "pushed_at": "2026-11-18T05:30:08Z",
+    "size": 5494,
+    "stargazers_count": 2,
     "topics": [],
-    "updated_at": "2026-09-05T06:57:24Z"
+    "updated_at": "2026-11-17T04:20:00Z"
   },
   {
     "archived": false,
@@ -464,8 +464,8 @@
     "license": "CC-BY-SA-4.0",
     "name": "BHS",
     "open_issues_count": 4,
-    "pushed_at": "2026-09-06T16:10:54Z",
-    "size": 6988,
+    "pushed_at": "2026-10-26T20:32:19Z",
+    "size": 7014,
     "stargazers_count": 0,
     "topics": [
       "cdsl",
@@ -474,7 +474,7 @@
       "lexicography",
       "sanskrit"
     ],
-    "updated_at": "2026-09-06T16:11:08Z"
+    "updated_at": "2026-10-26T20:32:22Z"
   },
   {
     "archived": false,
@@ -489,8 +489,8 @@
     "license": "CC-BY-SA-4.0",
     "name": "VEI",
     "open_issues_count": 1,
-    "pushed_at": "2026-09-06T15:53:12Z",
-    "size": 4243,
+    "pushed_at": "2026-10-27T00:27:27Z",
+    "size": 4271,
     "stargazers_count": 0,
     "topics": [
       "cdsl",
@@ -499,7 +499,7 @@
       "lexicography",
       "sanskrit"
     ],
-    "updated_at": "2026-09-06T15:53:15Z"
+    "updated_at": "2026-10-27T00:27:31Z"
   },
   {
     "archived": false,
@@ -514,11 +514,11 @@
     "license": "CC-BY-SA-4.0",
     "name": "alternateheadwords",
     "open_issues_count": 18,
-    "pushed_at": "2026-09-05T06:57:07Z",
-    "size": 24242,
+    "pushed_at": "2026-10-26T22:50:52Z",
+    "size": 24244,
     "stargazers_count": 1,
     "topics": [],
-    "updated_at": "2026-09-05T06:57:11Z"
+    "updated_at": "2026-10-26T22:50:55Z"
   },
   {
     "archived": false,
@@ -526,18 +526,18 @@
     "default_branch": "main",
     "description": "Scripts to convert Cologne XMLs into babylon format for merging into Stardict format.",
     "fork": false,
-    "forks_count": 3,
+    "forks_count": 2,
     "full_name": "sanskrit-lexicon/cologne-stardict",
     "has_issues": true,
     "language": "Python",
     "license": "MIT",
     "name": "cologne-stardict",
-    "open_issues_count": 4,
-    "pushed_at": "2026-09-26T13:06:06Z",
-    "size": 2838061,
-    "stargazers_count": 9,
+    "open_issues_count": 3,
+    "pushed_at": "2026-11-15T15:08:33Z",
+    "size": 2854531,
+    "stargazers_count": 10,
     "topics": [],
-    "updated_at": "2026-09-26T13:06:15Z"
+    "updated_at": "2026-11-12T16:08:16Z"
   },
   {
     "archived": false,
@@ -552,8 +552,8 @@
     "license": "CC-BY-SA-4.0",
     "name": "ACC",
     "open_issues_count": 9,
-    "pushed_at": "2026-09-07T05:08:24Z",
-    "size": 2177,
+    "pushed_at": "2026-11-04T21:15:06Z",
+    "size": 2213,
     "stargazers_count": 0,
     "topics": [
       "cdsl",
@@ -562,7 +562,7 @@
       "lexicography",
       "sanskrit"
     ],
-    "updated_at": "2026-09-07T05:08:28Z"
+    "updated_at": "2026-11-04T21:15:08Z"
   },
   {
     "archived": false,
@@ -570,18 +570,18 @@
     "default_branch": "gh-pages",
     "description": "Github pages repository for hosting links to verses of Rg Veda",
     "fork": false,
-    "forks_count": 2,
+    "forks_count": 3,
     "full_name": "sanskrit-lexicon/rvlinks",
     "has_issues": true,
     "language": "HTML",
     "license": "GPL-3.0",
     "name": "rvlinks",
     "open_issues_count": 1,
-    "pushed_at": "2026-09-05T06:58:35Z",
-    "size": 10734,
+    "pushed_at": "2026-10-27T00:05:27Z",
+    "size": 13968,
     "stargazers_count": 0,
     "topics": [],
-    "updated_at": "2026-09-05T06:58:46Z"
+    "updated_at": "2026-10-27T00:05:30Z"
   },
   {
     "archived": false,
@@ -596,11 +596,11 @@
     "license": "CC-BY-SA-4.0",
     "name": "sanskrit-fonts",
     "open_issues_count": 0,
-    "pushed_at": "2026-09-26T18:12:54Z",
-    "size": 599,
+    "pushed_at": "2026-10-27T00:05:33Z",
+    "size": 601,
     "stargazers_count": 1,
     "topics": [],
-    "updated_at": "2026-09-26T18:12:57Z"
+    "updated_at": "2026-10-27T00:05:36Z"
   },
   {
     "archived": false,
@@ -615,11 +615,11 @@
     "license": "CC-BY-SA-4.0",
     "name": "MWinflect",
     "open_issues_count": 48,
-    "pushed_at": "2026-09-05T06:53:04Z",
-    "size": 27338,
+    "pushed_at": "2026-11-07T05:14:16Z",
+    "size": 27365,
     "stargazers_count": 1,
     "topics": [],
-    "updated_at": "2026-09-05T06:53:09Z"
+    "updated_at": "2026-11-07T05:14:18Z"
   },
   {
     "archived": false,
@@ -634,11 +634,11 @@
     "license": "GPL-3.0",
     "name": "csl-doc",
     "open_issues_count": 2,
-    "pushed_at": "2026-09-05T06:57:56Z",
-    "size": 186101,
+    "pushed_at": "2026-10-26T23:40:24Z",
+    "size": 186112,
     "stargazers_count": 1,
     "topics": [],
-    "updated_at": "2026-09-05T06:58:03Z"
+    "updated_at": "2026-10-26T23:40:26Z"
   },
   {
     "archived": false,
@@ -653,8 +653,8 @@
     "license": "GPL-3.0",
     "name": "csl-apidev",
     "open_issues_count": 19,
-    "pushed_at": "2026-09-24T23:43:03Z",
-    "size": 228112,
+    "pushed_at": "2026-11-18T05:22:33Z",
+    "size": 232097,
     "stargazers_count": 2,
     "topics": [
       "api",
@@ -663,7 +663,7 @@
       "php",
       "sanskrit"
     ],
-    "updated_at": "2026-09-18T14:00:44Z"
+    "updated_at": "2026-11-11T20:09:07Z"
   },
   {
     "archived": false,
@@ -677,12 +677,12 @@
     "language": "Python",
     "license": "CC-BY-SA-4.0",
     "name": "csl-homepage",
-    "open_issues_count": 1,
-    "pushed_at": "2026-09-26T04:34:19Z",
-    "size": 684,
+    "open_issues_count": 2,
+    "pushed_at": "2026-11-13T17:35:42Z",
+    "size": 1125,
     "stargazers_count": 0,
     "topics": [],
-    "updated_at": "2026-09-26T04:34:24Z"
+    "updated_at": "2026-11-12T17:19:25Z"
   },
   {
     "archived": false,
@@ -696,9 +696,9 @@
     "language": "JavaScript",
     "license": "GPL-3.0",
     "name": "csl-websanlexicon",
-    "open_issues_count": 17,
-    "pushed_at": "2026-09-24T23:43:13Z",
-    "size": 9034,
+    "open_issues_count": 15,
+    "pushed_at": "2026-11-18T15:03:02Z",
+    "size": 9208,
     "stargazers_count": 2,
     "topics": [
       "cdsl",
@@ -707,7 +707,7 @@
       "sanskrit",
       "web"
     ],
-    "updated_at": "2026-09-20T08:57:36Z"
+    "updated_at": "2026-11-11T20:09:43Z"
   },
   {
     "archived": false,
@@ -721,9 +721,9 @@
     "language": "Python",
     "license": "GPL-3.0",
     "name": "csl-pywork",
-    "open_issues_count": 6,
-    "pushed_at": "2026-09-24T19:21:17Z",
-    "size": 1565,
+    "open_issues_count": 7,
+    "pushed_at": "2026-11-18T05:34:07Z",
+    "size": 1667,
     "stargazers_count": 3,
     "topics": [
       "cdsl",
@@ -732,7 +732,7 @@
       "python",
       "sanskrit"
     ],
-    "updated_at": "2026-09-24T19:21:20Z"
+    "updated_at": "2026-11-12T15:45:08Z"
   },
   {
     "archived": false,
@@ -740,16 +740,16 @@
     "default_branch": "main",
     "description": "Data for all dictionaries of Cologne. Now all corrections are made in this git-based workflow.",
     "fork": false,
-    "forks_count": 10,
+    "forks_count": 12,
     "full_name": "sanskrit-lexicon/csl-orig",
     "has_issues": true,
     "language": "Python",
     "license": "CC-BY-SA-4.0",
     "name": "csl-orig",
-    "open_issues_count": 41,
-    "pushed_at": "2026-09-26T12:59:51Z",
-    "size": 879926,
-    "stargazers_count": 23,
+    "open_issues_count": 34,
+    "pushed_at": "2026-11-15T15:03:45Z",
+    "size": 901203,
+    "stargazers_count": 26,
     "topics": [
       "cdsl",
       "dictionary",
@@ -757,7 +757,7 @@
       "lexicography",
       "sanskrit"
     ],
-    "updated_at": "2026-09-26T12:59:57Z"
+    "updated_at": "2026-11-17T17:09:16Z"
   },
   {
     "archived": false,
@@ -771,12 +771,12 @@
     "language": "JavaScript",
     "license": "GPL-3.0",
     "name": "csl-westergaard",
-    "open_issues_count": 1,
-    "pushed_at": "2026-09-05T07:08:13Z",
-    "size": 13772,
+    "open_issues_count": 2,
+    "pushed_at": "2026-11-11T19:09:44Z",
+    "size": 13784,
     "stargazers_count": 0,
     "topics": [],
-    "updated_at": "2026-09-05T07:08:17Z"
+    "updated_at": "2026-11-11T20:09:46Z"
   },
   {
     "archived": false,
@@ -790,12 +790,12 @@
     "language": "JavaScript",
     "license": "GPL-3.0",
     "name": "csl-whitroot",
-    "open_issues_count": 0,
-    "pushed_at": "2026-09-05T07:08:56Z",
-    "size": 54748,
+    "open_issues_count": 1,
+    "pushed_at": "2026-11-11T19:09:47Z",
+    "size": 54757,
     "stargazers_count": 1,
     "topics": [],
-    "updated_at": "2026-09-05T07:08:59Z"
+    "updated_at": "2026-11-11T20:09:50Z"
   },
   {
     "archived": false,
@@ -809,18 +809,18 @@
     "language": "JavaScript",
     "license": "GPL-3.0",
     "name": "csl-kale",
-    "open_issues_count": 1,
-    "pushed_at": "2026-09-05T06:59:34Z",
-    "size": 489330,
+    "open_issues_count": 2,
+    "pushed_at": "2026-11-11T19:09:28Z",
+    "size": 489339,
     "stargazers_count": 2,
     "topics": [],
-    "updated_at": "2026-09-05T06:59:38Z"
+    "updated_at": "2026-11-11T20:09:30Z"
   },
   {
     "archived": false,
     "created_at": "2019-11-28T01:01:33Z",
     "default_branch": "main",
-    "description": null,
+    "description": "Declension and conjugation table generator for Sanskrit headwords (CDSL processing tool)",
     "fork": false,
     "forks_count": 2,
     "full_name": "sanskrit-lexicon/csl-inflect",
@@ -828,12 +828,12 @@
     "language": "Python",
     "license": "LGPL-3.0",
     "name": "csl-inflect",
-    "open_issues_count": 12,
-    "pushed_at": "2026-09-15T06:17:08Z",
-    "size": 5452,
+    "open_issues_count": 13,
+    "pushed_at": "2026-11-11T19:09:24Z",
+    "size": 5484,
     "stargazers_count": 3,
     "topics": [],
-    "updated_at": "2026-09-15T06:17:13Z"
+    "updated_at": "2026-11-11T20:09:27Z"
   },
   {
     "archived": false,
@@ -847,9 +847,9 @@
     "language": "Python",
     "license": "GPL-3.0",
     "name": "csl-corrections",
-    "open_issues_count": 55,
-    "pushed_at": "2026-09-28T03:35:03Z",
-    "size": 22182,
+    "open_issues_count": 70,
+    "pushed_at": "2026-11-18T08:03:08Z",
+    "size": 20710,
     "stargazers_count": 0,
     "topics": [
       "cdsl",
@@ -858,13 +858,13 @@
       "lexicography",
       "sanskrit"
     ],
-    "updated_at": "2026-09-28T03:35:06Z"
+    "updated_at": "2026-11-12T15:30:32Z"
   },
   {
     "archived": false,
     "created_at": "2020-02-01T21:58:15Z",
     "default_branch": "main",
-    "description": null,
+    "description": "Cross-dictionary headword normalization for the Cologne Sanskrit lexicons (CDSL processing tool)",
     "fork": false,
     "forks_count": 0,
     "full_name": "sanskrit-lexicon/hwnorm2",
@@ -873,11 +873,11 @@
     "license": "GPL-3.0",
     "name": "hwnorm2",
     "open_issues_count": 4,
-    "pushed_at": "2026-09-05T07:08:22Z",
-    "size": 7252,
+    "pushed_at": "2026-10-27T00:04:48Z",
+    "size": 7255,
     "stargazers_count": 0,
     "topics": [],
-    "updated_at": "2026-09-05T07:08:27Z"
+    "updated_at": "2026-11-08T10:03:07Z"
   },
   {
     "archived": false,
@@ -891,9 +891,9 @@
     "language": "Python",
     "license": "GPL-3.0",
     "name": "AP90",
-    "open_issues_count": 16,
-    "pushed_at": "2026-09-05T11:36:14Z",
-    "size": 23511,
+    "open_issues_count": 14,
+    "pushed_at": "2026-11-07T05:16:39Z",
+    "size": 23523,
     "stargazers_count": 0,
     "topics": [
       "cdsl",
@@ -902,7 +902,7 @@
       "lexicography",
       "sanskrit"
     ],
-    "updated_at": "2026-09-05T11:36:18Z"
+    "updated_at": "2026-11-07T05:16:42Z"
   },
   {
     "archived": false,
@@ -917,8 +917,8 @@
     "license": "CC-BY-SA-4.0",
     "name": "KRM",
     "open_issues_count": 3,
-    "pushed_at": "2026-09-05T09:55:58Z",
-    "size": 9362,
+    "pushed_at": "2026-10-26T05:36:59Z",
+    "size": 9386,
     "stargazers_count": 1,
     "topics": [
       "cdsl",
@@ -927,7 +927,7 @@
       "lexicography",
       "sanskrit"
     ],
-    "updated_at": "2026-09-05T09:56:01Z"
+    "updated_at": "2026-10-26T05:36:55Z"
   },
   {
     "archived": false,
@@ -941,9 +941,9 @@
     "language": "Python",
     "license": "CC-BY-SA-4.0",
     "name": "BUR",
-    "open_issues_count": 2,
-    "pushed_at": "2026-09-18T14:00:23Z",
-    "size": 10244,
+    "open_issues_count": 1,
+    "pushed_at": "2026-10-26T05:36:03Z",
+    "size": 10212,
     "stargazers_count": 0,
     "topics": [
       "cdsl",
@@ -952,7 +952,7 @@
       "lexicography",
       "sanskrit"
     ],
-    "updated_at": "2026-09-18T14:00:26Z"
+    "updated_at": "2026-10-26T05:35:59Z"
   },
   {
     "archived": false,
@@ -967,8 +967,8 @@
     "license": "CC-BY-SA-4.0",
     "name": "CAE",
     "open_issues_count": 3,
-    "pushed_at": "2026-09-06T15:55:50Z",
-    "size": 8609,
+    "pushed_at": "2026-10-26T20:32:36Z",
+    "size": 8628,
     "stargazers_count": 0,
     "topics": [
       "cdsl",
@@ -977,7 +977,7 @@
       "lexicography",
       "sanskrit"
     ],
-    "updated_at": "2026-09-06T15:55:54Z"
+    "updated_at": "2026-10-26T20:32:39Z"
   },
   {
     "archived": false,
@@ -992,8 +992,8 @@
     "license": "CC-BY-SA-4.0",
     "name": "CCS",
     "open_issues_count": 2,
-    "pushed_at": "2026-08-26T01:14:01Z",
-    "size": 4136,
+    "pushed_at": "2026-10-26T20:33:13Z",
+    "size": 4165,
     "stargazers_count": 0,
     "topics": [
       "cdsl",
@@ -1002,7 +1002,7 @@
       "lexicography",
       "sanskrit"
     ],
-    "updated_at": "2026-08-26T01:16:05Z"
+    "updated_at": "2026-10-26T20:33:16Z"
   },
   {
     "archived": false,
@@ -1017,8 +1017,8 @@
     "license": "CC-BY-SA-4.0",
     "name": "MD",
     "open_issues_count": 6,
-    "pushed_at": "2026-09-05T06:49:31Z",
-    "size": 11666,
+    "pushed_at": "2026-10-26T05:31:38Z",
+    "size": 11612,
     "stargazers_count": 0,
     "topics": [
       "cdsl",
@@ -1027,7 +1027,7 @@
       "lexicography",
       "sanskrit"
     ],
-    "updated_at": "2026-09-05T06:49:35Z"
+    "updated_at": "2026-10-26T05:31:35Z"
   },
   {
     "archived": false,
@@ -1042,8 +1042,8 @@
     "license": "CC-BY-SA-4.0",
     "name": "STC",
     "open_issues_count": 2,
-    "pushed_at": "2026-09-06T15:57:14Z",
-    "size": 2742,
+    "pushed_at": "2026-10-27T00:06:11Z",
+    "size": 2770,
     "stargazers_count": 0,
     "topics": [
       "cdsl",
@@ -1052,7 +1052,7 @@
       "lexicography",
       "sanskrit"
     ],
-    "updated_at": "2026-09-06T15:57:17Z"
+    "updated_at": "2026-10-27T00:06:14Z"
   },
   {
     "archived": false,
@@ -1067,11 +1067,11 @@
     "license": "CC-BY-SA-4.0",
     "name": "BEN",
     "open_issues_count": 5,
-    "pushed_at": "2026-09-07T05:09:52Z",
-    "size": 12282,
+    "pushed_at": "2026-10-26T23:39:37Z",
+    "size": 12308,
     "stargazers_count": 0,
     "topics": [],
-    "updated_at": "2026-09-07T05:09:55Z"
+    "updated_at": "2026-10-26T23:39:40Z"
   },
   {
     "archived": true,
@@ -1105,11 +1105,11 @@
     "license": null,
     "name": "temp_corrections_ap90",
     "open_issues_count": 1,
-    "pushed_at": "2026-09-20T06:47:58Z",
-    "size": 24857,
+    "pushed_at": "2026-10-27T00:06:17Z",
+    "size": 24859,
     "stargazers_count": 0,
     "topics": [],
-    "updated_at": "2026-09-20T06:48:01Z"
+    "updated_at": "2026-10-27T00:06:19Z"
   },
   {
     "archived": false,
@@ -1124,11 +1124,11 @@
     "license": "GPL-3.0",
     "name": "cologne-hugo",
     "open_issues_count": 0,
-    "pushed_at": "2026-09-05T07:08:48Z",
-    "size": 25,
+    "pushed_at": "2026-10-26T20:33:34Z",
+    "size": 27,
     "stargazers_count": 0,
     "topics": [],
-    "updated_at": "2026-09-05T07:08:51Z"
+    "updated_at": "2026-10-26T20:33:37Z"
   },
   {
     "archived": true,
@@ -1162,11 +1162,11 @@
     "license": "GPL-3.0",
     "name": "avlinks",
     "open_issues_count": 1,
-    "pushed_at": "2026-09-05T06:59:08Z",
-    "size": 4843,
+    "pushed_at": "2026-10-26T23:39:31Z",
+    "size": 56547,
     "stargazers_count": 2,
     "topics": [],
-    "updated_at": "2026-09-05T06:59:14Z"
+    "updated_at": "2026-10-26T23:39:34Z"
   },
   {
     "archived": false,
@@ -1181,11 +1181,11 @@
     "license": null,
     "name": "temp_corrections_mw",
     "open_issues_count": 1,
-    "pushed_at": "2026-09-20T06:48:58Z",
-    "size": 21769,
+    "pushed_at": "2026-10-27T00:27:15Z",
+    "size": 21771,
     "stargazers_count": 0,
     "topics": [],
-    "updated_at": "2026-09-20T06:49:00Z"
+    "updated_at": "2026-10-27T00:27:18Z"
   },
   {
     "archived": false,
@@ -1200,11 +1200,11 @@
     "license": "CC-BY-SA-4.0",
     "name": "csl-json",
     "open_issues_count": 0,
-    "pushed_at": "2026-09-15T06:38:45Z",
-    "size": 363246,
+    "pushed_at": "2026-10-26T23:40:44Z",
+    "size": 363269,
     "stargazers_count": 0,
     "topics": [],
-    "updated_at": "2026-09-15T06:38:48Z"
+    "updated_at": "2026-10-26T23:40:46Z"
   },
   {
     "archived": false,
@@ -1218,12 +1218,12 @@
     "language": "Python",
     "license": "CC-BY-SA-4.0",
     "name": "csl-devanagari",
-    "open_issues_count": 15,
-    "pushed_at": "2026-09-28T03:35:12Z",
-    "size": 303084,
+    "open_issues_count": 16,
+    "pushed_at": "2026-11-15T15:47:31Z",
+    "size": 303131,
     "stargazers_count": 0,
     "topics": [],
-    "updated_at": "2026-09-28T03:35:15Z"
+    "updated_at": "2026-10-30T09:02:16Z"
   },
   {
     "archived": false,
@@ -1234,12 +1234,12 @@
     "forks_count": 0,
     "full_name": "sanskrit-lexicon/BOR",
     "has_issues": true,
-    "language": "HTML",
+    "language": "Python",
     "license": "CC-BY-SA-4.0",
     "name": "BOR",
     "open_issues_count": 3,
-    "pushed_at": "2026-09-05T06:34:53Z",
-    "size": 13533,
+    "pushed_at": "2026-10-26T05:35:38Z",
+    "size": 13554,
     "stargazers_count": 0,
     "topics": [
       "cdsl",
@@ -1248,7 +1248,7 @@
       "lexicography",
       "sanskrit"
     ],
-    "updated_at": "2026-09-05T06:34:57Z"
+    "updated_at": "2026-10-26T05:35:35Z"
   },
   {
     "archived": false,
@@ -1263,11 +1263,11 @@
     "license": "GPL-3.0",
     "name": "csl-newsletter",
     "open_issues_count": 2,
-    "pushed_at": "2026-09-06T16:02:38Z",
-    "size": 143,
+    "pushed_at": "2026-10-26T23:41:15Z",
+    "size": 172,
     "stargazers_count": 2,
     "topics": [],
-    "updated_at": "2026-09-06T16:02:43Z"
+    "updated_at": "2026-10-26T23:41:18Z"
   },
   {
     "archived": false,
@@ -1282,11 +1282,11 @@
     "license": "CC-BY-SA-4.0",
     "name": "csl-lnum",
     "open_issues_count": 1,
-    "pushed_at": "2026-09-15T06:38:59Z",
-    "size": 382247,
+    "pushed_at": "2026-10-26T23:41:02Z",
+    "size": 382250,
     "stargazers_count": 0,
     "topics": [],
-    "updated_at": "2026-09-15T06:39:03Z"
+    "updated_at": "2026-10-26T23:41:05Z"
   },
   {
     "archived": false,
@@ -1301,11 +1301,11 @@
     "license": "CC-BY-SA-4.0",
     "name": "csl-ldev",
     "open_issues_count": 7,
-    "pushed_at": "2026-09-15T06:39:05Z",
-    "size": 365233,
+    "pushed_at": "2026-10-26T23:40:55Z",
+    "size": 365235,
     "stargazers_count": 1,
     "topics": [],
-    "updated_at": "2026-09-15T06:39:09Z"
+    "updated_at": "2026-10-26T23:40:58Z"
   },
   {
     "archived": false,
@@ -1320,8 +1320,8 @@
     "license": "CC-BY-SA-4.0",
     "name": "INM",
     "open_issues_count": 3,
-    "pushed_at": "2026-09-05T06:50:23Z",
-    "size": 5539,
+    "pushed_at": "2026-10-26T05:34:14Z",
+    "size": 5570,
     "stargazers_count": 0,
     "topics": [
       "cdsl",
@@ -1330,7 +1330,7 @@
       "lexicography",
       "sanskrit"
     ],
-    "updated_at": "2026-09-05T06:50:27Z"
+    "updated_at": "2026-10-26T05:34:10Z"
   },
   {
     "archived": false,
@@ -1345,11 +1345,11 @@
     "license": "CC-BY-SA-4.0",
     "name": "literarysource",
     "open_issues_count": 3,
-    "pushed_at": "2026-09-05T07:08:26Z",
-    "size": 252,
+    "pushed_at": "2026-10-26T23:16:00Z",
+    "size": 246,
     "stargazers_count": 2,
     "topics": [],
-    "updated_at": "2026-09-05T07:08:29Z"
+    "updated_at": "2026-10-26T23:16:04Z"
   },
   {
     "archived": false,
@@ -1364,8 +1364,8 @@
     "license": "CC-BY-SA-4.0",
     "name": "BOP",
     "open_issues_count": 1,
-    "pushed_at": "2026-09-05T06:51:04Z",
-    "size": 10419,
+    "pushed_at": "2026-11-07T05:15:57Z",
+    "size": 10452,
     "stargazers_count": 0,
     "topics": [
       "cdsl",
@@ -1374,7 +1374,7 @@
       "lexicography",
       "sanskrit"
     ],
-    "updated_at": "2026-09-05T06:51:09Z"
+    "updated_at": "2026-11-07T05:15:59Z"
   },
   {
     "archived": false,
@@ -1389,8 +1389,8 @@
     "license": "CC-BY-SA-4.0",
     "name": "LRV",
     "open_issues_count": 3,
-    "pushed_at": "2026-09-06T15:41:56Z",
-    "size": 63490,
+    "pushed_at": "2026-10-26T23:16:09Z",
+    "size": 63550,
     "stargazers_count": 0,
     "topics": [
       "cdsl",
@@ -1399,7 +1399,7 @@
       "lexicography",
       "sanskrit"
     ],
-    "updated_at": "2026-09-06T15:42:00Z"
+    "updated_at": "2026-10-26T23:16:11Z"
   },
   {
     "archived": true,
@@ -1433,11 +1433,11 @@
     "license": "CC-BY-SA-4.0",
     "name": "mw-dev",
     "open_issues_count": 17,
-    "pushed_at": "2026-09-05T06:58:30Z",
-    "size": 182578,
+    "pushed_at": "2026-11-07T05:14:49Z",
+    "size": 182585,
     "stargazers_count": 1,
     "topics": [],
-    "updated_at": "2026-09-05T06:58:37Z"
+    "updated_at": "2026-11-07T05:14:52Z"
   },
   {
     "archived": true,
@@ -1471,8 +1471,8 @@
     "license": "CC-BY-SA-4.0",
     "name": "FRI",
     "open_issues_count": 3,
-    "pushed_at": "2026-09-05T06:56:48Z",
-    "size": 3598,
+    "pushed_at": "2026-10-26T05:31:02Z",
+    "size": 3627,
     "stargazers_count": 0,
     "topics": [
       "cdsl",
@@ -1481,7 +1481,7 @@
       "lexicography",
       "sanskrit"
     ],
-    "updated_at": "2026-09-05T06:56:51Z"
+    "updated_at": "2026-10-26T05:31:06Z"
   },
   {
     "archived": false,
@@ -1489,15 +1489,15 @@
     "default_branch": "main",
     "description": "Convert Amarakosha to CDSD format",
     "fork": false,
-    "forks_count": 0,
+    "forks_count": 1,
     "full_name": "sanskrit-lexicon/AMAR",
     "has_issues": true,
     "language": "Python",
     "license": "GPL-2.0",
     "name": "AMAR",
     "open_issues_count": 2,
-    "pushed_at": "2026-09-05T11:33:57Z",
-    "size": 459,
+    "pushed_at": "2026-10-26T22:51:01Z",
+    "size": 683,
     "stargazers_count": 0,
     "topics": [
       "cdsl",
@@ -1506,7 +1506,7 @@
       "lexicography",
       "sanskrit"
     ],
-    "updated_at": "2026-09-05T11:34:01Z"
+    "updated_at": "2026-10-26T22:51:04Z"
   },
   {
     "archived": false,
@@ -1521,8 +1521,8 @@
     "license": "CC-BY-SA-4.0",
     "name": "AP",
     "open_issues_count": 11,
-    "pushed_at": "2026-09-05T06:53:00Z",
-    "size": 37750,
+    "pushed_at": "2026-10-26T05:34:09Z",
+    "size": 37780,
     "stargazers_count": 0,
     "topics": [
       "cdsl",
@@ -1531,7 +1531,7 @@
       "lexicography",
       "sanskrit"
     ],
-    "updated_at": "2026-09-05T06:53:07Z"
+    "updated_at": "2026-10-26T05:34:13Z"
   },
   {
     "archived": false,
@@ -1546,11 +1546,11 @@
     "license": "CC-BY-SA-4.0",
     "name": "SHS",
     "open_issues_count": 3,
-    "pushed_at": "2026-09-07T05:36:06Z",
-    "size": 6246,
+    "pushed_at": "2026-10-27T00:05:58Z",
+    "size": 6274,
     "stargazers_count": 0,
     "topics": [],
-    "updated_at": "2026-09-07T05:36:10Z"
+    "updated_at": "2026-10-27T00:06:01Z"
   },
   {
     "archived": false,
@@ -1565,8 +1565,8 @@
     "license": "CC-BY-SA-4.0",
     "name": "KNA",
     "open_issues_count": 1,
-    "pushed_at": "2026-09-05T06:58:09Z",
-    "size": 49,
+    "pushed_at": "2026-11-08T14:58:57Z",
+    "size": 67,
     "stargazers_count": 0,
     "topics": [
       "cdsl",
@@ -1575,7 +1575,7 @@
       "lexicography",
       "sanskrit"
     ],
-    "updated_at": "2026-09-05T06:58:12Z"
+    "updated_at": "2026-11-08T14:59:00Z"
   },
   {
     "archived": false,
@@ -1586,12 +1586,12 @@
     "forks_count": 0,
     "full_name": "sanskrit-lexicon/KOW",
     "has_issues": true,
-    "language": "HTML",
+    "language": "Python",
     "license": "CC-BY-SA-4.0",
     "name": "KOW",
     "open_issues_count": 1,
-    "pushed_at": "2026-09-05T06:57:41Z",
-    "size": 45,
+    "pushed_at": "2026-10-26T23:15:53Z",
+    "size": 51,
     "stargazers_count": 0,
     "topics": [
       "cdsl",
@@ -1600,7 +1600,7 @@
       "lexicography",
       "sanskrit"
     ],
-    "updated_at": "2026-09-05T06:57:45Z"
+    "updated_at": "2026-10-26T23:15:56Z"
   },
   {
     "archived": false,
@@ -1615,8 +1615,8 @@
     "license": "GPL-3.0",
     "name": "csl-app",
     "open_issues_count": 1,
-    "pushed_at": "2026-09-05T06:59:25Z",
-    "size": 16320,
+    "pushed_at": "2026-11-12T17:37:13Z",
+    "size": 15298,
     "stargazers_count": 1,
     "topics": [
       "cdsl",
@@ -1625,7 +1625,7 @@
       "flutter",
       "sanskrit"
     ],
-    "updated_at": "2026-09-05T06:56:44Z"
+    "updated_at": "2026-11-12T15:53:58Z"
   },
   {
     "archived": false,
@@ -1640,11 +1640,11 @@
     "license": "CC-BY-SA-4.0",
     "name": "csl-lslink",
     "open_issues_count": 2,
-    "pushed_at": "2026-09-05T07:08:09Z",
-    "size": 53168,
+    "pushed_at": "2026-10-26T23:41:09Z",
+    "size": 53170,
     "stargazers_count": 0,
     "topics": [],
-    "updated_at": "2026-09-05T07:08:12Z"
+    "updated_at": "2026-10-26T23:41:11Z"
   },
   {
     "archived": false,
@@ -1655,12 +1655,12 @@
     "forks_count": 0,
     "full_name": "sanskrit-lexicon/PUI",
     "has_issues": true,
-    "language": "HTML",
+    "language": "Python",
     "license": "CC-BY-SA-4.0",
     "name": "PUI",
     "open_issues_count": 2,
-    "pushed_at": "2026-09-05T06:57:45Z",
-    "size": 1856,
+    "pushed_at": "2026-10-27T00:05:14Z",
+    "size": 3135,
     "stargazers_count": 0,
     "topics": [
       "cdsl",
@@ -1669,7 +1669,7 @@
       "lexicography",
       "sanskrit"
     ],
-    "updated_at": "2026-09-05T06:57:48Z"
+    "updated_at": "2026-10-27T00:05:17Z"
   },
   {
     "archived": false,
@@ -1680,15 +1680,15 @@
     "forks_count": 0,
     "full_name": "sanskrit-lexicon/csl-sqlite",
     "has_issues": true,
-    "language": null,
+    "language": "Python",
     "license": "GPL-3.0",
     "name": "csl-sqlite",
     "open_issues_count": 1,
-    "pushed_at": "2026-09-05T07:08:52Z",
-    "size": 222302,
+    "pushed_at": "2026-11-12T17:52:14Z",
+    "size": 223170,
     "stargazers_count": 1,
     "topics": [],
-    "updated_at": "2026-09-05T07:08:56Z"
+    "updated_at": "2026-11-12T14:58:50Z"
   },
   {
     "archived": false,
@@ -1702,12 +1702,12 @@
     "language": "HTML",
     "license": "GPL-3.0",
     "name": "csl-observatory",
-    "open_issues_count": 27,
-    "pushed_at": "2026-09-28T09:22:45Z",
-    "size": 42084,
+    "open_issues_count": 19,
+    "pushed_at": "2026-11-18T15:10:12Z",
+    "size": 43593,
     "stargazers_count": 0,
     "topics": [],
-    "updated_at": "2026-09-28T09:22:49Z"
+    "updated_at": "2026-11-11T20:09:35Z"
   },
   {
     "archived": false,
@@ -1718,12 +1718,12 @@
     "forks_count": 0,
     "full_name": "sanskrit-lexicon/csl-atlas",
     "has_issues": true,
-    "language": "JavaScript",
+    "language": "Python",
     "license": "NOASSERTION",
     "name": "csl-atlas",
-    "open_issues_count": 15,
-    "pushed_at": "2026-09-28T01:12:22Z",
-    "size": 54818,
+    "open_issues_count": 7,
+    "pushed_at": "2026-11-18T11:16:07Z",
+    "size": 85939,
     "stargazers_count": 1,
     "topics": [
       "digital-humanities",
@@ -1732,7 +1732,7 @@
       "observable",
       "sanskrit"
     ],
-    "updated_at": "2026-09-27T16:35:12Z"
+    "updated_at": "2026-11-11T20:09:10Z"
   },
   {
     "archived": false,
@@ -1746,9 +1746,9 @@
     "language": "JavaScript",
     "license": "CC-BY-SA-4.0",
     "name": "csl-standards",
-    "open_issues_count": 4,
-    "pushed_at": "2026-09-24T16:03:12Z",
-    "size": 10161,
+    "open_issues_count": 5,
+    "pushed_at": "2026-11-05T13:44:05Z",
+    "size": 10676,
     "stargazers_count": 0,
     "topics": [
       "fair-data",
@@ -1758,7 +1758,7 @@
       "standards",
       "tei"
     ],
-    "updated_at": "2026-09-24T16:03:16Z"
+    "updated_at": "2026-11-05T13:41:48Z"
   },
   {
     "archived": false,
@@ -1772,9 +1772,9 @@
     "language": "JavaScript",
     "license": "CC-BY-SA-4.0",
     "name": "csl-guides",
-    "open_issues_count": 5,
-    "pushed_at": "2026-09-24T23:43:08Z",
-    "size": 4822,
+    "open_issues_count": 2,
+    "pushed_at": "2026-11-17T07:46:56Z",
+    "size": 7540,
     "stargazers_count": 0,
     "topics": [
       "cdsl",
@@ -1783,7 +1783,7 @@
       "lexicography",
       "sanskrit"
     ],
-    "updated_at": "2026-09-18T14:00:49Z"
+    "updated_at": "2026-11-12T16:50:29Z"
   },
   {
     "archived": false,
@@ -1797,9 +1797,9 @@
     "language": "Python",
     "license": "MIT",
     "name": "sanskrit-util",
-    "open_issues_count": 4,
-    "pushed_at": "2026-09-24T23:43:23Z",
-    "size": 1579,
+    "open_issues_count": 3,
+    "pushed_at": "2026-11-18T05:37:54Z",
+    "size": 1497,
     "stargazers_count": 0,
     "topics": [
       "cdsl",
@@ -1811,7 +1811,7 @@
       "slp1",
       "transliteration"
     ],
-    "updated_at": "2026-09-22T13:38:45Z"
+    "updated_at": "2026-11-11T20:14:55Z"
   },
   {
     "archived": false,
@@ -1825,9 +1825,9 @@
     "language": "Python",
     "license": "MIT",
     "name": "cologne-skills",
-    "open_issues_count": 0,
-    "pushed_at": "2026-09-07T05:35:30Z",
-    "size": 85,
+    "open_issues_count": 2,
+    "pushed_at": "2026-10-26T20:33:44Z",
+    "size": 106,
     "stargazers_count": 0,
     "topics": [
       "claude-code",
@@ -1836,7 +1836,7 @@
       "security",
       "skills"
     ],
-    "updated_at": "2026-09-07T05:35:34Z"
+    "updated_at": "2026-10-26T20:33:47Z"
   },
   {
     "archived": false,
@@ -1850,12 +1850,12 @@
     "language": "Python",
     "license": null,
     "name": "IEG",
-    "open_issues_count": 1,
-    "pushed_at": "2026-09-05T07:08:40Z",
-    "size": 26,
+    "open_issues_count": 3,
+    "pushed_at": "2026-10-26T23:15:36Z",
+    "size": 49,
     "stargazers_count": 0,
     "topics": [],
-    "updated_at": "2026-09-05T07:08:43Z"
+    "updated_at": "2026-10-26T23:15:39Z"
   },
   {
     "archived": false,
@@ -1870,29 +1870,86 @@
     "license": "MIT",
     "name": "csl-pyutil",
     "open_issues_count": 3,
-    "pushed_at": "2026-09-24T10:57:30Z",
-    "size": 590,
+    "pushed_at": "2026-10-27T00:03:50Z",
+    "size": 378,
     "stargazers_count": 0,
     "topics": [],
-    "updated_at": "2026-09-23T23:50:06Z"
+    "updated_at": "2026-10-27T00:03:53Z"
   },
   {
     "archived": false,
     "created_at": "2026-07-21T18:33:42Z",
     "default_branch": "main",
-    "description": "An Encyclopaedic Dictionary of Sanskrit on Historical Principles",
+    "description": "An Encyclopaedic Dictionary of Sanskrit on Historical Principles — front-matter OCR + sourced knowledge page (PD_KNOWLEDGE.md)",
     "fork": false,
     "forks_count": 0,
     "full_name": "sanskrit-lexicon/PD",
     "has_issues": true,
-    "language": "Python",
+    "language": null,
     "license": null,
     "name": "PD",
-    "open_issues_count": 2,
-    "pushed_at": "2026-09-13T04:07:36Z",
-    "size": 11563,
+    "open_issues_count": 3,
+    "pushed_at": "2026-11-11T19:08:56Z",
+    "size": 12017,
     "stargazers_count": 0,
     "topics": [],
-    "updated_at": "2026-09-05T06:52:50Z"
+    "updated_at": "2026-11-11T19:08:59Z"
+  },
+  {
+    "archived": false,
+    "created_at": "2026-10-11T12:35:30Z",
+    "default_branch": "main",
+    "description": "Static LOD surface for the PWG->RU graph (rePWG namespace) — machine-preview technical release, explicitly non-citable.",
+    "fork": false,
+    "forks_count": 0,
+    "full_name": "sanskrit-lexicon/pwg-ru-lod",
+    "has_issues": true,
+    "language": "HTML",
+    "license": null,
+    "name": "pwg-ru-lod",
+    "open_issues_count": 0,
+    "pushed_at": "2026-10-27T00:05:21Z",
+    "size": 49466,
+    "stargazers_count": 0,
+    "topics": [],
+    "updated_at": "2026-10-27T00:05:24Z"
+  },
+  {
+    "archived": false,
+    "created_at": "2026-10-18T14:07:36Z",
+    "default_branch": "main",
+    "description": "Org defaults: community health files, issue forms, and reusable workflows (data-validate, changelog-lint, codeql, pages, release)",
+    "fork": false,
+    "forks_count": 0,
+    "full_name": "sanskrit-lexicon/.github",
+    "has_issues": true,
+    "language": "Python",
+    "license": null,
+    "name": ".github",
+    "open_issues_count": 3,
+    "pushed_at": "2026-11-05T10:08:20Z",
+    "size": 22,
+    "stargazers_count": 0,
+    "topics": [],
+    "updated_at": "2026-11-05T09:30:37Z"
+  },
+  {
+    "archived": false,
+    "created_at": "2026-11-09T11:19:50Z",
+    "default_branch": "main",
+    "description": "User lookup analytics for the Cologne Digital Sanskrit Dictionaries: query-event aggregates, top-looked-up words, miss ledger",
+    "fork": false,
+    "forks_count": 0,
+    "full_name": "sanskrit-lexicon/csl-usage",
+    "has_issues": true,
+    "language": null,
+    "license": null,
+    "name": "csl-usage",
+    "open_issues_count": 0,
+    "pushed_at": "2026-11-11T19:09:36Z",
+    "size": 32,
+    "stargazers_count": 0,
+    "topics": [],
+    "updated_at": "2026-11-11T19:09:39Z"
   }
 ]

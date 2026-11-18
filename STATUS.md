@@ -2,7 +2,7 @@ _Created: 07-05-2026 · Last updated: 05-09-2026_
 
 # Status
 
-> **Current status (2026-09 · snapshot csl-obs/org-live@1.0.0, as of 2026-09-28).** The observatory is live and reproducible.
+> **Current status (2026-11 · snapshot csl-obs/org-live@1.0.0, as of 2026-11-18).** The observatory is live and reproducible.
 > Five org-process findings + a synthesis are on the
 > [dashboard](https://sanskrit-lexicon.github.io/csl-observatory/), and the
 > standalone **OBS-T error-typology** track (a 52,498-event correction corpus,
@@ -17,14 +17,14 @@ _Created: 07-05-2026 · Last updated: 05-09-2026_
 3. **[`reports/synthesis.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/synthesis.md)** — *State of the observatory*, the findings tied into one picture.
 4. **[Dashboard](https://sanskrit-lexicon.github.io/csl-observatory/)** — the live, downloadable charts.
 
-## Headline numbers (snapshot csl-obs/org-live@1.0.0, as of 2026-09-28)
+## Headline numbers (snapshot csl-obs/org-live@1.0.0, as of 2026-11-18)
 
 | Metric | Value |
 |---|---:|
-| Repositories tracked | 86 |
-| Issues + PRs (lifetime) | 10,039 |
-| Commits since 2014 | 13,810 |
-| Distinct human contributors | 72 |
+| Repositories tracked | 89 |
+| Issues + PRs (lifetime) | 11,787 |
+| Commits since 2014 | 12,507 |
+| Distinct human contributors | 64 |
 | Span | 13 years (2014–2026) |
 | OBS-T correction corpus | 52,498 events across 43 dictionaries |
 

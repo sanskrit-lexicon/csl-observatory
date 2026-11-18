@@ -6,8 +6,8 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2014-01-14T14:01:39Z",
-    "pushed_at": "2026-09-24T18:48:32Z",
-    "commits_count": 487,
+    "pushed_at": "2026-11-09T05:30:13Z",
+    "commits_count": 503,
     "contributors_count": 4,
     "contributors": [
       "dependabot[bot]",
@@ -19,11 +19,11 @@
     "issues_open": 32,
     "issues_closed": 167,
     "first_commit": "2014-09-25T09:57:25Z",
-    "last_commit": "2026-09-24T18:48:30Z",
+    "last_commit": "2026-11-08T12:48:45Z",
     "type_counts": {
+      "content-enhancement": 22,
+      "bug": 16,
       "markup": 38,
-      "content-enhancement": 21,
-      "bug": 15,
       "question": 12,
       "link-target": 74,
       "link-splitting": 8,
@@ -32,14 +32,14 @@
       "encoding": 11
     },
     "severity_counts": {
-      "minor": 77,
-      "medium": 105,
+      "medium": 107,
+      "minor": 78,
       "hard": 8
     },
     "milestone_counts": {
-      "Major Enhancements": 21,
-      "Digitization Quality": 41,
-      "Structured Data": 46,
+      "Structured Data": 47,
+      "Digitization Quality": 42,
+      "Major Enhancements": 22,
       "Dictionary to Book": 82
     },
     "triaged": true
@@ -51,8 +51,8 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2014-01-14T14:12:31Z",
-    "pushed_at": "2026-09-15T06:18:08Z",
-    "commits_count": 318,
+    "pushed_at": "2026-11-07T05:15:10Z",
+    "commits_count": 328,
     "contributors_count": 6,
     "contributors": [
       "AnnaRybakovaT",
@@ -66,7 +66,7 @@
     "issues_open": 38,
     "issues_closed": 79,
     "first_commit": "2014-11-08T02:51:31Z",
-    "last_commit": "2026-09-15T06:18:06Z",
+    "last_commit": "2026-11-07T05:15:07Z",
     "type_counts": {
       "link-splitting": 1,
       "question": 10,
@@ -98,8 +98,8 @@
     "license": "GPL-3.0",
     "archived": false,
     "created_at": "2014-01-14T14:14:31Z",
-    "pushed_at": "2026-09-15T06:17:57Z",
-    "commits_count": 245,
+    "pushed_at": "2026-11-07T05:15:28Z",
+    "commits_count": 253,
     "contributors_count": 5,
     "contributors": [
       "DmitriSKT",
@@ -108,11 +108,11 @@
       "funderburkjim",
       "gasyoun"
     ],
-    "issues_total": 471,
-    "issues_open": 187,
+    "issues_total": 472,
+    "issues_open": 188,
     "issues_closed": 284,
     "first_commit": "2014-01-14T14:14:31Z",
-    "last_commit": "2026-09-15T06:17:55Z",
+    "last_commit": "2026-11-07T05:15:26Z",
     "type_counts": {
       "question": 78,
       "content-enhancement": 125,
@@ -144,8 +144,8 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2014-01-15T18:51:49Z",
-    "pushed_at": "2026-09-05T11:34:38Z",
-    "commits_count": 62,
+    "pushed_at": "2026-11-07T05:15:38Z",
+    "commits_count": 69,
     "contributors_count": 3,
     "contributors": [
       "dependabot[bot]",
@@ -156,7 +156,7 @@
     "issues_open": 4,
     "issues_closed": 8,
     "first_commit": "2014-01-15T18:51:50Z",
-    "last_commit": "2026-09-05T11:34:20Z",
+    "last_commit": "2026-11-07T05:15:37Z",
     "type_counts": {
       "content-enhancement": 4,
       "markup": 5,
@@ -181,22 +181,21 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2014-01-16T19:34:16Z",
-    "pushed_at": "2026-09-24T02:40:36Z",
-    "commits_count": 581,
-    "contributors_count": 6,
+    "pushed_at": "2026-11-09T05:30:06Z",
+    "commits_count": 400,
+    "contributors_count": 5,
     "contributors": [
       "Andhrabharati",
-      "AnnaRybakovaT",
       "dependabot[bot]",
       "drdhaval2785",
       "funderburkjim",
       "gasyoun"
     ],
-    "issues_total": 219,
-    "issues_open": 37,
+    "issues_total": 221,
+    "issues_open": 39,
     "issues_closed": 182,
-    "first_commit": "2014-01-16T19:34:16Z",
-    "last_commit": "2026-09-24T02:40:33Z",
+    "first_commit": "2022-08-09T20:52:15Z",
+    "last_commit": "2026-11-08T12:48:50Z",
     "type_counts": {
       "content-enhancement": 30,
       "link-target": 13,
@@ -228,8 +227,8 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2014-01-17T07:47:11Z",
-    "pushed_at": "2026-09-05T06:57:38Z",
-    "commits_count": 35,
+    "pushed_at": "2026-11-04T22:13:30Z",
+    "commits_count": 38,
     "contributors_count": 2,
     "contributors": [
       "dependabot[bot]",
@@ -239,7 +238,7 @@
     "issues_open": 4,
     "issues_closed": 0,
     "first_commit": "2014-01-17T07:47:11Z",
-    "last_commit": "2026-09-05T06:57:35Z",
+    "last_commit": "2026-11-04T22:13:27Z",
     "type_counts": {
       "content-enhancement": 1,
       "markup": 1,
@@ -265,15 +264,15 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2014-01-22T04:12:20Z",
-    "pushed_at": "2026-09-05T06:49:16Z",
-    "commits_count": 161,
+    "pushed_at": "2026-10-27T00:27:22Z",
+    "commits_count": 166,
     "contributors_count": 0,
     "contributors": [],
     "issues_total": 32,
     "issues_open": 19,
     "issues_closed": 13,
     "first_commit": "2014-01-21T20:12:21-08:00",
-    "last_commit": "2026-09-05T09:49:13+03:00",
+    "last_commit": "2026-10-27T03:27:19+03:00",
     "type_counts": {
       "content-enhancement": 7,
       "markup": 4,
@@ -302,8 +301,8 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2014-07-15T18:59:03Z",
-    "pushed_at": "2026-09-05T06:56:30Z",
-    "commits_count": 70,
+    "pushed_at": "2026-10-26T22:51:13Z",
+    "commits_count": 76,
     "contributors_count": 3,
     "contributors": [
       "dependabot[bot]",
@@ -314,7 +313,7 @@
     "issues_open": 2,
     "issues_closed": 15,
     "first_commit": "2014-07-15T18:59:03Z",
-    "last_commit": "2026-09-05T06:56:28Z",
+    "last_commit": "2026-10-26T22:51:11Z",
     "type_counts": {
       "markup": 6,
       "content-enhancement": 2,
@@ -340,8 +339,8 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2014-07-19T18:58:18Z",
-    "pushed_at": "2026-09-06T15:57:53Z",
-    "commits_count": 82,
+    "pushed_at": "2026-10-27T00:06:04Z",
+    "commits_count": 87,
     "contributors_count": 4,
     "contributors": [
       "AnnaRybakovaT",
@@ -353,7 +352,7 @@
     "issues_open": 11,
     "issues_closed": 9,
     "first_commit": "2014-07-19T18:58:18Z",
-    "last_commit": "2026-09-06T15:57:40Z",
+    "last_commit": "2026-10-27T00:06:02Z",
     "type_counts": {
       "content-enhancement": 5,
       "markup": 2,
@@ -382,8 +381,8 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2014-08-24T21:07:17Z",
-    "pushed_at": "2026-09-05T06:35:40Z",
-    "commits_count": 32,
+    "pushed_at": "2026-10-26T05:34:25Z",
+    "commits_count": 36,
     "contributors_count": 3,
     "contributors": [
       "dependabot[bot]",
@@ -394,7 +393,7 @@
     "issues_open": 1,
     "issues_closed": 5,
     "first_commit": "2014-08-24T21:07:18Z",
-    "last_commit": "2026-09-05T06:35:38Z",
+    "last_commit": "2026-10-26T05:34:17Z",
     "type_counts": {
       "question": 2,
       "markup": 1,
@@ -418,8 +417,8 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2014-09-26T07:42:37Z",
-    "pushed_at": "2026-09-05T09:55:46Z",
-    "commits_count": 35,
+    "pushed_at": "2026-10-26T23:16:17Z",
+    "commits_count": 40,
     "contributors_count": 2,
     "contributors": [
       "dependabot[bot]",
@@ -429,7 +428,7 @@
     "issues_open": 1,
     "issues_closed": 1,
     "first_commit": "2026-05-15T07:38:49Z",
-    "last_commit": "2026-09-05T09:55:44Z",
+    "last_commit": "2026-10-26T23:16:14Z",
     "type_counts": {
       "markup": 1,
       "question": 1
@@ -449,8 +448,8 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2014-09-29T16:24:14Z",
-    "pushed_at": "2026-09-20T07:02:52Z",
-    "commits_count": 120,
+    "pushed_at": "2026-11-07T05:16:06Z",
+    "commits_count": 126,
     "contributors_count": 3,
     "contributors": [
       "dependabot[bot]",
@@ -461,7 +460,7 @@
     "issues_open": 10,
     "issues_closed": 30,
     "first_commit": "2015-01-04T22:07:54Z",
-    "last_commit": "2026-09-20T07:02:50Z",
+    "last_commit": "2026-11-07T05:16:04Z",
     "type_counts": {
       "content-enhancement": 15,
       "markup": 8,
@@ -492,7 +491,7 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2014-09-30T01:17:51Z",
-    "pushed_at": "2026-09-15T06:17:52Z",
+    "pushed_at": "2026-11-07T05:16:27Z",
     "commits_count": 400,
     "contributors_count": 5,
     "contributors": [
@@ -505,8 +504,8 @@
     "issues_total": 443,
     "issues_open": 83,
     "issues_closed": 360,
-    "first_commit": "2016-01-11T04:16:56Z",
-    "last_commit": "2026-09-15T06:17:50Z",
+    "first_commit": "2016-01-12T02:44:26Z",
+    "last_commit": "2026-11-07T05:16:25Z",
     "type_counts": {
       "question": 14
     },
@@ -524,8 +523,8 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2014-12-28T21:05:00Z",
-    "pushed_at": "2026-09-05T06:35:47Z",
-    "commits_count": 102,
+    "pushed_at": "2026-10-26T22:25:36Z",
+    "commits_count": 107,
     "contributors_count": 4,
     "contributors": [
       "dependabot[bot]",
@@ -537,7 +536,7 @@
     "issues_open": 13,
     "issues_closed": 6,
     "first_commit": "2014-12-28T21:05:00Z",
-    "last_commit": "2026-09-05T06:35:44Z",
+    "last_commit": "2026-10-26T22:25:33Z",
     "type_counts": {
       "content-enhancement": 10,
       "markup": 6,
@@ -558,12 +557,12 @@
   {
     "name": "ArabicInSanskrit",
     "description": "Arabic words occuring in Sanskrit Dictionaries",
-    "language": null,
+    "language": "Python",
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2015-01-18T20:43:43Z",
-    "pushed_at": "2026-09-05T06:58:44Z",
-    "commits_count": 13,
+    "pushed_at": "2026-10-26T23:39:24Z",
+    "commits_count": 18,
     "contributors_count": 3,
     "contributors": [
       "dependabot[bot]",
@@ -574,7 +573,7 @@
     "issues_open": 0,
     "issues_closed": 16,
     "first_commit": "2015-01-18T20:43:43Z",
-    "last_commit": "2026-09-05T06:58:42Z",
+    "last_commit": "2026-10-26T23:39:22Z",
     "type_counts": {
       "question": 3
     },
@@ -594,8 +593,8 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2015-03-10T19:11:34Z",
-    "pushed_at": "2026-09-06T16:08:10Z",
-    "commits_count": 20,
+    "pushed_at": "2026-10-26T22:25:46Z",
+    "commits_count": 24,
     "contributors_count": 3,
     "contributors": [
       "dependabot[bot]",
@@ -606,7 +605,7 @@
     "issues_open": 0,
     "issues_closed": 6,
     "first_commit": "2015-03-10T19:18:05Z",
-    "last_commit": "2026-09-06T16:07:57Z",
+    "last_commit": "2026-10-26T22:25:44Z",
     "type_counts": {
       "markup": 3,
       "encoding": 2,
@@ -626,12 +625,12 @@
   {
     "name": "GreekInSanskrit",
     "description": "Provide missing Greek text for the Cologne digitizations of Sanskrit dictionaries.",
-    "language": null,
+    "language": "Python",
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2015-04-15T01:46:39Z",
-    "pushed_at": "2026-09-05T06:58:04Z",
-    "commits_count": 17,
+    "pushed_at": "2026-10-27T00:04:35Z",
+    "commits_count": 22,
     "contributors_count": 3,
     "contributors": [
       "dependabot[bot]",
@@ -642,7 +641,7 @@
     "issues_open": 1,
     "issues_closed": 43,
     "first_commit": "2015-04-15T01:46:39Z",
-    "last_commit": "2026-09-05T06:58:02Z",
+    "last_commit": "2026-10-27T00:04:34Z",
     "type_counts": {
       "question": 3,
       "bug": 3
@@ -661,12 +660,12 @@
   {
     "name": "csl-santam",
     "description": "A port of http://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/tamil/index.html ",
-    "language": "Perl",
+    "language": "Python",
     "license": "NOASSERTION",
     "archived": false,
     "created_at": "2015-06-02T20:22:49Z",
-    "pushed_at": "2026-09-07T05:07:27Z",
-    "commits_count": 50,
+    "pushed_at": "2026-10-26T05:34:57Z",
+    "commits_count": 54,
     "contributors_count": 3,
     "contributors": [
       "dependabot[bot]",
@@ -677,7 +676,7 @@
     "issues_open": 0,
     "issues_closed": 4,
     "first_commit": "2015-06-02T20:22:49Z",
-    "last_commit": "2026-09-07T05:07:25Z",
+    "last_commit": "2026-10-26T05:34:56Z",
     "type_counts": {
       "bug": 1
     },
@@ -692,15 +691,15 @@
     "license": "GPL-3.0",
     "archived": false,
     "created_at": "2015-11-19T05:22:04Z",
-    "pushed_at": "2026-09-06T16:01:24Z",
-    "commits_count": 213,
+    "pushed_at": "2026-11-07T05:14:38Z",
+    "commits_count": 215,
     "contributors_count": 0,
     "contributors": [],
     "issues_total": 21,
     "issues_open": 17,
     "issues_closed": 4,
     "first_commit": "2015-11-19T10:52:04+05:30",
-    "last_commit": "2026-09-06T19:01:06+03:00",
+    "last_commit": "2026-11-07T08:14:36+03:00",
     "type_counts": {
       "bug": 4,
       "question": 2
@@ -718,13 +717,13 @@
   },
   {
     "name": "sanskrit-lexicon.github.io",
-    "description": null,
+    "description": "Static project pages for the Sanskrit Lexicon org, served at sanskrit-lexicon.github.io",
     "language": "HTML",
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2015-11-24T11:53:23Z",
-    "pushed_at": "2026-09-05T06:57:21Z",
-    "commits_count": 64,
+    "pushed_at": "2026-11-18T05:30:08Z",
+    "commits_count": 73,
     "contributors_count": 4,
     "contributors": [
       "dependabot[bot]",
@@ -736,7 +735,7 @@
     "issues_open": 0,
     "issues_closed": 0,
     "first_commit": "2015-11-24T11:53:23Z",
-    "last_commit": "2026-09-05T06:57:18Z",
+    "last_commit": "2026-11-18T05:29:47Z",
     "type_counts": {},
     "severity_counts": {},
     "milestone_counts": {},
@@ -749,8 +748,8 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2016-01-02T03:42:33Z",
-    "pushed_at": "2026-09-06T16:10:54Z",
-    "commits_count": 69,
+    "pushed_at": "2026-10-26T20:32:19Z",
+    "commits_count": 74,
     "contributors_count": 4,
     "contributors": [
       "dependabot[bot]",
@@ -762,7 +761,7 @@
     "issues_open": 4,
     "issues_closed": 4,
     "first_commit": "2016-01-02T03:42:33Z",
-    "last_commit": "2026-09-06T16:10:36Z",
+    "last_commit": "2026-10-26T20:32:17Z",
     "type_counts": {
       "content-enhancement": 2,
       "markup": 4,
@@ -786,8 +785,8 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2016-01-02T10:19:41Z",
-    "pushed_at": "2026-09-06T15:53:12Z",
-    "commits_count": 42,
+    "pushed_at": "2026-10-27T00:27:27Z",
+    "commits_count": 47,
     "contributors_count": 4,
     "contributors": [
       "dependabot[bot]",
@@ -799,7 +798,7 @@
     "issues_open": 1,
     "issues_closed": 1,
     "first_commit": "2016-01-02T10:19:41Z",
-    "last_commit": "2026-09-06T15:52:59Z",
+    "last_commit": "2026-10-27T00:27:25Z",
     "type_counts": {
       "markup": 1,
       "link-target": 1
@@ -821,8 +820,8 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2016-10-03T04:13:55Z",
-    "pushed_at": "2026-09-05T06:57:07Z",
-    "commits_count": 129,
+    "pushed_at": "2026-10-26T22:50:52Z",
+    "commits_count": 130,
     "contributors_count": 4,
     "contributors": [
       "dependabot[bot]",
@@ -834,7 +833,7 @@
     "issues_open": 18,
     "issues_closed": 7,
     "first_commit": "2016-10-01T08:25:27Z",
-    "last_commit": "2026-09-05T06:57:05Z",
+    "last_commit": "2026-10-26T22:50:50Z",
     "type_counts": {
       "question": 5,
       "bug": 1
@@ -856,15 +855,15 @@
     "license": "MIT",
     "archived": false,
     "created_at": "2017-04-16T07:56:59Z",
-    "pushed_at": "2026-09-26T13:06:06Z",
-    "commits_count": 880,
+    "pushed_at": "2026-11-15T15:08:33Z",
+    "commits_count": 896,
     "contributors_count": 0,
     "contributors": [],
     "issues_total": 48,
     "issues_open": 3,
     "issues_closed": 45,
     "first_commit": "2017-04-04T12:15:28+05:30",
-    "last_commit": "2026-09-26T13:05:52Z",
+    "last_commit": "2026-11-15T15:08:29Z",
     "type_counts": {
       "bug": 13,
       "question": 1
@@ -887,8 +886,8 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2017-05-28T18:26:15Z",
-    "pushed_at": "2026-09-07T05:08:24Z",
-    "commits_count": 31,
+    "pushed_at": "2026-11-04T21:15:06Z",
+    "commits_count": 38,
     "contributors_count": 3,
     "contributors": [
       "dependabot[bot]",
@@ -899,7 +898,7 @@
     "issues_open": 9,
     "issues_closed": 10,
     "first_commit": "2017-05-28T18:26:15Z",
-    "last_commit": "2026-09-07T05:08:22Z",
+    "last_commit": "2026-11-04T21:15:02Z",
     "type_counts": {
       "markup": 12,
       "question": 4,
@@ -924,8 +923,8 @@
     "license": "GPL-3.0",
     "archived": false,
     "created_at": "2018-08-29T22:07:20Z",
-    "pushed_at": "2026-09-05T06:58:35Z",
-    "commits_count": 27,
+    "pushed_at": "2026-10-27T00:05:27Z",
+    "commits_count": 30,
     "contributors_count": 4,
     "contributors": [
       "Haqob",
@@ -937,7 +936,7 @@
     "issues_open": 1,
     "issues_closed": 1,
     "first_commit": "2018-08-29T22:21:10Z",
-    "last_commit": "2026-09-05T06:58:33Z",
+    "last_commit": "2026-10-27T00:05:24Z",
     "type_counts": {
       "bug": 1
     },
@@ -956,8 +955,8 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2018-09-05T03:39:54Z",
-    "pushed_at": "2026-09-26T18:12:54Z",
-    "commits_count": 14,
+    "pushed_at": "2026-10-27T00:05:33Z",
+    "commits_count": 15,
     "contributors_count": 3,
     "contributors": [
       "dependabot[bot]",
@@ -968,7 +967,7 @@
     "issues_open": 0,
     "issues_closed": 0,
     "first_commit": "2018-09-05T03:39:54Z",
-    "last_commit": "2026-09-26T18:12:52Z",
+    "last_commit": "2026-10-27T00:05:30Z",
     "type_counts": {},
     "severity_counts": {},
     "milestone_counts": {},
@@ -981,15 +980,19 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2018-10-16T20:28:07Z",
-    "pushed_at": "2026-09-05T06:53:04Z",
-    "commits_count": 121,
-    "contributors_count": 0,
-    "contributors": [],
+    "pushed_at": "2026-11-07T05:14:16Z",
+    "commits_count": 124,
+    "contributors_count": 3,
+    "contributors": [
+      "dependabot[bot]",
+      "funderburkjim",
+      "gasyoun"
+    ],
     "issues_total": 50,
     "issues_open": 48,
     "issues_closed": 2,
-    "first_commit": "2018-10-16T16:28:08-04:00",
-    "last_commit": "2026-09-05T09:53:02+03:00",
+    "first_commit": "2018-10-16T20:28:08Z",
+    "last_commit": "2026-11-07T05:14:14Z",
     "type_counts": {
       "question": 8
     },
@@ -1009,8 +1012,8 @@
     "license": "GPL-3.0",
     "archived": false,
     "created_at": "2018-10-24T21:56:19Z",
-    "pushed_at": "2026-09-05T06:57:56Z",
-    "commits_count": 58,
+    "pushed_at": "2026-10-26T23:40:24Z",
+    "commits_count": 62,
     "contributors_count": 4,
     "contributors": [
       "dependabot[bot]",
@@ -1022,7 +1025,7 @@
     "issues_open": 2,
     "issues_closed": 4,
     "first_commit": "2018-10-23T02:06:19Z",
-    "last_commit": "2026-09-05T06:57:53Z",
+    "last_commit": "2026-10-26T23:40:21Z",
     "type_counts": {
       "bug": 3
     },
@@ -1042,8 +1045,8 @@
     "license": "GPL-3.0",
     "archived": false,
     "created_at": "2019-03-16T20:29:46Z",
-    "pushed_at": "2026-09-24T23:43:03Z",
-    "commits_count": 736,
+    "pushed_at": "2026-11-18T05:22:33Z",
+    "commits_count": 764,
     "contributors_count": 5,
     "contributors": [
       "actions-user",
@@ -1052,23 +1055,23 @@
       "funderburkjim",
       "gasyoun"
     ],
-    "issues_total": 66,
-    "issues_open": 18,
-    "issues_closed": 48,
+    "issues_total": 68,
+    "issues_open": 19,
+    "issues_closed": 49,
     "first_commit": "2018-04-17T21:16:26Z",
-    "last_commit": "2026-09-18T14:00:39Z",
+    "last_commit": "2026-11-18T05:22:19Z",
     "type_counts": {
-      "bug": 12,
+      "bug": 13,
       "question": 4
     },
     "severity_counts": {
-      "minor": 39
+      "minor": 40
     },
     "milestone_counts": {
+      "Developer Experience": 3,
       "Community": 4,
       "User Experience": 37,
-      "API Stability": 4,
-      "Developer Experience": 2
+      "API Stability": 4
     },
     "triaged": true
   },
@@ -1079,7 +1082,7 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2019-03-21T01:18:14Z",
-    "pushed_at": "2026-09-26T04:34:19Z",
+    "pushed_at": "2026-11-13T17:35:42Z",
     "commits_count": 0,
     "contributors_count": 0,
     "contributors": [],
@@ -1100,7 +1103,7 @@
     "license": "GPL-3.0",
     "archived": false,
     "created_at": "2019-03-21T01:28:26Z",
-    "pushed_at": "2026-09-24T23:43:13Z",
+    "pushed_at": "2026-11-18T15:03:02Z",
     "commits_count": 0,
     "contributors_count": 0,
     "contributors": [],
@@ -1121,8 +1124,8 @@
     "license": "GPL-3.0",
     "archived": false,
     "created_at": "2019-07-20T04:07:17Z",
-    "pushed_at": "2026-09-24T19:21:17Z",
-    "commits_count": 580,
+    "pushed_at": "2026-11-18T05:34:07Z",
+    "commits_count": 604,
     "contributors_count": 5,
     "contributors": [
       "YevgenJohn",
@@ -1131,17 +1134,17 @@
       "funderburkjim",
       "gasyoun"
     ],
-    "issues_total": 58,
-    "issues_open": 5,
+    "issues_total": 60,
+    "issues_open": 7,
     "issues_closed": 53,
     "first_commit": "2019-07-20T04:08:01Z",
-    "last_commit": "2026-09-24T19:21:15Z",
+    "last_commit": "2026-11-18T05:34:04Z",
     "type_counts": {
-      "bug": 15,
+      "bug": 17,
       "question": 2
     },
     "severity_counts": {
-      "minor": 28
+      "minor": 30
     },
     "milestone_counts": {
       "Developer Experience": 6,
@@ -1159,17 +1162,21 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2019-07-23T06:30:32Z",
-    "pushed_at": "2026-09-26T12:59:51Z",
-    "commits_count": 2295,
-    "contributors_count": 0,
-    "contributors": [],
-    "issues_total": 2814,
+    "pushed_at": "2026-11-15T15:03:45Z",
+    "commits_count": 200,
+    "contributors_count": 3,
+    "contributors": [
+      "dependabot[bot]",
+      "drdhaval2785",
+      "gasyoun"
+    ],
+    "issues_total": 2816,
     "issues_open": 31,
-    "issues_closed": 2783,
-    "first_commit": "2019-07-20T10:20:29+05:30",
-    "last_commit": "2026-09-26T18:29:01+05:30",
+    "issues_closed": 2785,
+    "first_commit": "2026-06-24T17:09:06Z",
+    "last_commit": "2026-11-15T15:03:41Z",
     "type_counts": {
-      "bug": 84,
+      "bug": 85,
       "question": 38,
       "text-correction": 2645,
       "encoding": 4,
@@ -1178,7 +1185,7 @@
       "scan-quality": 23
     },
     "severity_counts": {
-      "minor": 2763,
+      "minor": 2764,
       "medium": 38,
       "hard": 5
     },
@@ -1198,20 +1205,22 @@
     "license": "GPL-3.0",
     "archived": false,
     "created_at": "2019-11-08T20:38:08Z",
-    "pushed_at": "2026-09-05T07:08:13Z",
-    "commits_count": 20,
+    "pushed_at": "2026-11-11T19:09:44Z",
+    "commits_count": 24,
     "contributors_count": 3,
     "contributors": [
       "dependabot[bot]",
       "funderburkjim",
       "gasyoun"
     ],
-    "issues_total": 1,
-    "issues_open": 1,
+    "issues_total": 2,
+    "issues_open": 2,
     "issues_closed": 0,
     "first_commit": "2019-11-08T20:38:09Z",
-    "last_commit": "2026-09-05T07:08:11Z",
-    "type_counts": {},
+    "last_commit": "2026-11-11T19:09:41Z",
+    "type_counts": {
+      "bug": 1
+    },
     "severity_counts": {
       "minor": 1
     },
@@ -1227,20 +1236,22 @@
     "license": "GPL-3.0",
     "archived": false,
     "created_at": "2019-11-08T21:19:27Z",
-    "pushed_at": "2026-09-05T07:08:56Z",
-    "commits_count": 18,
+    "pushed_at": "2026-11-11T19:09:47Z",
+    "commits_count": 21,
     "contributors_count": 3,
     "contributors": [
       "dependabot[bot]",
       "funderburkjim",
       "gasyoun"
     ],
-    "issues_total": 0,
-    "issues_open": 0,
+    "issues_total": 1,
+    "issues_open": 1,
     "issues_closed": 0,
     "first_commit": "2019-11-08T21:19:28Z",
-    "last_commit": "2026-09-05T07:08:54Z",
-    "type_counts": {},
+    "last_commit": "2026-11-11T19:09:45Z",
+    "type_counts": {
+      "bug": 1
+    },
     "severity_counts": {},
     "milestone_counts": {},
     "triaged": false
@@ -1252,21 +1263,21 @@
     "license": "GPL-3.0",
     "archived": false,
     "created_at": "2019-11-09T00:43:45Z",
-    "pushed_at": "2026-09-05T06:59:34Z",
-    "commits_count": 23,
+    "pushed_at": "2026-11-11T19:09:28Z",
+    "commits_count": 26,
     "contributors_count": 3,
     "contributors": [
       "dependabot[bot]",
       "funderburkjim",
       "gasyoun"
     ],
-    "issues_total": 2,
-    "issues_open": 1,
+    "issues_total": 3,
+    "issues_open": 2,
     "issues_closed": 1,
     "first_commit": "2019-11-09T00:43:46Z",
-    "last_commit": "2026-09-05T06:59:32Z",
+    "last_commit": "2026-11-11T19:09:26Z",
     "type_counts": {
-      "bug": 1
+      "bug": 2
     },
     "severity_counts": {
       "minor": 1
@@ -1278,25 +1289,26 @@
   },
   {
     "name": "csl-inflect",
-    "description": null,
+    "description": "Declension and conjugation table generator for Sanskrit headwords (CDSL processing tool)",
     "language": "Python",
     "license": "LGPL-3.0",
     "archived": false,
     "created_at": "2019-11-28T01:01:33Z",
-    "pushed_at": "2026-09-15T06:17:08Z",
-    "commits_count": 88,
+    "pushed_at": "2026-11-11T19:09:24Z",
+    "commits_count": 95,
     "contributors_count": 3,
     "contributors": [
       "dependabot[bot]",
       "funderburkjim",
       "gasyoun"
     ],
-    "issues_total": 20,
-    "issues_open": 12,
+    "issues_total": 21,
+    "issues_open": 13,
     "issues_closed": 8,
     "first_commit": "2019-11-27T02:19:14Z",
-    "last_commit": "2026-09-15T06:17:06Z",
+    "last_commit": "2026-11-11T19:09:22Z",
     "type_counts": {
+      "bug": 1,
       "question": 1
     },
     "severity_counts": {
@@ -1316,8 +1328,8 @@
     "license": "GPL-3.0",
     "archived": false,
     "created_at": "2019-12-16T20:34:55Z",
-    "pushed_at": "2026-09-28T03:35:03Z",
-    "commits_count": 1128,
+    "pushed_at": "2026-11-18T08:03:08Z",
+    "commits_count": 1201,
     "contributors_count": 5,
     "contributors": [
       "dependabot[bot]",
@@ -1326,14 +1338,14 @@
       "gasyoun",
       "github-actions[bot]"
     ],
-    "issues_total": 350,
-    "issues_open": 52,
-    "issues_closed": 298,
+    "issues_total": 383,
+    "issues_open": 70,
+    "issues_closed": 313,
     "first_commit": "2019-12-16T20:34:56Z",
-    "last_commit": "2026-09-28T03:35:00Z",
+    "last_commit": "2026-11-18T05:33:48Z",
     "type_counts": {
+      "question": 46,
       "text-correction": 128,
-      "question": 45,
       "bug": 39,
       "content-enhancement": 6,
       "markup": 11,
@@ -1355,13 +1367,13 @@
   },
   {
     "name": "hwnorm2",
-    "description": null,
+    "description": "Cross-dictionary headword normalization for the Cologne Sanskrit lexicons (CDSL processing tool)",
     "language": "Python",
     "license": "GPL-3.0",
     "archived": false,
     "created_at": "2020-02-01T21:58:15Z",
-    "pushed_at": "2026-09-05T07:08:22Z",
-    "commits_count": 60,
+    "pushed_at": "2026-10-27T00:04:48Z",
+    "commits_count": 61,
     "contributors_count": 5,
     "contributors": [
       "actions-user",
@@ -1374,7 +1386,7 @@
     "issues_open": 4,
     "issues_closed": 1,
     "first_commit": "2020-02-01T22:00:20Z",
-    "last_commit": "2026-09-05T07:08:19Z",
+    "last_commit": "2026-10-27T00:04:46Z",
     "type_counts": {},
     "severity_counts": {
       "minor": 3
@@ -1392,8 +1404,8 @@
     "license": "GPL-3.0",
     "archived": false,
     "created_at": "2020-03-14T19:00:32Z",
-    "pushed_at": "2026-09-05T11:36:14Z",
-    "commits_count": 83,
+    "pushed_at": "2026-11-07T05:16:39Z",
+    "commits_count": 86,
     "contributors_count": 4,
     "contributors": [
       "Andhrabharati",
@@ -1402,10 +1414,10 @@
       "gasyoun"
     ],
     "issues_total": 32,
-    "issues_open": 15,
-    "issues_closed": 17,
+    "issues_open": 14,
+    "issues_closed": 18,
     "first_commit": "2020-03-14T19:00:33Z",
-    "last_commit": "2026-09-05T11:35:58Z",
+    "last_commit": "2026-11-07T05:16:37Z",
     "type_counts": {
       "content-enhancement": 6,
       "markup": 10,
@@ -1435,8 +1447,8 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2020-03-31T18:37:42Z",
-    "pushed_at": "2026-09-05T09:55:58Z",
-    "commits_count": 43,
+    "pushed_at": "2026-10-26T05:36:59Z",
+    "commits_count": 47,
     "contributors_count": 3,
     "contributors": [
       "dependabot[bot]",
@@ -1447,7 +1459,7 @@
     "issues_open": 3,
     "issues_closed": 1,
     "first_commit": "2020-03-31T18:37:43Z",
-    "last_commit": "2026-09-05T09:55:55Z",
+    "last_commit": "2026-10-26T05:36:50Z",
     "type_counts": {
       "markup": 1,
       "content-enhancement": 3
@@ -1469,8 +1481,8 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2020-04-09T17:26:54Z",
-    "pushed_at": "2026-09-18T14:00:23Z",
-    "commits_count": 56,
+    "pushed_at": "2026-10-26T05:36:03Z",
+    "commits_count": 61,
     "contributors_count": 4,
     "contributors": [
       "AnnaRybakovaT",
@@ -1482,7 +1494,7 @@
     "issues_open": 1,
     "issues_closed": 5,
     "first_commit": "2020-04-09T17:26:55Z",
-    "last_commit": "2026-09-18T14:00:21Z",
+    "last_commit": "2026-10-26T05:35:55Z",
     "type_counts": {
       "markup": 1,
       "text-correction": 3,
@@ -1506,8 +1518,8 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2020-04-12T02:54:50Z",
-    "pushed_at": "2026-09-06T15:55:50Z",
-    "commits_count": 58,
+    "pushed_at": "2026-10-26T20:32:36Z",
+    "commits_count": 64,
     "contributors_count": 5,
     "contributors": [
       "AnnaRybakovaT",
@@ -1520,7 +1532,7 @@
     "issues_open": 3,
     "issues_closed": 1,
     "first_commit": "2020-04-12T02:54:51Z",
-    "last_commit": "2026-09-06T15:55:32Z",
+    "last_commit": "2026-10-26T20:32:32Z",
     "type_counts": {
       "content-enhancement": 2,
       "markup": 1,
@@ -1544,8 +1556,8 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2020-04-15T01:40:11Z",
-    "pushed_at": "2026-08-26T01:14:01Z",
-    "commits_count": 36,
+    "pushed_at": "2026-10-26T20:33:13Z",
+    "commits_count": 42,
     "contributors_count": 3,
     "contributors": [
       "dependabot[bot]",
@@ -1556,7 +1568,7 @@
     "issues_open": 2,
     "issues_closed": 1,
     "first_commit": "2020-04-15T01:40:12Z",
-    "last_commit": "2026-08-26T01:13:59Z",
+    "last_commit": "2026-10-26T20:33:10Z",
     "type_counts": {
       "markup": 1,
       "scan-quality": 1,
@@ -1580,8 +1592,8 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2020-04-17T21:09:31Z",
-    "pushed_at": "2026-09-05T06:49:31Z",
-    "commits_count": 112,
+    "pushed_at": "2026-10-26T05:31:38Z",
+    "commits_count": 117,
     "contributors_count": 4,
     "contributors": [
       "AnnaRybakovaT",
@@ -1593,7 +1605,7 @@
     "issues_open": 6,
     "issues_closed": 10,
     "first_commit": "2020-04-17T21:09:32Z",
-    "last_commit": "2026-09-05T06:49:29Z",
+    "last_commit": "2026-10-26T05:31:29Z",
     "type_counts": {
       "content-enhancement": 6,
       "markup": 3,
@@ -1620,8 +1632,8 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2020-04-19T20:55:39Z",
-    "pushed_at": "2026-09-06T15:57:14Z",
-    "commits_count": 37,
+    "pushed_at": "2026-10-27T00:06:11Z",
+    "commits_count": 42,
     "contributors_count": 3,
     "contributors": [
       "dependabot[bot]",
@@ -1632,7 +1644,7 @@
     "issues_open": 2,
     "issues_closed": 1,
     "first_commit": "2020-04-19T20:55:40Z",
-    "last_commit": "2026-09-06T15:57:05Z",
+    "last_commit": "2026-10-27T00:06:08Z",
     "type_counts": {
       "markup": 2,
       "content-enhancement": 1
@@ -1654,8 +1666,8 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2020-04-30T21:22:16Z",
-    "pushed_at": "2026-09-07T05:09:52Z",
-    "commits_count": 167,
+    "pushed_at": "2026-10-26T23:39:37Z",
+    "commits_count": 173,
     "contributors_count": 5,
     "contributors": [
       "AnnaRybakovaT",
@@ -1668,7 +1680,7 @@
     "issues_open": 5,
     "issues_closed": 23,
     "first_commit": "2020-04-30T21:22:17Z",
-    "last_commit": "2026-09-07T05:09:49Z",
+    "last_commit": "2026-10-26T23:39:35Z",
     "type_counts": {
       "markup": 12,
       "link-target": 2,
@@ -1722,8 +1734,8 @@
     "license": null,
     "archived": false,
     "created_at": "2021-01-13T21:29:25Z",
-    "pushed_at": "2026-09-20T06:47:58Z",
-    "commits_count": 39,
+    "pushed_at": "2026-10-27T00:06:17Z",
+    "commits_count": 40,
     "contributors_count": 4,
     "contributors": [
       "AnnaRybakovaT",
@@ -1735,7 +1747,7 @@
     "issues_open": 1,
     "issues_closed": 1,
     "first_commit": "2021-01-13T21:29:26Z",
-    "last_commit": "2026-09-20T06:47:57Z",
+    "last_commit": "2026-10-27T00:06:14Z",
     "type_counts": {
       "question": 1
     },
@@ -1752,8 +1764,8 @@
     "license": "GPL-3.0",
     "archived": false,
     "created_at": "2021-01-20T04:59:39Z",
-    "pushed_at": "2026-09-05T07:08:48Z",
-    "commits_count": 12,
+    "pushed_at": "2026-10-26T20:33:34Z",
+    "commits_count": 13,
     "contributors_count": 3,
     "contributors": [
       "dependabot[bot]",
@@ -1764,7 +1776,7 @@
     "issues_open": 0,
     "issues_closed": 0,
     "first_commit": "2021-01-20T04:59:40Z",
-    "last_commit": "2026-09-05T07:08:45Z",
+    "last_commit": "2026-10-26T20:33:31Z",
     "type_counts": {},
     "severity_counts": {},
     "milestone_counts": {},
@@ -1802,8 +1814,8 @@
     "license": "GPL-3.0",
     "archived": false,
     "created_at": "2021-04-08T19:42:19Z",
-    "pushed_at": "2026-09-05T06:59:08Z",
-    "commits_count": 24,
+    "pushed_at": "2026-10-26T23:39:31Z",
+    "commits_count": 29,
     "contributors_count": 3,
     "contributors": [
       "dependabot[bot]",
@@ -1814,7 +1826,7 @@
     "issues_open": 1,
     "issues_closed": 0,
     "first_commit": "2021-04-08T19:46:14Z",
-    "last_commit": "2026-09-05T06:59:06Z",
+    "last_commit": "2026-10-26T23:39:28Z",
     "type_counts": {},
     "severity_counts": {},
     "milestone_counts": {
@@ -1829,8 +1841,8 @@
     "license": null,
     "archived": false,
     "created_at": "2021-04-11T18:23:56Z",
-    "pushed_at": "2026-09-20T06:48:58Z",
-    "commits_count": 17,
+    "pushed_at": "2026-10-27T00:27:15Z",
+    "commits_count": 18,
     "contributors_count": 3,
     "contributors": [
       "dependabot[bot]",
@@ -1841,7 +1853,7 @@
     "issues_open": 1,
     "issues_closed": 1,
     "first_commit": "2021-04-11T18:23:57Z",
-    "last_commit": "2026-09-20T06:48:56Z",
+    "last_commit": "2026-10-27T00:27:13Z",
     "type_counts": {
       "question": 1,
       "bug": 1
@@ -1859,15 +1871,15 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2021-08-16T03:44:17Z",
-    "pushed_at": "2026-09-15T06:38:45Z",
-    "commits_count": 110,
+    "pushed_at": "2026-10-26T23:40:44Z",
+    "commits_count": 114,
     "contributors_count": 0,
     "contributors": [],
     "issues_total": 9,
     "issues_open": 0,
     "issues_closed": 9,
     "first_commit": "2021-08-16T09:10:49+05:30",
-    "last_commit": "2026-09-15T09:38:43+03:00",
+    "last_commit": "2026-10-27T02:40:41+03:00",
     "type_counts": {
       "question": 1
     },
@@ -1882,15 +1894,15 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2021-09-02T18:18:17Z",
-    "pushed_at": "2026-09-28T03:35:12Z",
-    "commits_count": 190,
+    "pushed_at": "2026-11-15T15:47:31Z",
+    "commits_count": 210,
     "contributors_count": 0,
     "contributors": [],
     "issues_total": 43,
     "issues_open": 13,
     "issues_closed": 30,
     "first_commit": "2021-09-02T23:07:27+05:30",
-    "last_commit": "2026-09-28T06:35:09+03:00",
+    "last_commit": "2026-11-15T18:47:29+03:00",
     "type_counts": {
       "bug": 9,
       "question": 1
@@ -1909,12 +1921,12 @@
   {
     "name": "BOR",
     "description": "Development of BOR dictionary",
-    "language": "HTML",
+    "language": "Python",
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2021-09-14T04:46:13Z",
-    "pushed_at": "2026-09-05T06:34:53Z",
-    "commits_count": 44,
+    "pushed_at": "2026-10-26T05:35:38Z",
+    "commits_count": 48,
     "contributors_count": 3,
     "contributors": [
       "dependabot[bot]",
@@ -1925,7 +1937,7 @@
     "issues_open": 3,
     "issues_closed": 1,
     "first_commit": "2021-09-14T04:47:08Z",
-    "last_commit": "2026-09-05T06:34:51Z",
+    "last_commit": "2026-10-26T05:35:29Z",
     "type_counts": {
       "markup": 1,
       "question": 1,
@@ -1949,8 +1961,8 @@
     "license": "GPL-3.0",
     "archived": false,
     "created_at": "2021-09-15T03:55:48Z",
-    "pushed_at": "2026-09-06T16:02:38Z",
-    "commits_count": 68,
+    "pushed_at": "2026-10-26T23:41:15Z",
+    "commits_count": 72,
     "contributors_count": 4,
     "contributors": [
       "dependabot[bot]",
@@ -1962,7 +1974,7 @@
     "issues_open": 2,
     "issues_closed": 2,
     "first_commit": "2021-09-13T12:33:30Z",
-    "last_commit": "2026-09-06T16:02:27Z",
+    "last_commit": "2026-10-26T23:41:13Z",
     "type_counts": {
       "question": 1
     },
@@ -1982,15 +1994,15 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2021-10-02T09:28:21Z",
-    "pushed_at": "2026-09-15T06:38:59Z",
-    "commits_count": 71,
+    "pushed_at": "2026-10-26T23:41:02Z",
+    "commits_count": 72,
     "contributors_count": 0,
     "contributors": [],
     "issues_total": 4,
     "issues_open": 1,
     "issues_closed": 3,
     "first_commit": "2021-10-02T14:49:15+05:30",
-    "last_commit": "2026-09-15T09:38:58+03:00",
+    "last_commit": "2026-10-27T02:41:00+03:00",
     "type_counts": {},
     "severity_counts": {
       "minor": 2
@@ -2007,15 +2019,15 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2021-10-05T03:09:17Z",
-    "pushed_at": "2026-09-15T06:39:05Z",
-    "commits_count": 83,
+    "pushed_at": "2026-10-26T23:40:55Z",
+    "commits_count": 84,
     "contributors_count": 0,
     "contributors": [],
     "issues_total": 9,
     "issues_open": 7,
     "issues_closed": 2,
     "first_commit": "2021-10-05T07:44:54+05:30",
-    "last_commit": "2026-09-15T09:39:03+03:00",
+    "last_commit": "2026-10-27T02:40:53+03:00",
     "type_counts": {
       "bug": 6,
       "question": 1
@@ -2037,8 +2049,8 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2021-12-03T23:44:57Z",
-    "pushed_at": "2026-09-05T06:50:23Z",
-    "commits_count": 42,
+    "pushed_at": "2026-10-26T05:34:14Z",
+    "commits_count": 47,
     "contributors_count": 3,
     "contributors": [
       "dependabot[bot]",
@@ -2049,7 +2061,7 @@
     "issues_open": 3,
     "issues_closed": 8,
     "first_commit": "2021-12-03T23:44:57Z",
-    "last_commit": "2026-09-05T06:50:21Z",
+    "last_commit": "2026-10-26T05:34:05Z",
     "type_counts": {
       "question": 2,
       "markup": 4,
@@ -2075,8 +2087,8 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2022-02-15T02:12:03Z",
-    "pushed_at": "2026-09-05T07:08:26Z",
-    "commits_count": 40,
+    "pushed_at": "2026-10-26T23:16:00Z",
+    "commits_count": 42,
     "contributors_count": 3,
     "contributors": [
       "dependabot[bot]",
@@ -2087,7 +2099,7 @@
     "issues_open": 3,
     "issues_closed": 0,
     "first_commit": "2022-02-12T05:50:27Z",
-    "last_commit": "2026-09-05T07:08:24Z",
+    "last_commit": "2026-10-26T23:15:58Z",
     "type_counts": {},
     "severity_counts": {
       "minor": 3
@@ -2104,8 +2116,8 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2022-05-02T16:46:21Z",
-    "pushed_at": "2026-09-05T06:51:04Z",
-    "commits_count": 66,
+    "pushed_at": "2026-11-07T05:15:57Z",
+    "commits_count": 73,
     "contributors_count": 5,
     "contributors": [
       "AnnaRybakovaT",
@@ -2118,7 +2130,7 @@
     "issues_open": 1,
     "issues_closed": 8,
     "first_commit": "2022-05-02T16:46:21Z",
-    "last_commit": "2026-09-05T06:51:02Z",
+    "last_commit": "2026-11-07T05:15:55Z",
     "type_counts": {
       "markup": 1,
       "question": 1,
@@ -2144,15 +2156,20 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2022-09-20T10:53:08Z",
-    "pushed_at": "2026-09-06T15:41:56Z",
-    "commits_count": 166,
-    "contributors_count": 0,
-    "contributors": [],
+    "pushed_at": "2026-10-26T23:16:09Z",
+    "commits_count": 167,
+    "contributors_count": 4,
+    "contributors": [
+      "dependabot[bot]",
+      "drdhaval2785",
+      "funderburkjim",
+      "gasyoun"
+    ],
     "issues_total": 32,
     "issues_open": 3,
     "issues_closed": 29,
-    "first_commit": "2022-09-20T16:23:08+05:30",
-    "last_commit": "2026-09-06T18:41:37+03:00",
+    "first_commit": "2022-09-20T10:53:08Z",
+    "last_commit": "2026-10-26T23:16:06Z",
     "type_counts": {
       "text-correction": 3,
       "markup": 11,
@@ -2203,8 +2220,8 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2023-01-19T13:10:47Z",
-    "pushed_at": "2026-09-05T06:58:30Z",
-    "commits_count": 66,
+    "pushed_at": "2026-11-07T05:14:49Z",
+    "commits_count": 70,
     "contributors_count": 5,
     "contributors": [
       "Andhrabharati",
@@ -2217,7 +2234,7 @@
     "issues_open": 17,
     "issues_closed": 6,
     "first_commit": "2023-01-19T13:10:48Z",
-    "last_commit": "2026-09-05T06:58:28Z",
+    "last_commit": "2026-11-07T05:14:47Z",
     "type_counts": {
       "question": 2,
       "bug": 1
@@ -2265,8 +2282,8 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2024-01-26T12:33:11Z",
-    "pushed_at": "2026-09-05T06:56:48Z",
-    "commits_count": 39,
+    "pushed_at": "2026-10-26T05:31:02Z",
+    "commits_count": 43,
     "contributors_count": 3,
     "contributors": [
       "dependabot[bot]",
@@ -2277,7 +2294,7 @@
     "issues_open": 3,
     "issues_closed": 8,
     "first_commit": "2024-01-26T12:33:11Z",
-    "last_commit": "2026-09-05T06:56:45Z",
+    "last_commit": "2026-10-26T05:31:02Z",
     "type_counts": {
       "markup": 3,
       "content-enhancement": 5,
@@ -2302,8 +2319,8 @@
     "license": "GPL-2.0",
     "archived": false,
     "created_at": "2024-01-30T03:54:09Z",
-    "pushed_at": "2026-09-05T11:33:57Z",
-    "commits_count": 28,
+    "pushed_at": "2026-10-26T22:51:01Z",
+    "commits_count": 36,
     "contributors_count": 3,
     "contributors": [
       "dependabot[bot]",
@@ -2314,7 +2331,7 @@
     "issues_open": 2,
     "issues_closed": 1,
     "first_commit": "2024-01-30T03:54:09Z",
-    "last_commit": "2026-09-05T11:33:46Z",
+    "last_commit": "2026-10-26T22:50:58Z",
     "type_counts": {
       "bug": 1,
       "markup": 1
@@ -2335,8 +2352,8 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2025-07-06T20:04:16Z",
-    "pushed_at": "2026-09-05T06:53:00Z",
-    "commits_count": 174,
+    "pushed_at": "2026-10-26T05:34:09Z",
+    "commits_count": 179,
     "contributors_count": 4,
     "contributors": [
       "dependabot[bot]",
@@ -2348,7 +2365,7 @@
     "issues_open": 11,
     "issues_closed": 24,
     "first_commit": "2025-07-06T20:04:17Z",
-    "last_commit": "2026-09-05T06:52:58Z",
+    "last_commit": "2026-10-26T05:34:08Z",
     "type_counts": {
       "markup": 20,
       "bug": 3,
@@ -2377,8 +2394,8 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2025-12-22T01:57:08Z",
-    "pushed_at": "2026-09-07T05:36:06Z",
-    "commits_count": 49,
+    "pushed_at": "2026-10-27T00:05:58Z",
+    "commits_count": 54,
     "contributors_count": 4,
     "contributors": [
       "dependabot[bot]",
@@ -2390,7 +2407,7 @@
     "issues_open": 3,
     "issues_closed": 1,
     "first_commit": "2025-12-22T01:57:08Z",
-    "last_commit": "2026-09-07T05:36:04Z",
+    "last_commit": "2026-10-27T00:05:56Z",
     "type_counts": {
       "content-enhancement": 1,
       "question": 1,
@@ -2415,8 +2432,8 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2026-02-21T14:10:52Z",
-    "pushed_at": "2026-09-05T06:58:09Z",
-    "commits_count": 19,
+    "pushed_at": "2026-11-08T14:58:57Z",
+    "commits_count": 26,
     "contributors_count": 2,
     "contributors": [
       "dependabot[bot]",
@@ -2426,7 +2443,7 @@
     "issues_open": 1,
     "issues_closed": 0,
     "first_commit": "2026-02-21T14:10:52Z",
-    "last_commit": "2026-09-05T06:58:06Z",
+    "last_commit": "2026-11-08T14:58:56Z",
     "type_counts": {
       "content-enhancement": 1
     },
@@ -2441,12 +2458,12 @@
   {
     "name": "KOW",
     "description": "Kossowich Sanskrit-Russian Dictionary",
-    "language": "HTML",
+    "language": "Python",
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2026-02-21T14:29:22Z",
-    "pushed_at": "2026-09-05T06:57:41Z",
-    "commits_count": 19,
+    "pushed_at": "2026-10-26T23:15:53Z",
+    "commits_count": 24,
     "contributors_count": 2,
     "contributors": [
       "dependabot[bot]",
@@ -2456,7 +2473,7 @@
     "issues_open": 1,
     "issues_closed": 0,
     "first_commit": "2026-02-21T14:29:22Z",
-    "last_commit": "2026-09-05T06:57:39Z",
+    "last_commit": "2026-10-26T23:15:50Z",
     "type_counts": {
       "content-enhancement": 1
     },
@@ -2475,19 +2492,19 @@
     "license": "GPL-3.0",
     "archived": false,
     "created_at": "2026-03-18T17:23:15Z",
-    "pushed_at": "2026-09-05T06:59:25Z",
-    "commits_count": 214,
+    "pushed_at": "2026-11-12T17:37:13Z",
+    "commits_count": 227,
     "contributors_count": 3,
     "contributors": [
       "dependabot[bot]",
       "drdhaval2785",
       "gasyoun"
     ],
-    "issues_total": 42,
+    "issues_total": 43,
     "issues_open": 1,
-    "issues_closed": 41,
+    "issues_closed": 42,
     "first_commit": "2026-03-18T16:14:06Z",
-    "last_commit": "2026-09-05T06:56:38Z",
+    "last_commit": "2026-11-12T17:32:59Z",
     "type_counts": {
       "bug": 4,
       "question": 1
@@ -2508,8 +2525,8 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2026-03-31T01:43:06Z",
-    "pushed_at": "2026-09-05T07:08:09Z",
-    "commits_count": 33,
+    "pushed_at": "2026-10-26T23:41:09Z",
+    "commits_count": 34,
     "contributors_count": 4,
     "contributors": [
       "dependabot[bot]",
@@ -2521,7 +2538,7 @@
     "issues_open": 2,
     "issues_closed": 0,
     "first_commit": "2026-03-31T01:43:07Z",
-    "last_commit": "2026-09-05T07:08:07Z",
+    "last_commit": "2026-10-26T23:41:06Z",
     "type_counts": {},
     "severity_counts": {
       "minor": 1
@@ -2535,12 +2552,12 @@
   {
     "name": "PUI",
     "description": "Purana Index 1951",
-    "language": "HTML",
+    "language": "Python",
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2026-04-05T03:27:56Z",
-    "pushed_at": "2026-09-05T06:57:45Z",
-    "commits_count": 94,
+    "pushed_at": "2026-10-27T00:05:14Z",
+    "commits_count": 99,
     "contributors_count": 3,
     "contributors": [
       "dependabot[bot]",
@@ -2551,7 +2568,7 @@
     "issues_open": 2,
     "issues_closed": 2,
     "first_commit": "2026-04-05T03:28:50Z",
-    "last_commit": "2026-09-05T06:57:43Z",
+    "last_commit": "2026-10-27T00:05:12Z",
     "type_counts": {
       "encoding": 2,
       "text-correction": 1,
@@ -2569,12 +2586,12 @@
   {
     "name": "csl-sqlite",
     "description": "Storage space for sqlites of Cologne Digital Sanskrit Dictionaries",
-    "language": null,
+    "language": "Python",
     "license": "GPL-3.0",
     "archived": false,
     "created_at": "2026-04-08T11:48:40Z",
-    "pushed_at": "2026-09-05T07:08:52Z",
-    "commits_count": 12,
+    "pushed_at": "2026-11-12T17:52:14Z",
+    "commits_count": 17,
     "contributors_count": 3,
     "contributors": [
       "dependabot[bot]",
@@ -2585,7 +2602,7 @@
     "issues_open": 1,
     "issues_closed": 0,
     "first_commit": "2026-04-08T11:48:40Z",
-    "last_commit": "2026-09-05T07:08:49Z",
+    "last_commit": "2026-11-12T14:58:44Z",
     "type_counts": {},
     "severity_counts": {
       "minor": 1
@@ -2602,8 +2619,8 @@
     "license": "GPL-3.0",
     "archived": false,
     "created_at": "2026-05-07T15:38:17Z",
-    "pushed_at": "2026-09-28T09:22:45Z",
-    "commits_count": 594,
+    "pushed_at": "2026-11-18T15:10:12Z",
+    "commits_count": 712,
     "contributors_count": 4,
     "contributors": [
       "actions-user",
@@ -2611,11 +2628,11 @@
       "gasyoun",
       "github-actions[bot]"
     ],
-    "issues_total": 57,
-    "issues_open": 16,
+    "issues_total": 60,
+    "issues_open": 19,
     "issues_closed": 41,
     "first_commit": "2026-05-07T15:58:23Z",
-    "last_commit": "2026-09-28T09:22:42Z",
+    "last_commit": "2026-11-18T15:10:09Z",
     "type_counts": {
       "bug": 2
     },
@@ -2633,12 +2650,12 @@
   {
     "name": "csl-atlas",
     "description": "Atlas of the Cologne Digital Sanskrit Lexicons — comparative microstructural analysis of 9 Sanskrit dictionaries",
-    "language": "JavaScript",
+    "language": "Python",
     "license": "NOASSERTION",
     "archived": false,
     "created_at": "2026-05-23T19:20:29Z",
-    "pushed_at": "2026-09-28T01:12:22Z",
-    "commits_count": 725,
+    "pushed_at": "2026-11-18T11:16:07Z",
+    "commits_count": 926,
     "contributors_count": 4,
     "contributors": [
       "actions-user",
@@ -2646,11 +2663,11 @@
       "gasyoun",
       "github-actions[bot]"
     ],
-    "issues_total": 64,
-    "issues_open": 4,
+    "issues_total": 66,
+    "issues_open": 6,
     "issues_closed": 60,
     "first_commit": "2026-05-23T12:30:25Z",
-    "last_commit": "2026-09-27T16:35:06Z",
+    "last_commit": "2026-11-18T11:16:04Z",
     "type_counts": {
       "bug": 1
     },
@@ -2667,18 +2684,18 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2026-06-04T07:33:17Z",
-    "pushed_at": "2026-09-24T16:03:12Z",
-    "commits_count": 258,
+    "pushed_at": "2026-11-05T13:44:05Z",
+    "commits_count": 286,
     "contributors_count": 2,
     "contributors": [
       "dependabot[bot]",
       "gasyoun"
     ],
-    "issues_total": 12,
-    "issues_open": 1,
+    "issues_total": 14,
+    "issues_open": 3,
     "issues_closed": 11,
     "first_commit": "2026-06-04T06:39:03Z",
-    "last_commit": "2026-09-24T16:03:10Z",
+    "last_commit": "2026-11-05T13:41:43Z",
     "type_counts": {},
     "severity_counts": {},
     "milestone_counts": {},
@@ -2691,18 +2708,18 @@
     "license": "CC-BY-SA-4.0",
     "archived": false,
     "created_at": "2026-06-13T14:33:54Z",
-    "pushed_at": "2026-09-24T23:43:08Z",
-    "commits_count": 220,
+    "pushed_at": "2026-11-17T07:46:56Z",
+    "commits_count": 299,
     "contributors_count": 2,
     "contributors": [
       "dependabot[bot]",
       "gasyoun"
     ],
     "issues_total": 37,
-    "issues_open": 3,
-    "issues_closed": 34,
+    "issues_open": 2,
+    "issues_closed": 35,
     "first_commit": "2026-06-13T14:31:22Z",
-    "last_commit": "2026-09-18T14:00:44Z",
+    "last_commit": "2026-11-17T07:46:54Z",
     "type_counts": {},
     "severity_counts": {},
     "milestone_counts": {},
@@ -2715,18 +2732,18 @@
     "license": "MIT",
     "archived": false,
     "created_at": "2026-06-15T12:25:43Z",
-    "pushed_at": "2026-09-24T23:43:23Z",
-    "commits_count": 118,
+    "pushed_at": "2026-11-18T05:37:54Z",
+    "commits_count": 137,
     "contributors_count": 2,
     "contributors": [
       "dependabot[bot]",
       "gasyoun"
     ],
-    "issues_total": 13,
-    "issues_open": 0,
+    "issues_total": 14,
+    "issues_open": 1,
     "issues_closed": 13,
     "first_commit": "2026-06-15T12:25:00Z",
-    "last_commit": "2026-09-22T13:38:39Z",
+    "last_commit": "2026-11-18T05:37:41Z",
     "type_counts": {
       "bug": 1
     },
@@ -2741,8 +2758,8 @@
     "license": "MIT",
     "archived": false,
     "created_at": "2026-06-16T01:44:17Z",
-    "pushed_at": "2026-09-07T05:35:30Z",
-    "commits_count": 17,
+    "pushed_at": "2026-10-26T20:33:44Z",
+    "commits_count": 19,
     "contributors_count": 1,
     "contributors": [
       "gasyoun"
@@ -2751,7 +2768,7 @@
     "issues_open": 0,
     "issues_closed": 0,
     "first_commit": "2026-06-16T01:42:48Z",
-    "last_commit": "2026-09-07T05:35:28Z",
+    "last_commit": "2026-10-26T20:33:41Z",
     "type_counts": {},
     "severity_counts": {},
     "milestone_counts": {},
@@ -2764,8 +2781,8 @@
     "license": null,
     "archived": false,
     "created_at": "2026-06-24T17:31:46Z",
-    "pushed_at": "2026-09-05T07:08:40Z",
-    "commits_count": 14,
+    "pushed_at": "2026-10-26T23:15:36Z",
+    "commits_count": 17,
     "contributors_count": 2,
     "contributors": [
       "drdhaval2785",
@@ -2775,7 +2792,7 @@
     "issues_open": 1,
     "issues_closed": 1,
     "first_commit": "2026-06-24T17:31:47Z",
-    "last_commit": "2026-09-05T07:08:37Z",
+    "last_commit": "2026-10-26T23:15:33Z",
     "type_counts": {
       "question": 1,
       "content-enhancement": 1
@@ -2797,8 +2814,8 @@
     "license": "MIT",
     "archived": false,
     "created_at": "2026-07-14T08:47:55Z",
-    "pushed_at": "2026-09-24T10:57:30Z",
-    "commits_count": 47,
+    "pushed_at": "2026-10-27T00:03:50Z",
+    "commits_count": 53,
     "contributors_count": 2,
     "contributors": [
       "dependabot[bot]",
@@ -2808,7 +2825,7 @@
     "issues_open": 1,
     "issues_closed": 5,
     "first_commit": "2026-07-14T11:14:14Z",
-    "last_commit": "2026-09-23T23:50:01Z",
+    "last_commit": "2026-10-27T00:03:48Z",
     "type_counts": {
       "bug": 1
     },
@@ -2818,13 +2835,37 @@
   },
   {
     "name": "PD",
-    "description": "An Encyclopaedic Dictionary of Sanskrit on Historical Principles",
-    "language": "Python",
+    "description": "An Encyclopaedic Dictionary of Sanskrit on Historical Principles — front-matter OCR + sourced knowledge page (PD_KNOWLEDGE.md)",
+    "language": null,
     "license": null,
     "archived": false,
     "created_at": "2026-07-21T18:33:42Z",
-    "pushed_at": "2026-09-13T04:07:36Z",
-    "commits_count": 13,
+    "pushed_at": "2026-11-11T19:08:56Z",
+    "commits_count": 46,
+    "contributors_count": 2,
+    "contributors": [
+      "dependabot[bot]",
+      "gasyoun"
+    ],
+    "issues_total": 1,
+    "issues_open": 1,
+    "issues_closed": 0,
+    "first_commit": "2026-07-21T18:33:43Z",
+    "last_commit": "2026-11-11T19:08:53Z",
+    "type_counts": {},
+    "severity_counts": {},
+    "milestone_counts": {},
+    "triaged": false
+  },
+  {
+    "name": "pwg-ru-lod",
+    "description": "Static LOD surface for the PWG->RU graph (rePWG namespace) — machine-preview technical release, explicitly non-citable.",
+    "language": "HTML",
+    "license": null,
+    "archived": false,
+    "created_at": "2026-10-11T12:35:30Z",
+    "pushed_at": "2026-10-27T00:05:21Z",
+    "commits_count": 4,
     "contributors_count": 1,
     "contributors": [
       "gasyoun"
@@ -2832,8 +2873,54 @@
     "issues_total": 0,
     "issues_open": 0,
     "issues_closed": 0,
-    "first_commit": "2026-07-21T18:33:43Z",
-    "last_commit": "2026-09-05T06:52:44Z",
+    "first_commit": "2026-10-11T12:41:14Z",
+    "last_commit": "2026-10-27T00:05:18Z",
+    "type_counts": {},
+    "severity_counts": {},
+    "milestone_counts": {},
+    "triaged": false
+  },
+  {
+    "name": ".github",
+    "description": "Org defaults: community health files, issue forms, and reusable workflows (data-validate, changelog-lint, codeql, pages, release)",
+    "language": "Python",
+    "license": null,
+    "archived": false,
+    "created_at": "2026-10-18T14:07:36Z",
+    "pushed_at": "2026-11-05T10:08:20Z",
+    "commits_count": 5,
+    "contributors_count": 1,
+    "contributors": [
+      "gasyoun"
+    ],
+    "issues_total": 0,
+    "issues_open": 0,
+    "issues_closed": 0,
+    "first_commit": "2026-10-18T14:07:29Z",
+    "last_commit": "2026-11-05T09:30:32Z",
+    "type_counts": {},
+    "severity_counts": {},
+    "milestone_counts": {},
+    "triaged": false
+  },
+  {
+    "name": "csl-usage",
+    "description": "User lookup analytics for the Cologne Digital Sanskrit Dictionaries: query-event aggregates, top-looked-up words, miss ledger",
+    "language": null,
+    "license": null,
+    "archived": false,
+    "created_at": "2026-11-09T11:19:50Z",
+    "pushed_at": "2026-11-11T19:09:36Z",
+    "commits_count": 19,
+    "contributors_count": 1,
+    "contributors": [
+      "gasyoun"
+    ],
+    "issues_total": 0,
+    "issues_open": 0,
+    "issues_closed": 0,
+    "first_commit": "2026-11-09T14:41:51Z",
+    "last_commit": "2026-11-11T19:09:33Z",
     "type_counts": {},
     "severity_counts": {},
     "milestone_counts": {},

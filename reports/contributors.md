@@ -7,14 +7,14 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 ### Mārcis Gasūns
 
 - **GitHub**: [@gasyoun](https://github.com/gasyoun)
-- **ORCID**: *(awaiting)*
+- **ORCID**: [0000-0003-4513-884X](https://orcid.org/0000-0003-4513-884X)
 - **Affiliation**: Cologne Digital Sanskrit Dictionaries
-- **Active span**: 2014-01-14 → 2026-09-28 (13 years)
-- **Commits**: 4,235 across 74 repos
-- **Issues created**: 660
-- **Lines changed**: +24,247,236 / −2,989,171
+- **Active span**: 2014-01-14 → 2026-11-18 (13 years)
+- **Commits**: 5,137 across 80 repos
+- **Issues created**: 677
+- **Lines changed**: +35,448,455 / −3,390,886
 - **Role notes**: Project organisation, documentation, Russian etymologies, accents.
-- **Top repositories** (by commits): `csl-atlas` (713), `csl-observatory` (560), `MWS` (263), `csl-standards` (253), `csl-guides` (198), `csl-apidev` (192), `csl-corrections` (140), `sanskrit-util` (113)
+- **Top repositories** (by commits): `csl-atlas` (912), `csl-observatory` (668), `csl-standards` (281), `MWS` (271), `csl-guides` (268), `csl-apidev` (218), `csl-corrections` (164), `sanskrit-util` (132)
 
 ## Maintainer (1)
 
@@ -24,11 +24,11 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **ORCID**: *(awaiting)*
 - **Affiliation**: Cologne Digital Sanskrit Dictionaries
 - **Active span**: 2014-01-15 → 2026-09-05 (13 years)
-- **Commits**: 2,975 across 53 repos
-- **Issues created**: 2591
-- **Lines changed**: +51,240,135 / −3,715,212
+- **Commits**: 2,940 across 54 repos
+- **Issues created**: 2592
+- **Lines changed**: +48,575,716 / −4,392,576
 - **Role notes**: Primary repository maintainer; tooling and correction workflows across all dictionaries.
-- **Top repositories** (by commits): `csl-apidev` (456), `csl-corrections` (431), `csl-pywork` (329), `PWG` (303), `CORRECTIONS` (272), `MWS` (224), `PWK` (201), `COLOGNE` (71)
+- **Top repositories** (by commits): `csl-apidev` (456), `csl-corrections` (431), `csl-pywork` (329), `PWG` (303), `CORRECTIONS` (270), `PWK` (201), `MWS` (108), `MWinflect` (82)
 
 ## Core (3)
 
@@ -37,24 +37,24 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **GitHub**: [@drdhaval2785](https://github.com/drdhaval2785)
 - **ORCID**: *(awaiting)*
 - **Affiliation**: Cologne Digital Sanskrit Dictionaries
-- **Active span**: 2015-11-24 → 2026-09-26 (12 years)
-- **Commits**: 1,703 across 32 repos
-- **Issues created**: 2087
-- **Lines changed**: +25,617,245 / −6,048,892
+- **Active span**: 2015-11-24 → 2026-11-12 (12 years)
+- **Commits**: 1,951 across 34 repos
+- **Issues created**: 2091
+- **Lines changed**: +26,226,999 / −6,739,617
 - **Role notes**: Automation of link-splitting, index checking, AB/Cologne comparison tooling, k1k2 clash analysis.
-- **Top repositories** (by commits): `csl-corrections` (384), `csl-app` (179), `csl-pywork` (147), `COLOGNE` (118), `BEN` (109), `CORRECTIONS` (96), `alternateheadwords` (93), `AP` (82)
+- **Top repositories** (by commits): `csl-corrections` (398), `csl-app` (186), `csl-pywork` (154), `csl-orig` (133), `LRV` (121), `COLOGNE` (118), `BEN` (109), `CORRECTIONS` (94)
 
 ### Nagabhushana Rao
 
 - **GitHub**: [@Andhrabharati](https://github.com/Andhrabharati)
 - **ORCID**: *(awaiting)*
 - **Affiliation**: Andhrabharati
-- **Active span**: 2021-01-23 → 2023-04-03 (3 years)
-- **Commits**: 63 across 3 repos
+- **Active span**: 2021-05-28 → 2023-04-03 (3 years)
+- **Commits**: 25 across 3 repos
 - **Issues created**: 90
-- **Lines changed**: +5,941,482 / −1,768,472
+- **Lines changed**: +1,375,437 / −226,487
 - **Role notes**: AB version of multiple dictionaries; Greek words file; extensive issue contributions.
-- **Top repositories** (by commits): `MWS` (39), `mw-dev` (18), `AP90` (6)
+- **Top repositories** (by commits): `mw-dev` (18), `AP90` (6), `MWS` (1)
 
 ### Thomas Malten
 
@@ -67,61 +67,61 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **Role notes**: Original digitisation of the Cologne Digital Sanskrit Dictionaries (1994–2010); bibliography work.
 - **Top repositories** (by commits): `PWK` (1)
 
-## Contributor (59)
+## Contributor (51)
 
 ### drdhaval2785@gmail.com
 
 - **GitHub**: [@drdhaval2785@gmail.com](https://github.com/drdhaval2785@gmail.com)
-- **Active span**: 2015-11-19 → 2026-09-26 (12 years)
-- **Commits**: 1,998 across 9 repos
+- **Active span**: 2015-11-19 → 2026-11-12 (12 years)
+- **Commits**: 982 across 7 repos
 - **Issues created**: 0
 - **Lines changed**: +0 / −0
-- **Top repositories** (by commits): `csl-orig` (897), `cologne-stardict` (518), `csl-devanagari` (122), `LRV` (121), `csl-json` (92), `hwnorm1` (69), `VCP` (66), `csl-ldev` (62)
+- **Top repositories** (by commits): `cologne-stardict` (520), `csl-devanagari` (122), `csl-json` (92), `hwnorm1` (69), `VCP` (66), `csl-ldev` (62), `csl-lnum` (51)
+
+### drdhaval2785gmail.com
+
+- **GitHub**: [@drdhaval2785gmail.com](https://github.com/drdhaval2785gmail.com)
+- **Active span**: 2026-03-09 → 2026-11-15 (1 years)
+- **Commits**: 344 across 1 repos
+- **Issues created**: 0
+- **Lines changed**: +0 / −0
+- **Top repositories** (by commits): `cologne-stardict` (344)
+
+### dependabot[bot]
+
+- **GitHub**: [@dependabot[bot]](https://github.com/dependabot[bot])
+- **Active span**: 2026-05-29 → 2026-11-18 (1 years)
+- **Commits**: 335 across 75 repos
+- **Issues created**: 0
+- **Lines changed**: +1,563 / −979
+- **Top repositories** (by commits): `csl-guides` (31), `csl-observatory` (22), `MWS` (12), `csl-apidev` (10), `PWK` (9), `GRA` (9), `AP` (9), `csl-atlas` (9)
+
+### gasyoun@users.noreply.github.com
+
+- **GitHub**: [@gasyoun@users.noreply.github.com](https://github.com/gasyoun@users.noreply.github.com)
+- **Active span**: 2026-05-15 → 2026-11-15 (1 years)
+- **Commits**: 176 across 7 repos
+- **Issues created**: 0
+- **Lines changed**: +0 / −0
+- **Top repositories** (by commits): `csl-devanagari` (48), `VCP` (44), `csl-json` (18), `hwnorm1` (17), `csl-lnum` (17), `cologne-stardict` (16), `csl-ldev` (16)
 
 ### funderburkjim@gmail.com
 
 - **GitHub**: [@funderburkjim@gmail.com](https://github.com/funderburkjim@gmail.com)
 - **Active span**: 2014-02-12 → 2026-07-14 (13 years)
-- **Commits**: 1,433 across 6 repos
+- **Commits**: 125 across 3 repos
 - **Issues created**: 0
 - **Lines changed**: +0 / −0
-- **Top repositories** (by commits): `csl-orig` (1225), `hwnorm1` (89), `MWinflect` (81), `VCP` (35), `LRV` (2), `csl-devanagari` (1)
-
-### drdhaval2785gmail.com
-
-- **GitHub**: [@drdhaval2785gmail.com](https://github.com/drdhaval2785gmail.com)
-- **Active span**: 2026-03-09 → 2026-09-26 (1 years)
-- **Commits**: 333 across 1 repos
-- **Issues created**: 0
-- **Lines changed**: +0 / −0
-- **Top repositories** (by commits): `cologne-stardict` (333)
-
-### gasyoun@users.noreply.github.com
-
-- **GitHub**: [@gasyoun@users.noreply.github.com](https://github.com/gasyoun@users.noreply.github.com)
-- **Active span**: 2022-10-15 → 2026-09-20 (5 years)
-- **Commits**: 313 across 10 repos
-- **Issues created**: 0
-- **Lines changed**: +0 / −0
-- **Top repositories** (by commits): `csl-orig` (99), `VCP` (41), `csl-devanagari` (36), `MWinflect` (33), `LRV` (30), `csl-json` (16), `csl-lnum` (16), `hwnorm1` (15)
-
-### dependabot[bot]
-
-- **GitHub**: [@dependabot[bot]](https://github.com/dependabot[bot])
-- **Active span**: 2026-05-29 → 2026-09-14 (1 years)
-- **Commits**: 221 across 71 repos
-- **Issues created**: 0
-- **Lines changed**: +1,182 / −605
-- **Top repositories** (by commits): `csl-guides` (22), `csl-observatory` (17), `MWS` (9), `csl-atlas` (9), `csl-apidev` (8), `PWK` (7), `GRA` (7), `AP` (7)
+- **Top repositories** (by commits): `hwnorm1` (89), `VCP` (35), `csl-devanagari` (1)
 
 ### gasyoun@ya.ru
 
 - **GitHub**: [@gasyoun@ya.ru](https://github.com/gasyoun@ya.ru)
-- **Active span**: 2014-01-21 → 2026-09-28 (13 years)
-- **Commits**: 101 across 10 repos
+- **Active span**: 2014-01-21 → 2026-10-03 (13 years)
+- **Commits**: 71 across 7 repos
 - **Issues created**: 0
 - **Lines changed**: +0 / −0
-- **Top repositories** (by commits): `csl-devanagari` (30), `csl-orig` (18), `VCP` (14), `hwnorm1` (14), `LRV` (12), `MWinflect` (5), `csl-ldev` (3), `cologne-stardict` (2)
+- **Top repositories** (by commits): `csl-devanagari` (36), `VCP` (14), `hwnorm1` (14), `csl-ldev` (3), `csl-lnum` (2), `cologne-stardict` (1), `csl-json` (1)
 
 ### actions@github.com
 
@@ -135,56 +135,11 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 ### 49699333+dependabot[bot]@users.noreply.github.com
 
 - **GitHub**: [@49699333+dependabot[bot]@users.noreply.github.com](https://github.com/49699333+dependabot[bot]@users.noreply.github.com)
-- **Active span**: 2026-06-02 → 2026-07-20 (1 years)
-- **Commits**: 22 across 10 repos
+- **Active span**: 2026-06-02 → 2026-10-26 (1 years)
+- **Commits**: 17 across 7 repos
 - **Issues created**: 0
 - **Lines changed**: +0 / −0
-- **Top repositories** (by commits): `csl-orig` (9), `VCP` (5), `hwnorm1` (1), `cologne-stardict` (1), `MWinflect` (1), `csl-json` (1), `csl-devanagari` (1), `csl-lnum` (1)
-
-### srhodes@snowcrest.net
-
-- **GitHub**: [@srhodes@snowcrest.net](https://github.com/srhodes@snowcrest.net)
-- **Active span**: 2024-01-14 → 2024-01-28 (1 years)
-- **Commits**: 15 across 1 repos
-- **Issues created**: 0
-- **Lines changed**: +0 / −0
-- **Top repositories** (by commits): `csl-orig` (15)
-
-### 917514182@qq.com
-
-- **GitHub**: [@917514182@qq.com](https://github.com/917514182@qq.com)
-- **Active span**: 2024-01-13 → 2025-11-01 (2 years)
-- **Commits**: 8 across 1 repos
-- **Issues created**: 0
-- **Lines changed**: +0 / −0
-- **Top repositories** (by commits): `csl-orig` (8)
-
-### 74726889+AnnaRybakovaT@users.noreply.github.com
-
-- **GitHub**: [@74726889+AnnaRybakovaT@users.noreply.github.com](https://github.com/74726889+AnnaRybakovaT@users.noreply.github.com)
-- **Active span**: 2021-01-06 → 2021-03-06 (1 years)
-- **Commits**: 6 across 1 repos
-- **Issues created**: 0
-- **Lines changed**: +0 / −0
-- **Top repositories** (by commits): `csl-orig` (6)
-
-### funderburkjim@users.noreply.github.com
-
-- **GitHub**: [@funderburkjim@users.noreply.github.com](https://github.com/funderburkjim@users.noreply.github.com)
-- **Active span**: 2018-10-16 → 2025-11-01 (8 years)
-- **Commits**: 5 across 2 repos
-- **Issues created**: 0
-- **Lines changed**: +0 / −0
-- **Top repositories** (by commits): `csl-orig` (4), `MWinflect` (1)
-
-### arybakovatheohari@gmail.com
-
-- **GitHub**: [@arybakovatheohari@gmail.com](https://github.com/arybakovatheohari@gmail.com)
-- **Active span**: 2021-01-04 → 2021-03-06 (1 years)
-- **Commits**: 5 across 1 repos
-- **Issues created**: 0
-- **Lines changed**: +0 / −0
-- **Top repositories** (by commits): `csl-orig` (5)
+- **Top repositories** (by commits): `VCP` (7), `csl-json` (3), `csl-devanagari` (3), `hwnorm1` (1), `cologne-stardict` (1), `csl-lnum` (1), `csl-ldev` (1)
 
 ### github-actions[bot]@users.noreply.github.com
 
@@ -195,14 +150,14 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **Lines changed**: +0 / −0
 - **Top repositories** (by commits): `cologne-stardict` (2)
 
-### 105386121+aumsanskrit@users.noreply.github.com
+### gasuns@gmail.com
 
-- **GitHub**: [@105386121+aumsanskrit@users.noreply.github.com](https://github.com/105386121+aumsanskrit@users.noreply.github.com)
-- **Active span**: 2024-01-16 → 2024-01-20 (1 years)
-- **Commits**: 2 across 1 repos
+- **GitHub**: [@gasuns@gmail.com](https://github.com/gasuns@gmail.com)
+- **Active span**: 2026-11-18 → 2026-11-18 (1 years)
+- **Commits**: 2 across 2 repos
 - **Issues created**: 0
-- **Lines changed**: +0 / −0
-- **Top repositories** (by commits): `csl-orig` (2)
+- **Lines changed**: +2 / −2
+- **Top repositories** (by commits): `csl-pywork` (1), `csl-corrections` (1)
 
 ### dpatel3@dialog7.rrz.uni-koeln.de
 
@@ -248,42 +203,6 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **Issues created**: 0
 - **Lines changed**: +150 / −110
 - **Top repositories** (by commits): `csl-apidev` (1)
-
-### atlas-bounty@hermes-agent.local
-
-- **GitHub**: [@atlas-bounty@hermes-agent.local](https://github.com/atlas-bounty@hermes-agent.local)
-- **Active span**: 2026-05-15 → 2026-05-15 (1 years)
-- **Commits**: 1 across 1 repos
-- **Issues created**: 0
-- **Lines changed**: +0 / −0
-- **Top repositories** (by commits): `csl-orig` (1)
-
-### adminlip@users.noreply.github.com
-
-- **GitHub**: [@adminlip@users.noreply.github.com](https://github.com/adminlip@users.noreply.github.com)
-- **Active span**: 2026-05-15 → 2026-05-15 (1 years)
-- **Commits**: 1 across 1 repos
-- **Issues created**: 0
-- **Lines changed**: +0 / −0
-- **Top repositories** (by commits): `csl-orig` (1)
-
-### krishna@Krishnas-MacBook-Air.local
-
-- **GitHub**: [@krishna@Krishnas-MacBook-Air.local](https://github.com/krishna@Krishnas-MacBook-Air.local)
-- **Active span**: 2023-10-12 → 2023-10-12 (1 years)
-- **Commits**: 1 across 1 repos
-- **Issues created**: 0
-- **Lines changed**: +0 / −0
-- **Top repositories** (by commits): `csl-orig` (1)
-
-### 54036272+YevgenJohn@users.noreply.github.com
-
-- **GitHub**: [@54036272+YevgenJohn@users.noreply.github.com](https://github.com/54036272+YevgenJohn@users.noreply.github.com)
-- **Active span**: 2019-10-31 → 2019-10-31 (1 years)
-- **Commits**: 1 across 1 repos
-- **Issues created**: 0
-- **Lines changed**: +0 / −0
-- **Top repositories** (by commits): `csl-orig` (1)
 
 ### sumant.pes@gmail.com
 
@@ -421,7 +340,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **ORCID**: *(awaiting)*
 - **Active span**: — → —
 - **Commits**: 0 across 0 repos
-- **Issues created**: 9
+- **Issues created**: 10
 - **Lines changed**: +0 / −0
 - **Role notes**: Issue analysis and corrections (MWS issue #190 and others).
 
@@ -505,6 +424,14 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **Issues created**: 1
 - **Lines changed**: +0 / −0
 
+### arvicco
+
+- **GitHub**: [@arvicco](https://github.com/arvicco)
+- **Active span**: — → —
+- **Commits**: 0 across 0 repos
+- **Issues created**: 1
+- **Lines changed**: +0 / −0
+
 ### dhammagift
 
 - **GitHub**: [@dhammagift](https://github.com/dhammagift)
@@ -575,11 +502,11 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@AnnaRybakovaT](https://github.com/AnnaRybakovaT)
 - **Active span**: 2020-12-15 → 2023-06-25 (4 years)
-- **Commits**: 71 across 10 repos
+- **Commits**: 68 across 9 repos
 - **Issues created**: 0
-- **Lines changed**: +71,555 / −6,432
+- **Lines changed**: +68,341 / −4,791
 - **Role notes**: Onboarding contributor 2020–2023 — Python pipeline development.
-- **Top repositories** (by commits): `MD` (36), `PWK` (9), `CAE` (7), `CORRECTIONS` (6), `MWS` (3), `BUR` (3), `temp_corrections_ap90` (3), `BOP` (2)
+- **Top repositories** (by commits): `MD` (36), `PWK` (9), `CAE` (7), `CORRECTIONS` (6), `BUR` (3), `temp_corrections_ap90` (3), `BOP` (2), `SKD` (1)
 
 ### (misconfigured git client)
 
@@ -591,16 +518,6 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **Role notes**: Default git config not customised; commits cannot be reliably attributed.
 - **Top repositories** (by commits): `temp_corrections_ap90` (12), `temp_corrections_acc` (9), `temp_corrections_ae` (7), `CAE` (1), `temp_corrections_mw` (1)
 
-### root@localhost.localdomain
-
-- **GitHub**: [@root@localhost.localdomain](https://github.com/root@localhost.localdomain)
-- **Active span**: 2019-10-21 → 2019-10-31 (1 years)
-- **Commits**: 5 across 3 repos
-- **Issues created**: 0
-- **Lines changed**: +3 / −3
-- **Role notes**: Hostname-based identity; attribution unclear.
-- **Top repositories** (by commits): `csl-apidev` (2), `csl-orig` (2), `csl-pywork` (1)
-
 ### DmitriSKT
 
 - **GitHub**: [@DmitriSKT](https://github.com/DmitriSKT)
@@ -610,6 +527,16 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **Lines changed**: +33 / −2
 - **Role notes**: Identity to be confirmed.
 - **Top repositories** (by commits): `COLOGNE` (3)
+
+### root@localhost.localdomain
+
+- **GitHub**: [@root@localhost.localdomain](https://github.com/root@localhost.localdomain)
+- **Active span**: 2019-10-21 → 2019-10-31 (1 years)
+- **Commits**: 3 across 2 repos
+- **Issues created**: 0
+- **Lines changed**: +3 / −3
+- **Role notes**: Hostname-based identity; attribution unclear.
+- **Top repositories** (by commits): `csl-apidev` (2), `csl-pywork` (1)
 
 ### Haqob
 
