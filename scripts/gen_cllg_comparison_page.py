@@ -4,7 +4,8 @@
 Single source of truth: docs/CLLG_VS_SANSKRIT_ESTATE_18-11-2026.md.
 The internal doc carries three marked blocks (caveats, score table, moves).
 This script drops the `Internal evidence` column entirely and replaces it with
-a generic label; internal-only source paths never reach the public page.
+a generic label; internal-only source paths are omitted from this derived page
+(the source document itself is public and still carries them).
 
 Usage:
     python scripts/gen_cllg_comparison_page.py --emit
