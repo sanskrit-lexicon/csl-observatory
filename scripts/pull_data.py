@@ -10,8 +10,9 @@ Outputs to ../data/:
   summary.json       counts at this snapshot
   snapshots/<date>/  immutable copies of the four files above
 
-Rate limits: every `gh api`/`gh api graphql` call goes through gh(), which
-retries HTTP 5xx/timeouts with backoff AND detects GitHub's primary/secondary
+Rate limits: every `gh api`/`gh api graphql` call goes through gh_api_harvest
+(imported as gh, ONE LIST argument per call — never *varargs), which retries
+HTTP 5xx/timeouts with backoff AND detects GitHub's primary/secondary
 rate-limit responses explicitly — on a rate-limit hit it logs the condition,
 reads the reset time off `gh api rate_limit`, sleeps (capped), and retries a
 bounded number of times before giving up and logging the failure.
@@ -21,7 +22,7 @@ Run: python scripts/pull_data.py
 import json, sys, datetime, time
 from pathlib import Path
 
-from _common import gh_api_harvest as gh
+from _common import gh_api_harvest as gh  # gh(args: list) — list-in, stdout-or-None (H7879)
 
 sys.stdout.reconfigure(encoding='utf-8')
 sys.stderr.reconfigure(encoding='utf-8')
@@ -41,24 +42,25 @@ def parse_jsonl(out):
 
 
 def fetch_repos():
-    out = gh('--paginate', f'orgs/{ORG}/repos?per_page=100',
-             '--jq', '.[] | {name, full_name, description, default_branch, '
-                     'created_at, updated_at, pushed_at, size, language, '
-                     'license: .license.spdx_id, archived, fork, '
-                     'open_issues_count, has_issues, topics, '
-                     'stargazers_count, forks_count}')
+    out = gh(['--paginate', f'orgs/{ORG}/repos?per_page=100',
+              '--jq', '.[] | {name, full_name, description, default_branch, '
+                      'created_at, updated_at, pushed_at, size, language, '
+                      'license: .license.spdx_id, archived, fork, '
+                      'open_issues_count, has_issues, topics, '
+                      'stargazers_count, forks_count}'])
     return parse_jsonl(out)
 
 
 def fetch_issues(repo):
-    out = gh('--paginate', f'repos/{ORG}/{repo}/issues?state=all&per_page=100',
-             '--jq', '.[] | {number, title, state, '
-                     'labels: [.labels[].name], '
-                     'milestone: .milestone.title, '
-                     'user: .user.login, '
-                     'assignees: [.assignees[].login], '
-                     'created_at, updated_at, closed_at, comments, '
-                     'is_pull_request: (.pull_request != null)}')
+    out = gh(['--paginate',
+              f'repos/{ORG}/{repo}/issues?state=all&per_page=100',
+              '--jq', '.[] | {number, title, state, '
+                      'labels: [.labels[].name], '
+                      'milestone: .milestone.title, '
+                      'user: .user.login, '
+                      'assignees: [.assignees[].login], '
+                      'created_at, updated_at, closed_at, comments, '
+                      'is_pull_request: (.pull_request != null)}'])
     return parse_jsonl(out)
 
 
@@ -111,7 +113,7 @@ def fetch_project_fields():
         args = ['graphql', '-f', f'query={query}', '-f', f'project={PROJECT_NODE_ID}']
         if cursor:
             args += ['-f', f'cursor={cursor}']
-        out = gh(*args)
+        out = gh(args)
         if not out:
             break
         try:
@@ -181,7 +183,7 @@ def fetch_commits(repo):
         args = ['graphql', '-f', f'query={query}']
         if cursor:
             args += ['-f', f'cursor={cursor}']
-        out = gh(*args)
+        out = gh(args)
         if not out:
             break
         try:
