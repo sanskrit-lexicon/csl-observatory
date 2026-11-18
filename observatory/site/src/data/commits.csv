@@ -5076,6 +5076,13 @@ cologne-hugo,bc9c9f8041ce,2026-06-14T04:48:44Z,gasyoun,Mārcis Gasūns,gasyoun@u
 cologne-hugo,33e04b625b7e,2026-05-29T05:11:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(runbook): refresh tooling-repo README with live counts (2026-05-29)
 cologne-hugo,27567866a9e7,2026-05-15T07:39:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 cologne-hugo,17af959d4467,2021-01-20T04:59:40Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+cologne-stardict,69f3c840e828,2026-11-15T15:08:29Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit cf53a4240ac83c8f7dfd275533ebd0a0639e6b57
+cologne-stardict,3dee630e72c5,2026-11-12T15:08:09Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit ab66c771b3cb87c3fd8f484b5ae894199d52f2b4
+cologne-stardict,d475dcae9880,2026-11-12T01:55:18Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,"nybj: render footnotes as ""[^N] text"" matching the in-text [^N] refs"
+cologne-stardict,aa3a48886b1a,2026-11-12T01:49:12Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,"Add nybj (Nyayakosha) to the stardict sync, Devanagari like VCP"
+cologne-stardict,75fb1df6185f,2026-11-11T19:08:57Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add weekly OSSF Scorecard workflow (badge publish) (#57)
+cologne-stardict,80602558c99e,2026-11-11T05:30:46Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit b4eb0fb1ea456d6a664937a2dae587cecacf4255
+cologne-stardict,7d93ba69c5f7,2026-11-11T05:24:33Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"dictdata.py: register PWKVN (Böhtlingk Nachträge, sa-de) + applyaccent pw/pwg notation — fixes KeyError on missing 'pwkvn' (#56)"
 cologne-stardict,05d29bbd273f,2026-11-07T10:21:24Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit 773925ad553b1c048bd2382b3e28ba3dfbbd76f9
 cologne-stardict,436a681a439a,2026-11-07T07:35:38Z,,drdhaval2785,drdhaval2785gmail.com,Regeneration after csl-orig commit ca5ae563c53300286d692160f2417fdd0c166cb7
 cologne-stardict,a8810c43b3c4,2026-10-26T23:39:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: add SECURITY.md (security policy, org contact) (#55)"
@@ -5965,6 +5972,15 @@ cologne-stardict,5d3eac3f589c,2017-04-04T16:05:41Z,drdhaval2785,drdhaval2785,drd
 cologne-stardict,82cf5cf8ca13,2017-04-04T15:39:46Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,GST added
 cologne-stardict,d7f4222e9a19,2017-04-04T10:51:20Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,CCS GRA added
 cologne-stardict,9e7133046729,2017-04-04T06:45:28Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,added CAE
+csl-apidev,6af742757b6e,2026-11-13T08:10:08Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"#178: fix og:image URL — build from PATH, not query-carrying REQUEST_URI (#194)"
+csl-apidev,ed3f438398ca,2026-11-13T07:54:44Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,#178: before/after evidence screenshots of the deployed og: state (MG 12-11-2026 ruling) (#193)
+csl-apidev,9c8d28b68ecc,2026-11-11T19:09:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add weekly OSSF Scorecard workflow (badge publish) (#192)
+csl-apidev,3c8efb865bcf,2026-11-10T09:49:02Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #191 from sanskrit-lexicon/h7962-rvprat-roman-rule-fix
+csl-apidev,bc4009b1e514,2026-11-10T08:21:16Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,sync: ṚV. PRĀT. roman-rule delimiter fix in basicadjust.php from csl-websanlexicon (H7962)
+csl-apidev,67b2ed4719a0,2026-11-10T07:25:25Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #190 from sanskrit-lexicon/h7948-basicadjust-link-table
+csl-apidev,3ea077936b29,2026-11-10T07:21:02Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ci(twin-drift): register link_targets.php as guarded twin (H7948)
+csl-apidev,ca6a9b55ef6d,2026-11-10T05:19:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,sync: basicadjust.php link-target refactor + link_targets.php from csl-websanlexicon (H7948)
+csl-apidev,372eef79b40c,2026-11-09T16:50:41Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(H7901): Jim-facing deploy request with before/after preview visuals + WEB_BACKEND_MANUAL 14a and .ai_state pointers (#189)
 csl-apidev,748589e39fe5,2026-11-09T10:26:54Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(H7901 sweep): .ai_state — Completed entry + maintainer-pull @WAITING for the og pair (#188)
 csl-apidev,dfcb66637fbc,2026-11-09T09:43:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H7901: og:/twitter: meta on apidev surfaces + og_meta.php twin + WEB_BACKEND_MANUAL 14/14a (#187)
 csl-apidev,8a10475fec1b,2026-11-07T07:49:03Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore (h7802): refresh two stale /csl-apidev/app/ URLs to the live awork base (#186)
@@ -6719,6 +6735,13 @@ csl-apidev,05921188eede,2018-07-15T21:33:50Z,funderburkjim,funderburkjim,funderb
 csl-apidev,e301d0de32f0,2018-04-18T22:38:55Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,xampp version of simple-search - only html file changed
 csl-apidev,65dd76fc5c62,2018-04-18T21:41:03Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,sample/basic-0.2 and list-0.2 for XAMPP. Uses local resources
 csl-apidev,c686084d3b31,2018-04-17T21:16:26Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initial commit. No changes from Cologne
+csl-app,92604a631023,2026-11-12T17:32:59Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Merge pull request #72 from sanskrit-lexicon/dynamic-dictionary-registry
+csl-app,7b2a09b858b3,2026-11-12T17:31:46Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,typo
+csl-app,4e5d66207075,2026-11-12T16:44:01Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Release 0.3.0+12: NYBJ and manifest-driven dictionary list
+csl-app,43593d4d6556,2026-11-12T14:53:54Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Merge pull request #71 from sanskrit-lexicon/dynamic-dictionary-registry
+csl-app,858a49a4b9be,2026-11-12T14:08:41Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Load dictionary list from csl-sqlite manifest instead of hardcoding
+csl-app,c6363265ca97,2026-11-12T12:01:53Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Merge pull request #70 from sanskrit-lexicon/add-nybj-dictionary
+csl-app,a193fdae94c8,2026-11-12T11:55:02Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Add NYBJ (Nyāyakośa 1928) to dictionary registry
 csl-app,b6c058807f72,2026-10-26T23:39:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: add SECURITY.md (security policy, org contact) (#69)"
 csl-app,81ee57c3b17d,2026-10-26T05:34:59Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,Bump actions/setup-python from 5 to 7 (#68)
 csl-app,b1325761ec05,2026-10-26T05:29:33Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,Bump actions/checkout from 4 to 7 (#67)
@@ -6939,6 +6962,14 @@ csl-app,3f5f02ce0114,2026-03-18T19:13:28Z,drdhaval2785,Dr. Dhaval Patel,drdhaval
 csl-app,41a87dfe9b1a,2026-03-18T17:59:44Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,v0.1.0
 csl-app,601df1e6d0c8,2026-03-18T17:25:31Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,app working
 csl-app,3827040885b1,2026-03-18T16:14:06Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,initial commit
+csl-corrections,b645b809975d,2026-11-14T04:21:02Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-11-13
+csl-corrections,657b27aabc4a,2026-11-13T00:25:47Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,guard: make shared-main-tree pre-commit block on macOS/Linux (bughunt HIGH-1) (#463)
+csl-corrections,05d05e865685,2026-11-13T00:22:13Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,bughunt: BUGHUNT-FINDINGS-csl-corrections-13.11.2026.md + CHANGELOG bullet (#462)
+csl-corrections,c28a649af268,2026-11-12T14:30:25Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Revert H3885 e-mail masking; restore addresses in cfr_ab + daily (#461)
+csl-corrections,2dcdad31c3b0,2026-11-12T05:09:13Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-11-11
+csl-corrections,a1f06797174f,2026-11-11T19:09:08Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add weekly OSSF Scorecard workflow (badge publish) (#459)
+csl-corrections,e6ed08c41708,2026-11-11T03:58:31Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-11-10
+csl-corrections,7046907b8393,2026-11-10T05:28:10Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-11-09
 csl-corrections,99d5ea1bdde0,2026-11-07T05:14:26Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"Guard cd against failure at 3 sites (SC2164, H7788) (#456)"
 csl-corrections,dffdc7e15984,2026-11-07T03:56:30Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-11-06
 csl-corrections,a886aff2e85b,2026-11-06T04:29:34Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-11-05
@@ -8127,6 +8158,10 @@ csl-corrections,03c38c194339,2019-12-16T23:50:54Z,,James Funderburk,jfunderb@dia
 csl-corrections,e23efa275d19,2019-12-16T22:28:35Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,initialization from Cologne /php
 csl-corrections,6fa5aa987701,2019-12-16T21:49:45Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initialize material from sanskrit-lexicon/CORRECTIONS repository
 csl-corrections,e854ffd2f3cc,2019-12-16T20:34:56Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+csl-devanagari,4c0554176deb,2026-11-15T15:47:29Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(claude): H5961 agent-docs SLA refresh — header bump 06-10, .githooks wiring + CODEOWNERS drift (#73)"
+csl-devanagari,ef1e53791c0a,2026-11-15T15:44:35Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore(memory): scaffold committed memory store (H4547) (#65)
+csl-devanagari,06995c0260e5,2026-11-15T15:38:14Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(H2820): refresh CLAUDE.md (what/run/don't) + regen AGENTS twin (#57)
+csl-devanagari,8e7eba461321,2026-11-14T04:51:46Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(claude): YE4 agent-docs SLA refresh — gated csl-orig carry path documented, unit-tests.yml named (32 tests re-run OK), header bumped 14-11-2026 (#83)"
 csl-devanagari,4e01fc2fbc53,2026-10-30T09:02:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(claude): H7474 agent-docs SLA refresh — guard-hook facts corrected to pre-commit + pre-push, header bumped 30-10-2026"
 csl-devanagari,bc855fcc63f2,2026-10-26T20:29:33Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"fix(bughunt): re-vendor the stale-base checker, gate the csl-orig carry script (findings 2, 3) (#82)"
 csl-devanagari,07f8de1fab4c,2026-10-26T19:09:41Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"fix(bughunt): close findings 1, 4, 5, 6 of the 26.10.2026 hunt (#81)"
@@ -8367,6 +8402,11 @@ csl-doc,8ff154efb810,2018-10-24T21:17:56Z,funderburkjim,funderburkjim,funderburk
 csl-doc,bd14b74b4772,2018-10-24T20:14:08Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,build with just bhs
 csl-doc,765253c73da1,2018-10-24T20:08:17Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,bhs dictionary front matter
 csl-doc,ddedf4c08457,2018-10-23T02:06:19Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initial commit
+csl-homepage,4fd94a9de8bd,2026-11-13T17:35:39Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H8215: hybrid Latest news — editorial block + dictionary-update rows (#37)
+csl-homepage,039db6ca63b4,2026-11-12T19:43:10Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H8170: before-state screenshots of the live homepage (deploy issue #35) (#36)
+csl-homepage,9f95bdb11acc,2026-11-12T17:08:16Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H8170: fail-closed draft check + real calendar date validation (review nits) (#34)
+csl-homepage,f7dc339b4b1a,2026-11-12T16:19:18Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H8170: curated mixed news widget after the dictionary catalogue (#33)
+csl-homepage,cc910a7a0a79,2026-11-11T19:09:16Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add weekly OSSF Scorecard workflow (badge publish) (#32)
 csl-homepage,dd1426bab987,2026-11-09T09:18:02Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H7901: og:/twitter: meta on the generated homepage (site constants + live indexdirs count) (#31)
 csl-homepage,6e4f9b290b46,2026-11-08T15:14:27Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,add standalone uni-koeln Cite & DOI page (cite.html); guard it too (H7887) (#30)
 csl-homepage,4dc2f9f7994f,2026-11-08T15:12:59Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,restore umbrella DOI in How-to-cite GENERATORS + guard: fix PR #28 regression class (H7887) (#29)
@@ -8472,6 +8512,7 @@ csl-homepage,39824ee261fc,2019-01-17T21:00:54Z,,James Funderburk,jfunderb@dialog
 csl-homepage,1e2e3cdfff5e,2018-08-30T22:22:34Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,Changes. See https://github.com/sanskrit-lexicon/Cologne/issues/232
 csl-homepage,58b48fdb7833,2018-08-08T20:13:43Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Create readme.md
 csl-homepage,4fe451a1680a,2018-08-08T20:06:14Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,initial commit from Cologne /scans/awork/homepage
+csl-inflect,514b14ba00b7,2026-11-11T19:09:22Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add weekly OSSF Scorecard workflow (badge publish) (#41)
 csl-inflect,dd9fe83fa29f,2026-11-09T09:18:06Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H7901: og:/twitter: meta on the lookup page (vendored og_meta.php twin copy) (#40)
 csl-inflect,4a6e7af27320,2026-10-26T23:40:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: add SECURITY.md (security policy, org contact) (#39)"
 csl-inflect,6f93e2b155c3,2026-10-26T05:35:17Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,Bump actions/checkout from 5.1.0 to 7.0.1 (#38)
@@ -8680,6 +8721,7 @@ csl-json,68bcaa26e92b,2021-08-16T04:56:19Z,drdhaval2785,drdhaval2785,drdhaval278
 csl-json,f9ee45a8f8a0,2021-08-16T04:38:38Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,yat json
 csl-json,1a666aac8ecd,2021-08-16T04:36:00Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,first generation of yat in ashtadhyayi.com format
 csl-json,7f8e85f197b5,2021-08-16T03:40:49Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,initial commit
+csl-kale,46790f901007,2026-11-11T19:09:26Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add weekly OSSF Scorecard workflow (badge publish) (#14)
 csl-kale,ea27b43c7ea8,2026-11-09T09:18:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H7901: og:/twitter: meta on the disp landing (vendored og_meta.php twin copy) (#13)
 csl-kale,75e10d9b0227,2026-10-26T23:40:47Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: add SECURITY.md (security policy, org contact) (#12)"
 csl-kale,70694719dc09,2026-09-05T06:59:32Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 2}) + relative-link upgrades (0)"
@@ -8967,6 +9009,21 @@ csl-newsletter,bced52b7f19f,2021-09-14T04:37:04Z,drdhaval2785,Dhaval Patel,drdha
 csl-newsletter,53c6fa85e014,2021-09-13T14:34:31Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,csl-orig commits taken into consideration
 csl-newsletter,b04b08d7e699,2021-09-13T13:28:15Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,addition
 csl-newsletter,5ab58ee2cd64,2021-09-13T12:33:30Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,september started
+csl-observatory,bfdbb40bb58e,2026-11-16T06:05:20Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #321 from sanskrit-lexicon/h8365-queue-malformed-repair
+csl-observatory,76e082a37031,2026-11-16T06:02:40Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(changelog_queue): fold 3 malformed fragments into the H4466 bullet shape (H8367)
+csl-observatory,662205008767,2026-11-14T15:08:48Z,github-actions[bot],github-actions[bot],41898282+github-actions[bot]@users.noreply.github.com,data: monthly refresh (2026-11-09) (#312)
+csl-observatory,d02e1cc6e460,2026-11-13T07:16:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(claude): YCP agent-docs SLA refresh — run commands + CI list re-verified, header bumped 13-11-2026 (#319)"
+csl-observatory,b0459f2342b9,2026-11-11T19:09:30Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add weekly OSSF Scorecard workflow (badge publish) (#318)
+csl-observatory,dfd05893ceba,2026-11-10T08:31:13Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #317 from sanskrit-lexicon/h7963-ci-pat
+csl-observatory,9764ceeed811,2026-11-10T08:29:09Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): deployed-copy-drift cross-org checkouts need the PAT (H7963)
+csl-observatory,5027f15a6adb,2026-11-10T08:23:40Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #316 from sanskrit-lexicon/h7963-pyfloor-sync-drift-gate
+csl-observatory,ba31dbb06ec0,2026-11-10T08:20:05Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore(sync+gate): pyfloor.py to canonical + deployed-copy drift gate CI (H7963)
+csl-observatory,033308d79eb0,2026-11-10T07:55:36Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add changelog duplicate-entry guard (CI) (#315)
+csl-observatory,c1c366ecc709,2026-11-09T20:27:34Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,chore(release): cut v1.15.1
+csl-observatory,75b339560e35,2026-11-09T20:27:05Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #314 from sanskrit-lexicon/h7947-queue-fix
+csl-observatory,1ca01274ce49,2026-11-09T20:26:06Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(changelog-queue): H7947 fragment to bullet shape (H4466)
+csl-observatory,a6b77b8182c7,2026-11-09T20:25:43Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #313 from sanskrit-lexicon/h7947-gold-rebase
+csl-observatory,1a90e1fd162e,2026-11-09T20:24:36Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,data(obs-t): H7947 — re-base gold_component onto location axis; retire legacy gold_component_2 stragglers
 csl-observatory,6be21ca7469f,2026-11-09T07:12:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(citation): surface the code-release DOI on README + CITATION.cff (H7887) (#311)
 csl-observatory,6bfe46ad4734,2026-11-08T13:37:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(quotes): sync every registered headline surface to the 2026-11-08 snapshot (#310)
 csl-observatory,be92fa5be565,2026-11-08T12:13:21Z,github-actions[bot],github-actions[bot],41898282+github-actions[bot]@users.noreply.github.com,data: monthly refresh (2026-11-08) (#309)
@@ -9646,6 +9703,16 @@ csl-observatory,eec8dc712aed,2026-05-07T19:29:28Z,gasyoun,Mārcis Gasūns,gasyou
 csl-observatory,c236fb5ac130,2026-05-07T19:28:08Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"feat: companion paper, headword counter, retry logic, templates"
 csl-observatory,1947ea3757ed,2026-05-07T17:04:56Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Create gasuns-cologne-30-report.md
 csl-observatory,e24574b2785a,2026-05-07T15:58:23Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"chore: bootstrap observatory — scripts, first data snapshot, dashboards, article scaffold"
+csl-orig,cf53a4240ac8,2026-11-15T15:03:41Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"corrections: 2026-07 batch (ap90, 15 changes, 2 issues) + repo docs (#2879)"
+csl-orig,1600d6ba3a76,2026-11-12T17:43:10Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Merge pull request #2913 from sanskrit-lexicon/ci-publish-manifest-when-missing
+csl-orig,691f2bd4b736,2026-11-12T17:42:07Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,ci(regenerate-hwnorm1-sqlite): publish when dictionaries.json is missing on gh-pages
+csl-orig,ab66c771b3cb,2026-11-12T15:02:37Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Merge pull request #2912 from sanskrit-lexicon/ci-publish-dictionaries-manifest
+csl-orig,9e4979d4dd79,2026-11-12T14:57:22Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,NYBJ header ampersend correction
+csl-orig,6602c62fd9d4,2026-11-12T14:55:37Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,ci(regenerate-hwnorm1-sqlite): publish dictionaries.json manifest for csl-app
+csl-orig,2690e27785d6,2026-11-12T06:07:14Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,ci: weekly OSSF Scorecard workflow (badge publish)
+csl-orig,7386c7163a2f,2026-11-12T01:43:00Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,ci: add nybj to the csl-sqlite publish list and Generate Dictionary choices
+csl-orig,ac22eb3a3187,2026-11-12T01:42:19Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,ci(regenerate-hwnorm1-sqlite): publish csl-sqlite on definition-only changes
+csl-orig,b4eb0fb1ea45,2026-11-11T04:26:03Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"refactor(H7961): dedup-clean update tooling (updateByLine twins, transcoder dead code) under a parity fence (#2911)"
 csl-orig,776f75662b80,2026-11-09T05:19:55Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,Bump actions/checkout from 4 to 7 (#2910)
 csl-orig,c00c39aeb629,2026-11-09T05:17:29Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,Bump actions/setup-python from 5 to 7 (#2909)
 csl-orig,ac4ef52e5f58,2026-11-07T14:14:07Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ci(H7243): add pinned F821 undefined-name gate (#2903)
@@ -11935,6 +12002,8 @@ csl-orig,ecc689a3a281,2019-07-20T05:43:47Z,drdhaval2785,drdhaval2785,drdhaval278
 csl-orig,661fb1081d4f,2019-07-20T05:21:21Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,copy to cologne web structure
 csl-orig,f325e2abde72,2019-07-20T05:15:30Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,added hwextra
 csl-orig,6f45dd5ce45d,2019-07-20T04:50:29Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,csl-orig initial commit
+csl-pywork,038bfc3a7b3a,2026-11-12T14:45:03Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Merge pull request #109 from sanskrit-lexicon/fix-armh-fri-pe-generation
+csl-pywork,5f9d510acafc,2026-11-12T14:40:46Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,"Fix generation of armh, fri and pe under fail-closed checks"
 csl-pywork,adcd7d11e872,2026-11-07T05:16:14Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"Guard cd against failure at 10 sites (SC2164, H7788) (#108)"
 csl-pywork,cb18b05dcb98,2026-11-04T21:34:51Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(readme): truth pass 05-11-2026 — live issue snapshot (7 open/53 closed), vendored-scripts pointer fix (#107)"
 csl-pywork,3408057c8e99,2026-11-02T00:12:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #106 from sanskrit-lexicon/bughunt-report-1102
@@ -12535,6 +12604,9 @@ csl-pywork,85ce663e2269,2019-07-22T06:48:04Z,drdhaval2785,drdhaval2785,drdhaval2
 csl-pywork,39208cc59d43,2019-07-20T15:54:34Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,compare.sh compares between generated and cologne versions
 csl-pywork,68da950d5517,2019-07-20T05:54:26Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,make_xml of 2013 added
 csl-pywork,a0ca4a27bdb0,2019-07-20T04:08:01Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,first commit
+csl-sqlite,04fbd381987a,2026-11-12T14:58:44Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Merge pull request #9 from sanskrit-lexicon/add-manifest-generator
+csl-sqlite,5248042d48c3,2026-11-12T14:31:11Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,make_manifest: omit zips too small to contain a database
+csl-sqlite,8bd80bf9f5fd,2026-11-12T14:08:41Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Add dictionaries.json manifest generator
 csl-sqlite,ab1e6a075dea,2026-10-27T00:04:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: add SECURITY.md (security policy, org contact) (#8)"
 csl-sqlite,d3d401438dca,2026-10-05T07:46:42Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"Add umbrella DOI: README badge, CITATION.cff, .zenodo.json (#7)"
 csl-sqlite,0d835dda61e7,2026-09-05T07:08:49Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 1}) + relative-link upgrades (0)"
@@ -12549,6 +12621,19 @@ csl-sqlite,a6a257a9a836,2026-05-29T05:10:13Z,gasyoun,Mārcis Gasūns,gasyoun@use
 csl-sqlite,299157791231,2026-05-15T06:00:57Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 csl-sqlite,fc82dcdff2e1,2026-04-11T06:00:27Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,README update
 csl-sqlite,fca7cdc9f757,2026-04-08T11:48:40Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+csl-websanlexicon,6713e404fd28,2026-11-15T15:00:14Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"H7960: crash-safe removedup.py — atomic write, explicit except, argv CLI, smoke lane (#177)"
+csl-websanlexicon,bae0b26b5bcb,2026-11-11T19:09:37Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add weekly OSSF Scorecard workflow (badge publish) (#180)
+csl-websanlexicon,a7aa71f2b2af,2026-11-10T09:53:41Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #179 from sanskrit-lexicon/h7962-ci-yml-quote-stepname
+csl-websanlexicon,399400add7bf,2026-11-10T09:50:10Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(ci): quote step name containing ': ' — workflow was invalid YAML since H7958
+csl-websanlexicon,16b159f28b33,2026-11-10T09:49:02Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #178 from sanskrit-lexicon/h7962-golden-readme-fuzz-count
+csl-websanlexicon,1dacd60ba32e,2026-11-10T09:29:24Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs: add local-gates line to root README (H7962 document sweep, case-variant follow-up)"
+csl-websanlexicon,c082f609fd5b,2026-11-10T09:28:43Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: name the golden gate surfaces explicitly (H7962 document sweep)
+csl-websanlexicon,d2a48ecd7672,2026-11-10T09:03:15Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs: fix fuzz factor count in golden README (H7962 review nit)
+csl-websanlexicon,6cc788bc5ba5,2026-11-10T08:45:22Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #176 from sanskrit-lexicon/h7962-rvprat-roman-rule-fix
+csl-websanlexicon,45eb20d4028f,2026-11-10T08:20:55Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix: ṚV. PRĀT. roman rule regex delimiter — roman links render again (H7962)
+csl-websanlexicon,f0b6c6fbb5e2,2026-11-10T07:27:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #174 from sanskrit-lexicon/h7958-webbackup-py3-port
+csl-websanlexicon,81c1bbcbe14e,2026-11-10T05:34:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H7948: extract basicadjust link-target table without changing rendered URLs (#175)
+csl-websanlexicon,915988c04032,2026-11-10T05:14:18Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"fix(webbackup): port Python 2 build scripts to Python 3, widen G88 parse gate (H7958)"
 csl-websanlexicon,d090a1076bcd,2026-11-09T10:50:17Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"H7901 document sweep receipt: present=7 missing=0 n/a=19 (exit gate green, 09-11-2026) (#173)"
 csl-websanlexicon,3e194dacdce2,2026-11-09T10:26:51Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(H7901 sweep): README/CLAUDE/manual 7 sync rule for og_meta.php + apidev_copy.sh line + .ai_state entry (#172)
 csl-websanlexicon,4afaf3a5d022,2026-11-09T09:18:16Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H7901: og:/twitter: meta on all generated web surfaces (canonical og_meta.php twin) (#171)
@@ -13184,6 +13269,7 @@ csl-websanlexicon,9dd72c0e9df0,2018-07-05T20:32:17Z,funderburkjim,funderburkjim,
 csl-websanlexicon,b66f40fb4704,2018-07-05T20:12:16Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,version 00 of installation python script
 csl-websanlexicon,01aa411e8151,2018-07-05T02:43:59Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initial template driven version v00
 csl-websanlexicon,70d100e4cf79,2018-07-02T22:07:39Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Initial webinstall commit -- gra backup
+csl-westergaard,452a6dba8eb9,2026-11-11T19:09:41Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add weekly OSSF Scorecard workflow (badge publish) (#13)
 csl-westergaard,9e1f60f7f25d,2026-11-09T09:18:20Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H7901: og:/twitter: meta on the disp landing (vendored og_meta.php twin copy) (#12)
 csl-westergaard,9645954e928c,2026-10-27T00:04:15Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: add SECURITY.md (security policy, org contact) (#11)"
 csl-westergaard,6d509b7f565d,2026-10-12T20:18:00Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(security): explicit Content-Type + nosniff on serveimg.php (H5536) (#9)
@@ -13207,6 +13293,7 @@ csl-westergaard,b76ddd4bde96,2026-05-15T07:20:29Z,gasyoun,Mārcis Gasūns,gasyou
 csl-westergaard,1bbb460f5387,2022-11-11T01:59:02Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,Minor corrections re php 8.1.
 csl-westergaard,10ce6fd814c3,2019-11-08T20:42:07Z,,James Funderburk,jfunderb@dialog6.rrz.uni-koeln.de,Initial commit
 csl-westergaard,725181b85f8c,2019-11-08T20:38:09Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+csl-whitroot,608d05ac16d3,2026-11-11T19:09:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add weekly OSSF Scorecard workflow (badge publish) (#12)
 csl-whitroot,ba09bd480848,2026-11-09T09:18:25Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H7901: og:/twitter: meta on the disp landing (vendored og_meta.php twin copy) (#11)
 csl-whitroot,5fec17f4e3eb,2026-10-27T00:04:21Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"ai-wip: add SECURITY.md (security policy, org contact) (#10)"
 csl-whitroot,d40b6136c561,2026-09-05T07:08:54Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,"docs(H4092 wave3): mechanical byline/header pass ({""add-both"": 1}) + relative-link upgrades (0)"

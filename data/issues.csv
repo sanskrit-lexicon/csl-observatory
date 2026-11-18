@@ -128,7 +128,7 @@ AP90,10,Deep Page Hyperlinks (aka Page0463-c),open,2021-04-23T19:25:27Z,,gasyoun
 AP90,11,"Markup of literary source references, continued",open,2021-04-28T02:01:40Z,,funderburkjim,markup|medium,Structured Data,18,issue
 AP90,12,Hitopadeśa link target,open,2021-05-05T18:48:37Z,,funderburkjim,link-target|medium,Dictionary to Book,3,issue
 AP90,13,?? missing characters,closed,2021-05-05T20:46:54Z,2021-05-07T19:36:59Z,funderburkjim,help wanted|encoding|minor,Digitization Quality,19,issue
-AP90,14,Devanagari markup changes,open,2021-05-08T16:41:29Z,,funderburkjim,markup|minor,Structured Data,11,issue
+AP90,14,Devanagari markup changes,closed,2021-05-08T16:41:29Z,2026-11-15T15:03:43Z,funderburkjim,markup|minor,Structured Data,11,issue
 AP90,15,Misc. markup corrections,open,2021-05-09T20:34:14Z,,funderburkjim,markup|minor,Structured Data,25,issue
 AP90,16,"Misc markup changes, Part 2",open,2021-05-19T18:24:06Z,,funderburkjim,markup|minor,Structured Data,27,issue
 AP90,17,Andhrabharati coding of AP90,open,2021-05-20T14:53:17Z,,funderburkjim,content-enhancement|medium,Major Enhancements,50,issue
@@ -907,6 +907,7 @@ COLOGNE,493,build(deps): bump actions/checkout from 5.1.0 to 7.0.1,closed,2026-1
 COLOGNE,494,"add SECURITY.md (security policy, org contact)",closed,2026-10-26T17:02:10Z,2026-10-26T20:33:21Z,gasyoun,,,0,PR
 COLOGNE,495,"docs(README): truth-pass 05-11-2026 — live issue counts, refreshed taxonomy exhibit (485 proposals)",closed,2026-11-04T21:07:15Z,2026-11-04T21:15:09Z,gasyoun,,,0,PR
 COLOGNE,496,Guard cd against failure at 3 sites (shellcheck SC2164),closed,2026-11-07T05:15:23Z,2026-11-07T05:15:26Z,gasyoun,,,0,PR
+COLOGNE,497,Pending Cologne-host asks — prioritized (one place to comment),open,2026-11-13T08:21:46Z,,gasyoun,coordination,,1,issue
 CORRECTIONS,1,Announcement of correctionform.txt,closed,2014-10-03T01:22:12Z,2015-12-02T11:58:08Z,funderburkjim,Documentation,,14,issue
 CORRECTIONS,2,Wrong entries detected in MW vs PWG,closed,2014-10-05T10:03:16Z,2014-10-16T00:46:53Z,drdhaval2785,,,133,issue
 CORRECTIONS,3,Extra space in Devanagari rendering,closed,2014-10-05T11:47:15Z,2014-11-22T05:39:10Z,drdhaval2785,Bug,,3,issue
@@ -2875,6 +2876,8 @@ cologne-stardict,52,"redo.sh: pull main (master branch is gone), guard cd",close
 cologne-stardict,53,docs: note redo.sh needs bash and stops on failure,closed,2026-09-15T06:38:03Z,2026-09-15T06:38:49Z,gasyoun,,,0,PR
 cologne-stardict,54,"dictdata.py: register NYBJ (Nyāyakośa, sa-sa) — fixes KeyError on missing 'nybj' key",closed,2026-09-20T10:16:31Z,2026-10-12T20:18:31Z,gasyoun,,,0,PR
 cologne-stardict,55,"add SECURITY.md (security policy, org contact)",closed,2026-10-26T17:03:28Z,2026-10-26T23:39:42Z,gasyoun,,,0,PR
+cologne-stardict,56,"dictdata.py: register PWKVN (Böhtlingk Nachträge, sa-de) + applyaccent pw/pwg notation — fixes KeyError on missing 'pwkvn'",closed,2026-11-11T05:24:10Z,2026-11-11T05:24:33Z,gasyoun,,,0,PR
+cologne-stardict,57,add weekly OSSF Scorecard workflow (badge publish),closed,2026-11-11T19:08:01Z,2026-11-11T19:08:58Z,gasyoun,,,0,PR
 csl-apidev,1,cologne symlink to apidev,closed,2019-08-02T00:22:13Z,2020-12-12T19:45:45Z,funderburkjim,enhancement|minor,User Experience,4,issue
 csl-apidev,2,cleanup old files,closed,2019-08-02T23:12:11Z,2019-08-03T00:22:33Z,funderburkjim,minor|tech-debt,Developer Experience,11,issue
 csl-apidev,3,remove dalwhich and related,closed,2019-08-06T00:03:28Z,2019-08-06T00:13:48Z,funderburkjim,enhancement|minor,User Experience,5,issue
@@ -3052,7 +3055,7 @@ csl-apidev,174,getword: emit og: + twitter:card meta on entry pages (H6478),clos
 csl-apidev,175,Open Graph + twitter:card meta on dictionary entry pages (H6478),closed,2026-10-11T19:42:19Z,2026-10-11T19:42:37Z,gasyoun,,,0,PR
 csl-apidev,176,Cologne-owned entry preview cards: og/ set + make_entry_cards.py (H6478 follow-up),closed,2026-10-11T20:23:49Z,2026-10-11T20:24:59Z,gasyoun,,,0,PR
 csl-apidev,177,Add before/after deploy mockup for the og: deploy issue,closed,2026-10-12T13:03:33Z,2026-10-12T13:03:36Z,gasyoun,,,0,PR
-csl-apidev,178,Deploy og: preview meta + entry cards to the live host (one checkout pull),open,2026-10-12T13:04:16Z,,gasyoun,minor|infrastructure,Developer Experience,0,issue
+csl-apidev,178,Deploy og: preview meta + entry cards to the live host (one checkout pull),open,2026-10-12T13:04:16Z,,gasyoun,minor|infrastructure,Developer Experience,1,issue
 csl-apidev,179,H7126: archive doc/roadmap_lookup.md (wave-2 verdict),closed,2026-10-22T14:11:51Z,2026-10-22T15:01:51Z,gasyoun,,,0,PR
 csl-apidev,180,add changelog duplicate-entry guard (CI),closed,2026-10-24T13:34:43Z,2026-10-24T13:37:43Z,gasyoun,,,0,PR
 csl-apidev,181,add changelog duplicate-entry guard (CI),closed,2026-10-24T15:36:03Z,2026-10-24T15:41:10Z,gasyoun,,,0,PR
@@ -3063,6 +3066,12 @@ csl-apidev,185,doc (ux-redesign): DEPLOY_REQUEST_JIM — H227 §8 steps 2-5 host
 csl-apidev,186,chore (h7802): refresh two stale /csl-apidev/app/ URLs to the live awork base,closed,2026-11-07T06:29:22Z,2026-11-07T07:49:04Z,gasyoun,,,0,PR
 csl-apidev,187,H7901: og:/twitter: meta on apidev surfaces + og_meta.php twin + WEB_BACKEND_MANUAL 14/14a,closed,2026-11-09T09:35:55Z,2026-11-09T09:43:11Z,gasyoun,,,0,PR
 csl-apidev,188,H7901 doc sweep: .ai_state Completed + maintainer-pull @WAITING for the og pair,closed,2026-11-09T10:21:09Z,2026-11-09T10:26:55Z,gasyoun,,,0,PR
+csl-apidev,189,H7901: Jim-facing deploy request with before/after preview visuals,closed,2026-11-09T16:49:16Z,2026-11-09T16:50:42Z,gasyoun,,,0,PR
+csl-apidev,190,H7948: fork-sync basicadjust.php link-target refactor + link_targets.php,closed,2026-11-10T05:20:32Z,2026-11-10T07:25:26Z,gasyoun,,,0,PR
+csl-apidev,191,sync: ṚV. PRĀT. roman-rule delimiter fix in basicadjust.php from csl-websanlexicon (H7962),closed,2026-11-10T08:22:34Z,2026-11-10T09:49:02Z,gasyoun,,,0,PR
+csl-apidev,192,add weekly OSSF Scorecard workflow (badge publish),closed,2026-11-11T19:06:09Z,2026-11-11T19:09:01Z,gasyoun,,,0,PR
+csl-apidev,193,#178: before/after evidence screenshots of the deployed og: state,closed,2026-11-13T07:52:29Z,2026-11-13T07:54:45Z,gasyoun,,,0,PR
+csl-apidev,194,#178: fix og:image URL (query-string strip never matched),closed,2026-11-13T08:06:13Z,2026-11-13T08:10:09Z,gasyoun,,,0,PR
 csl-app,1,An App for Sanskrit-Lexicon,closed,2026-03-18T18:22:37Z,2026-04-15T12:56:54Z,drdhaval2785,enhancement|good first issue|minor,,6,issue
 csl-app,2,Cologne Theme and Customisable Themes,closed,2026-03-24T07:03:36Z,2026-03-24T07:03:47Z,drdhaval2785,enhancement|minor,,1,issue
 csl-app,3,Add badic_adjust,closed,2026-03-24T09:22:31Z,2026-03-24T16:45:00Z,drdhaval2785,feature|major,,0,issue
@@ -3132,6 +3141,9 @@ csl-app,66,add changelog duplicate-entry guard (CI),closed,2026-10-24T15:36:09Z,
 csl-app,67,Bump actions/checkout from 4 to 7,closed,2026-10-26T05:25:28Z,2026-10-26T05:29:34Z,dependabot[bot],major|dependencies|github_actions,,0,PR
 csl-app,68,Bump actions/setup-python from 5 to 7,closed,2026-10-26T05:25:32Z,2026-10-26T05:34:59Z,dependabot[bot],major|dependencies|github_actions,,0,PR
 csl-app,69,"add SECURITY.md (security policy, org contact)",closed,2026-10-26T17:03:32Z,2026-10-26T23:39:55Z,gasyoun,,,0,PR
+csl-app,70,Add NYBJ (Nyāyakośa 1928) to dictionary registry,closed,2026-11-12T12:01:28Z,2026-11-12T12:01:54Z,drdhaval2785,,,0,PR
+csl-app,71,Load dictionary list from csl-sqlite manifest instead of hardcoding,closed,2026-11-12T14:53:25Z,2026-11-12T14:53:54Z,drdhaval2785,,,0,PR
+csl-app,72,Dynamic dictionary registry,closed,2026-11-12T17:32:46Z,2026-11-12T17:32:59Z,drdhaval2785,,,0,PR
 csl-corrections,1,csl-corrections initialized,closed,2019-12-17T02:09:12Z,2019-12-22T05:46:41Z,funderburkjim,doc|question|minor,Structured Data,7,issue
 csl-corrections,2,Preliminary instructions for Correction installation,closed,2019-12-18T02:14:21Z,2019-12-22T05:46:10Z,funderburkjim,doc|question|minor,Structured Data,7,issue
 csl-corrections,3,WIL errors while regen,closed,2019-12-18T05:14:26Z,2019-12-18T15:32:01Z,drdhaval2785,bug|minor,Digitization Quality,6,issue
@@ -3545,7 +3557,7 @@ csl-corrections,413,Daily Corrections - 2026-09-28,open,2026-09-29T03:32:47Z,,gi
 csl-corrections,414,Daily Corrections - 2026-09-30,open,2026-10-01T03:24:21Z,,github-actions,daily-corrections,,0,issue
 csl-corrections,415,fix(hooks): exec bit on .githooks (644 hooks abort spawn),closed,2026-10-01T08:11:53Z,2026-10-01T08:12:07Z,gasyoun,,,0,PR
 csl-corrections,416,Daily Corrections - 2026-10-01,open,2026-10-02T03:25:06Z,,github-actions,daily-corrections,,0,issue
-csl-corrections,417,Sanskrit Questions for Andhrabharati (Part-8),open,2026-10-02T17:08:38Z,,aumsanskrit,question,,13,issue
+csl-corrections,417,Sanskrit Questions for Andhrabharati (Part-8),open,2026-10-02T17:08:38Z,,aumsanskrit,question,,22,issue
 csl-corrections,418,Daily Corrections - 2026-10-02,open,2026-10-03T03:09:27Z,,github-actions,daily-corrections,,0,issue
 csl-corrections,419,guards: wire the post-checkout branch-switch guard (GTD 0MS),closed,2026-10-03T13:01:51Z,2026-10-12T20:17:17Z,gasyoun,,,0,PR
 csl-corrections,420,Daily Corrections - 2026-10-03,open,2026-10-04T03:37:40Z,,github-actions,daily-corrections,,0,issue
@@ -3585,6 +3597,14 @@ csl-corrections,453,Daily Corrections - 2026-11-02,open,2026-11-03T04:47:13Z,,gi
 csl-corrections,454,Daily Corrections - 2026-11-05,open,2026-11-06T04:29:36Z,,github-actions,daily-corrections,,0,issue
 csl-corrections,455,Daily Corrections - 2026-11-06,open,2026-11-07T03:56:33Z,,github-actions,daily-corrections,,0,issue
 csl-corrections,456,Guard cd against failure at 3 sites (shellcheck SC2164),closed,2026-11-07T05:14:23Z,2026-11-07T05:14:26Z,gasyoun,,,0,PR
+csl-corrections,457,Daily Corrections - 2026-11-09,open,2026-11-10T05:28:12Z,,github-actions,daily-corrections,,0,issue
+csl-corrections,458,Daily Corrections - 2026-11-10,open,2026-11-11T03:58:34Z,,github-actions,daily-corrections,,0,issue
+csl-corrections,459,add weekly OSSF Scorecard workflow (badge publish),closed,2026-11-11T19:06:16Z,2026-11-11T19:09:09Z,gasyoun,,,0,PR
+csl-corrections,460,Daily Corrections - 2026-11-11,open,2026-11-12T05:09:15Z,,github-actions,daily-corrections,,0,issue
+csl-corrections,461,Revert H3885 e-mail masking; restore addresses in cfr_ab + daily,closed,2026-11-12T14:13:32Z,2026-11-12T14:30:25Z,gasyoun,,,0,PR
+csl-corrections,462,Nightly bug hunt 13.11.2026 — findings report + CHANGELOG,closed,2026-11-13T00:21:56Z,2026-11-13T00:22:14Z,gasyoun,,,0,PR
+csl-corrections,463,fix(guard): shared-main-tree pre-commit now blocks on macOS/Linux (bughunt HIGH-1),closed,2026-11-13T00:25:43Z,2026-11-13T00:25:48Z,gasyoun,,,0,PR
+csl-corrections,464,Daily Corrections - 2026-11-13,open,2026-11-14T04:21:04Z,,github-actions,daily-corrections,,0,issue
 csl-devanagari,1,MW72 questions,closed,2021-09-02T18:53:28Z,2021-09-03T04:57:55Z,drdhaval2785,enhancement|minor,,27,issue
 csl-devanagari,2,LAN issues,open,2021-09-02T19:14:06Z,,drdhaval2785,question|trivial|domain:transcoding,Community,5,issue
 csl-devanagari,3,CAE issues,open,2021-09-02T19:16:32Z,,drdhaval2785,enhancement|minor|domain:transcoding,User Experience,5,issue
@@ -3641,7 +3661,7 @@ csl-devanagari,53,fix: repair 1 broken link(s) (link audit),closed,2026-08-04T12
 csl-devanagari,54,"add the pre-push silent-revert guard (H2280/H2289, Uprava#1516)",closed,2026-08-04T18:08:01Z,2026-08-06T16:49:01Z,gasyoun,,,0,PR
 csl-devanagari,55,chore(agents): regenerate AGENTS.md org-context block (H2331),closed,2026-08-07T05:34:02Z,2026-08-07T05:40:58Z,gasyoun,,,0,PR
 csl-devanagari,56,docs: regenerate AGENTS.md generated-block (H2757 / H2694 routing),closed,2026-08-14T18:21:38Z,2026-08-14T18:21:42Z,gasyoun,,,0,PR
-csl-devanagari,57,docs(H2820): refresh CLAUDE.md (what/run/don't) + regen AGENTS twin,open,2026-08-16T16:01:19Z,,gasyoun,,,0,PR
+csl-devanagari,57,docs(H2820): refresh CLAUDE.md (what/run/don't) + regen AGENTS twin,closed,2026-08-16T16:01:19Z,2026-11-15T15:38:15Z,gasyoun,,,0,PR
 csl-devanagari,58,add the pre-push silent-revert guard + CRLF-in-blob gate (H2280/H2289/H2301),closed,2026-08-17T04:11:12Z,2026-08-17T04:21:30Z,gasyoun,,,0,PR
 csl-devanagari,59,add the pre-push silent-revert guard + CRLF-in-blob gate (H2280/H2289/H2301),closed,2026-08-17T04:51:17Z,2026-08-17T04:58:00Z,gasyoun,,,0,PR
 csl-devanagari,60,add the pre-push silent-revert guard + CRLF-in-blob gate (H2280/H2289/H2301),closed,2026-08-17T05:42:36Z,2026-08-17T05:49:20Z,gasyoun,,,0,PR
@@ -3649,7 +3669,7 @@ csl-devanagari,61,docs: refresh CLAUDE.md dated header and how-to-run (H3041),cl
 csl-devanagari,62,add the pre-push silent-revert guard + CRLF-in-blob gate (H2280/H2289/H2301),closed,2026-09-08T04:45:24Z,2026-09-08T04:59:10Z,gasyoun,,,0,PR
 csl-devanagari,63,add the pre-push silent-revert guard + CRLF-in-blob gate (H2280/H2289/H2301),closed,2026-09-08T05:07:05Z,2026-09-08T05:07:36Z,gasyoun,,,0,PR
 csl-devanagari,64,add the pre-push silent-revert guard + CRLF-in-blob gate (H2280/H2289/H2301),closed,2026-09-08T05:39:38Z,2026-09-08T05:40:09Z,gasyoun,,,0,PR
-csl-devanagari,65,chore(memory): scaffold committed memory store (H4547),open,2026-09-15T05:03:44Z,,gasyoun,,,0,PR
+csl-devanagari,65,chore(memory): scaffold committed memory store (H4547),closed,2026-09-15T05:03:44Z,2026-11-15T15:44:36Z,gasyoun,,,0,PR
 csl-devanagari,66,"scripts/redo_all.sh: pull main (master branch is gone), guard cd",closed,2026-09-15T05:48:31Z,2026-09-15T06:17:34Z,gasyoun,,,0,PR
 csl-devanagari,67,docs: note redo_all.sh stops if the csl-orig pull fails,closed,2026-09-15T06:38:07Z,2026-09-15T06:38:53Z,gasyoun,,,0,PR
 csl-devanagari,68,chore: add .github/CODEOWNERS (default @gasyoun),closed,2026-09-20T06:54:31Z,2026-09-20T06:54:34Z,gasyoun,,,0,PR
@@ -3657,7 +3677,7 @@ csl-devanagari,69,fix(hooks): exec bit on .githooks (644 hooks abort spawn),clos
 csl-devanagari,70,h5537: bare except: -> except Exception with line-number logging,open,2026-10-01T09:23:24Z,,gasyoun,,,0,PR
 csl-devanagari,71,h5537: bare except: -> except Exception with line-number logging (parseheadline.py),closed,2026-10-01T09:58:49Z,2026-10-01T10:03:24Z,gasyoun,,,0,PR
 csl-devanagari,72,guards: wire the post-checkout branch-switch guard (GTD 0MS),open,2026-10-03T13:01:54Z,,gasyoun,,,0,PR
-csl-devanagari,73,"docs(claude): H5961 agent-docs SLA refresh — header bump 06-10, .githooks wiring + CODEOWNERS drift",open,2026-10-06T10:35:37Z,,gasyoun,,,0,PR
+csl-devanagari,73,"docs(claude): H5961 agent-docs SLA refresh — header bump 06-10, .githooks wiring + CODEOWNERS drift",closed,2026-10-06T10:35:37Z,2026-11-15T15:47:29Z,gasyoun,,,0,PR
 csl-devanagari,74,docs(claude): H5885 agent-docs SLA truth refresh 09-10,closed,2026-10-09T08:19:03Z,2026-10-09T08:19:06Z,gasyoun,,,0,PR
 csl-devanagari,75,add changelog duplicate-entry guard (CI),closed,2026-10-24T16:10:54Z,2026-10-24T16:23:31Z,gasyoun,,,0,PR
 csl-devanagari,76,build(deps): bump actions/checkout from 5.1.0 to 7.0.1,closed,2026-10-26T05:21:21Z,2026-10-26T05:27:05Z,dependabot[bot],major|dependencies|github_actions,,0,PR
@@ -3667,6 +3687,7 @@ csl-devanagari,79,"add SECURITY.md (security policy, org contact)",open,2026-10-
 csl-devanagari,80,docs(bughunt): pin GTD residual ids Y0A–Y0D into the hunt report,closed,2026-10-26T17:31:42Z,2026-10-26T17:33:22Z,gasyoun,,,0,PR
 csl-devanagari,81,"fix(bughunt): close findings 1, 4, 5, 6 — live main-tree guard, in-place metaline conversion, escaped marks, CI tests",closed,2026-10-26T19:07:18Z,2026-10-26T19:09:41Z,gasyoun,,,0,PR
 csl-devanagari,82,"fix(bughunt): re-vendor the stale-base checker, gate the csl-orig carry script (findings 2, 3)",closed,2026-10-26T20:27:47Z,2026-10-26T20:29:33Z,gasyoun,,,0,PR
+csl-devanagari,83,docs(claude): YE4 agent-docs SLA refresh (STALE_15d → fresh),closed,2026-11-14T04:51:36Z,2026-11-14T04:51:46Z,gasyoun,,,0,PR
 csl-doc,1,Intro,open,2018-11-24T01:49:16Z,,funderburkjim,trivial|documentation|domain:rendering,Developer Experience,2,issue
 csl-doc,2,SCH-Nachtraege regenerated on each commit,closed,2019-06-27T05:41:40Z,2021-08-07T07:08:40Z,drdhaval2785,bug,,16,issue
 csl-doc,3,Recover 'contributor' link,closed,2019-11-08T01:14:55Z,2019-11-08T01:15:04Z,funderburkjim,bug|minor,,0,issue
@@ -3721,6 +3742,12 @@ csl-homepage,28,Add corpus umbrella DOI to the How-to-cite reference,closed,2026
 csl-homepage,29,"Restore umbrella DOI in How-to-cite generators + cite-guard CI (fixes PR #28 regression, H7887)",closed,2026-11-08T15:11:01Z,2026-11-08T15:13:00Z,gasyoun,,,0,PR
 csl-homepage,30,"Standalone uni-koeln Cite & DOI page (cite.html), guarded (H7887)",closed,2026-11-08T15:12:11Z,2026-11-08T15:14:28Z,gasyoun,,,0,PR
 csl-homepage,31,H7901: og:/twitter: meta on the generated homepage,closed,2026-11-09T09:12:57Z,2026-11-09T09:18:02Z,gasyoun,,,0,PR
+csl-homepage,32,add weekly OSSF Scorecard workflow (badge publish),closed,2026-11-11T19:06:16Z,2026-11-11T19:09:17Z,gasyoun,,,0,PR
+csl-homepage,33,H8170: curated mixed news widget after the dictionary catalogue,closed,2026-11-12T15:48:56Z,2026-11-12T16:19:19Z,gasyoun,,,0,PR
+csl-homepage,34,H8170: fail-closed draft check + real calendar date validation (review nits),closed,2026-11-12T17:06:48Z,2026-11-12T17:08:16Z,gasyoun,,,0,PR
+csl-homepage,35,Deploy: Latest-news widget + DOI cite block (one checkout pull + regenerate),open,2026-11-12T19:23:27Z,,gasyoun,minor|infrastructure,,1,issue
+csl-homepage,36,H8170: before-state live screenshots for deploy issue #35,closed,2026-11-12T19:41:34Z,2026-11-12T19:43:11Z,gasyoun,,,0,PR
+csl-homepage,37,H8215: hybrid Latest news — editorial block + dictionary-update rows,closed,2026-11-13T17:03:54Z,2026-11-13T17:35:40Z,gasyoun,,,0,PR
 csl-inflect,1,csl-inflect status,open,2019-11-28T01:43:55Z,,funderburkjim,documentation|trivial|domain:morphology,Developer Experience,4,issue
 csl-inflect,2,declension of mahat,closed,2019-11-29T21:15:56Z,2020-12-13T20:46:28Z,funderburkjim,enhancement|minor,,3,issue
 csl-inflect,3,csl-inflect status #2,open,2019-12-13T20:51:37Z,,funderburkjim,documentation|trivial|domain:morphology,Developer Experience,12,issue
@@ -3761,6 +3788,7 @@ csl-inflect,37,Bump actions/setup-python from 6.3.0 to 7.1.0,closed,2026-10-26T0
 csl-inflect,38,Bump actions/checkout from 5.1.0 to 7.0.1,closed,2026-10-26T05:21:38Z,2026-10-26T05:35:17Z,dependabot[bot],major|dependencies|github_actions,,0,PR
 csl-inflect,39,"add SECURITY.md (security policy, org contact)",closed,2026-10-26T17:03:41Z,2026-10-26T23:40:35Z,gasyoun,,,0,PR
 csl-inflect,40,H7901: og:/twitter: meta on the lookup page (vendored og_meta.php),closed,2026-11-09T09:12:55Z,2026-11-09T09:18:07Z,gasyoun,,,0,PR
+csl-inflect,41,add weekly OSSF Scorecard workflow (badge publish),closed,2026-11-11T19:06:17Z,2026-11-11T19:09:23Z,gasyoun,,,0,PR
 csl-json,1,YAT json comparable to that of ashtadhyayi.com,closed,2021-08-16T05:11:17Z,2021-08-16T06:20:38Z,drdhaval2785,,,2,issue
 csl-json,2,Shabdakalpadruma quotation marks,closed,2021-08-16T05:55:27Z,2021-08-16T15:32:45Z,drdhaval2785,,,1,issue
 csl-json,3,MWE showing different pattern,closed,2021-08-16T06:19:58Z,2021-08-16T15:32:53Z,drdhaval2785,,,1,issue
@@ -3794,6 +3822,7 @@ csl-kale,10,ci: add Semgrep SAST (CodeQL has no PHP analyzer) (H3488),closed,202
 csl-kale,11,XSS: disp/main.js renders raw XHR response into innerHTML (pattern fix: csl-apidev#171),open,2026-10-01T10:18:31Z,,gasyoun,bug,,0,issue
 csl-kale,12,"add SECURITY.md (security policy, org contact)",closed,2026-10-26T17:03:43Z,2026-10-26T23:40:47Z,gasyoun,,,0,PR
 csl-kale,13,H7901: og:/twitter: meta on the disp landing (vendored og_meta.php),closed,2026-11-09T09:12:52Z,2026-11-09T09:18:11Z,gasyoun,,,0,PR
+csl-kale,14,add weekly OSSF Scorecard workflow (badge publish),closed,2026-11-11T19:06:21Z,2026-11-11T19:09:26Z,gasyoun,,,0,PR
 csl-ldev,1,Update 16386.txt,closed,2021-10-07T15:29:39Z,2021-10-07T16:09:00Z,vvasuki,enhancement|minor,,0,PR
 csl-ldev,2,Update 34929.txt,closed,2021-11-10T13:11:51Z,2022-01-31T04:00:42Z,vvasuki,enhancement|minor,,0,PR
 csl-ldev,3,Update 12531.txt,closed,2022-02-13T17:38:22Z,2022-02-17T11:09:43Z,vvasuki,enhancement|minor,,0,PR
@@ -4165,12 +4194,22 @@ csl-observatory,302,chore(deps): bump actions/setup-python from 5 to 7,closed,20
 csl-observatory,303,feat(readme-visuals): per-dictionary progress SVG renderer + committed mw card (H7720),closed,2026-11-05T09:27:41Z,2026-11-05T09:30:37Z,gasyoun,,,0,PR
 csl-observatory,304,H6257 - Чхандас-профиль корпуса: детектор метра и распределение,open,2026-11-06T17:33:03Z,,gasyoun,handoff|backfill|ready-for-agent,,0,issue
 csl-observatory,305,docs(roadmap): RH7 done — three org descriptions applied live,closed,2026-11-08T10:10:13Z,2026-11-08T10:11:01Z,gasyoun,,,0,PR
-csl-observatory,306,Contributor identity worksheet: confirm your name / ORCID / public-display consent (SC1),open,2026-11-08T10:55:47Z,,gasyoun,,,0,issue
+csl-observatory,306,Contributor identity worksheet: confirm your name / ORCID / public-display consent (SC1),open,2026-11-08T10:55:47Z,,gasyoun,,,1,issue
 csl-observatory,307,feat(identity): lead row confirmed (ORCID + consent); consent request posted as issue #306,closed,2026-11-08T10:56:48Z,2026-11-08T10:57:06Z,gasyoun,,,0,PR
 csl-observatory,308,fix(refresh): issues fetch survives the App-token PRs-only pathology,closed,2026-11-08T11:40:54Z,2026-11-08T11:48:55Z,gasyoun,,,0,PR
 csl-observatory,309,data: monthly refresh (2026-11-08),closed,2026-11-08T11:57:02Z,2026-11-08T12:13:22Z,github-actions[bot],,,0,PR
 csl-observatory,310,docs(quotes): sync registered headline surfaces to the 2026-11-08 snapshot,closed,2026-11-08T13:35:33Z,2026-11-08T13:37:49Z,gasyoun,,,0,PR
 csl-observatory,311,csl-observatory: surface the code-release Zenodo DOI (README + CITATION.cff) (H7887),closed,2026-11-09T05:54:15Z,2026-11-09T07:12:50Z,gasyoun,,,0,PR
+csl-observatory,312,data: monthly refresh (2026-11-09),closed,2026-11-09T10:56:03Z,2026-11-14T15:08:49Z,github-actions[bot],,,0,PR
+csl-observatory,313,H7947: re-base gold_component onto location axis; retire legacy gold_component_2 stragglers,closed,2026-11-09T20:24:52Z,2026-11-09T20:25:44Z,gasyoun,,,0,PR
+csl-observatory,314,H7947 follow-up: fix changelog queue fragment shape,closed,2026-11-09T20:26:13Z,2026-11-09T20:27:06Z,gasyoun,,,0,PR
+csl-observatory,315,add changelog duplicate-entry guard (CI),closed,2026-11-10T07:53:00Z,2026-11-10T07:55:36Z,gasyoun,,,0,PR
+csl-observatory,316,H7963: pyfloor sync + deployed-copy drift gate CI,closed,2026-11-10T08:20:20Z,2026-11-10T08:23:41Z,gasyoun,,,0,PR
+csl-observatory,317,H7963: fix deployed-copy-drift CI auth (cross-org checkout),closed,2026-11-10T08:29:24Z,2026-11-10T08:31:14Z,gasyoun,,,0,PR
+csl-observatory,318,add weekly OSSF Scorecard workflow (badge publish),closed,2026-11-11T19:06:21Z,2026-11-11T19:09:30Z,gasyoun,,,0,PR
+csl-observatory,319,docs(claude): YCP agent-docs SLA refresh (13-11-2026),closed,2026-11-13T07:15:56Z,2026-11-13T07:16:42Z,gasyoun,,,0,PR
+csl-observatory,320,chore(deps): bump actions/checkout from 4 to 7,open,2026-11-16T05:15:49Z,,dependabot[bot],major|dependencies|github_actions,,0,PR
+csl-observatory,321,fix(changelog_queue): fold 3 malformed fragments into the H4466 bullet shape (H8367),closed,2026-11-16T06:05:00Z,2026-11-16T06:05:21Z,gasyoun,,,0,PR
 csl-orig,1,AP and PD data,closed,2019-07-23T13:37:39Z,2020-12-29T02:35:30Z,drdhaval2785,doc|question|minor,Structured Data,14,issue
 csl-orig,2,why hwextra here,closed,2019-09-10T00:20:23Z,2019-12-23T09:34:49Z,funderburkjim,text-correction|minor,Digitization Quality,7,issue
 csl-orig,3,digitization update workflow,closed,2019-09-10T00:42:05Z,2023-12-15T15:21:52Z,funderburkjim,doc|question|minor,Structured Data,6,issue
@@ -7048,7 +7087,7 @@ csl-orig,2875,"A35 review fixes: Wilson artifact decomposition, WIL root fold, k
 csl-orig,2876,"A35: ACL Anthology related-work, ISCLS venue, submission-readiness memo",closed,2026-07-04T16:10:44Z,2026-07-04T16:10:52Z,gasyoun,,,0,PR
 csl-orig,2877,docs(README): refresh to accurate project overview (H548),closed,2026-07-10T21:54:28Z,2026-07-10T22:30:02Z,gasyoun,,,0,PR
 csl-orig,2878,docs: self-contained correction operator manual + metadoc (H515),closed,2026-07-11T08:16:20Z,2026-07-11T08:16:38Z,gasyoun,,,0,PR
-csl-orig,2879,"corrections: 2026-07 batch (ap90, 15 changes, 2 issues) + repo docs",open,2026-07-12T19:45:18Z,,gasyoun,,,0,PR
+csl-orig,2879,"corrections: 2026-07 batch (ap90, 15 changes, 2 issues) + repo docs",closed,2026-07-12T19:45:18Z,2026-11-15T15:03:42Z,gasyoun,,,0,PR
 csl-orig,2880,Bump actions/setup-python from 6 to 7,closed,2026-07-20T05:12:50Z,2026-07-20T05:13:50Z,dependabot[bot],major|dependencies|github_actions,,0,PR
 csl-orig,2881,[feature] single interface for online requests,closed,2026-07-28T14:00:53Z,2026-07-30T03:17:05Z,dhammagift,feature,,6,issue
 csl-orig,2882,MW accent in non-Vedic texts and gender error,open,2026-07-29T11:49:51Z,,drdhaval2785,,,0,issue
@@ -7080,6 +7119,9 @@ csl-orig,2907,bughunt: nightly csl-orig code hunt 06-11-2026 — 0 HIGH / 1 MEDI
 csl-orig,2908,Guard cd against failure at 1 sites (shellcheck SC2164),closed,2026-11-07T05:15:18Z,2026-11-07T07:29:35Z,gasyoun,,,0,PR
 csl-orig,2909,Bump actions/setup-python from 5 to 7,closed,2026-11-09T05:16:15Z,2026-11-09T05:17:29Z,dependabot[bot],major|dependencies|github_actions,,0,PR
 csl-orig,2910,Bump actions/checkout from 4 to 7,closed,2026-11-09T05:16:23Z,2026-11-09T05:19:56Z,dependabot[bot],major|dependencies|github_actions,,0,PR
+csl-orig,2911,"refactor(H7961): dedup-clean update tooling (updateByLine twins, transcoder dead code) under a parity fence",closed,2026-11-10T09:08:28Z,2026-11-11T04:26:03Z,gasyoun,,,0,PR
+csl-orig,2912,Ci publish dictionaries manifest,closed,2026-11-12T14:59:29Z,2026-11-12T15:02:38Z,drdhaval2785,,,0,PR
+csl-orig,2913,ci(regenerate-hwnorm1-sqlite): publish when dictionaries.json is missing,closed,2026-11-12T17:42:11Z,2026-11-12T17:43:10Z,drdhaval2785,,,0,PR
 csl-pywork,1,templates and constants,closed,2019-09-17T15:43:27Z,2020-12-13T20:02:57Z,funderburkjim,documentation|code-cleanup,,12,issue
 csl-pywork,2,Progress,closed,2019-09-30T01:36:19Z,2020-12-13T03:58:08Z,funderburkjim,documentation|code-cleanup|trivial,,3,issue
 csl-pywork,3,Ubuntu installation problems,closed,2019-09-30T01:55:58Z,2021-08-07T06:26:11Z,funderburkjim,documentation,February 2021,22,issue
@@ -7188,6 +7230,7 @@ csl-pywork,105,"docs: measured test-runtime correction (~6s -> ~37s, H7274 wave)
 csl-pywork,106,Nightly bug hunt report 02-11-2026 (0 HIGH / 2 MEDIUM / 3 LOW),closed,2026-11-02T00:12:35Z,2026-11-02T00:12:43Z,gasyoun,,,0,PR
 csl-pywork,107,"docs(readme): truth pass 05-11-2026 — live issue snapshot, vendored-scripts pointer fix",closed,2026-11-04T21:15:24Z,2026-11-04T21:34:52Z,gasyoun,,,0,PR
 csl-pywork,108,Guard cd against failure at 10 sites (shellcheck SC2164),closed,2026-11-07T05:16:11Z,2026-11-07T05:16:14Z,gasyoun,,,0,PR
+csl-pywork,109,"Fix generation of armh, fri and pe under fail-closed checks",closed,2026-11-12T14:43:30Z,2026-11-12T14:45:03Z,drdhaval2785,,,0,PR
 csl-sqlite,1,[docs-pass] Add documentation files (infrastructure),open,2026-05-22T13:55:43Z,,gasyoun,documentation|minor,Developer Experience,1,issue
 csl-sqlite,2,build(deps): bump dependabot/fetch-metadata from 2 to 3,closed,2026-06-14T04:51:17Z,2026-06-14T04:52:02Z,dependabot[bot],major|dependencies|github_actions,,0,PR
 csl-sqlite,3,docs(README): describe actual dual-channel SQLite distribution (H549),closed,2026-07-10T23:47:05Z,2026-07-11T06:14:20Z,gasyoun,,,0,PR
@@ -7196,6 +7239,7 @@ csl-sqlite,5,add .gitattributes (eol=lf line-ending policy),closed,2026-07-27T17
 csl-sqlite,6,add/upgrade .pre-commit-config.yaml (mixed-line-ending lf),closed,2026-07-31T11:08:55Z,2026-07-31T12:33:13Z,gasyoun,,,0,PR
 csl-sqlite,7,Add umbrella DOI: README badge + CITATION.cff + .zenodo.json,closed,2026-10-05T07:34:38Z,2026-10-05T07:46:42Z,gasyoun,,,0,PR
 csl-sqlite,8,"add SECURITY.md (security policy, org contact)",closed,2026-10-26T17:03:57Z,2026-10-27T00:04:01Z,gasyoun,,,0,PR
+csl-sqlite,9,Add manifest generator,closed,2026-11-12T14:58:21Z,2026-11-12T14:58:45Z,drdhaval2785,,,0,PR
 csl-websanlexicon,1,check_inventory,open,2019-07-29T18:23:00Z,,funderburkjim,documentation,,6,issue
 csl-websanlexicon,2,fonts directory,closed,2019-07-29T23:56:00Z,2020-12-12T16:11:08Z,funderburkjim,enhancement|minor,,12,issue
 csl-websanlexicon,3,Delete unneeded  files in sqlite subdirectory of dictionary web directories,closed,2019-07-30T23:08:12Z,2019-08-01T00:48:33Z,funderburkjim,documentation|trivial,,8,issue
@@ -7369,6 +7413,13 @@ csl-websanlexicon,170,Guard cd against failure at 1 sites (shellcheck SC2164),cl
 csl-websanlexicon,171,H7901: autogenerated og:/twitter: meta on all generated web surfaces (canonical og_meta.php),closed,2026-11-09T09:11:14Z,2026-11-09T09:18:16Z,gasyoun,,,0,PR
 csl-websanlexicon,172,H7901 doc sweep: og_meta sync contract on README/CLAUDE/manual + apidev_copy.sh line,closed,2026-11-09T10:21:07Z,2026-11-09T10:26:51Z,gasyoun,,,0,PR
 csl-websanlexicon,173,H7901 document sweep receipt (exit gate: 0 missing),closed,2026-11-09T10:46:41Z,2026-11-09T10:50:17Z,gasyoun,,,0,PR
+csl-websanlexicon,174,H7958: Port webbackup/ Python 2 build scripts to Python 3 + widen G88 parse gate,closed,2026-11-10T05:16:14Z,2026-11-10T07:27:02Z,gasyoun,,,0,PR
+csl-websanlexicon,175,H7948: extract basicadjust link-target table without changing rendered URLs,closed,2026-11-10T05:20:06Z,2026-11-10T05:34:45Z,gasyoun,,,0,PR
+csl-websanlexicon,176,fix: ṚV. PRĀT. roman rule regex delimiter — roman links render again (H7962),closed,2026-11-10T08:22:48Z,2026-11-10T08:45:22Z,gasyoun,,,0,PR
+csl-websanlexicon,177,"H7960: crash-safe removedup.py — atomic write, explicit except, argv CLI, smoke lane",closed,2026-11-10T08:34:26Z,2026-11-15T15:00:15Z,gasyoun,,,0,PR
+csl-websanlexicon,178,docs: fix fuzz factor count in golden README (H7962 review nit),closed,2026-11-10T09:03:19Z,2026-11-10T09:49:02Z,gasyoun,,,0,PR
+csl-websanlexicon,179,fix(ci): quote step name containing ': ' — workflow was invalid YAML since H7958,closed,2026-11-10T09:50:13Z,2026-11-10T09:53:42Z,gasyoun,,,0,PR
+csl-websanlexicon,180,add weekly OSSF Scorecard workflow (badge publish),closed,2026-11-11T19:06:23Z,2026-11-11T19:09:38Z,gasyoun,,,0,PR
 csl-westergaard,1,व्रथादयः -> क्र्यादयः,open,2025-08-18T17:30:34Z,,shenyileirob,enhancement|minor|domain:metadata,User Experience,0,issue
 csl-westergaard,2,build(deps): bump dependabot/fetch-metadata from 2 to 3,closed,2026-06-14T04:49:46Z,2026-06-14T04:51:08Z,dependabot[bot],major|dependencies|github_actions,,0,PR
 csl-westergaard,3,security: prevent reflected XSS via page parameter (disp/index.php),closed,2026-06-14T08:52:23Z,2026-06-14T09:02:55Z,gasyoun,,,0,PR
@@ -7381,6 +7432,7 @@ csl-westergaard,9,fix(security): explicit Content-Type + nosniff on serveimg.php
 csl-westergaard,10,XSS: disp/main.js renders raw XHR response into innerHTML (pattern fix: csl-apidev#171),open,2026-10-01T10:18:47Z,,gasyoun,bug,,0,issue
 csl-westergaard,11,"add SECURITY.md (security policy, org contact)",closed,2026-10-26T17:04:00Z,2026-10-27T00:04:15Z,gasyoun,,,0,PR
 csl-westergaard,12,H7901: og:/twitter: meta on the disp landing (vendored og_meta.php),closed,2026-11-09T09:12:46Z,2026-11-09T09:18:21Z,gasyoun,,,0,PR
+csl-westergaard,13,add weekly OSSF Scorecard workflow (badge publish),closed,2026-11-11T19:06:27Z,2026-11-11T19:09:41Z,gasyoun,,,0,PR
 csl-whitroot,1,build(deps): bump dependabot/fetch-metadata from 2 to 3,closed,2026-06-14T04:48:54Z,2026-06-14T04:50:04Z,dependabot[bot],major|dependencies|github_actions,,0,PR
 csl-whitroot,2,security: prevent reflected XSS via page parameter (disp/index.php),closed,2026-06-14T08:52:40Z,2026-06-14T09:03:10Z,gasyoun,,,0,PR
 csl-whitroot,3,docs: refresh README to reflect actual repo state (H549),closed,2026-07-11T00:15:00Z,2026-07-11T06:14:09Z,gasyoun,,,0,PR
@@ -7392,6 +7444,7 @@ csl-whitroot,8,ci: add Semgrep SAST (CodeQL has no PHP analyzer) (H3488),closed,
 csl-whitroot,9,XSS: disp/main.js renders raw XHR response into innerHTML (pattern fix: csl-apidev#171),open,2026-10-01T10:18:57Z,,gasyoun,bug,,0,issue
 csl-whitroot,10,"add SECURITY.md (security policy, org contact)",closed,2026-10-26T17:04:00Z,2026-10-27T00:04:22Z,gasyoun,,,0,PR
 csl-whitroot,11,H7901: og:/twitter: meta on the disp landing (vendored og_meta.php),closed,2026-11-09T09:12:49Z,2026-11-09T09:18:26Z,gasyoun,,,0,PR
+csl-whitroot,12,add weekly OSSF Scorecard workflow (badge publish),closed,2026-11-11T19:06:28Z,2026-11-11T19:09:45Z,gasyoun,,,0,PR
 hwnorm1,1,'rXX' notes,open,2015-11-22T04:50:42Z,,drdhaval2785,bug|minor|domain:normalization,Data Quality,9,issue
 hwnorm1,2,Statistics,open,2015-11-22T17:14:28Z,,drdhaval2785,enhancement|minor|domain:normalization,User Experience,3,issue
 hwnorm1,3,Normalization steps,open,2015-11-24T10:41:21Z,,drdhaval2785,enhancement|minor|domain:normalization,User Experience,7,issue
