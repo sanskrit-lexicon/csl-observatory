@@ -7,6 +7,10 @@ All notable changes to this repository are documented here, following [Keep a Ch
 ## [Unreleased]
 <!-- entries land in changelog_queue/ -- appended via tools/changelog_queue_consume.py, consumed by cut_release.py at release-cut (H3355); direct bullets here are hook-blocked -->
 
+## [1.15.4] - 2026-11-18
+
+- **CLLG page parity gate — CI enforcement + dated re-snapshot cadence (H8430)**
+  **The derived public comparison page can no longer drift from its canonical internal doc unnoticed.** [`.github/workflows/cllg-page-parity.yml`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/.github/workflows/cllg-page-parity.yml) runs `scripts/gen_cllg_comparison_page.py --selftest` (four seeded positive/negative controls: redaction fires, mixed evidence keeps only the public half, missing markers fail closed, ragged table fails closed) and `--check` (byte-for-byte parity of `observatory/site/src/cllg-comparison.md` against `docs/CLLG_VS_SANSKRIT_ESTATE_18-11-2026.md`) on every push to main, every PR and by dispatch — stdlib Python only, no network, no data refresh. This closes the enforcement gap H8426 explicitly deferred to this adoption move. [`docs/CLLG_RE-SNAPSHOT_CADENCE_18-11-2026.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/CLLG_RE-SNAPSHOT_CADENCE_18-11-2026.md) records the refresh procedure: the frozen snapshot is never edited in place, a refresh is a new dated document with a re-snapshot note, the generator's pinned source/target/date literals move in the same PR, and the CI gate must be green before merge. Verified locally: `--selftest` 4/4 PASS, `--check` OK (8,254 bytes).
 ## [1.15.3] - 2026-11-18
 
 - **CLLG vs the open-Sanskrit estate — dated strategy scorecard + derived public page (H8426)**
