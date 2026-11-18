@@ -1,0 +1,523 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Dataset",
+  "name": "CSL Observatory org-metrics snapshot",
+  "identifier": "csl-obs/org-metrics@1.0.0",
+  "description": "Org-level GitHub/CDSL maintenance metrics (repositories, issues, PRs, commits, contributors, taxonomy and reach) for the sanskrit-lexicon organisation. Offline, reproducible from the committed CSVs.",
+  "snapshot": "csl-obs/org@1.0.0",
+  "asOf": "2026-11-16T10:39:19.028524",
+  "license": "CC BY 4.0",
+  "url": "https://sanskrit-lexicon.github.io/csl-observatory/",
+  "sameAs": "https://doi.org/10.5281/zenodo.22853817",
+  "variableMeasured": [
+    "activity",
+    "catalog",
+    "citation coverage",
+    "correction sustainability",
+    "dictionary etymology",
+    "dictionary inventory",
+    "external reach",
+    "github snapshot",
+    "issue lifecycle",
+    "issue taxonomy",
+    "repository health",
+    "repository metadata",
+    "stats-census",
+    "sustainability",
+    "workflow reliability"
+  ],
+  "distribution": [
+    {
+      "@type": "FileObject",
+      "name": "bus_factor.csv",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/bus_factor.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": 2647,
+      "sha256": "5bc04d801accee6745333862ee269afe18fd03f7480703def2a2ce49097fafc1",
+      "description": "Repository-level contributor concentration and bus-factor indicators."
+    },
+    {
+      "@type": "FileObject",
+      "name": "citation_sweep.csv",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/citation_sweep.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": 158875,
+      "sha256": "508e4ddc1ec94df1bd641a68c9079a9e918eead4d19d55518dc0972700ebc04f",
+      "description": "Systematic OpenAlex citation sweep: one row per swept work, with its confidence tier (C1 confirmed / C2 probable / C3 print-dictionary envelope / C0 rejected), what it attests (digital resource vs print dictionary), the probe or citation-graph anchor that matched it, and whether it is an external or project-internal record."
+    },
+    {
+      "@type": "FileObject",
+      "name": "commits.csv",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/commits.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": 1996370,
+      "sha256": "f52322b00875f3824a901fc17433f9184fd2bb7567e84e24fc796f284b497dfd",
+      "description": "Slim commit snapshot by repository, SHA, date, author, and subject."
+    },
+    {
+      "@type": "FileObject",
+      "name": "contributor_identity.csv",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/contributor_identity.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": 1176,
+      "sha256": "0d0577369204545db10127f3ebc62d23946a1f632b8a875a1b75d9e1c86da179",
+      "description": "Maintainer-reviewed contributor identity and ORCID readiness summary."
+    },
+    {
+      "@type": "FileObject",
+      "name": "contributor_repo_heatmap.csv",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/contributor_repo_heatmap.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": 6822,
+      "sha256": "bcd47eb1da37dfb2a52b0cb6beb9d4ac93d088f5a0e13c7891f00b59c6c949a1",
+      "description": "Contributor x repository commit-count heatmap, top 15 contributors per repo."
+    },
+    {
+      "@type": "FileObject",
+      "name": "contributor_specialisation.csv",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/contributor_specialisation.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": 1201,
+      "sha256": "04395781f9b7e4ee36c39c8833dd6e08e0b61a4156d4defd0f42c5c8f745e478",
+      "description": "Per-login specialisation metrics (normalized entropy, dominant-family commit share)."
+    },
+    {
+      "@type": "FileObject",
+      "name": "contributors.csv",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/contributors.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": 8370,
+      "sha256": "916b6bf48221b46604ba77902e3cb33d4602dc536319ce20a4caceef6c7294c4",
+      "description": "Repository/login contribution counts from the GitHub snapshot."
+    },
+    {
+      "@type": "FileObject",
+      "name": "data_index.csv",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/data_index.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": 25315,
+      "sha256": "9792c506f23d166585d4e7e9eafeb1326ad6cb8117913fff7fc51e58b2e272c2",
+      "description": "Catalog of public CSV/JSON data files with source scripts, generated dates, and caveats."
+    },
+    {
+      "@type": "FileObject",
+      "name": "dict_record_counts.csv",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/dict_record_counts.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": 934,
+      "sha256": "5ac9a3e1f049503b9ce5327c92d5890a587971160916ee37281834c68c0b8a06",
+      "description": "<L> record count and distinct-<k1> headword count for every csl-orig v02 dictionary — the physical denominator and cap for population estimates."
+    },
+    {
+      "@type": "FileObject",
+      "name": "etymology_marker_preliminary.csv",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/etymology_marker_preliminary.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": 307,
+      "sha256": "21f20a3be5dc5367d930ddb1b0ba50ff5ad11c233125fe15387a12fa86798ae7",
+      "description": "Preliminary per-dictionary etymology-style scan: Nirukta-marker share (WIL), Western comparative-form (cf.) counts (MW/MW72), and verbal-subentry counts (AP/AP90)."
+    },
+    {
+      "@type": "FileObject",
+      "name": "external_reach.csv",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/external_reach.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": 18049,
+      "sha256": "4011066a150b71509c817c0b11ee9abec7ebf14b7c343adbff71aa78daac9eaf",
+      "description": "Scholar-framed external reach: GitHub stars/forks, 14-day clone/view traffic for core repos, downstream dependents (known consumers + code-search hits), and the citations found by the systematic OpenAlex sweep, in one tidy long table."
+    },
+    {
+      "@type": "FileObject",
+      "name": "headword_key_collisions.csv",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/headword_key_collisions.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": 7763,
+      "sha256": "ad5f479f807485d4895ff450ce744eaabb3712087f82b5ca09e9ebc16384f25a",
+      "description": "Per dictionary x linkage level: how often the record-linkage key merges two distinct records of that dictionary — the ambiguity cost of each level."
+    },
+    {
+      "@type": "FileObject",
+      "name": "issue_lifecycle_backlog.csv",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/issue_lifecycle_backlog.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": 144,
+      "sha256": "012b137896a8f89675509a1b5ad0bac05e2e9ae8c98508507bfa581667de14fb",
+      "description": "Backlog age pyramid: currently-open issues bucketed by age, with silent (zero-comment) counts."
+    },
+    {
+      "@type": "FileObject",
+      "name": "issue_lifecycle_close.csv",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/issue_lifecycle_close.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": 545,
+      "sha256": "c09b225b85a7fb344fb13c7418dbeba7cd0f5605906b7eb5ea935136fbc3ac15",
+      "description": "Time-to-close percentiles (median/p25/p75/p90) per closing year, issues and PRs separately."
+    },
+    {
+      "@type": "FileObject",
+      "name": "issue_lifecycle_repo.csv",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/issue_lifecycle_repo.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": 1884,
+      "sha256": "ec17668111ea5a87222820a287587080265cd19165985b023f480d4dbc109bbc",
+      "description": "Per-repository responsiveness: open/closed counts, close-latency percentiles, open-age median, silent-open count."
+    },
+    {
+      "@type": "FileObject",
+      "name": "issue_lifecycle_survival.csv",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/issue_lifecycle_survival.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": 1696,
+      "sha256": "60c513b7453aff0d4d7142554db35793d3d46891232ddd66d005c242fabe8b63",
+      "description": "Cohort survival: % of each opening-year cohort still open after 30/90/180/365/730/1460 days."
+    },
+    {
+      "@type": "FileObject",
+      "name": "issue_typology_annual.csv",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/issue_typology_annual.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": 2722,
+      "sha256": "0a26f4b43f585ad4ebe946b230b37afacc51a658745e4a4a487ace348b1592a1",
+      "description": "Annual issue counts by taxonomy/type label."
+    },
+    {
+      "@type": "FileObject",
+      "name": "issues.csv",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/issues.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": 1068637,
+      "sha256": "1a484e429778abcd7999e19c6308f6394c91383b0ff76b5f891394bfb616e9d5",
+      "description": "Slim issue and pull-request snapshot used by issue and taxonomy dashboards."
+    },
+    {
+      "@type": "FileObject",
+      "name": "manifest.json",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/manifest.json",
+      "encodingFormat": "application/json",
+      "contentSize": 756,
+      "sha256": "e397d28708c7ab7ee97e2c407d73492781cfebe401a71ce5313f9bb03b1870fc",
+      "description": "Snapshot manifest with data row counts and the current observatory snapshot date."
+    },
+    {
+      "@type": "FileObject",
+      "name": "obs_q_annual.csv",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/obs_q_annual.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": 390,
+      "sha256": "71d1e51def909f7b261c27371f42e57b85c0aae5741d1246ac53f7fabb14a875",
+      "description": "Annual correction-sustainability aggregates by commits, correctors, and leading contributor share."
+    },
+    {
+      "@type": "FileObject",
+      "name": "obs_q_latency.csv",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/obs_q_latency.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": 16971,
+      "sha256": "24f1a6e4480cf2191ec12397bd2fff004ac590b564ba5e3413403b9f4c92a3c6",
+      "description": "Correction issue open/close latency inputs."
+    },
+    {
+      "@type": "FileObject",
+      "name": "obs_q_per_dict.csv",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/obs_q_per_dict.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": 1715,
+      "sha256": "6b07b9495bdd81548b6beaad3a89ea7a13b502427b7e649522e21f0c2bb44809",
+      "description": "Per-dictionary correction-sustainability aggregates."
+    },
+    {
+      "@type": "FileObject",
+      "name": "people_summary.csv",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/people_summary.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": 1131,
+      "sha256": "745b2b5b855bf83bd13b894addfa65e7a662bcef9e912de6dc21321c7924d083",
+      "description": "Curated people summary used by contributor dashboards."
+    },
+    {
+      "@type": "FileObject",
+      "name": "pulls.csv",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/pulls.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": 374680,
+      "sha256": "71c94b7ea7f236d76ca39c1fd0d49f5714400a10face394da67fa43fb9758f18",
+      "description": "Enriched pull-request snapshot: merged_at + merged boolean (merged vs closed-unmerged), head branch, agent body-marker boolean — the input to scripts/agent_lane.py."
+    },
+    {
+      "@type": "FileObject",
+      "name": "pulls.meta.json",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/pulls.meta.json",
+      "encodingFormat": "application/json",
+      "contentSize": 390,
+      "sha256": "a5a149996ba4154ad8b2348c29bc7f4d6e0ec2e63ebc9be96aed36156f8fc2ea",
+      "description": "Fetch provenance for pulls.csv: GitHub REST endpoint, row count at fetch time and the fetcher's warnings."
+    },
+    {
+      "@type": "FileObject",
+      "name": "pwg_citation_coverage.json",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/pwg_citation_coverage.json",
+      "encodingFormat": "application/json",
+      "contentSize": 727,
+      "sha256": "c7452204e4c014f7f18bf1e1f27da629945cbedd8881e0e2a23cca2c652c3131",
+      "description": "Summary of PWG <ls> citation link coverage: scan vs HTML targets over the translated article subset."
+    },
+    {
+      "@type": "FileObject",
+      "name": "pwg_scan_index.csv",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/pwg_scan_index.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": 7061,
+      "sha256": "f0f337969a0c2cc98dcdda587cf8d3e25766236f1d4aed6f7e8a881b093dfdf1",
+      "description": "One row per PWG/PWK literary source in the 2025-2026 volunteer scan-indexing campaign: status, citation count, pages, volunteer, dates, scan directory."
+    },
+    {
+      "@type": "FileObject",
+      "name": "pwg_scan_index_summary.json",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/pwg_scan_index_summary.json",
+      "encodingFormat": "application/json",
+      "contentSize": 3188,
+      "sha256": "1659137c165307e4f919f1357ea751d967e0869767b136b7af0ee681d85ba5c5",
+      "description": "Campaign aggregates behind the Scan-Index Campaign page: status distribution, per-volunteer throughput, monthly velocity, and the ranked unclaimed backlog."
+    },
+    {
+      "@type": "FileObject",
+      "name": "repo_health.csv",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/repo_health.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": 4362,
+      "sha256": "bcc5fc6b424259999b6d0ea0e8de28fc8b386d6305270d71eff8b696d728e812",
+      "description": "Repository health flags for license, branch, activity, description, and cleanup risk."
+    },
+    {
+      "@type": "FileObject",
+      "name": "repo_metadata.csv",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/repo_metadata.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": 12286,
+      "sha256": "a17dc1e86872e8560123741fa8986211a6c69cff5809d668729645bb198778ce",
+      "description": "Repository metadata-completeness snapshot for README, citation, templates, workflows, releases, Dependabot, and CodeQL."
+    },
+    {
+      "@type": "FileObject",
+      "name": "repos.csv",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/repos.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": 15242,
+      "sha256": "06178e85cd74a6be9a1bb761f65d299aeb4812deacc03b21fd9f936ce9a0688f",
+      "description": "Repository inventory with description, language, size, dates, branch, license, and archive state."
+    },
+    {
+      "@type": "FileObject",
+      "name": "stats_census_register.csv",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/stats_census_register.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": 10639,
+      "sha256": "830ecfa8786f5acdeb6e1ff5b1dacd4048304e11aa2601e7e51c50781b5dfd1b",
+      "description": "Org-wide statistics census register (H817/ROADMAP_STATISTICS_ORG_CENSUS): one row per Part-0 headline statistic across the 7 data layers (lexicon text, morphology, corpus, translation, roots, repo-meta, product), each with its computed value, done/partial/not_started status, owning repo, and source link."
+    },
+    {
+      "@type": "FileObject",
+      "name": "taxonomy_adoption.csv",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/taxonomy_adoption.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": 789,
+      "sha256": "14cb8cf7e6ccc4b08775c11edb99d7f51278658c33d2828d4adf50ba4f64d989",
+      "description": "Annual taxonomy adoption metrics: typed, one-type, severity, milestone, and conformance rates."
+    },
+    {
+      "@type": "FileObject",
+      "name": "timeseries_annual.csv",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/timeseries_annual.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": 10564,
+      "sha256": "d3b9977b00620e7099570e50278e15cca356fd61496617dd2be6924ea778e00d",
+      "description": "Annual repository activity aggregates for issues, pull requests, commits, and authors."
+    },
+    {
+      "@type": "FileObject",
+      "name": "timeseries_monthly.csv",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/timeseries_monthly.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": 51279,
+      "sha256": "0cc4f2afc9d100322a2cc4061733df9b9492f38baafdeb9934ec07b7a1cc2323",
+      "description": "Monthly repository activity aggregates for issues, pull requests, commits, and authors."
+    },
+    {
+      "@type": "FileObject",
+      "name": "velocity_timeline.csv",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/velocity_timeline.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": 568,
+      "sha256": "7c1fb6342473ad4d8725bb47274a8edb996fbb8fe563098e727faa85dd826faa",
+      "description": "Organization-level yearly velocity and backlog summary."
+    },
+    {
+      "@type": "FileObject",
+      "name": "wil_nirukta_tokens.csv",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/wil_nirukta_tokens.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": 392,
+      "sha256": "ae49237ae1e4b4bb045dabe872e2ca6696002a0788635d3cf4931e1178995d9d",
+      "description": "Top 16 Nirukta-style abbreviation tokens (aff., c., neg., fem., ...) found in WIL's .E. (etymology) blocks, with occurrence counts and glosses."
+    },
+    {
+      "@type": "FileObject",
+      "name": "workflow_health.csv",
+      "contentUrl": "https://github.com/sanskrit-lexicon/csl-observatory/raw/main/observatory/site/src/data/workflow_health.csv",
+      "encodingFormat": "text/csv",
+      "contentSize": 23900,
+      "sha256": "90201cdfa0b7f0d3cdaf4956a8818036a6fc4db23ee0a22babf431ffc6f9409b",
+      "description": "Repository workflow/release reliability baseline covering workflows, scheduled jobs, artifact refresh, Dependabot, CodeQL, and releases."
+    }
+  ],
+  "exclusions": [
+    {
+      "file": "correction_events.csv",
+      "reason": "OBS-T release — separate concept DOI 10.5281/zenodo.21346705"
+    },
+    {
+      "file": "correction_events.meta.json",
+      "reason": "OBS-T release — separate concept DOI 10.5281/zenodo.21346705"
+    },
+    {
+      "file": "correction_events_all.csv",
+      "reason": "OBS-T release — separate concept DOI 10.5281/zenodo.21346705"
+    },
+    {
+      "file": "correction_events_final.csv",
+      "reason": "OBS-T release — separate concept DOI 10.5281/zenodo.21346705"
+    },
+    {
+      "file": "correction_events_final.meta.json",
+      "reason": "OBS-T release — separate concept DOI 10.5281/zenodo.21346705"
+    },
+    {
+      "file": "correction_events_git.csv",
+      "reason": "OBS-T release — separate concept DOI 10.5281/zenodo.21346705"
+    },
+    {
+      "file": "correction_events_git.meta.json",
+      "reason": "OBS-T release — separate concept DOI 10.5281/zenodo.21346705"
+    },
+    {
+      "file": "correction_events_release.csv",
+      "reason": "OBS-T release manifest — separate data release"
+    },
+    {
+      "file": "correction_events_release.meta.json",
+      "reason": "OBS-T release manifest — separate data release"
+    },
+    {
+      "file": "correction_events_typed.csv",
+      "reason": "OBS-T release — separate concept DOI 10.5281/zenodo.21346705"
+    },
+    {
+      "file": "correction_events_typed.meta.json",
+      "reason": "OBS-T release — separate concept DOI 10.5281/zenodo.21346705"
+    },
+    {
+      "file": "corrector_recapture.csv",
+      "reason": "OBS-T recapture layer — separate data release"
+    },
+    {
+      "file": "error_recapture.csv",
+      "reason": "OBS-T recapture layer — separate data release"
+    },
+    {
+      "file": "error_recapture_calibrated.csv",
+      "reason": "OBS-T recapture layer — separate data release"
+    },
+    {
+      "file": "error_recapture_lowm.csv",
+      "reason": "OBS-T recapture layer — separate data release"
+    },
+    {
+      "file": "event_id_crosswalk_v1.csv",
+      "reason": "OBS-T corpus — 62 MB LFS object, digest pinned elsewhere"
+    },
+    {
+      "file": "linkage_ladder.csv",
+      "reason": "OBS-T recapture layer — separate data release"
+    },
+    {
+      "file": "obs_phase3_rigor.json",
+      "reason": "OBS-T analysis layer — separate data release"
+    },
+    {
+      "file": "obs_t_baselines.json",
+      "reason": "OBS-T analysis layer — separate data release"
+    },
+    {
+      "file": "obs_t_baselines_field_metrics.json",
+      "reason": "OBS-T analysis layer — separate data release"
+    },
+    {
+      "file": "obs_t_campaigns.csv",
+      "reason": "OBS-T analysis layer — separate data release"
+    },
+    {
+      "file": "obs_t_component.csv",
+      "reason": "OBS-T analysis layer — separate data release"
+    },
+    {
+      "file": "obs_t_confusion.csv",
+      "reason": "OBS-T analysis layer — separate data release"
+    },
+    {
+      "file": "obs_t_corrector.csv",
+      "reason": "OBS-T analysis layer — separate data release"
+    },
+    {
+      "file": "obs_t_corrector_component.csv",
+      "reason": "OBS-T analysis layer — separate data release"
+    },
+    {
+      "file": "obs_t_crosswalk.csv",
+      "reason": "OBS-T analysis layer — separate data release"
+    },
+    {
+      "file": "obs_t_dict.csv",
+      "reason": "OBS-T analysis layer — separate data release"
+    },
+    {
+      "file": "obs_t_rigor.json",
+      "reason": "OBS-T analysis layer — separate data release"
+    },
+    {
+      "file": "obs_t_robustness.json",
+      "reason": "OBS-T analysis layer — separate data release"
+    },
+    {
+      "file": "obs_t_silver.json",
+      "reason": "OBS-T analysis layer — separate data release"
+    },
+    {
+      "file": "obs_t_summary.json",
+      "reason": "OBS-T analysis layer — separate data release"
+    },
+    {
+      "file": "obs_t_timeline.csv",
+      "reason": "OBS-T analysis layer — separate data release"
+    },
+    {
+      "file": "obs_t_timeline_monthly.csv",
+      "reason": "OBS-T analysis layer — separate data release"
+    },
+    {
+      "file": "obs_t_translit.json",
+      "reason": "OBS-T analysis layer — separate data release"
+    },
+    {
+      "file": "obst_bench_v1.json",
+      "reason": "OBS-T analysis layer — separate data release"
+    },
+    {
+      "file": "recapture_sensitivity.csv",
+      "reason": "OBS-T recapture layer — separate data release"
+    },
+    {
+      "file": "recapture_sensitivity_controls.csv",
+      "reason": "OBS-T recapture layer — separate data release"
+    }
+  ]
+}
