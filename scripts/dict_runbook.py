@@ -44,17 +44,20 @@ PROJ_MWS = {"Dictionary to Book": 5, "Digitization Quality": 6,
 
 # Auto-generated log issues (e.g. "Daily Corrections - <date>") are not
 # triageable work — exclude them from the checks (parity with tooling_runbook.py).
-EXEMPT_LABELS = {"daily-corrections"}
+# 18-11-2026: the paper-privacy sweep is the same shape — a detector writes a
+# dated quarantine finding (MWS #313) that never gets dictionary taxonomy.
+EXEMPT_LABELS = {"daily-corrections", "paper-priv-violation"}
 
-# Auto-created handoff execution-tracking issues (org-wide H### convention,
-# e.g. "H1380 — execution started") carry only the "handoff" label and no
-# editorial content — they are process stubs, not triageable dictionary
-# work, so they never get a type/severity/milestone (H1736 finding: MWS
-# #243/#250/#254/#256). Unlike EXEMPT_LABELS this only applies when
-# "handoff" is the issue's *sole* label — an issue combining "handoff" with
-# real taxonomy labels (e.g. MWS #242) is genuine triaged work and still
-# gets audited.
-BARE_TRACKING_LABELS = {"handoff"}
+# Auto-created handoff / backlog-mirror issues are process stubs, not
+# triageable dictionary work, so they never get a type/severity/milestone:
+#   - handoff execution trackers ("H1380 — execution started", H1736: MWS
+#     #243/#250/#254/#256)
+#   - backfill mirrors of the Uprava handoff backlog (H7777, e.g. MWS #327
+#     labeled handoff,backfill,ready-for-agent)
+# Unlike EXEMPT_LABELS this only applies when EVERY label is a process label —
+# an issue combining one of these with real taxonomy labels (e.g. MWS #242
+# content-enhancement,medium,handoff) is genuine triaged work and stays audited.
+BARE_TRACKING_LABELS = {"handoff", "backfill", "ready-for-agent"}
 
 
 def is_exempt(labels):
@@ -168,8 +171,8 @@ def issue(repo, number, check_project=True):
     if x is None:
         raise SystemExit(f"ERROR: {repo}#{number} not found (or is a PR)")
     it = _node(x)
-    if set(it["labels"]) & EXEMPT_LABELS:
-        print(f"{repo}#{number}: exempt (auto-log) — not triaged")
+    if is_exempt(it["labels"]):
+        print(f"{repo}#{number}: exempt (generator/process) — not triaged")
         return True
     g = gaps(it, repo, check_project=check_project)
     if g:
