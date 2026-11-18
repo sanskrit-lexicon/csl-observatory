@@ -28,6 +28,6 @@ A recommendation derived from a scorecard deficit, expressed as an executable un
 
 ## Snapshot
 
-A dated, frozen view of an external source used in a comparison. A snapshot is superseded by a new dated document, never silently updated in place.
+A dated, frozen view of an external source used in a comparison. A snapshot is superseded by a new dated document, never silently updated in place. The refresh procedure for the CLLG comparison is recorded in [`CLLG_RE-SNAPSHOT_CADENCE_18-11-2026.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/docs/CLLG_RE-SNAPSHOT_CADENCE_18-11-2026.md).
 
 _Dr. Mārcis Gasūns_
