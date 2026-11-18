@@ -1,0 +1,41 @@
+name: CLLG page parity gate
+
+# H8430: the public comparison page is DERIVED, not hand-written. A doc edit
+# that is not followed by `gen_cllg_comparison_page.py --emit` leaves the page
+# stale; this gate refuses that drift on every push and PR. --selftest carries
+# the seeded positive/negative controls, so the gate is not one that only ever
+# passes. Cheap by design: stdlib Python only, no network, no data refresh.
+# Procedure for a future re-snapshot:
+#   docs/CLLG_RE-SNAPSHOT_CADENCE_18-11-2026.md
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  cllg-page-parity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      # Redaction + fail-closed controls: an internal-only path must never reach
+      # the public page, and a broken doc must refuse rather than emit a partial page.
+      - name: Generator self-test (seeded positive/negative controls)
+        run: python scripts/gen_cllg_comparison_page.py --selftest
+
+      # The acceptance command: the committed public page must re-derive byte-for-byte
+      # from the canonical internal doc. Exit 1 names the stale target and tells the
+      # maintainer to re-run --emit in the same PR as the doc change.
+      - name: Public page must match the canonical doc
+        run: python scripts/gen_cllg_comparison_page.py --check
