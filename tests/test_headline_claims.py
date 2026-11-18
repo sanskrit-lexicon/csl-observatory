@@ -87,9 +87,14 @@ def test_mutated_number_is_refused_and_named(mutate):
 
 def test_unregistered_number_is_refused(mutate):
     """A hand-typed headline number on a swept surface, with no claim behind it."""
+    # The injected values must be CURRENT live tokens (they are what the
+    # uncovered guard sweeps); literals here rotted on the 2026-11-18 landing.
+    live = hc.snapshots(ROOT)[hc.LIVE_ID].values
+    injected = (f'same population as the {live["repos"]} repos, '
+                f'{live["commits"]:,} commits, and the 76 repositories')
     mutate('article/00-report-narrative.md',
            'same population as the 76 repositories',
-           'same population as the 86 repos, 13,810 commits, and the 76 repositories')
+           injected)
     findings = hc.check(ROOT)
     assert any(f.claim_id == 'uncovered-number' and f.file == 'article/00-report-narrative.md'
                for f in findings), findings
@@ -134,7 +139,12 @@ def test_check_cli_exit_codes():
     victim = ROOT / 'STATUS.md'
     original = victim.read_text(encoding='utf-8')
     try:
-        mutated = original.replace('| Issues + PRs (lifetime) | 10,039 |',
+        # Anchor on whatever STATUS currently quotes (the refresh rewrites it
+        # weekly); perturb to a value no snapshot will ever hold.
+        m = re.search(r'\| Issues \+ PRs \(lifetime\) \| (?P<v>[\d,]+) \|', original)
+        assert m, 'STATUS row anchor rotted'
+        current = m.group('v')
+        mutated = original.replace(f'| Issues + PRs (lifetime) | {current} |',
                                    '| Issues + PRs (lifetime) | 7,006 |', 1)
         assert mutated != original
         victim.write_text(mutated, encoding='utf-8')
