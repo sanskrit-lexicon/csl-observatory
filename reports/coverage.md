@@ -6,6 +6,7 @@ This report tracks **dictionary entry counts** (counted as `<L>` markers in sour
 
 | Repo | License | Issues triaged |
 |---|---|:---:|
+| .github | *(none)* |  |
 | ACC | CC-BY-SA-4.0 | ✓ |
 | AMAR | GPL-2.0 | ✓ |
 | AP | CC-BY-SA-4.0 | ✓ |
@@ -75,6 +76,7 @@ This report tracks **dictionary entry counts** (counted as `<L>` markers in sour
 | csl-santam | NOASSERTION |  |
 | csl-sqlite | GPL-3.0 | ✓ |
 | csl-standards | CC-BY-SA-4.0 |  |
+| csl-usage | *(none)* |  |
 | csl-websanlexicon | GPL-3.0 |  |
 | csl-westergaard | GPL-3.0 | ✓ |
 | csl-whitroot | GPL-3.0 |  |
@@ -82,6 +84,7 @@ This report tracks **dictionary entry counts** (counted as `<L>` markers in sour
 | hwnorm2 | GPL-3.0 | ✓ |
 | literarysource | CC-BY-SA-4.0 | ✓ |
 | mw-dev | CC-BY-SA-4.0 | ✓ |
+| pwg-ru-lod | *(none)* |  |
 | rvlinks | GPL-3.0 | ✓ |
 | sanskrit-fonts | CC-BY-SA-4.0 |  |
 | sanskrit-lexicon.github.io | CC-BY-SA-4.0 |  |
@@ -89,5 +92,5 @@ This report tracks **dictionary entry counts** (counted as `<L>` markers in sour
 | temp_corrections_ap90 | *(none)* |  |
 | temp_corrections_mw | *(none)* |  |
 
-**License coverage**: 78 of 82 repos declare a license; **4 are unlicensed** (FAIR R1.1 violation, addressed by runbook Phase 11).
+**License coverage**: 78 of 85 repos declare a license; **7 are unlicensed** (FAIR R1.1 violation, addressed by runbook Phase 11).
 
