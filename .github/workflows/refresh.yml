@@ -20,6 +20,11 @@ on:
 
 permissions:
   contents: write
+  # pull-requests: write — the snapshot commit ships through a bot branch + PR
+  # (main is protected since ~12-10-2026; a direct `git push` to main gets
+  # GH006 and has killed every scheduled run since). Same shape as
+  # refresh-observatory.yml's proven commit step.
+  pull-requests: write
 
 concurrency:
   # Shared with refresh-observatory.yml: both pipelines commit data/, so they
@@ -44,8 +49,18 @@ jobs:
 
       - name: Pull data
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Org-project access needs a PAT: the default GITHUB_TOKEN cannot
+          # read org-level projectV2 items ("Resource not accessible by
+          # integration"), which silently zeroed total_project_board_items in
+          # every snapshot since 2026-09-24. Same PAT contract as
+          # tooling-audit.yml: read:project + repo scopes, stored as the
+          # TOOLING_AUDIT_TOKEN repo secret.
+          GH_TOKEN: ${{ secrets.TOOLING_AUDIT_TOKEN }}
         run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::error::TOOLING_AUDIT_TOKEN secret not set. Add a PAT with read:project + repo scopes (same contract as tooling-audit.yml)."
+            exit 1
+          fi
           python scripts/pull_data.py
           # Recover commit history for large repos the GraphQL endpoint can't
           # serve (csl-orig, cologne-stardict, VCP, hwnorm1, ...) via a bare
@@ -59,6 +74,8 @@ jobs:
           python scripts/update_headline_numbers.py --check
 
       - name: Commit if changed
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -67,5 +84,14 @@ jobs:
             echo "No changes."
           else
             git commit -m "data: weekly snapshot $(date +%Y-%m-%d)"
-            git push
+            # main is protected (GH006 on every scheduled run since
+            # 2026-10-12): ship the snapshot through a bot-owned branch and a
+            # PR that auto-merges once required checks pass — the same flow
+            # refresh-observatory.yml has used green since 2026-11-08 (#309).
+            BRANCH="bot/legacy-live-snapshot"
+            git push -f origin "HEAD:$BRANCH"
+            gh pr create --head "$BRANCH" --base main \
+              --title "data: weekly snapshot $(date +%Y-%m-%d)" \
+              --body "Automated live-API snapshot (legacy refresh.yml pipeline, H7879). Auto-merges when required checks pass." 2>/dev/null || true
+            gh pr merge "$BRANCH" --squash --auto || gh pr merge "$BRANCH" --squash
           fi
