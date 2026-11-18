@@ -1,6 +1,6 @@
 # Snapshot divergence — the repo quotes two organisation snapshots as one truth
 
-_Created: 20-10-2026 (H7122) · Last updated: 08-11-2026 (offline row synced to the 2026-11-08 refresh)_
+_Created: 20-10-2026 (H7122) · Last updated: 18-11-2026 (offline row synced to the 2026-11-16 refresh)_
 
 **Finding.** `csl-observatory` publishes two independent snapshots of the
 `sanskrit-lexicon` organisation. They are produced by different pipelines, they
@@ -21,10 +21,10 @@ and re-derived by `python scripts/update_headline_numbers.py --check`.
 | Snapshot | As of | Repos | Issues | PRs | Issues+PRs | Commits | Human contributors |
 |---|---|---|---|---|---|---|---|
 | `csl-obs/org-live@1.0.0` | 2026-09-28 | 86 | 7,877 | 2,162 | 10,039 | 13,810 | 72 |
-| `csl-obs/org@1.0.0` | 2026-11-08 | 77 | 5,738 | 1,794 | 7,532 | 13,855 | 16 |
+| `csl-obs/org@1.0.0` | 2026-11-16 | 77 | 5,744 | 1,841 | 7,585 | 13,942 | 16 |
 
-**Delta** (live − offline): 9 repositories, 2,139 issues, 389 PRs, 2,528
-issues+PRs, −24 commits, 56 contributors. (The commit delta turned negative on
+**Delta** (live − offline): 9 repositories, 2,133 issues, 321 PRs, 2,454
+issues+PRs, −132 commits, 56 contributors. (The commit delta turned negative on
 the 2026-11-08 refresh: the offline snapshot now includes newer commits than
 the 2026-09-28 live capture.)
 
