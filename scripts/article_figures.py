@@ -19,12 +19,6 @@ import sys
 from datetime import date
 from pathlib import Path
 
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.dates as mdates
-import matplotlib.pyplot as plt
-from matplotlib.patches import Patch
-
 sys.stdout.reconfigure(encoding='utf-8')
 sys.stderr.reconfigure(encoding='utf-8')
 
@@ -102,6 +96,16 @@ def load_contributor_spans():
 
 
 def main():
+    # matplotlib is a figure-generation dependency, not an import-time one:
+    # keep it lazy so `test_script_imports_cleanly` (H5800) can import this
+    # entry point on hosts/CI images without it. use('Agg') must precede pyplot.
+    import matplotlib
+
+    matplotlib.use('Agg')
+    import matplotlib.dates as mdates
+    import matplotlib.pyplot as plt
+    from matplotlib.patches import Patch
+
     rows = load_contributor_spans()
     n = len(rows)
     print(f'{n} commit-author identities (post-alias-merge):')
