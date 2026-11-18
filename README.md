@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24055368.svg)](https://doi.org/10.5281/zenodo.24055368)
 
-_Created: 07-05-2026 · Last updated: 05-11-2026_
+_Created: 07-05-2026 · Last updated: 18-11-2026_
 
 > **Live observatory for 13 years of Cologne Digital Sanskrit Lexicon (CDSL).**
 > Tracking 86 repos, 10,039 issues+PRs, 13,810 commits, and 72 contributors since 2014 — snapshot csl-obs/org-live@1.0.0, as of 2026-09-28.
@@ -51,7 +51,7 @@ The headline picture is in **[`reports/synthesis.md`](https://github.com/sanskri
 | Contributor concentration | [`bus_factor.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/bus_factor.md) | Core trio = 98.5%; 63/77 repos have bus factor 1; Gini 0.822 |
 | Repository health | [`repo_health.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/repo_health.md) | 6/77 repos with no license (RH3 temp/archive candidates); 1/77 default to `master`; 68/77 fully clean |
 | Issue-taxonomy adoption | [`taxonomy_adoption.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/taxonomy_adoption.md) | 86% typed, 64% fully conformant; 92% peak in 2025; 1,190 issues (21%) carry a stray label |
-| Velocity & health timeline | [`velocity_timeline.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/velocity_timeline.md) | 13,855 commits; peak 12 authors/yr (2026); backlog 1,743 (2025) → 847 (2026) |
+| Velocity & health timeline | [`velocity_timeline.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/velocity_timeline.md) | 13,942 commits; peak 12 authors/yr (2026); backlog 1,743 (2025) → 852 (2026) |
 | Contributor identity | [`contributor_identity.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/contributor_identity.md) | 1/16 authors have a registered ORCID |
 | **Error typology (OBS-T)** | [`obs_t_typology.md`](https://github.com/sanskrit-lexicon/csl-observatory/blob/main/reports/obs_t_typology.md) | 52,498 corrections, two axes — location (sense 52.7% · markup 17.5% · headword 17.3%) × edit-type (median edit distance 2; 63% ≤2 chars); cross-dict V=0.432 |
 
