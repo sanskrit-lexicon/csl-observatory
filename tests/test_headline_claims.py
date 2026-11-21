@@ -100,6 +100,30 @@ def test_unregistered_number_is_refused(mutate):
                for f in findings), findings
 
 
+def test_per_contributor_repo_stat_cannot_collide_with_headline_token():
+    """2026-11-21 refresh: the LIVE human count (74) equalled dependabot's
+    repos_touched_count (74), so 'across 74 repos' tripped the swept-number
+    guard and blocked the snapshot commit. The generator writes 'distinct
+    repos' so the number is not immediately followed by the trigger word;
+    pin both the generator phrasing and the guard's non-match."""
+    import render_reports  # noqa: PLC0415 — sibling module, path set at import
+
+    rendered = render_reports.render_contributors([{
+        'login': 'dependabot[bot]', 'role': 'contributor',
+        'commits_total': 336, 'repos_touched_count': 74,
+        'issues_created': 0, 'additions_total': 0, 'deletions_total': 0,
+        'commits_per_repo': {},
+    }])
+    assert 'across 74 distinct repos' in rendered, rendered
+
+    n = hc.snapshots(ROOT)[hc.LIVE_ID].values['contributors']
+    patterns = hc._headline_tokens(ROOT)
+    old = f'- **Commits**: 336 across {n} repos'
+    new = f'- **Commits**: 336 across {n} distinct repos'
+    assert any(p.search(old) for p in patterns), 'positive control rotted'
+    assert not any(p.search(new) for p in patterns), new
+
+
 def test_missing_claim_pattern_is_refused(mutate):
     """A surface rewritten so the claim no longer matches must fail, not silently pass."""
     mutate('reports/bus_factor.md',

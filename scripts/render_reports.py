@@ -147,8 +147,11 @@ def render_contributors(contributors):
             yrs = c.get("span_years")
             span = f'{sf} → {sl}' + (f' ({yrs} years)' if yrs else '')
             L.append(f'- **Active span**: {span}')
+            # "distinct repos" keeps an identity-scoped repo count from reading
+            # as an org headline "N repos" to the headline-claims swept-number
+            # guard (2026-11-21: 74 humans == dependabot's 74 repos touched).
             L.append(f'- **Commits**: {c["commits_total"]:,} '
-                     f'across {c["repos_touched_count"]} repos')
+                     f'across {c["repos_touched_count"]} distinct repos')
             L.append(f'- **Issues created**: {c["issues_created"]}')
             L.append(f'- **Lines changed**: +{c["additions_total"]:,} '
                      f'/ −{c["deletions_total"]:,}')
