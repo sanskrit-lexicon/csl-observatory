@@ -20,10 +20,10 @@ and re-derived by `python scripts/update_headline_numbers.py --check`.
 
 | Snapshot | As of | Repos | Issues | PRs | Issues+PRs | Commits | Human contributors |
 |---|---|---|---|---|---|---|---|
-| `csl-obs/org-live@1.0.0` | 2026-11-18 | 89 | 8,779 | 3,008 | 11,787 | 12,507 | 64 |
+| `csl-obs/org-live@1.0.0` | 2026-11-21 | 89 | 8,791 | 3,020 | 11,811 | 13,028 | 64 |
 | `csl-obs/org@1.0.0` | 2026-11-16 | 77 | 5,744 | 1,841 | 7,585 | 13,942 | 16 |
 
-**Delta** (live − offline): 12 repositories, 3,035 issues, 1,167 PRs, 4,202 issues+PRs, −1,435 commits, 48 contributors. (The commit delta turned negative on
+**Delta** (live − offline): 12 repositories, 3,047 issues, 1,179 PRs, 4,226 issues+PRs, −914 commits, 48 contributors. (The commit delta turned negative on
 the 2026-11-08 refresh: the offline snapshot now includes newer commits than
 the 2026-09-28 live capture.)
 
