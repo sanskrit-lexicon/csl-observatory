@@ -10,7 +10,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **ORCID**: [0000-0003-4513-884X](https://orcid.org/0000-0003-4513-884X)
 - **Affiliation**: Cologne Digital Sanskrit Dictionaries
 - **Active span**: 2014-01-14 → 2026-11-18 (13 years)
-- **Commits**: 5,137 across 80 repos
+- **Commits**: 5,137 across 80 distinct repos
 - **Issues created**: 677
 - **Lines changed**: +35,448,455 / −3,390,886
 - **Role notes**: Project organisation, documentation, Russian etymologies, accents.
@@ -24,7 +24,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **ORCID**: *(awaiting)*
 - **Affiliation**: Cologne Digital Sanskrit Dictionaries
 - **Active span**: 2014-01-15 → 2026-09-05 (13 years)
-- **Commits**: 2,940 across 54 repos
+- **Commits**: 2,940 across 54 distinct repos
 - **Issues created**: 2592
 - **Lines changed**: +48,575,716 / −4,392,576
 - **Role notes**: Primary repository maintainer; tooling and correction workflows across all dictionaries.
@@ -38,7 +38,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **ORCID**: *(awaiting)*
 - **Affiliation**: Cologne Digital Sanskrit Dictionaries
 - **Active span**: 2015-11-24 → 2026-11-12 (12 years)
-- **Commits**: 1,951 across 34 repos
+- **Commits**: 1,951 across 34 distinct repos
 - **Issues created**: 2091
 - **Lines changed**: +26,226,999 / −6,739,617
 - **Role notes**: Automation of link-splitting, index checking, AB/Cologne comparison tooling, k1k2 clash analysis.
@@ -50,7 +50,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **ORCID**: *(awaiting)*
 - **Affiliation**: Andhrabharati
 - **Active span**: 2021-05-28 → 2023-04-03 (3 years)
-- **Commits**: 25 across 3 repos
+- **Commits**: 25 across 3 distinct repos
 - **Issues created**: 90
 - **Lines changed**: +1,375,437 / −226,487
 - **Role notes**: AB version of multiple dictionaries; Greek words file; extensive issue contributions.
@@ -61,7 +61,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **GitHub**: [@maltenth](https://github.com/maltenth)
 - **Affiliation**: University of Cologne
 - **Active span**: 2021-09-26 → 2021-09-26 (1 years)
-- **Commits**: 1 across 1 repos
+- **Commits**: 1 across 1 distinct repos
 - **Issues created**: 2
 - **Lines changed**: +860 / −0
 - **Role notes**: Original digitisation of the Cologne Digital Sanskrit Dictionaries (1994–2010); bibliography work.
@@ -73,7 +73,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@drdhaval2785@gmail.com](https://github.com/drdhaval2785@gmail.com)
 - **Active span**: 2015-11-19 → 2026-11-12 (12 years)
-- **Commits**: 982 across 7 repos
+- **Commits**: 982 across 7 distinct repos
 - **Issues created**: 0
 - **Lines changed**: +0 / −0
 - **Top repositories** (by commits): `cologne-stardict` (520), `csl-devanagari` (122), `csl-json` (92), `hwnorm1` (69), `VCP` (66), `csl-ldev` (62), `csl-lnum` (51)
@@ -82,7 +82,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@drdhaval2785gmail.com](https://github.com/drdhaval2785gmail.com)
 - **Active span**: 2026-03-09 → 2026-11-15 (1 years)
-- **Commits**: 344 across 1 repos
+- **Commits**: 344 across 1 distinct repos
 - **Issues created**: 0
 - **Lines changed**: +0 / −0
 - **Top repositories** (by commits): `cologne-stardict` (344)
@@ -91,7 +91,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@dependabot[bot]](https://github.com/dependabot[bot])
 - **Active span**: 2026-05-29 → 2026-11-18 (1 years)
-- **Commits**: 335 across 75 repos
+- **Commits**: 335 across 75 distinct repos
 - **Issues created**: 0
 - **Lines changed**: +1,563 / −979
 - **Top repositories** (by commits): `csl-guides` (31), `csl-observatory` (22), `MWS` (12), `csl-apidev` (10), `PWK` (9), `GRA` (9), `AP` (9), `csl-atlas` (9)
@@ -100,7 +100,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@gasyoun@users.noreply.github.com](https://github.com/gasyoun@users.noreply.github.com)
 - **Active span**: 2026-05-15 → 2026-11-15 (1 years)
-- **Commits**: 176 across 7 repos
+- **Commits**: 176 across 7 distinct repos
 - **Issues created**: 0
 - **Lines changed**: +0 / −0
 - **Top repositories** (by commits): `csl-devanagari` (48), `VCP` (44), `csl-json` (18), `hwnorm1` (17), `csl-lnum` (17), `cologne-stardict` (16), `csl-ldev` (16)
@@ -109,7 +109,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@funderburkjim@gmail.com](https://github.com/funderburkjim@gmail.com)
 - **Active span**: 2014-02-12 → 2026-07-14 (13 years)
-- **Commits**: 125 across 3 repos
+- **Commits**: 125 across 3 distinct repos
 - **Issues created**: 0
 - **Lines changed**: +0 / −0
 - **Top repositories** (by commits): `hwnorm1` (89), `VCP` (35), `csl-devanagari` (1)
@@ -118,7 +118,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@gasyoun@ya.ru](https://github.com/gasyoun@ya.ru)
 - **Active span**: 2014-01-21 → 2026-10-03 (13 years)
-- **Commits**: 71 across 7 repos
+- **Commits**: 71 across 7 distinct repos
 - **Issues created**: 0
 - **Lines changed**: +0 / −0
 - **Top repositories** (by commits): `csl-devanagari` (36), `VCP` (14), `hwnorm1` (14), `csl-ldev` (3), `csl-lnum` (2), `cologne-stardict` (1), `csl-json` (1)
@@ -127,7 +127,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@actions@github.com](https://github.com/actions@github.com)
 - **Active span**: 2026-04-08 → 2026-08-09 (1 years)
-- **Commits**: 25 across 1 repos
+- **Commits**: 25 across 1 distinct repos
 - **Issues created**: 0
 - **Lines changed**: +0 / −0
 - **Top repositories** (by commits): `hwnorm1` (25)
@@ -136,7 +136,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@49699333+dependabot[bot]@users.noreply.github.com](https://github.com/49699333+dependabot[bot]@users.noreply.github.com)
 - **Active span**: 2026-06-02 → 2026-10-26 (1 years)
-- **Commits**: 17 across 7 repos
+- **Commits**: 17 across 7 distinct repos
 - **Issues created**: 0
 - **Lines changed**: +0 / −0
 - **Top repositories** (by commits): `VCP` (7), `csl-json` (3), `csl-devanagari` (3), `hwnorm1` (1), `cologne-stardict` (1), `csl-lnum` (1), `csl-ldev` (1)
@@ -145,7 +145,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@github-actions[bot]@users.noreply.github.com](https://github.com/github-actions[bot]@users.noreply.github.com)
 - **Active span**: 2026-03-07 → 2026-03-09 (1 years)
-- **Commits**: 2 across 1 repos
+- **Commits**: 2 across 1 distinct repos
 - **Issues created**: 0
 - **Lines changed**: +0 / −0
 - **Top repositories** (by commits): `cologne-stardict` (2)
@@ -154,7 +154,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@gasuns@gmail.com](https://github.com/gasuns@gmail.com)
 - **Active span**: 2026-11-18 → 2026-11-18 (1 years)
-- **Commits**: 2 across 2 repos
+- **Commits**: 2 across 2 distinct repos
 - **Issues created**: 0
 - **Lines changed**: +2 / −2
 - **Top repositories** (by commits): `csl-pywork` (1), `csl-corrections` (1)
@@ -163,7 +163,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@dpatel3@dialog7.rrz.uni-koeln.de](https://github.com/dpatel3@dialog7.rrz.uni-koeln.de)
 - **Active span**: 2023-12-15 → 2024-01-12 (2 years)
-- **Commits**: 2 across 1 repos
+- **Commits**: 2 across 1 distinct repos
 - **Issues created**: 0
 - **Lines changed**: +121 / −0
 - **Top repositories** (by commits): `csl-corrections` (2)
@@ -172,7 +172,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@vishvas.vasuki@gmail.com](https://github.com/vishvas.vasuki@gmail.com)
 - **Active span**: 2021-10-05 → 2021-10-07 (1 years)
-- **Commits**: 2 across 2 repos
+- **Commits**: 2 across 2 distinct repos
 - **Issues created**: 0
 - **Lines changed**: +0 / −0
 - **Top repositories** (by commits): `csl-lnum` (1), `csl-ldev` (1)
@@ -181,7 +181,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@usha.sanka@gmial.com](https://github.com/usha.sanka@gmial.com)
 - **Active span**: 2021-01-13 → 2021-01-13 (1 years)
-- **Commits**: 1 across 1 repos
+- **Commits**: 1 across 1 distinct repos
 - **Issues created**: 0
 - **Lines changed**: +1 / −1
 - **Top repositories** (by commits): `SKD` (1)
@@ -190,7 +190,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@github-actions[Cologne-Bot]@users.noreply.github.com](https://github.com/github-actions[Cologne-Bot]@users.noreply.github.com)
 - **Active span**: 2026-03-09 → 2026-03-09 (1 years)
-- **Commits**: 1 across 1 repos
+- **Commits**: 1 across 1 distinct repos
 - **Issues created**: 0
 - **Lines changed**: +0 / −0
 - **Top repositories** (by commits): `cologne-stardict` (1)
@@ -199,7 +199,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@dpatel5@dialog8.rrz.uni-koeln.de](https://github.com/dpatel5@dialog8.rrz.uni-koeln.de)
 - **Active span**: 2026-07-07 → 2026-07-07 (1 years)
-- **Commits**: 1 across 1 repos
+- **Commits**: 1 across 1 distinct repos
 - **Issues created**: 0
 - **Lines changed**: +150 / −110
 - **Top repositories** (by commits): `csl-apidev` (1)
@@ -208,7 +208,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@sumant.pes@gmail.com](https://github.com/sumant.pes@gmail.com)
 - **Active span**: 2023-05-14 → 2023-05-14 (1 years)
-- **Commits**: 1 across 1 repos
+- **Commits**: 1 across 1 distinct repos
 - **Issues created**: 0
 - **Lines changed**: +0 / −0
 - **Top repositories** (by commits): `csl-ldev` (1)
@@ -217,7 +217,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@ox-alpha@users.noreply.github.com](https://github.com/ox-alpha@users.noreply.github.com)
 - **Active span**: 2026-08-24 → 2026-08-24 (1 years)
-- **Commits**: 1 across 1 repos
+- **Commits**: 1 across 1 distinct repos
 - **Issues created**: 0
 - **Lines changed**: +16 / −0
 - **Top repositories** (by commits): `csl-observatory` (1)
@@ -226,7 +226,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@IrinaKonstant](https://github.com/IrinaKonstant)
 - **Active span**: — → —
-- **Commits**: 0 across 0 repos
+- **Commits**: 0 across 0 distinct repos
 - **Issues created**: 3
 - **Lines changed**: +0 / −0
 
@@ -234,7 +234,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@grigoriyt1](https://github.com/grigoriyt1)
 - **Active span**: — → —
-- **Commits**: 0 across 0 repos
+- **Commits**: 0 across 0 distinct repos
 - **Issues created**: 21
 - **Lines changed**: +0 / −0
 
@@ -242,7 +242,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@angalinde](https://github.com/angalinde)
 - **Active span**: — → —
-- **Commits**: 0 across 0 repos
+- **Commits**: 0 across 0 distinct repos
 - **Issues created**: 7
 - **Lines changed**: +0 / −0
 
@@ -250,7 +250,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@Azanuka2412](https://github.com/Azanuka2412)
 - **Active span**: — → —
-- **Commits**: 0 across 0 repos
+- **Commits**: 0 across 0 distinct repos
 - **Issues created**: 1
 - **Lines changed**: +0 / −0
 
@@ -258,7 +258,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@juliagabayraeva](https://github.com/juliagabayraeva)
 - **Active span**: — → —
-- **Commits**: 0 across 0 repos
+- **Commits**: 0 across 0 distinct repos
 - **Issues created**: 1
 - **Lines changed**: +0 / −0
 
@@ -266,7 +266,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@fxru](https://github.com/fxru)
 - **Active span**: — → —
-- **Commits**: 0 across 0 repos
+- **Commits**: 0 across 0 distinct repos
 - **Issues created**: 2
 - **Lines changed**: +0 / −0
 
@@ -274,7 +274,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@koleslena](https://github.com/koleslena)
 - **Active span**: — → —
-- **Commits**: 0 across 0 repos
+- **Commits**: 0 across 0 distinct repos
 - **Issues created**: 1
 - **Lines changed**: +0 / −0
 
@@ -282,7 +282,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@JuliaNikolaeva](https://github.com/JuliaNikolaeva)
 - **Active span**: — → —
-- **Commits**: 0 across 0 repos
+- **Commits**: 0 across 0 distinct repos
 - **Issues created**: 1
 - **Lines changed**: +0 / −0
 
@@ -290,7 +290,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@Shalu411](https://github.com/Shalu411)
 - **Active span**: — → —
-- **Commits**: 0 across 0 repos
+- **Commits**: 0 across 0 distinct repos
 - **Issues created**: 36
 - **Lines changed**: +0 / −0
 
@@ -298,7 +298,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@mariaiontseva](https://github.com/mariaiontseva)
 - **Active span**: — → —
-- **Commits**: 0 across 0 repos
+- **Commits**: 0 across 0 distinct repos
 - **Issues created**: 1
 - **Lines changed**: +0 / −0
 
@@ -306,7 +306,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@mahin84](https://github.com/mahin84)
 - **Active span**: — → —
-- **Commits**: 0 across 0 repos
+- **Commits**: 0 across 0 distinct repos
 - **Issues created**: 1
 - **Lines changed**: +0 / −0
 
@@ -314,7 +314,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@artforlife](https://github.com/artforlife)
 - **Active span**: — → —
-- **Commits**: 0 across 0 repos
+- **Commits**: 0 across 0 distinct repos
 - **Issues created**: 1
 - **Lines changed**: +0 / −0
 
@@ -322,7 +322,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@ghost](https://github.com/ghost)
 - **Active span**: — → —
-- **Commits**: 0 across 0 repos
+- **Commits**: 0 across 0 distinct repos
 - **Issues created**: 2
 - **Lines changed**: +0 / −0
 
@@ -330,7 +330,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@LNS1](https://github.com/LNS1)
 - **Active span**: — → —
-- **Commits**: 0 across 0 repos
+- **Commits**: 0 across 0 distinct repos
 - **Issues created**: 1
 - **Lines changed**: +0 / −0
 
@@ -339,7 +339,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **GitHub**: [@aumsanskrit](https://github.com/aumsanskrit)
 - **ORCID**: *(awaiting)*
 - **Active span**: — → —
-- **Commits**: 0 across 0 repos
+- **Commits**: 0 across 0 distinct repos
 - **Issues created**: 10
 - **Lines changed**: +0 / −0
 - **Role notes**: Issue analysis and corrections (MWS issue #190 and others).
@@ -348,7 +348,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@mediabuff](https://github.com/mediabuff)
 - **Active span**: — → —
-- **Commits**: 0 across 0 repos
+- **Commits**: 0 across 0 distinct repos
 - **Issues created**: 1
 - **Lines changed**: +0 / −0
 
@@ -356,7 +356,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@Jazirae](https://github.com/Jazirae)
 - **Active span**: — → —
-- **Commits**: 0 across 0 repos
+- **Commits**: 0 across 0 distinct repos
 - **Issues created**: 1
 - **Lines changed**: +0 / −0
 
@@ -364,7 +364,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@juhnowski](https://github.com/juhnowski)
 - **Active span**: — → —
-- **Commits**: 0 across 0 repos
+- **Commits**: 0 across 0 distinct repos
 - **Issues created**: 1
 - **Lines changed**: +0 / −0
 
@@ -372,7 +372,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@mbykov](https://github.com/mbykov)
 - **Active span**: — → —
-- **Commits**: 0 across 0 repos
+- **Commits**: 0 across 0 distinct repos
 - **Issues created**: 4
 - **Lines changed**: +0 / −0
 
@@ -380,7 +380,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@chandrasekharanr](https://github.com/chandrasekharanr)
 - **Active span**: — → —
-- **Commits**: 0 across 0 repos
+- **Commits**: 0 across 0 distinct repos
 - **Issues created**: 5
 - **Lines changed**: +0 / −0
 
@@ -388,7 +388,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@prasaadu](https://github.com/prasaadu)
 - **Active span**: — → —
-- **Commits**: 0 across 0 repos
+- **Commits**: 0 across 0 distinct repos
 - **Issues created**: 1
 - **Lines changed**: +0 / −0
 
@@ -396,7 +396,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@zaaf2](https://github.com/zaaf2)
 - **Active span**: — → —
-- **Commits**: 0 across 0 repos
+- **Commits**: 0 across 0 distinct repos
 - **Issues created**: 5
 - **Lines changed**: +0 / −0
 
@@ -404,7 +404,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@vvasuki](https://github.com/vvasuki)
 - **Active span**: — → —
-- **Commits**: 0 across 0 repos
+- **Commits**: 0 across 0 distinct repos
 - **Issues created**: 13
 - **Lines changed**: +0 / −0
 
@@ -412,7 +412,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@SergeA](https://github.com/SergeA)
 - **Active span**: — → —
-- **Commits**: 0 across 0 repos
+- **Commits**: 0 across 0 distinct repos
 - **Issues created**: 1
 - **Lines changed**: +0 / −0
 
@@ -420,7 +420,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@curiousome](https://github.com/curiousome)
 - **Active span**: — → —
-- **Commits**: 0 across 0 repos
+- **Commits**: 0 across 0 distinct repos
 - **Issues created**: 1
 - **Lines changed**: +0 / −0
 
@@ -428,7 +428,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@arvicco](https://github.com/arvicco)
 - **Active span**: — → —
-- **Commits**: 0 across 0 repos
+- **Commits**: 0 across 0 distinct repos
 - **Issues created**: 1
 - **Lines changed**: +0 / −0
 
@@ -436,7 +436,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@dhammagift](https://github.com/dhammagift)
 - **Active span**: — → —
-- **Commits**: 0 across 0 repos
+- **Commits**: 0 across 0 distinct repos
 - **Issues created**: 1
 - **Lines changed**: +0 / −0
 
@@ -444,7 +444,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@vocabulista](https://github.com/vocabulista)
 - **Active span**: — → —
-- **Commits**: 0 across 0 repos
+- **Commits**: 0 across 0 distinct repos
 - **Issues created**: 1
 - **Lines changed**: +0 / −0
 
@@ -452,7 +452,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@parjanya](https://github.com/parjanya)
 - **Active span**: — → —
-- **Commits**: 0 across 0 repos
+- **Commits**: 0 across 0 distinct repos
 - **Issues created**: 1
 - **Lines changed**: +0 / −0
 
@@ -460,7 +460,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@shenyileirob](https://github.com/shenyileirob)
 - **Active span**: — → —
-- **Commits**: 0 across 0 repos
+- **Commits**: 0 across 0 distinct repos
 - **Issues created**: 1
 - **Lines changed**: +0 / −0
 
@@ -468,7 +468,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@tempapy](https://github.com/tempapy)
 - **Active span**: — → —
-- **Commits**: 0 across 0 repos
+- **Commits**: 0 across 0 distinct repos
 - **Issues created**: 1
 - **Lines changed**: +0 / −0
 
@@ -476,7 +476,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@neeleshb](https://github.com/neeleshb)
 - **Active span**: — → —
-- **Commits**: 0 across 0 repos
+- **Commits**: 0 across 0 distinct repos
 - **Issues created**: 1
 - **Lines changed**: +0 / −0
 
@@ -484,7 +484,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@sumanthegde](https://github.com/sumanthegde)
 - **Active span**: — → —
-- **Commits**: 0 across 0 repos
+- **Commits**: 0 across 0 distinct repos
 - **Issues created**: 1
 - **Lines changed**: +0 / −0
 
@@ -492,7 +492,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@artanat](https://github.com/artanat)
 - **Active span**: — → —
-- **Commits**: 0 across 0 repos
+- **Commits**: 0 across 0 distinct repos
 - **Issues created**: 1
 - **Lines changed**: +0 / −0
 
@@ -502,7 +502,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@AnnaRybakovaT](https://github.com/AnnaRybakovaT)
 - **Active span**: 2020-12-15 → 2023-06-25 (4 years)
-- **Commits**: 68 across 9 repos
+- **Commits**: 68 across 9 distinct repos
 - **Issues created**: 0
 - **Lines changed**: +68,341 / −4,791
 - **Role notes**: Onboarding contributor 2020–2023 — Python pipeline development.
@@ -512,7 +512,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@you@example.com](https://github.com/you@example.com)
 - **Active span**: 2021-01-09 → 2021-09-03 (1 years)
-- **Commits**: 30 across 5 repos
+- **Commits**: 30 across 5 distinct repos
 - **Issues created**: 0
 - **Lines changed**: +11,395 / −8,887
 - **Role notes**: Default git config not customised; commits cannot be reliably attributed.
@@ -522,7 +522,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@DmitriSKT](https://github.com/DmitriSKT)
 - **Active span**: 2017-05-18 → 2017-11-05 (1 years)
-- **Commits**: 3 across 1 repos
+- **Commits**: 3 across 1 distinct repos
 - **Issues created**: 0
 - **Lines changed**: +33 / −2
 - **Role notes**: Identity to be confirmed.
@@ -532,7 +532,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@root@localhost.localdomain](https://github.com/root@localhost.localdomain)
 - **Active span**: 2019-10-21 → 2019-10-31 (1 years)
-- **Commits**: 3 across 2 repos
+- **Commits**: 3 across 2 distinct repos
 - **Issues created**: 0
 - **Lines changed**: +3 / −3
 - **Role notes**: Hostname-based identity; attribution unclear.
@@ -542,7 +542,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@Haqob](https://github.com/Haqob)
 - **Active span**: 2020-08-11 → 2020-09-30 (1 years)
-- **Commits**: 2 across 1 repos
+- **Commits**: 2 across 1 distinct repos
 - **Issues created**: 0
 - **Lines changed**: +2,019 / −1,593
 - **Role notes**: Identity to be confirmed.
@@ -552,7 +552,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@YevgenJohn](https://github.com/YevgenJohn)
 - **Active span**: 2019-10-31 → 2019-10-31 (1 years)
-- **Commits**: 1 across 1 repos
+- **Commits**: 1 across 1 distinct repos
 - **Issues created**: 1
 - **Lines changed**: +1 / −1
 - **Role notes**: Identity to be confirmed.
@@ -562,7 +562,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@sanskritisampada](https://github.com/sanskritisampada)
 - **Active span**: 2021-01-10 → 2021-01-10 (1 years)
-- **Commits**: 1 across 1 repos
+- **Commits**: 1 across 1 distinct repos
 - **Issues created**: 0
 - **Lines changed**: +1 / −0
 - **Role notes**: Identity to be confirmed.
@@ -573,7 +573,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **GitHub**: [@wujastyk](https://github.com/wujastyk)
 - **Affiliation**: University of Alberta
 - **Active span**: — → —
-- **Commits**: 0 across 0 repos
+- **Commits**: 0 across 0 distinct repos
 - **Issues created**: 1
 - **Lines changed**: +0 / −0
 - **Role notes**: Sanskrit scholar; ad hoc consultation.
