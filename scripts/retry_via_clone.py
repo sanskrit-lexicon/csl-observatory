@@ -27,7 +27,11 @@ ORG = 'sanskrit-lexicon'
 
 DELIM = '<<<CSL_FIELD>>>'  # safe, unlikely-to-collide field separator
 
-
+# Commit history is append-only. A material drop against the last committed
+# snapshot is a partial fetch, not new data: the 21-11 dispatches showed
+# csl-orig 2,295 -> 200 silently accepted while clone recovery never ran.
+PARTIAL_DROP_FRACTION = 0.05   # >5% fewer commits than the prior snapshot
+MIN_PARTIAL_DROP = 5           # ignore tiny pagination jitter (718 -> 717)
 
 
 def fetch_commits_via_clone(repo, max_commits=200000):
@@ -55,18 +59,16 @@ def fetch_commits_via_clone(repo, max_commits=200000):
     r = run(['git', 'clone', '--bare', '--filter=blob:none', '--no-tags',
              url, str(repo_dir)], timeout=600)
     if r.returncode != 0:
-        print(f'    ! clone failed: {(r.stderr or "")[:200]}', file=sys.stderr)
         shutil.rmtree(tmp, ignore_errors=True)
-        return []
+        raise RuntimeError(f'clone failed: {(r.stderr or "")[:200]}')
 
     fmt = DELIM.join(['%H', '%aI', '%ae', '%an', '%s'])
     r = run(['git', '--git-dir', str(repo_dir), 'log', '--all',
              f'--pretty=format:{fmt}',
              f'--max-count={max_commits}'], timeout=180)
     if r.returncode != 0:
-        print(f'    ! git log failed: {(r.stderr or "")[:200]}', file=sys.stderr)
         shutil.rmtree(tmp, ignore_errors=True)
-        return []
+        raise RuntimeError(f'git log failed: {(r.stderr or "")[:200]}')
 
     commits = []
     for line in r.stdout.splitlines():
@@ -104,21 +106,77 @@ def autodetect_failed():
     return failed
 
 
+def prior_commit_counts(data=DATA):
+    """Per-repo commit counts from the newest committed snapshot that is not
+    today's (the script writes today's snapshot at the end of a successful
+    run, so it must not become its own baseline on a second run same day)."""
+    today = datetime.date.today().isoformat()
+    for path in sorted((data / 'snapshots').glob('*/commits.json'), reverse=True):
+        if path.parent.name == today:
+            continue
+        counts = json.loads(path.read_text(encoding='utf-8'))
+        return {name: len(commits) for name, commits in counts.items()}
+    return {}
+
+
+def _material_drop(current, prior):
+    return current < prior - max(MIN_PARTIAL_DROP, int(prior * PARTIAL_DROP_FRACTION))
+
+
+def partial_coverage_repos(data=DATA):
+    """Repos whose current commit count is materially below the last committed
+    snapshot. autodetect_failed() only sees `commits == []`, so a GraphQL call
+    that paged out early (csl-orig 2,295 -> 200 on 21-11) sailed through and
+    got committed as a smaller 'live' snapshot. History is append-only: a drop
+    is a fetch defect until proven otherwise, and must be re-cloned."""
+    current = json.loads((data / 'commits.json').read_text(encoding='utf-8'))
+    prior = prior_commit_counts(data)
+    bad = {}
+    for name, old in prior.items():
+        new = len(current.get(name, []))
+        if _material_drop(new, old):
+            bad[name] = (new, old)
+    return bad
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('repos', nargs='*')
     args = ap.parse_args()
-    targets = args.repos or autodetect_failed()
+    partial = partial_coverage_repos()
+    for name, (new, old) in sorted(partial.items()):
+        print(f'  ! {name}: {new:,} commits vs {old:,} in last snapshot '
+              f'— partial fetch, re-cloning', file=sys.stderr)
+    targets = list(dict.fromkeys([*args.repos, *autodetect_failed(), *partial]))
     print(f'Targets ({len(targets)}): {targets}\n')
 
     all_commits = json.loads((DATA / 'commits.json').read_text(encoding='utf-8'))
     recovered = {}
+    failed = []
     for i, name in enumerate(targets, 1):
         print(f'[{i}/{len(targets)}] {name}', flush=True)
-        commits = fetch_commits_via_clone(name)
+        try:
+            commits = fetch_commits_via_clone(name)
+            if name in partial and _material_drop(len(commits), partial[name][1]):
+                raise RuntimeError(
+                    f'clone recovered only {len(commits):,} commits, prior snapshot '
+                    f'has {partial[name][1]:,}')
+        except RuntimeError as exc:
+            print(f'    !! {name}: {exc}', file=sys.stderr)
+            failed.append(name)
+            continue
         all_commits[name] = commits
         recovered[name] = len(commits)
         print(f'    → {len(commits):,} commits')
+
+    if failed:
+        # Fail BEFORE any write: a snapshot with a silently truncated history
+        # is worse than no snapshot (it poisons every headline number and the
+        # append-only invariant that lets the next run detect the problem).
+        print(f'FATAL: clone recovery failed for {len(failed)} repo(s): '
+              f'{", ".join(failed)}. No files written — partial coverage is '
+              f'not a valid live snapshot.', file=sys.stderr)
+        raise SystemExit(1)
 
     body = json.dumps(all_commits, indent=2, ensure_ascii=False)
     (DATA / 'commits.json').write_text(body, encoding='utf-8')
