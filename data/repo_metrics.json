@@ -1164,18 +1164,14 @@
     "archived": false,
     "created_at": "2019-07-23T06:30:32Z",
     "pushed_at": "2026-11-21T06:30:45Z",
-    "commits_count": 200,
-    "contributors_count": 3,
-    "contributors": [
-      "dependabot[bot]",
-      "drdhaval2785",
-      "gasyoun"
-    ],
+    "commits_count": 2328,
+    "contributors_count": 0,
+    "contributors": [],
     "issues_total": 2816,
     "issues_open": 31,
     "issues_closed": 2785,
-    "first_commit": "2026-06-24T17:09:06Z",
-    "last_commit": "2026-11-15T15:03:41Z",
+    "first_commit": "2019-07-20T10:20:29+05:30",
+    "last_commit": "2026-11-15T18:03:41+03:00",
     "type_counts": {
       "bug": 85,
       "question": 38,
