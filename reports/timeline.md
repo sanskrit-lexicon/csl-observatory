@@ -10,12 +10,12 @@ gantt
     dateFormat YYYY-MM-DD
     axisFormat %Y
     section Lead
-    Mārcis Gasūns :2014-01-14, 2026-11-18
+    Mārcis Gasūns :2014-01-14, 2026-11-21
     section Maintainer
     Jim Funderburk :2014-01-15, 2026-09-05
     section Core
-    Dhaval Patel :2015-11-24, 2026-11-12
-    Nagabhushana Rao :2021-05-28, 2023-04-03
+    Dhaval Patel :2015-11-08, 2026-11-12
+    Nagabhushana Rao :2021-01-23, 2023-04-03
     Thomas Malten :2021-09-26, 2021-09-26
     section Contributor
     drdhaval2785@gmail.com :2015-11-19, 2026-11-12
@@ -49,17 +49,17 @@ gantt
 
 | Year | Commits |
 |---|---:|
-| 2014 | 75 |
-| 2015 | 168 |
-| 2016 | 368 |
-| 2017 | 272 |
-| 2018 | 148 |
+| 2014 | 125 |
+| 2015 | 419 |
+| 2016 | 397 |
+| 2017 | 276 |
+| 2018 | 152 |
 | 2019 | 356 |
-| 2020 | 350 |
-| 2021 | 1,171 |
-| 2022 | 541 |
+| 2020 | 362 |
+| 2021 | 1,313 |
+| 2022 | 554 |
 | 2023 | 418 |
 | 2024 | 396 |
 | 2025 | 614 |
-| 2026 | 7,630 |
+| 2026 | 7,646 |
 

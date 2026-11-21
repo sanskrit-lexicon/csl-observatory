@@ -1,6 +1,6 @@
 # CDSL ecosystem dashboard
 
-**Snapshot date**: 2026-11-18 · **Fetched**: 2026-11-18T15:30:49.113498Z · **Snapshot**: `csl-obs/org-live@1.0.0` (as of 2026-11-18)
+**Snapshot date**: 2026-11-21 · **Fetched**: 2026-11-21T18:52:16.881550Z · **Snapshot**: `csl-obs/org-live@1.0.0` (as of 2026-11-21)
 
 ## Headline numbers
 
@@ -8,9 +8,9 @@
 |---|---|
 | Repositories in `sanskrit-lexicon` | 89 |
 | Repositories with issues enabled | 89 |
-| Total issues (incl. closed) | 8,779 |
-| Total pull requests | 3,008 |
-| Total commits in default branches | 12,507 |
+| Total issues (incl. closed) | 8,791 |
+| Total pull requests | 3,020 |
+| Total commits in default branches | 13,028 |
 | Distinct contributors (commit authors + issue authors) | 67 |
 | Triaged repositories (taxonomy applied) | 63 |
 
@@ -59,38 +59,38 @@ pie title Issue type distribution
 
 | Year | Commits | Issues opened | Issues closed |
 |---|---:|---:|---:|
-| 2014 | 75 | 190 | 65 |
-| 2015 | 168 | 271 | 170 |
-| 2016 | 368 | 175 | 140 |
-| 2017 | 272 | 268 | 130 |
-| 2018 | 148 | 98 | 30 |
+| 2014 | 125 | 190 | 65 |
+| 2015 | 419 | 271 | 170 |
+| 2016 | 397 | 175 | 140 |
+| 2017 | 276 | 268 | 130 |
+| 2018 | 152 | 98 | 30 |
 | 2019 | 356 | 246 | 144 |
-| 2020 | 350 | 470 | 485 |
-| 2021 | 1171 | 639 | 485 |
-| 2022 | 541 | 451 | 382 |
+| 2020 | 362 | 470 | 485 |
+| 2021 | 1313 | 639 | 485 |
+| 2022 | 554 | 451 | 382 |
 | 2023 | 418 | 534 | 542 |
 | 2024 | 396 | 372 | 381 |
 | 2025 | 614 | 1169 | 213 |
-| 2026 | 7630 | 888 | 1753 |
+| 2026 | 7646 | 888 | 1753 |
 
 ## Top contributors (by commits)
 
 | Real name | GitHub | Role | Commits | Repos | Span | Lines + / − |
 |---|---|---|---:|---:|---|---:|
-| Mārcis Gasūns | [@gasyoun](https://github.com/gasyoun) | lead | 5,137 | 80 | 2014-01 → 2026-11 | +35,448,455 / −3,390,886 |
-| Jim Funderburk | [@funderburkjim](https://github.com/funderburkjim) | maintainer | 2,940 | 54 | 2014-01 → 2026-09 | +48,575,716 / −4,392,576 |
-| Dhaval Patel | [@drdhaval2785](https://github.com/drdhaval2785) | core | 1,951 | 34 | 2015-11 → 2026-11 | +26,226,999 / −6,739,617 |
+| Mārcis Gasūns | [@gasyoun](https://github.com/gasyoun) | lead | 5,165 | 80 | 2014-01 → 2026-11 | +35,995,258 / −3,391,288 |
+| Jim Funderburk | [@funderburkjim](https://github.com/funderburkjim) | maintainer | 3,268 | 54 | 2014-01 → 2026-09 | +53,937,366 / −5,139,551 |
+| Dhaval Patel | [@drdhaval2785](https://github.com/drdhaval2785) | core | 2,074 | 34 | 2015-11 → 2026-11 | +35,661,581 / −7,262,116 |
 | drdhaval2785@gmail.com | [@drdhaval2785@gmail.com](https://github.com/drdhaval2785@gmail.com) | contributor | 982 | 7 | 2015-11 → 2026-11 | +0 / −0 |
 | drdhaval2785gmail.com | [@drdhaval2785gmail.com](https://github.com/drdhaval2785gmail.com) | contributor | 344 | 1 | 2026-03 → 2026-11 | +0 / −0 |
 | dependabot[bot] | [@dependabot[bot]](https://github.com/dependabot[bot]) | contributor | 335 | 75 | 2026-05 → 2026-11 | +1,563 / −979 |
-| GitHub Actions (bot) | [@github-actions[bot]](https://github.com/github-actions[bot]) | bot | 208 | 3 | 2026-04 → 2026-11 | +1,553,608 / −231,903 |
+| GitHub Actions (bot) | [@github-actions[bot]](https://github.com/github-actions[bot]) | bot | 209 | 3 | 2026-04 → 2026-11 | +1,909,084 / −304,914 |
 | gasyoun@users.noreply.github.com | [@gasyoun@users.noreply.github.com](https://github.com/gasyoun@users.noreply.github.com) | contributor | 176 | 7 | 2026-05 → 2026-11 | +0 / −0 |
 | funderburkjim@gmail.com | [@funderburkjim@gmail.com](https://github.com/funderburkjim@gmail.com) | contributor | 125 | 3 | 2014-02 → 2026-07 | +0 / −0 |
+| Anna Rybakova | [@AnnaRybakovaT](https://github.com/AnnaRybakovaT) | occasional | 71 | 10 | 2020-12 → 2023-06 | +71,555 / −6,432 |
 | gasyoun@ya.ru | [@gasyoun@ya.ru](https://github.com/gasyoun@ya.ru) | contributor | 71 | 7 | 2014-01 → 2026-10 | +0 / −0 |
-| Anna Rybakova | [@AnnaRybakovaT](https://github.com/AnnaRybakovaT) | occasional | 68 | 9 | 2020-12 → 2023-06 | +68,341 / −4,791 |
+| Nagabhushana Rao | [@Andhrabharati](https://github.com/Andhrabharati) | core | 63 | 3 | 2021-01 → 2023-04 | +5,941,482 / −1,768,472 |
 | GitHub Actions (bot) | [@actions-user](https://github.com/actions-user) | bot | 46 | 4 | 2026-04 → 2026-09 | +67,888 / −39,702 |
 | (misconfigured git client) | [@you@example.com](https://github.com/you@example.com) | occasional | 30 | 5 | 2021-01 → 2021-09 | +11,395 / −8,887 |
-| Nagabhushana Rao | [@Andhrabharati](https://github.com/Andhrabharati) | core | 25 | 3 | 2021-05 → 2023-04 | +1,375,437 / −226,487 |
 | actions@github.com | [@actions@github.com](https://github.com/actions@github.com) | contributor | 25 | 1 | 2026-04 → 2026-08 | +0 / −0 |
 | 49699333+dependabot[bot]@users.noreply.github.com | [@49699333+dependabot[bot]@users.noreply.github.com](https://github.com/49699333+dependabot[bot]@users.noreply.github.com) | contributor | 17 | 7 | 2026-06 → 2026-10 | +0 / −0 |
 | DmitriSKT | [@DmitriSKT](https://github.com/DmitriSKT) | occasional | 3 | 1 | 2017-05 → 2017-11 | +33 / −2 |
@@ -103,14 +103,14 @@ pie title Issue type distribution
 | Repo | Commits | Issues | Open | Closed | Triaged | First | Last |
 |---|---:|---:|---:|---:|:---:|---|---|
 | [csl-corrections](https://github.com/sanskrit-lexicon/csl-corrections) | 1,201 | 383 | 70 | 313 | ✓ | 2019-12-16 | 2026-11-18 |
-| [csl-atlas](https://github.com/sanskrit-lexicon/csl-atlas) | 926 | 66 | 6 | 60 |  | 2026-05-23 | 2026-11-18 |
+| [csl-atlas](https://github.com/sanskrit-lexicon/csl-atlas) | 932 | 66 | 6 | 60 |  | 2026-05-23 | 2026-11-21 |
 | [cologne-stardict](https://github.com/sanskrit-lexicon/cologne-stardict) | 896 | 48 | 3 | 45 | ✓ | 2017-04-04 | 2026-11-15 |
 | [csl-apidev](https://github.com/sanskrit-lexicon/csl-apidev) | 764 | 68 | 19 | 49 | ✓ | 2018-04-17 | 2026-11-18 |
-| [csl-observatory](https://github.com/sanskrit-lexicon/csl-observatory) | 712 | 60 | 19 | 41 | ✓ | 2026-05-07 | 2026-11-18 |
+| [csl-observatory](https://github.com/sanskrit-lexicon/csl-observatory) | 718 | 60 | 19 | 41 | ✓ | 2026-05-07 | 2026-11-21 |
+| [CORRECTIONS](https://github.com/sanskrit-lexicon/CORRECTIONS) | 708 | 443 | 83 | 360 |  | 2014-09-30 | 2026-11-07 |
 | [csl-pywork](https://github.com/sanskrit-lexicon/csl-pywork) | 604 | 60 | 7 | 53 | ✓ | 2019-07-20 | 2026-11-18 |
+| [MWS](https://github.com/sanskrit-lexicon/MWS) | 597 | 221 | 39 | 182 | ✓ | 2014-01-16 | 2026-11-08 |
 | [PWG](https://github.com/sanskrit-lexicon/PWG) | 503 | 199 | 32 | 167 | ✓ | 2014-09-25 | 2026-11-08 |
-| [MWS](https://github.com/sanskrit-lexicon/MWS) | 400 | 221 | 39 | 182 | ✓ | 2022-08-09 | 2026-11-08 |
-| [CORRECTIONS](https://github.com/sanskrit-lexicon/CORRECTIONS) | 400 | 443 | 83 | 360 |  | 2016-01-12 | 2026-11-07 |
 | [PWK](https://github.com/sanskrit-lexicon/PWK) | 328 | 117 | 38 | 79 | ✓ | 2014-11-08 | 2026-11-07 |
 | [csl-guides](https://github.com/sanskrit-lexicon/csl-guides) | 299 | 37 | 2 | 35 |  | 2026-06-13 | 2026-11-17 |
 | [csl-standards](https://github.com/sanskrit-lexicon/csl-standards) | 286 | 14 | 3 | 11 |  | 2026-06-04 | 2026-11-05 |
@@ -136,8 +136,8 @@ pie title Issue type distribution
 | [AP90](https://github.com/sanskrit-lexicon/AP90) | 86 | 32 | 14 | 18 | ✓ | 2020-03-14 | 2026-11-07 |
 | [csl-ldev](https://github.com/sanskrit-lexicon/csl-ldev) | 84 | 9 | 7 | 2 | ✓ | 2021-10-05 | 2026-10-27 |
 | [ApteES](https://github.com/sanskrit-lexicon/ApteES) | 76 | 17 | 2 | 15 | ✓ | 2014-07-15 | 2026-10-26 |
+| [sanskrit-lexicon.github.io](https://github.com/sanskrit-lexicon/sanskrit-lexicon.github.io) | 74 | 0 | 0 | 0 |  | 2015-11-24 | 2026-11-21 |
 | [BHS](https://github.com/sanskrit-lexicon/BHS) | 74 | 8 | 4 | 4 | ✓ | 2016-01-02 | 2026-10-26 |
-| [sanskrit-lexicon.github.io](https://github.com/sanskrit-lexicon/sanskrit-lexicon.github.io) | 73 | 0 | 0 | 0 |  | 2015-11-24 | 2026-11-18 |
 | [BOP](https://github.com/sanskrit-lexicon/BOP) | 73 | 9 | 1 | 8 | ✓ | 2022-05-02 | 2026-11-07 |
 | [csl-newsletter](https://github.com/sanskrit-lexicon/csl-newsletter) | 72 | 4 | 2 | 2 | ✓ | 2021-09-13 | 2026-10-26 |
 | [csl-lnum](https://github.com/sanskrit-lexicon/csl-lnum) | 72 | 4 | 1 | 3 | ✓ | 2021-10-02 | 2026-10-27 |
@@ -147,9 +147,9 @@ pie title Issue type distribution
 | [csl-doc](https://github.com/sanskrit-lexicon/csl-doc) | 62 | 6 | 2 | 4 | ✓ | 2018-10-23 | 2026-10-26 |
 | [hwnorm2](https://github.com/sanskrit-lexicon/hwnorm2) | 61 | 5 | 4 | 1 | ✓ | 2020-02-01 | 2026-10-27 |
 | [BUR](https://github.com/sanskrit-lexicon/BUR) | 61 | 6 | 1 | 5 | ✓ | 2020-04-09 | 2026-10-26 |
+| [csl-pyutil](https://github.com/sanskrit-lexicon/csl-pyutil) | 56 | 6 | 1 | 5 |  | 2026-07-14 | 2026-11-21 |
 | [csl-santam](https://github.com/sanskrit-lexicon/csl-santam) | 54 | 4 | 0 | 4 |  | 2015-06-02 | 2026-10-26 |
 | [SHS](https://github.com/sanskrit-lexicon/SHS) | 54 | 4 | 3 | 1 | ✓ | 2025-12-22 | 2026-10-27 |
-| [csl-pyutil](https://github.com/sanskrit-lexicon/csl-pyutil) | 53 | 6 | 1 | 5 |  | 2026-07-14 | 2026-10-27 |
 | [BOR](https://github.com/sanskrit-lexicon/BOR) | 48 | 4 | 3 | 1 | ✓ | 2021-09-14 | 2026-10-26 |
 | [VEI](https://github.com/sanskrit-lexicon/VEI) | 47 | 2 | 1 | 1 | ✓ | 2016-01-02 | 2026-10-27 |
 | [KRM](https://github.com/sanskrit-lexicon/KRM) | 47 | 4 | 3 | 1 | ✓ | 2020-03-31 | 2026-10-26 |
@@ -189,4 +189,4 @@ pie title Issue type distribution
 | [csl-websanlexicon](https://github.com/sanskrit-lexicon/csl-websanlexicon) | 0 | 0 | 0 | 0 |  | - | - |
 
 ---
-*Generated by `scripts/render_reports.py`. Data: `data/snapshots/2026-11-18/`. License: data CC BY-SA 4.0.*
+*Generated by `scripts/render_reports.py`. Data: `data/snapshots/2026-11-21/`. License: data CC BY-SA 4.0.*

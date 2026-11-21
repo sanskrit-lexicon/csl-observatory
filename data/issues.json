@@ -231,7 +231,11 @@
       "state": "open",
       "title": "PWG ls abbreviations: full-auto diff of the Andhrabharati update vs CDSL pwgbib (674 added / 832 removed / 215 unknowns)",
       "updated_at": "2026-10-03T00:44:58Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "PWG ls abbreviations: full-auto diff of the Andhrabharati update vs CDSL pwgbib (674 added / 832 removed / 215 unknowns)",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -359,7 +363,11 @@
       "state": "open",
       "title": "H2889 — PWG translation: comprehensive code and dependency review",
       "updated_at": "2026-08-18T07:25:30Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "H2889 — PWG translation: comprehensive code and dependency review",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -470,7 +478,11 @@
       "state": "open",
       "title": "Strange error !!",
       "updated_at": "2026-10-03T00:45:00Z",
-      "user": "Andhrabharati"
+      "user": "Andhrabharati",
+      "project_fields": {
+        "Title": "Strange error !!",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -529,7 +541,11 @@
       "state": "open",
       "title": "[markup] PWG v2 of AB",
       "updated_at": "2026-10-03T00:45:02Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "[markup] PWG v2 of AB",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -672,7 +688,11 @@
       "state": "open",
       "title": "OCR English prefaces for PWG and PW (github.io links)",
       "updated_at": "2026-07-28T05:06:08Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "OCR English prefaces for PWG and PW (github.io links)",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -835,7 +855,11 @@
       "state": "open",
       "title": "[bug] ṚV. PRĀT. unusual links",
       "updated_at": "2026-07-12T08:06:09Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "[bug] ṚV. PRĀT. unusual links",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -920,7 +944,11 @@
       "state": "open",
       "title": "Underscore in v1e",
       "updated_at": "2026-07-21T14:15:29Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Underscore in v1e",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -971,7 +999,11 @@
       "state": "open",
       "title": "Comparing v1e with previous version of pwg.txt",
       "updated_at": "2026-07-30T14:37:16Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Comparing v1e with previous version of pwg.txt",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [
@@ -1058,7 +1090,11 @@
       "state": "open",
       "title": "PWG tooltip cleanup",
       "updated_at": "2026-07-12T10:23:45Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "PWG tooltip cleanup",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -1171,7 +1207,11 @@
       "state": "open",
       "title": "docs-pass: PWG documentation review",
       "updated_at": "2026-05-30T19:55:15Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "docs-pass: PWG documentation review",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -1442,7 +1482,11 @@
       "state": "open",
       "title": "Links to Introductions",
       "updated_at": "2026-05-30T19:55:31Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Links to Introductions",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -1510,7 +1554,11 @@
       "state": "open",
       "title": "MBH Bombay-Calcutta concordance",
       "updated_at": "2026-05-06T16:42:22Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "MBH Bombay-Calcutta concordance",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -1544,7 +1592,11 @@
       "state": "open",
       "title": "link target README.md improvement",
       "updated_at": "2026-05-06T16:39:58Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "link target README.md improvement",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -1629,7 +1681,11 @@
       "state": "open",
       "title": "CAURAPAÑCĀŚIKĀ, Ariel edition",
       "updated_at": "2026-05-06T16:42:20Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "CAURAPAÑCĀŚIKĀ, Ariel edition",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -1765,7 +1821,11 @@
       "state": "open",
       "title": "RAGH. Calc. additional changes",
       "updated_at": "2026-05-06T16:42:15Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "RAGH. Calc. additional changes",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -1816,7 +1876,11 @@
       "state": "open",
       "title": "VS. PRĀT. link target",
       "updated_at": "2026-05-06T16:42:13Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "VS. PRĀT. link target",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -1901,7 +1965,11 @@
       "state": "open",
       "title": "ṚV. links",
       "updated_at": "2026-05-06T16:42:01Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "ṚV. links",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -2179,7 +2247,11 @@
       "state": "open",
       "title": "Abhidhānacintāmaṇi of Hemacandra missing references",
       "updated_at": "2026-05-06T14:44:12Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "Abhidhānacintāmaṇi of Hemacandra missing references",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [
@@ -2342,7 +2414,11 @@
       "state": "open",
       "title": "Commentarial literature - how to refer?",
       "updated_at": "2026-06-22T16:35:14Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "Commentarial literature - how to refer?",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -2569,7 +2645,11 @@
       "state": "open",
       "title": "PWG link target admin",
       "updated_at": "2026-06-25T09:48:28Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "PWG link target admin",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -3134,7 +3214,11 @@
       "state": "open",
       "title": "Enhancing PWG content with Weber's Nachlass",
       "updated_at": "2026-06-24T10:39:43Z",
-      "user": "Andhrabharati"
+      "user": "Andhrabharati",
+      "project_fields": {
+        "Title": "Enhancing PWG content with Weber's Nachlass",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -3168,7 +3252,11 @@
       "state": "open",
       "title": "provide additional links to different sources for the same work ",
       "updated_at": "2026-05-31T01:23:34Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "provide additional links to different sources for the same work ",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -3287,7 +3375,11 @@
       "state": "open",
       "title": "Apply VN",
       "updated_at": "2026-06-22T16:20:19Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Apply VN",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -3423,7 +3515,11 @@
       "state": "open",
       "title": "Corrections required in preverbs of PWG",
       "updated_at": "2026-07-21T14:25:40Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "Corrections required in preverbs of PWG",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -3457,7 +3553,11 @@
       "state": "open",
       "title": "Taittirīya Prātiśākhya link target",
       "updated_at": "2026-05-06T16:41:10Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Taittirīya Prātiśākhya link target",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -3474,7 +3574,11 @@
       "state": "open",
       "title": "Prātiśākhya ls references",
       "updated_at": "2026-05-31T01:23:07Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Prātiśākhya ls references",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -3629,7 +3733,11 @@
       "state": "open",
       "title": "verbs01a",
       "updated_at": "2026-05-06T16:38:50Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "verbs01a",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -3646,7 +3754,11 @@
       "state": "open",
       "title": "verbs01",
       "updated_at": "2026-05-06T16:38:48Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "verbs01",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -3663,7 +3775,11 @@
       "state": "open",
       "title": "List of Words (Next Word is a Hyperlink)",
       "updated_at": "2026-05-06T16:40:53Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "List of Words (Next Word is a Hyperlink)",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [
@@ -3699,7 +3815,11 @@
       "state": "open",
       "title": "upasarga access",
       "updated_at": "2026-05-06T16:40:50Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "upasarga access",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -4050,7 +4170,11 @@
       "state": "open",
       "title": "(PWG vs MW) Structure Markup Comparison",
       "updated_at": "2026-05-31T01:22:45Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "(PWG vs MW) Structure Markup Comparison",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [
@@ -4069,7 +4193,11 @@
       "state": "open",
       "title": "Dhatu Markup ",
       "updated_at": "2026-05-31T01:22:41Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Dhatu Markup ",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -4354,7 +4482,11 @@
       "state": "open",
       "title": "link-splitting: 141 lines where one <ls> holds several sibling addresses",
       "updated_at": "2026-08-19T14:32:59Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "link-splitting: 141 lines where one <ls> holds several sibling addresses",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -4604,7 +4736,11 @@
       "state": "open",
       "title": "Wire the digitized Jachertz 1983 bibliography into pw_ls: resolve 287 unresolved literary-source stubs",
       "updated_at": "2026-07-03T02:13:22Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Wire the digitized Jachertz 1983 bibliography into pw_ls: resolve 287 unresolved literary-source stubs",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -4810,7 +4946,11 @@
       "state": "open",
       "title": "docs-pass: PWK documentation review",
       "updated_at": "2026-05-30T19:56:30Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "docs-pass: PWK documentation review",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -4912,7 +5052,11 @@
       "state": "open",
       "title": "BHĀGAVATAPURĀṆA PW literary source markup",
       "updated_at": "2026-05-06T21:17:35Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "BHĀGAVATAPURĀṆA PW literary source markup",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -4930,7 +5074,11 @@
       "state": "open",
       "title": "Ideas for further work following issue 106",
       "updated_at": "2026-06-27T04:48:45Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Ideas for further work following issue 106",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -5086,7 +5234,11 @@
       "state": "open",
       "title": "Interesting observation: ṚV citations in pwk",
       "updated_at": "2026-06-27T04:48:36Z",
-      "user": "Andhrabharati"
+      "user": "Andhrabharati",
+      "project_fields": {
+        "Title": "Interesting observation: ṚV citations in pwk",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -5104,7 +5256,11 @@
       "state": "open",
       "title": "basicdisplay revisions",
       "updated_at": "2026-05-06T21:24:43Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "basicdisplay revisions",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -5121,7 +5277,11 @@
       "state": "open",
       "title": "pw/pwg literary source display ",
       "updated_at": "2026-05-06T21:24:38Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "pw/pwg literary source display ",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -5334,7 +5494,11 @@
       "state": "open",
       "title": "MBH Bombay edition links",
       "updated_at": "2026-05-06T21:17:26Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "MBH Bombay edition links",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -5352,7 +5516,11 @@
       "state": "open",
       "title": "Ramayana links",
       "updated_at": "2026-05-06T21:17:21Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Ramayana links",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -5388,7 +5556,11 @@
       "state": "open",
       "title": "links to BOESP",
       "updated_at": "2026-05-06T21:17:13Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "links to BOESP",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -5406,7 +5578,11 @@
       "state": "open",
       "title": "Boehtlingk literary source sequences",
       "updated_at": "2026-05-06T21:21:20Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Boehtlingk literary source sequences",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -5494,7 +5670,11 @@
       "state": "open",
       "title": "PWK VN7 Schmidt",
       "updated_at": "2026-05-06T21:24:30Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "PWK VN7 Schmidt",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -5511,7 +5691,11 @@
       "state": "open",
       "title": "PWK-VN Schmidt preparation",
       "updated_at": "2026-05-06T21:24:25Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "PWK-VN Schmidt preparation",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -5580,7 +5764,11 @@
       "state": "open",
       "title": "PWK VN and SCH",
       "updated_at": "2026-05-06T21:24:19Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "PWK VN and SCH",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [
@@ -5601,7 +5789,11 @@
       "state": "open",
       "title": "Nachtragswörterbuch des Sanskrit",
       "updated_at": "2026-05-06T21:24:15Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Nachtragswörterbuch des Sanskrit",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -5619,7 +5811,11 @@
       "state": "open",
       "title": "verbs01a",
       "updated_at": "2026-05-06T21:24:11Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "verbs01a",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [
@@ -5638,7 +5834,11 @@
       "state": "open",
       "title": "Missing markup",
       "updated_at": "2026-05-06T21:21:06Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Missing markup",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -5655,7 +5855,11 @@
       "state": "open",
       "title": "•»s.u.  markup question",
       "updated_at": "2026-06-27T04:48:25Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "•»s.u.  markup question",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -5672,7 +5876,11 @@
       "state": "open",
       "title": "pwbib title improvement for 'xx' type",
       "updated_at": "2026-05-06T21:21:02Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "pwbib title improvement for 'xx' type",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -5743,7 +5951,11 @@
       "state": "open",
       "title": "PW bib new work",
       "updated_at": "2026-05-06T21:20:54Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "PW bib new work",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -5761,7 +5973,11 @@
       "state": "open",
       "title": "Revise pwbib_unused.txt",
       "updated_at": "2026-05-06T21:20:50Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Revise pwbib_unused.txt",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -5796,7 +6012,11 @@
       "state": "open",
       "title": "Cases of |<sic>",
       "updated_at": "2026-05-06T21:20:42Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Cases of |<sic>",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -5832,7 +6052,11 @@
       "state": "open",
       "title": "Extending PWK bibliography",
       "updated_at": "2026-05-06T21:23:59Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Extending PWK bibliography",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [
@@ -5851,7 +6075,11 @@
       "state": "open",
       "title": "New commentary references found",
       "updated_at": "2026-05-06T21:20:34Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "New commentary references found",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [
@@ -6022,7 +6250,11 @@
       "state": "open",
       "title": "known posterior tags",
       "updated_at": "2026-05-06T21:20:02Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "known posterior tags",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -6149,7 +6381,11 @@
       "state": "open",
       "title": "commentary study",
       "updated_at": "2026-06-27T04:48:05Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "commentary study",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [
@@ -6169,7 +6405,11 @@
       "state": "open",
       "title": "pwbib0.txt visual corrections",
       "updated_at": "2026-05-06T21:19:45Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "pwbib0.txt visual corrections",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -6316,7 +6556,11 @@
       "state": "open",
       "title": "Commentary references",
       "updated_at": "2026-05-06T21:19:08Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "Commentary references",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -6425,7 +6669,11 @@
       "state": "open",
       "title": "New literary resources caught",
       "updated_at": "2026-05-06T21:18:44Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "New literary resources caught",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -6592,7 +6840,11 @@
       "state": "open",
       "title": "Duplicate abbreviations in pwbib1",
       "updated_at": "2026-05-06T21:18:01Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Duplicate abbreviations in pwbib1",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -6609,7 +6861,11 @@
       "state": "open",
       "title": "Editing changes to pwbib0.txt",
       "updated_at": "2026-05-06T21:17:57Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Editing changes to pwbib0.txt",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -6681,7 +6937,11 @@
       "state": "open",
       "title": "Many alternate headwords",
       "updated_at": "2026-05-06T21:23:38Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Many alternate headwords",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -6754,7 +7014,11 @@
       "state": "open",
       "title": "Correction submissions not changed",
       "updated_at": "2026-05-06T21:23:01Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Correction submissions not changed",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [
@@ -6774,7 +7038,11 @@
       "state": "open",
       "title": "Nachtrage Implementation",
       "updated_at": "2026-05-06T21:23:29Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Nachtrage Implementation",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [
@@ -6793,7 +7061,11 @@
       "state": "open",
       "title": "Formatting of Entries",
       "updated_at": "2026-05-06T21:17:49Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Formatting of Entries",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [
@@ -6831,7 +7103,11 @@
       "state": "open",
       "title": "Sigla",
       "updated_at": "2026-05-06T21:17:43Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Sigla",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [
@@ -6850,7 +7126,11 @@
       "state": "open",
       "title": "Implement Fuzzy-Found Errors",
       "updated_at": "2026-05-06T21:23:20Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Implement Fuzzy-Found Errors",
+        "Status": "Todo"
+      }
     }
   ],
   "COLOGNE": [
@@ -15407,7 +15687,11 @@
       "state": "open",
       "title": "docs-pass: SCH documentation review",
       "updated_at": "2026-05-30T19:56:58Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "docs-pass: SCH documentation review",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -15459,7 +15743,11 @@
       "state": "open",
       "title": "SCH -- AB version for adopting into CDSL system",
       "updated_at": "2026-05-30T19:57:06Z",
-      "user": "Andhrabharati"
+      "user": "Andhrabharati",
+      "project_fields": {
+        "Title": "SCH -- AB version for adopting into CDSL system",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -15511,7 +15799,11 @@
       "state": "open",
       "title": "Preface, Partial translation",
       "updated_at": "2026-05-30T19:57:16Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Preface, Partial translation",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -15547,7 +15839,11 @@
       "state": "open",
       "title": "12427 (º) & 3148 (*) Entries",
       "updated_at": "2026-06-27T10:43:14Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "12427 (º) & 3148 (*) Entries",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -15649,7 +15945,11 @@
       "state": "open",
       "title": "H5314 - P1 Monier-Williams block economy - refresh the IJL submission pack after the submit freeze",
       "updated_at": "2026-11-06T17:29:49Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "H5314 - P1 Monier-Williams block economy - refresh the IJL submission pack after the submit freeze",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -15856,7 +16156,11 @@
       "state": "open",
       "title": "paper-priv-violation: 2026-10-04",
       "updated_at": "2026-10-04T11:28:11Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "paper-priv-violation: 2026-10-04",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -16905,7 +17209,11 @@
       "state": "open",
       "title": "H1076 — A18 P3 two citation registers (MW evidence block) — outline to full Dictionaries-2027 draft",
       "updated_at": "2026-07-20T07:21:06Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "H1076 — A18 P3 two citation registers (MW evidence block) — outline to full Dictionaries-2027 draft",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -17020,7 +17328,11 @@
       "state": "open",
       "title": "SPEC-1 W1(c): edition unconfirmed in MW preface for Suśr./Kathās./ŚBr. — blocks pages.tsv build",
       "updated_at": "2026-07-09T04:05:49Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "SPEC-1 W1(c): edition unconfirmed in MW preface for Suśr./Kathās./ŚBr. — blocks pages.tsv build",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -17264,7 +17576,11 @@
       "state": "open",
       "title": "W1(a): link 17 unlinked <ls> siglum variants + 3 pending maintainer calls",
       "updated_at": "2026-07-12T04:05:55Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "W1(a): link 17 unlinked <ls> siglum variants + 3 pending maintainer calls",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -17298,7 +17614,11 @@
       "state": "open",
       "title": "[markup] hwalt - how to display?",
       "updated_at": "2026-07-12T04:05:52Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "[markup] hwalt - how to display?",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -17545,7 +17865,11 @@
       "state": "open",
       "title": "[refresh] Round-2 Haiku maintenance — 2026-05-28-rerun (validation)",
       "updated_at": "2026-05-30T19:54:37Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "[refresh] Round-2 Haiku maintenance — 2026-05-28-rerun (validation)",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -17578,7 +17902,11 @@
       "state": "open",
       "title": "[refresh] Round-2 Haiku maintenance — 2026-05-28",
       "updated_at": "2026-05-30T19:54:41Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "[refresh] Round-2 Haiku maintenance — 2026-05-28",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -17610,7 +17938,11 @@
       "state": "open",
       "title": "[docs-pass] Add DICT_PROFILE, ENTRY_GUIDE, update DATA_DICTIONARY, add issue templates (dict)",
       "updated_at": "2026-05-30T19:54:45Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "[docs-pass] Add DICT_PROFILE, ENTRY_GUIDE, update DATA_DICTIONARY, add issue templates (dict)",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -17661,7 +17993,11 @@
       "state": "open",
       "title": "The Two MW Headwords: \"kararudh and karagṛhīti\", Need Similar Corrections",
       "updated_at": "2026-06-27T10:23:34Z",
-      "user": "aumsanskrit"
+      "user": "aumsanskrit",
+      "project_fields": {
+        "Title": "The Two MW Headwords: \"kararudh and karagṛhīti\", Need Similar Corrections",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -17712,7 +18048,11 @@
       "state": "open",
       "title": "Oddity in MW links to Mn. (Manu)",
       "updated_at": "2026-05-06T20:30:26Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Oddity in MW links to Mn. (Manu)",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -17747,7 +18087,11 @@
       "state": "open",
       "title": "MĀLAVIKĀGNIMITRA Bollensen link target ?",
       "updated_at": "2026-05-06T20:19:04Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "MĀLAVIKĀGNIMITRA Bollensen link target ?",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -17764,7 +18108,11 @@
       "state": "open",
       "title": "PAÑCATANTRA link target for MW",
       "updated_at": "2026-05-06T20:18:57Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "PAÑCATANTRA link target for MW",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -17781,7 +18129,11 @@
       "state": "open",
       "title": "ŚĀKUNTALA link target for MW",
       "updated_at": "2026-05-06T20:19:01Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "ŚĀKUNTALA link target for MW",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -17815,7 +18167,11 @@
       "state": "open",
       "title": "tādṛśī vs. tādṛśa as f. headword",
       "updated_at": "2026-06-27T10:22:42Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "tādṛśī vs. tādṛśa as f. headword",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -17849,7 +18205,11 @@
       "state": "open",
       "title": "Grassmanizing and/or groups, continued",
       "updated_at": "2026-05-06T20:22:25Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Grassmanizing and/or groups, continued",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -17866,7 +18226,11 @@
       "state": "open",
       "title": "Eliminate 1 out of 2 verticall scrolls",
       "updated_at": "2026-05-06T20:29:11Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Eliminate 1 out of 2 verticall scrolls",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -17883,7 +18247,11 @@
       "state": "open",
       "title": "N. of one of the poets of the RV. viii, 85, 3",
       "updated_at": "2026-06-27T10:23:33Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "N. of one of the poets of the RV. viii, 85, 3",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -17900,7 +18268,11 @@
       "state": "open",
       "title": "AB3 alternate form for mws",
       "updated_at": "2026-05-06T20:22:22Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "AB3 alternate form for mws",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -18007,7 +18379,11 @@
       "state": "open",
       "title": "Different markup for 'titular abbreviations'",
       "updated_at": "2026-05-06T20:22:07Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Different markup for 'titular abbreviations'",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -18043,7 +18419,11 @@
       "state": "open",
       "title": "web font for iast?",
       "updated_at": "2026-05-06T20:29:04Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "web font for iast?",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -18077,7 +18457,11 @@
       "state": "open",
       "title": "tag inventory",
       "updated_at": "2026-05-06T20:22:00Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "tag inventory",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -18163,7 +18547,11 @@
       "state": "open",
       "title": "Grouped entries like GRA",
       "updated_at": "2026-05-06T20:29:00Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Grouped entries like GRA",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -18180,7 +18568,11 @@
       "state": "open",
       "title": "'Bad' Side-effects of <ab n=\"> and <ls> tagging",
       "updated_at": "2026-05-06T20:21:53Z",
-      "user": "Andhrabharati"
+      "user": "Andhrabharati",
+      "project_fields": {
+        "Title": "'Bad' Side-effects of <ab n=\"> and <ls> tagging",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -18299,7 +18691,11 @@
       "state": "open",
       "title": "Any possibility of migrating from IAST to ISO 15919 ?",
       "updated_at": "2026-05-06T20:26:05Z",
-      "user": "mediabuff"
+      "user": "mediabuff",
+      "project_fields": {
+        "Title": "Any possibility of migrating from IAST to ISO 15919 ?",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -18316,7 +18712,11 @@
       "state": "open",
       "title": "Show siṃhī for siṃha (feminine for masculine as well)",
       "updated_at": "2026-05-06T20:28:57Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Show siṃhī for siṃha (feminine for masculine as well)",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -18384,7 +18784,11 @@
       "state": "open",
       "title": "Possible new markup for alternates",
       "updated_at": "2026-05-06T20:21:49Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Possible new markup for alternates",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -18686,7 +19090,11 @@
       "state": "open",
       "title": "Missing Links: ib. viii, 103, 10",
       "updated_at": "2026-05-06T20:18:38Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Missing Links: ib. viii, 103, 10",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -19052,7 +19460,11 @@
       "state": "open",
       "title": "Genders in Bold",
       "updated_at": "2026-05-06T20:28:49Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Genders in Bold",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -19226,7 +19638,11 @@
       "state": "open",
       "title": "MW resolving 'idems'",
       "updated_at": "2026-05-06T20:28:42Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "MW resolving 'idems'",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -19370,7 +19786,11 @@
       "state": "open",
       "title": "mw transcoding versions",
       "updated_at": "2026-05-06T20:25:53Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "mw transcoding versions",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [
@@ -19620,7 +20040,11 @@
       "state": "open",
       "title": "kāraka dependency",
       "updated_at": "2026-05-06T20:28:26Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "kāraka dependency",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [
@@ -19640,7 +20064,11 @@
       "state": "open",
       "title": "verbs01",
       "updated_at": "2026-05-06T20:28:23Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "verbs01",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [
@@ -19660,7 +20088,11 @@
       "state": "open",
       "title": "bot listing ",
       "updated_at": "2026-05-06T20:28:19Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "bot listing ",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -19678,7 +20110,11 @@
       "state": "open",
       "title": "MW display variant, part 2",
       "updated_at": "2026-05-06T20:20:34Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "MW display variant, part 2",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -19844,7 +20280,11 @@
       "state": "open",
       "title": "Cross-entry links in MW",
       "updated_at": "2026-05-06T20:28:12Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Cross-entry links in MW",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [
@@ -20202,7 +20642,11 @@
       "state": "open",
       "title": "cf. accord. to some",
       "updated_at": "2026-05-06T20:29:33Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "cf. accord. to some",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -20347,7 +20791,11 @@
       "state": "open",
       "title": "Suggestion for UI improvements",
       "updated_at": "2026-05-06T20:28:05Z",
-      "user": "juhnowski"
+      "user": "juhnowski",
+      "project_fields": {
+        "Title": "Suggestion for UI improvements",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -20574,7 +21022,11 @@
       "state": "open",
       "title": "Proper Names in SLP1 ({r}Ama for Rāma)",
       "updated_at": "2026-05-06T20:27:53Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Proper Names in SLP1 ({r}Ama for Rāma)",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -21186,7 +21638,11 @@
       "state": "open",
       "title": "Hellwig's Normalized Lexical Information (1/3 MW)",
       "updated_at": "2026-05-29T05:11:11Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Hellwig's Normalized Lexical Information (1/3 MW)",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -21203,7 +21659,11 @@
       "state": "open",
       "title": "Abbreviations of text-names",
       "updated_at": "2026-05-29T05:11:24Z",
-      "user": "Shalu411"
+      "user": "Shalu411",
+      "project_fields": {
+        "Title": "Abbreviations of text-names",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -21220,7 +21680,11 @@
       "state": "open",
       "title": "Alien Word Grammar Tags (djan vs. djma)",
       "updated_at": "2026-05-29T05:11:22Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Alien Word Grammar Tags (djan vs. djma)",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -21237,7 +21701,11 @@
       "state": "open",
       "title": "Duplicate Words (with Multiple Grammar Tags)",
       "updated_at": "2026-05-29T05:11:05Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Duplicate Words (with Multiple Grammar Tags)",
+        "Status": "Todo"
+      }
     }
   ],
   "VCP": [
@@ -21587,7 +22055,11 @@
       "state": "open",
       "title": "docs-pass: VCP documentation review",
       "updated_at": "2026-05-30T20:00:38Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "docs-pass: VCP documentation review",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -21621,7 +22093,11 @@
       "state": "open",
       "title": "Spacing issues in VCP",
       "updated_at": "2026-05-30T20:00:43Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "Spacing issues in VCP",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [
@@ -21657,7 +22133,11 @@
       "state": "open",
       "title": "aNgirAuvAca",
       "updated_at": "2026-05-30T20:00:50Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "aNgirAuvAca",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -21691,7 +22171,11 @@
       "state": "open",
       "title": "Query regarding any addenda / corrigenda to Vachaspatyam",
       "updated_at": "2026-05-30T20:00:57Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "Query regarding any addenda / corrigenda to Vachaspatyam",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -21708,7 +22192,11 @@
       "state": "open",
       "title": "VAC vs VCP comparision tracker",
       "updated_at": "2026-05-30T20:01:00Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "VAC vs VCP comparision tracker",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -21725,7 +22213,11 @@
       "state": "open",
       "title": "Debatable items",
       "updated_at": "2026-06-27T10:28:18Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "Debatable items",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -21743,7 +22235,11 @@
       "state": "open",
       "title": "Patterns to be handled later",
       "updated_at": "2026-06-27T10:25:22Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "Patterns to be handled later",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -21794,7 +22290,11 @@
       "state": "open",
       "title": "vac2a - picture data in TE",
       "updated_at": "2026-05-30T20:01:17Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "vac2a - picture data in TE",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -21812,7 +22312,11 @@
       "state": "open",
       "title": "meld-prep: 'ai'/'au'",
       "updated_at": "2026-05-30T20:01:21Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "meld-prep: 'ai'/'au'",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -21830,7 +22334,11 @@
       "state": "open",
       "title": "Suggestions from meta2",
       "updated_at": "2026-06-27T03:36:27Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Suggestions from meta2",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -21865,7 +22373,11 @@
       "state": "open",
       "title": "Meld as a diff viewer for VAC-VCP comparision",
       "updated_at": "2026-05-30T20:01:28Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "Meld as a diff viewer for VAC-VCP comparision",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -21882,7 +22394,11 @@
       "state": "open",
       "title": "VAC (TE) vs. VCP (Cologne)",
       "updated_at": "2026-05-30T20:01:31Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "VAC (TE) vs. VCP (Cologne)",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -21917,7 +22433,11 @@
       "state": "open",
       "title": "vac-vcp-cmp2",
       "updated_at": "2026-05-30T20:01:38Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "vac-vcp-cmp2",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -21935,7 +22455,11 @@
       "state": "open",
       "title": "abbreviation preparation",
       "updated_at": "2026-05-30T20:01:42Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "abbreviation preparation",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -21953,7 +22477,11 @@
       "state": "open",
       "title": "All Dhatu Entries: verbs01",
       "updated_at": "2026-05-30T20:01:45Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "All Dhatu Entries: verbs01",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -21971,7 +22499,11 @@
       "state": "open",
       "title": "All dhatu entries ",
       "updated_at": "2026-05-30T20:01:49Z",
-      "user": "Shalu411"
+      "user": "Shalu411",
+      "project_fields": {
+        "Title": "All dhatu entries ",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -22006,7 +22538,11 @@
       "state": "open",
       "title": "Progress in alternate headword extraction",
       "updated_at": "2026-05-30T20:01:56Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "Progress in alternate headword extraction",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -22041,7 +22577,11 @@
       "state": "open",
       "title": "Vachaspatyam-Doubles",
       "updated_at": "2026-06-27T03:36:23Z",
-      "user": "Shalu411"
+      "user": "Shalu411",
+      "project_fields": {
+        "Title": "Vachaspatyam-Doubles",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -22078,7 +22618,11 @@
       "state": "open",
       "title": "Link to Preface",
       "updated_at": "2026-05-30T20:02:10Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Link to Preface",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -22586,7 +23130,11 @@
       "state": "open",
       "title": "markup needed for display usefulness",
       "updated_at": "2026-05-30T19:47:39Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "markup needed for display usefulness",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -22724,7 +23272,11 @@
       "state": "open",
       "title": "Normalizing pada-gana 'spelling' in digitization",
       "updated_at": "2026-05-30T19:48:08Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Normalizing pada-gana 'spelling' in digitization",
+        "Status": "Todo"
+      }
     }
   ],
   "SKD": [
@@ -22920,7 +23472,11 @@
       "state": "open",
       "title": "docs-pass: SKD documentation review",
       "updated_at": "2026-05-30T19:58:36Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "docs-pass: SKD documentation review",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -22954,7 +23510,11 @@
       "state": "open",
       "title": "Arlo Griffiths via INDOLOGY",
       "updated_at": "2026-05-30T19:58:41Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Arlo Griffiths via INDOLOGY",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -22971,7 +23531,11 @@
       "state": "open",
       "title": "transcoding skd.txt",
       "updated_at": "2026-05-30T19:58:45Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "transcoding skd.txt",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -23042,7 +23606,11 @@
       "state": "open",
       "title": "Corrections in digitisation: Andhrabharati",
       "updated_at": "2026-06-27T04:31:22Z",
-      "user": "Andhrabharati"
+      "user": "Andhrabharati",
+      "project_fields": {
+        "Title": "Corrections in digitisation: Andhrabharati",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -23060,7 +23628,11 @@
       "state": "open",
       "title": "Dhatus Comparison - Interesting facts ",
       "updated_at": "2026-05-30T19:59:02Z",
-      "user": "Shalu411"
+      "user": "Shalu411",
+      "project_fields": {
+        "Title": "Dhatus Comparison - Interesting facts ",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -23078,7 +23650,11 @@
       "state": "open",
       "title": "SKD digitization (Devanagari version)",
       "updated_at": "2026-05-30T19:59:05Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "SKD digitization (Devanagari version)",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -23096,7 +23672,11 @@
       "state": "open",
       "title": "vcp-skd1 comparison, part 2",
       "updated_at": "2026-05-30T19:59:08Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "vcp-skd1 comparison, part 2",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [
@@ -23115,7 +23695,11 @@
       "state": "open",
       "title": "vcp-skd comparison",
       "updated_at": "2026-05-30T19:59:12Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "vcp-skd comparison",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [
@@ -23134,7 +23718,11 @@
       "state": "open",
       "title": "All Dhatu Entries (SKD)",
       "updated_at": "2026-05-30T19:59:15Z",
-      "user": "Shalu411"
+      "user": "Shalu411",
+      "project_fields": {
+        "Title": "All Dhatu Entries (SKD)",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -23168,7 +23756,11 @@
       "state": "open",
       "title": "Wikisource शब्दकल्पद्रुमः Edition",
       "updated_at": "2026-05-30T19:59:22Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Wikisource शब्दकल्पद्रुमः Edition",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -23237,7 +23829,11 @@
       "state": "open",
       "title": "alphabetizing errors in skd headwords",
       "updated_at": "2026-06-27T03:36:14Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "alphabetizing errors in skd headwords",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -23792,7 +24388,11 @@
       "state": "open",
       "title": "Printed Book Categories Lost in OCR?",
       "updated_at": "2026-06-27T10:43:44Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Printed Book Categories Lost in OCR?",
+        "Status": "Todo"
+      }
     }
   ],
   "GRA": [
@@ -24130,7 +24730,11 @@
       "state": "open",
       "title": "Grassmann entry -> VedaWeb Rigveda-occurrence deep links (GRA <-> VedaWeb 2.0 crosswalk)",
       "updated_at": "2026-07-09T04:05:52Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Grassmann entry -> VedaWeb Rigveda-occurrence deep links (GRA <-> VedaWeb 2.0 crosswalk)",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -24350,7 +24954,11 @@
       "state": "open",
       "title": "docs-pass: GRA documentation review",
       "updated_at": "2026-05-30T19:51:35Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "docs-pass: GRA documentation review",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -24384,7 +24992,11 @@
       "state": "open",
       "title": "Bibliographical References at sanskrit-lexicon.github.io/rvlinks",
       "updated_at": "2026-05-06T21:48:02Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Bibliographical References at sanskrit-lexicon.github.io/rvlinks",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -24401,7 +25013,11 @@
       "state": "open",
       "title": "Wikisource Footnotes from The Hymns of the Rigveda",
       "updated_at": "2026-05-06T21:50:16Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Wikisource Footnotes from The Hymns of the Rigveda",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -24437,7 +25053,11 @@
       "state": "open",
       "title": "List display of supplemental (rev, sup, etc.) in GRA",
       "updated_at": "2026-05-06T21:50:12Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "List display of supplemental (rev, sup, etc.) in GRA",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -24594,7 +25214,11 @@
       "state": "open",
       "title": "RV Roman transliteration provided by Marcis has no m̐, but only ṃ in its place!!",
       "updated_at": "2026-05-06T21:49:03Z",
-      "user": "Andhrabharati"
+      "user": "Andhrabharati",
+      "project_fields": {
+        "Title": "RV Roman transliteration provided by Marcis has no m̐, but only ṃ in its place!!",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -24628,7 +25252,11 @@
       "state": "open",
       "title": "Displays with x.y.z instead of {a,b}",
       "updated_at": "2026-07-23T16:42:46Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Displays with x.y.z instead of {a,b}",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -24768,7 +25396,11 @@
       "state": "open",
       "title": "पद पाठ  in Rigveda (still missing)",
       "updated_at": "2026-05-06T21:49:43Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "पद पाठ  in Rigveda (still missing)",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -24822,7 +25454,11 @@
       "state": "open",
       "title": "verbs01",
       "updated_at": "2026-05-06T21:49:35Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "verbs01",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -24954,7 +25590,11 @@
       "state": "open",
       "title": "Antonym Interlinking (kṛṣṇá vs. śveta)",
       "updated_at": "2026-05-06T21:49:31Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Antonym Interlinking (kṛṣṇá vs. śveta)",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -32434,7 +33074,11 @@
       "state": "open",
       "title": "docs-pass: WIL documentation review",
       "updated_at": "2026-05-30T20:03:10Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "docs-pass: WIL documentation review",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -32468,7 +33112,11 @@
       "state": "open",
       "title": "WIL - atiSaya - abnormal lex tags",
       "updated_at": "2026-05-30T20:03:15Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "WIL - atiSaya - abnormal lex tags",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -32520,7 +33168,11 @@
       "state": "open",
       "title": "New Hi-Res Scan of Wilson 1832 from Russia",
       "updated_at": "2026-05-30T20:03:27Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "New Hi-Res Scan of Wilson 1832 from Russia",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -32539,7 +33191,11 @@
       "state": "open",
       "title": "Bot markup refinement",
       "updated_at": "2026-05-30T20:03:31Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Bot markup refinement",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -32556,7 +33212,11 @@
       "state": "open",
       "title": "Botanical names",
       "updated_at": "2026-05-30T20:03:34Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "Botanical names",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -32573,7 +33233,11 @@
       "state": "open",
       "title": "verbs01-shs: Sabda Sagara verbs and MW",
       "updated_at": "2026-05-30T20:03:38Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "verbs01-shs: Sabda Sagara verbs and MW",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -32590,7 +33254,11 @@
       "state": "open",
       "title": "verbs01-yat: Yates verbs and MW",
       "updated_at": "2026-05-30T20:03:41Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "verbs01-yat: Yates verbs and MW",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -32607,7 +33275,11 @@
       "state": "open",
       "title": "verbs01: Wilson verbs and MW",
       "updated_at": "2026-05-30T20:03:45Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "verbs01: Wilson verbs and MW",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [
@@ -32626,7 +33298,11 @@
       "state": "open",
       "title": "Spaces and commas outside markup <s>aDika</s>` and `<s>aDika,</s>",
       "updated_at": "2026-05-30T20:03:49Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Spaces and commas outside markup <s>aDika</s>` and `<s>aDika,</s>",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -32643,7 +33319,11 @@
       "state": "open",
       "title": "Wilson roots correspondence to MW roots, step2a",
       "updated_at": "2026-05-30T20:03:52Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Wilson roots correspondence to MW roots, step2a",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -32694,7 +33374,11 @@
       "state": "open",
       "title": "Wilson roots correspondence to MW roots, step2",
       "updated_at": "2026-05-30T20:04:03Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Wilson roots correspondence to MW roots, step2",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -32711,7 +33395,11 @@
       "state": "open",
       "title": "Wilson roots correspondence to MW roots",
       "updated_at": "2026-05-30T20:04:06Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Wilson roots correspondence to MW roots",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -32728,7 +33416,11 @@
       "state": "open",
       "title": "Correspondence between roots in MW and Wilson",
       "updated_at": "2026-05-30T20:04:10Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Correspondence between roots in MW and Wilson",
+        "Status": "Todo"
+      }
     }
   ],
   "ArabicInSanskrit": [
@@ -35327,6 +36019,20 @@
   "sanskrit-lexicon.github.io": [
     {
       "assignees": [],
+      "closed_at": "2026-11-21T03:49:14Z",
+      "comments": 0,
+      "created_at": "2026-11-21T03:48:07Z",
+      "is_pull_request": true,
+      "labels": [],
+      "milestone": null,
+      "number": 20,
+      "state": "closed",
+      "title": "Cite & DOI surfaces dictionaries-only: drop ArabicInSanskrit/GreekInSanskrit workspace rows",
+      "updated_at": "2026-11-21T03:49:16Z",
+      "user": "gasyoun"
+    },
+    {
+      "assignees": [],
       "closed_at": "2026-11-08T15:07:18Z",
       "comments": 0,
       "created_at": "2026-11-08T15:06:40Z",
@@ -35919,7 +36625,11 @@
       "state": "open",
       "title": "docs-pass: BHS documentation review",
       "updated_at": "2026-05-30T19:49:37Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "docs-pass: BHS documentation review",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -35954,7 +36664,11 @@
       "state": "open",
       "title": "meta2 update",
       "updated_at": "2026-05-30T19:49:42Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "meta2 update",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [
@@ -35973,7 +36687,11 @@
       "state": "open",
       "title": "Tooltip revision",
       "updated_at": "2026-05-30T19:49:46Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Tooltip revision",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -36009,7 +36727,11 @@
       "state": "open",
       "title": "Semantic line breaks ",
       "updated_at": "2026-05-30T19:49:53Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Semantic line breaks ",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -36281,7 +37003,11 @@
       "state": "open",
       "title": "Links to Panini",
       "updated_at": "2026-05-30T19:43:56Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Links to Panini",
+        "Status": "Todo"
+      }
     }
   ],
   "alternateheadwords": [
@@ -38219,7 +38945,11 @@
       "state": "open",
       "title": "<HI> tag importance, part 2",
       "updated_at": "2026-05-30T19:44:41Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "<HI> tag importance, part 2",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [
@@ -38238,7 +38968,11 @@
       "state": "open",
       "title": "Request to review acc6.txt",
       "updated_at": "2026-06-27T04:47:09Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "Request to review acc6.txt",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [
@@ -38257,7 +38991,11 @@
       "state": "open",
       "title": "multiword headword tagging issues",
       "updated_at": "2026-05-30T19:44:48Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "multiword headword tagging issues",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [
@@ -38276,7 +39014,11 @@
       "state": "open",
       "title": "Rewrite literary resource tagging for long tags",
       "updated_at": "2026-05-30T19:44:52Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "Rewrite literary resource tagging for long tags",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -38294,7 +39036,11 @@
       "state": "open",
       "title": "locatives in headword",
       "updated_at": "2026-05-30T19:44:55Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "locatives in headword",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -38328,7 +39074,11 @@
       "state": "open",
       "title": "downstream modifications for XML and display",
       "updated_at": "2026-05-30T19:45:03Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "downstream modifications for XML and display",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -38413,7 +39163,11 @@
       "state": "open",
       "title": "Potentially missed literary resources",
       "updated_at": "2026-05-30T19:45:21Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "Potentially missed literary resources",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [
@@ -38451,7 +39205,11 @@
       "state": "open",
       "title": "Flag non-English words which are not headwords for examination",
       "updated_at": "2026-06-27T04:48:48Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "Flag non-English words which are not headwords for examination",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -38502,7 +39260,11 @@
       "state": "open",
       "title": "Analyze non-English words in decreasing order of occurrence",
       "updated_at": "2026-06-27T04:47:17Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "Analyze non-English words in decreasing order of occurrence",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -40727,7 +41489,11 @@
       "state": "open",
       "title": "Deploy og: preview meta + entry cards to the live host (one checkout pull)",
       "updated_at": "2026-11-13T08:18:49Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Deploy og: preview meta + entry cards to the live host (one checkout pull)",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -40860,7 +41626,11 @@
       "state": "open",
       "title": "Review+merge: 3 audit-residual PRs — apidev #168 (A1+A15), orig #2896 (O1), pywork #88 (P8)",
       "updated_at": "2026-09-06T18:36:46Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Review+merge: 3 audit-residual PRs — apidev #168 (A1+A15), orig #2896 (O1), pywork #88 (P8)",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -40893,7 +41663,11 @@
       "state": "open",
       "title": "Server pull needed: H4212 hardening merged (#165) — inert until you pull",
       "updated_at": "2026-10-12T15:02:37Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Server pull needed: H4212 hardening merged (#165) — inert until you pull",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -43733,7 +44507,11 @@
       "state": "open",
       "title": "[bug] ARMH runtime error",
       "updated_at": "2026-10-13T16:21:17Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "[bug] ARMH runtime error",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [
@@ -43752,7 +44530,11 @@
       "state": "open",
       "title": "[bug] PE runtime error",
       "updated_at": "2026-10-13T16:14:35Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "[bug] PE runtime error",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -43822,7 +44604,11 @@
       "state": "open",
       "title": "Update scripts now pull `main` and stop on failure (11 script fixes merged 15-09-2026)",
       "updated_at": "2026-09-15T07:01:04Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Update scripts now pull `main` and stop on failure (11 script fixes merged 15-09-2026)",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -44095,7 +44881,11 @@
       "state": "open",
       "title": "changelog.md case-duplicate was silently re-introduced after #65 — guard against recurrence",
       "updated_at": "2026-07-28T21:17:24Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "changelog.md case-duplicate was silently re-introduced after #65 — guard against recurrence",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -45540,7 +46330,11 @@
       "state": "open",
       "title": "MW: nine phwchild ids name no record, one phwparent lacks its comma",
       "updated_at": "2026-10-22T17:37:58Z",
-      "user": "arvicco"
+      "user": "arvicco",
+      "project_fields": {
+        "Title": "MW: nine phwchild ids name no record, one phwparent lacks its comma",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -45557,7 +46351,11 @@
       "state": "open",
       "title": "[bug]backstop-guard error",
       "updated_at": "2026-10-18T18:51:02Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "[bug]backstop-guard error",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -45571,7 +46369,11 @@
       "state": "open",
       "title": "[feature] Sense-structure collaboration on the kośas you digitized (NYBJ, ARMH, ACPH/ACSJ, NMMB) + kośa metadata",
       "updated_at": "2026-09-20T10:14:41Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "[feature] Sense-structure collaboration on the kośas you digitized (NYBJ, ARMH, ACPH/ACSJ, NMMB) + kośa metadata",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -45835,12 +46637,16 @@
       "state": "open",
       "title": "MW accent in non-Vedic texts and gender error",
       "updated_at": "2026-07-29T11:49:51Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "MW accent in non-Vedic texts and gender error",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
       "closed_at": "2026-07-30T03:17:05Z",
-      "comments": 6,
+      "comments": 7,
       "created_at": "2026-07-28T14:00:53Z",
       "is_pull_request": false,
       "labels": [
@@ -45850,7 +46656,7 @@
       "number": 2881,
       "state": "closed",
       "title": "[feature] single interface for online requests",
-      "updated_at": "2026-07-30T03:17:05Z",
+      "updated_at": "2026-11-21T07:53:11Z",
       "user": "dhammagift"
     },
     {
@@ -95237,7 +96043,11 @@
       "state": "open",
       "title": "XSS: disp/main.js renders raw XHR response into innerHTML (pattern fix: csl-apidev#171)",
       "updated_at": "2026-10-01T10:18:47Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "XSS: disp/main.js renders raw XHR response into innerHTML (pattern fix: csl-apidev#171)",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -95435,7 +96245,11 @@
       "state": "open",
       "title": "XSS: disp/main.js renders raw XHR response into innerHTML (pattern fix: csl-apidev#171)",
       "updated_at": "2026-10-01T10:18:57Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "XSS: disp/main.js renders raw XHR response into innerHTML (pattern fix: csl-apidev#171)",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -95611,7 +96425,11 @@
       "state": "open",
       "title": "XSS: disp/main.js renders raw XHR response into innerHTML (pattern fix: csl-apidev#171)",
       "updated_at": "2026-10-01T10:18:31Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "XSS: disp/main.js renders raw XHR response into innerHTML (pattern fix: csl-apidev#171)",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -95874,7 +96692,11 @@
       "state": "open",
       "title": "XSS: web/main.js renders raw XHR responses into innerHTML (pattern fix: csl-apidev#171)",
       "updated_at": "2026-10-01T10:19:16Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "XSS: web/main.js renders raw XHR responses into innerHTML (pattern fix: csl-apidev#171)",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -97247,7 +98069,11 @@
       "state": "open",
       "title": "Sanskrit Questions for Andhrabharati (Part-8)",
       "updated_at": "2026-11-17T04:05:26Z",
-      "user": "aumsanskrit"
+      "user": "aumsanskrit",
+      "project_fields": {
+        "Title": "Sanskrit Questions for Andhrabharati (Part-8)",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -97723,7 +98549,11 @@
       "state": "open",
       "title": "H3486 — Correction-queue pass over authorized AllvsPWG 99-item pool",
       "updated_at": "2026-09-04T18:12:51Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "H3486 — Correction-queue pass over authorized AllvsPWG 99-item pool",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -98141,7 +98971,11 @@
       "state": "open",
       "title": "Merge request for #356 — derived correction_loci.tsv is stale by 21 875 rows since batch_20260804",
       "updated_at": "2026-08-13T11:25:04Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Merge request for #356 — derived correction_loci.tsv is stale by 21 875 rows since batch_20260804",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -98155,7 +98989,11 @@
       "state": "open",
       "title": "[integrity] build_correction_viz.py crashes with KeyError: 'pwg' — derived viz cannot be regenerated, and the committed SVGs have no freshness signal",
       "updated_at": "2026-08-13T10:55:07Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "[integrity] build_correction_viz.py crashes with KeyError: 'pwg' — derived viz cannot be regenerated, and the committed SVGs have no freshness signal",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -104839,7 +105677,11 @@
       "state": "open",
       "title": "docs-pass: AP90 documentation review",
       "updated_at": "2026-05-30T19:46:45Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "docs-pass: AP90 documentation review",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -104890,7 +105732,11 @@
       "state": "open",
       "title": "dvAja print change?",
       "updated_at": "2026-06-27T10:35:13Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "dvAja print change?",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -104924,7 +105770,11 @@
       "state": "open",
       "title": "Scott's corrections to ap90",
       "updated_at": "2026-06-27T03:36:33Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Scott's corrections to ap90",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -104975,7 +105825,11 @@
       "state": "open",
       "title": "ap57_90 literary source",
       "updated_at": "2026-05-07T05:06:54Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "ap57_90 literary source",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -105009,7 +105863,11 @@
       "state": "open",
       "title": "Sanskrit spelling errors",
       "updated_at": "2026-06-27T10:30:21Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Sanskrit spelling errors",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -105077,7 +105935,11 @@
       "state": "open",
       "title": "Andhrabharati coding of AP90",
       "updated_at": "2026-05-07T05:07:53Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Andhrabharati coding of AP90",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -105094,7 +105956,11 @@
       "state": "open",
       "title": "Misc markup changes, Part 2",
       "updated_at": "2026-05-07T05:06:46Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Misc markup changes, Part 2",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -105111,7 +105977,11 @@
       "state": "open",
       "title": "Misc. markup corrections",
       "updated_at": "2026-05-07T05:26:22Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Misc. markup corrections",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -105163,7 +106033,11 @@
       "state": "open",
       "title": "Hitopadeśa link target",
       "updated_at": "2026-05-07T05:26:27Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Hitopadeśa link target",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -105180,7 +106054,11 @@
       "state": "open",
       "title": "Markup of literary source references, continued",
       "updated_at": "2026-05-07T05:06:35Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Markup of literary source references, continued",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -105197,7 +106075,11 @@
       "state": "open",
       "title": "Deep Page Hyperlinks (aka Page0463-c)",
       "updated_at": "2026-05-31T01:23:54Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Deep Page Hyperlinks (aka Page0463-c)",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -105316,7 +106198,11 @@
       "state": "open",
       "title": "Add AP Review",
       "updated_at": "2026-05-07T05:07:46Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Add AP Review",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -105333,7 +106219,11 @@
       "state": "open",
       "title": "verbs from 1957 ap",
       "updated_at": "2026-05-07T05:26:24Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "verbs from 1957 ap",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -105350,7 +106240,11 @@
       "state": "open",
       "title": "verbs01",
       "updated_at": "2026-05-07T05:07:39Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "verbs01",
+        "Status": "Todo"
+      }
     }
   ],
   "KRM": [
@@ -105619,7 +106513,11 @@
       "state": "open",
       "title": "krm-mdp-mw",
       "updated_at": "2026-05-29T21:25:44Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "krm-mdp-mw",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -105636,7 +106534,11 @@
       "state": "open",
       "title": "MDP-MW",
       "updated_at": "2026-05-29T21:25:37Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "MDP-MW",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -105653,7 +106555,11 @@
       "state": "open",
       "title": "KRM-MW",
       "updated_at": "2026-05-29T21:25:29Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "KRM-MW",
+        "Status": "Todo"
+      }
     }
   ],
   "BUR": [
@@ -106004,7 +106910,11 @@
       "state": "open",
       "title": "verbs01",
       "updated_at": "2026-05-29T21:21:48Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "verbs01",
+        "Status": "Todo"
+      }
     }
   ],
   "CAE": [
@@ -106270,7 +107180,11 @@
       "state": "open",
       "title": "docs-pass: CAE documentation review",
       "updated_at": "2026-05-30T19:50:27Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "docs-pass: CAE documentation review",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -106304,7 +107218,11 @@
       "state": "open",
       "title": "Missing commas in digitization",
       "updated_at": "2026-05-30T19:50:32Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Missing commas in digitization",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -106322,7 +107240,11 @@
       "state": "open",
       "title": "verbs01 ",
       "updated_at": "2026-05-30T19:50:35Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "verbs01 ",
+        "Status": "Todo"
+      }
     }
   ],
   "CCS": [
@@ -106549,7 +107471,11 @@
       "state": "open",
       "title": "New CCS Scan",
       "updated_at": "2026-05-30T19:51:04Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "New CCS Scan",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -106567,7 +107493,11 @@
       "state": "open",
       "title": "verbs01",
       "updated_at": "2026-05-30T19:51:08Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "verbs01",
+        "Status": "Todo"
+      }
     }
   ],
   "MD": [
@@ -106889,7 +107819,11 @@
       "state": "open",
       "title": "docs-pass: MD documentation review",
       "updated_at": "2026-05-30T19:54:08Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "docs-pass: MD documentation review",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -106941,7 +107875,11 @@
       "state": "open",
       "title": "MD subheadwords",
       "updated_at": "2026-05-07T14:54:55Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "MD subheadwords",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -106959,7 +107897,11 @@
       "state": "open",
       "title": "Abbreviation tooltips",
       "updated_at": "2026-05-07T14:52:50Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Abbreviation tooltips",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -107067,7 +108009,11 @@
       "state": "open",
       "title": "slp1-iast for L, |, ~ and hiatus (ळ, ळ्ह, ँ)",
       "updated_at": "2026-05-07T14:53:20Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "slp1-iast for L, |, ~ and hiatus (ळ, ळ्ह, ँ)",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -107102,7 +108048,11 @@
       "state": "open",
       "title": "Python deva_iast_comp step0",
       "updated_at": "2026-05-07T14:52:35Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Python deva_iast_comp step0",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -107137,7 +108087,11 @@
       "state": "open",
       "title": "verbs01",
       "updated_at": "2026-05-07T14:52:26Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "verbs01",
+        "Status": "Todo"
+      }
     }
   ],
   "STC": [
@@ -107366,7 +108320,11 @@
       "state": "open",
       "title": "Abbreviations from 'ADDITIONS ET CORRECTIONS'",
       "updated_at": "2026-05-30T20:00:07Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Abbreviations from 'ADDITIONS ET CORRECTIONS'",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -107384,7 +108342,11 @@
       "state": "open",
       "title": "verbs01",
       "updated_at": "2026-05-30T20:00:11Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "verbs01",
+        "Status": "Todo"
+      }
     }
   ],
   "BEN": [
@@ -107535,7 +108497,11 @@
       "state": "open",
       "title": "[markup] AND headwords",
       "updated_at": "2026-07-29T11:54:40Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "[markup] AND headwords",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -107594,7 +108560,11 @@
       "state": "open",
       "title": "BEN LS pdf sources",
       "updated_at": "2026-07-09T04:05:42Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "BEN LS pdf sources",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -107645,7 +108615,11 @@
       "state": "open",
       "title": "Web Display - Tracker for the BEN links",
       "updated_at": "2026-07-09T11:33:44Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "Web Display - Tracker for the BEN links",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -107911,7 +108885,11 @@
       "state": "open",
       "title": "docs-pass: BEN documentation review",
       "updated_at": "2026-05-30T19:48:35Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "docs-pass: BEN documentation review",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -108086,7 +109064,11 @@
       "state": "open",
       "title": "verbs01",
       "updated_at": "2026-05-30T19:49:08Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "verbs01",
+        "Status": "Todo"
+      }
     }
   ],
   "temp_corrections_ae": [
@@ -110601,7 +111583,11 @@
       "state": "open",
       "title": "BOR possible additional material ",
       "updated_at": "2026-05-29T21:14:53Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "BOR possible additional material ",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -110618,7 +111604,11 @@
       "state": "open",
       "title": "Yj -> jY",
       "updated_at": "2026-05-29T21:14:45Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Yj -> jY",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -110635,7 +111625,11 @@
       "state": "open",
       "title": "comma, semicolon etc inside Devanagari scope",
       "updated_at": "2026-05-29T21:14:38Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "comma, semicolon etc inside Devanagari scope",
+        "Status": "Todo"
+      }
     }
   ],
   "csl-newsletter": [
@@ -111894,7 +112888,11 @@
       "state": "open",
       "title": "docs-pass: INM documentation review",
       "updated_at": "2026-06-27T10:47:12Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "docs-pass: INM documentation review",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -111945,7 +112943,11 @@
       "state": "open",
       "title": "Space Missing (1000 names2 --> 1000 names 2)",
       "updated_at": "2026-05-29T21:24:17Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Space Missing (1000 names2 --> 1000 names 2)",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -112064,7 +113066,11 @@
       "state": "open",
       "title": "INM Concordance ",
       "updated_at": "2026-05-29T21:23:17Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "INM Concordance ",
+        "Status": "Todo"
+      }
     }
   ],
   "literarysource": [
@@ -112673,7 +113679,11 @@
       "state": "open",
       "title": "deva-slp1 anomaly",
       "updated_at": "2026-05-29T21:28:21Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "deva-slp1 anomaly",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -113002,7 +114012,11 @@
       "state": "open",
       "title": "LRV ??? entries",
       "updated_at": "2026-06-26T15:51:34Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "LRV ??? entries",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -113036,7 +114050,11 @@
       "state": "open",
       "title": "LRV compounds - Add markup for indentation level for compounds",
       "updated_at": "2026-05-30T19:52:05Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "LRV compounds - Add markup for indentation level for compounds",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -113316,7 +114334,11 @@
       "state": "open",
       "title": "Debatable entries",
       "updated_at": "2026-05-30T19:53:00Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "Debatable entries",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -114531,7 +115553,11 @@
       "state": "open",
       "title": "Fri placement on Home page",
       "updated_at": "2026-05-06T22:11:59Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Fri placement on Home page",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -114548,7 +115574,11 @@
       "state": "open",
       "title": "Tooltips for abbreviatons",
       "updated_at": "2026-05-06T22:11:27Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Tooltips for abbreviatons",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -114690,7 +115720,11 @@
       "state": "open",
       "title": "Sanskrtská čítanka 1956",
       "updated_at": "2026-05-06T22:11:44Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Sanskrtská čítanka 1956",
+        "Status": "Todo"
+      }
     }
   ],
   "AMAR": [
@@ -114933,7 +115967,11 @@
       "state": "open",
       "title": "[integrity] LICENSE file (GPL v2) conflicts with README's license table (CC-BY-SA-4.0)",
       "updated_at": "2026-07-28T05:04:06Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "[integrity] LICENSE file (GPL v2) conflicts with README's license table (CC-BY-SA-4.0)",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -115037,7 +116075,11 @@
       "state": "open",
       "title": "Gender information for meanings in nAnArthavarga",
       "updated_at": "2026-05-29T05:10:54Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "Gender information for meanings in nAnArthavarga",
+        "Status": "Todo"
+      }
     }
   ],
   "AP": [
@@ -115359,7 +116401,11 @@
       "state": "open",
       "title": "[markup] Add Homonym Numbers",
       "updated_at": "2026-07-12T04:05:46Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "[markup] Add Homonym Numbers",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -115478,7 +116524,11 @@
       "state": "open",
       "title": "[markup] ━II, ━III etc denote different verbs altogether",
       "updated_at": "2026-05-30T19:46:14Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "[markup] ━II, ━III etc denote different verbs altogether",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -115495,7 +116545,11 @@
       "state": "open",
       "title": "Add compounds to compounds list",
       "updated_at": "2026-05-07T14:47:33Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "Add compounds to compounds list",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -115628,7 +116682,11 @@
       "state": "open",
       "title": "Comp. analysis",
       "updated_at": "2026-05-07T14:47:47Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "Comp. analysis",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -115697,7 +116755,11 @@
       "state": "open",
       "title": "Third pattern",
       "updated_at": "2026-05-07T14:47:44Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "Third pattern",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -115714,7 +116776,11 @@
       "state": "open",
       "title": "One more pattern missing for headword identification",
       "updated_at": "2026-06-03T13:05:24Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "One more pattern missing for headword identification",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -115748,7 +116814,11 @@
       "state": "open",
       "title": "Apte compound headwords - scope for diff resolution",
       "updated_at": "2026-05-07T14:47:32Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "Apte compound headwords - scope for diff resolution",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -115765,7 +116835,11 @@
       "state": "open",
       "title": "Activate link targets - tooltips",
       "updated_at": "2026-05-07T14:47:30Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "Activate link targets - tooltips",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -116199,7 +117273,11 @@
       "state": "open",
       "title": "docs-pass: SHS documentation review",
       "updated_at": "2026-05-30T19:58:01Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "docs-pass: SHS documentation review",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -116216,7 +117294,11 @@
       "state": "open",
       "title": "Questions for Andhrabharati",
       "updated_at": "2026-05-30T19:58:05Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "Questions for Andhrabharati",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -116250,7 +117332,11 @@
       "state": "open",
       "title": "EOL hyphen",
       "updated_at": "2026-05-30T19:58:10Z",
-      "user": "funderburkjim"
+      "user": "funderburkjim",
+      "project_fields": {
+        "Title": "EOL hyphen",
+        "Status": "Todo"
+      }
     }
   ],
   "KNA": [
@@ -116537,7 +117623,11 @@
       "state": "open",
       "title": "Knauer Sanskrit-Russian Vocabulary: Source Files",
       "updated_at": "2026-05-29T05:10:51Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Knauer Sanskrit-Russian Vocabulary: Source Files",
+        "Status": "Todo"
+      }
     }
   ],
   "KOW": [
@@ -116761,7 +117851,11 @@
       "state": "open",
       "title": "Kossowich Sanskrit-Russian Dictionary: Source Files",
       "updated_at": "2026-05-29T05:10:58Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Kossowich Sanskrit-Russian Dictionary: Source Files",
+        "Status": "Todo"
+      }
     }
   ],
   "csl-app": [
@@ -117025,7 +118119,11 @@
       "state": "open",
       "title": "Samanarthaka kosha display change request",
       "updated_at": "2026-07-29T11:43:23Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "Samanarthaka kosha display change request",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -118275,7 +119373,11 @@
       "state": "open",
       "title": "Modern IAST PUI <= 5 occurrences",
       "updated_at": "2026-05-29T05:11:07Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "Modern IAST PUI <= 5 occurrences",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -118309,7 +119411,11 @@
       "state": "open",
       "title": "Questions for resolution",
       "updated_at": "2026-05-29T05:11:13Z",
-      "user": "drdhaval2785"
+      "user": "drdhaval2785",
+      "project_fields": {
+        "Title": "Questions for resolution",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -118471,6 +119577,76 @@
   "csl-observatory": [
     {
       "assignees": [],
+      "closed_at": "2026-11-21T18:30:57Z",
+      "comments": 0,
+      "created_at": "2026-11-21T18:29:47Z",
+      "is_pull_request": true,
+      "labels": [],
+      "milestone": null,
+      "number": 339,
+      "state": "closed",
+      "title": "fix(headline-claims): per-identity repo count can't collide with live headline token",
+      "updated_at": "2026-11-21T18:31:00Z",
+      "user": "gasyoun"
+    },
+    {
+      "assignees": [],
+      "closed_at": "2026-11-21T05:26:28Z",
+      "comments": 0,
+      "created_at": "2026-11-21T05:24:33Z",
+      "is_pull_request": true,
+      "labels": [],
+      "milestone": null,
+      "number": 338,
+      "state": "closed",
+      "title": "fix(refresh): drop the force-merge fallback from both data lanes (YJG)",
+      "updated_at": "2026-11-21T05:26:30Z",
+      "user": "gasyoun"
+    },
+    {
+      "assignees": [],
+      "closed_at": "2026-11-18T16:15:54Z",
+      "comments": 0,
+      "created_at": "2026-11-18T16:14:09Z",
+      "is_pull_request": true,
+      "labels": [],
+      "milestone": null,
+      "number": 337,
+      "state": "closed",
+      "title": "docs(ai-state): H7879 completed row",
+      "updated_at": "2026-11-18T16:15:58Z",
+      "user": "gasyoun"
+    },
+    {
+      "assignees": [],
+      "closed_at": "2026-11-18T16:01:10Z",
+      "comments": 0,
+      "created_at": "2026-11-18T15:53:29Z",
+      "is_pull_request": true,
+      "labels": [],
+      "milestone": null,
+      "number": 336,
+      "state": "closed",
+      "title": "fix(refresh): H7879 round 3 — commit the requoted surface + refresh-proof the test anchors",
+      "updated_at": "2026-11-18T16:01:13Z",
+      "user": "gasyoun"
+    },
+    {
+      "assignees": [],
+      "closed_at": "2026-11-18T15:38:31Z",
+      "comments": 0,
+      "created_at": "2026-11-18T15:31:05Z",
+      "is_pull_request": true,
+      "labels": [],
+      "milestone": null,
+      "number": 335,
+      "state": "closed",
+      "title": "data: weekly snapshot 2026-11-18",
+      "updated_at": "2026-11-18T15:38:32Z",
+      "user": "github-actions[bot]"
+    },
+    {
+      "assignees": [],
       "closed_at": "2026-11-18T15:10:09Z",
       "comments": 0,
       "created_at": "2026-11-18T15:08:31Z",
@@ -118606,7 +119782,7 @@
       "number": 325,
       "state": "closed",
       "title": "CLLG vs open-Sanskrit estate — dated strategy scorecard + derived public page (H8426)",
-      "updated_at": "2026-11-18T08:49:04Z",
+      "updated_at": "2026-11-18T19:58:00Z",
       "user": "gasyoun"
     },
     {
@@ -118806,7 +119982,7 @@
       "number": 311,
       "state": "closed",
       "title": "csl-observatory: surface the code-release Zenodo DOI (README + CITATION.cff) (H7887)",
-      "updated_at": "2026-11-11T01:18:52Z",
+      "updated_at": "2026-11-18T19:58:02Z",
       "user": "gasyoun"
     },
     {
@@ -118877,7 +120053,11 @@
       "state": "open",
       "title": "Contributor identity worksheet: confirm your name / ORCID / public-display consent (SC1)",
       "updated_at": "2026-11-11T04:53:00Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "Contributor identity worksheet: confirm your name / ORCID / public-display consent (SC1)",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -118909,7 +120089,11 @@
       "state": "open",
       "title": "H6257 - Чхандас-профиль корпуса: детектор метра и распределение",
       "updated_at": "2026-11-06T17:33:03Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "H6257 - Чхандас-профиль корпуса: детектор метра и распределение",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -119212,7 +120396,7 @@
       "number": 283,
       "state": "closed",
       "title": "feat(agent-lane): H7123 agent-lane census — merged_at snapshot, calibrated attribution rule, per-lane metrics",
-      "updated_at": "2026-10-23T01:35:34Z",
+      "updated_at": "2026-11-18T19:58:02Z",
       "user": "gasyoun"
     },
     {
@@ -119394,7 +120578,7 @@
       "number": 270,
       "state": "closed",
       "title": "H6388: OBS-T field-standard metrics — detection P/R/F0.5 + FPR + Krippendorff α, κ kept, E32 gates untouched",
-      "updated_at": "2026-10-11T14:19:54Z",
+      "updated_at": "2026-11-18T20:01:31Z",
       "user": "gasyoun"
     },
     {
@@ -119408,7 +120592,7 @@
       "number": 269,
       "state": "closed",
       "title": "H6389: OBS-T two-axis typology ↔ ERRANT/GEC crosswalk + A15 CHAOSS/MSR framing (v1.14.1)",
-      "updated_at": "2026-10-29T03:48:34Z",
+      "updated_at": "2026-11-18T20:01:31Z",
       "user": "gasyoun"
     },
     {
@@ -119450,7 +120634,7 @@
       "number": 266,
       "state": "closed",
       "title": "H6410 addendum: E32 canary +7 pins (full paper number coverage)",
-      "updated_at": "2026-10-11T01:38:40Z",
+      "updated_at": "2026-11-18T19:58:02Z",
       "user": "gasyoun"
     },
     {
@@ -119492,7 +120676,7 @@
       "number": 263,
       "state": "closed",
       "title": "H6052: mānadaṇḍa corpus-wide DCS census (2 attestations, Bhāmaha 3.36 attribution case)",
-      "updated_at": "2026-10-29T03:48:30Z",
+      "updated_at": "2026-11-18T20:01:30Z",
       "user": "gasyoun"
     },
     {
@@ -119639,7 +120823,11 @@
       "state": "open",
       "title": "paper-priv-violation: 2026-10-04",
       "updated_at": "2026-10-04T11:29:25Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "paper-priv-violation: 2026-10-04",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -119960,7 +121148,7 @@
       "number": 230,
       "state": "closed",
       "title": "docs(roadmap): H5363 verdict pass — REFRESH (truth-pass banner + gated what-is-left)",
-      "updated_at": "2026-09-28T01:12:32Z",
+      "updated_at": "2026-11-18T19:58:01Z",
       "user": "gasyoun"
     },
     {
@@ -121264,7 +122452,7 @@
       "number": 142,
       "state": "closed",
       "title": "docs(.ai_state): H2037 completion + site-build gotchas",
-      "updated_at": "2026-08-05T19:46:59Z",
+      "updated_at": "2026-11-18T19:58:01Z",
       "user": "gasyoun"
     },
     {
@@ -121527,7 +122715,7 @@
       "number": 124,
       "state": "closed",
       "title": "fix(H1736): repair pages-build Liquid error + dictionary/tooling audit drift",
-      "updated_at": "2026-07-28T06:39:08Z",
+      "updated_at": "2026-11-18T19:58:01Z",
       "user": "gasyoun"
     },
     {
@@ -121605,7 +122793,7 @@
       "number": 119,
       "state": "closed",
       "title": "docs(RH4): org-wide .gitattributes (eol=lf) rollout complete",
-      "updated_at": "2026-07-28T06:38:56Z",
+      "updated_at": "2026-11-18T19:58:01Z",
       "user": "gasyoun"
     },
     {
@@ -121843,7 +123031,7 @@
       "number": 102,
       "state": "closed",
       "title": "H1385: blind cross-model IAA on the OBS-T location axis — kappa 0.906 [0.872-0.938]",
-      "updated_at": "2026-08-05T19:50:31Z",
+      "updated_at": "2026-11-18T19:58:00Z",
       "user": "gasyoun"
     },
     {
@@ -123466,6 +124654,48 @@
   "csl-atlas": [
     {
       "assignees": [],
+      "closed_at": "2026-11-21T04:39:48Z",
+      "comments": 0,
+      "created_at": "2026-11-21T04:37:02Z",
+      "is_pull_request": true,
+      "labels": [],
+      "milestone": null,
+      "number": 725,
+      "state": "closed",
+      "title": "H137 — L0_RESULTS: LRV/FRI annotation resolved, placements recorded",
+      "updated_at": "2026-11-21T04:39:51Z",
+      "user": "gasyoun"
+    },
+    {
+      "assignees": [],
+      "closed_at": "2026-11-21T04:28:55Z",
+      "comments": 0,
+      "created_at": "2026-11-21T04:26:47Z",
+      "is_pull_request": true,
+      "labels": [],
+      "milestone": null,
+      "number": 724,
+      "state": "closed",
+      "title": "chore(release): v0.21.8",
+      "updated_at": "2026-11-21T04:28:58Z",
+      "user": "gasyoun"
+    },
+    {
+      "assignees": [],
+      "closed_at": "2026-11-21T04:34:28Z",
+      "comments": 0,
+      "created_at": "2026-11-21T04:10:15Z",
+      "is_pull_request": true,
+      "labels": [],
+      "milestone": null,
+      "number": 723,
+      "state": "closed",
+      "title": "H137 — LRV/FRI Patel annotation: MG votes applied (7 assigned, 3 deferred)",
+      "updated_at": "2026-11-21T04:34:30Z",
+      "user": "gasyoun"
+    },
+    {
+      "assignees": [],
       "closed_at": "2026-11-18T11:16:05Z",
       "comments": 0,
       "created_at": "2026-11-18T11:11:03Z",
@@ -123475,7 +124705,7 @@
       "number": 722,
       "state": "closed",
       "title": "H8428 — pb/lb-anchored TEI sample + DTS conformance probe (AP page 0001)",
-      "updated_at": "2026-11-18T11:16:07Z",
+      "updated_at": "2026-11-19T01:29:59Z",
       "user": "gasyoun"
     },
     {
@@ -123536,16 +124766,16 @@
     },
     {
       "assignees": [],
-      "closed_at": null,
-      "comments": 0,
+      "closed_at": "2026-11-21T04:09:23Z",
+      "comments": 1,
       "created_at": "2026-11-16T16:36:11Z",
       "is_pull_request": true,
       "labels": [],
       "milestone": null,
       "number": 717,
-      "state": "open",
+      "state": "closed",
       "title": "fix(pre-push): URL-target normalization port (H8360)",
-      "updated_at": "2026-11-16T16:36:11Z",
+      "updated_at": "2026-11-21T04:09:26Z",
       "user": "gasyoun"
     },
     {
@@ -123690,7 +124920,11 @@
       "state": "open",
       "title": "H5316 - P2 sense inheritance to 5/5 - fold pool-adjudicated R2 rows and kappa, final author pass",
       "updated_at": "2026-11-06T17:29:56Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "H5316 - P2 sense inheritance to 5/5 - fold pool-adjudicated R2 rows and kappa, final author pass",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -126086,7 +127320,11 @@
       "state": "open",
       "title": "paper-priv-violation: 2026-10-04",
       "updated_at": "2026-10-04T11:29:45Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "paper-priv-violation: 2026-10-04",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -127920,7 +129158,11 @@
       "state": "open",
       "title": "[integrity] MBh presence lane reported non-retrieval as textual absence (twice) — H2845",
       "updated_at": "2026-08-16T09:44:08Z",
-      "user": "gasyoun"
+      "user": "gasyoun",
+      "project_fields": {
+        "Title": "[integrity] MBh presence lane reported non-retrieval as textual absence (twice) — H2845",
+        "Status": "Todo"
+      }
     },
     {
       "assignees": [],
@@ -141970,6 +143212,48 @@
     }
   ],
   "csl-pyutil": [
+    {
+      "assignees": [],
+      "closed_at": "2026-11-21T05:57:06Z",
+      "comments": 0,
+      "created_at": "2026-11-21T05:56:56Z",
+      "is_pull_request": true,
+      "labels": [],
+      "milestone": null,
+      "number": 57,
+      "state": "closed",
+      "title": "docs: AGENTS.md landing route — auto-merge, not human merge (MG 21-11-2026)",
+      "updated_at": "2026-11-21T06:30:52Z",
+      "user": "gasyoun"
+    },
+    {
+      "assignees": [],
+      "closed_at": "2026-11-21T05:41:33Z",
+      "comments": 0,
+      "created_at": "2026-11-21T05:08:03Z",
+      "is_pull_request": true,
+      "labels": [],
+      "milestone": null,
+      "number": 56,
+      "state": "closed",
+      "title": "feat(review-sheet): eval_holdout blackout for github_inbox (H8433)",
+      "updated_at": "2026-11-21T05:41:36Z",
+      "user": "gasyoun"
+    },
+    {
+      "assignees": [],
+      "closed_at": "2026-11-21T04:22:34Z",
+      "comments": 0,
+      "created_at": "2026-11-21T04:21:44Z",
+      "is_pull_request": true,
+      "labels": [],
+      "milestone": null,
+      "number": 55,
+      "state": "closed",
+      "title": "feat(review-sheet): V18 intro collapse — header folds to one line by default (MG 21-11-2026)",
+      "updated_at": "2026-11-21T04:22:36Z",
+      "user": "gasyoun"
+    },
     {
       "assignees": [],
       "closed_at": "2026-10-27T00:03:49Z",

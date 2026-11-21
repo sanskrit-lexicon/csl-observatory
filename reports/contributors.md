@@ -9,12 +9,12 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **GitHub**: [@gasyoun](https://github.com/gasyoun)
 - **ORCID**: [0000-0003-4513-884X](https://orcid.org/0000-0003-4513-884X)
 - **Affiliation**: Cologne Digital Sanskrit Dictionaries
-- **Active span**: 2014-01-14 → 2026-11-18 (13 years)
-- **Commits**: 5,137 across 80 distinct repos
+- **Active span**: 2014-01-14 → 2026-11-21 (13 years)
+- **Commits**: 5,165 across 80 distinct repos
 - **Issues created**: 677
-- **Lines changed**: +35,448,455 / −3,390,886
+- **Lines changed**: +35,995,258 / −3,391,288
 - **Role notes**: Project organisation, documentation, Russian etymologies, accents.
-- **Top repositories** (by commits): `csl-atlas` (912), `csl-observatory` (668), `csl-standards` (281), `MWS` (271), `csl-guides` (268), `csl-apidev` (218), `csl-corrections` (164), `sanskrit-util` (132)
+- **Top repositories** (by commits): `csl-atlas` (918), `csl-observatory` (673), `csl-standards` (281), `MWS` (276), `csl-guides` (268), `csl-apidev` (218), `csl-corrections` (164), `sanskrit-util` (132)
 
 ## Maintainer (1)
 
@@ -24,11 +24,11 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **ORCID**: *(awaiting)*
 - **Affiliation**: Cologne Digital Sanskrit Dictionaries
 - **Active span**: 2014-01-15 → 2026-09-05 (13 years)
-- **Commits**: 2,940 across 54 distinct repos
+- **Commits**: 3,268 across 54 distinct repos
 - **Issues created**: 2592
-- **Lines changed**: +48,575,716 / −4,392,576
+- **Lines changed**: +53,937,366 / −5,139,551
 - **Role notes**: Primary repository maintainer; tooling and correction workflows across all dictionaries.
-- **Top repositories** (by commits): `csl-apidev` (456), `csl-corrections` (431), `csl-pywork` (329), `PWG` (303), `CORRECTIONS` (270), `PWK` (201), `MWS` (108), `MWinflect` (82)
+- **Top repositories** (by commits): `CORRECTIONS` (482), `csl-apidev` (456), `csl-corrections` (431), `csl-pywork` (329), `PWG` (303), `MWS` (224), `PWK` (201), `MWinflect` (82)
 
 ## Core (3)
 
@@ -37,24 +37,24 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **GitHub**: [@drdhaval2785](https://github.com/drdhaval2785)
 - **ORCID**: *(awaiting)*
 - **Affiliation**: Cologne Digital Sanskrit Dictionaries
-- **Active span**: 2015-11-24 → 2026-11-12 (12 years)
-- **Commits**: 1,951 across 34 distinct repos
+- **Active span**: 2015-11-08 → 2026-11-12 (12 years)
+- **Commits**: 2,074 across 34 distinct repos
 - **Issues created**: 2091
-- **Lines changed**: +26,226,999 / −6,739,617
+- **Lines changed**: +35,661,581 / −7,262,116
 - **Role notes**: Automation of link-splitting, index checking, AB/Cologne comparison tooling, k1k2 clash analysis.
-- **Top repositories** (by commits): `csl-corrections` (398), `csl-app` (186), `csl-pywork` (154), `csl-orig` (133), `LRV` (121), `COLOGNE` (118), `BEN` (109), `CORRECTIONS` (94)
+- **Top repositories** (by commits): `csl-corrections` (398), `csl-app` (186), `CORRECTIONS` (182), `csl-pywork` (154), `csl-orig` (133), `LRV` (121), `COLOGNE` (118), `BEN` (109)
 
 ### Nagabhushana Rao
 
 - **GitHub**: [@Andhrabharati](https://github.com/Andhrabharati)
 - **ORCID**: *(awaiting)*
 - **Affiliation**: Andhrabharati
-- **Active span**: 2021-05-28 → 2023-04-03 (3 years)
-- **Commits**: 25 across 3 distinct repos
+- **Active span**: 2021-01-23 → 2023-04-03 (3 years)
+- **Commits**: 63 across 3 distinct repos
 - **Issues created**: 90
-- **Lines changed**: +1,375,437 / −226,487
+- **Lines changed**: +5,941,482 / −1,768,472
 - **Role notes**: AB version of multiple dictionaries; Greek words file; extensive issue contributions.
-- **Top repositories** (by commits): `mw-dev` (18), `AP90` (6), `MWS` (1)
+- **Top repositories** (by commits): `MWS` (39), `mw-dev` (18), `AP90` (6)
 
 ### Thomas Malten
 
@@ -502,11 +502,11 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@AnnaRybakovaT](https://github.com/AnnaRybakovaT)
 - **Active span**: 2020-12-15 → 2023-06-25 (4 years)
-- **Commits**: 68 across 9 distinct repos
+- **Commits**: 71 across 10 distinct repos
 - **Issues created**: 0
-- **Lines changed**: +68,341 / −4,791
+- **Lines changed**: +71,555 / −6,432
 - **Role notes**: Onboarding contributor 2020–2023 — Python pipeline development.
-- **Top repositories** (by commits): `MD` (36), `PWK` (9), `CAE` (7), `CORRECTIONS` (6), `BUR` (3), `temp_corrections_ap90` (3), `BOP` (2), `SKD` (1)
+- **Top repositories** (by commits): `MD` (36), `PWK` (9), `CAE` (7), `CORRECTIONS` (6), `MWS` (3), `BUR` (3), `temp_corrections_ap90` (3), `BOP` (2)
 
 ### (misconfigured git client)
 
