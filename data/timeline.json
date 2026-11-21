@@ -5,14 +5,14 @@
     "2016": 397,
     "2017": 276,
     "2018": 152,
-    "2019": 356,
-    "2020": 362,
-    "2021": 1313,
-    "2022": 554,
-    "2023": 418,
-    "2024": 396,
-    "2025": 614,
-    "2026": 7646
+    "2019": 417,
+    "2020": 631,
+    "2021": 1705,
+    "2022": 707,
+    "2023": 580,
+    "2024": 620,
+    "2025": 873,
+    "2026": 8254
   },
   "commits_by_year_per_repo": {
     "2014": {
@@ -90,6 +90,7 @@
     "2019": {
       "csl-apidev": 94,
       "csl-pywork": 81,
+      "csl-orig": 61,
       "csl-corrections": 49,
       "cologne-stardict": 45,
       "csl-inflect": 24,
@@ -103,6 +104,7 @@
       "csl-westergaard": 2
     },
     "2020": {
+      "csl-orig": 269,
       "csl-corrections": 72,
       "csl-apidev": 59,
       "csl-pywork": 41,
@@ -133,6 +135,7 @@
       "csl-whitroot": 1
     },
     "2021": {
+      "csl-orig": 392,
       "cologne-stardict": 260,
       "MWS": 142,
       "csl-pywork": 106,
@@ -170,6 +173,7 @@
       "cologne-hugo": 1
     },
     "2022": {
+      "csl-orig": 153,
       "LRV": 119,
       "MWS": 56,
       "csl-apidev": 53,
@@ -200,6 +204,7 @@
       "csl-inflect": 1
     },
     "2023": {
+      "csl-orig": 162,
       "PWK": 77,
       "csl-pywork": 40,
       "GRA": 39,
@@ -228,6 +233,7 @@
       "avlinks": 1
     },
     "2024": {
+      "csl-orig": 224,
       "csl-corrections": 118,
       "MWS": 54,
       "csl-apidev": 52,
@@ -252,6 +258,7 @@
       "BEN": 1
     },
     "2025": {
+      "csl-orig": 259,
       "PWG": 220,
       "csl-corrections": 152,
       "COLOGNE": 88,
@@ -270,6 +277,7 @@
     },
     "2026": {
       "csl-atlas": 932,
+      "csl-orig": 808,
       "csl-observatory": 718,
       "csl-corrections": 688,
       "cologne-stardict": 440,
@@ -279,7 +287,6 @@
       "csl-apidev": 284,
       "csl-app": 227,
       "csl-pywork": 215,
-      "csl-orig": 200,
       "AP": 172,
       "PWG": 160,
       "BEN": 145,

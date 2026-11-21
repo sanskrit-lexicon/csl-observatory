@@ -1,7 +1,7 @@
 [
   {
     "login": "gasyoun",
-    "commits_total": 5165,
+    "commits_total": 5101,
     "commits_per_repo": {
       "csl-atlas": 918,
       "csl-observatory": 673,
@@ -15,7 +15,6 @@
       "csl-pywork": 110,
       "GRA": 71,
       "PWK": 64,
-      "csl-orig": 64,
       "csl-pyutil": 55,
       "COLOGNE": 53,
       "ApteES": 48,
@@ -84,8 +83,8 @@
       "santamlegacy": 3,
       "test_cologne_push": 3
     },
-    "additions_total": 35995258,
-    "deletions_total": 3391288,
+    "additions_total": 35742983,
+    "deletions_total": 3285921,
     "first_commit": "2014-01-14T14:14:31Z",
     "last_commit": "2026-11-21T18:30:56Z",
     "repos_touched": [
@@ -146,7 +145,6 @@
       "csl-lslink",
       "csl-newsletter",
       "csl-observatory",
-      "csl-orig",
       "csl-pyutil",
       "csl-pywork",
       "csl-santam",
@@ -244,11 +242,11 @@
     "span_first": "2014-01-14",
     "span_last": "2026-11-21",
     "span_years": 13,
-    "repos_touched_count": 80
+    "repos_touched_count": 79
   },
   {
     "login": "funderburkjim",
-    "commits_total": 3268,
+    "commits_total": 3269,
     "commits_per_repo": {
       "CORRECTIONS": 482,
       "csl-apidev": 456,
@@ -303,7 +301,8 @@
       "LRV": 2,
       "SHS": 2,
       "GreekInSanskrit": 1,
-      "VEI": 1
+      "VEI": 1,
+      "csl-orig": 1
     },
     "additions_total": 53937366,
     "deletions_total": 5139551,
@@ -350,6 +349,7 @@
       "csl-kale",
       "csl-lslink",
       "csl-newsletter",
+      "csl-orig",
       "csl-pywork",
       "csl-santam",
       "csl-westergaard",
@@ -440,17 +440,16 @@
     "span_first": "2014-01-15",
     "span_last": "2026-09-05",
     "span_years": 13,
-    "repos_touched_count": 54
+    "repos_touched_count": 55
   },
   {
     "login": "drdhaval2785",
-    "commits_total": 2074,
+    "commits_total": 1941,
     "commits_per_repo": {
       "csl-corrections": 398,
       "csl-app": 186,
       "CORRECTIONS": 182,
       "csl-pywork": 154,
-      "csl-orig": 133,
       "LRV": 121,
       "COLOGNE": 118,
       "BEN": 109,
@@ -481,10 +480,10 @@
       "cologne-hugo": 1,
       "csl-lslink": 1
     },
-    "additions_total": 35661581,
-    "deletions_total": 7262116,
+    "additions_total": 35291000,
+    "deletions_total": 6995413,
     "first_commit": "2015-11-08T10:13:44Z",
-    "last_commit": "2026-11-12T17:43:10Z",
+    "last_commit": "2026-11-12T17:32:59Z",
     "repos_touched": [
       "ACC",
       "AMAR",
@@ -513,7 +512,6 @@
       "csl-doc",
       "csl-lslink",
       "csl-newsletter",
-      "csl-orig",
       "csl-pywork",
       "csl-sqlite",
       "hwnorm2",
@@ -571,12 +569,13 @@
     "span_first": "2015-11-08",
     "span_last": "2026-11-12",
     "span_years": 12,
-    "repos_touched_count": 34
+    "repos_touched_count": 33
   },
   {
     "login": "drdhaval2785@gmail.com",
-    "commits_total": 982,
+    "commits_total": 1896,
     "commits_per_repo": {
+      "csl-orig": 914,
       "cologne-stardict": 520,
       "csl-devanagari": 122,
       "csl-json": 92,
@@ -588,7 +587,7 @@
     "additions_total": 0,
     "deletions_total": 0,
     "first_commit": "2015-11-19T10:52:04+05:30",
-    "last_commit": "2026-11-12T07:25:18+05:30",
+    "last_commit": "2026-11-12T23:13:10+05:30",
     "repos_touched": [
       "VCP",
       "cologne-stardict",
@@ -596,6 +595,7 @@
       "csl-json",
       "csl-ldev",
       "csl-lnum",
+      "csl-orig",
       "hwnorm1"
     ],
     "issues_created": 0,
@@ -611,7 +611,41 @@
     "span_first": "2015-11-19",
     "span_last": "2026-11-12",
     "span_years": 12,
-    "repos_touched_count": 7
+    "repos_touched_count": 8
+  },
+  {
+    "login": "funderburkjim@gmail.com",
+    "commits_total": 1350,
+    "commits_per_repo": {
+      "csl-orig": 1225,
+      "hwnorm1": 89,
+      "VCP": 35,
+      "csl-devanagari": 1
+    },
+    "additions_total": 0,
+    "deletions_total": 0,
+    "first_commit": "2014-02-12T21:45:05-05:00",
+    "last_commit": "2026-07-14T13:24:47-04:00",
+    "repos_touched": [
+      "VCP",
+      "csl-devanagari",
+      "csl-orig",
+      "hwnorm1"
+    ],
+    "issues_created": 0,
+    "issues_per_repo": {},
+    "comments_aggregate": 0,
+    "merged_aliases": [],
+    "real_name": null,
+    "orcid": null,
+    "role": "contributor",
+    "affiliation": null,
+    "notes": null,
+    "is_bot": false,
+    "span_first": "2014-02-12",
+    "span_last": "2026-07-14",
+    "span_years": 13,
+    "repos_touched_count": 4
   },
   {
     "login": "drdhaval2785gmail.com",
@@ -643,7 +677,7 @@
   },
   {
     "login": "dependabot[bot]",
-    "commits_total": 335,
+    "commits_total": 332,
     "commits_per_repo": {
       "csl-guides": 31,
       "csl-observatory": 22,
@@ -684,7 +718,6 @@
       "VEI": 3,
       "ACC": 3,
       "MWinflect": 3,
-      "csl-orig": 3,
       "csl-inflect": 3,
       "KRM": 3,
       "BUR": 3,
@@ -721,8 +754,8 @@
       "csl-sqlite": 1,
       "csl-pyutil": 1
     },
-    "additions_total": 1563,
-    "deletions_total": 979,
+    "additions_total": 1556,
+    "deletions_total": 972,
     "first_commit": "2026-05-29T03:08:44Z",
     "last_commit": "2026-11-18T11:06:27Z",
     "repos_touched": [
@@ -780,7 +813,6 @@
       "csl-lslink",
       "csl-newsletter",
       "csl-observatory",
-      "csl-orig",
       "csl-pyutil",
       "csl-pywork",
       "csl-santam",
@@ -815,7 +847,49 @@
     "span_first": "2026-05-29",
     "span_last": "2026-11-18",
     "span_years": 1,
-    "repos_touched_count": 75
+    "repos_touched_count": 74
+  },
+  {
+    "login": "gasyoun@users.noreply.github.com",
+    "commits_total": 284,
+    "commits_per_repo": {
+      "csl-orig": 108,
+      "csl-devanagari": 48,
+      "VCP": 44,
+      "csl-json": 18,
+      "hwnorm1": 17,
+      "csl-lnum": 17,
+      "cologne-stardict": 16,
+      "csl-ldev": 16
+    },
+    "additions_total": 0,
+    "deletions_total": 0,
+    "first_commit": "2026-05-06T00:40:50+03:00",
+    "last_commit": "2026-11-15T18:47:29+03:00",
+    "repos_touched": [
+      "VCP",
+      "cologne-stardict",
+      "csl-devanagari",
+      "csl-json",
+      "csl-ldev",
+      "csl-lnum",
+      "csl-orig",
+      "hwnorm1"
+    ],
+    "issues_created": 0,
+    "issues_per_repo": {},
+    "comments_aggregate": 0,
+    "merged_aliases": [],
+    "real_name": null,
+    "orcid": null,
+    "role": "contributor",
+    "affiliation": null,
+    "notes": null,
+    "is_bot": false,
+    "span_first": "2026-05-06",
+    "span_last": "2026-11-15",
+    "span_years": 1,
+    "repos_touched_count": 8
   },
   {
     "login": "github-actions[bot]",
@@ -852,21 +926,22 @@
     "repos_touched_count": 3
   },
   {
-    "login": "gasyoun@users.noreply.github.com",
-    "commits_total": 176,
+    "login": "gasyoun@ya.ru",
+    "commits_total": 93,
     "commits_per_repo": {
-      "csl-devanagari": 48,
-      "VCP": 44,
-      "csl-json": 18,
-      "hwnorm1": 17,
-      "csl-lnum": 17,
-      "cologne-stardict": 16,
-      "csl-ldev": 16
+      "csl-devanagari": 36,
+      "csl-orig": 22,
+      "VCP": 14,
+      "hwnorm1": 14,
+      "csl-ldev": 3,
+      "csl-lnum": 2,
+      "cologne-stardict": 1,
+      "csl-json": 1
     },
     "additions_total": 0,
     "deletions_total": 0,
-    "first_commit": "2026-05-15T09:00:46+03:00",
-    "last_commit": "2026-11-15T18:47:29+03:00",
+    "first_commit": "2014-01-21T20:12:21-08:00",
+    "last_commit": "2026-11-12T09:07:14+03:00",
     "repos_touched": [
       "VCP",
       "cologne-stardict",
@@ -874,6 +949,7 @@
       "csl-json",
       "csl-ldev",
       "csl-lnum",
+      "csl-orig",
       "hwnorm1"
     ],
     "issues_created": 0,
@@ -886,42 +962,10 @@
     "affiliation": null,
     "notes": null,
     "is_bot": false,
-    "span_first": "2026-05-15",
-    "span_last": "2026-11-15",
-    "span_years": 1,
-    "repos_touched_count": 7
-  },
-  {
-    "login": "funderburkjim@gmail.com",
-    "commits_total": 125,
-    "commits_per_repo": {
-      "hwnorm1": 89,
-      "VCP": 35,
-      "csl-devanagari": 1
-    },
-    "additions_total": 0,
-    "deletions_total": 0,
-    "first_commit": "2014-02-12T21:45:05-05:00",
-    "last_commit": "2026-07-14T13:24:47-04:00",
-    "repos_touched": [
-      "VCP",
-      "csl-devanagari",
-      "hwnorm1"
-    ],
-    "issues_created": 0,
-    "issues_per_repo": {},
-    "comments_aggregate": 0,
-    "merged_aliases": [],
-    "real_name": null,
-    "orcid": null,
-    "role": "contributor",
-    "affiliation": null,
-    "notes": null,
-    "is_bot": false,
-    "span_first": "2014-02-12",
-    "span_last": "2026-07-14",
+    "span_first": "2014-01-21",
+    "span_last": "2026-11-12",
     "span_years": 13,
-    "repos_touched_count": 3
+    "repos_touched_count": 8
   },
   {
     "login": "AnnaRybakovaT",
@@ -968,46 +1012,6 @@
     "span_last": "2023-06-25",
     "span_years": 4,
     "repos_touched_count": 10
-  },
-  {
-    "login": "gasyoun@ya.ru",
-    "commits_total": 71,
-    "commits_per_repo": {
-      "csl-devanagari": 36,
-      "VCP": 14,
-      "hwnorm1": 14,
-      "csl-ldev": 3,
-      "csl-lnum": 2,
-      "cologne-stardict": 1,
-      "csl-json": 1
-    },
-    "additions_total": 0,
-    "deletions_total": 0,
-    "first_commit": "2014-01-21T20:12:21-08:00",
-    "last_commit": "2026-10-03T16:52:05+03:00",
-    "repos_touched": [
-      "VCP",
-      "cologne-stardict",
-      "csl-devanagari",
-      "csl-json",
-      "csl-ldev",
-      "csl-lnum",
-      "hwnorm1"
-    ],
-    "issues_created": 0,
-    "issues_per_repo": {},
-    "comments_aggregate": 0,
-    "merged_aliases": [],
-    "real_name": null,
-    "orcid": null,
-    "role": "contributor",
-    "affiliation": null,
-    "notes": null,
-    "is_bot": false,
-    "span_first": "2014-01-21",
-    "span_last": "2026-10-03",
-    "span_years": 13,
-    "repos_touched_count": 7
   },
   {
     "login": "Andhrabharati",
@@ -1132,6 +1136,48 @@
     "repos_touched_count": 5
   },
   {
+    "login": "49699333+dependabot[bot]@users.noreply.github.com",
+    "commits_total": 29,
+    "commits_per_repo": {
+      "csl-orig": 12,
+      "VCP": 7,
+      "csl-json": 3,
+      "csl-devanagari": 3,
+      "hwnorm1": 1,
+      "cologne-stardict": 1,
+      "csl-lnum": 1,
+      "csl-ldev": 1
+    },
+    "additions_total": 0,
+    "deletions_total": 0,
+    "first_commit": "2026-06-02T21:02:42+03:00",
+    "last_commit": "2026-11-09T05:19:55Z",
+    "repos_touched": [
+      "VCP",
+      "cologne-stardict",
+      "csl-devanagari",
+      "csl-json",
+      "csl-ldev",
+      "csl-lnum",
+      "csl-orig",
+      "hwnorm1"
+    ],
+    "issues_created": 0,
+    "issues_per_repo": {},
+    "comments_aggregate": 0,
+    "merged_aliases": [],
+    "real_name": null,
+    "orcid": null,
+    "role": "contributor",
+    "affiliation": null,
+    "notes": null,
+    "is_bot": false,
+    "span_first": "2026-06-02",
+    "span_last": "2026-11-09",
+    "span_years": 1,
+    "repos_touched_count": 8
+  },
+  {
     "login": "actions@github.com",
     "commits_total": 25,
     "commits_per_repo": {
@@ -1160,29 +1206,17 @@
     "repos_touched_count": 1
   },
   {
-    "login": "49699333+dependabot[bot]@users.noreply.github.com",
-    "commits_total": 17,
+    "login": "srhodes@snowcrest.net",
+    "commits_total": 15,
     "commits_per_repo": {
-      "VCP": 7,
-      "csl-json": 3,
-      "csl-devanagari": 3,
-      "hwnorm1": 1,
-      "cologne-stardict": 1,
-      "csl-lnum": 1,
-      "csl-ldev": 1
+      "csl-orig": 15
     },
     "additions_total": 0,
     "deletions_total": 0,
-    "first_commit": "2026-06-02T21:02:42+03:00",
-    "last_commit": "2026-10-26T05:36:21Z",
+    "first_commit": "2024-01-14T04:33:49-08:00",
+    "last_commit": "2024-01-28T05:39:16-08:00",
     "repos_touched": [
-      "VCP",
-      "cologne-stardict",
-      "csl-devanagari",
-      "csl-json",
-      "csl-ldev",
-      "csl-lnum",
-      "hwnorm1"
+      "csl-orig"
     ],
     "issues_created": 0,
     "issues_per_repo": {},
@@ -1194,10 +1228,154 @@
     "affiliation": null,
     "notes": null,
     "is_bot": false,
-    "span_first": "2026-06-02",
-    "span_last": "2026-10-26",
+    "span_first": "2024-01-14",
+    "span_last": "2024-01-28",
     "span_years": 1,
-    "repos_touched_count": 7
+    "repos_touched_count": 1
+  },
+  {
+    "login": "917514182@qq.com",
+    "commits_total": 8,
+    "commits_per_repo": {
+      "csl-orig": 8
+    },
+    "additions_total": 0,
+    "deletions_total": 0,
+    "first_commit": "2024-01-13T18:39:30+08:00",
+    "last_commit": "2025-11-01T19:59:34Z",
+    "repos_touched": [
+      "csl-orig"
+    ],
+    "issues_created": 0,
+    "issues_per_repo": {},
+    "comments_aggregate": 0,
+    "merged_aliases": [],
+    "real_name": null,
+    "orcid": null,
+    "role": "contributor",
+    "affiliation": null,
+    "notes": null,
+    "is_bot": false,
+    "span_first": "2024-01-13",
+    "span_last": "2025-11-01",
+    "span_years": 2,
+    "repos_touched_count": 1
+  },
+  {
+    "login": "74726889+AnnaRybakovaT@users.noreply.github.com",
+    "commits_total": 6,
+    "commits_per_repo": {
+      "csl-orig": 6
+    },
+    "additions_total": 0,
+    "deletions_total": 0,
+    "first_commit": "2021-01-06T14:10:52+02:00",
+    "last_commit": "2021-03-06T14:34:05+03:00",
+    "repos_touched": [
+      "csl-orig"
+    ],
+    "issues_created": 0,
+    "issues_per_repo": {},
+    "comments_aggregate": 0,
+    "merged_aliases": [],
+    "real_name": null,
+    "orcid": null,
+    "role": "contributor",
+    "affiliation": null,
+    "notes": null,
+    "is_bot": false,
+    "span_first": "2021-01-06",
+    "span_last": "2021-03-06",
+    "span_years": 1,
+    "repos_touched_count": 1
+  },
+  {
+    "login": "root@localhost.localdomain",
+    "commits_total": 5,
+    "commits_per_repo": {
+      "csl-apidev": 2,
+      "csl-orig": 2,
+      "csl-pywork": 1
+    },
+    "additions_total": 3,
+    "deletions_total": 3,
+    "first_commit": "2019-10-21T04:44:25Z",
+    "last_commit": "2019-10-31T00:58:11Z",
+    "repos_touched": [
+      "csl-apidev",
+      "csl-orig",
+      "csl-pywork"
+    ],
+    "issues_created": 0,
+    "issues_per_repo": {},
+    "comments_aggregate": 0,
+    "merged_aliases": [],
+    "real_name": null,
+    "orcid": null,
+    "role": "occasional",
+    "affiliation": null,
+    "notes": "Hostname-based identity; attribution unclear.",
+    "is_bot": false,
+    "span_first": "2019-10-21",
+    "span_last": "2019-10-31",
+    "span_years": 1,
+    "repos_touched_count": 3
+  },
+  {
+    "login": "arybakovatheohari@gmail.com",
+    "commits_total": 5,
+    "commits_per_repo": {
+      "csl-orig": 5
+    },
+    "additions_total": 0,
+    "deletions_total": 0,
+    "first_commit": "2021-01-04T22:00:45+04:00",
+    "last_commit": "2021-03-06T15:38:43+04:00",
+    "repos_touched": [
+      "csl-orig"
+    ],
+    "issues_created": 0,
+    "issues_per_repo": {},
+    "comments_aggregate": 0,
+    "merged_aliases": [],
+    "real_name": null,
+    "orcid": null,
+    "role": "contributor",
+    "affiliation": null,
+    "notes": null,
+    "is_bot": false,
+    "span_first": "2021-01-04",
+    "span_last": "2021-03-06",
+    "span_years": 1,
+    "repos_touched_count": 1
+  },
+  {
+    "login": "funderburkjim@users.noreply.github.com",
+    "commits_total": 4,
+    "commits_per_repo": {
+      "csl-orig": 4
+    },
+    "additions_total": 0,
+    "deletions_total": 0,
+    "first_commit": "2019-10-30T15:41:07-04:00",
+    "last_commit": "2025-11-01T16:39:49-04:00",
+    "repos_touched": [
+      "csl-orig"
+    ],
+    "issues_created": 0,
+    "issues_per_repo": {},
+    "comments_aggregate": 0,
+    "merged_aliases": [],
+    "real_name": null,
+    "orcid": null,
+    "role": "contributor",
+    "affiliation": null,
+    "notes": null,
+    "is_bot": false,
+    "span_first": "2019-10-30",
+    "span_last": "2025-11-01",
+    "span_years": 7,
+    "repos_touched_count": 1
   },
   {
     "login": "DmitriSKT",
@@ -1226,36 +1404,6 @@
     "span_last": "2017-11-05",
     "span_years": 1,
     "repos_touched_count": 1
-  },
-  {
-    "login": "root@localhost.localdomain",
-    "commits_total": 3,
-    "commits_per_repo": {
-      "csl-apidev": 2,
-      "csl-pywork": 1
-    },
-    "additions_total": 3,
-    "deletions_total": 3,
-    "first_commit": "2019-10-21T04:44:25Z",
-    "last_commit": "2019-10-31T00:58:11Z",
-    "repos_touched": [
-      "csl-apidev",
-      "csl-pywork"
-    ],
-    "issues_created": 0,
-    "issues_per_repo": {},
-    "comments_aggregate": 0,
-    "merged_aliases": [],
-    "real_name": null,
-    "orcid": null,
-    "role": "occasional",
-    "affiliation": null,
-    "notes": "Hostname-based identity; attribution unclear.",
-    "is_bot": false,
-    "span_first": "2019-10-21",
-    "span_last": "2019-10-31",
-    "span_years": 1,
-    "repos_touched_count": 2
   },
   {
     "login": "cfr-auto-updater@example.com",
@@ -1370,6 +1518,34 @@
     "span_last": "2026-11-18",
     "span_years": 1,
     "repos_touched_count": 2
+  },
+  {
+    "login": "105386121+aumsanskrit@users.noreply.github.com",
+    "commits_total": 2,
+    "commits_per_repo": {
+      "csl-orig": 2
+    },
+    "additions_total": 0,
+    "deletions_total": 0,
+    "first_commit": "2024-01-16T01:17:09-08:00",
+    "last_commit": "2024-01-20T18:16:50-08:00",
+    "repos_touched": [
+      "csl-orig"
+    ],
+    "issues_created": 0,
+    "issues_per_repo": {},
+    "comments_aggregate": 0,
+    "merged_aliases": [],
+    "real_name": null,
+    "orcid": null,
+    "role": "contributor",
+    "affiliation": null,
+    "notes": null,
+    "is_bot": false,
+    "span_first": "2024-01-16",
+    "span_last": "2024-01-20",
+    "span_years": 1,
+    "repos_touched_count": 1
   },
   {
     "login": "dpatel3@dialog7.rrz.uni-koeln.de",
@@ -1568,6 +1744,118 @@
     "role": "occasional",
     "affiliation": null,
     "notes": "Identity to be confirmed.",
+    "is_bot": false,
+    "span_first": "2019-10-31",
+    "span_last": "2019-10-31",
+    "span_years": 1,
+    "repos_touched_count": 1
+  },
+  {
+    "login": "atlas-bounty@hermes-agent.local",
+    "commits_total": 1,
+    "commits_per_repo": {
+      "csl-orig": 1
+    },
+    "additions_total": 0,
+    "deletions_total": 0,
+    "first_commit": "2026-05-15T11:50:30Z",
+    "last_commit": "2026-05-15T11:50:30Z",
+    "repos_touched": [
+      "csl-orig"
+    ],
+    "issues_created": 0,
+    "issues_per_repo": {},
+    "comments_aggregate": 0,
+    "merged_aliases": [],
+    "real_name": null,
+    "orcid": null,
+    "role": "contributor",
+    "affiliation": null,
+    "notes": null,
+    "is_bot": false,
+    "span_first": "2026-05-15",
+    "span_last": "2026-05-15",
+    "span_years": 1,
+    "repos_touched_count": 1
+  },
+  {
+    "login": "adminlip@users.noreply.github.com",
+    "commits_total": 1,
+    "commits_per_repo": {
+      "csl-orig": 1
+    },
+    "additions_total": 0,
+    "deletions_total": 0,
+    "first_commit": "2026-05-15T11:34:38Z",
+    "last_commit": "2026-05-15T11:34:38Z",
+    "repos_touched": [
+      "csl-orig"
+    ],
+    "issues_created": 0,
+    "issues_per_repo": {},
+    "comments_aggregate": 0,
+    "merged_aliases": [],
+    "real_name": null,
+    "orcid": null,
+    "role": "contributor",
+    "affiliation": null,
+    "notes": null,
+    "is_bot": false,
+    "span_first": "2026-05-15",
+    "span_last": "2026-05-15",
+    "span_years": 1,
+    "repos_touched_count": 1
+  },
+  {
+    "login": "krishna@Krishnas-MacBook-Air.local",
+    "commits_total": 1,
+    "commits_per_repo": {
+      "csl-orig": 1
+    },
+    "additions_total": 0,
+    "deletions_total": 0,
+    "first_commit": "2023-10-12T07:51:33+05:30",
+    "last_commit": "2023-10-12T07:51:33+05:30",
+    "repos_touched": [
+      "csl-orig"
+    ],
+    "issues_created": 0,
+    "issues_per_repo": {},
+    "comments_aggregate": 0,
+    "merged_aliases": [],
+    "real_name": null,
+    "orcid": null,
+    "role": "contributor",
+    "affiliation": null,
+    "notes": null,
+    "is_bot": false,
+    "span_first": "2023-10-12",
+    "span_last": "2023-10-12",
+    "span_years": 1,
+    "repos_touched_count": 1
+  },
+  {
+    "login": "54036272+YevgenJohn@users.noreply.github.com",
+    "commits_total": 1,
+    "commits_per_repo": {
+      "csl-orig": 1
+    },
+    "additions_total": 0,
+    "deletions_total": 0,
+    "first_commit": "2019-10-31T19:41:02-04:00",
+    "last_commit": "2019-10-31T19:41:02-04:00",
+    "repos_touched": [
+      "csl-orig"
+    ],
+    "issues_created": 0,
+    "issues_per_repo": {},
+    "comments_aggregate": 0,
+    "merged_aliases": [],
+    "real_name": null,
+    "orcid": null,
+    "role": "contributor",
+    "affiliation": null,
+    "notes": null,
     "is_bot": false,
     "span_first": "2019-10-31",
     "span_last": "2019-10-31",
