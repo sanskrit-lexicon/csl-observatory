@@ -155,7 +155,10 @@ jobs:
             gh pr create --head "$BRANCH" --base main \
               --title "data: monthly refresh ($(date -u +%Y-%m-%d))" \
               --body "Automated monthly data refresh. Auto-merges when required checks pass." 2>/dev/null || true
-            gh pr merge "$BRANCH" --squash --auto || gh pr merge "$BRANCH" --squash
+            gh pr merge "$BRANCH" --squash --auto
+            # No force-merge fallback: main requires headline-claims + smoke
+            # + paper-priv-guard (YJG, MG 21-11-2026) — a red or check-pending
+            # snapshot PR must never merge; if --auto errors, fail loudly.
           fi
 
       - name: Build site
