@@ -246,7 +246,7 @@
   },
   {
     "login": "funderburkjim",
-    "commits_total": 3269,
+    "commits_total": 3273,
     "commits_per_repo": {
       "CORRECTIONS": 482,
       "csl-apidev": 456,
@@ -287,6 +287,7 @@
       "Wil-YAT": 6,
       "temp_corrections_mw": 6,
       "MW72": 5,
+      "csl-orig": 5,
       "csl-whitroot": 5,
       "csl-kale": 5,
       "csl-newsletter": 5,
@@ -301,8 +302,7 @@
       "LRV": 2,
       "SHS": 2,
       "GreekInSanskrit": 1,
-      "VEI": 1,
-      "csl-orig": 1
+      "VEI": 1
     },
     "additions_total": 53937366,
     "deletions_total": 5139551,
@@ -426,6 +426,7 @@
     "comments_aggregate": 16137,
     "merged_aliases": [
       "funderburk1@Jim-Funderburks-iMac.local",
+      "funderburkjim@users.noreply.github.com",
       "jfunderb@dialog6.rrz.uni-koeln.de",
       "jfunderb@dialog7.rrz.uni-koeln.de",
       "jfunderb@dialog8.rrz.uni-koeln.de",
@@ -969,9 +970,10 @@
   },
   {
     "login": "AnnaRybakovaT",
-    "commits_total": 71,
+    "commits_total": 82,
     "commits_per_repo": {
       "MD": 36,
+      "csl-orig": 11,
       "PWK": 9,
       "CAE": 7,
       "CORRECTIONS": 6,
@@ -996,12 +998,16 @@
       "MWS",
       "PWK",
       "SKD",
+      "csl-orig",
       "temp_corrections_ap90"
     ],
     "issues_created": 0,
     "issues_per_repo": {},
     "comments_aggregate": 0,
-    "merged_aliases": [],
+    "merged_aliases": [
+      "74726889+AnnaRybakovaT@users.noreply.github.com",
+      "arybakovatheohari@gmail.com"
+    ],
     "real_name": "Anna Rybakova",
     "orcid": null,
     "role": "occasional",
@@ -1011,7 +1017,7 @@
     "span_first": "2020-12-15",
     "span_last": "2023-06-25",
     "span_years": 4,
-    "repos_touched_count": 10
+    "repos_touched_count": 11
   },
   {
     "login": "Andhrabharati",
@@ -1206,10 +1212,10 @@
     "repos_touched_count": 1
   },
   {
-    "login": "srhodes@snowcrest.net",
-    "commits_total": 15,
+    "login": "aumsanskrit",
+    "commits_total": 17,
     "commits_per_repo": {
-      "csl-orig": 15
+      "csl-orig": 17
     },
     "additions_total": 0,
     "deletions_total": 0,
@@ -1218,15 +1224,22 @@
     "repos_touched": [
       "csl-orig"
     ],
-    "issues_created": 0,
-    "issues_per_repo": {},
-    "comments_aggregate": 0,
-    "merged_aliases": [],
-    "real_name": null,
-    "orcid": null,
+    "issues_created": 10,
+    "issues_per_repo": {
+      "csl-corrections": 8,
+      "MWS": 1,
+      "AP": 1
+    },
+    "comments_aggregate": 1364,
+    "merged_aliases": [
+      "105386121+aumsanskrit@users.noreply.github.com",
+      "srhodes@snowcrest.net"
+    ],
+    "real_name": "Scott Rhodes",
+    "orcid": "PLACEHOLDER-RHODES",
     "role": "contributor",
     "affiliation": null,
-    "notes": null,
+    "notes": "Issue analysis and corrections (MWS issue #190 and others).",
     "is_bot": false,
     "span_first": "2024-01-14",
     "span_last": "2024-01-28",
@@ -1234,7 +1247,7 @@
     "repos_touched_count": 1
   },
   {
-    "login": "917514182@qq.com",
+    "login": "shenyileirob",
     "commits_total": 8,
     "commits_per_repo": {
       "csl-orig": 8
@@ -1246,47 +1259,23 @@
     "repos_touched": [
       "csl-orig"
     ],
-    "issues_created": 0,
-    "issues_per_repo": {},
+    "issues_created": 1,
+    "issues_per_repo": {
+      "csl-westergaard": 1
+    },
     "comments_aggregate": 0,
-    "merged_aliases": [],
-    "real_name": null,
+    "merged_aliases": [
+      "917514182@qq.com"
+    ],
+    "real_name": "shenyileirob",
     "orcid": null,
-    "role": "contributor",
+    "role": "occasional",
     "affiliation": null,
-    "notes": null,
+    "notes": "GitHub login already counted as an issue author; the 21-11 full csl-orig history recovery surfaced the matching git author name under a QQ email.",
     "is_bot": false,
     "span_first": "2024-01-13",
     "span_last": "2025-11-01",
     "span_years": 2,
-    "repos_touched_count": 1
-  },
-  {
-    "login": "74726889+AnnaRybakovaT@users.noreply.github.com",
-    "commits_total": 6,
-    "commits_per_repo": {
-      "csl-orig": 6
-    },
-    "additions_total": 0,
-    "deletions_total": 0,
-    "first_commit": "2021-01-06T14:10:52+02:00",
-    "last_commit": "2021-03-06T14:34:05+03:00",
-    "repos_touched": [
-      "csl-orig"
-    ],
-    "issues_created": 0,
-    "issues_per_repo": {},
-    "comments_aggregate": 0,
-    "merged_aliases": [],
-    "real_name": null,
-    "orcid": null,
-    "role": "contributor",
-    "affiliation": null,
-    "notes": null,
-    "is_bot": false,
-    "span_first": "2021-01-06",
-    "span_last": "2021-03-06",
-    "span_years": 1,
     "repos_touched_count": 1
   },
   {
@@ -1320,62 +1309,6 @@
     "span_last": "2019-10-31",
     "span_years": 1,
     "repos_touched_count": 3
-  },
-  {
-    "login": "arybakovatheohari@gmail.com",
-    "commits_total": 5,
-    "commits_per_repo": {
-      "csl-orig": 5
-    },
-    "additions_total": 0,
-    "deletions_total": 0,
-    "first_commit": "2021-01-04T22:00:45+04:00",
-    "last_commit": "2021-03-06T15:38:43+04:00",
-    "repos_touched": [
-      "csl-orig"
-    ],
-    "issues_created": 0,
-    "issues_per_repo": {},
-    "comments_aggregate": 0,
-    "merged_aliases": [],
-    "real_name": null,
-    "orcid": null,
-    "role": "contributor",
-    "affiliation": null,
-    "notes": null,
-    "is_bot": false,
-    "span_first": "2021-01-04",
-    "span_last": "2021-03-06",
-    "span_years": 1,
-    "repos_touched_count": 1
-  },
-  {
-    "login": "funderburkjim@users.noreply.github.com",
-    "commits_total": 4,
-    "commits_per_repo": {
-      "csl-orig": 4
-    },
-    "additions_total": 0,
-    "deletions_total": 0,
-    "first_commit": "2019-10-30T15:41:07-04:00",
-    "last_commit": "2025-11-01T16:39:49-04:00",
-    "repos_touched": [
-      "csl-orig"
-    ],
-    "issues_created": 0,
-    "issues_per_repo": {},
-    "comments_aggregate": 0,
-    "merged_aliases": [],
-    "real_name": null,
-    "orcid": null,
-    "role": "contributor",
-    "affiliation": null,
-    "notes": null,
-    "is_bot": false,
-    "span_first": "2019-10-30",
-    "span_last": "2025-11-01",
-    "span_years": 7,
-    "repos_touched_count": 1
   },
   {
     "login": "DmitriSKT",
@@ -1520,32 +1453,38 @@
     "repos_touched_count": 2
   },
   {
-    "login": "105386121+aumsanskrit@users.noreply.github.com",
+    "login": "YevgenJohn",
     "commits_total": 2,
     "commits_per_repo": {
-      "csl-orig": 2
+      "csl-pywork": 1,
+      "csl-orig": 1
     },
-    "additions_total": 0,
-    "deletions_total": 0,
-    "first_commit": "2024-01-16T01:17:09-08:00",
-    "last_commit": "2024-01-20T18:16:50-08:00",
+    "additions_total": 1,
+    "deletions_total": 1,
+    "first_commit": "2019-10-31T19:41:02-04:00",
+    "last_commit": "2019-10-31T23:41:12Z",
     "repos_touched": [
-      "csl-orig"
+      "csl-orig",
+      "csl-pywork"
     ],
-    "issues_created": 0,
-    "issues_per_repo": {},
-    "comments_aggregate": 0,
-    "merged_aliases": [],
+    "issues_created": 1,
+    "issues_per_repo": {
+      "csl-pywork": 1
+    },
+    "comments_aggregate": 7,
+    "merged_aliases": [
+      "54036272+YevgenJohn@users.noreply.github.com"
+    ],
     "real_name": null,
     "orcid": null,
-    "role": "contributor",
+    "role": "occasional",
     "affiliation": null,
-    "notes": null,
+    "notes": "Identity to be confirmed.",
     "is_bot": false,
-    "span_first": "2024-01-16",
-    "span_last": "2024-01-20",
+    "span_first": "2019-10-31",
+    "span_last": "2019-10-31",
     "span_years": 1,
-    "repos_touched_count": 1
+    "repos_touched_count": 2
   },
   {
     "login": "dpatel3@dialog7.rrz.uni-koeln.de",
@@ -1721,36 +1660,6 @@
     "repos_touched_count": 1
   },
   {
-    "login": "YevgenJohn",
-    "commits_total": 1,
-    "commits_per_repo": {
-      "csl-pywork": 1
-    },
-    "additions_total": 1,
-    "deletions_total": 1,
-    "first_commit": "2019-10-31T23:41:12Z",
-    "last_commit": "2019-10-31T23:41:12Z",
-    "repos_touched": [
-      "csl-pywork"
-    ],
-    "issues_created": 1,
-    "issues_per_repo": {
-      "csl-pywork": 1
-    },
-    "comments_aggregate": 7,
-    "merged_aliases": [],
-    "real_name": null,
-    "orcid": null,
-    "role": "occasional",
-    "affiliation": null,
-    "notes": "Identity to be confirmed.",
-    "is_bot": false,
-    "span_first": "2019-10-31",
-    "span_last": "2019-10-31",
-    "span_years": 1,
-    "repos_touched_count": 1
-  },
-  {
     "login": "atlas-bounty@hermes-agent.local",
     "commits_total": 1,
     "commits_per_repo": {
@@ -1767,19 +1676,19 @@
     "issues_per_repo": {},
     "comments_aggregate": 0,
     "merged_aliases": [],
-    "real_name": null,
+    "real_name": "Atlas-BountyHunter (automated agent)",
     "orcid": null,
-    "role": "contributor",
+    "role": "bot",
     "affiliation": null,
-    "notes": null,
-    "is_bot": false,
+    "notes": "Automated bounty agent (hermes-agent.local host), 2026-05-15 csl-orig merge; not a human contributor.",
+    "is_bot": true,
     "span_first": "2026-05-15",
     "span_last": "2026-05-15",
     "span_years": 1,
     "repos_touched_count": 1
   },
   {
-    "login": "adminlip@users.noreply.github.com",
+    "login": "adminlip",
     "commits_total": 1,
     "commits_per_repo": {
       "csl-orig": 1
@@ -1794,12 +1703,14 @@
     "issues_created": 0,
     "issues_per_repo": {},
     "comments_aggregate": 0,
-    "merged_aliases": [],
-    "real_name": null,
+    "merged_aliases": [
+      "adminlip@users.noreply.github.com"
+    ],
+    "real_name": "adminlip",
     "orcid": null,
-    "role": "contributor",
+    "role": "occasional",
     "affiliation": null,
-    "notes": null,
+    "notes": "GitHub user behind csl-orig PR #2845 (MW 28747 wording, merged 2026-05-15); a distinct contributor newly visible once the full csl-orig history was recovered, not an alias of an already-counted person.",
     "is_bot": false,
     "span_first": "2026-05-15",
     "span_last": "2026-05-15",
@@ -1807,7 +1718,7 @@
     "repos_touched_count": 1
   },
   {
-    "login": "krishna@Krishnas-MacBook-Air.local",
+    "login": "Krishna Chaitanya",
     "commits_total": 1,
     "commits_per_repo": {
       "csl-orig": 1
@@ -1822,43 +1733,17 @@
     "issues_created": 0,
     "issues_per_repo": {},
     "comments_aggregate": 0,
-    "merged_aliases": [],
-    "real_name": null,
+    "merged_aliases": [
+      "krishna@Krishnas-MacBook-Air.local"
+    ],
+    "real_name": "Krishna Chaitanya",
     "orcid": null,
-    "role": "contributor",
+    "role": "occasional",
     "affiliation": null,
-    "notes": null,
+    "notes": "Git author name on a 2023-10-12 csl-orig commit referencing ashtadhyayi-com/data PR #256; a distinct contributor newly visible once the full csl-orig history was recovered.",
     "is_bot": false,
     "span_first": "2023-10-12",
     "span_last": "2023-10-12",
-    "span_years": 1,
-    "repos_touched_count": 1
-  },
-  {
-    "login": "54036272+YevgenJohn@users.noreply.github.com",
-    "commits_total": 1,
-    "commits_per_repo": {
-      "csl-orig": 1
-    },
-    "additions_total": 0,
-    "deletions_total": 0,
-    "first_commit": "2019-10-31T19:41:02-04:00",
-    "last_commit": "2019-10-31T19:41:02-04:00",
-    "repos_touched": [
-      "csl-orig"
-    ],
-    "issues_created": 0,
-    "issues_per_repo": {},
-    "comments_aggregate": 0,
-    "merged_aliases": [],
-    "real_name": null,
-    "orcid": null,
-    "role": "contributor",
-    "affiliation": null,
-    "notes": null,
-    "is_bot": false,
-    "span_first": "2019-10-31",
-    "span_last": "2019-10-31",
     "span_years": 1,
     "repos_touched_count": 1
   },
@@ -2278,31 +2163,6 @@
     "repos_touched_count": 0
   },
   {
-    "login": "aumsanskrit",
-    "commits_total": 0,
-    "commits_per_repo": {},
-    "additions_total": 0,
-    "deletions_total": 0,
-    "first_commit": null,
-    "last_commit": null,
-    "repos_touched": [],
-    "issues_created": 10,
-    "issues_per_repo": {
-      "csl-corrections": 8,
-      "MWS": 1,
-      "AP": 1
-    },
-    "comments_aggregate": 1364,
-    "merged_aliases": [],
-    "real_name": "Scott Rhodes",
-    "orcid": "PLACEHOLDER-RHODES",
-    "role": "contributor",
-    "affiliation": null,
-    "notes": "Issue analysis and corrections (MWS issue #190 and others).",
-    "is_bot": false,
-    "repos_touched_count": 0
-  },
-  {
     "login": "mediabuff",
     "commits_total": 0,
     "commits_per_repo": {},
@@ -2646,29 +2506,6 @@
       "csl-orig": 1
     },
     "comments_aggregate": 4,
-    "merged_aliases": [],
-    "real_name": null,
-    "orcid": null,
-    "role": "contributor",
-    "affiliation": null,
-    "notes": null,
-    "is_bot": false,
-    "repos_touched_count": 0
-  },
-  {
-    "login": "shenyileirob",
-    "commits_total": 0,
-    "commits_per_repo": {},
-    "additions_total": 0,
-    "deletions_total": 0,
-    "first_commit": null,
-    "last_commit": null,
-    "repos_touched": [],
-    "issues_created": 1,
-    "issues_per_repo": {
-      "csl-westergaard": 1
-    },
-    "comments_aggregate": 0,
     "merged_aliases": [],
     "real_name": null,
     "orcid": null,
