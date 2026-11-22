@@ -23,7 +23,8 @@
       "jfunderb@dialog8.rrz.uni-koeln.de",
       "funderburk1@Jim-Funderburks-iMac.local",
       "root@Jims-Mac-mini.local",
-      "Jim Funderburk"
+      "Jim Funderburk",
+      "funderburkjim@users.noreply.github.com"
     ]
   },
 
@@ -55,7 +56,11 @@
     "orcid": "PLACEHOLDER-RHODES",
     "consent": "",
     "role": "contributor",
-    "notes": "Issue analysis and corrections (MWS issue #190 and others)."
+    "notes": "Issue analysis and corrections (MWS issue #190 and others).",
+    "aliases": [
+      "105386121+aumsanskrit@users.noreply.github.com",
+      "srhodes@snowcrest.net"
+    ]
   },
 
   "maltenth": {
@@ -71,7 +76,11 @@
     "real_name": "Anna Rybakova",
     "consent": "",
     "role": "occasional",
-    "notes": "Onboarding contributor 2020–2023 — Python pipeline development."
+    "notes": "Onboarding contributor 2020–2023 — Python pipeline development.",
+    "aliases": [
+      "74726889+AnnaRybakovaT@users.noreply.github.com",
+      "arybakovatheohari@gmail.com"
+    ]
   },
 
   "Darius": {
@@ -104,13 +113,45 @@
   "YevgenJohn": {
     "consent": "",
     "role": "occasional",
-    "notes": "Identity to be confirmed."
+    "notes": "Identity to be confirmed.",
+    "aliases": ["54036272+YevgenJohn@users.noreply.github.com"]
   },
 
   "sanskritisampada": {
     "consent": "",
     "role": "occasional",
     "notes": "Identity to be confirmed."
+  },
+
+  "shenyileirob": {
+    "real_name": "shenyileirob",
+    "consent": "",
+    "role": "occasional",
+    "notes": "GitHub login already counted as an issue author; the 21-11 full csl-orig history recovery surfaced the matching git author name under a QQ email.",
+    "aliases": ["917514182@qq.com"]
+  },
+
+  "adminlip": {
+    "real_name": "adminlip",
+    "consent": "",
+    "role": "occasional",
+    "notes": "GitHub user behind csl-orig PR #2845 (MW 28747 wording, merged 2026-05-15); a distinct contributor newly visible once the full csl-orig history was recovered, not an alias of an already-counted person.",
+    "aliases": ["adminlip@users.noreply.github.com"]
+  },
+
+  "Krishna Chaitanya": {
+    "real_name": "Krishna Chaitanya",
+    "consent": "",
+    "role": "occasional",
+    "notes": "Git author name on a 2023-10-12 csl-orig commit referencing ashtadhyayi-com/data PR #256; a distinct contributor newly visible once the full csl-orig history was recovered.",
+    "aliases": ["krishna@Krishnas-MacBook-Air.local"]
+  },
+
+  "atlas-bounty@hermes-agent.local": {
+    "real_name": "Atlas-BountyHunter (automated agent)",
+    "is_bot": true,
+    "role": "bot",
+    "notes": "Automated bounty agent (hermes-agent.local host), 2026-05-15 csl-orig merge; not a human contributor."
   },
 
   "github-actions[bot]": {

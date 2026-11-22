@@ -24,7 +24,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **ORCID**: *(awaiting)*
 - **Affiliation**: Cologne Digital Sanskrit Dictionaries
 - **Active span**: 2014-01-15 → 2026-09-05 (13 years)
-- **Commits**: 3,269 across 55 distinct repos
+- **Commits**: 3,273 across 55 distinct repos
 - **Issues created**: 2592
 - **Lines changed**: +53,937,366 / −5,139,551
 - **Role notes**: Primary repository maintainer; tooling and correction workflows across all dictionaries.
@@ -67,7 +67,7 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **Role notes**: Original digitisation of the Cologne Digital Sanskrit Dictionaries (1994–2010); bibliography work.
 - **Top repositories** (by commits): `PWK` (1)
 
-## Contributor (61)
+## Contributor (50)
 
 ### drdhaval2785@gmail.com
 
@@ -141,50 +141,16 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **Lines changed**: +0 / −0
 - **Top repositories** (by commits): `hwnorm1` (25)
 
-### srhodes@snowcrest.net
+### Scott Rhodes
 
-- **GitHub**: [@srhodes@snowcrest.net](https://github.com/srhodes@snowcrest.net)
+- **GitHub**: [@aumsanskrit](https://github.com/aumsanskrit)
+- **ORCID**: *(awaiting)*
 - **Active span**: 2024-01-14 → 2024-01-28 (1 years)
-- **Commits**: 15 across 1 distinct repos
-- **Issues created**: 0
+- **Commits**: 17 across 1 distinct repos
+- **Issues created**: 10
 - **Lines changed**: +0 / −0
-- **Top repositories** (by commits): `csl-orig` (15)
-
-### 917514182@qq.com
-
-- **GitHub**: [@917514182@qq.com](https://github.com/917514182@qq.com)
-- **Active span**: 2024-01-13 → 2025-11-01 (2 years)
-- **Commits**: 8 across 1 distinct repos
-- **Issues created**: 0
-- **Lines changed**: +0 / −0
-- **Top repositories** (by commits): `csl-orig` (8)
-
-### 74726889+AnnaRybakovaT@users.noreply.github.com
-
-- **GitHub**: [@74726889+AnnaRybakovaT@users.noreply.github.com](https://github.com/74726889+AnnaRybakovaT@users.noreply.github.com)
-- **Active span**: 2021-01-06 → 2021-03-06 (1 years)
-- **Commits**: 6 across 1 distinct repos
-- **Issues created**: 0
-- **Lines changed**: +0 / −0
-- **Top repositories** (by commits): `csl-orig` (6)
-
-### arybakovatheohari@gmail.com
-
-- **GitHub**: [@arybakovatheohari@gmail.com](https://github.com/arybakovatheohari@gmail.com)
-- **Active span**: 2021-01-04 → 2021-03-06 (1 years)
-- **Commits**: 5 across 1 distinct repos
-- **Issues created**: 0
-- **Lines changed**: +0 / −0
-- **Top repositories** (by commits): `csl-orig` (5)
-
-### funderburkjim@users.noreply.github.com
-
-- **GitHub**: [@funderburkjim@users.noreply.github.com](https://github.com/funderburkjim@users.noreply.github.com)
-- **Active span**: 2019-10-30 → 2025-11-01 (7 years)
-- **Commits**: 4 across 1 distinct repos
-- **Issues created**: 0
-- **Lines changed**: +0 / −0
-- **Top repositories** (by commits): `csl-orig` (4)
+- **Role notes**: Issue analysis and corrections (MWS issue #190 and others).
+- **Top repositories** (by commits): `csl-orig` (17)
 
 ### github-actions[bot]@users.noreply.github.com
 
@@ -203,15 +169,6 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **Issues created**: 0
 - **Lines changed**: +2 / −2
 - **Top repositories** (by commits): `csl-pywork` (1), `csl-corrections` (1)
-
-### 105386121+aumsanskrit@users.noreply.github.com
-
-- **GitHub**: [@105386121+aumsanskrit@users.noreply.github.com](https://github.com/105386121+aumsanskrit@users.noreply.github.com)
-- **Active span**: 2024-01-16 → 2024-01-20 (1 years)
-- **Commits**: 2 across 1 distinct repos
-- **Issues created**: 0
-- **Lines changed**: +0 / −0
-- **Top repositories** (by commits): `csl-orig` (2)
 
 ### dpatel3@dialog7.rrz.uni-koeln.de
 
@@ -257,42 +214,6 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **Issues created**: 0
 - **Lines changed**: +150 / −110
 - **Top repositories** (by commits): `csl-apidev` (1)
-
-### atlas-bounty@hermes-agent.local
-
-- **GitHub**: [@atlas-bounty@hermes-agent.local](https://github.com/atlas-bounty@hermes-agent.local)
-- **Active span**: 2026-05-15 → 2026-05-15 (1 years)
-- **Commits**: 1 across 1 distinct repos
-- **Issues created**: 0
-- **Lines changed**: +0 / −0
-- **Top repositories** (by commits): `csl-orig` (1)
-
-### adminlip@users.noreply.github.com
-
-- **GitHub**: [@adminlip@users.noreply.github.com](https://github.com/adminlip@users.noreply.github.com)
-- **Active span**: 2026-05-15 → 2026-05-15 (1 years)
-- **Commits**: 1 across 1 distinct repos
-- **Issues created**: 0
-- **Lines changed**: +0 / −0
-- **Top repositories** (by commits): `csl-orig` (1)
-
-### krishna@Krishnas-MacBook-Air.local
-
-- **GitHub**: [@krishna@Krishnas-MacBook-Air.local](https://github.com/krishna@Krishnas-MacBook-Air.local)
-- **Active span**: 2023-10-12 → 2023-10-12 (1 years)
-- **Commits**: 1 across 1 distinct repos
-- **Issues created**: 0
-- **Lines changed**: +0 / −0
-- **Top repositories** (by commits): `csl-orig` (1)
-
-### 54036272+YevgenJohn@users.noreply.github.com
-
-- **GitHub**: [@54036272+YevgenJohn@users.noreply.github.com](https://github.com/54036272+YevgenJohn@users.noreply.github.com)
-- **Active span**: 2019-10-31 → 2019-10-31 (1 years)
-- **Commits**: 1 across 1 distinct repos
-- **Issues created**: 0
-- **Lines changed**: +0 / −0
-- **Top repositories** (by commits): `csl-orig` (1)
 
 ### sumant.pes@gmail.com
 
@@ -424,16 +345,6 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **Issues created**: 1
 - **Lines changed**: +0 / −0
 
-### Scott Rhodes
-
-- **GitHub**: [@aumsanskrit](https://github.com/aumsanskrit)
-- **ORCID**: *(awaiting)*
-- **Active span**: — → —
-- **Commits**: 0 across 0 distinct repos
-- **Issues created**: 10
-- **Lines changed**: +0 / −0
-- **Role notes**: Issue analysis and corrections (MWS issue #190 and others).
-
 ### mediabuff
 
 - **GitHub**: [@mediabuff](https://github.com/mediabuff)
@@ -546,14 +457,6 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **Issues created**: 1
 - **Lines changed**: +0 / −0
 
-### shenyileirob
-
-- **GitHub**: [@shenyileirob](https://github.com/shenyileirob)
-- **Active span**: — → —
-- **Commits**: 0 across 0 distinct repos
-- **Issues created**: 1
-- **Lines changed**: +0 / −0
-
 ### tempapy
 
 - **GitHub**: [@tempapy](https://github.com/tempapy)
@@ -586,17 +489,17 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **Issues created**: 1
 - **Lines changed**: +0 / −0
 
-## Occasional (8)
+## Occasional (11)
 
 ### Anna Rybakova
 
 - **GitHub**: [@AnnaRybakovaT](https://github.com/AnnaRybakovaT)
 - **Active span**: 2020-12-15 → 2023-06-25 (4 years)
-- **Commits**: 71 across 10 distinct repos
+- **Commits**: 82 across 11 distinct repos
 - **Issues created**: 0
 - **Lines changed**: +71,555 / −6,432
 - **Role notes**: Onboarding contributor 2020–2023 — Python pipeline development.
-- **Top repositories** (by commits): `MD` (36), `PWK` (9), `CAE` (7), `CORRECTIONS` (6), `MWS` (3), `BUR` (3), `temp_corrections_ap90` (3), `BOP` (2)
+- **Top repositories** (by commits): `MD` (36), `csl-orig` (11), `PWK` (9), `CAE` (7), `CORRECTIONS` (6), `MWS` (3), `BUR` (3), `temp_corrections_ap90` (3)
 
 ### (misconfigured git client)
 
@@ -607,6 +510,16 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 - **Lines changed**: +11,395 / −8,887
 - **Role notes**: Default git config not customised; commits cannot be reliably attributed.
 - **Top repositories** (by commits): `temp_corrections_ap90` (12), `temp_corrections_acc` (9), `temp_corrections_ae` (7), `CAE` (1), `temp_corrections_mw` (1)
+
+### shenyileirob
+
+- **GitHub**: [@shenyileirob](https://github.com/shenyileirob)
+- **Active span**: 2024-01-13 → 2025-11-01 (2 years)
+- **Commits**: 8 across 1 distinct repos
+- **Issues created**: 1
+- **Lines changed**: +0 / −0
+- **Role notes**: GitHub login already counted as an issue author; the 21-11 full csl-orig history recovery surfaced the matching git author name under a QQ email.
+- **Top repositories** (by commits): `csl-orig` (8)
 
 ### root@localhost.localdomain
 
@@ -642,11 +555,31 @@ Each contributor section gives canonical identity, GitHub login, role, span of a
 
 - **GitHub**: [@YevgenJohn](https://github.com/YevgenJohn)
 - **Active span**: 2019-10-31 → 2019-10-31 (1 years)
-- **Commits**: 1 across 1 distinct repos
+- **Commits**: 2 across 2 distinct repos
 - **Issues created**: 1
 - **Lines changed**: +1 / −1
 - **Role notes**: Identity to be confirmed.
-- **Top repositories** (by commits): `csl-pywork` (1)
+- **Top repositories** (by commits): `csl-pywork` (1), `csl-orig` (1)
+
+### adminlip
+
+- **GitHub**: [@adminlip](https://github.com/adminlip)
+- **Active span**: 2026-05-15 → 2026-05-15 (1 years)
+- **Commits**: 1 across 1 distinct repos
+- **Issues created**: 0
+- **Lines changed**: +0 / −0
+- **Role notes**: GitHub user behind csl-orig PR #2845 (MW 28747 wording, merged 2026-05-15); a distinct contributor newly visible once the full csl-orig history was recovered, not an alias of an already-counted person.
+- **Top repositories** (by commits): `csl-orig` (1)
+
+### Krishna Chaitanya
+
+- **GitHub**: [@Krishna Chaitanya](https://github.com/Krishna Chaitanya)
+- **Active span**: 2023-10-12 → 2023-10-12 (1 years)
+- **Commits**: 1 across 1 distinct repos
+- **Issues created**: 0
+- **Lines changed**: +0 / −0
+- **Role notes**: Git author name on a 2023-10-12 csl-orig commit referencing ashtadhyayi-com/data PR #256; a distinct contributor newly visible once the full csl-orig history was recovered.
+- **Top repositories** (by commits): `csl-orig` (1)
 
 ### sanskritisampada
 

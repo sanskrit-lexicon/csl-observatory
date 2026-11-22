@@ -11,7 +11,7 @@
 | Total issues (incl. closed) | 8,791 |
 | Total pull requests | 3,020 |
 | Total commits in default branches | 15,156 |
-| Distinct contributors (commit authors + issue authors) | 77 |
+| Distinct contributors (commit authors + issue authors) | 70 |
 | Triaged repositories (taxonomy applied) | 63 |
 
 ## Issue type distribution across all triaged repos
@@ -78,7 +78,7 @@ pie title Issue type distribution
 | Real name | GitHub | Role | Commits | Repos | Span | Lines + / − |
 |---|---|---|---:|---:|---|---:|
 | Mārcis Gasūns | [@gasyoun](https://github.com/gasyoun) | lead | 5,101 | 79 | 2014-01 → 2026-11 | +35,742,983 / −3,285,921 |
-| Jim Funderburk | [@funderburkjim](https://github.com/funderburkjim) | maintainer | 3,269 | 55 | 2014-01 → 2026-09 | +53,937,366 / −5,139,551 |
+| Jim Funderburk | [@funderburkjim](https://github.com/funderburkjim) | maintainer | 3,273 | 55 | 2014-01 → 2026-09 | +53,937,366 / −5,139,551 |
 | Dhaval Patel | [@drdhaval2785](https://github.com/drdhaval2785) | core | 1,941 | 33 | 2015-11 → 2026-11 | +35,291,000 / −6,995,413 |
 | drdhaval2785@gmail.com | [@drdhaval2785@gmail.com](https://github.com/drdhaval2785@gmail.com) | contributor | 1,896 | 8 | 2015-11 → 2026-11 | +0 / −0 |
 | funderburkjim@gmail.com | [@funderburkjim@gmail.com](https://github.com/funderburkjim@gmail.com) | contributor | 1,350 | 4 | 2014-02 → 2026-07 | +0 / −0 |
@@ -87,16 +87,16 @@ pie title Issue type distribution
 | gasyoun@users.noreply.github.com | [@gasyoun@users.noreply.github.com](https://github.com/gasyoun@users.noreply.github.com) | contributor | 284 | 8 | 2026-05 → 2026-11 | +0 / −0 |
 | GitHub Actions (bot) | [@github-actions[bot]](https://github.com/github-actions[bot]) | bot | 209 | 3 | 2026-04 → 2026-11 | +1,909,084 / −304,914 |
 | gasyoun@ya.ru | [@gasyoun@ya.ru](https://github.com/gasyoun@ya.ru) | contributor | 93 | 8 | 2014-01 → 2026-11 | +0 / −0 |
-| Anna Rybakova | [@AnnaRybakovaT](https://github.com/AnnaRybakovaT) | occasional | 71 | 10 | 2020-12 → 2023-06 | +71,555 / −6,432 |
+| Anna Rybakova | [@AnnaRybakovaT](https://github.com/AnnaRybakovaT) | occasional | 82 | 11 | 2020-12 → 2023-06 | +71,555 / −6,432 |
 | Nagabhushana Rao | [@Andhrabharati](https://github.com/Andhrabharati) | core | 63 | 3 | 2021-01 → 2023-04 | +5,941,482 / −1,768,472 |
 | GitHub Actions (bot) | [@actions-user](https://github.com/actions-user) | bot | 46 | 4 | 2026-04 → 2026-09 | +67,888 / −39,702 |
 | (misconfigured git client) | [@you@example.com](https://github.com/you@example.com) | occasional | 30 | 5 | 2021-01 → 2021-09 | +11,395 / −8,887 |
 | 49699333+dependabot[bot]@users.noreply.github.com | [@49699333+dependabot[bot]@users.noreply.github.com](https://github.com/49699333+dependabot[bot]@users.noreply.github.com) | contributor | 29 | 8 | 2026-06 → 2026-11 | +0 / −0 |
 | actions@github.com | [@actions@github.com](https://github.com/actions@github.com) | contributor | 25 | 1 | 2026-04 → 2026-08 | +0 / −0 |
-| srhodes@snowcrest.net | [@srhodes@snowcrest.net](https://github.com/srhodes@snowcrest.net) | contributor | 15 | 1 | 2024-01 → 2024-01 | +0 / −0 |
-| 917514182@qq.com | [@917514182@qq.com](https://github.com/917514182@qq.com) | contributor | 8 | 1 | 2024-01 → 2025-11 | +0 / −0 |
-| 74726889+AnnaRybakovaT@users.noreply.github.com | [@74726889+AnnaRybakovaT@users.noreply.github.com](https://github.com/74726889+AnnaRybakovaT@users.noreply.github.com) | contributor | 6 | 1 | 2021-01 → 2021-03 | +0 / −0 |
+| Scott Rhodes | [@aumsanskrit](https://github.com/aumsanskrit) | contributor | 17 | 1 | 2024-01 → 2024-01 | +0 / −0 |
+| shenyileirob | [@shenyileirob](https://github.com/shenyileirob) | occasional | 8 | 1 | 2024-01 → 2025-11 | +0 / −0 |
 | root@localhost.localdomain | [@root@localhost.localdomain](https://github.com/root@localhost.localdomain) | occasional | 5 | 3 | 2019-10 → 2019-10 | +3 / −3 |
+| DmitriSKT | [@DmitriSKT](https://github.com/DmitriSKT) | occasional | 3 | 1 | 2017-05 → 2017-11 | +33 / −2 |
 
 ## Per-repository summary
 
