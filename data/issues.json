@@ -119577,6 +119577,90 @@
   "csl-observatory": [
     {
       "assignees": [],
+      "closed_at": null,
+      "comments": 0,
+      "created_at": "2026-11-23T11:47:33Z",
+      "is_pull_request": true,
+      "labels": [],
+      "milestone": null,
+      "number": 345,
+      "state": "open",
+      "title": "data: monthly refresh (2026-11-23)",
+      "updated_at": "2026-11-23T11:47:33Z",
+      "user": "github-actions[bot]"
+    },
+    {
+      "assignees": [],
+      "closed_at": "2026-11-22T15:56:20Z",
+      "comments": 0,
+      "created_at": "2026-11-22T15:51:07Z",
+      "is_pull_request": true,
+      "labels": [],
+      "milestone": null,
+      "number": 344,
+      "state": "closed",
+      "title": "A12: frozen external-validity instrument with honest channel labels (H8444)",
+      "updated_at": "2026-11-22T15:56:22Z",
+      "user": "gasyoun"
+    },
+    {
+      "assignees": [],
+      "closed_at": "2026-11-22T03:36:50Z",
+      "comments": 0,
+      "created_at": "2026-11-22T03:35:41Z",
+      "is_pull_request": true,
+      "labels": [],
+      "milestone": null,
+      "number": 343,
+      "state": "closed",
+      "title": "data(identity): fold 10 recovery email identities into canonical aliases (YPI)",
+      "updated_at": "2026-11-22T03:36:53Z",
+      "user": "gasyoun"
+    },
+    {
+      "assignees": [],
+      "closed_at": "2026-11-21T20:27:18Z",
+      "comments": 0,
+      "created_at": "2026-11-21T20:25:46Z",
+      "is_pull_request": true,
+      "labels": [],
+      "milestone": null,
+      "number": 342,
+      "state": "closed",
+      "title": "data: recover csl-orig's 2,328 commits into the 21-11 live snapshot",
+      "updated_at": "2026-11-21T20:27:21Z",
+      "user": "gasyoun"
+    },
+    {
+      "assignees": [],
+      "closed_at": "2026-11-21T19:25:03Z",
+      "comments": 0,
+      "created_at": "2026-11-21T19:23:50Z",
+      "is_pull_request": true,
+      "labels": [],
+      "milestone": null,
+      "number": 341,
+      "state": "closed",
+      "title": "fix(refresh): fail loud on partial commit-history coverage",
+      "updated_at": "2026-11-21T19:25:05Z",
+      "user": "gasyoun"
+    },
+    {
+      "assignees": [],
+      "closed_at": "2026-11-21T18:59:48Z",
+      "comments": 0,
+      "created_at": "2026-11-21T18:52:34Z",
+      "is_pull_request": true,
+      "labels": [],
+      "milestone": null,
+      "number": 340,
+      "state": "closed",
+      "title": "data: weekly snapshot 2026-11-21",
+      "updated_at": "2026-11-21T18:59:48Z",
+      "user": "github-actions[bot]"
+    },
+    {
+      "assignees": [],
       "closed_at": "2026-11-21T18:30:57Z",
       "comments": 0,
       "created_at": "2026-11-21T18:29:47Z",
@@ -119684,7 +119768,7 @@
       "number": 332,
       "state": "closed",
       "title": "H8444: A12 external-validity instrument (acl-uplift shape 3)",
-      "updated_at": "2026-11-18T14:00:20Z",
+      "updated_at": "2026-11-22T15:56:22Z",
       "user": "gasyoun"
     },
     {
@@ -124652,6 +124736,20 @@
     }
   ],
   "csl-atlas": [
+    {
+      "assignees": [],
+      "closed_at": null,
+      "comments": 0,
+      "created_at": "2026-11-22T18:14:19Z",
+      "is_pull_request": true,
+      "labels": [],
+      "milestone": null,
+      "number": 726,
+      "state": "open",
+      "title": "salvage: primary-clone dirty state — L0 regen data + authority-tiers validator/ADRs/tests",
+      "updated_at": "2026-11-22T18:14:19Z",
+      "user": "gasyoun"
+    },
     {
       "assignees": [],
       "closed_at": "2026-11-21T04:39:48Z",
@@ -137458,6 +137556,74 @@
   "csl-guides": [
     {
       "assignees": [],
+      "closed_at": "2026-11-23T05:21:03Z",
+      "comments": 0,
+      "created_at": "2026-11-23T05:17:13Z",
+      "is_pull_request": true,
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "milestone": null,
+      "number": 280,
+      "state": "closed",
+      "title": "build(deps-dev): bump playwright from 1.65.0 to 1.65.1",
+      "updated_at": "2026-11-23T05:21:03Z",
+      "user": "dependabot[bot]"
+    },
+    {
+      "assignees": [],
+      "closed_at": "2026-11-23T05:21:17Z",
+      "comments": 0,
+      "created_at": "2026-11-23T05:17:01Z",
+      "is_pull_request": true,
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "milestone": null,
+      "number": 279,
+      "state": "closed",
+      "title": "build(deps): bump dompurify from 3.4.17 to 3.4.18",
+      "updated_at": "2026-11-23T05:21:27Z",
+      "user": "dependabot[bot]"
+    },
+    {
+      "assignees": [],
+      "closed_at": "2026-11-23T05:20:56Z",
+      "comments": 0,
+      "created_at": "2026-11-23T05:16:49Z",
+      "is_pull_request": true,
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "milestone": null,
+      "number": 278,
+      "state": "closed",
+      "title": "build(deps): bump actions/checkout from 4 to 7",
+      "updated_at": "2026-11-23T05:21:05Z",
+      "user": "dependabot[bot]"
+    },
+    {
+      "assignees": [],
+      "closed_at": null,
+      "comments": 0,
+      "created_at": "2026-11-23T05:16:42Z",
+      "is_pull_request": true,
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "milestone": null,
+      "number": 277,
+      "state": "open",
+      "title": "build(deps): bump actions/upload-artifact from 4 to 7",
+      "updated_at": "2026-11-23T05:17:40Z",
+      "user": "dependabot[bot]"
+    },
+    {
+      "assignees": [],
       "closed_at": "2026-11-17T07:46:54Z",
       "comments": 0,
       "created_at": "2026-11-17T07:38:59Z",
@@ -141513,6 +141679,20 @@
   "sanskrit-util": [
     {
       "assignees": [],
+      "closed_at": "2026-11-22T15:56:24Z",
+      "comments": 0,
+      "created_at": "2026-11-22T15:51:10Z",
+      "is_pull_request": true,
+      "labels": [],
+      "milestone": null,
+      "number": 94,
+      "state": "closed",
+      "title": "docs: clarify exact lookup vs folded recall at the reuse entry points (H8042)",
+      "updated_at": "2026-11-22T15:56:26Z",
+      "user": "gasyoun"
+    },
+    {
+      "assignees": [],
       "closed_at": "2026-11-11T19:14:50Z",
       "comments": 0,
       "created_at": "2026-11-11T18:43:38Z",
@@ -141522,7 +141702,7 @@
       "number": 93,
       "state": "closed",
       "title": "docs: clarify exact lookup vs folded recall at the API (H8042)",
-      "updated_at": "2026-11-11T19:14:52Z",
+      "updated_at": "2026-11-22T15:56:27Z",
       "user": "gasyoun"
     },
     {

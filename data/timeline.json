@@ -1,8 +1,8 @@
 {
   "commits_by_year": {
     "2014": 125,
-    "2015": 419,
-    "2016": 397,
+    "2015": 420,
+    "2016": 396,
     "2017": 276,
     "2018": 152,
     "2019": 417,
@@ -12,7 +12,7 @@
     "2023": 580,
     "2024": 620,
     "2025": 873,
-    "2026": 8254
+    "2026": 8315
   },
   "commits_by_year_per_repo": {
     "2014": {
@@ -30,7 +30,7 @@
       "MW72": 1
     },
     "2015": {
-      "CORRECTIONS": 242,
+      "CORRECTIONS": 243,
       "PWK": 67,
       "hwnorm1": 45,
       "sanskrit-lexicon.github.io": 17,
@@ -45,7 +45,7 @@
       "GRA": 1
     },
     "2016": {
-      "CORRECTIONS": 189,
+      "CORRECTIONS": 188,
       "alternateheadwords": 66,
       "hwnorm1": 44,
       "PWK": 43,
@@ -278,29 +278,29 @@
     "2026": {
       "csl-atlas": 932,
       "csl-orig": 808,
-      "csl-observatory": 718,
+      "csl-observatory": 724,
       "csl-corrections": 688,
       "cologne-stardict": 440,
-      "csl-guides": 299,
+      "MWS": 327,
+      "csl-guides": 302,
       "csl-standards": 286,
-      "MWS": 285,
       "csl-apidev": 284,
       "csl-app": 227,
       "csl-pywork": 215,
       "AP": 172,
       "PWG": 160,
       "BEN": 145,
-      "sanskrit-util": 137,
+      "sanskrit-util": 139,
       "csl-devanagari": 99,
       "PUI": 99,
       "GRA": 78,
       "PWK": 72,
       "WIL": 72,
       "ApteES": 62,
-      "VCP": 58,
       "hwnorm1": 58,
       "csl-pyutil": 56,
       "COLOGNE": 55,
+      "VCP": 54,
       "SHS": 52,
       "MD": 50,
       "BHS": 49,
@@ -315,6 +315,7 @@
       "MWinflect": 42,
       "VEI": 41,
       "MCI": 40,
+      "CORRECTIONS": 40,
       "STC": 40,
       "INM": 40,
       "BUR": 39,
@@ -332,7 +333,6 @@
       "mw-dev": 32,
       "MW72": 31,
       "AMAR": 31,
-      "CORRECTIONS": 28,
       "csl-doc": 28,
       "KNA": 26,
       "KOW": 24,

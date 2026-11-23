@@ -10,27 +10,30 @@ gantt
     dateFormat YYYY-MM-DD
     axisFormat %Y
     section Lead
-    Mārcis Gasūns :2014-01-14, 2026-11-21
+    Mārcis Gasūns :2014-01-14, 2026-11-22
     section Maintainer
     Jim Funderburk :2014-01-15, 2026-09-05
     section Core
-    Dhaval Patel :2015-11-08, 2026-11-12
-    Nagabhushana Rao :2021-01-23, 2023-04-03
+    Dhaval Patel :2015-11-24, 2026-11-12
+    Nagabhushana Rao :2021-05-28, 2023-04-03
     Thomas Malten :2021-09-26, 2021-09-26
     section Contributor
-    drdhaval2785@gmail.com :2015-11-19, 2026-11-12
-    funderburkjim@gmail.com :2014-02-12, 2026-07-14
+    drdhaval2785@gmail.com :2015-11-08, 2026-11-12
+    funderburkjim@gmail.com :2014-01-22, 2026-07-14
+    gasyoun@users.noreply.github.com :2015-02-19, 2026-11-15
     drdhaval2785gmail.com :2026-03-09, 2026-11-15
-    dependabot[bot] :2026-05-29, 2026-11-18
-    gasyoun@users.noreply.github.com :2026-05-06, 2026-11-15
-    gasyoun@ya.ru :2014-01-21, 2026-11-12
+    dependabot[bot] :2026-05-29, 2026-11-23
+    gasyoun@ya.ru :2014-01-16, 2026-11-23
     49699333+dependabot[bot]@users.noreply.github.com :2026-06-02, 2026-11-09
+    75209130+Andhrabharati@users.noreply.github.com :2021-01-23, 2021-03-11
     actions@github.com :2026-04-08, 2026-08-09
     Scott Rhodes :2024-01-14, 2024-01-28
     github-actions[bot]@users.noreply.github.com :2026-03-07, 2026-03-09
     gasuns@gmail.com :2026-11-18, 2026-11-18
     dpatel3@dialog7.rrz.uni-koeln.de :2023-12-15, 2024-01-12
     vishvas.vasuki@gmail.com :2021-10-05, 2021-10-07
+    noreply@gasyoun.github.io :2026-11-01, 2026-11-01
+    knbrao@gmail.com :2022-12-27, 2022-12-27
     usha.sanka@gmial.com :2021-01-13, 2021-01-13
     github-actions[Cologne-Bot]@users.noreply.github.com :2026-03-09, 2026-03-09
     dpatel5@dialog8.rrz.uni-koeln.de :2026-07-07, 2026-07-07
@@ -54,8 +57,8 @@ gantt
 | Year | Commits |
 |---|---:|
 | 2014 | 125 |
-| 2015 | 419 |
-| 2016 | 397 |
+| 2015 | 420 |
+| 2016 | 396 |
 | 2017 | 276 |
 | 2018 | 152 |
 | 2019 | 417 |
@@ -65,5 +68,5 @@ gantt
 | 2023 | 580 |
 | 2024 | 620 |
 | 2025 | 873 |
-| 2026 | 8,254 |
+| 2026 | 8,315 |
 
