@@ -1,18 +1,26 @@
 {
-  "snapshot_date": "2026-11-21",
+  "snapshot_date": "2026-11-23",
   "org": "sanskrit-lexicon",
-  "fetched_at": "2026-11-21T18:52:16.881550Z",
-  "duration_seconds": 1144.3,
+  "fetched_at": "2026-11-23T17:44:41.691158Z",
+  "duration_seconds": 1184.9,
   "repos_count": 89,
   "repos_with_issues": 89,
   "archived_count": 4,
   "fork_count": 2,
-  "total_issues": 8791,
-  "total_pull_requests": 3020,
-  "total_commits": 15156,
+  "total_issues": 8803,
+  "total_pull_requests": 3032,
+  "total_commits": 15217,
   "total_project_board_items": 634,
   "retry_via_clone": {
-    "csl-orig": 2328
+    "hwnorm1": 215,
+    "cologne-stardict": 896,
+    "csl-orig": 2328,
+    "csl-json": 114,
+    "csl-devanagari": 210,
+    "csl-lnum": 72,
+    "csl-ldev": 84,
+    "MWS": 639,
+    "CORRECTIONS": 720
   },
-  "retry_via_clone_at": "2026-11-21T20:15:49.522380+00:00"
+  "retry_via_clone_at": "2026-11-23T17:44:49.266304+00:00"
 }
