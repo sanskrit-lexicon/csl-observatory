@@ -1,0 +1,21 @@
+text	stanza_index	manual_class	note
+Meghadūta	0	17x4 mandakranta/indravajra	verse 1 read by hand: four 17-syllable pādas (kaścit…pramattaḥ | śāpena…bhartuḥ | yakṣaścakre…puṇyodakeṣu | snigdha…śrameṣu)
+Meghadūta	12	17x4 mandakranta/indravajra	mārgaṃ tāvacchṛṇu… line 1 hand-counted to 17
+Meghadūta	24	17x4 mandakranta/indravajra	pāṇḍucchāyopavanavṛtayaḥ… hand-counted to 17 per line
+Meghadūta	36	17x4 mandakranta/indravajra	bhartuḥ kaṇṭhacchavir iti… long 17-syllable pādas read by hand
+Meghadūta	48	17x4 mandakranta/indravajra	ārādhyainaṃ śaravaṇabhavaṃ… 17 per line
+Meghadūta	60	17x4 mandakranta/indravajra	prāleyādrer upataṭam atikramya… 17 per line
+Meghadūta	72	17x4 mandakranta/indravajra	mandākinyāḥ salilaśiśiraiḥ… 17 per line
+Meghadūta	84	17x4 mandakranta/indravajra	raktāśokaś calakisalayaḥ… still mandākrānta by hand; detector had an au-before-space overcount (fixed in this pass)
+Meghadūta	96	17x4 mandakranta/indravajra	pādān indor amṛtaśiśirāñjalam… 17 per line
+Meghadūta	108	17x4 mandakranta/indravajra	aṅgenāṅgaṃ pratanu tanunā… 17 per line
+Rāmāyaṇa	0	anustubh/sloka (4x8)	tapaḥsvādhyāyanirataṃ… classic 8-syllable pādas read by hand
+Rāmāyaṇa	40	anustubh/sloka (4x8)	anādṛtya tu tad vākyaṃ… śloka halves 16+16
+Rāmāyaṇa	80	anustubh/sloka (4x8)	yathāvat pūjitas tena… śloka halves 16+16
+Rāmāyaṇa	120	anustubh/sloka (4x8)	śrutvā vas tu samagraṃ… śloka halves 16+16
+Rāmāyaṇa	160	anustubh/sloka (4x8)	each of the 3 emitted lines is 16 syllables = two 8-syllable pādas; DCS grouped 1.5 verses into one sent_counter (heterogeneous stanza, label from the lines themselves)
+Rāmāyaṇa	200	anustubh/sloka (4x8)	ikṣvākūṇām atiratho… śloka halves 16+16
+Rāmāyaṇa	240	anustubh/sloka (4x8)	tasya tv evaṃprabhāvasya… śloka halves 16+16
+Rāmāyaṇa	280	anustubh/sloka (4x8)	pratigṛhya tu tāṃ pūjāṃ… śloka halves 16+16
+Rāmāyaṇa	320	anustubh/sloka (4x8)	tataḥ pramuditāḥ sarve… śloka halves 16+16 (detector overcount fixed in this pass)
+Rāmāyaṇa	360	anustubh/sloka (4x8)	yathoktaṃ tat kariṣyāmo… śloka halves 16+16
