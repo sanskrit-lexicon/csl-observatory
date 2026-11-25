@@ -350,9 +350,9 @@ year,repo,issues_opened,issues_closed,prs_opened,prs_closed,commits,unique_autho
 2026,avlinks,0,0,11,11,22,2
 2026,cologne-hugo,0,0,7,7,12,2
 2026,cologne-stardict,10,8,9,9,440,4
-2026,csl-apidev,27,28,126,126,283,5
+2026,csl-apidev,27,28,126,126,284,5
 2026,csl-app,43,42,29,29,227,3
-2026,csl-corrections,283,236,74,74,683,5
+2026,csl-corrections,284,236,76,76,688,5
 2026,csl-devanagari,0,4,40,37,71,4
 2026,csl-doc,0,0,17,17,28,2
 2026,csl-homepage,5,7,15,15,44,3
@@ -363,11 +363,11 @@ year,repo,issues_opened,issues_closed,prs_opened,prs_closed,commits,unique_autho
 2026,csl-lnum,1,1,8,8,20,2
 2026,csl-lslink,2,0,6,6,34,4
 2026,csl-newsletter,2,2,13,13,35,2
-2026,csl-observatory,60,41,261,260,694,4
+2026,csl-observatory,60,41,284,284,724,4
 2026,csl-orig,60,975,54,51,780,5
-2026,csl-pywork,26,30,48,48,213,4
+2026,csl-pywork,26,30,49,49,215,4
 2026,csl-sqlite,1,0,8,8,17,3
-2026,csl-websanlexicon,17,25,111,111,241,4
+2026,csl-websanlexicon,17,25,111,111,243,4
 2026,csl-westergaard,1,0,11,11,21,2
 2026,csl-whitroot,1,0,11,11,16,2
 2026,hwnorm1,2,1,6,6,55,5
@@ -376,7 +376,7 @@ year,repo,issues_opened,issues_closed,prs_opened,prs_closed,commits,unique_autho
 2026,mw-dev,0,0,14,14,32,2
 2026,rvlinks,0,0,7,7,17,2
 2026,sanskrit-fonts,0,0,6,6,13,2
-2026,sanskrit-lexicon.github.io,0,0,19,19,34,2
+2026,sanskrit-lexicon.github.io,0,0,20,20,36,2
 2026,santamlegacy,0,0,1,1,4,2
 2026,temp_corrections_acc,0,0,1,1,4,2
 2026,temp_corrections_ae,0,0,1,1,4,2

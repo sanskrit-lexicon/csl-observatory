@@ -5972,6 +5972,7 @@ cologne-stardict,5d3eac3f589c,2017-04-04T16:05:41Z,drdhaval2785,drdhaval2785,drd
 cologne-stardict,82cf5cf8ca13,2017-04-04T15:39:46Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,GST added
 cologne-stardict,d7f4222e9a19,2017-04-04T10:51:20Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,CCS GRA added
 cologne-stardict,9e7133046729,2017-04-04T06:45:28Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,added CAE
+csl-apidev,cf51b294e956,2026-11-18T05:22:19Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore(release): cut v0.4.4
 csl-apidev,6af742757b6e,2026-11-13T08:10:08Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"#178: fix og:image URL — build from PATH, not query-carrying REQUEST_URI (#194)"
 csl-apidev,ed3f438398ca,2026-11-13T07:54:44Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,#178: before/after evidence screenshots of the deployed og: state (MG 12-11-2026 ruling) (#193)
 csl-apidev,9c8d28b68ecc,2026-11-11T19:09:01Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add weekly OSSF Scorecard workflow (badge publish) (#192)
@@ -6962,6 +6963,11 @@ csl-app,3f5f02ce0114,2026-03-18T19:13:28Z,drdhaval2785,Dr. Dhaval Patel,drdhaval
 csl-app,41a87dfe9b1a,2026-03-18T17:59:44Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,v0.1.0
 csl-app,601df1e6d0c8,2026-03-18T17:25:31Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,app working
 csl-app,3827040885b1,2026-03-18T16:14:06Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,initial commit
+csl-corrections,6f19caff52e7,2026-11-18T05:33:48Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #467 from sanskrit-lexicon/agentdocs-sla-1811
+csl-corrections,f5d5b365454a,2026-11-18T05:32:48Z,,Dr. Mārcis Gasūns,gasuns@gmail.com,docs(agent-docs): H8418 verified-no-change CLAUDE.md refresh (18-11-2026)
+csl-corrections,c0d485663be5,2026-11-18T05:23:03Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-11-17
+csl-corrections,9bc6afedfb61,2026-11-18T05:10:35Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore(release): cut v1.0.2
+csl-corrections,65ad35997fd6,2026-11-16T18:48:28Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(pre-push): port the H8360 URL-target normalization block from Uprava (#465)
 csl-corrections,b645b809975d,2026-11-14T04:21:02Z,github-actions[bot],github-actions[bot],github-actions[bot]@users.noreply.github.com,[CRON] daily corrections for 2026-11-13
 csl-corrections,657b27aabc4a,2026-11-13T00:25:47Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,guard: make shared-main-tree pre-commit block on macOS/Linux (bughunt HIGH-1) (#463)
 csl-corrections,05d05e865685,2026-11-13T00:22:13Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,bughunt: BUGHUNT-FINDINGS-csl-corrections-13.11.2026.md + CHANGELOG bullet (#462)
@@ -9009,6 +9015,36 @@ csl-newsletter,bced52b7f19f,2021-09-14T04:37:04Z,drdhaval2785,Dhaval Patel,drdha
 csl-newsletter,53c6fa85e014,2021-09-13T14:34:31Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,csl-orig commits taken into consideration
 csl-newsletter,b04b08d7e699,2021-09-13T13:28:15Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,addition
 csl-newsletter,5ab58ee2cd64,2021-09-13T12:33:30Z,drdhaval2785,Dhaval Patel,drdhaval2785@gmail.com,september started
+csl-observatory,fa3625888d73,2026-11-22T15:56:20Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #344 from sanskrit-lexicon/acl-uplift-a12
+csl-observatory,64a41195be9e,2026-11-22T03:36:49Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,data(identity): fold 10 recovery email identities into canonical aliases (YPI) (#343)
+csl-observatory,f8787b85f2e9,2026-11-21T20:27:18Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"data: recover csl-orig's 2,328 commits into the 21-11 live snapshot (#342)"
+csl-observatory,c15568027bc3,2026-11-21T19:25:03Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(refresh): fail loud on partial commit-history coverage (#341)
+csl-observatory,82095638c351,2026-11-21T18:59:47Z,github-actions[bot],github-actions[bot],41898282+github-actions[bot]@users.noreply.github.com,data: weekly snapshot 2026-11-21 (#340)
+csl-observatory,14804f3cdb5e,2026-11-21T18:30:56Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(headline-claims): per-identity repo count can't collide with live headline token (#339)
+csl-observatory,d6eb83c16f19,2026-11-21T05:26:27Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(refresh): drop the force-merge fallback from both data lanes (YJG) (#338)
+csl-observatory,ea6e777a2b5f,2026-11-18T16:21:20Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,chore(release): cut v1.15.5
+csl-observatory,fa149bba57fa,2026-11-18T16:15:54Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"docs(ai-state): H7879 completed row — live-snapshot lane repaired, November summary.json landed (#337)"
+csl-observatory,2d8be3dab738,2026-11-18T16:01:10Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(refresh): H7879 round 3 — commit the requoted surface + refresh-proof the test anchors (#336)
+csl-observatory,31c89047ee0e,2026-11-18T15:38:30Z,github-actions[bot],github-actions[bot],41898282+github-actions[bot]@users.noreply.github.com,data: weekly snapshot 2026-11-18 (#335)
+csl-observatory,b5a30f4c7c57,2026-11-18T15:10:09Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(headline-claims): H7879 round 2 — write half covers every registered live claim (#334)
+csl-observatory,d7423a0a9857,2026-11-18T14:25:36Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(refresh): H7879 — repair the legacy live-snapshot lane (#333)
+csl-observatory,cdf71b0b42fa,2026-11-18T14:00:15Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,feat(A12): frozen external-validity instrument with honest channel labels (H8444) (#332)
+csl-observatory,2a148f18ebf8,2026-11-18T13:49:23Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,feat(A12): frozen external-validity instrument with honest channel labels (H8444)
+csl-observatory,efdb06047181,2026-11-18T13:40:20Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,feat(A15): citable org-metrics dataset companion (H8443) (#331)
+csl-observatory,b558eb7d0226,2026-11-18T13:40:11Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(A73): acl-uplift shape-4 AED spine companion (H8442) (#330)
+csl-observatory,f381e921f08a,2026-11-18T12:02:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #329 from sanskrit-lexicon/fix/stale-headline-claims-20261118
+csl-observatory,51b13b722c36,2026-11-18T12:01:29Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,fix(headline-claims): re-sync 13 stale offline numbers to 2026-11-16 snapshot
+csl-observatory,4c1904ea03fa,2026-11-18T11:49:34Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,docs(H8426): stop claiming internal-only paths never reach the public surface (#328)
+csl-observatory,f8d299b86c35,2026-11-18T11:09:10Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,chore(release): cut v1.15.4
+csl-observatory,d1001df300cf,2026-11-18T11:06:27Z,dependabot[bot],dependabot[bot],49699333+dependabot[bot]@users.noreply.github.com,chore(deps): bump actions/checkout from 4 to 7 (#320)
+csl-observatory,7e3f1e6d00be,2026-11-18T11:06:12Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ci(cllg): page parity gate + dated re-snapshot cadence (H8430) (#327)
+csl-observatory,2bc85afc8e45,2026-11-18T11:05:54Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(pre-push): port the H8360 URL-target normalization block from Uprava (#323)
+csl-observatory,36b84dc24cbf,2026-11-18T11:04:45Z,github-actions[bot],github-actions[bot],41898282+github-actions[bot]@users.noreply.github.com,data: monthly refresh (2026-11-16) (#322)
+csl-observatory,aac242bfac3c,2026-11-18T11:03:58Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(scripts): import article_figures.py without matplotlib (H5800 smoke) (#326)
+csl-observatory,f216713ce550,2026-11-18T08:37:58Z,gasyoun,Mārcis Gasūns,gasyoun@ya.ru,chore(release): cut v1.15.3
+csl-observatory,1a1366dcc608,2026-11-18T08:36:38Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,CLLG vs open-Sanskrit estate — dated strategy scorecard + derived public page (H8426) (#325)
+csl-observatory,ba323eea87e8,2026-11-18T05:37:45Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"fix(dict-audit): exempt generator-noise issues (#313 paper-priv, #327 handoff mirror) (#324)"
+csl-observatory,a6c7b7a39680,2026-11-17T20:02:06Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore(release): cut v1.15.2
 csl-observatory,bfdbb40bb58e,2026-11-16T06:05:20Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #321 from sanskrit-lexicon/h8365-queue-malformed-repair
 csl-observatory,76e082a37031,2026-11-16T06:02:40Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(changelog_queue): fold 3 malformed fragments into the H4466 bullet shape (H8367)
 csl-observatory,662205008767,2026-11-14T15:08:48Z,github-actions[bot],github-actions[bot],41898282+github-actions[bot]@users.noreply.github.com,data: monthly refresh (2026-11-09) (#312)
@@ -12002,6 +12038,8 @@ csl-orig,ecc689a3a281,2019-07-20T05:43:47Z,drdhaval2785,drdhaval2785,drdhaval278
 csl-orig,661fb1081d4f,2019-07-20T05:21:21Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,copy to cologne web structure
 csl-orig,f325e2abde72,2019-07-20T05:15:30Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,added hwextra
 csl-orig,6f45dd5ce45d,2019-07-20T04:50:29Z,drdhaval2785,drdhaval2785,drdhaval2785@gmail.com,csl-orig initial commit
+csl-pywork,7f3c9c48fb9a,2026-11-18T05:34:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #110 from sanskrit-lexicon/agentdocs-sla-1811
+csl-pywork,316d4959b338,2026-11-18T05:32:52Z,,Dr. Mārcis Gasūns,gasuns@gmail.com,docs(agent-docs): H8418 verified-no-change CLAUDE.md refresh (18-11-2026)
 csl-pywork,038bfc3a7b3a,2026-11-12T14:45:03Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Merge pull request #109 from sanskrit-lexicon/fix-armh-fri-pe-generation
 csl-pywork,5f9d510acafc,2026-11-12T14:40:46Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,"Fix generation of armh, fri and pe under fail-closed checks"
 csl-pywork,adcd7d11e872,2026-11-07T05:16:14Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"Guard cd against failure at 10 sites (SC2164, H7788) (#108)"
@@ -12621,6 +12659,8 @@ csl-sqlite,a6a257a9a836,2026-05-29T05:10:13Z,gasyoun,Mārcis Gasūns,gasyoun@use
 csl-sqlite,299157791231,2026-05-15T06:00:57Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 csl-sqlite,fc82dcdff2e1,2026-04-11T06:00:27Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,README update
 csl-sqlite,fca7cdc9f757,2026-04-08T11:48:40Z,drdhaval2785,Dr. Dhaval Patel,drdhaval2785@gmail.com,Initial commit
+csl-websanlexicon,19f3be28bf2e,2026-11-18T05:48:00Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore(release): cut v0.3.2
+csl-websanlexicon,4476d1712244,2026-11-18T05:47:40Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,fix(changelog): remove duplicate H1523 keyboard-image bullet from [0.1.0] (§646)
 csl-websanlexicon,6713e404fd28,2026-11-15T15:00:14Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,"H7960: crash-safe removedup.py — atomic write, explicit except, argv CLI, smoke lane (#177)"
 csl-websanlexicon,bae0b26b5bcb,2026-11-11T19:09:37Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,ai-wip: add weekly OSSF Scorecard workflow (badge publish) (#180)
 csl-websanlexicon,a7aa71f2b2af,2026-11-10T09:53:41Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Merge pull request #179 from sanskrit-lexicon/h7962-ci-yml-quote-stepname
@@ -13744,6 +13784,8 @@ sanskrit-fonts,f79bfe4c48d1,2026-05-29T05:11:29Z,gasyoun,Mārcis Gasūns,gasyoun
 sanskrit-fonts,4a86c5b9f39d,2026-05-15T07:39:04Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Add CLAUDE.md with codebase guidance for Claude Code
 sanskrit-fonts,fee5ad4e5a29,2018-09-05T03:50:42Z,funderburkjim,funderburkjim,funderburkjim@gmail.com,siddhanta font
 sanskrit-fonts,9432607282a6,2018-09-05T03:39:54Z,funderburkjim,funderburkjim,funderburkjim@users.noreply.github.com,Initial commit
+sanskrit-lexicon.github.io,a9a2b805fca2,2026-11-21T03:49:14Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,Cite & DOI surfaces dictionaries-only: drop ArabicInSanskrit/GreekInSanskrit workspace rows (#20)
+sanskrit-lexicon.github.io,3335cbc0fbfe,2026-11-18T05:29:47Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,chore(release): cut v0.1.1
 sanskrit-lexicon.github.io,21da94ff8be0,2026-11-08T15:07:17Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,add standalone Cite & DOI page (cite.html) + generator with drift check; sitemap entry (H7887) (#19)
 sanskrit-lexicon.github.io,d9001e02c1d5,2026-11-07T06:59:05Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H7786 follow-up (MG yes 07-11): add 3 card-less Zenodo dictionaries to llms.txt (#18)
 sanskrit-lexicon.github.io,aea06a2e7433,2026-11-07T05:11:50Z,gasyoun,Mārcis Gasūns,gasyoun@users.noreply.github.com,H7786: add llms.txt + JSON-LD (Organization/WebSite) for LLM/GEO extractability (#17)

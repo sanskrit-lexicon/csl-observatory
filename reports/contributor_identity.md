@@ -10,8 +10,8 @@ Purpose: close the attribution gap the bus-factor finding surfaced — every hum
 |---|---:|
 | Confirmed name, registered ORCID, consent recorded | 1 |
 | Confirmed name, registered ORCID, consent not yet recorded | 0 |
-| Confirmed name, ORCID still a placeholder | 6 |
-| No confirmed name (and no ORCID) | 9 |
+| Confirmed name, ORCID still a placeholder | 8 |
+| No confirmed name (and no ORCID) | 7 |
 | Bots (excluded) | 3 |
 
 **Bottom line: 1 of 16 human contributors have a registered ORCID; 1 have consent recorded.** The core group already has confirmed names; the gap is ORCID registration plus recorded public-display consent for them, and identification of the occasional contributors.
@@ -24,11 +24,11 @@ Fill `Real name`, `ORCID` and `Consent` where blank. `—` in ORCID means none o
 |---|---:|---:|---|---|---|---|---|
 | `funderburkjim` | 4,891 | 59 | maintainer | Jim Funderburk | Cologne Digital Sanskrit Dictionaries | — | — |
 | `drdhaval2785` | 3,903 | 41 | core | Dhaval Patel | Cologne Digital Sanskrit Dictionaries | — | — |
-| `gasyoun` | 3,810 | 77 | lead | Mārcis Gasūns | Cologne Digital Sanskrit Dictionaries | 0000-0003-4513-884X | yes |
+| `gasyoun` | 3,845 | 77 | lead | Mārcis Gasūns | Cologne Digital Sanskrit Dictionaries | 0000-0003-4513-884X | yes |
 | `AnnaRybakovaT` | 82 | 11 | occasional | Anna Rybakova | — | — | — |
 | `Andhrabharati` | 63 | 3 | core | Nagabhushana Rao | Andhrabharati | — | — |
 | `aumsanskrit` | 17 | 1 | contributor | Scott Rhodes | — | — | — |
-| `shenyileirob` | 8 | 1 | — | **?** | — | — | — |
+| `shenyileirob` | 8 | 1 | occasional | shenyileirob | — | — | — |
 | `DmitriSKT` | 3 | 1 | occasional | **?** | — | — | — |
 | `vvasuki` | 2 | 2 | — | **?** | — | — | — |
 | `YevgenJohn` | 2 | 2 | occasional | **?** | — | — | — |
@@ -36,7 +36,7 @@ Fill `Real name`, `ORCID` and `Consent` where blank. `—` in ORCID means none o
 | `sanskritisampada` | 1 | 1 | occasional | **?** | — | — | — |
 | `maltenth` | 1 | 1 | core | Thomas Malten | University of Cologne | — | — |
 | `sumanthegde` | 1 | 1 | — | **?** | — | — | — |
-| `adminlip` | 1 | 1 | — | **?** | — | — | — |
+| `adminlip` | 1 | 1 | occasional | adminlip | — | — | — |
 | `vlastavesely` | 1 | 1 | — | **?** | — | — | — |
 
 ## Priority: confirmed names awaiting ORCID registration
@@ -50,20 +50,20 @@ These contributors are identified — they only need to register (or supply) an 
 | Anna Rybakova | `AnnaRybakovaT` | occasional | 82 |
 | Nagabhushana Rao | `Andhrabharati` | core | 63 |
 | Scott Rhodes | `aumsanskrit` | contributor | 17 |
+| shenyileirob | `shenyileirob` | occasional | 8 |
 | Thomas Malten | `maltenth` | core | 1 |
+| adminlip | `adminlip` | occasional | 1 |
 
 ## To identify: commit authors with no confirmed name
 
 | GitHub login | Contributions | Repos |
 |---|---:|---:|
-| `shenyileirob` | 8 | 1 |
 | `DmitriSKT` | 3 | 1 |
 | `vvasuki` | 2 | 2 |
 | `YevgenJohn` | 2 | 2 |
 | `Haqob` | 2 | 1 |
 | `sanskritisampada` | 1 | 1 |
 | `sumanthegde` | 1 | 1 |
-| `adminlip` | 1 | 1 |
 | `vlastavesely` | 1 | 1 |
 
 *Object of analysis: GitHub contributor identities — in scope per `docs/BOUNDARY_RULES.md`. Related: tracking issue #1 invites contributors to self-identify.*

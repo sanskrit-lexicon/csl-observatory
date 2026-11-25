@@ -3557,7 +3557,7 @@ csl-corrections,413,Daily Corrections - 2026-09-28,open,2026-09-29T03:32:47Z,,gi
 csl-corrections,414,Daily Corrections - 2026-09-30,open,2026-10-01T03:24:21Z,,github-actions,daily-corrections,,0,issue
 csl-corrections,415,fix(hooks): exec bit on .githooks (644 hooks abort spawn),closed,2026-10-01T08:11:53Z,2026-10-01T08:12:07Z,gasyoun,,,0,PR
 csl-corrections,416,Daily Corrections - 2026-10-01,open,2026-10-02T03:25:06Z,,github-actions,daily-corrections,,0,issue
-csl-corrections,417,Sanskrit Questions for Andhrabharati (Part-8),open,2026-10-02T17:08:38Z,,aumsanskrit,question,,22,issue
+csl-corrections,417,Sanskrit Questions for Andhrabharati (Part-8),open,2026-10-02T17:08:38Z,,aumsanskrit,question,,23,issue
 csl-corrections,418,Daily Corrections - 2026-10-02,open,2026-10-03T03:09:27Z,,github-actions,daily-corrections,,0,issue
 csl-corrections,419,guards: wire the post-checkout branch-switch guard (GTD 0MS),closed,2026-10-03T13:01:51Z,2026-10-12T20:17:17Z,gasyoun,,,0,PR
 csl-corrections,420,Daily Corrections - 2026-10-03,open,2026-10-04T03:37:40Z,,github-actions,daily-corrections,,0,issue
@@ -3605,6 +3605,9 @@ csl-corrections,461,Revert H3885 e-mail masking; restore addresses in cfr_ab + d
 csl-corrections,462,Nightly bug hunt 13.11.2026 — findings report + CHANGELOG,closed,2026-11-13T00:21:56Z,2026-11-13T00:22:14Z,gasyoun,,,0,PR
 csl-corrections,463,fix(guard): shared-main-tree pre-commit now blocks on macOS/Linux (bughunt HIGH-1),closed,2026-11-13T00:25:43Z,2026-11-13T00:25:48Z,gasyoun,,,0,PR
 csl-corrections,464,Daily Corrections - 2026-11-13,open,2026-11-14T04:21:04Z,,github-actions,daily-corrections,,0,issue
+csl-corrections,465,fix(pre-push): URL-target normalization port (H8360),closed,2026-11-16T16:36:31Z,2026-11-16T18:48:29Z,gasyoun,,,0,PR
+csl-corrections,466,Daily Corrections - 2026-11-17,open,2026-11-18T05:23:07Z,,github-actions,daily-corrections,,0,issue
+csl-corrections,467,docs(agent-docs): H8418 verified-no-change CLAUDE.md refresh (18-11-2026),closed,2026-11-18T05:33:25Z,2026-11-18T05:33:49Z,gasyoun,,,0,PR
 csl-devanagari,1,MW72 questions,closed,2021-09-02T18:53:28Z,2021-09-03T04:57:55Z,drdhaval2785,enhancement|minor,,27,issue
 csl-devanagari,2,LAN issues,open,2021-09-02T19:14:06Z,,drdhaval2785,question|trivial|domain:transcoding,Community,5,issue
 csl-devanagari,3,CAE issues,open,2021-09-02T19:16:32Z,,drdhaval2785,enhancement|minor|domain:transcoding,User Experience,5,issue
@@ -4208,8 +4211,31 @@ csl-observatory,316,H7963: pyfloor sync + deployed-copy drift gate CI,closed,202
 csl-observatory,317,H7963: fix deployed-copy-drift CI auth (cross-org checkout),closed,2026-11-10T08:29:24Z,2026-11-10T08:31:14Z,gasyoun,,,0,PR
 csl-observatory,318,add weekly OSSF Scorecard workflow (badge publish),closed,2026-11-11T19:06:21Z,2026-11-11T19:09:30Z,gasyoun,,,0,PR
 csl-observatory,319,docs(claude): YCP agent-docs SLA refresh (13-11-2026),closed,2026-11-13T07:15:56Z,2026-11-13T07:16:42Z,gasyoun,,,0,PR
-csl-observatory,320,chore(deps): bump actions/checkout from 4 to 7,open,2026-11-16T05:15:49Z,,dependabot[bot],major|dependencies|github_actions,,0,PR
+csl-observatory,320,chore(deps): bump actions/checkout from 4 to 7,closed,2026-11-16T05:15:49Z,2026-11-18T11:06:28Z,dependabot[bot],major|dependencies|github_actions,,0,PR
 csl-observatory,321,fix(changelog_queue): fold 3 malformed fragments into the H4466 bullet shape (H8367),closed,2026-11-16T06:05:00Z,2026-11-16T06:05:21Z,gasyoun,,,0,PR
+csl-observatory,322,data: monthly refresh (2026-11-16),closed,2026-11-16T10:40:36Z,2026-11-18T11:04:46Z,github-actions[bot],,,0,PR
+csl-observatory,323,fix(pre-push): URL-target normalization port (H8360),closed,2026-11-16T16:36:48Z,2026-11-18T11:05:55Z,gasyoun,,,0,PR
+csl-observatory,324,"fix(dict-audit): exempt generator-noise issues (#313, #327)",closed,2026-11-18T05:35:58Z,2026-11-18T05:37:45Z,gasyoun,,,0,PR
+csl-observatory,325,CLLG vs open-Sanskrit estate — dated strategy scorecard + derived public page (H8426),closed,2026-11-18T08:33:03Z,2026-11-18T08:36:39Z,gasyoun,,,0,PR
+csl-observatory,326,fix(scripts): import article_figures.py without matplotlib (H5800 smoke),closed,2026-11-18T10:52:19Z,2026-11-18T11:03:59Z,gasyoun,,,0,PR
+csl-observatory,327,ci(cllg): page parity gate + dated re-snapshot cadence (H8430),closed,2026-11-18T11:05:00Z,2026-11-18T11:06:12Z,gasyoun,,,0,PR
+csl-observatory,328,docs(H8426): stop claiming internal-only paths never reach the public surface,closed,2026-11-18T11:47:02Z,2026-11-18T11:49:34Z,gasyoun,,,0,PR
+csl-observatory,329,fix(headline-claims): re-sync 13 stale offline numbers to 2026-11-16 snapshot,closed,2026-11-18T12:01:53Z,2026-11-18T12:02:45Z,gasyoun,,,0,PR
+csl-observatory,330,H8442: A73 AED spine companion (acl-uplift shape 4),closed,2026-11-18T13:22:44Z,2026-11-18T13:40:12Z,gasyoun,,,0,PR
+csl-observatory,331,H8443: citable org-metrics dataset companion for A15 (acl-uplift move 5),closed,2026-11-18T13:26:01Z,2026-11-18T13:40:21Z,gasyoun,,,0,PR
+csl-observatory,332,H8444: A12 external-validity instrument (acl-uplift shape 3),closed,2026-11-18T13:51:16Z,2026-11-18T14:00:16Z,gasyoun,,,0,PR
+csl-observatory,333,"fix(refresh): H7879 — repair the legacy live-snapshot lane (call shapes, org-project PAT, protected-main PR flow)",closed,2026-11-18T14:19:02Z,2026-11-18T14:25:37Z,gasyoun,,,0,PR
+csl-observatory,334,fix(headline-claims): H7879 round 2 — write half covers every registered live claim,closed,2026-11-18T15:08:31Z,2026-11-18T15:10:09Z,gasyoun,,,0,PR
+csl-observatory,335,data: weekly snapshot 2026-11-18,closed,2026-11-18T15:31:05Z,2026-11-18T15:38:31Z,github-actions[bot],,,0,PR
+csl-observatory,336,fix(refresh): H7879 round 3 — commit the requoted surface + refresh-proof the test anchors,closed,2026-11-18T15:53:29Z,2026-11-18T16:01:10Z,gasyoun,,,0,PR
+csl-observatory,337,docs(ai-state): H7879 completed row,closed,2026-11-18T16:14:09Z,2026-11-18T16:15:54Z,gasyoun,,,0,PR
+csl-observatory,338,fix(refresh): drop the force-merge fallback from both data lanes (YJG),closed,2026-11-21T05:24:33Z,2026-11-21T05:26:28Z,gasyoun,,,0,PR
+csl-observatory,339,fix(headline-claims): per-identity repo count can't collide with live headline token,closed,2026-11-21T18:29:47Z,2026-11-21T18:30:57Z,gasyoun,,,0,PR
+csl-observatory,340,data: weekly snapshot 2026-11-21,closed,2026-11-21T18:52:34Z,2026-11-21T18:59:48Z,github-actions[bot],,,0,PR
+csl-observatory,341,fix(refresh): fail loud on partial commit-history coverage,closed,2026-11-21T19:23:50Z,2026-11-21T19:25:03Z,gasyoun,,,0,PR
+csl-observatory,342,"data: recover csl-orig's 2,328 commits into the 21-11 live snapshot",closed,2026-11-21T20:25:46Z,2026-11-21T20:27:18Z,gasyoun,,,0,PR
+csl-observatory,343,data(identity): fold 10 recovery email identities into canonical aliases (YPI),closed,2026-11-22T03:35:41Z,2026-11-22T03:36:50Z,gasyoun,,,0,PR
+csl-observatory,344,A12: frozen external-validity instrument with honest channel labels (H8444),closed,2026-11-22T15:51:07Z,2026-11-22T15:56:20Z,gasyoun,,,0,PR
 csl-orig,1,AP and PD data,closed,2019-07-23T13:37:39Z,2020-12-29T02:35:30Z,drdhaval2785,doc|question|minor,Structured Data,14,issue
 csl-orig,2,why hwextra here,closed,2019-09-10T00:20:23Z,2019-12-23T09:34:49Z,funderburkjim,text-correction|minor,Digitization Quality,7,issue
 csl-orig,3,digitization update workflow,closed,2019-09-10T00:42:05Z,2023-12-15T15:21:52Z,funderburkjim,doc|question|minor,Structured Data,6,issue
@@ -7089,7 +7115,7 @@ csl-orig,2877,docs(README): refresh to accurate project overview (H548),closed,2
 csl-orig,2878,docs: self-contained correction operator manual + metadoc (H515),closed,2026-07-11T08:16:20Z,2026-07-11T08:16:38Z,gasyoun,,,0,PR
 csl-orig,2879,"corrections: 2026-07 batch (ap90, 15 changes, 2 issues) + repo docs",closed,2026-07-12T19:45:18Z,2026-11-15T15:03:42Z,gasyoun,,,0,PR
 csl-orig,2880,Bump actions/setup-python from 6 to 7,closed,2026-07-20T05:12:50Z,2026-07-20T05:13:50Z,dependabot[bot],major|dependencies|github_actions,,0,PR
-csl-orig,2881,[feature] single interface for online requests,closed,2026-07-28T14:00:53Z,2026-07-30T03:17:05Z,dhammagift,feature,,6,issue
+csl-orig,2881,[feature] single interface for online requests,closed,2026-07-28T14:00:53Z,2026-07-30T03:17:05Z,dhammagift,feature,,7,issue
 csl-orig,2882,MW accent in non-Vedic texts and gender error,open,2026-07-29T11:49:51Z,,drdhaval2785,,,0,issue
 csl-orig,2883,add changelog duplicate-entry guard (CI),closed,2026-07-29T18:17:12Z,2026-11-07T10:16:00Z,gasyoun,,,0,PR
 csl-orig,2884,"corrections: 2026-08 batch (57 changes across ap90, mw72, pwg)",open,2026-08-04T06:39:52Z,,gasyoun,,,0,PR
@@ -7231,6 +7257,7 @@ csl-pywork,106,Nightly bug hunt report 02-11-2026 (0 HIGH / 2 MEDIUM / 3 LOW),cl
 csl-pywork,107,"docs(readme): truth pass 05-11-2026 — live issue snapshot, vendored-scripts pointer fix",closed,2026-11-04T21:15:24Z,2026-11-04T21:34:52Z,gasyoun,,,0,PR
 csl-pywork,108,Guard cd against failure at 10 sites (shellcheck SC2164),closed,2026-11-07T05:16:11Z,2026-11-07T05:16:14Z,gasyoun,,,0,PR
 csl-pywork,109,"Fix generation of armh, fri and pe under fail-closed checks",closed,2026-11-12T14:43:30Z,2026-11-12T14:45:03Z,drdhaval2785,,,0,PR
+csl-pywork,110,docs(agent-docs): H8418 verified-no-change CLAUDE.md refresh (18-11-2026),closed,2026-11-18T05:33:38Z,2026-11-18T05:34:04Z,gasyoun,,,0,PR
 csl-sqlite,1,[docs-pass] Add documentation files (infrastructure),open,2026-05-22T13:55:43Z,,gasyoun,documentation|minor,Developer Experience,1,issue
 csl-sqlite,2,build(deps): bump dependabot/fetch-metadata from 2 to 3,closed,2026-06-14T04:51:17Z,2026-06-14T04:52:02Z,dependabot[bot],major|dependencies|github_actions,,0,PR
 csl-sqlite,3,docs(README): describe actual dual-channel SQLite distribution (H549),closed,2026-07-10T23:47:05Z,2026-07-11T06:14:20Z,gasyoun,,,0,PR
@@ -7562,6 +7589,7 @@ sanskrit-lexicon.github.io,16,"add SECURITY.md (security policy, org contact)",c
 sanskrit-lexicon.github.io,17,H7786: llms.txt + JSON-LD (Organization/WebSite) for LLM/GEO extractability,closed,2026-11-07T05:11:20Z,2026-11-07T05:11:51Z,gasyoun,,,0,PR
 sanskrit-lexicon.github.io,18,H7786 follow-up: add 3 card-less Zenodo dictionaries to llms.txt,closed,2026-11-07T06:58:49Z,2026-11-07T06:59:06Z,gasyoun,,,0,PR
 sanskrit-lexicon.github.io,19,Standalone Cite & DOI page (cite.html) + generator + drift check (H7887),closed,2026-11-08T15:06:40Z,2026-11-08T15:07:18Z,gasyoun,,,0,PR
+sanskrit-lexicon.github.io,20,Cite & DOI surfaces dictionaries-only: drop ArabicInSanskrit/GreekInSanskrit workspace rows,closed,2026-11-21T03:48:07Z,2026-11-21T03:49:14Z,gasyoun,,,0,PR
 santamlegacy,1,build(deps): Bump dependabot/fetch-metadata from 2 to 3,closed,2026-06-14T04:49:58Z,2026-06-14T04:52:25Z,dependabot[bot],dependencies|github_actions,,0,PR
 temp_corrections_acc,1,Bump dependabot/fetch-metadata from 2 to 3,closed,2026-06-14T04:50:54Z,2026-06-14T04:52:38Z,dependabot[bot],dependencies|github_actions,,0,PR
 temp_corrections_ae,1,Bump dependabot/fetch-metadata from 2 to 3,closed,2026-06-14T04:50:51Z,2026-06-14T04:51:21Z,dependabot[bot],dependencies|github_actions,,0,PR
