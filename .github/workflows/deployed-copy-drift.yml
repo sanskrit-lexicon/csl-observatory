@@ -31,26 +31,26 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           path: repos/csl-observatory
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           repository: gasyoun/Uprava
           path: repos/Uprava
           # Cross-org (gasyoun) checkout: the default GITHUB_TOKEN cannot see
           # private gasyoun repos — same PAT pattern as tooling-audit.yml.
           token: ${{ secrets.TOOLING_AUDIT_TOKEN }}
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           repository: gasyoun/github-spine
           path: repos/github-spine
           token: ${{ secrets.TOOLING_AUDIT_TOKEN }}
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           repository: sanskrit-lexicon/csl-atlas
           path: repos/csl-atlas
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           repository: sanskrit-lexicon/csl-guides
           path: repos/csl-guides
