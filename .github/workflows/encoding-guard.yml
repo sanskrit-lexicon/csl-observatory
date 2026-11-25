@@ -32,12 +32,12 @@ jobs:
     steps:
       # lfs: true so no job can ever read an un-smudged pointer stub as data
       # (issue #127 — the data catalog published 133-byte pointers as dataset sizes).
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           lfs: true
 
       - name: Set up Python
-        uses: actions/setup-python@v7
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
         with:
           python-version: '3.12'
 
