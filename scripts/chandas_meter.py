@@ -294,7 +294,7 @@ def cmd_corpus(_args) -> int:
                     continue
                 poetic_rows.append((text, epoch, meter, cnt, cls))
     with open(DISTRIBUTION, "w", encoding="utf-8", newline="") as fh:
-        w = csv.writer(fh, delimiter="\t")
+        w = csv.writer(fh, delimiter="\t", lineterminator="\n")
         w.writerow(["text", "epoch", "meter", "stanzas", "classified_total"])
         w.writerows(poetic_rows)
     print(f"DCS texts scanned: {len(census)}")
