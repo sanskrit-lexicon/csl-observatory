@@ -26,6 +26,7 @@ HELP_SMOKE_TARGETS = [
     "scripts/tooling_runbook.py",
     "scripts/lowm_estimators.py",
     "tools/render_readme_visuals.py",
+    "scripts/chandas_meter.py",
 ]
 
 
